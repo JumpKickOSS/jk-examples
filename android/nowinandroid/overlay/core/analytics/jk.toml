@@ -12,9 +12,11 @@ min-sdk     = 23
 library     = true
 compose     = true
 
-[android.flavors.contentType]
-demo = { extra-src = ["src/demo/kotlin"] }
-prod = { extra-src = ["src/prod/kotlin"] }
+[variants.contentType.demo]
+extra-src = ["src/demo/kotlin"]
+
+[variants.contentType.prod]
+extra-src = ["src/prod/kotlin"]
 
 [dependencies]
 compose-runtime = { group = "androidx.compose.runtime", name = "runtime", version = "1.9.2" }

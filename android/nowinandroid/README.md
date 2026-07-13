@@ -3,7 +3,7 @@
 [`android/nowinandroid`](https://github.com/android/nowinandroid) is Google's reference
 app and the de-facto conformance suite for the recommended Android stack: Compose,
 Hilt, Room (with auto-migrations), protobuf/datastore, kotlinx-serialization,
-navigation3, demo/prod flavors, ~25 workspace AAR modules with non-transitive R.
+navigation3, a demo/prod contentType variant dimension, ~25 workspace AAR modules with non-transitive R.
 
 jk builds all 27 modules of it — every `:core:*`, every `feature/*/api+impl`,
 `sync/work`, and `:app` — producing a demo-debug APK and a signed R8-full-mode release
@@ -34,7 +34,7 @@ Recorded honestly; each traces to a jk gap or a deliberate call:
 - **`guava` added to `sync/work`**: jk resolves all scopes in one graph, so
   processor-scope guava evicts main-scope `listenablefuture:1.0` with the
   `9999.0-empty` artifact (finding 15); guava on main supplies the class either way.
-- **Flavors select per-module** (`--flavor contentType=demo`): workspace variant
+- **Flavors select per-module** (`--variant contentType=demo`): workspace variant
   propagation (the app's selection reaching sibling AAR builds) is a recorded follow-up.
 - Skipped Gradle-side machinery with no jk equivalent yet: jacoco, roborazzi,
   baseline-profile generation, the Firebase/oss-licenses Gradle plugins (the

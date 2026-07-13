@@ -11,9 +11,11 @@ compile-sdk = 34
 min-sdk     = 23
 library     = true
 
-[android.flavors.contentType]
-demo = { extra-src = ["src/demo/kotlin"] }
-prod = { extra-src = ["src/prod/kotlin"] }
+[variants.contentType.demo]
+extra-src = ["src/demo/kotlin"]
+
+[variants.contentType.prod]
+extra-src = ["src/prod/kotlin"]
 
 [dependencies]
 tracing-ktx      = { group = "androidx.tracing", name = "tracing-ktx", version = "1.3.0-alpha02" }

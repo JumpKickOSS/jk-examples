@@ -1,0 +1,31 @@
+# Core [variants]: one custom dimension (contentType) on a plain JVM app — per-value
+# sources via extra-src and per-value dependencies. `jk lock` resolves the UNION of both
+# values' deps (one lockfile covers every variant); a build folds only the selected value.
+#
+#   jk build --variant contentType=demo     # stub backend, no external client dep
+#   jk build --variant contentType=prod     # real Backend using commons-lang3
+#   jk build --variant demo                 # bare value works: only one custom dimension
+#   jk build                                # FAILS: the dimension declares no default
+
+[project]
+name    = "variants-cli"
+group   = "dev.jkexamples"
+version = "1.0.0"
+java    = 17
+layout  = "simple"
+
+[application]
+main       = "dev.jkexamples.vcli.Main"
+shadow-jar = true   # java -jar runnable for either variant (jk run cannot select variants yet)
+
+[variants.contentType.demo]
+extra-src = ["src-demo"]
+
+[variants.contentType.prod]
+extra-src = ["src-prod"]
+
+[variants.contentType.prod.dependencies]
+commons-lang3 = { group = "org.apache.commons", name = "commons-lang3", version = "=3.18.0" }
+
+[repositories]
+central = "https://repo.maven.apache.org/maven2/"

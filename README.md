@@ -9,12 +9,14 @@ and real reference apps, and they exist to catch the gaps unit suites can't.
 
 | Dir | Validates |
 |---|---|
-| `android/nowinandroid/` | **The Android north star**: Google's reference app, all 27 modules — Compose, Hilt (unmodified sources), Room auto-migrations, protobuf/datastore, kotlinx-serialization, navigation3, flavors, non-transitive R, demo-debug APK + signed R8 release AAB. No Gradle, no AGP. |
+| `android/nowinandroid/` | **The Android north star**: Google's reference app, all 27 modules — Compose, Hilt (unmodified sources), Room auto-migrations, protobuf/datastore, kotlinx-serialization, navigation3, a contentType variant dimension, non-transitive R, demo-debug APK + signed R8 release AAB. No Gradle, no AGP. |
 | `spring-boot/kitchen-sink/` | Spring Boot **4.1** — web + data-jpa + validation + actuator, BOM auto-import, boot-jar layout, Spring AOT step, build-info, dev-scope devtools. |
 | `aot/vanilla-cli/` | Core JVM AOT (`jk build --aot-cache`) with no framework and no plugin — the everyone-gets-this path. |
 | `kotlin/serialization-cli/` | Project-declared Kotlin compiler plugins (`[[kotlin-plugins]]`) via kotlinx-serialization. |
 | `protobuf/messages/` | The protobuf plugin: provisioned per-OS protoc, Java + Kotlin DSL (lite) codegen. |
 | `jvm/shrink-cli/` | The shrink plugin: R8 `--classfile` full mode collapsing a fat jar. |
+| `jvm/variants-cli/` | Core `[variants]`: a custom dimension on a plain JVM app — per-value `extra-src` + deps, union lockfile, mandatory selection. |
+| `jvm/profiles-vs-variants/` | The decision matrix as running code: a profile (how), a feature (what capability), and the build-type variant (which product) side by side. |
 
 More scenarios land here as jk grows (native-image apps, workspaces, git-source deps,
 publishing round-trips, …). One scenario per directory; keep each self-contained and

@@ -13,19 +13,20 @@ hilt        = true
 compose     = true
 build-config = true
 
-[android.build-types.release]
-proguard-files = ["proguard-rules.pro", "jk-missing-rules.pro"]
-signing        = "release"
-
 [android.signing.release]
 store-file     = "env:RELEASE_KEYSTORE"
 store-password = "env:RELEASE_STORE_PASSWORD"
 key-alias      = "upload"
 key-password   = "env:RELEASE_KEY_PASSWORD"
 
-[android.flavors.contentType]
-demo = { application-id-suffix = ".demo" }
-prod = { }
+[variants.build-type.release.android]
+proguard-files = ["proguard-rules.pro", "jk-missing-rules.pro"]
+signing        = "release"
+
+[variants.contentType.demo.android]
+application-id-suffix = ".demo"
+
+[variants.contentType.prod]
 
 [[kotlin-plugins]]
 coordinate = "org.jetbrains.kotlin:kotlin-serialization-compiler-plugin-embeddable"

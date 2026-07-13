@@ -14,7 +14,7 @@ echo "=== jk android licenses"
 (cd app && jk android licenses --yes)
 
 echo "=== jk build: workspace (demo debug — APK)"
-(cd app && jk build --skip-tests --flavor contentType=demo)
+(cd app && jk build --skip-tests --variant contentType=demo)
 
 echo "=== jk build: workspace (demo release — R8 full mode, signed AAB)"
 KS="$PWD/../release.jks"
@@ -24,7 +24,7 @@ if [ ! -f "$KS" ]; then
 fi
 # PKCS12: the key password IS the store password.
 (cd app && RELEASE_KEYSTORE="$KS" RELEASE_STORE_PASSWORD=harness-pass \
-    RELEASE_KEY_PASSWORD=harness-pass jk build --release --skip-tests --flavor contentType=demo)
+    RELEASE_KEY_PASSWORD=harness-pass jk build --release --skip-tests --variant contentType=demo)
 
 echo
 echo "artifacts:"
