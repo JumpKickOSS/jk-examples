@@ -1,4 +1,4 @@
-# jk-harness — conformance & fitness scenarios for [jk](../jk)
+# jk-examples — example projects & conformance scenarios for [jk](../jk)
 
 Real projects that validate jk end to end: each directory is an independent jk project
 (or an orchestrated third-party checkout) exercising a distinct slice of the tool.

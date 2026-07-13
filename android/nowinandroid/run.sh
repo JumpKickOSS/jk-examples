@@ -20,7 +20,7 @@ echo "=== jk build: workspace (demo release — R8 full mode, signed AAB)"
 KS="$PWD/../release.jks"
 if [ ! -f "$KS" ]; then
     keytool -genkeypair -keystore "$KS" -storepass harness-pass -alias upload \
-        -keyalg RSA -keysize 2048 -validity 365 -dname CN=jk-harness
+        -keyalg RSA -keysize 2048 -validity 365 -dname CN=jk-examples
 fi
 # PKCS12: the key password IS the store password.
 (cd app && RELEASE_KEYSTORE="$KS" RELEASE_STORE_PASSWORD=harness-pass \
