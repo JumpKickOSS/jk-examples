@@ -1,0 +1,32 @@
+[project]
+name    = "nia-core-designsystem"
+group   = "com.google.samples.apps.nowinandroid"
+version = "0.1.0"
+java    = 21
+kotlin  = "^2.4.0"
+
+[android]
+namespace   = "com.google.samples.apps.nowinandroid.core.designsystem"
+compile-sdk = 34
+min-sdk     = 23
+library     = true
+compose     = true
+
+[dependencies]
+compose-foundation        = { group = "androidx.compose.foundation", name = "foundation", version = "1.9.2" }
+compose-foundation-layout = { group = "androidx.compose.foundation", name = "foundation-layout", version = "1.9.2" }
+compose-icons-extended    = { group = "androidx.compose.material", name = "material-icons-extended", version = "1.7.8" }
+compose-material3         = { group = "androidx.compose.material3", name = "material3", version = "1.4.0" }
+material3-adaptive        = { group = "androidx.compose.material3.adaptive", name = "adaptive", version = "1.1.0" }
+material3-nav-suite       = { group = "androidx.compose.material3", name = "material3-adaptive-navigation-suite", version = "1.4.0" }
+compose-runtime           = { group = "androidx.compose.runtime", name = "runtime", version = "1.9.2" }
+compose-ui-util           = { group = "androidx.compose.ui", name = "ui-util", version = "1.9.2" }
+compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview", version = "1.9.2" }
+coil-compose              = { group = "io.coil-kt", name = "coil-compose", version = "=2.7.0" }
+
+[test-dependencies]
+junit-platform-launcher = { group = "org.junit.platform", name = "junit-platform-launcher", version = "=6.1.1" }
+
+[repositories]
+central = "https://repo.maven.apache.org/maven2/"
+google  = "https://dl.google.com/dl/android/maven2/"

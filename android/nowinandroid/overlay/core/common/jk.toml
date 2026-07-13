@@ -1,0 +1,24 @@
+[project]
+name    = "nia-core-common"
+group   = "com.google.samples.apps.nowinandroid"
+version = "0.1.0"
+java    = 21
+kotlin  = "^2.4.0"
+
+[dependencies]
+kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version = "=1.10.1" }
+# The jvm-library convention's Hilt: @Module/@InstallIn/@Qualifier come from hilt-core
+# (javax.inject rides transitively via dagger).
+hilt-core = { group = "com.google.dagger", name = "hilt-core", version = "=2.59" }
+
+[processor-dependencies]
+# Hilt must process common's @Module/@InstallIn classes so the aggregated-deps metadata
+# lands in its jar — the app's component assembly discovers modules through it.
+hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version = "=2.59" }
+
+[test-dependencies]
+junit-platform-launcher = { group = "org.junit.platform", name = "junit-platform-launcher", version = "=6.1.1" }
+
+[repositories]
+central = "https://repo.maven.apache.org/maven2/"
+google  = "https://dl.google.com/dl/android/maven2/"

@@ -1,0 +1,24 @@
+[project]
+name    = "nia-core-domain"
+group   = "com.google.samples.apps.nowinandroid"
+version = "0.1.0"
+java    = 21
+kotlin  = "^2.4.0"
+
+[android]
+namespace   = "com.google.samples.apps.nowinandroid.core.domain"
+compile-sdk = 34
+min-sdk     = 23
+library     = true
+
+[dependencies]
+nia-core-data  = { workspace = true }
+nia-core-model = { workspace = true }
+javax-inject   = { group = "javax.inject", name = "javax.inject", version = "=1" }
+
+[test-dependencies]
+junit-platform-launcher = { group = "org.junit.platform", name = "junit-platform-launcher", version = "=6.1.1" }
+
+[repositories]
+central = "https://repo.maven.apache.org/maven2/"
+google  = "https://dl.google.com/dl/android/maven2/"

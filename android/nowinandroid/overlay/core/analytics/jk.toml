@@ -1,0 +1,31 @@
+[project]
+name    = "nia-core-analytics"
+group   = "com.google.samples.apps.nowinandroid"
+version = "0.1.0"
+java    = 21
+kotlin  = "^2.4.0"
+
+[android]
+namespace   = "com.google.samples.apps.nowinandroid.core.analytics"
+compile-sdk = 34
+min-sdk     = 23
+library     = true
+compose     = true
+
+[android.flavors.contentType]
+demo = { extra-src = ["src/demo/kotlin"] }
+prod = { extra-src = ["src/prod/kotlin"] }
+
+[dependencies]
+compose-runtime = { group = "androidx.compose.runtime", name = "runtime", version = "1.9.2" }
+hilt-android    = { group = "com.google.dagger", name = "hilt-android", version = "=2.59" }
+
+[processor-dependencies]
+hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version = "=2.59" }
+
+[test-dependencies]
+junit-platform-launcher = { group = "org.junit.platform", name = "junit-platform-launcher", version = "=6.1.1" }
+
+[repositories]
+central = "https://repo.maven.apache.org/maven2/"
+google  = "https://dl.google.com/dl/android/maven2/"

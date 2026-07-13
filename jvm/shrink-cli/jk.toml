@@ -1,0 +1,21 @@
+# The shrink plugin: R8 --classfile full mode over the app + runtime closure, packaged
+# as one slim executable jar. Validation is behavioral (the jar runs) and structural
+# (unreferenced library code is absent).
+
+[project]
+name    = "shrink-cli"
+group   = "dev.jkharness"
+version = "1.0.0"
+java    = 17
+
+[application]
+main = "dev.jkharness.slim.Main"
+
+[shrink]
+
+[dependencies]
+commons-lang3 = { group = "org.apache.commons", name = "commons-lang3", version = "=3.18.0" }
+
+[repositories]
+central = "https://repo.maven.apache.org/maven2/"
+google  = "https://dl.google.com/dl/android/maven2/"   # r8 publishes to Google Maven

@@ -1,0 +1,10 @@
+syntax = "proto3";
+package jkharness;
+
+option java_package = "dev.jkharness.pb";
+option java_multiple_files = true;
+
+message Event {
+  string name = 1;
+  int64 timestamp_millis = 2;
+}

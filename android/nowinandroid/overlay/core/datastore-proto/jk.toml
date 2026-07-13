@@ -1,0 +1,22 @@
+[project]
+name    = "nia-core-datastore-proto"
+group   = "com.google.samples.apps.nowinandroid"
+version = "0.1.0"
+java    = 21
+kotlin  = "^2.4.0"
+
+[protobuf]
+version = "4.29.2"
+src     = "src/main/proto"
+lite    = true
+kotlin  = true
+
+[dependencies]
+protobuf-kotlin-lite = { group = "com.google.protobuf", name = "protobuf-kotlin-lite", version = "=4.29.2" }
+
+[test-dependencies]
+junit-platform-launcher = { group = "org.junit.platform", name = "junit-platform-launcher", version = "=6.1.1" }
+
+[repositories]
+central = "https://repo.maven.apache.org/maven2/"
+google  = "https://dl.google.com/dl/android/maven2/"

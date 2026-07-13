@@ -1,0 +1,28 @@
+[project]
+name    = "nia-feature-interests-api"
+group   = "com.google.samples.apps.nowinandroid"
+version = "0.1.0"
+java    = 21
+kotlin  = "^2.4.0"
+
+[android]
+namespace   = "com.google.samples.apps.nowinandroid.feature.interests.api"
+compile-sdk = 34
+min-sdk     = 23
+library     = true
+compose     = true
+
+[[kotlin-plugins]]
+coordinate = "org.jetbrains.kotlin:kotlin-serialization-compiler-plugin-embeddable"
+
+[dependencies]
+nia-core-navigation = { workspace = true }
+nia-core-model = { workspace = true }
+serialization-json   = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version = "=1.8.0" }
+navigation3-runtime  = { group = "androidx.navigation3", name = "navigation3-runtime", version = "=1.0.0" }
+[test-dependencies]
+junit-platform-launcher = { group = "org.junit.platform", name = "junit-platform-launcher", version = "=6.1.1" }
+
+[repositories]
+central = "https://repo.maven.apache.org/maven2/"
+google  = "https://dl.google.com/dl/android/maven2/"

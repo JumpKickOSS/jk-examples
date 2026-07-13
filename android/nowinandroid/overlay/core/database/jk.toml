@@ -1,0 +1,34 @@
+[project]
+name    = "nia-core-database"
+group   = "com.google.samples.apps.nowinandroid"
+version = "0.1.0"
+java    = 21
+kotlin  = "^2.4.0"
+
+[android]
+namespace   = "com.google.samples.apps.nowinandroid.core.database"
+compile-sdk = 34
+min-sdk     = 23
+library     = true
+
+[build]
+# Room auto-migrations read the committed schema JSONs (AGP: room.schemaDirectory).
+ksp-options = ["room.schemaLocation=schemas"]
+
+[dependencies]
+kotlinx-datetime = { group = "org.jetbrains.kotlinx", name = "kotlinx-datetime", version = "=0.6.1" }
+nia-core-model   = { workspace = true }
+room-runtime     = { group = "androidx.room", name = "room-runtime", version = "=2.8.3" }
+room-ktx         = { group = "androidx.room", name = "room-ktx", version = "=2.8.3" }
+hilt-android     = { group = "com.google.dagger", name = "hilt-android", version = "=2.59" }
+
+[processor-dependencies]
+room-compiler = { group = "androidx.room", name = "room-compiler", version = "=2.8.3" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version = "=2.59" }
+
+[test-dependencies]
+junit-platform-launcher = { group = "org.junit.platform", name = "junit-platform-launcher", version = "=6.1.1" }
+
+[repositories]
+central = "https://repo.maven.apache.org/maven2/"
+google  = "https://dl.google.com/dl/android/maven2/"

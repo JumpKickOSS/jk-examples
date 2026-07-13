@@ -1,0 +1,4 @@
+android/nowinandroid/checkout/
+android/nowinandroid/release.jks
+**/target/
+**/jk.lock

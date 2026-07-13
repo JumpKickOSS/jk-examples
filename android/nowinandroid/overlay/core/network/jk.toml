@@ -1,0 +1,44 @@
+[project]
+name    = "nia-core-network"
+group   = "com.google.samples.apps.nowinandroid"
+version = "0.1.0"
+java    = 21
+kotlin  = "^2.4.0"
+
+[android]
+namespace    = "com.google.samples.apps.nowinandroid.core.network"
+compile-sdk  = 34   # NiA pins 36; 34 rides the warm test SDK — bump if API-36 symbols surface
+min-sdk      = 23
+library      = true
+build-config        = true
+build-config-fields = ['String BACKEND_URL = "http://example.com"']
+
+[android.flavors.contentType]
+demo = { extra-src = ["src/demo/kotlin"] }
+prod = { extra-src = ["src/prod/kotlin"] }
+
+[[kotlin-plugins]]
+coordinate = "org.jetbrains.kotlin:kotlin-serialization-compiler-plugin-embeddable"
+
+[dependencies]
+kotlinx-datetime   = { group = "org.jetbrains.kotlinx", name = "kotlinx-datetime", version = "=0.6.1" }
+nia-core-common    = { workspace = true }
+nia-core-model     = { workspace = true }
+coil               = { group = "io.coil-kt", name = "coil", version = "=2.7.0" }
+coil-svg           = { group = "io.coil-kt", name = "coil-svg", version = "=2.7.0" }
+serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version = "=1.8.0" }
+okhttp-logging     = { group = "com.squareup.okhttp3", name = "logging-interceptor", version = "=4.12.0" }
+retrofit           = { group = "com.squareup.retrofit2", name = "retrofit", version = "=2.11.0" }
+retrofit-kotlinx   = { group = "com.squareup.retrofit2", name = "converter-kotlinx-serialization", version = "=2.11.0" }
+hilt-android       = { group = "com.google.dagger", name = "hilt-android", version = "=2.59" }
+tracing-ktx        = { group = "androidx.tracing", name = "tracing-ktx", version = "=1.3.0-alpha02" }
+
+[processor-dependencies]
+hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version = "=2.59" }
+
+[test-dependencies]
+junit-platform-launcher = { group = "org.junit.platform", name = "junit-platform-launcher", version = "=6.1.1" }
+
+[repositories]
+central = "https://repo.maven.apache.org/maven2/"
+google  = "https://dl.google.com/dl/android/maven2/"

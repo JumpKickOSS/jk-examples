@@ -1,0 +1,22 @@
+# Project-declared Kotlin compiler plugins ([[kotlin-plugins]]): kotlinx-serialization's
+# codegen only exists when the plugin actually loaded into kotlinc — compiling a
+# reference to the generated serializer IS the validation.
+
+[project]
+name    = "serialization-cli"
+group   = "dev.jkharness"
+version = "1.0.0"
+java    = 21
+kotlin  = "^2.4.0"
+
+[application]
+main = "dev.jkharness.ser.MainKt"
+
+[[kotlin-plugins]]
+coordinate = "org.jetbrains.kotlin:kotlin-serialization-compiler-plugin-embeddable"
+
+[dependencies]
+serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version = "=1.8.0" }
+
+[repositories]
+central = "https://repo.maven.apache.org/maven2/"

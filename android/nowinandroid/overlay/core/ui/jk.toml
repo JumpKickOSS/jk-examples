@@ -1,0 +1,31 @@
+[project]
+name    = "nia-core-ui"
+group   = "com.google.samples.apps.nowinandroid"
+version = "0.1.0"
+java    = 21
+kotlin  = "^2.4.0"
+
+[android]
+namespace   = "com.google.samples.apps.nowinandroid.core.ui"
+compile-sdk = 34
+min-sdk     = 23
+library     = true
+compose     = true
+
+[dependencies]
+metrics              = { group = "androidx.metrics", name = "metrics-performance", version = "=1.0.0-beta01" }
+kotlinx-datetime     = { group = "org.jetbrains.kotlinx", name = "kotlinx-datetime", version = "=0.6.1" }
+nia-core-analytics   = { workspace = true }
+nia-core-designsystem = { workspace = true }
+nia-core-model       = { workspace = true }
+browser              = { group = "androidx.browser", name = "browser", version = "=1.8.0" }
+coil                 = { group = "io.coil-kt", name = "coil", version = "=2.7.0" }
+coil-compose         = { group = "io.coil-kt", name = "coil-compose", version = "=2.7.0" }
+compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview", version = "1.9.2" }
+
+[test-dependencies]
+junit-platform-launcher = { group = "org.junit.platform", name = "junit-platform-launcher", version = "=6.1.1" }
+
+[repositories]
+central = "https://repo.maven.apache.org/maven2/"
+google  = "https://dl.google.com/dl/android/maven2/"

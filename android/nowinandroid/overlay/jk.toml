@@ -1,0 +1,37 @@
+[project]
+name    = "nia"
+group   = "com.google.samples.apps.nowinandroid"
+version = "0.1.0"
+java    = 21
+kotlin  = "^2.4.0"
+
+[workspace]
+modules = [
+    "core/model",
+    "core/common",
+    "core/datastore-proto",
+    "core/network",
+    "core/database",
+    "core/datastore",
+    "core/notifications",
+    "core/analytics",
+    "core/data",
+    "core/domain",
+    "core/designsystem",
+    "core/ui",
+    "core/navigation",
+    "feature/topic/api",
+    "feature/bookmarks/api",
+    "feature/foryou/api",
+    "feature/interests/api",
+    "feature/search/api",
+    "feature/settings/api",
+    "feature/topic/impl",
+    "feature/bookmarks/impl",
+    "feature/foryou/impl",
+    "feature/interests/impl",
+    "feature/search/impl",
+    "feature/settings/impl",
+    "sync/work",
+    "app",
+]
