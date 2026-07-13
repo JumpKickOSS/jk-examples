@@ -35,3 +35,7 @@ modules = [
     "sync/work",
     "app",
 ]
+
+[repositories]
+central = "https://repo.maven.apache.org/maven2/"
+google  = "https://dl.google.com/dl/android/maven2/"
