@@ -49,5 +49,37 @@ fi
 printf '%s\n' "$NETTY_TAG" > checkout/.jk-netty-tag
 printf '%s\n' "$SHA" > checkout/.jk-netty-sha
 
+
+# ChannelHandlerMetadataUtil lives under transport/src/test in upstream; Mill uses testModuleDeps.
+# Promote into nativeimage-testutil main sources so sibling modules can compile *MetadataTest.
+UTIL_SRC=checkout/transport/src/test/java/io/netty/nativeimage
+UTIL_DST=checkout/nativeimage-testutil/src/main/java/io/netty/nativeimage
+if [ -d "$UTIL_SRC" ]; then
+  mkdir -p "$UTIL_DST"
+  cp -a "$UTIL_SRC/." "$UTIL_DST/"
+  # Drop javadoc-only import of transport's test class (breaks out-of-module compile).
+  sed -i '/import io.netty.channel.NativeImageHandlerMetadataTest;/d' \
+    "$UTIL_DST/ChannelHandlerMetadataUtil.java" 2>/dev/null || true
+  echo "promoted ChannelHandlerMetadataUtil → nativeimage-testutil"
+fi
+
+
+# Optional / platform-specific tests that need classifiers or native libs (not on default Mill smoketest either).
+for f in \
+  checkout/handler/src/test/java/io/netty/handler/ssl/AmazonCorrettoSslEngineTest.java \
+  checkout/resolver-dns/src/test/java/io/netty/resolver/dns/TestDnsServer.java \
+  checkout/resolver-dns/src/test/java/io/netty/resolver/dns/DnsNameResolverTest.java \
+  checkout/resolver-dns/src/test/java/io/netty/resolver/dns/SearchDomainTest.java \
+    checkout/common/src/test/java/io/netty/util/internal/NativeLibraryLoaderTest.java \
+  checkout/buffer/src/test/java/io/netty/buffer/AdaptiveBigEndianHeapByteBufTest.java \
+  checkout/buffer/src/test/java/io/netty/buffer/AdaptiveLittleEndianHeapByteBufTest.java \
+  checkout/buffer/src/test/java/io/netty/buffer/AdaptiveByteBufAllocatorTest.java
+ do
+  if [ -f "$f" ]; then
+    rm -f "$f"
+    echo "excluded optional test $(basename "$f")"
+  fi
+done
+
 echo "netty ready at checkout/ (tag $NETTY_TAG, SHA $SHA, overlay + common codegen applied)"
 echo "Next: cd checkout && jk lock && jk build --skip-tests"

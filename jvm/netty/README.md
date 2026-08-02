@@ -36,7 +36,17 @@ jvm/netty/
 ./setup.sh
 ./run.sh
 # or:
-cd checkout && jk lock && jk build --skip-tests
+cd checkout && jk lock && jk build --skip-tests --redo
+```
+
+**Why `--skip-tests`?** Mill’s published Netty tables disable tests and focus on **compile**. A full Netty
+`jk build --redo` (with tests) will compile test sources (now with Guava/JUnit 6 aligned to the
+jk runner) but still needs a **curated** test set — same as Mill’s `codec-*.test` smoke, not a full
+multi-hour suite. Optional smoke:
+
+```bash
+cd checkout
+jk test --modules common    # unit tests for common after JUnit 6 align
 ```
 
 Optional: compile a single module after a full lock:

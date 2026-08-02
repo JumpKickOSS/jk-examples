@@ -7,7 +7,7 @@
 [project]
 name    = "netty-parent"
 group   = "io.netty"
-version = "=4.1.115.Final"
+version = "4.1.115.Final"
 # Netty Maven/Mill use -source/-target 1.8; jk's supported LTS floor is 17 (ToolDefaults).
 # Compile with release 17 — same sources Mill compiles; document vs Maven 8 bytecode in PARITY.md.
 java    = 17
@@ -19,6 +19,7 @@ modules = [
     "buffer",
     "resolver",
     "transport",
+    "nativeimage-testutil",
     "codec",
     "codec-dns",
     "codec-haproxy",

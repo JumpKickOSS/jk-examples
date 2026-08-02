@@ -8,8 +8,9 @@ Graph: Mill [`example/thirdparty/netty/build.mill`](https://github.com/com-lihao
 | Gate | Result |
 |------|--------|
 | `jk lock` (workspace, 40 members) | **green** (~73 external coords) |
-| `jk build --skip-tests` | **green — 36 modules** (~15–20s warm wall on a typical box; cold first compile longer) |
-| Full `jk test` suite | **not default** (hours on Maven; Mill runs curated subsets) |
+| `jk build --skip-tests --redo` | **green — 41 modules** (compile path; Mill-fair) |
+| Test **compile** with Guava + JUnit **6.1** | **green** (aligned to jk test-runner) |
+| Full `jk build --redo` (all unit tests) | **not green by default** — curated excludes + remaining suite gaps (Mill also curates) |
 | JNI native libs | **deferred** |
 
 ## Capability matrix
@@ -37,3 +38,18 @@ Graph: Mill [`example/thirdparty/netty/build.mill`](https://github.com/com-lihao
 ## Comparison methodology
 
 See [README.md](README.md). Record times with `scripts/bench-netty.sh` into the monorepo `docs/perf/netty-benchmark.md`.
+
+5. **JUnit version skew**: jk’s test-runner is **JUnit 6.1**; project pins must match Platform **6.x**. Pinning Jupiter 5.9 + auto-injected Platform “latest” → empty discovery or `NoSuchMethodError`.
+6. **No first-class workspace `test-jar` deps** — Mill’s `testModuleDeps` approximated via `nativeimage-testutil` promotion + main-jar suite modules.
+7. **Broken old POMs** (`apacheds-protocol-dns` `${groupId}` path) — excluded those integration tests in setup.
+
+## setup.sh curated excludes (honest Mill-class)
+
+| Exclude | Why |
+|---------|-----|
+| `OpenJdkSelfSignedCertGenerator` + SSL patch | needs `javac --add-exports` |
+| SCTP `com/**` stubs | Maven compiler exclude / `jdk.sctp` conflict |
+| `AmazonCorrettoSslEngineTest` | classifier-native crypto provider |
+| ApacheDS DNS tests (`TestDnsServer`, …) | broken Maven POM / not resolved |
+| `NativeLibraryLoaderTest` | UnsatisfiedLinkError without special native fixtures |
+| Adaptive* buffer tests | capacity-floor failures on modern JDK (investigate) |

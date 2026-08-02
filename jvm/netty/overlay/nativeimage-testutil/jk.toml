@@ -1,0 +1,21 @@
+# Shared ChannelHandlerMetadataUtil (lives under transport/src/test in upstream Netty).
+# Workspace module so codec/handler/etc. can depend on it for *MetadataTest (Mill testModuleDeps).
+[project]
+name = "nativeimage-testutil"
+
+[dependencies]
+common = { workspace = true }
+buffer = { workspace = true }
+transport = { workspace = true }
+reflections = { group = "org.reflections", name = "reflections", version = "=0.10.2" }
+gson = { group = "com.google.code.gson", name = "gson", version = "=2.8.9" }
+guava = { group = "com.google.guava", name = "guava", version = "=28.2-jre" }
+
+[test-dependencies]
+junit-jupiter-api = { group = "org.junit.jupiter", name = "junit-jupiter-api", version = "=6.1.0" }
+junit-jupiter-engine = { group = "org.junit.jupiter", name = "junit-jupiter-engine", version = "=6.1.0" }
+
+# Align with junit-jupiter 5.9.x — override jk's putIfAbsent "latest" launcher (was Platform 6.x)
+junit-platform-launcher = { group = "org.junit.platform", name = "junit-platform-launcher", version = "=6.1.0" }
+junit-platform-engine = { group = "org.junit.platform", name = "junit-platform-engine", version = "=6.1.0" }
+junit-platform-commons = { group = "org.junit.platform", name = "junit-platform-commons", version = "=6.1.0" }

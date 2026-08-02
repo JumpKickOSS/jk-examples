@@ -16,6 +16,9 @@ fi
 cd checkout
 echo "== jk lock =="
 jk lock
-echo "== jk build --skip-tests =="
-jk build --skip-tests "$@"
+# Mill's published Netty numbers are compile-focused (-DskipTests / __.compile).
+# Full Netty unit suites are multi-hour and need curated selection (see PARITY.md / README).
+echo "== jk build --skip-tests --redo =="
+jk build --skip-tests --redo "$@"
 echo "OK: Netty workspace built under target/"
+echo "Tip: smoke unit tests on one module: jk test --modules common"
