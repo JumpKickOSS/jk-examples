@@ -1,0 +1,21 @@
+[project]
+name    = "ktor-petshop-app"
+group   = "com.example"
+version = "0.1.0"
+kotlin  = "2.1.0"
+layout  = "traditional"
+
+[application]
+main = "com.example.petshop.ApplicationKt"
+
+[dependencies]
+ktor-petshop-domain = { workspace = true }
+ktor-server-core = { group = "io.ktor", name = "ktor-server-core-jvm", version = "3.1.1" }
+ktor-server-netty = { group = "io.ktor", name = "ktor-server-netty-jvm", version = "3.1.1" }
+ktor-server-content-negotiation = { group = "io.ktor", name = "ktor-server-content-negotiation-jvm", version = "3.1.1" }
+ktor-serialization-jackson = { group = "io.ktor", name = "ktor-serialization-jackson-jvm", version = "3.1.1" }
+logback-classic = { group = "ch.qos.logback", name = "logback-classic", version = "1.5.16" }
+
+[test-dependencies]
+junit-jupiter = "latest"
+junit-platform-launcher = "latest"

@@ -1,0 +1,19 @@
+[project]
+name    = "petshop-web"
+group   = "com.example"
+version = "0.1.0"
+java    = 21
+layout  = "traditional"
+
+[application]
+main = "com.example.petshop.web.PetshopApplication"
+
+[spring-boot]
+version = "4.1.0"
+
+[dependencies]
+petshop-service = { workspace = true }
+starter-webmvc = { group = "org.springframework.boot", name = "spring-boot-starter-webmvc" }
+
+[test-dependencies]
+starter-test = { group = "org.springframework.boot", name = "spring-boot-starter-test" }

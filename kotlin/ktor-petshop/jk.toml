@@ -1,0 +1,8 @@
+[project]
+name    = "ktor-petshop"
+group   = "com.example"
+version = "0.1.0"
+kotlin  = "2.1.0"
+
+[workspace]
+modules = ["domain", "app"]

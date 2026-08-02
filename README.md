@@ -11,9 +11,12 @@ and real reference apps, and they exist to catch the gaps unit suites can't.
 |---|---|
 | `android/nowinandroid/` | **The Android north star**: Google's reference app, all 27 modules — Compose, Hilt (unmodified sources), Room auto-migrations, protobuf/datastore, kotlinx-serialization, navigation3, a contentType variant dimension, non-transitive R, demo-debug APK + signed R8 release AAB. No Gradle, no AGP. |
 | `spring-boot/kitchen-sink/` | Spring Boot **4.1** — web + data-jpa + validation + actuator, BOM auto-import, boot-jar layout, Spring AOT step, build-info, dev-scope devtools. |
+| `spring-boot/petshop/` | Multi-module Spring Boot **4.1** pet shop (domain / service / web) — workspace + BOM dogfood. |
 | `aot/vanilla-cli/` | Core JVM AOT (`jk build --aot-cache`) with no framework and no plugin — the everyone-gets-this path. |
 | `kotlin/serialization-cli/` | Project-declared Kotlin compiler plugins (`[[kotlin-plugins]]`) via kotlinx-serialization. |
+| `kotlin/ktor-petshop/` | Multi-module Ktor + Koin-style pet shop (domain / app) — Kotlin workspace dogfood. |
 | `protobuf/messages/` | The protobuf plugin: provisioned per-OS protoc, Java + Kotlin DSL (lite) codegen. |
+| `jvm/netty-echo/` | Netty 4.1 echo server — small adoption sample + cold/warm build harness seed. |
 | `jvm/shrink-cli/` | The shrink plugin: R8 `--classfile` full mode collapsing a fat jar. |
 | `jvm/variants-cli/` | Core `[variants]`: a custom dimension on a plain JVM app — per-value `extra-src` + deps, union lockfile, mandatory selection. |
 | `jvm/profiles-vs-variants/` | The decision matrix as running code: a profile (how), a feature (what capability), and the build-type variant (which product) side by side. |

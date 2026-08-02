@@ -1,0 +1,20 @@
+# JK-1174 — idiomatic JumpKick Netty echo server (published Netty artifacts).
+# Full multi-module Netty source port (Mill monorepo parity) is a follow-on; this
+# sample is the dogfood unit for cold/warm benches (JK-1175) without a 500k LOC checkout.
+
+[project]
+name    = "netty-echo"
+group   = "com.example"
+version = "0.1.0"
+java    = 21
+layout  = "traditional"
+
+[application]
+main = "com.example.echo.EchoServer"
+
+[dependencies]
+netty-all = { group = "io.netty", name = "netty-all", version = "4.1.115.Final" }
+
+[test-dependencies]
+junit-jupiter = "latest"
+junit-platform-launcher = "latest"

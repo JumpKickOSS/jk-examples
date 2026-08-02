@@ -1,0 +1,9 @@
+[project]
+name    = "petshop-service"
+group   = "com.example"
+version = "0.1.0"
+java    = 21
+layout  = "traditional"
+
+[dependencies]
+petshop-domain = { workspace = true }
