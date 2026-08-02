@@ -1,0 +1,11 @@
+package com.example.petshop.web;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class PetshopApplicationTest {
+
+    @Test
+    void contextLoads() {}
+}

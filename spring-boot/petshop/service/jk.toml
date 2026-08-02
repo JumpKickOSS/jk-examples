@@ -1,9 +1,6 @@
 [project]
-name    = "petshop-service"
-group   = "com.example"
-version = "0.1.0"
-java    = 21
-layout  = "traditional"
+name = "petshop-service"
 
 [dependencies]
 petshop-domain = { workspace = true }
+spring-context = { group = "org.springframework", name = "spring-context", version = "7.0.8" }

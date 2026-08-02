@@ -1,12 +1,8 @@
 [project]
-name    = "petshop-web"
-group   = "com.example"
-version = "0.1.0"
-java    = 21
-layout  = "traditional"
+name = "petshop-web"
 
 [application]
-main = "com.example.petshop.web.PetshopApplication"
+main = "com.example.petshop.PetshopApplication"
 
 [spring-boot]
 version = "4.1.0"
@@ -14,6 +10,9 @@ version = "4.1.0"
 [dependencies]
 petshop-service = { workspace = true }
 starter-webmvc = { group = "org.springframework.boot", name = "spring-boot-starter-webmvc" }
+starter-actuator = { group = "org.springframework.boot", name = "spring-boot-starter-actuator" }
+starter-validation = { group = "org.springframework.boot", name = "spring-boot-starter-validation" }
 
 [test-dependencies]
 starter-test = { group = "org.springframework.boot", name = "spring-boot-starter-test" }
+starter-webmvc-test = { group = "org.springframework.boot", name = "spring-boot-starter-webmvc-test" }

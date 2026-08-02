@@ -1,0 +1,1346 @@
+version = 1
+generated-by = "jk 0.10.1"
+resolution-algorithm = "pubgrub-v1"
+kotlin = "2.4.10"
+jk = { version = "0.10.1", sha256 = "de9820d6c9dd57ea9093f654d6fa03639ab5822f0d10ffc87db04d12db110259" }
+manifests-sha256 = "ec525e797ad3e7edeeb5481b1899ad9925020061d7b8049dad252e1e33586bbc"
+
+[[artifact]]
+name     = "ch.qos.logback:logback-classic:jar:"
+version  = "1.6.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:be8970a67c145e610071817622212b50ee531f2ee8649d70a704e8549b958bbd"
+scopes   = ["main"]
+deps = [
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+
+[[artifact]]
+name     = "ch.qos.logback:logback-core:jar:"
+version  = "1.6.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:ca24a516db9c9bf43ff5c41ce9648ee546869aa7a30d349c531b3755af4f9db6"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "co.touchlab:stately-concurrency-jvm:jar:"
+version  = "2.1.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:86739675892fb1c17d6bd36d05347e89ff313957421bb01a45a743ce774e8e29"
+scopes   = ["main", "test"]
+deps = [
+  "co.touchlab:stately-strict-jvm:jar:@2.1.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "co.touchlab:stately-concurrency:jar:"
+version  = "2.1.0"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main", "test"]
+deps = [
+  "co.touchlab:stately-concurrency-jvm:jar:@2.1.0",
+  "co.touchlab:stately-strict:jar:@2.1.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "co.touchlab:stately-concurrent-collections-jvm:jar:"
+version  = "2.1.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:0e0d9e7f20eaee18f7862309064c8db58ce6a3a861d8871f561546af63df1893"
+scopes   = ["main", "test"]
+deps = [
+  "co.touchlab:stately-concurrency-jvm:jar:@2.1.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "co.touchlab:stately-concurrent-collections:jar:"
+version  = "2.1.0"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main", "test"]
+deps = [
+  "co.touchlab:stately-concurrency:jar:@2.1.0",
+  "co.touchlab:stately-concurrent-collections-jvm:jar:@2.1.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "co.touchlab:stately-strict-jvm:jar:"
+version  = "2.1.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:581070db2802cbad81f6e6e2d9d2494835443153b314458d53aa43c68260c9fa"
+scopes   = ["main", "test"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "co.touchlab:stately-strict:jar:"
+version  = "2.1.0"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main", "test"]
+deps = [
+  "co.touchlab:stately-strict-jvm:jar:@2.1.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "com.fasterxml.jackson.core:jackson-annotations:jar:"
+version  = "2.22"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:21ddb598807d3a51a876704eb979d9296e1c6a6f47ab1826ff88c6d6a127a2d0"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "com.fasterxml.jackson.core:jackson-core:jar:"
+version  = "2.22.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:941ff029bcdb93e83d209ce516c1a7fb8bbac07d0a2fa122f5bf194b2cd7b4f4"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "com.fasterxml.jackson.core:jackson-databind:jar:"
+version  = "2.22.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:7dcd7e53bec1f56c7ad278bd1ca0840bebcc595d61ce44d6a8439abb75b965b2"
+scopes   = ["main"]
+deps = [
+  "com.fasterxml.jackson.core:jackson-annotations:jar:@2.22",
+  "com.fasterxml.jackson.core:jackson-core:jar:@2.22.1",
+]
+
+[[artifact]]
+name     = "com.fasterxml.jackson.module:jackson-module-kotlin:jar:"
+version  = "2.22.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:37f44b1403a9532742a3695c9c0cd04c161fd6b338fe6e4fc6e6ffa26e0a1f33"
+scopes   = ["main"]
+deps = [
+  "com.fasterxml.jackson.core:jackson-annotations:jar:@2.22",
+  "com.fasterxml.jackson.core:jackson-databind:jar:@2.22.1",
+  "org.jetbrains.kotlin:kotlin-reflect:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "com.h2database:h2:jar:"
+version  = "2.4.240"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:29b70e427cc1c40cdc376283adbb0cc62853073797bb5fe5761f81fe73d57ce0"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "com.typesafe:config:jar:"
+version  = "1.4.9"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:47d13e3196c84f2a8ccd014ae563738c3da5b7406b38e03505ec0601a2f4fc37"
+scopes   = ["main", "test"]
+
+[[artifact]]
+name     = "io.insert-koin:koin-core-annotations-jvm:jar:"
+version  = "4.2.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:50079c79a7dbbb6bebebf5922a63ba4759fd9286dcdb5d502a383cb7c0bc60c0"
+scopes   = ["test"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "io.insert-koin:koin-core-annotations:jar:"
+version  = "4.2.2"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["test"]
+deps = [
+  "io.insert-koin:koin-core-annotations-jvm:jar:@4.2.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "io.insert-koin:koin-core-jvm:jar:"
+version  = "4.2.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:6d88966bbd7e65631f6a962f46a959b857e39e6fcc45b4088997b1d54fef0004"
+scopes   = ["main", "test"]
+deps = [
+  "co.touchlab:stately-concurrency-jvm:jar:@2.1.0",
+  "co.touchlab:stately-concurrent-collections-jvm:jar:@2.1.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "io.insert-koin:koin-core:jar:"
+version  = "4.2.2"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main", "test"]
+deps = [
+  "co.touchlab:stately-concurrency:jar:@2.1.0",
+  "co.touchlab:stately-concurrent-collections:jar:@2.1.0",
+  "io.insert-koin:koin-core-jvm:jar:@4.2.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "io.insert-koin:koin-ktor-jvm:jar:"
+version  = "4.2.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:2da3a6a202f46fc5bdc28caff66cb8d0f9658743a0399433acc4b5c16b0fd278"
+scopes   = ["main"]
+deps = [
+  "io.insert-koin:koin-core-jvm:jar:@4.2.2",
+  "io.ktor:ktor-server-core-jvm:jar:@3.5.2",
+  "io.ktor:ktor-server-di-jvm:jar:@3.5.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
+]
+
+[[artifact]]
+name     = "io.insert-koin:koin-ktor:jar:"
+version  = "4.2.2"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "io.insert-koin:koin-core:jar:@4.2.2",
+  "io.insert-koin:koin-ktor-jvm:jar:@4.2.2",
+  "io.ktor:ktor-server-core:jar:@3.5.2",
+  "io.ktor:ktor-server-di:jar:@3.5.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.11.0",
+]
+
+[[artifact]]
+name     = "io.insert-koin:koin-logger-slf4j:jar:"
+version  = "4.2.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:7bab2047f607d59da31cbfbf425a4671a337b48132880c2a204960229ffa419b"
+scopes   = ["main"]
+deps = [
+  "io.insert-koin:koin-core-jvm:jar:@4.2.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+
+[[artifact]]
+name     = "io.insert-koin:koin-test-jvm:jar:"
+version  = "4.2.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:6f5e5a257a0370b03e5d4e229b2d991a3c9043af70f7955bda96ffebd19334f2"
+scopes   = ["test"]
+deps = [
+  "io.insert-koin:koin-core-annotations-jvm:jar:@4.2.2",
+  "io.insert-koin:koin-core-jvm:jar:@4.2.2",
+  "org.jetbrains.kotlin:kotlin-reflect:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-test:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "io.insert-koin:koin-test:jar:"
+version  = "4.2.2"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["test"]
+deps = [
+  "io.insert-koin:koin-core-annotations:jar:@4.2.2",
+  "io.insert-koin:koin-core:jar:@4.2.2",
+  "io.insert-koin:koin-test-jvm:jar:@4.2.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-test:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "io.ktor:ktor-client-apache5-jvm:jar:"
+version  = "3.5.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:eb1749628f36ba6098b75af4b9b8a3abf5663fa0c3e1b6d282710f2d84552a4b"
+scopes   = ["test"]
+deps = [
+  "io.ktor:ktor-client-core-jvm:jar:@3.5.2",
+  "org.apache.httpcomponents.client5:httpclient5:jar:@5.6.3",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+
+[[artifact]]
+name     = "io.ktor:ktor-client-cio-jvm:jar:"
+version  = "3.5.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:49e3b4ab3cd80c4757e5c28aa1f139353da6665efde7df9e4b56790aae8e28a1"
+scopes   = ["test"]
+deps = [
+  "io.ktor:ktor-client-core-jvm:jar:@3.5.2",
+  "io.ktor:ktor-http-cio-jvm:jar:@3.5.2",
+  "io.ktor:ktor-network-tls-jvm:jar:@3.5.2",
+  "io.ktor:ktor-websockets-jvm:jar:@3.5.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+
+[[artifact]]
+name     = "io.ktor:ktor-client-core-jvm:jar:"
+version  = "3.5.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:3e03d71c5c6370d128f483cf63cfe62628d5c0d1b1ac5e45dbe2a6825e696af4"
+scopes   = ["test"]
+deps = [
+  "io.ktor:ktor-events-jvm:jar:@3.5.2",
+  "io.ktor:ktor-http-cio-jvm:jar:@3.5.2",
+  "io.ktor:ktor-http-jvm:jar:@3.5.2",
+  "io.ktor:ktor-sse-jvm:jar:@3.5.2",
+  "io.ktor:ktor-websocket-serialization-jvm:jar:@3.5.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-slf4j:jar:@1.11.0",
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+
+[[artifact]]
+name     = "io.ktor:ktor-events-jvm:jar:"
+version  = "3.5.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:7712ed1d51716180a9666fe88da5c5ef0e49123483ae2cd14ae3e9252ee71148"
+scopes   = ["main", "test"]
+deps = [
+  "io.ktor:ktor-utils-jvm:jar:@3.5.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+
+[[artifact]]
+name     = "io.ktor:ktor-events:jar:"
+version  = "3.5.2"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "io.ktor:ktor-events-jvm:jar:@3.5.2",
+  "io.ktor:ktor-utils:jar:@3.5.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.11.0",
+]
+
+[[artifact]]
+name     = "io.ktor:ktor-http-cio-jvm:jar:"
+version  = "3.5.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:3c87a3e3b368994a485e2f62f59cbe2201d767094018b726e81ffbe9b4976554"
+scopes   = ["main", "test"]
+deps = [
+  "io.ktor:ktor-http-jvm:jar:@3.5.2",
+  "io.ktor:ktor-io-jvm:jar:@3.5.2",
+  "io.ktor:ktor-network-jvm:jar:@3.5.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+
+[[artifact]]
+name     = "io.ktor:ktor-http-cio:jar:"
+version  = "3.5.2"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "io.ktor:ktor-http-cio-jvm:jar:@3.5.2",
+  "io.ktor:ktor-http:jar:@3.5.2",
+  "io.ktor:ktor-io:jar:@3.5.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.11.0",
+]
+
+[[artifact]]
+name     = "io.ktor:ktor-http-jvm:jar:"
+version  = "3.5.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:6afc8074f60732ed60cd904a3e52b46a98425b35a1b9446d2cfa457f2ee63b41"
+scopes   = ["main", "test"]
+deps = [
+  "io.ktor:ktor-utils-jvm:jar:@3.5.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
+  "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:@1.11.0",
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+
+[[artifact]]
+name     = "io.ktor:ktor-http:jar:"
+version  = "3.5.2"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "io.ktor:ktor-http-jvm:jar:@3.5.2",
+  "io.ktor:ktor-utils:jar:@3.5.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.11.0",
+  "org.jetbrains.kotlinx:kotlinx-serialization-core:jar:@1.11.0",
+]
+
+[[artifact]]
+name     = "io.ktor:ktor-io-jvm:jar:"
+version  = "3.5.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b990b4319b711218fbcee2f98e1dcf289a25a17194837992efb5b970b3b6c64c"
+scopes   = ["main", "test"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
+  "org.jetbrains.kotlinx:kotlinx-io-core-jvm:jar:@0.9.1",
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+
+[[artifact]]
+name     = "io.ktor:ktor-io:jar:"
+version  = "3.5.2"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "io.ktor:ktor-io-jvm:jar:@3.5.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.11.0",
+  "org.jetbrains.kotlinx:kotlinx-io-core:jar:@0.9.1",
+]
+
+[[artifact]]
+name     = "io.ktor:ktor-network-jvm:jar:"
+version  = "3.5.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:f1d966faf5e9adf903a968480f6c1a4223d596583a972ebbaf3fa1fd7f9be75d"
+scopes   = ["main", "test"]
+deps = [
+  "io.ktor:ktor-utils-jvm:jar:@3.5.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+
+[[artifact]]
+name     = "io.ktor:ktor-network-tls-certificates-jvm:jar:"
+version  = "3.5.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:3254d9479e28c6e9ebdc28fcdef3a54bdf35ead6aa0f9b92db67dbc6cdd1b146"
+scopes   = ["test"]
+deps = [
+  "io.ktor:ktor-network-tls-jvm:jar:@3.5.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+
+[[artifact]]
+name     = "io.ktor:ktor-network-tls-jvm:jar:"
+version  = "3.5.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:0e4983baa00f96f1fe555e7a87a20d5f87b8dd126d26e7e3ce377a8b736a4720"
+scopes   = ["test"]
+deps = [
+  "io.ktor:ktor-http-jvm:jar:@3.5.2",
+  "io.ktor:ktor-network-jvm:jar:@3.5.2",
+  "io.ktor:ktor-utils-jvm:jar:@3.5.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+
+[[artifact]]
+name     = "io.ktor:ktor-serialization-jackson-jvm:jar:"
+version  = "3.5.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:cc6a0d3005505a245a878fda991c1732352245ced123d1abf1fdde77d79e048f"
+scopes   = ["main"]
+deps = [
+  "com.fasterxml.jackson.core:jackson-databind:jar:@2.22.1",
+  "com.fasterxml.jackson.module:jackson-module-kotlin:jar:@2.22.1",
+  "io.ktor:ktor-serialization-jvm:jar:@3.5.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+
+[[artifact]]
+name     = "io.ktor:ktor-serialization-jvm:jar:"
+version  = "3.5.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b7c85d08714ce39e9c17a235038de6f9c2b121e5fb57ce90c5a349a65f61e9f6"
+scopes   = ["main", "test"]
+deps = [
+  "io.ktor:ktor-websockets-jvm:jar:@3.5.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+
+[[artifact]]
+name     = "io.ktor:ktor-serialization:jar:"
+version  = "3.5.2"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "io.ktor:ktor-serialization-jvm:jar:@3.5.2",
+  "io.ktor:ktor-websockets:jar:@3.5.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.11.0",
+]
+
+[[artifact]]
+name     = "io.ktor:ktor-server-call-logging-jvm:jar:"
+version  = "3.5.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b3b811ccbca33f681489de429bb01b5503dafb90d0dc93a27036dd1bdd759d50"
+scopes   = ["test"]
+deps = [
+  "io.ktor:ktor-server-core-jvm:jar:@3.5.2",
+  "org.fusesource.jansi:jansi:jar:@2.4.3",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-slf4j:jar:@1.11.0",
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+
+[[artifact]]
+name     = "io.ktor:ktor-server-content-negotiation-jvm:jar:"
+version  = "3.5.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b66558e844d600d2c23e4bf90ec9cfd8b2085b51aaf40373412aba29a0cb34e5"
+scopes   = ["main"]
+deps = [
+  "io.ktor:ktor-server-core-jvm:jar:@3.5.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+
+[[artifact]]
+name     = "io.ktor:ktor-server-core-jvm:jar:"
+version  = "3.5.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:d465a17ee037ac869d3b1002be91248dbad587dd4435e35fa727cbb7591bcd61"
+scopes   = ["main", "test"]
+deps = [
+  "com.typesafe:config:jar:@1.4.9",
+  "io.ktor:ktor-events-jvm:jar:@3.5.2",
+  "io.ktor:ktor-http-cio-jvm:jar:@3.5.2",
+  "io.ktor:ktor-http-jvm:jar:@3.5.2",
+  "io.ktor:ktor-serialization-jvm:jar:@3.5.2",
+  "io.ktor:ktor-utils-jvm:jar:@3.5.2",
+  "io.ktor:ktor-websockets-jvm:jar:@3.5.2",
+  "org.jetbrains.kotlin:kotlin-reflect:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+
+[[artifact]]
+name     = "io.ktor:ktor-server-core:jar:"
+version  = "3.5.2"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "io.ktor:ktor-events:jar:@3.5.2",
+  "io.ktor:ktor-http-cio:jar:@3.5.2",
+  "io.ktor:ktor-http:jar:@3.5.2",
+  "io.ktor:ktor-serialization:jar:@3.5.2",
+  "io.ktor:ktor-server-core-jvm:jar:@3.5.2",
+  "io.ktor:ktor-utils:jar:@3.5.2",
+  "io.ktor:ktor-websockets:jar:@3.5.2",
+  "org.jetbrains.kotlin:kotlin-reflect:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.11.0",
+]
+
+[[artifact]]
+name     = "io.ktor:ktor-server-di-jvm:jar:"
+version  = "3.5.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:63ff3cd614addf627974df1213271f279caa5f4fe2335322bd129539532b9594"
+scopes   = ["main"]
+deps = [
+  "io.ktor:ktor-server-core-jvm:jar:@3.5.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+
+[[artifact]]
+name     = "io.ktor:ktor-server-di:jar:"
+version  = "3.5.2"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "io.ktor:ktor-server-core:jar:@3.5.2",
+  "io.ktor:ktor-server-di-jvm:jar:@3.5.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.11.0",
+]
+
+[[artifact]]
+name     = "io.ktor:ktor-server-netty-jvm:jar:"
+version  = "3.5.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:597bd7e672c5f1d1f6f54f928ea2424d4b840e695b89e528f396e8c140ca857b"
+scopes   = ["main"]
+deps = [
+  "io.ktor:ktor-server-core-jvm:jar:@3.5.2",
+  "io.netty:netty-codec-http2:jar:@4.2.16.Final",
+  "io.netty:netty-codec:jar:@4.2.16.Final",
+  "io.netty:netty-transport-native-epoll:jar:@4.2.16.Final",
+  "io.netty:netty-transport-native-kqueue:jar:@4.2.16.Final",
+  "org.eclipse.jetty.alpn:alpn-api:jar:@1.1.3.v20160715",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+
+[[artifact]]
+name     = "io.ktor:ktor-server-test-host-jvm:jar:"
+version  = "3.5.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:0f24947a39c6c0337262155b52e309f6e25e24004d93b935f387988f933bd76c"
+scopes   = ["test"]
+deps = [
+  "io.ktor:ktor-client-apache5-jvm:jar:@3.5.2",
+  "io.ktor:ktor-client-cio-jvm:jar:@3.5.2",
+  "io.ktor:ktor-client-core-jvm:jar:@3.5.2",
+  "io.ktor:ktor-network-tls-certificates-jvm:jar:@3.5.2",
+  "io.ktor:ktor-network-tls-jvm:jar:@3.5.2",
+  "io.ktor:ktor-server-call-logging-jvm:jar:@3.5.2",
+  "io.ktor:ktor-server-core-jvm:jar:@3.5.2",
+  "io.ktor:ktor-server-websockets-jvm:jar:@3.5.2",
+  "io.ktor:ktor-test-dispatcher-jvm:jar:@3.5.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-debug:jar:@1.11.0",
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+
+[[artifact]]
+name     = "io.ktor:ktor-server-websockets-jvm:jar:"
+version  = "3.5.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b008cb4048606ce3b4fce41d3c405072a506aafba96c550e7757c2b9c3ef3e98"
+scopes   = ["test"]
+deps = [
+  "io.ktor:ktor-server-core-jvm:jar:@3.5.2",
+  "io.ktor:ktor-websocket-serialization-jvm:jar:@3.5.2",
+  "io.ktor:ktor-websockets-jvm:jar:@3.5.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+
+[[artifact]]
+name     = "io.ktor:ktor-sse-jvm:jar:"
+version  = "3.5.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:c510904fe0e7dd6b9df2fa7c5474696fda64d7366129ce5fa9ace2ebf450d288"
+scopes   = ["test"]
+deps = [
+  "io.ktor:ktor-utils-jvm:jar:@3.5.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+
+[[artifact]]
+name     = "io.ktor:ktor-test-dispatcher-jvm:jar:"
+version  = "3.5.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:ee12b62e476a2f051f2abf46219e778dc442353ff678ec2b4380b9d2d9da1d5b"
+scopes   = ["test"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-test-jvm:jar:@1.11.0",
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+
+[[artifact]]
+name     = "io.ktor:ktor-utils-jvm:jar:"
+version  = "3.5.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:5cb9c040d290aa31ce5e4930d825dda5d25625a8603074b29943c519d5b022bb"
+scopes   = ["main", "test"]
+deps = [
+  "io.ktor:ktor-io-jvm:jar:@3.5.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
+  "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:@1.11.0",
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+
+[[artifact]]
+name     = "io.ktor:ktor-utils:jar:"
+version  = "3.5.2"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "io.ktor:ktor-io:jar:@3.5.2",
+  "io.ktor:ktor-utils-jvm:jar:@3.5.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.11.0",
+  "org.jetbrains.kotlinx:kotlinx-serialization-core:jar:@1.11.0",
+]
+
+[[artifact]]
+name     = "io.ktor:ktor-websocket-serialization-jvm:jar:"
+version  = "3.5.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:7ffcac7ed3d723e0bd33b219b9e3df6d5953e5b810f66c4c8e686f571f5d8e6c"
+scopes   = ["test"]
+deps = [
+  "io.ktor:ktor-serialization-jvm:jar:@3.5.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+
+[[artifact]]
+name     = "io.ktor:ktor-websockets-jvm:jar:"
+version  = "3.5.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:f5aeb4e6ee108e815643e2cf06580d4ca1adc529f6cf4d306a89b69fb4880b4b"
+scopes   = ["main", "test"]
+deps = [
+  "io.ktor:ktor-http-jvm:jar:@3.5.2",
+  "io.ktor:ktor-utils-jvm:jar:@3.5.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+
+[[artifact]]
+name     = "io.ktor:ktor-websockets:jar:"
+version  = "3.5.2"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "io.ktor:ktor-http:jar:@3.5.2",
+  "io.ktor:ktor-utils:jar:@3.5.2",
+  "io.ktor:ktor-websockets-jvm:jar:@3.5.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.11.0",
+]
+
+[[artifact]]
+name     = "io.netty:netty-buffer:jar:"
+version  = "4.2.16.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:cc36ae9fbd0b03fe755eb4eb4424ca53b59cfd297d7fd47d49e5b1059beded6c"
+scopes   = ["main"]
+deps = [
+  "io.netty:netty-common:jar:@4.2.16.Final",
+]
+
+[[artifact]]
+name     = "io.netty:netty-codec-base:jar:"
+version  = "4.2.16.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:feb410225938d9970de6b624a0c031d079804fa5cc5e1ec6e9298f16db5998a7"
+scopes   = ["main"]
+deps = [
+  "io.netty:netty-buffer:jar:@4.2.16.Final",
+  "io.netty:netty-common:jar:@4.2.16.Final",
+  "io.netty:netty-transport:jar:@4.2.16.Final",
+]
+
+[[artifact]]
+name     = "io.netty:netty-codec-compression:jar:"
+version  = "4.2.16.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:13c8565414dd2115281303ef4ad1f7cc69bd7771d8d12c7d2fb31307dff26d11"
+scopes   = ["main"]
+deps = [
+  "io.netty:netty-buffer:jar:@4.2.16.Final",
+  "io.netty:netty-codec-base:jar:@4.2.16.Final",
+  "io.netty:netty-common:jar:@4.2.16.Final",
+  "io.netty:netty-transport:jar:@4.2.16.Final",
+]
+
+[[artifact]]
+name     = "io.netty:netty-codec-http2:jar:"
+version  = "4.2.16.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:fe1ffc7ed6bfb40f91c4e265fe76e3be7f9049deef0e8cf5a992420e4f02b542"
+scopes   = ["main"]
+deps = [
+  "io.netty:netty-buffer:jar:@4.2.16.Final",
+  "io.netty:netty-codec-base:jar:@4.2.16.Final",
+  "io.netty:netty-codec-http:jar:@4.2.16.Final",
+  "io.netty:netty-common:jar:@4.2.16.Final",
+  "io.netty:netty-handler:jar:@4.2.16.Final",
+  "io.netty:netty-transport:jar:@4.2.16.Final",
+]
+
+[[artifact]]
+name     = "io.netty:netty-codec-http:jar:"
+version  = "4.2.16.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:0d16f981de8d0d304a2ab1a81f0a674892089fbaa8a583100aebb4a5b00456ec"
+scopes   = ["main"]
+deps = [
+  "io.netty:netty-buffer:jar:@4.2.16.Final",
+  "io.netty:netty-codec-base:jar:@4.2.16.Final",
+  "io.netty:netty-codec-compression:jar:@4.2.16.Final",
+  "io.netty:netty-common:jar:@4.2.16.Final",
+  "io.netty:netty-handler:jar:@4.2.16.Final",
+  "io.netty:netty-transport:jar:@4.2.16.Final",
+]
+
+[[artifact]]
+name     = "io.netty:netty-codec-marshalling:jar:"
+version  = "4.2.16.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:9691818c6e59a97e454f8381c86dfe840302168d985098a278dca07781efc75e"
+scopes   = ["main"]
+deps = [
+  "io.netty:netty-buffer:jar:@4.2.16.Final",
+  "io.netty:netty-codec-base:jar:@4.2.16.Final",
+  "io.netty:netty-common:jar:@4.2.16.Final",
+  "io.netty:netty-transport:jar:@4.2.16.Final",
+]
+
+[[artifact]]
+name     = "io.netty:netty-codec-protobuf:jar:"
+version  = "4.2.16.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:bb66f23ccb543dd842ddda91b6c8e97e222220d2efa5459f6a46a22ade3b2170"
+scopes   = ["main"]
+deps = [
+  "io.netty:netty-buffer:jar:@4.2.16.Final",
+  "io.netty:netty-codec-base:jar:@4.2.16.Final",
+  "io.netty:netty-common:jar:@4.2.16.Final",
+  "io.netty:netty-transport:jar:@4.2.16.Final",
+]
+
+[[artifact]]
+name     = "io.netty:netty-codec:jar:"
+version  = "4.2.16.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:41868bcc428954e707e39a30686ceddc0bd238391d3989d04dfb72d5f0735926"
+scopes   = ["main"]
+deps = [
+  "io.netty:netty-buffer:jar:@4.2.16.Final",
+  "io.netty:netty-codec-base:jar:@4.2.16.Final",
+  "io.netty:netty-codec-compression:jar:@4.2.16.Final",
+  "io.netty:netty-codec-marshalling:jar:@4.2.16.Final",
+  "io.netty:netty-codec-protobuf:jar:@4.2.16.Final",
+  "io.netty:netty-common:jar:@4.2.16.Final",
+  "io.netty:netty-transport:jar:@4.2.16.Final",
+]
+
+[[artifact]]
+name     = "io.netty:netty-common:jar:"
+version  = "4.2.16.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:9825ee68a0dc4cd2b53e2f532502401b2211bad9b77e8b04882d9e64487283ff"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "io.netty:netty-handler:jar:"
+version  = "4.2.16.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:a259ca496da05ac1981f95cd856211f894a328056a6129e9cd70dbbd5df401f7"
+scopes   = ["main"]
+deps = [
+  "io.netty:netty-buffer:jar:@4.2.16.Final",
+  "io.netty:netty-codec-base:jar:@4.2.16.Final",
+  "io.netty:netty-common:jar:@4.2.16.Final",
+  "io.netty:netty-resolver:jar:@4.2.16.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.16.Final",
+  "io.netty:netty-transport:jar:@4.2.16.Final",
+]
+
+[[artifact]]
+name     = "io.netty:netty-resolver:jar:"
+version  = "4.2.16.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:c9eca6a99036485cf1d186b4a6a595b0a54c53808319ee03924270eae04c32bb"
+scopes   = ["main"]
+deps = [
+  "io.netty:netty-common:jar:@4.2.16.Final",
+]
+
+[[artifact]]
+name     = "io.netty:netty-transport-classes-epoll:jar:"
+version  = "4.2.16.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:9f2b53210db9c8d24e787ed43f3896aaf30d686ed270c7afbb29ab6330c6aa23"
+scopes   = ["main"]
+deps = [
+  "io.netty:netty-buffer:jar:@4.2.16.Final",
+  "io.netty:netty-common:jar:@4.2.16.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.16.Final",
+  "io.netty:netty-transport:jar:@4.2.16.Final",
+]
+
+[[artifact]]
+name     = "io.netty:netty-transport-classes-kqueue:jar:"
+version  = "4.2.16.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:6599b495f69420cb240ab0a1aa60a19a2df3bc72791729170e0993727637a689"
+scopes   = ["main"]
+deps = [
+  "io.netty:netty-buffer:jar:@4.2.16.Final",
+  "io.netty:netty-common:jar:@4.2.16.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.16.Final",
+  "io.netty:netty-transport:jar:@4.2.16.Final",
+]
+
+[[artifact]]
+name     = "io.netty:netty-transport-native-epoll:jar:"
+version  = "4.2.16.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:4e616ae5df3aefee2bbac34cce7290fcaede74593f8cf0a7241d0388fef20e9f"
+scopes   = ["main"]
+deps = [
+  "io.netty:netty-buffer:jar:@4.2.16.Final",
+  "io.netty:netty-common:jar:@4.2.16.Final",
+  "io.netty:netty-transport-classes-epoll:jar:@4.2.16.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.16.Final",
+  "io.netty:netty-transport:jar:@4.2.16.Final",
+]
+
+[[artifact]]
+name     = "io.netty:netty-transport-native-kqueue:jar:"
+version  = "4.2.16.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:58fb194ead6d5144c63d71fc5c5b00b9857ea3339a7403b71c7954d6809a513c"
+scopes   = ["main"]
+deps = [
+  "io.netty:netty-buffer:jar:@4.2.16.Final",
+  "io.netty:netty-common:jar:@4.2.16.Final",
+  "io.netty:netty-transport-classes-kqueue:jar:@4.2.16.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.16.Final",
+  "io.netty:netty-transport:jar:@4.2.16.Final",
+]
+
+[[artifact]]
+name     = "io.netty:netty-transport-native-unix-common:jar:"
+version  = "4.2.16.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:41ca8fe192083d17917be7ddcecded4da4fc1db1d1656d03d0bcb14e2f431155"
+scopes   = ["main"]
+deps = [
+  "io.netty:netty-buffer:jar:@4.2.16.Final",
+  "io.netty:netty-common:jar:@4.2.16.Final",
+  "io.netty:netty-transport:jar:@4.2.16.Final",
+]
+
+[[artifact]]
+name     = "io.netty:netty-transport:jar:"
+version  = "4.2.16.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:cfa3f654caff906653385f4b7ddaa539d795b78f5711a622482b17d2b73484c0"
+scopes   = ["main"]
+deps = [
+  "io.netty:netty-buffer:jar:@4.2.16.Final",
+  "io.netty:netty-common:jar:@4.2.16.Final",
+  "io.netty:netty-resolver:jar:@4.2.16.Final",
+]
+
+[[artifact]]
+name     = "net.bytebuddy:byte-buddy-agent:jar:"
+version  = "1.18.11-jdk5"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:870aa53eec815ea009b642c829942d97938d15c19c1b25d2fd6f0e79d2755713"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "net.bytebuddy:byte-buddy:jar:"
+version  = "1.18.11-jdk5"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:a178d5a44788a8461bc0b1cfb484aa69657077ba24d36438a1098e2e02efd2f0"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "net.java.dev.jna:jna-platform:jar:"
+version  = "5.19.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:3b3864f5b449e9c3c24b16861524b622b086563f44e0cd8384c8efc5a6052f82"
+scopes   = ["test"]
+deps = [
+  "net.java.dev.jna:jna:jar:@5.19.1",
+]
+
+[[artifact]]
+name     = "net.java.dev.jna:jna:jar:"
+version  = "5.19.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:4fb141dd8ef6b0585ffceea4bc49602fbc6312fa977e2c488794ea3e6aafecae"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "org.apache.httpcomponents.client5:httpclient5:jar:"
+version  = "5.6.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:80712ff129210d7c73d9fcc1195cbee5c3c34744965c7a05ea107b3648922f18"
+scopes   = ["test"]
+deps = [
+  "org.apache.httpcomponents.core5:httpcore5-h2:jar:@5.4.3",
+  "org.apache.httpcomponents.core5:httpcore5:jar:@5.4.3",
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+
+[[artifact]]
+name     = "org.apache.httpcomponents.core5:httpcore5-h2:jar:"
+version  = "5.4.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:c7db7026b8e2dea39132b04a6069f6671e2858309b20a146ec5c7dd6ed73a0b6"
+scopes   = ["test"]
+deps = [
+  "org.apache.httpcomponents.core5:httpcore5:jar:@5.4.3",
+]
+
+[[artifact]]
+name     = "org.apache.httpcomponents.core5:httpcore5:jar:"
+version  = "5.4.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:18bfbbabb478dfb67f31aeaf428c387f3c3df654582e1309f708ee1f3086830a"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "org.apiguardian:apiguardian-api:jar:"
+version  = "1.1.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b509448ac506d607319f182537f0b35d71007582ec741832a1f111e5b5b70b38"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "org.eclipse.jetty.alpn:alpn-api:jar:"
+version  = "1.1.3.v20160715"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:07be99758b699e194f70fb9784d94202dc6c98212877829e3d72b020f2660576"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "org.fusesource.jansi:jansi:jar:"
+version  = "2.4.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:ec168cf31c4c3849348dfff7a04e90170615f7784f1255ee6747b98a854c04c5"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "org.jetbrains.exposed:exposed-core:jar:"
+version  = "0.57.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:9be798c157da3148a8c811885a890d82cff300430c30f185b6d8fbfef70ce8a2"
+scopes   = ["main"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-reflect:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+
+[[artifact]]
+name     = "org.jetbrains.exposed:exposed-dao:jar:"
+version  = "0.57.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:c8d3acbb0265ec86f64cdce39e62a237a503189e78bb5740cc25078d3af0260c"
+scopes   = ["main"]
+deps = [
+  "org.jetbrains.exposed:exposed-core:jar:@0.57.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "org.jetbrains.exposed:exposed-jdbc:jar:"
+version  = "0.57.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:74a3197771ede63e551b08708797f5a710736f9fb360833ad249c2459b9af852"
+scopes   = ["main"]
+deps = [
+  "org.jetbrains.exposed:exposed-core:jar:@0.57.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "org.jetbrains.kotlin:kotlin-reflect:jar:"
+version  = "2.4.10"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:25a1aef7454d46548ecaaf51021b0e52e38141a62ed75af124da109b7324c4e5"
+scopes   = ["main", "test"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "org.jetbrains.kotlin:kotlin-stdlib:jar:"
+version  = "2.4.10"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:4ec0293bc3751423b203f1d8493251c57c42e73eb6377a6b8560d0974ff0a6df"
+scopes   = ["main", "test"]
+deps = [
+  "org.jetbrains:annotations:jar:@26.1.0",
+]
+
+[[artifact]]
+name     = "org.jetbrains.kotlin:kotlin-test:jar:"
+version  = "2.4.10"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:5d334a7b17ce9b223e4db35e355f0082fb0551d36c0424a599bf35686ba2ab7b"
+scopes   = ["test"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:"
+version  = "1.11.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:d1d75aa01dffbb4d1c520e67e4c4e7f5f6174718e7cb4632412503f2f0e604fa"
+scopes   = ["main", "test"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains:annotations:jar:@26.1.0",
+]
+
+[[artifact]]
+name     = "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:"
+version  = "1.11.0"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
+]
+
+[[artifact]]
+name     = "org.jetbrains.kotlinx:kotlinx-coroutines-debug:jar:"
+version  = "1.11.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:8de3d5f6f938e58a5bca46270a8ef6448c99548510be7e3f798bca813462afcf"
+scopes   = ["test"]
+deps = [
+  "net.bytebuddy:byte-buddy-agent:jar:@1.18.11-jdk5",
+  "net.bytebuddy:byte-buddy:jar:@1.18.11-jdk5",
+  "net.java.dev.jna:jna-platform:jar:@5.19.1",
+  "net.java.dev.jna:jna:jar:@5.19.1",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
+]
+
+[[artifact]]
+name     = "org.jetbrains.kotlinx:kotlinx-coroutines-slf4j:jar:"
+version  = "1.11.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:1043471e7d5f99680df3a056cf766276e0fe339e48030dea503fc1c94c33743e"
+scopes   = ["test"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+
+[[artifact]]
+name     = "org.jetbrains.kotlinx:kotlinx-coroutines-test-jvm:jar:"
+version  = "1.11.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:d4f7ee71da708af4719dceb6d3200c8f9dc5146ea1a812cb628ed53c64196f96"
+scopes   = ["test"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
+  "org.jetbrains:annotations:jar:@26.1.0",
+]
+
+[[artifact]]
+name     = "org.jetbrains.kotlinx:kotlinx-io-bytestring-jvm:jar:"
+version  = "0.9.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:8589de0b7c476bfdd02a24641685f609ade72f5e595cf2909c168acdba7e6ba4"
+scopes   = ["main", "test"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "org.jetbrains.kotlinx:kotlinx-io-bytestring:jar:"
+version  = "0.9.1"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-io-bytestring-jvm:jar:@0.9.1",
+]
+
+[[artifact]]
+name     = "org.jetbrains.kotlinx:kotlinx-io-core-jvm:jar:"
+version  = "0.9.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:765d8851d8ca694706931331b92386844800867e041b720f1f193dbda874d370"
+scopes   = ["main", "test"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-io-bytestring-jvm:jar:@0.9.1",
+]
+
+[[artifact]]
+name     = "org.jetbrains.kotlinx:kotlinx-io-core:jar:"
+version  = "0.9.1"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-io-bytestring:jar:@0.9.1",
+  "org.jetbrains.kotlinx:kotlinx-io-core-jvm:jar:@0.9.1",
+]
+
+[[artifact]]
+name     = "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:"
+version  = "1.11.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:f4a801c647d4351327cd9e1ac4113e2be9ea37a64ab0abae269c25a52e28f35d"
+scopes   = ["main", "test"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "org.jetbrains.kotlinx:kotlinx-serialization-core:jar:"
+version  = "1.11.0"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:@1.11.0",
+]
+
+[[artifact]]
+name     = "org.jetbrains:annotations:jar:"
+version  = "26.1.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:ebc7aec252ed0c7d2d04c039d7f00e69f7b86b1f493c741d67b3ef31b986b054"
+scopes   = ["main", "test"]
+
+[[artifact]]
+name     = "org.jspecify:jspecify:jar:"
+version  = "1.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:070d75f261fe4c5b8202508366715f7f2d4660f88c8ef7e6d3575e48c9683b66"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "org.junit.jupiter:junit-jupiter-api:jar:"
+version  = "6.1.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:e60794b7d94e03c4bca1c0833cfca18762da5eaac0a61b16281cbbb708103e4c"
+scopes   = ["test"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.1",
+  "org.junit.platform:junit-platform-commons:jar:@6.1.2",
+  "org.opentest4j:opentest4j:jar:@1.3.0",
+]
+
+[[artifact]]
+name     = "org.junit.jupiter:junit-jupiter-engine:jar:"
+version  = "6.1.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:57227ce289ed84ab205136997d2e5117f6cc695a16b7e235d59f70cdf33c3d7a"
+scopes   = ["test"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.1",
+  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.2",
+  "org.junit.platform:junit-platform-engine:jar:@6.1.2",
+]
+
+[[artifact]]
+name     = "org.junit.jupiter:junit-jupiter-params:jar:"
+version  = "6.1.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:c1ed2164f6ba388518757b38f219dbe350ac098afcd126cbcbd6256fb99666ae"
+scopes   = ["test"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.1",
+  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.2",
+]
+
+[[artifact]]
+name     = "org.junit.jupiter:junit-jupiter:jar:"
+version  = "6.1.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:2a7877196573a1d32fa726313deffdde2e90cca764647e605093020b08973616"
+scopes   = ["test"]
+deps = [
+  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.2",
+  "org.junit.jupiter:junit-jupiter-engine:jar:@6.1.2",
+  "org.junit.jupiter:junit-jupiter-params:jar:@6.1.2",
+]
+
+[[artifact]]
+name     = "org.junit.platform:junit-platform-commons:jar:"
+version  = "6.1.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:204894c039d321743ee11e7d1dc8360170d7c64391fbea1211178a645c33a92a"
+scopes   = ["test"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "org.junit.platform:junit-platform-engine:jar:"
+version  = "6.1.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:484e90828846ad6b88efe226b6fe014a75941b32b226e914d9a7758802f46f91"
+scopes   = ["test"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.1",
+  "org.junit.platform:junit-platform-commons:jar:@6.1.2",
+  "org.opentest4j:opentest4j:jar:@1.3.0",
+]
+
+[[artifact]]
+name     = "org.junit.platform:junit-platform-launcher:jar:"
+version  = "6.1.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:858197212c1b2acc257c9eec9b450a31923c61c1bc61e66acf0057d57bbe577a"
+scopes   = ["test"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.1",
+  "org.junit.platform:junit-platform-engine:jar:@6.1.2",
+]
+
+[[artifact]]
+name     = "org.opentest4j:opentest4j:jar:"
+version  = "1.3.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:48e2df636cab6563ced64dcdff8abb2355627cb236ef0bf37598682ddf742f1b"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "org.slf4j:slf4j-api:jar:"
+version  = "2.0.18"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:44508fd1576500688c790b190acdd16fec4f8c79a3e0b900afd70503cf055f55"
+scopes   = ["main", "test"]
+
+[[module]]
+path    = "."
+group   = "com.example"
+name    = "ktor-petshop"
+version = "0.1.0"
+java    = 21
+kotlin  = "2.2.0"
+layout  = "traditional"
+
+[[module]]
+path    = "app"
+group   = "com.example"
+name    = "ktor-petshop-app"
+version = "0.1.0"
+java    = 21
+kotlin  = "2.2.0"
+layout  = "traditional"
+
+[[module]]
+path    = "domain"
+group   = "com.example"
+name    = "ktor-petshop-domain"
+version = "0.1.0"
+java    = 21
+kotlin  = "2.2.0"
+layout  = "traditional"

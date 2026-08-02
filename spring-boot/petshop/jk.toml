@@ -3,6 +3,7 @@ name    = "petshop"
 group   = "com.example"
 version = "0.1.0"
 java    = 21
+layout  = "traditional"
 
 [workspace]
 modules = ["domain", "service", "web"]

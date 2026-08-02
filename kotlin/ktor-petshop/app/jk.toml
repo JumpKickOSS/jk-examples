@@ -1,21 +1,33 @@
 [project]
-name    = "ktor-petshop-app"
-group   = "com.example"
-version = "0.1.0"
-kotlin  = "2.1.0"
-layout  = "traditional"
+name = "ktor-petshop-app"
 
 [application]
 main = "com.example.petshop.ApplicationKt"
 
 [dependencies]
 ktor-petshop-domain = { workspace = true }
+
+# Ktor 3.x
 ktor-server-core = { group = "io.ktor", name = "ktor-server-core-jvm", version = "3.1.1" }
 ktor-server-netty = { group = "io.ktor", name = "ktor-server-netty-jvm", version = "3.1.1" }
 ktor-server-content-negotiation = { group = "io.ktor", name = "ktor-server-content-negotiation-jvm", version = "3.1.1" }
 ktor-serialization-jackson = { group = "io.ktor", name = "ktor-serialization-jackson-jvm", version = "3.1.1" }
+
+# Koin
+koin-core = { group = "io.insert-koin", name = "koin-core", version = "4.0.2" }
+koin-ktor = { group = "io.insert-koin", name = "koin-ktor", version = "4.0.2" }
+koin-logger-slf4j = { group = "io.insert-koin", name = "koin-logger-slf4j", version = "4.0.2" }
+
+# Exposed + H2
+exposed-core = { group = "org.jetbrains.exposed", name = "exposed-core", version = "0.57.0" }
+exposed-dao = { group = "org.jetbrains.exposed", name = "exposed-dao", version = "0.57.0" }
+exposed-jdbc = { group = "org.jetbrains.exposed", name = "exposed-jdbc", version = "0.57.0" }
+h2 = { group = "com.h2database", name = "h2", version = "2.3.232" }
+
 logback-classic = { group = "ch.qos.logback", name = "logback-classic", version = "1.5.16" }
 
 [test-dependencies]
 junit-jupiter = "latest"
 junit-platform-launcher = "latest"
+ktor-server-test-host = { group = "io.ktor", name = "ktor-server-test-host-jvm", version = "3.1.1" }
+koin-test = { group = "io.insert-koin", name = "koin-test", version = "4.0.2" }

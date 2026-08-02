@@ -1,2 +1,8 @@
 package com.example.petshop.domain;
-public record Pet(long id, String name, String species) {}
+
+/** Pure domain model (no Spring). */
+public record Pet(Long id, String name, String species) {
+    public Pet(String name, String species) {
+        this(null, name, species);
+    }
+}

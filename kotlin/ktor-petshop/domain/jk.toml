@@ -1,6 +1,2 @@
 [project]
-name    = "ktor-petshop-domain"
-group   = "com.example"
-version = "0.1.0"
-kotlin  = "2.1.0"
-layout  = "traditional"
+name = "ktor-petshop-domain"
