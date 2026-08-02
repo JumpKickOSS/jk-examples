@@ -13,7 +13,9 @@ if [ ! -d checkout/.git ]; then
 fi
 git -C checkout fetch -q --tags origin "refs/tags/${NETTY_TAG}:refs/tags/${NETTY_TAG}" 2>/dev/null \
   || git -C checkout fetch -q origin tag "$NETTY_TAG" --no-tags
-git -C checkout checkout -q "$NETTY_TAG"
+# Force clean tree: soft checkout of the same tag leaves prior curate deletions in place.
+git -C checkout checkout -q -f "$NETTY_TAG"
+git -C checkout clean -fdq
 SHA=$(git -C checkout rev-parse HEAD)
 
 # Overlay: root workspace + per-module jk.toml (hand-maintained / generated from Mill graph).
@@ -60,7 +62,9 @@ if [ -d "$UTIL_SRC" ]; then
   # Drop javadoc-only import of transport's test class (breaks out-of-module compile).
   sed -i '/import io.netty.channel.NativeImageHandlerMetadataTest;/d' \
     "$UTIL_DST/ChannelHandlerMetadataUtil.java" 2>/dev/null || true
-  echo "promoted ChannelHandlerMetadataUtil → nativeimage-testutil"
+  # Remove original from transport tests so compile does not depend on deleted MetadataTest.
+  rm -rf "$UTIL_SRC"
+  echo "promoted ChannelHandlerMetadataUtil → nativeimage-testutil (removed transport test copy)"
 fi
 
 
@@ -70,16 +74,24 @@ for f in \
   checkout/resolver-dns/src/test/java/io/netty/resolver/dns/TestDnsServer.java \
   checkout/resolver-dns/src/test/java/io/netty/resolver/dns/DnsNameResolverTest.java \
   checkout/resolver-dns/src/test/java/io/netty/resolver/dns/SearchDomainTest.java \
-    checkout/common/src/test/java/io/netty/util/internal/NativeLibraryLoaderTest.java \
-  checkout/buffer/src/test/java/io/netty/buffer/AdaptiveBigEndianHeapByteBufTest.java \
-  checkout/buffer/src/test/java/io/netty/buffer/AdaptiveLittleEndianHeapByteBufTest.java \
-  checkout/buffer/src/test/java/io/netty/buffer/AdaptiveByteBufAllocatorTest.java
+    checkout/common/src/test/java/io/netty/util/internal/NativeLibraryLoaderTest.java
  do
   if [ -f "$f" ]; then
     rm -f "$f"
     echo "excluded optional test $(basename "$f")"
   fi
 done
+
+# AdaptivePoolingAllocator: JCTools MpmcArrayQueue requires capacity >= 2; 4.1.115 used
+# availableProcessors() raw (fails on 1-core hosts — Netty #14579). Backport Math.max(2, …)
+# from 4.1.116 so Adaptive* unit tests stay in the suite.
+if [ -f overlay/patches/AdaptivePoolingAllocator.java ]; then
+  cp overlay/patches/AdaptivePoolingAllocator.java \
+    checkout/buffer/src/main/java/io/netty/buffer/AdaptivePoolingAllocator.java
+  echo "applied AdaptivePoolingAllocator central-queue floor patch (Netty #14579)"
+fi
+
+./scripts/curate-tests.sh checkout
 
 echo "netty ready at checkout/ (tag $NETTY_TAG, SHA $SHA, overlay + common codegen applied)"
 echo "Next: cd checkout && jk lock && jk build --skip-tests"

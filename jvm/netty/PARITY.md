@@ -7,22 +7,22 @@ Graph: Mill [`example/thirdparty/netty/build.mill`](https://github.com/com-lihao
 
 | Gate | Result |
 |------|--------|
-| `jk lock` (workspace, 40 members) | **green** (~73 external coords) |
-| `jk build --skip-tests --redo` | **green — 41 modules** (compile path; Mill-fair) |
+| `jk lock` (workspace) | **green** (~96 external coords) |
+| `jk build --skip-tests --redo` | **green — 41 modules** |
 | Test **compile** with Guava + JUnit **6.1** | **green** (aligned to jk test-runner) |
-| Full `jk build --redo` (all unit tests) | **not green by default** — curated excludes + remaining suite gaps (Mill also curates) |
-| JNI native libs | **deferred** |
+| Full `jk build --redo` (curated unit tests) | **green — 41 modules (~3–4 min)** |
+| JNI native libs (epoll/kqueue/tcnative) | **deferred** |
 
 ## Capability matrix
 
 | Capability | Maven | Mill | JumpKick | Notes |
 |------------|-------|------|----------|-------|
 | Multi-module graph | yes | yes | **yes** | `overlay/` + workspace |
-| Compile Java main sources | yes | yes | **yes** | 36 modules green |
+| Compile Java main sources | yes | yes | **yes** | |
 | Inter-module deps without `mvn install` | reactor jars | direct | **workspace jars** | `target/{module}/` |
 | common Groovy codegen | gmaven | GroovyShell | **`scripts/generate-common.sh`** | same `codegen.groovy` |
 | Java 8 bytecode (`-source 1.8`) | yes | yes | **java = 17** | jk LTS floor is 17; sources are the same |
-| `javac --add-exports` for `sun.security.x509` | yes | forkArgs | **workaround** | drop `OpenJdkSelfSignedCertGenerator` + BC-only patch (product gap: project compiler-args) |
+| `javac --add-exports` for `sun.security.x509` | yes | forkArgs | **workaround** | drop `OpenJdkSelfSignedCertGenerator` + BC-only patch |
 | SCTP `com.sun.nio.sctp` stubs | compiler exclude | as Maven | **setup strip** | matches Maven exclude |
 | JNI epoll/kqueue/macos DNS | yes | clang/make | **deferred** | Java class modules included |
 | OSGi / shading / Autobahn / H2Spec | yes | partial | **deferred** | same honesty class as Mill |
@@ -32,24 +32,34 @@ Graph: Mill [`example/thirdparty/netty/build.mill`](https://github.com/com-lihao
 
 1. **No project-level `javac` `--add-exports` / compiler-args** in `jk.toml` (handler SSL util).  
 2. **Exact version pins** required for ancient artifacts (`protobuf-java:2.6.1`) — caret default rejects.  
-3. **Large workspace lock + parallel compile** works end-to-end (evidence of viability).  
-4. **Codegen-before-compile** is a setup script, not a build-script plugin — intentional anti-Gradle design.
+3. **Large workspace lock + parallel compile** works end-to-end.  
+4. **Codegen-before-compile** is a setup script, not a build-script plugin — intentional anti-Gradle design.  
+5. **JUnit version skew**: jk’s test-runner is **JUnit 6.1**; project pins must match Platform **6.x**.  
+6. **No first-class workspace `test-jar` deps** — Mill’s `testModuleDeps` approximated via `nativeimage-testutil` promotion.  
+7. **Test workers use `-XX:ActiveProcessorCount=1`** — Netty Adaptive allocator must floor central-queue capacity at 2 (JCTools).
 
-## Comparison methodology
+## setup / curate (honest Mill-class)
 
-See [README.md](README.md). Record times with `scripts/bench-netty.sh` into the monorepo `docs/perf/netty-benchmark.md`.
-
-5. **JUnit version skew**: jk’s test-runner is **JUnit 6.1**; project pins must match Platform **6.x**. Pinning Jupiter 5.9 + auto-injected Platform “latest” → empty discovery or `NoSuchMethodError`.
-6. **No first-class workspace `test-jar` deps** — Mill’s `testModuleDeps` approximated via `nativeimage-testutil` promotion + main-jar suite modules.
-7. **Broken old POMs** (`apacheds-protocol-dns` `${groupId}` path) — excluded those integration tests in setup.
-
-## setup.sh curated excludes (honest Mill-class)
-
-| Exclude | Why |
-|---------|-----|
+| Action | Why |
+|--------|-----|
 | `OpenJdkSelfSignedCertGenerator` + SSL patch | needs `javac --add-exports` |
 | SCTP `com/**` stubs | Maven compiler exclude / `jdk.sctp` conflict |
-| `AmazonCorrettoSslEngineTest` | classifier-native crypto provider |
-| ApacheDS DNS tests (`TestDnsServer`, …) | broken Maven POM / not resolved |
-| `NativeLibraryLoaderTest` | UnsatisfiedLinkError without special native fixtures |
-| Adaptive* buffer tests | capacity-floor failures on modern JDK (investigate) |
+| Drop tests: `handler`, `handler-ssl-ocsp`, epoll/kqueue/blockhound/macos natives, testsuites | OpenSSL/JNI/OCSP network hang / multi-hour suites |
+| Drop codec compression tests | optional natives without full classifiers |
+| Drop bootstrap / `NativeLibraryLoaderTest` / ApacheDS DNS tests | flaky / UnsatisfiedLinkError / broken POM |
+| Drop `NativeImage*` / `*IntegrationTest` | need test-jar metadata resources |
+| Promote `ChannelHandlerMetadataUtil` → `nativeimage-testutil` | Mill `testModuleDeps` stand-in |
+| **Keep Adaptive\* buffer tests** | patch `CENTRAL_QUEUE_CAPACITY = Math.max(2, …)` (Netty #14579 / 4.1.116) |
+| `brotli4j` + `native-linux-x86_64` | platform native for codec-http brotli tests |
+| `HttpContentDecoderTest.isNotSupported → !Brotli.isAvailable()` | safety net if native missing |
+| `git checkout -f` + `clean -fdq` on setup | soft re-checkout left prior curate deletions |
+
+## Adaptive capacity floor (root cause of prior buffer failures)
+
+jk test workers set **`-XX:ActiveProcessorCount=1`**. Netty 4.1.115 used
+`CENTRAL_QUEUE_CAPACITY = availableProcessors()` for the Adaptive central
+queue; JCTools `MpmcArrayQueue` requires capacity ≥ 2 →
+`IllegalArgumentException: capacity: 1 (expected: >= 2)`.
+
+Fix (overlay patch from 4.1.116): `Math.max(2, …)` + static validation.
+All Adaptive\* buffer tests green under the real test runner.

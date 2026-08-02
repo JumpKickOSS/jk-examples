@@ -5,6 +5,7 @@ name    = "codec-http2"
 # group/version/java inherit from workspace root
 
 [dependencies]
+brotli4j = { group = "com.aayushatharva.brotli4j", name = "brotli4j", version = "=1.16.0" }
 nativeimage-testutil = { workspace = true }
 common = { workspace = true }
 buffer = { workspace = true }
