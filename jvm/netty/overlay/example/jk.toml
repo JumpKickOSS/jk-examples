@@ -1,0 +1,28 @@
+# Netty module: example (Maven artifact netty-example)
+# Generated from Mill thirdparty/netty graph — loyal multi-module port (JK-1174).
+[project]
+name    = "example"
+# group/version/java inherit from workspace root
+
+[dependencies]
+common = { workspace = true }
+buffer = { workspace = true }
+transport = { workspace = true }
+codec = { workspace = true }
+handler = { workspace = true }
+transport-sctp = { workspace = true }
+transport-rxtx = { workspace = true }
+transport-udt = { workspace = true }
+handler-proxy = { workspace = true }
+codec-http = { workspace = true }
+codec-memcache = { workspace = true }
+codec-http2 = { workspace = true }
+codec-redis = { workspace = true }
+codec-socks = { workspace = true }
+codec-stomp = { workspace = true }
+codec-mqtt = { workspace = true }
+codec-haproxy = { workspace = true }
+codec-dns = { workspace = true }
+bcpkix-jdk15on = { group = "org.bouncycastle", name = "bcpkix-jdk15on", version = "=1.69" }
+bctls-jdk15on = { group = "org.bouncycastle", name = "bctls-jdk15on", version = "=1.69" }
+javax-activation = { group = "com.sun.activation", name = "javax.activation", version = "=1.2.0" }

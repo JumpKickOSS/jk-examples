@@ -1,0 +1,5 @@
+# Upstream Netty clone + generated overlay working tree (not published).
+checkout/
+# Local bench outputs
+bench-results/
+*.log

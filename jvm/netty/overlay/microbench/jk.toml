@@ -1,0 +1,20 @@
+# Netty module: microbench (Maven artifact netty-microbench)
+# Generated from Mill thirdparty/netty graph — loyal multi-module port (JK-1174).
+[project]
+name    = "microbench"
+# group/version/java inherit from workspace root
+
+[dependencies]
+handler = { workspace = true }
+codec-http = { workspace = true }
+codec-http2 = { workspace = true }
+codec-redis = { workspace = true }
+codec-mqtt = { workspace = true }
+codec-stomp = { workspace = true }
+transport-classes-epoll = { workspace = true }
+transport-classes-kqueue = { workspace = true }
+junit-jupiter-api = { group = "org.junit.jupiter", name = "junit-jupiter-api", version = "=5.9.0" }
+jctools-core = { group = "org.jctools", name = "jctools-core", version = "=4.0.5" }
+jmh-core = { group = "org.openjdk.jmh", name = "jmh-core", version = "=1.36" }
+jmh-generator-annprocess = { group = "org.openjdk.jmh", name = "jmh-generator-annprocess", version = "=1.36" }
+agrona = { group = "org.agrona", name = "Agrona", version = "=0.5.1" }

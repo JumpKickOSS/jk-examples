@@ -1,0 +1,21 @@
+# Netty module: testsuite (Maven artifact netty-testsuite)
+# Generated from Mill thirdparty/netty graph — loyal multi-module port (JK-1174).
+[project]
+name    = "testsuite"
+# group/version/java inherit from workspace root
+
+[dependencies]
+common = { workspace = true }
+resolver = { workspace = true }
+transport = { workspace = true }
+transport-sctp = { workspace = true }
+handler = { workspace = true }
+codec-http = { workspace = true }
+transport-udt = { workspace = true }
+slf4j-api = { group = "org.slf4j", name = "slf4j-api", version = "=1.7.30" }
+xz = { group = "org.tukaani", name = "xz", version = "=1.5" }
+junit-jupiter-api = { group = "org.junit.jupiter", name = "junit-jupiter-api", version = "=5.9.0" }
+junit-jupiter-params = { group = "org.junit.jupiter", name = "junit-jupiter-params", version = "=5.9.0" }
+hamcrest-library = { group = "org.hamcrest", name = "hamcrest-library", version = "=1.3" }
+assertj-core = { group = "org.assertj", name = "assertj-core", version = "=3.18.0" }
+mockito-core = { group = "org.mockito", name = "mockito-core", version = "=2.18.3" }

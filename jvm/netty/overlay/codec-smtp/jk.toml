@@ -1,0 +1,19 @@
+# Netty module: codec-smtp (Maven artifact netty-codec-smtp)
+# Generated from Mill thirdparty/netty graph — loyal multi-module port (JK-1174).
+[project]
+name    = "codec-smtp"
+# group/version/java inherit from workspace root
+
+[dependencies]
+common = { workspace = true }
+buffer = { workspace = true }
+transport = { workspace = true }
+codec = { workspace = true }
+
+[test-dependencies]
+junit-jupiter-api = { group = "org.junit.jupiter", name = "junit-jupiter-api", version = "=5.9.0" }
+junit-jupiter-params = { group = "org.junit.jupiter", name = "junit-jupiter-params", version = "=5.9.0" }
+junit-jupiter-engine = { group = "org.junit.jupiter", name = "junit-jupiter-engine", version = "=5.9.0" }
+mockito-core = { group = "org.mockito", name = "mockito-core", version = "=2.18.3" }
+hamcrest-library = { group = "org.hamcrest", name = "hamcrest-library", version = "=1.3" }
+assertj-core = { group = "org.assertj", name = "assertj-core", version = "=3.18.0" }

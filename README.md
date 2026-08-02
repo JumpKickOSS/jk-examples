@@ -21,7 +21,8 @@ Sibling product repo: [jkbuild/jk](https://github.com/jkbuild/jk). Prefer a curr
 | `kotlin/serialization-cli/` | Project-declared Kotlin compiler plugins (`[[kotlin-plugins]]`) via kotlinx-serialization. |
 | `kotlin/ktor-petshop/` | Multi-module Ktor + **Koin** + **Exposed** + H2 pet shop — Kotlin workspace dogfood. |
 | `protobuf/messages/` | The protobuf plugin: provisioned per-OS protoc, Java + Kotlin DSL (lite) codegen. |
-| `jvm/netty-echo/` | Netty 4.1 echo server — adoption sample + cold/warm build harness seed. |
+| `jvm/netty/` | **Full Netty Maven→jk port** (~40 modules, Mill graph parity) — black-box + benchmarks (JK-1174/1175). |
+| `jvm/netty-echo/` | Small Netty 4.1 echo (published `netty-all`) — lightweight harness seed. |
 | `jvm/shrink-cli/` | The shrink plugin: R8 `--classfile` full mode collapsing a fat jar. |
 | `jvm/variants-cli/` | Core `[variants]`: a custom dimension on a plain JVM app — per-value `extra-src` + deps, union lockfile, mandatory selection. |
 | `jvm/profiles-vs-variants/` | The decision matrix as running code: a profile (how), a feature (what capability), and the build-type variant (which product) side by side. |
