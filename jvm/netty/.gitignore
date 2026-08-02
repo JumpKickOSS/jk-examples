@@ -3,3 +3,4 @@ checkout/
 # Local bench outputs
 bench-results/
 *.log
+mill-workspace/

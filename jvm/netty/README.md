@@ -59,19 +59,34 @@ jk build --skip-tests --modules codec-http
 
 ## Comparison methodology
 
-Align with Mill’s published Netty table (clean compile focus, tests skipped for the primary table):
+Align with Mill’s published Netty table (**main compile** focus; unit tests are a separate tier):
 
 | Scenario | Maven | Mill | JumpKick |
 |----------|-------|------|----------|
-| Sequential clean compile all | `mvn -Pfast -DskipTests … install` + `-T 1` | `mill -j1 __.compile` | `jk build --skip-tests -j 1` |
-| Parallel clean compile all | `mvn -T 10 …` | `mill __.compile` | `jk build --skip-tests` (default parallel) |
-| Clean single module | `mvn -pl common …` | `mill common.compile` | `jk build --skip-tests --modules common` |
-| No-op / warm | second install | second compile | second `jk build --skip-tests` |
-| Dirty single file | touch + install | touch + compile | touch + `jk build --skip-tests --modules common` |
+| Sequential clean compile all | `mvn -Pfast -DskipTests … install` + `-T 1` | `./mill -j1 _.compile` | `jk -j1 build --skip-tests --redo` |
+| Parallel clean compile all | `mvn -T 10 …` | `./mill _.compile` | `jk build --skip-tests --redo` |
+| Clean single module | `mvn -pl common …` | `./mill common.compile` | `jk build --skip-tests -m common` |
+| No-op / warm | second install | second `_.compile` | second `jk build --skip-tests` |
+| Dirty single file | touch + install | touch + `common.compile` | touch + `jk build --skip-tests -m common` |
 
-Harness seed: `jk` monorepo `scripts/netty-echo-bench.sh` pattern — extend with `scripts/bench-netty.sh` (see below) once `run.sh` is green on your machine. Record results in the monorepo `docs/perf/netty-benchmark.md`.
+**Use `_.compile` (main only), not `__.compile`** — the latter also compiles every module’s tests.
 
-**Fairness:** wipe project `target/` for “cold”; leave `~/.jk` CAS / `~/.m2` warm unless documenting a fully cold machine. Use the same JDK major for all three tools.
+### Automated Mill vs jk bench
+
+```bash
+# mill clone next to this repo (or set MILL_REPO)
+#   git clone https://github.com/com-lihaoyi/mill.git ../../mill
+
+./setup.sh
+MILL_REPO=../../mill ./scripts/prepare-mill-netty.sh   # → mill-workspace/ (gitignored)
+RUNS=3 PARALLEL=1 ./scripts/bench-netty.sh both        # serial cold/warm/dirty
+```
+
+- **Cold (fair recompile):** jk wipes `target/` + `--redo` (no CAS classfile restore); Mill wipes `out/`.
+- **Same pin:** both trees use `netty-4.1.115.Final` @ the same SHA.
+- Record results in the jk monorepo [`docs/perf/netty-benchmark.md`](https://github.com/jkbuild/jk/blob/main/docs/perf/netty-benchmark.md).
+
+**Fairness:** leave dep caches warm (`~/.jk` / coursier) unless documenting a fully cold machine. Use the same JDK major when possible (Mill’s launcher may pick its own JDK).
 
 ## Completeness (honest)
 
