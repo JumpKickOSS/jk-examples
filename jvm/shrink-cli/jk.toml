@@ -6,8 +6,7 @@
 name    = "shrink-cli"
 group   = "dev.jkharness"
 version = "1.0.0"
-java    = 17
-
+java    = 25
 [application]
 main = "dev.jkharness.slim.Main"
 

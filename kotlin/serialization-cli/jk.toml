@@ -6,7 +6,7 @@
 name    = "serialization-cli"
 group   = "dev.jkharness"
 version = "1.0.0"
-java    = 21
+java    = 25
 kotlin  = "^2.4.0"
 
 [application]

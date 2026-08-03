@@ -2,3 +2,7 @@ android/nowinandroid/checkout/
 android/nowinandroid/release.jks
 **/target/
 **/jk.lock
+
+# local run artifacts
+*.pid
+run*.log

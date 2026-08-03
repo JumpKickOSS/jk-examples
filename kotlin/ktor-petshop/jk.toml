@@ -3,7 +3,7 @@ name    = "ktor-petshop"
 group   = "com.example"
 version = "0.1.0"
 kotlin  = "2.2.0"
-java    = 21
+java    = 25
 layout  = "traditional"
 
 [workspace]

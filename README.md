@@ -29,6 +29,10 @@ Sibling product repo: [jkbuild/jk](https://github.com/jkbuild/jk). Prefer a curr
 
 One scenario per directory; keep each self-contained and its README honest about deviations. New scenarios land here as JumpKick grows (native-image apps, more workspaces, git-source deps, publishing round-trips, …).
 
+**Language level:** plain JVM / Spring / Kotlin / protobuf scenarios use **`java = 25`**
+(bytecode target; host is already JDK 25+). Prefer **`java =`**, not **`jdk = 17/21`**
+(those force obsolete runtime downloads). Android keeps **`java = 21`** for that platform.
+
 ## Running
 
 Prerequisite: a **current** JumpKick — scenarios track `jk` `main` closely; stale installed workers fail in confusing ways.

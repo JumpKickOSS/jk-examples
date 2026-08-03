@@ -11,7 +11,7 @@
 name    = "variants-cli"
 group   = "dev.jkexamples"
 version = "1.0.0"
-java    = 17
+java    = 25
 layout  = "simple"
 
 [application]

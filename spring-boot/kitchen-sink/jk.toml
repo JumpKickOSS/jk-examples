@@ -6,8 +6,7 @@
 name    = "kitchen-sink"
 group   = "dev.jkharness"
 version = "1.0.0"
-java    = 21
-
+java    = 25
 [application]
 main = "dev.jkharness.kitchensink.KitchenSinkApplication"
 
