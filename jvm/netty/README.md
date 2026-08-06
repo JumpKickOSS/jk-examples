@@ -105,8 +105,8 @@ Deferred / partial (see [PARITY.md](PARITY.md)):
 
 ## Design notes
 
-- **No `jk.toml` scripting language** — modules are data; codegen is **`.jk-build` SPI** on
-  `BEFORE_COMPILE` (stage `generate`), running the same upstream `codegen.groovy` as Maven gmaven
+- **No `jk.toml` scripting language** — modules are data; codegen is **`.jk-build/before-compile.groovy`**
+  on `BEFORE_COMPILE` (stage `generate`), running the same upstream `codegen.groovy` as Maven gmaven
   / Mill. Optional `scripts/generate-common.sh` remains for setup-without-jk (`NETTY_SKIP_SHELL_CODEGEN=1`
   to force the build-logic path).  
 - **One lockfile** at the workspace root (`jk-lock.toml`).  
