@@ -21,8 +21,13 @@ SHA=$(git -C checkout rev-parse HEAD)
 # Overlay: root workspace + per-module jk.toml (hand-maintained / generated from Mill graph).
 cp -a overlay/. checkout/
 
-# common/ requires Groovy template codegen (Maven gmaven / Mill GroovyShell).
-./scripts/generate-common.sh checkout
+# common/ collection templates: preferred path is .jk-build BEFORE_COMPILE on `jk build -m common`.
+# Keep shell codegen for offline/setup-without-jk and Mill bench prep when tools already cached.
+if [ "${NETTY_SKIP_SHELL_CODEGEN:-}" != "1" ]; then
+  ./scripts/generate-common.sh checkout || {
+    echo "shell codegen failed — will rely on .jk-build BEFORE_COMPILE during jk build" >&2
+  }
+fi
 
 # transport-sctp: Maven excludes com/** stubs (see transport-sctp/pom.xml compiler excludes).
 # Those stubs conflict with JDK module jdk.sctp on Java 9+; remove them so compile matches Maven.
