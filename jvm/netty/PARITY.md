@@ -12,7 +12,7 @@ Graph: Mill [`example/thirdparty/netty/build.mill`](https://github.com/com-lihao
 | Test **compile** with Guava + JUnit **6.1** | **green** (aligned to jk test-runner) |
 | Full `jk build --redo` (curated unit tests) | **green — 41 modules (~3–4 min)** |
 | **`kind = "tests"`** (transport → codec smoke) | **green** — `TransportTestsKindSmokeTest` (`@Tag("kind-smoke")`); fails compile without the edge |
-| **BEFORE_COMPILE codegen** (common collections) | **green** — `.jk-build` `NettyCollectionsCodegen` runs gmaven script; no shell required when `NETTY_SKIP_SHELL_CODEGEN=1` |
+| **BEFORE_COMPILE codegen** (common collections) | **green** — `.jk-build/before-compile.groovy` runs upstream `codegen.groovy`; no shell required when `NETTY_SKIP_SHELL_CODEGEN=1` |
 | JNI native libs (epoll/kqueue/tcnative) | **deferred** |
 
 ## Capability matrix
@@ -22,7 +22,7 @@ Graph: Mill [`example/thirdparty/netty/build.mill`](https://github.com/com-lihao
 | Multi-module graph | yes | yes | **yes** | `overlay/` + workspace |
 | Compile Java main sources | yes | yes | **yes** | |
 | Inter-module deps without `mvn install` | reactor jars | direct | **workspace jars** | `target/{module}/` |
-| common Groovy codegen | gmaven | GroovyShell | **`scripts/generate-common.sh`** | same `codegen.groovy` |
+| common Groovy codegen | gmaven | GroovyShell | **`.jk-build/before-compile.groovy`** (+ optional shell) | same `codegen.groovy` |
 | Java 8 bytecode (`-source 1.8`) | yes | yes | **java = 17** | jk LTS floor is 17; sources are the same |
 | `javac --add-exports` for `sun.security.x509` | yes | forkArgs | **workaround** | drop `OpenJdkSelfSignedCertGenerator` + BC-only patch |
 | SCTP `com.sun.nio.sctp` stubs | compiler exclude | as Maven | **setup strip** | matches Maven exclude |
@@ -35,8 +35,8 @@ Graph: Mill [`example/thirdparty/netty/build.mill`](https://github.com/com-lihao
 1. **No project-level `javac` `--add-exports` / compiler-args** in `jk.toml` (handler SSL util).  
 2. **Exact version pins** required for ancient artifacts (`protobuf-java:2.6.1`) — caret default rejects.  
 3. **Large workspace lock + parallel compile** works end-to-end.  
-4. **Codegen-before-compile** uses `.jk-build` SPI (`BEFORE_COMPILE` / stage `generate`) plus optional
-   `scripts/generate-common.sh` for setup-without-jk.  
+4. **Codegen-before-compile** uses `.jk-build/before-compile.groovy` (`BEFORE_COMPILE` / stage
+   `generate`) plus optional `scripts/generate-common.sh` for setup-without-jk.  
 5. **JUnit version skew**: jk’s test-runner is **JUnit 6.1**; project pins must match Platform **6.x**.  
 6. **Workspace `kind = "tests"`** — Mill’s `testModuleDeps` / Maven `test-jar` (first-class in jk; used in overlay).  
 7. **Test workers use `-XX:ActiveProcessorCount=1`** — Netty Adaptive allocator must floor central-queue capacity at 2 (JCTools).  
