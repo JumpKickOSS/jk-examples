@@ -7,10 +7,11 @@ Graph: Mill [`example/thirdparty/netty/build.mill`](https://github.com/com-lihao
 
 | Gate | Result |
 |------|--------|
-| `jk lock` (workspace) | **green** (~96 external coords) |
+| `jk lock` (workspace) | **green** (~98 external coords) |
 | `jk build --skip-tests --redo` | **green — 41 modules** |
 | Test **compile** with Guava + JUnit **6.1** | **green** (aligned to jk test-runner) |
 | Full `jk build --redo` (curated unit tests) | **green — 41 modules (~3–4 min)** |
+| **`kind = "tests"`** (transport → codec smoke) | **green** — `TransportTestsKindSmokeTest` (`@Tag("kind-smoke")`); fails compile without the edge |
 | JNI native libs (epoll/kqueue/tcnative) | **deferred** |
 
 ## Capability matrix
@@ -35,8 +36,9 @@ Graph: Mill [`example/thirdparty/netty/build.mill`](https://github.com/com-lihao
 3. **Large workspace lock + parallel compile** works end-to-end.  
 4. **Codegen-before-compile** is a setup script, not a build-script plugin — intentional anti-Gradle design.  
 5. **JUnit version skew**: jk’s test-runner is **JUnit 6.1**; project pins must match Platform **6.x**.  
-6. **No first-class workspace `test-jar` deps** — Mill’s `testModuleDeps` approximated via `nativeimage-testutil` promotion.  
-7. **Test workers use `-XX:ActiveProcessorCount=1`** — Netty Adaptive allocator must floor central-queue capacity at 2 (JCTools).
+6. **Workspace `kind = "tests"`** — Mill’s `testModuleDeps` / Maven `test-jar` (first-class in jk; used in overlay).  
+7. **Test workers use `-XX:ActiveProcessorCount=1`** — Netty Adaptive allocator must floor central-queue capacity at 2 (JCTools).  
+8. **`jk import pom.xml`** now rewrites sibling GAs → `workspace = true` and `test-jar` → `kind = "tests"`, but still does not: flatten parent dependencyManagement fully, map Maven compiler excludes / `--add-exports`, or run Groovy codegen — so Netty still needs a thin setup path after import.
 
 ## setup / curate (honest Mill-class)
 
@@ -47,8 +49,8 @@ Graph: Mill [`example/thirdparty/netty/build.mill`](https://github.com/com-lihao
 | Drop tests: `handler`, `handler-ssl-ocsp`, epoll/kqueue/blockhound/macos natives, testsuites | OpenSSL/JNI/OCSP network hang / multi-hour suites |
 | Drop codec compression tests | optional natives without full classifiers |
 | Drop bootstrap / `NativeLibraryLoaderTest` / ApacheDS DNS tests | flaky / UnsatisfiedLinkError / broken POM |
-| Drop `NativeImage*` / `*IntegrationTest` | need test-jar metadata resources |
-| Promote `ChannelHandlerMetadataUtil` → `nativeimage-testutil` | Mill `testModuleDeps` stand-in |
+| Drop `NativeImage*` / `*IntegrationTest` | optional suite cost; re-enable with `kind = "tests"` |
+| `transport = { workspace = true, kind = "tests" }` | Mill `testModuleDeps` / Maven test-jar (ChannelHandlerMetadataUtil) |
 | **Keep Adaptive\* buffer tests** | patch `CENTRAL_QUEUE_CAPACITY = Math.max(2, …)` (Netty #14579 / 4.1.116) |
 | `brotli4j` + `native-linux-x86_64` | platform native for codec-http brotli tests |
 | `HttpContentDecoderTest.isNotSupported → !Brotli.isAvailable()` | safety net if native missing |
