@@ -105,7 +105,10 @@ Deferred / partial (see [PARITY.md](PARITY.md)):
 
 ## Design notes
 
-- **No `jk.toml` scripting language** — modules are data; codegen is a setup script (loyal to Maven/Mill’s external Groovy step, not a Gradle-style configuration graph).  
+- **No `jk.toml` scripting language** — modules are data; codegen is **`.jk-build` SPI** on
+  `BEFORE_COMPILE` (stage `generate`), running the same upstream `codegen.groovy` as Maven gmaven
+  / Mill. Optional `scripts/generate-common.sh` remains for setup-without-jk (`NETTY_SKIP_SHELL_CODEGEN=1`
+  to force the build-logic path).  
 - **One lockfile** at the workspace root (`jk-lock.toml`).  
 - **Workspace deps** use `{ workspace = true }` with `[project].name` = Maven module directory name (`common`, `codec-http`, …).  
 - **Test helpers across modules** use `{ workspace = true, kind = "tests" }` (Mill `testModuleDeps` / Maven `test-jar`) — e.g. `transport`’s `ChannelHandlerMetadataUtil` stays under `transport/src/test`; no synthetic `nativeimage-testutil` module.
@@ -117,14 +120,13 @@ git clone --branch netty-4.1.115.Final https://github.com/netty/netty.git checko
 cd checkout
 jk import pom.xml --overwrite   # multi-module → workspace + kind=tests for test-jars
 # still needed today (not pure import):
-#   - common Groovy codegen (scripts/generate-common.sh)
-#   - a few compiler/env patches (add-exports, SCTP stubs, Adaptive capacity floor)
+#   - overlay common/.jk-build (BEFORE_COMPILE codegen) + a few compiler/env patches
 #   - optional test curation (JNI/OpenSSL/long suites)
-jk lock && jk build --skip-tests
+jk lock && jk build --skip-tests   # codegen runs inside the plan
 ```
 
 `setup.sh` + `overlay/` remain the dogfood path until import coverage + compiler-args land fully.
-The overlay now models the **correct** tests-kind edges; promotion hacks are gone.
+The overlay models **kind=tests** edges and **BEFORE_COMPILE** collection codegen.
 
 ## Refs
 
