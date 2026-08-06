@@ -19,7 +19,6 @@ modules = [
     "buffer",
     "resolver",
     "transport",
-    "nativeimage-testutil",
     "codec",
     "codec-dns",
     "codec-haproxy",

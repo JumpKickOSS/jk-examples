@@ -51,22 +51,9 @@ fi
 printf '%s\n' "$NETTY_TAG" > checkout/.jk-netty-tag
 printf '%s\n' "$SHA" > checkout/.jk-netty-sha
 
-
-# ChannelHandlerMetadataUtil lives under transport/src/test in upstream; Mill uses testModuleDeps.
-# Promote into nativeimage-testutil main sources so sibling modules can compile *MetadataTest.
-UTIL_SRC=checkout/transport/src/test/java/io/netty/nativeimage
-UTIL_DST=checkout/nativeimage-testutil/src/main/java/io/netty/nativeimage
-if [ -d "$UTIL_SRC" ]; then
-  mkdir -p "$UTIL_DST"
-  cp -a "$UTIL_SRC/." "$UTIL_DST/"
-  # Drop javadoc-only import of transport's test class (breaks out-of-module compile).
-  sed -i '/import io.netty.channel.NativeImageHandlerMetadataTest;/d' \
-    "$UTIL_DST/ChannelHandlerMetadataUtil.java" 2>/dev/null || true
-  # Remove original from transport tests so compile does not depend on deleted MetadataTest.
-  rm -rf "$UTIL_SRC"
-  echo "promoted ChannelHandlerMetadataUtil → nativeimage-testutil (removed transport test copy)"
-fi
-
+# ChannelHandlerMetadataUtil stays under transport/src/test (upstream layout).
+# Consumers declare: transport = { workspace = true, kind = "tests" } (Mill testModuleDeps /
+# Maven test-jar). No synthetic nativeimage-testutil module and no source promotion.
 
 # Optional / platform-specific tests that need classifiers or native libs (not on default Mill smoketest either).
 for f in \

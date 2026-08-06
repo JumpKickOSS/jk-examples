@@ -5,6 +5,15 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 ROOT="${1:-checkout}"
 
+# Portable in-place sed (GNU vs BSD/macOS).
+sedi() {
+  if sed --version >/dev/null 2>&1; then
+    sed -i "$@"
+  else
+    sed -i '' "$@"
+  fi
+}
+
 # Modules whose tests need OpenSSL/tcnative, JNI .so, blockhound agent, OS-specific
 # natives, network OCSP (hangs), or multi-hour suites.
 for mod in \
@@ -42,7 +51,7 @@ fi
 # Gate on Brotli.isAvailable() as a safety net (overlay also pulls native-linux-x86_64).
 DECODER_TEST="$ROOT/codec-http/src/test/java/io/netty/handler/codec/http/HttpContentDecoderTest.java"
 if [ -f "$DECODER_TEST" ]; then
-  sed -i 's|return PlatformDependent.isOsx() && "aarch_64".equals(PlatformDependent.normalizedArch());|return !Brotli.isAvailable();|' \
+  sedi 's|return PlatformDependent.isOsx() && "aarch_64".equals(PlatformDependent.normalizedArch());|return !Brotli.isAvailable();|' \
     "$DECODER_TEST"
   echo "curate: HttpContentDecoderTest.isNotSupported → !Brotli.isAvailable()"
 fi
@@ -61,12 +70,21 @@ do
   [ -f "$f" ] && rm -f "$f" && echo "curate: drop $(basename "$f")"
 done
 
-# Native-image metadata tests (need test-jar util + generate-and-compare resources).
+# Native-image metadata tests exercise transport's tests kind (ChannelHandlerMetadataUtil)
+# via kind = "tests". Keep them off the default curated suite: they write/compare
+# META-INF/native-image resources and are not part of Mill's compile-focused tables.
 find "$ROOT" -path '*/src/test/java/*' -name 'NativeImage*.java' -delete 2>/dev/null || true
 find "$ROOT" -path '*/src/test/java/*' -name '*IntegrationTest.java' -delete 2>/dev/null || true
-# ChannelHandlerMetadataUtil under transport/test imports NativeImageHandlerMetadataTest (deleted).
-# setup.sh promotes a clean copy to nativeimage-testutil; ensure no stale test copy remains.
-rm -rf "$ROOT/transport/src/test/java/io/netty/nativeimage" 2>/dev/null || true
-echo "curate: drop NativeImage* / *IntegrationTest / transport nativeimage util"
+echo "curate: drop NativeImage* / *IntegrationTest (optional; kind=tests supports them if re-enabled)"
+
+# ChannelHandlerMetadataUtil imported NativeImageHandlerMetadataTest for a javadoc @see only —
+# that import breaks test compile after we delete NativeImage*. Apply overlay patch that drops
+# the import so kind = "tests" consumers (codec TransportTestsKindSmokeTest) can compile.
+PATCH="$(cd "$(dirname "$0")/.." && pwd)/overlay/patches/ChannelHandlerMetadataUtil.java"
+DEST="$ROOT/transport/src/test/java/io/netty/nativeimage/ChannelHandlerMetadataUtil.java"
+if [ -f "$PATCH" ] && [ -f "$DEST" ]; then
+  cp "$PATCH" "$DEST"
+  echo "curate: patch ChannelHandlerMetadataUtil (drop NativeImageHandlerMetadataTest import)"
+fi
 
 echo "curate-tests done"

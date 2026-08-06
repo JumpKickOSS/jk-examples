@@ -107,7 +107,24 @@ Deferred / partial (see [PARITY.md](PARITY.md)):
 
 - **No `jk.toml` scripting language** — modules are data; codegen is a setup script (loyal to Maven/Mill’s external Groovy step, not a Gradle-style configuration graph).  
 - **One lockfile** at the workspace root (`jk-lock.toml`).  
-- **Workspace deps** use `{ workspace = true }` with `[project].name` = Maven module directory name (`common`, `codec-http`, …).
+- **Workspace deps** use `{ workspace = true }` with `[project].name` = Maven module directory name (`common`, `codec-http`, …).  
+- **Test helpers across modules** use `{ workspace = true, kind = "tests" }` (Mill `testModuleDeps` / Maven `test-jar`) — e.g. `transport`’s `ChannelHandlerMetadataUtil` stays under `transport/src/test`; no synthetic `nativeimage-testutil` module.
+
+## Ideal long-term flow (clone → import → build)
+
+```bash
+git clone --branch netty-4.1.115.Final https://github.com/netty/netty.git checkout
+cd checkout
+jk import pom.xml --overwrite   # multi-module → workspace + kind=tests for test-jars
+# still needed today (not pure import):
+#   - common Groovy codegen (scripts/generate-common.sh)
+#   - a few compiler/env patches (add-exports, SCTP stubs, Adaptive capacity floor)
+#   - optional test curation (JNI/OpenSSL/long suites)
+jk lock && jk build --skip-tests
+```
+
+`setup.sh` + `overlay/` remain the dogfood path until import coverage + compiler-args land fully.
+The overlay now models the **correct** tests-kind edges; promotion hacks are gone.
 
 ## Refs
 
