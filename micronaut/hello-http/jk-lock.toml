@@ -1,7 +1,7 @@
 version = 1
 generated-by = "jk 0.11.0"
 resolution-algorithm = "pubgrub-v1"
-jk = { version = "0.11.0", sha256 = "513a66796857ab308c34fffe16de595a6149eef2784293dd483337e5d8496073" }
+jk = { version = "0.11.0", sha256 = "59275cbdf3816542e29be279e1d604a72216fc1e7ec61742d4a78bbeb35fdb31" }
 manifests-sha256 = "b2289feceadb6b10dd909547ef5d877eab440124b55fc93878693fdf428518df"
 
 [[artifact]]
@@ -12,6 +12,7 @@ checksum = "sha256:fd68ff5aa2760857ac5b7ad301e98bc6c18a74d60d7e016da1a608307c9ee
 pinned-by = "io.micronaut.platform:micronaut-platform:5.1.0"
 scopes   = ["main"]
 deps = [
+  "ch.qos.logback:logback-core:jar:@1.5.37",
   "org.slf4j:slf4j-api:jar:@2.0.18",
 ]
 
@@ -715,7 +716,10 @@ checksum = "sha256:e60794b7d94e03c4bca1c0833cfca18762da5eaac0a61b16281cbbb708103
 pinned-by = "io.micronaut.platform:micronaut-platform:5.1.0"
 scopes   = ["test"]
 deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
   "org.jspecify:jspecify:jar:@1.0.0",
+  "org.junit.platform:junit-platform-commons:jar:@6.1.2",
+  "org.opentest4j:opentest4j:jar:@1.3.0",
 ]
 
 [[artifact]]
@@ -726,8 +730,10 @@ checksum = "sha256:57227ce289ed84ab205136997d2e5117f6cc695a16b7e235d59f70cdf33c3
 pinned-by = "io.micronaut.platform:micronaut-platform:5.1.0"
 scopes   = ["test"]
 deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
   "org.jspecify:jspecify:jar:@1.0.0",
   "org.junit.jupiter:junit-jupiter-api:jar:@6.1.2",
+  "org.junit.platform:junit-platform-engine:jar:@6.1.2",
 ]
 
 [[artifact]]
@@ -738,6 +744,7 @@ checksum = "sha256:c1ed2164f6ba388518757b38f219dbe350ac098afcd126cbcbd6256fb9966
 pinned-by = "io.micronaut.platform:micronaut-platform:5.1.0"
 scopes   = ["test"]
 deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
   "org.jspecify:jspecify:jar:@1.0.0",
   "org.junit.jupiter:junit-jupiter-api:jar:@6.1.2",
 ]
@@ -763,6 +770,7 @@ checksum = "sha256:204894c039d321743ee11e7d1dc8360170d7c64391fbea1211178a645c33a
 pinned-by = "io.micronaut.platform:micronaut-platform:5.1.0"
 scopes   = ["test"]
 deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
   "org.jspecify:jspecify:jar:@1.0.0",
 ]
 
@@ -774,6 +782,7 @@ checksum = "sha256:484e90828846ad6b88efe226b6fe014a75941b32b226e914d9a7758802f46
 pinned-by = "io.micronaut.platform:micronaut-platform:5.1.0"
 scopes   = ["test"]
 deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
   "org.jspecify:jspecify:jar:@1.0.0",
   "org.junit.platform:junit-platform-commons:jar:@6.1.2",
   "org.opentest4j:opentest4j:jar:@1.3.0",
