@@ -15,6 +15,7 @@ Sibling product repo: [jkbuild/jk](https://github.com/jkbuild/jk). Prefer a curr
 | Dir | Validates |
 |---|---|
 | `android/nowinandroid/` | **The Android north star**: Google's reference app, all 27 modules — Compose, Hilt (unmodified sources), Room auto-migrations, protobuf/datastore, kotlinx-serialization, navigation3, a contentType variant dimension, non-transitive R, demo-debug APK + signed R8 release AAB. No Gradle, no AGP. |
+| `micronaut/hello-http/` | **Micronaut 5** HTTP service — `[micronaut]` plugin, assembly fat jar, `@MicronautTest` client smoke. |
 | `spring-boot/kitchen-sink/` | Spring Boot **4.1** — web + data-jpa + validation + actuator, BOM auto-import, boot-jar layout, Spring AOT step, build-info, dev-scope devtools. |
 | `spring-boot/petshop/` | Multi-module Spring Boot **4.1** pet shop (domain / service / web) — workspace DI + Boot 4 MockMvc tests. |
 | `aot/vanilla-cli/` | Core JVM AOT (`jk build --aot-cache`) with no framework and no plugin — the everyone-gets-this path. |

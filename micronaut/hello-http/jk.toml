@@ -1,0 +1,31 @@
+[project]
+group   = "com.example"
+name    = "hello-http"
+version = "0.1.0"
+java    = 25
+layout  = "traditional"
+
+[application]
+main = "com.example.hello.Application"
+# Micronaut apps ship as a single runnable fat jar (Maven shade parity).
+assembly = true
+
+# Micronaut 5.x major-line floor (caret); lock pins exact — JK-1544
+[micronaut]
+version = "5"
+# Optional deploy optimization (JK-1536):
+# aot = true
+# aot-runtime = "jit"   # or "native" with [native]
+
+[dependencies]
+micronaut-http-server-netty = { group = "io.micronaut", name = "micronaut-http-server-netty" }
+micronaut-jackson-databind  = { group = "io.micronaut", name = "micronaut-jackson-databind" }
+logback                     = { group = "ch.qos.logback", name = "logback-classic" }
+
+[processor-dependencies]
+micronaut-inject-java = { group = "io.micronaut", name = "micronaut-inject-java" }
+
+[test-dependencies]
+micronaut-test-junit5 = { group = "io.micronaut.test", name = "micronaut-test-junit5" }
+micronaut-http-client = { group = "io.micronaut", name = "micronaut-http-client" }
+junit-jupiter         = { group = "org.junit.jupiter", name = "junit-jupiter" }
