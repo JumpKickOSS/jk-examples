@@ -1,0 +1,4309 @@
+version = 1
+generated-by = "jk 0.11.0"
+resolution-algorithm = "pubgrub-v1"
+kotlin = "2.4.10"
+jk = { version = "0.11.0", sha256 = "82cd11616581dc98a1580bba089cee9ea4344740dd31254a8156165a9fafcc2f" }
+manifests-sha256 = "b4d3e889c9ab1dc773c1e04d75581a5ae53bf549e5c8a3305afa8b1de9bf498b"
+project-id = "7a8f0ddabd0d4638fab40c8b21bb9bf5"
+
+[[artifact]]
+name     = "androidx.activity:activity-compose:aar:"
+version  = "1.13.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:2b5da3033d4924e833868e140c3edfc0c03208710b6b9fb2c9d9a47560ba55fa"
+path     = "activity-compose-1.13.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.activity:activity:aar:@1.13.0",
+  "androidx.compose.runtime:runtime-saveable:jar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime:jar:@1.12.0-rc01",
+  "androidx.compose.ui:ui:jar:@1.12.0-rc01",
+  "androidx.core:core-ktx:aar:@1.19.0",
+  "androidx.lifecycle:lifecycle-common:jar:@2.11.0",
+  "androidx.lifecycle:lifecycle-runtime-compose:jar:@2.11.0",
+  "androidx.lifecycle:lifecycle-runtime:jar:@2.11.0",
+  "androidx.lifecycle:lifecycle-viewmodel:jar:@2.11.0",
+  "androidx.navigationevent:navigationevent-compose:jar:@1.1.2",
+  "androidx.savedstate:savedstate:jar:@1.4.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "androidx.activity:activity-compose:aar:"
+version  = "1.13.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:2b5da3033d4924e833868e140c3edfc0c03208710b6b9fb2c9d9a47560ba55fa"
+path     = "activity-compose-1.13.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.activity:activity:aar:@1.13.0",
+  "androidx.compose.runtime:runtime-saveable:jar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime:jar:@1.12.0-rc01",
+  "androidx.compose.ui:ui:jar:@1.12.0-rc01",
+  "androidx.core:core-ktx:aar:@1.19.0",
+  "androidx.lifecycle:lifecycle-common:jar:@2.11.0",
+  "androidx.lifecycle:lifecycle-runtime-compose:jar:@2.11.0",
+  "androidx.lifecycle:lifecycle-runtime:jar:@2.11.0",
+  "androidx.lifecycle:lifecycle-viewmodel:jar:@2.11.0",
+  "androidx.navigationevent:navigationevent-compose:jar:@1.1.2",
+  "androidx.savedstate:savedstate:jar:@1.4.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "androidx.activity:activity-ktx:aar:"
+version  = "1.13.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:b5541dc5f74e35389f1e9fdca8b5770c49d2c1360de16f398ce5c1e07a003244"
+path     = "activity-ktx-1.13.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.activity:activity:aar:@1.13.0",
+  "androidx.lifecycle:lifecycle-runtime-ktx:jar:@2.11.0",
+  "androidx.lifecycle:lifecycle-viewmodel-ktx:aar:@2.11.0",
+  "androidx.savedstate:savedstate-ktx:aar:@1.4.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.activity:activity:aar:"
+version  = "1.13.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:bd4f19a5f00effed0eecad0a310b1f2169b9fc66236a3ba743a222eb77747ee1"
+path     = "activity-1.13.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.core:core-ktx:aar:@1.19.0",
+  "androidx.core:core-viewtree:aar:@1.0.0",
+  "androidx.lifecycle:lifecycle-common:jar:@2.11.0",
+  "androidx.lifecycle:lifecycle-runtime:jar:@2.11.0",
+  "androidx.lifecycle:lifecycle-viewmodel-savedstate:jar:@2.11.0",
+  "androidx.lifecycle:lifecycle-viewmodel:jar:@2.11.0",
+  "androidx.navigationevent:navigationevent:jar:@1.1.2",
+  "androidx.profileinstaller:profileinstaller:aar:@1.4.1",
+  "androidx.savedstate:savedstate:jar:@1.4.0",
+  "androidx.tracing:tracing:jar:@1.3.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "androidx.activity:activity:aar:"
+version  = "1.13.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:bd4f19a5f00effed0eecad0a310b1f2169b9fc66236a3ba743a222eb77747ee1"
+path     = "activity-1.13.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.core:core-ktx:aar:@1.19.0",
+  "androidx.core:core-viewtree:aar:@1.0.0",
+  "androidx.lifecycle:lifecycle-common:jar:@2.11.0",
+  "androidx.lifecycle:lifecycle-runtime:jar:@2.11.0",
+  "androidx.lifecycle:lifecycle-viewmodel-savedstate:jar:@2.11.0",
+  "androidx.lifecycle:lifecycle-viewmodel:jar:@2.11.0",
+  "androidx.navigationevent:navigationevent:jar:@1.1.2",
+  "androidx.profileinstaller:profileinstaller:aar:@1.4.1",
+  "androidx.savedstate:savedstate:jar:@1.4.0",
+  "androidx.tracing:tracing:jar:@1.3.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "androidx.annotation:annotation-experimental:aar:"
+version  = "1.6.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:86ca66e1b758b439918140f87f6513d4d806d3d5637dfdac04495f3b1f5ed102"
+path     = "annotation-experimental-1.6.0.aar"
+scopes   = ["main"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.annotation:annotation-experimental:aar:"
+version  = "1.6.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:86ca66e1b758b439918140f87f6513d4d806d3d5637dfdac04495f3b1f5ed102"
+path     = "annotation-experimental-1.6.0.aar"
+scopes   = ["main"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.annotation:annotation-jvm:jar:"
+version  = "1.10.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:ddd072ddbb553178e205517ce777b2f05aa9e412982d9ecb4eedc74f1212f697"
+scopes   = ["main", "processor"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.annotation:annotation:jar:"
+version  = "1.10.0"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.appcompat:appcompat-resources:aar:"
+version  = "1.7.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:55b6778602680f3c288ce350a2c2d3dd158d97dbffc63476275826655582c388"
+path     = "appcompat-resources-1.7.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.collection:collection:jar:@1.6.0",
+  "androidx.core:core:aar:@1.19.0",
+  "androidx.vectordrawable:vectordrawable-animated:aar:@1.2.0",
+  "androidx.vectordrawable:vectordrawable:aar:@1.2.0",
+]
+
+[[artifact]]
+name     = "androidx.appcompat:appcompat-resources:aar:"
+version  = "1.7.1"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:8e2db31224ca53b108c784da2b361959062716d416b210cfef3d5a3828306df0"
+path     = "appcompat-resources-1.7.1.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.collection:collection:jar:@1.6.0",
+  "androidx.core:core:aar:@1.19.0",
+  "androidx.vectordrawable:vectordrawable-animated:aar:@1.2.0",
+  "androidx.vectordrawable:vectordrawable:aar:@1.2.0",
+]
+
+[[artifact]]
+name     = "androidx.appcompat:appcompat:aar:"
+version  = "1.7.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:67189713b30a3fab6971713cc5fab1cb7f022bcf648a257563715c91d719d584"
+path     = "appcompat-1.7.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.activity:activity:aar:@1.13.0",
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.appcompat:appcompat-resources:aar:@1.7.0",
+  "androidx.collection:collection:jar:@1.6.0",
+  "androidx.core:core-ktx:aar:@1.19.0",
+  "androidx.core:core:aar:@1.19.0",
+  "androidx.cursoradapter:cursoradapter:aar:@1.0.0",
+  "androidx.drawerlayout:drawerlayout:aar:@1.2.0",
+  "androidx.emoji2:emoji2-views-helper:aar:@1.6.0",
+  "androidx.emoji2:emoji2:aar:@1.6.0",
+  "androidx.fragment:fragment:aar:@1.8.9",
+  "androidx.lifecycle:lifecycle-runtime:jar:@2.11.0",
+  "androidx.lifecycle:lifecycle-viewmodel:jar:@2.11.0",
+  "androidx.profileinstaller:profileinstaller:aar:@1.4.1",
+  "androidx.resourceinspection:resourceinspection-annotation:jar:@1.0.1",
+  "androidx.savedstate:savedstate:jar:@1.4.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.arch.core:core-common:jar:"
+version  = "2.2.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:65308a06b1c00ee186cb9e19321383f043b993813f1522c47f4a3e3303bdba41"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+]
+
+[[artifact]]
+name     = "androidx.arch.core:core-runtime:aar:"
+version  = "2.2.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:a1be5e0caa2b07623862af6ae21b3ab0718123245184d0e30dea81b53f990a47"
+path     = "core-runtime-2.2.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.arch.core:core-common:jar:@2.2.0",
+]
+
+[[artifact]]
+name     = "androidx.arch.core:core-runtime:aar:"
+version  = "2.2.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:a1be5e0caa2b07623862af6ae21b3ab0718123245184d0e30dea81b53f990a47"
+path     = "core-runtime-2.2.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.arch.core:core-common:jar:@2.2.0",
+]
+
+[[artifact]]
+name     = "androidx.autofill:autofill:aar:"
+version  = "1.3.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:b5a217cee7724ea42a382965a9b22a330b988d62cb97abe1b1af50e54370c322"
+path     = "autofill-1.3.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.core:core:aar:@1.19.0",
+]
+
+[[artifact]]
+name     = "androidx.browser:browser:aar:"
+version  = "1.8.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:2d6167b33bf6a064c37501501543702349e850ac62c732d1efa4e71063675456"
+path     = "browser-1.8.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-experimental:aar:@1.6.0",
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.collection:collection:jar:@1.6.0",
+  "androidx.concurrent:concurrent-futures:jar:@1.3.0",
+  "androidx.core:core:aar:@1.19.0",
+  "androidx.interpolator:interpolator:aar:@1.0.0",
+  "com.google.guava:listenablefuture:jar:@9999.0-empty-to-avoid-conflict-with-guava",
+]
+
+[[artifact]]
+name     = "androidx.collection:collection-jvm:jar:"
+version  = "1.6.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:839fcec147704611a222159fa84e3e062f68eee80caa549ddd1222d5210a13df"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "androidx.collection:collection-ktx:jar:"
+version  = "1.6.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:939b4a8697640e77d83e4e8b4c4a9d18f8130198c5961194af8dd9db9dc7c353"
+scopes   = ["main"]
+deps = [
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.collection:collection:jar:"
+version  = "1.6.0"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.animation:animation-android:aar:"
+version  = "1.12.0-rc01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:08f82ed6bab4ad99eec2e97c105a205644815ac8994c585b95dff21d1f20e20b"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "animation-android-1.12.0-rc01.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-experimental:aar:@1.6.0",
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.compose.animation:animation-core-android:aar:@1.12.0-rc01",
+  "androidx.compose.foundation:foundation-layout-android:aar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-geometry-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-graphics-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.animation:animation-android:aar:"
+version  = "1.12.0-rc01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:08f82ed6bab4ad99eec2e97c105a205644815ac8994c585b95dff21d1f20e20b"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "animation-android-1.12.0-rc01.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-experimental:aar:@1.6.0",
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.compose.animation:animation-core-android:aar:@1.12.0-rc01",
+  "androidx.compose.foundation:foundation-layout-android:aar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-geometry-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-graphics-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.animation:animation-core-android:aar:"
+version  = "1.12.0-rc01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:132eb2d7550c9fdc6d6c989379916f6f02110de34dcb8606c5dae363756ec6f6"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "animation-core-android-1.12.0-rc01.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-graphics-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-unit-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "androidx.compose.animation:animation-core-android:aar:"
+version  = "1.12.0-rc01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:132eb2d7550c9fdc6d6c989379916f6f02110de34dcb8606c5dae363756ec6f6"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "animation-core-android-1.12.0-rc01.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-graphics-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-unit-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "androidx.compose.animation:animation-core:jar:"
+version  = "1.12.0-rc01"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+scopes   = ["main"]
+deps = [
+  "androidx.compose.animation:animation-core-android:jar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "androidx.compose.animation:animation:jar:"
+version  = "1.12.0-rc01"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+scopes   = ["main"]
+deps = [
+  "androidx.compose.animation:animation-android:jar:@1.12.0-rc01",
+  "androidx.compose.animation:animation-core:jar:@1.12.0-rc01",
+  "androidx.compose.foundation:foundation-layout:jar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime:jar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-geometry:jar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.foundation:foundation-android:aar:"
+version  = "1.12.0-rc01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:c0074a157713ccee585104b7440ea6b504d5d26ae3ba9bcdee8d26d32005af22"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "foundation-android-1.12.0-rc01.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-experimental:aar:@1.6.0",
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.compose.animation:animation-android:aar:@1.12.0-rc01",
+  "androidx.compose.foundation:foundation-layout-android:aar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-text-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
+  "androidx.core:core:aar:@1.19.0",
+  "androidx.emoji2:emoji2:aar:@1.6.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.foundation:foundation-android:aar:"
+version  = "1.12.0-rc01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:c0074a157713ccee585104b7440ea6b504d5d26ae3ba9bcdee8d26d32005af22"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "foundation-android-1.12.0-rc01.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-experimental:aar:@1.6.0",
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.compose.animation:animation-android:aar:@1.12.0-rc01",
+  "androidx.compose.foundation:foundation-layout-android:aar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-text-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
+  "androidx.core:core:aar:@1.19.0",
+  "androidx.emoji2:emoji2:aar:@1.6.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.foundation:foundation-layout-android:aar:"
+version  = "1.12.0-rc01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:a2df3b99984961d2953d3021a46abcb3b0bf95a7f159b458293776685594b08b"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "foundation-layout-android-1.12.0-rc01.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-experimental:aar:@1.6.0",
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.compose.animation:animation-core:jar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-unit-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
+  "androidx.core:core:aar:@1.19.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.foundation:foundation-layout-android:aar:"
+version  = "1.12.0-rc01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:a2df3b99984961d2953d3021a46abcb3b0bf95a7f159b458293776685594b08b"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "foundation-layout-android-1.12.0-rc01.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-experimental:aar:@1.6.0",
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.compose.animation:animation-core:jar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-unit-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
+  "androidx.core:core:aar:@1.19.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.foundation:foundation-layout:jar:"
+version  = "1.12.0-rc01"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+scopes   = ["main"]
+deps = [
+  "androidx.compose.foundation:foundation-layout-android:jar:@1.12.0-rc01",
+  "androidx.compose.ui:ui:jar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.foundation:foundation:jar:"
+version  = "1.12.0-rc01"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+scopes   = ["main"]
+deps = [
+  "androidx.collection:collection:jar:@1.6.0",
+  "androidx.compose.animation:animation:jar:@1.12.0-rc01",
+  "androidx.compose.foundation:foundation-android:jar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime:jar:@1.12.0-rc01",
+  "androidx.compose.ui:ui:jar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.material3.adaptive:adaptive-android:aar:"
+version  = "1.3.0-rc01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:443a073a54dac27a095b554e9c8bb341f2bc8ec299a39030d47a2e832dde9a55"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "adaptive-android-1.3.0-rc01.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-experimental:aar:@1.6.0",
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.compose.foundation:foundation-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-android:aar:@1.12.0-rc01",
+  "androidx.window:window-core-android:aar:@1.5.1",
+  "androidx.window:window:aar:@1.5.1",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.material3.adaptive:adaptive-android:aar:"
+version  = "1.3.0-rc01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:443a073a54dac27a095b554e9c8bb341f2bc8ec299a39030d47a2e832dde9a55"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "adaptive-android-1.3.0-rc01.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-experimental:aar:@1.6.0",
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.compose.foundation:foundation-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-android:aar:@1.12.0-rc01",
+  "androidx.window:window-core-android:aar:@1.5.1",
+  "androidx.window:window:aar:@1.5.1",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.material3.adaptive:adaptive-layout-android:aar:"
+version  = "1.3.0-rc01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:e0ad174c81be9cdd2168e089e31e34ac4f1ec57567516ab2131d6b016bb3dc91"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "adaptive-layout-android-1.3.0-rc01.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-experimental:aar:@1.6.0",
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.compose.animation:animation-android:aar:@1.12.0-rc01",
+  "androidx.compose.animation:animation-core-android:aar:@1.12.0-rc01",
+  "androidx.compose.foundation:foundation-android:aar:@1.12.0-rc01",
+  "androidx.compose.foundation:foundation-layout-android:aar:@1.12.0-rc01",
+  "androidx.compose.material3.adaptive:adaptive-android:aar:@1.3.0-rc01",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-geometry-android:aar:@1.12.0-rc01",
+  "androidx.core:core:aar:@1.19.0",
+  "androidx.window:window-core-android:aar:@1.5.1",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.material3.adaptive:adaptive-layout-android:aar:"
+version  = "1.3.0-rc01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:e0ad174c81be9cdd2168e089e31e34ac4f1ec57567516ab2131d6b016bb3dc91"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "adaptive-layout-android-1.3.0-rc01.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-experimental:aar:@1.6.0",
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.compose.animation:animation-android:aar:@1.12.0-rc01",
+  "androidx.compose.animation:animation-core-android:aar:@1.12.0-rc01",
+  "androidx.compose.foundation:foundation-android:aar:@1.12.0-rc01",
+  "androidx.compose.foundation:foundation-layout-android:aar:@1.12.0-rc01",
+  "androidx.compose.material3.adaptive:adaptive-android:aar:@1.3.0-rc01",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-geometry-android:aar:@1.12.0-rc01",
+  "androidx.core:core:aar:@1.19.0",
+  "androidx.window:window-core-android:aar:@1.5.1",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.material3.adaptive:adaptive-layout:jar:"
+version  = "1.3.0-rc01"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+scopes   = ["main"]
+deps = [
+  "androidx.compose.animation:animation-core:jar:@1.12.0-rc01",
+  "androidx.compose.material3.adaptive:adaptive-layout-android:jar:@1.3.0-rc01",
+  "androidx.compose.material3.adaptive:adaptive:jar:@1.3.0-rc01",
+  "androidx.compose.ui:ui:jar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.material3.adaptive:adaptive-navigation-android:aar:"
+version  = "1.3.0-rc01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:52bda6ef330e16f1b786ac89539b79ca09a6663bc3444d68143d7211bfa9ab67"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "adaptive-navigation-android-1.3.0-rc01.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.activity:activity-compose:aar:@1.13.0",
+  "androidx.annotation:annotation-experimental:aar:@1.6.0",
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.compose.foundation:foundation-android:aar:@1.12.0-rc01",
+  "androidx.compose.material3.adaptive:adaptive-layout-android:aar:@1.3.0-rc01",
+  "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.material3.adaptive:adaptive-navigation-android:aar:"
+version  = "1.3.0-rc01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:52bda6ef330e16f1b786ac89539b79ca09a6663bc3444d68143d7211bfa9ab67"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "adaptive-navigation-android-1.3.0-rc01.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.activity:activity-compose:aar:@1.13.0",
+  "androidx.annotation:annotation-experimental:aar:@1.6.0",
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.compose.foundation:foundation-android:aar:@1.12.0-rc01",
+  "androidx.compose.material3.adaptive:adaptive-layout-android:aar:@1.3.0-rc01",
+  "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.material3.adaptive:adaptive-navigation3-android:aar:"
+version  = "1.3.0-rc01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:f292ea2e837f6b84ac7ac1da4d7986bac27f6f0a9f319f91a11de012cabe53fc"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "adaptive-navigation3-android-1.3.0-rc01.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.activity:activity-compose:aar:@1.13.0",
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.compose.material3.adaptive:adaptive-navigation-android:aar:@1.3.0-rc01",
+  "androidx.navigation3:navigation3-ui-android:aar:@1.0.1",
+  "androidx.navigationevent:navigationevent-compose-android:aar:@1.1.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.material3.adaptive:adaptive-navigation3:jar:"
+version  = "1.3.0-rc01"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+scopes   = ["main"]
+deps = [
+  "androidx.compose.material3.adaptive:adaptive-navigation3-android:jar:@1.3.0-rc01",
+  "androidx.compose.material3.adaptive:adaptive-navigation:jar:@1.3.0-rc01",
+  "androidx.navigation3:navigation3-ui:jar:@1.0.1",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.material3.adaptive:adaptive-navigation:jar:"
+version  = "1.3.0-rc01"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+scopes   = ["main"]
+deps = [
+  "androidx.compose.material3.adaptive:adaptive-layout:jar:@1.3.0-rc01",
+  "androidx.compose.material3.adaptive:adaptive-navigation-android:jar:@1.3.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.material3.adaptive:adaptive:jar:"
+version  = "1.3.0-rc01"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+scopes   = ["main"]
+deps = [
+  "androidx.compose.material3.adaptive:adaptive-android:jar:@1.3.0-rc01",
+  "androidx.window:window-core:jar:@1.5.1",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.material3:material3-adaptive-navigation-suite-android:aar:"
+version  = "1.5.0-alpha25"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:92ee18962723f2acc4f68bf00636a669090d80fc67c21409c37a543c712af2b2"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "material3-adaptive-navigation-suite-android-1.5.0-alpha25.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-experimental:aar:@1.6.0",
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.compose.material3.adaptive:adaptive-android:aar:@1.3.0-rc01",
+  "androidx.compose.material3:material3-android:aar:@1.5.0-alpha25",
+  "androidx.window:window-core-android:aar:@1.5.1",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.material3:material3-adaptive-navigation-suite:jar:"
+version  = "1.5.0-alpha25"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+scopes   = ["main"]
+deps = [
+  "androidx.compose.material3.adaptive:adaptive:jar:@1.3.0-rc01",
+  "androidx.compose.material3:material3-adaptive-navigation-suite-android:jar:@1.5.0-alpha25",
+  "androidx.compose.material3:material3:jar:@1.5.0-alpha25",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.material3:material3-android:aar:"
+version  = "1.5.0-alpha25"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:bf09d0c5bd06d33d828c44dd04a537e76528ef2476bb4d802a329a83cb0a618b"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "material3-android-1.5.0-alpha25.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.activity:activity-compose:aar:@1.13.0",
+  "androidx.annotation:annotation-experimental:aar:@1.6.0",
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.compose.animation:animation-core-android:aar:@1.12.0-rc01",
+  "androidx.compose.foundation:foundation-android:aar:@1.12.0-rc01",
+  "androidx.compose.foundation:foundation-layout-android:aar:@1.12.0-rc01",
+  "androidx.compose.material3:material3-ripple-android:aar:@1.5.0-alpha25",
+  "androidx.compose.material:material-ripple-android:aar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-text-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
+  "androidx.graphics:graphics-shapes-android:aar:@1.1.0",
+  "androidx.lifecycle:lifecycle-common-java8:jar:@2.11.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.material3:material3-android:aar:"
+version  = "1.5.0-alpha25"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:bf09d0c5bd06d33d828c44dd04a537e76528ef2476bb4d802a329a83cb0a618b"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "material3-android-1.5.0-alpha25.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.activity:activity-compose:aar:@1.13.0",
+  "androidx.annotation:annotation-experimental:aar:@1.6.0",
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.compose.animation:animation-core-android:aar:@1.12.0-rc01",
+  "androidx.compose.foundation:foundation-android:aar:@1.12.0-rc01",
+  "androidx.compose.foundation:foundation-layout-android:aar:@1.12.0-rc01",
+  "androidx.compose.material3:material3-ripple-android:aar:@1.5.0-alpha25",
+  "androidx.compose.material:material-ripple-android:aar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-text-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
+  "androidx.graphics:graphics-shapes-android:aar:@1.1.0",
+  "androidx.lifecycle:lifecycle-common-java8:jar:@2.11.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.material3:material3-ripple-android:aar:"
+version  = "1.5.0-alpha25"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:11774f26246f933ec39413c13dc6de5de2f09beaa397d38658c78cef00dc9aa5"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "material3-ripple-android-1.5.0-alpha25.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.compose.animation:animation-android:aar:@1.12.0-rc01",
+  "androidx.compose.foundation:foundation-android:aar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.material3:material3-window-size-class-android:aar:"
+version  = "1.5.0-alpha25"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:b99fac7d14685350524384111b68bc9f664df3767ecea3c5af5ad4c9b8ed7983"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "material3-window-size-class-android-1.5.0-alpha25.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-experimental:aar:@1.6.0",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-unit-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
+  "androidx.window:window:aar:@1.5.1",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.material3:material3-window-size-class:jar:"
+version  = "1.5.0-alpha25"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+scopes   = ["main"]
+deps = [
+  "androidx.compose.material3:material3-window-size-class-android:jar:@1.5.0-alpha25",
+  "androidx.compose.runtime:runtime:jar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-unit:jar:@1.12.0-rc01",
+  "androidx.compose.ui:ui:jar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.material3:material3:jar:"
+version  = "1.5.0-alpha25"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+scopes   = ["main"]
+deps = [
+  "androidx.compose.foundation:foundation-layout:jar:@1.12.0-rc01",
+  "androidx.compose.foundation:foundation:jar:@1.12.0-rc01",
+  "androidx.compose.material3:material3-android:jar:@1.5.0-alpha25",
+  "androidx.compose.material:material-ripple:jar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime:jar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-text:jar:@1.12.0-rc01",
+  "androidx.compose.ui:ui:jar:@1.12.0-rc01",
+  "androidx.graphics:graphics-shapes:jar:@1.1.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.material:material-icons-core-android:aar:"
+version  = "1.7.8"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:332c06b25e662cc417fb087e76b8faa5cb249f4992ffa3360084a3d4ab882284"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "material-icons-core-android-1.7.8.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.compose.ui:ui-android:jar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib-common:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.material:material-icons-core:jar:"
+version  = "1.7.8"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+scopes   = ["main"]
+deps = [
+  "androidx.compose.material:material-icons-core-android:jar:@1.7.8",
+  "androidx.compose.ui:ui:jar:@1.12.0-rc01",
+]
+
+[[artifact]]
+name     = "androidx.compose.material:material-icons-extended-android:aar:"
+version  = "1.7.8"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:64e86269f1106848981dd76f0046f81b46f3bd92efb22645de8fd044c0402b61"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "material-icons-extended-android-1.7.8.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.compose.material:material-icons-core-android:jar:@1.7.8",
+  "org.jetbrains.kotlin:kotlin-stdlib-common:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.material:material-icons-extended:jar:"
+version  = "1.7.8"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+scopes   = ["main"]
+deps = [
+  "androidx.compose.material:material-icons-core:jar:@1.7.8",
+  "androidx.compose.material:material-icons-extended-android:jar:@1.7.8",
+]
+
+[[artifact]]
+name     = "androidx.compose.material:material-ripple-android:aar:"
+version  = "1.12.0-rc01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:7aa82fac53f316ec7f7587b9a5a96300483bc93d4af45d934801c559f62ebf05"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "material-ripple-android-1.12.0-rc01.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.compose.animation:animation-android:aar:@1.12.0-rc01",
+  "androidx.compose.foundation:foundation-android:aar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.material:material-ripple-android:aar:"
+version  = "1.12.0-rc01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:7aa82fac53f316ec7f7587b9a5a96300483bc93d4af45d934801c559f62ebf05"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "material-ripple-android-1.12.0-rc01.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.compose.animation:animation-android:aar:@1.12.0-rc01",
+  "androidx.compose.foundation:foundation-android:aar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.material:material-ripple:jar:"
+version  = "1.12.0-rc01"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+scopes   = ["main"]
+deps = [
+  "androidx.compose.foundation:foundation:jar:@1.12.0-rc01",
+  "androidx.compose.material:material-ripple-android:jar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime:jar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.runtime:runtime-android:aar:"
+version  = "1.12.0-rc01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:68858a1d64ab5cd95cc7d3312283e59e24fd19b143560b9be75a29260623103b"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "runtime-android-1.12.0-rc01.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-experimental:aar:@1.6.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.compose.runtime:runtime-annotation-android:aar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "androidx.compose.runtime:runtime-android:aar:"
+version  = "1.12.0-rc01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:68858a1d64ab5cd95cc7d3312283e59e24fd19b143560b9be75a29260623103b"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "runtime-android-1.12.0-rc01.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-experimental:aar:@1.6.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.compose.runtime:runtime-annotation-android:aar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "androidx.compose.runtime:runtime-annotation-android:aar:"
+version  = "1.12.0-rc01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:addfb6e133efa3ebc8eed773ea8f590a1a341ba045ed9ed0f6d5a57717ae7099"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "runtime-annotation-android-1.12.0-rc01.aar"
+scopes   = ["main"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.runtime:runtime-annotation-android:aar:"
+version  = "1.12.0-rc01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:addfb6e133efa3ebc8eed773ea8f590a1a341ba045ed9ed0f6d5a57717ae7099"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "runtime-annotation-android-1.12.0-rc01.aar"
+scopes   = ["main"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.runtime:runtime-annotation:jar:"
+version  = "1.12.0-rc01"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+scopes   = ["main"]
+deps = [
+  "androidx.compose.runtime:runtime-annotation-android:jar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.runtime:runtime-retain-android:aar:"
+version  = "1.12.0-rc01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:bac74dfd2a8bdd3d76c554677d6b2145864804b342db1aa7b5913d39c86670f5"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "runtime-retain-android-1.12.0-rc01.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "androidx.compose.runtime:runtime-retain-android:aar:"
+version  = "1.12.0-rc01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:bac74dfd2a8bdd3d76c554677d6b2145864804b342db1aa7b5913d39c86670f5"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "runtime-retain-android-1.12.0-rc01.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "androidx.compose.runtime:runtime-retain:jar:"
+version  = "1.12.0-rc01"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+scopes   = ["main"]
+deps = [
+  "androidx.collection:collection:jar:@1.6.0",
+  "androidx.compose.runtime:runtime-retain-android:jar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime:jar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "androidx.compose.runtime:runtime-saveable-android:aar:"
+version  = "1.12.0-rc01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:f382edf7470fe96bacad5e79725e5ff6dcd0c7397f8994e865b6d433a9ca22f9"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "runtime-saveable-android-1.12.0-rc01.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.lifecycle:lifecycle-runtime-compose-android:aar:@2.11.0",
+  "androidx.savedstate:savedstate-compose-android:aar:@1.4.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.runtime:runtime-saveable-android:aar:"
+version  = "1.12.0-rc01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:f382edf7470fe96bacad5e79725e5ff6dcd0c7397f8994e865b6d433a9ca22f9"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "runtime-saveable-android-1.12.0-rc01.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.lifecycle:lifecycle-runtime-compose-android:aar:@2.11.0",
+  "androidx.savedstate:savedstate-compose-android:aar:@1.4.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.runtime:runtime-saveable:jar:"
+version  = "1.12.0-rc01"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+scopes   = ["main"]
+deps = [
+  "androidx.collection:collection:jar:@1.6.0",
+  "androidx.compose.runtime:runtime-saveable-android:jar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime:jar:@1.12.0-rc01",
+  "androidx.lifecycle:lifecycle-runtime-compose:jar:@2.11.0",
+  "androidx.savedstate:savedstate-compose:jar:@1.4.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.runtime:runtime:jar:"
+version  = "1.12.0-rc01"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+scopes   = ["main"]
+deps = [
+  "androidx.collection:collection:jar:@1.6.0",
+  "androidx.compose.runtime:runtime-android:jar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime-annotation:jar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "androidx.compose.ui:ui-android:aar:"
+version  = "1.12.0-rc01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:99cfa4aba67d40b85af610f773142ef4567221c726741fa680822c3be0daff7c"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "ui-android-1.12.0-rc01.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.activity:activity-ktx:aar:@1.13.0",
+  "androidx.annotation:annotation-experimental:aar:@1.6.0",
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.autofill:autofill:aar:@1.3.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime-retain-android:aar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime-saveable-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-geometry-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-graphics-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-text-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-unit-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
+  "androidx.core:core:aar:@1.19.0",
+  "androidx.customview:customview-poolingcontainer:aar:@1.1.0",
+  "androidx.emoji2:emoji2:aar:@1.6.0",
+  "androidx.lifecycle:lifecycle-runtime-compose-android:aar:@2.11.0",
+  "androidx.lifecycle:lifecycle-viewmodel-android:aar:@2.11.0",
+  "androidx.lifecycle:lifecycle-viewmodel-ktx:aar:@2.11.0",
+  "androidx.profileinstaller:profileinstaller:aar:@1.4.1",
+  "androidx.savedstate:savedstate-compose-android:aar:@1.4.0",
+  "androidx.savedstate:savedstate-ktx:aar:@1.4.0",
+  "androidx.window:window:aar:@1.5.1",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "androidx.compose.ui:ui-android:aar:"
+version  = "1.12.0-rc01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:99cfa4aba67d40b85af610f773142ef4567221c726741fa680822c3be0daff7c"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "ui-android-1.12.0-rc01.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.activity:activity-ktx:aar:@1.13.0",
+  "androidx.annotation:annotation-experimental:aar:@1.6.0",
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.autofill:autofill:aar:@1.3.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime-retain-android:aar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime-saveable-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-geometry-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-graphics-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-text-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-unit-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
+  "androidx.core:core:aar:@1.19.0",
+  "androidx.customview:customview-poolingcontainer:aar:@1.1.0",
+  "androidx.emoji2:emoji2:aar:@1.6.0",
+  "androidx.lifecycle:lifecycle-runtime-compose-android:aar:@2.11.0",
+  "androidx.lifecycle:lifecycle-viewmodel-android:aar:@2.11.0",
+  "androidx.lifecycle:lifecycle-viewmodel-ktx:aar:@2.11.0",
+  "androidx.profileinstaller:profileinstaller:aar:@1.4.1",
+  "androidx.savedstate:savedstate-compose-android:aar:@1.4.0",
+  "androidx.savedstate:savedstate-ktx:aar:@1.4.0",
+  "androidx.window:window:aar:@1.5.1",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "androidx.compose.ui:ui-geometry-android:aar:"
+version  = "1.12.0-rc01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:35a42aaf8c0186d739ccf91a5f57d6aaf87ea5dd0ea87845ad9a804edd1a0482"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "ui-geometry-android-1.12.0-rc01.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.ui:ui-geometry-android:aar:"
+version  = "1.12.0-rc01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:35a42aaf8c0186d739ccf91a5f57d6aaf87ea5dd0ea87845ad9a804edd1a0482"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "ui-geometry-android-1.12.0-rc01.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.ui:ui-geometry:jar:"
+version  = "1.12.0-rc01"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+scopes   = ["main"]
+deps = [
+  "androidx.compose.ui:ui-geometry-android:jar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.ui:ui-graphics-android:aar:"
+version  = "1.12.0-rc01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:98884015fff941bcd8fe6903576d381f395835df0e02f8f8460f8e2cffe69b51"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "ui-graphics-android-1.12.0-rc01.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-experimental:aar:@1.6.0",
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-unit-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
+  "androidx.core:core:aar:@1.19.0",
+  "androidx.graphics:graphics-path:aar:@1.1.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.ui:ui-graphics-android:aar:"
+version  = "1.12.0-rc01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:98884015fff941bcd8fe6903576d381f395835df0e02f8f8460f8e2cffe69b51"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "ui-graphics-android-1.12.0-rc01.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-experimental:aar:@1.6.0",
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-unit-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
+  "androidx.core:core:aar:@1.19.0",
+  "androidx.graphics:graphics-path:aar:@1.1.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.ui:ui-graphics:jar:"
+version  = "1.12.0-rc01"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.compose.ui:ui-graphics-android:jar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-unit:jar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.ui:ui-text-android:aar:"
+version  = "1.12.0-rc01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:cea7b1acb65017792f312173ba490117d1c974b5f033bbeb9f85f4c86c0b16aa"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "ui-text-android-1.12.0-rc01.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-experimental:aar:@1.6.0",
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime-saveable-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-graphics-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-unit-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
+  "androidx.core:core:aar:@1.19.0",
+  "androidx.emoji2:emoji2:aar:@1.6.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "androidx.compose.ui:ui-text-android:aar:"
+version  = "1.12.0-rc01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:cea7b1acb65017792f312173ba490117d1c974b5f033bbeb9f85f4c86c0b16aa"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "ui-text-android-1.12.0-rc01.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-experimental:aar:@1.6.0",
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime-saveable-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-graphics-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-unit-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
+  "androidx.core:core:aar:@1.19.0",
+  "androidx.emoji2:emoji2:aar:@1.6.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "androidx.compose.ui:ui-text:jar:"
+version  = "1.12.0-rc01"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+scopes   = ["main"]
+deps = [
+  "androidx.compose.ui:ui-graphics:jar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-text-android:jar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-unit:jar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.ui:ui-tooling-preview-android:aar:"
+version  = "1.12.0-rc01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:8a723d4fd6d9fb1428ce7ad783ca0997ade74240e6fa5b8a7918d888680b01fd"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "ui-tooling-preview-android-1.12.0-rc01.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.ui:ui-tooling-preview:jar:"
+version  = "1.12.0-rc01"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.compose.runtime:runtime:jar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-tooling-preview-android:jar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.ui:ui-unit-android:aar:"
+version  = "1.12.0-rc01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:27a087fd4db55ad5ca0b1f98ccf2e1ba226a04a485edff64e7d74146d969c97e"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "ui-unit-android-1.12.0-rc01.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-experimental:aar:@1.6.0",
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.collection:collection-ktx:jar:@1.6.0",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-geometry-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.ui:ui-unit-android:aar:"
+version  = "1.12.0-rc01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:27a087fd4db55ad5ca0b1f98ccf2e1ba226a04a485edff64e7d74146d969c97e"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "ui-unit-android-1.12.0-rc01.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-experimental:aar:@1.6.0",
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.collection:collection-ktx:jar:@1.6.0",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-geometry-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.ui:ui-unit:jar:"
+version  = "1.12.0-rc01"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.compose.ui:ui-geometry:jar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-unit-android:jar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.ui:ui-util-android:aar:"
+version  = "1.12.0-rc01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:06b13f29875b0cccca3ba24bc60a5df0fe3cc87d416af3bf2c8cb35fde3b1d28"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "ui-util-android-1.12.0-rc01.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-experimental:aar:@1.6.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.ui:ui-util-android:aar:"
+version  = "1.12.0-rc01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:06b13f29875b0cccca3ba24bc60a5df0fe3cc87d416af3bf2c8cb35fde3b1d28"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+path     = "ui-util-android-1.12.0-rc01.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-experimental:aar:@1.6.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.ui:ui-util:jar:"
+version  = "1.12.0-rc01"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+scopes   = ["main"]
+deps = [
+  "androidx.compose.ui:ui-util-android:jar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.compose.ui:ui:jar:"
+version  = "1.12.0-rc01"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.compose.runtime:runtime-retain:jar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime-saveable:jar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-android:jar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-geometry:jar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-graphics:jar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-text:jar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-unit:jar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-util:jar:@1.12.0-rc01",
+  "androidx.lifecycle:lifecycle-runtime-compose:jar:@2.11.0",
+  "androidx.savedstate:savedstate-compose:jar:@1.4.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "androidx.concurrent:concurrent-futures-ktx:jar:"
+version  = "1.3.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:8de3069a4602d487b63ba061c7d46c78739e7ae5bf3dfd14bfbb9ae80277b1d9"
+scopes   = ["main"]
+deps = [
+  "androidx.concurrent:concurrent-futures:jar:@1.3.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "androidx.concurrent:concurrent-futures:jar:"
+version  = "1.3.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:9111fab38c19cac12f507ce1fed1875c155fd201f5cd5b8c7f3b7e2b18d3fc49"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "com.google.guava:listenablefuture:jar:@9999.0-empty-to-avoid-conflict-with-guava",
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "androidx.core:core-ktx:aar:"
+version  = "1.16.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:1766dbd82f64a12dcd359ecb6f15f3cf35db4d66d22961a7c51b2ffc6468314c"
+path     = "core-ktx-1.16.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.core:core:aar:@1.19.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.core:core-ktx:aar:"
+version  = "1.19.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:db1ae24b15c36358ad46497d561b19c325642565432d56479ebe47ee3baa0d7e"
+path     = "core-ktx-1.19.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.core:core:aar:@1.19.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.core:core-splashscreen:aar:"
+version  = "1.0.1"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:25c813ae7795c99dd20628527043f8d0425eb2e826e6c42cb77acbb6c01dde68"
+path     = "core-splashscreen-1.0.1.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.core:core-viewtree:aar:"
+version  = "1.0.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:dc1b678d58ebcf2bfa1587be68ff826694ce3d221251b9ef30d4d4b36297e6de"
+path     = "core-viewtree-1.0.0.aar"
+scopes   = ["main"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.core:core-viewtree:aar:"
+version  = "1.0.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:dc1b678d58ebcf2bfa1587be68ff826694ce3d221251b9ef30d4d4b36297e6de"
+path     = "core-viewtree-1.0.0.aar"
+scopes   = ["main"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.core:core:aar:"
+version  = "1.19.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:55445ad0ff025963929892569a0bfc6b4c68e60d8b7c965dcffba09048c36c8e"
+path     = "core-1.19.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-experimental:aar:@1.6.0",
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.collection:collection:jar:@1.6.0",
+  "androidx.concurrent:concurrent-futures:jar:@1.3.0",
+  "androidx.core:core-viewtree:aar:@1.0.0",
+  "androidx.interpolator:interpolator:aar:@1.0.0",
+  "androidx.lifecycle:lifecycle-common:jar:@2.11.0",
+  "androidx.lifecycle:lifecycle-runtime:jar:@2.11.0",
+  "androidx.tracing:tracing:jar:@1.3.0",
+  "androidx.versionedparcelable:versionedparcelable:aar:@1.2.1",
+  "com.google.guava:listenablefuture:jar:@9999.0-empty-to-avoid-conflict-with-guava",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "androidx.cursoradapter:cursoradapter:aar:"
+version  = "1.0.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:a81c8fe78815fa47df5b749deb52727ad11f9397da58b16017f4eb2c11e28564"
+path     = "cursoradapter-1.0.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+]
+
+[[artifact]]
+name     = "androidx.customview:customview-poolingcontainer:aar:"
+version  = "1.1.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:e13a9752a815300b99359152468218dd4b31d8bad03e733b3421a735dd41dd37"
+path     = "customview-poolingcontainer-1.1.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.core:core-ktx:aar:@1.19.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.customview:customview:aar:"
+version  = "1.2.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:40e98bb388cdf5c53a52699b1f78a5abdcf22de1e7c1be43b2c12fd6eadc6f9d"
+path     = "customview-1.2.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.collection:collection:jar:@1.6.0",
+  "androidx.core:core:aar:@1.19.0",
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "androidx.datastore:datastore-android:aar:"
+version  = "1.2.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:db3e04ca1ee9abd7748000116d460ca60ad6ed2e4d2cd5bae6821e7d9b269b9b"
+path     = "datastore-android-1.2.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.datastore:datastore-core-android:aar:@1.2.0",
+  "androidx.datastore:datastore-core-okio-jvm:jar:@1.2.0",
+  "com.squareup.okio:okio-jvm:jar:@3.18.1",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "androidx.datastore:datastore-core-android:aar:"
+version  = "1.2.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:f30eba14b55a924db7ced577b9c38eb4b6701081002a495388005efda07c36d5"
+path     = "datastore-core-android-1.2.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "androidx.datastore:datastore-core-android:aar:"
+version  = "1.2.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:f30eba14b55a924db7ced577b9c38eb4b6701081002a495388005efda07c36d5"
+path     = "datastore-core-android-1.2.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "androidx.datastore:datastore-core-okio-jvm:jar:"
+version  = "1.2.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:7ade6239a67674834f5724428e772c4176229ed30be253ac7e52082a2907ee05"
+scopes   = ["main"]
+deps = [
+  "com.squareup.okio:okio-jvm:jar:@3.18.1",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+  "org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:jar:@1.8.0",
+]
+
+[[artifact]]
+name     = "androidx.datastore:datastore-core-okio:jar:"
+version  = "1.2.0"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "androidx.datastore:datastore-core-okio-jvm:jar:@1.2.0",
+  "androidx.datastore:datastore-core:jar:@1.2.0",
+  "com.squareup.okio:okio:jar:@3.18.1",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:atomicfu:jar:@0.33.0",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+  "org.jetbrains.kotlinx:kotlinx-serialization-json:jar:@1.8.0",
+]
+
+[[artifact]]
+name     = "androidx.datastore:datastore-core:jar:"
+version  = "1.2.0"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.datastore:datastore-core-android:jar:@1.2.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:atomicfu:jar:@0.33.0",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "androidx.datastore:datastore:jar:"
+version  = "1.2.0"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.datastore:datastore-android:jar:@1.2.0",
+  "androidx.datastore:datastore-core-okio:jar:@1.2.0",
+  "androidx.datastore:datastore-core:jar:@1.2.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "androidx.drawerlayout:drawerlayout:aar:"
+version  = "1.2.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:f4ba16c51d5182497fe128e298af930f0ec6bd5497c7440a4c67042d15dd7702"
+path     = "drawerlayout-1.2.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.core:core:aar:@1.19.0",
+  "androidx.customview:customview:aar:@1.2.0",
+]
+
+[[artifact]]
+name     = "androidx.emoji2:emoji2-views-helper:aar:"
+version  = "1.6.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:7bbd7efdb93e6d15b2adccc4584d94506c2465e24a4cde681afca503c57db186"
+path     = "emoji2-views-helper-1.6.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.collection:collection:jar:@1.6.0",
+  "androidx.core:core:aar:@1.19.0",
+  "androidx.emoji2:emoji2:aar:@1.6.0",
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "androidx.emoji2:emoji2:aar:"
+version  = "1.6.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:b137765770ef7e16095eac5d752804079c8446583172cd13f43bcc42421f16c4"
+path     = "emoji2-1.6.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.collection:collection:jar:@1.6.0",
+  "androidx.core:core:aar:@1.19.0",
+  "androidx.lifecycle:lifecycle-process:aar:@2.11.0",
+  "androidx.startup:startup-runtime:aar:@1.2.0",
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "androidx.exifinterface:exifinterface:aar:"
+version  = "1.4.2"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:6bb2b68682a2023c55f35f941444ffea0157947b061e4fd7606ba935e2e77425"
+path     = "exifinterface-1.4.2.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "androidx.fragment:fragment:aar:"
+version  = "1.8.9"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:12de5b89ab6641c1d8da82b63dc816652622b06d2781b949b6fbd2dff9fac492"
+path     = "fragment-1.8.9.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.activity:activity:aar:@1.13.0",
+  "androidx.annotation:annotation-experimental:aar:@1.6.0",
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.collection:collection:jar:@1.6.0",
+  "androidx.core:core-ktx:aar:@1.19.0",
+  "androidx.lifecycle:lifecycle-livedata-core:aar:@2.11.0",
+  "androidx.lifecycle:lifecycle-runtime:jar:@2.11.0",
+  "androidx.lifecycle:lifecycle-viewmodel-savedstate:aar:@2.11.0",
+  "androidx.lifecycle:lifecycle-viewmodel:jar:@2.11.0",
+  "androidx.loader:loader:aar:@1.2.0",
+  "androidx.profileinstaller:profileinstaller:aar:@1.4.1",
+  "androidx.savedstate:savedstate:jar:@1.4.0",
+  "androidx.viewpager:viewpager:aar:@1.1.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.fragment:fragment:aar:"
+version  = "1.8.9"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:12de5b89ab6641c1d8da82b63dc816652622b06d2781b949b6fbd2dff9fac492"
+path     = "fragment-1.8.9.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.activity:activity:aar:@1.13.0",
+  "androidx.annotation:annotation-experimental:aar:@1.6.0",
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.collection:collection:jar:@1.6.0",
+  "androidx.core:core-ktx:aar:@1.19.0",
+  "androidx.lifecycle:lifecycle-livedata-core:aar:@2.11.0",
+  "androidx.lifecycle:lifecycle-runtime:jar:@2.11.0",
+  "androidx.lifecycle:lifecycle-viewmodel-savedstate:aar:@2.11.0",
+  "androidx.lifecycle:lifecycle-viewmodel:jar:@2.11.0",
+  "androidx.loader:loader:aar:@1.2.0",
+  "androidx.profileinstaller:profileinstaller:aar:@1.4.1",
+  "androidx.savedstate:savedstate:jar:@1.4.0",
+  "androidx.viewpager:viewpager:aar:@1.1.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.graphics:graphics-path:aar:"
+version  = "1.1.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:d031370d45ba4129a175fe9de913328a512b01a3c267e0eaf6b9b759f35842ae"
+path     = "graphics-path-1.1.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.collection:collection:jar:@1.6.0",
+  "androidx.core:core:aar:@1.19.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.graphics:graphics-shapes-android:aar:"
+version  = "1.1.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:1c959206c3c917f261897b33c2fe9d8263686475091a497ce08f0210a0ff0eec"
+path     = "graphics-shapes-android-1.1.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-experimental:aar:@1.6.0",
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.core:core-ktx:aar:@1.19.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.graphics:graphics-shapes-android:aar:"
+version  = "1.1.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:1c959206c3c917f261897b33c2fe9d8263686475091a497ce08f0210a0ff0eec"
+path     = "graphics-shapes-android-1.1.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-experimental:aar:@1.6.0",
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.core:core-ktx:aar:@1.19.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.graphics:graphics-shapes:jar:"
+version  = "1.1.0"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.collection:collection:jar:@1.6.0",
+  "androidx.graphics:graphics-shapes-android:jar:@1.1.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.hilt:hilt-common:jar:"
+version  = "1.4.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:6fdb2f83ab991428e401c9040bf5334fc24b7725670f73b74d9066a8c9100af3"
+scopes   = ["main"]
+deps = [
+  "com.google.dagger:hilt-core:jar:@2.60.1",
+]
+
+[[artifact]]
+name     = "androidx.hilt:hilt-compiler:jar:"
+version  = "1.2.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:4369f2d0898ed1fa9d439d21655c964e15d13a3731dee893508ab5fad3a30be8"
+scopes   = ["processor"]
+deps = [
+  "androidx.room:room-compiler-processing:jar:@2.8.4",
+  "com.google.devtools.ksp:symbol-processing-api:jar:@2.3.11",
+  "com.squareup:javapoet:jar:@1.13.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.hilt:hilt-lifecycle-viewmodel-compose:aar:"
+version  = "1.4.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:a8b85d3d8132ac7a6ca12a99fe1921897196eb5f5e1fbdf104efca5da6236c5c"
+path     = "hilt-lifecycle-viewmodel-compose-1.4.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.compose.runtime:runtime:jar:@1.12.0-rc01",
+  "androidx.compose.ui:ui:jar:@1.12.0-rc01",
+  "androidx.hilt:hilt-lifecycle-viewmodel:aar:@1.4.0",
+  "androidx.lifecycle:lifecycle-viewmodel-compose:jar:@2.11.0",
+  "com.google.dagger:hilt-android:jar:@2.60.1",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.hilt:hilt-lifecycle-viewmodel:aar:"
+version  = "1.4.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:46c093385e66b5b7dc76b0d5c47eb05304e27229ca1f252a3d64c161fe23433c"
+path     = "hilt-lifecycle-viewmodel-1.4.0.aar"
+scopes   = ["main"]
+deps = [
+  "com.google.dagger:hilt-android:jar:@2.60.1",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.hilt:hilt-work:aar:"
+version  = "1.2.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:8f02b962a84b686e4a4749db40ec884d97a7439ff9191a9a26e46e69879e4bf8"
+path     = "hilt-work-1.2.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.hilt:hilt-common:jar:@1.4.0",
+  "androidx.work:work-runtime:aar:@2.11.2",
+  "com.google.dagger:hilt-android:jar:@2.60.1",
+]
+
+[[artifact]]
+name     = "androidx.interpolator:interpolator:aar:"
+version  = "1.0.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:33193135a64fe21fa2c35eec6688f1a76e512606c0fc83dc1b689e37add7732a"
+path     = "interpolator-1.0.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+]
+
+[[artifact]]
+name     = "androidx.lifecycle:lifecycle-common-java8:jar:"
+version  = "2.11.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:895e71679cd319db8140664d650af6695b0530f5896be9b8ecccd24cc4f6674f"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.lifecycle:lifecycle-common:jar:@2.11.0",
+]
+
+[[artifact]]
+name     = "androidx.lifecycle:lifecycle-common-jvm:jar:"
+version  = "2.11.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:e6a66e67b9f63a0fb6344f165c1d872376e5fe6d235bffb138af45122cf452a9"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "androidx.lifecycle:lifecycle-common:jar:"
+version  = "2.11.0"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.lifecycle:lifecycle-common-jvm:jar:@2.11.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "androidx.lifecycle:lifecycle-livedata-core-ktx:aar:"
+version  = "2.11.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:408fac99b61a7ca9d0620f4f24891f85c14ee007cfd027abc3df759a31b0086a"
+path     = "lifecycle-livedata-core-ktx-2.11.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.lifecycle:lifecycle-livedata-core:aar:@2.11.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.lifecycle:lifecycle-livedata-core:aar:"
+version  = "2.11.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:39b26ef1e081fc88d7054ff1a63d0a5d71876373c33a711ab789c8228d025ad1"
+path     = "lifecycle-livedata-core-2.11.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.arch.core:core-common:jar:@2.2.0",
+  "androidx.arch.core:core-runtime:aar:@2.2.0",
+  "androidx.lifecycle:lifecycle-common:jar:@2.11.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "androidx.lifecycle:lifecycle-livedata:aar:"
+version  = "2.11.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:1bc28e40e06ff5e0478b9276ca6287ce6993415b70910745ac916b14dec9b72f"
+path     = "lifecycle-livedata-2.11.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.arch.core:core-common:jar:@2.2.0",
+  "androidx.arch.core:core-runtime:aar:@2.2.0",
+  "androidx.lifecycle:lifecycle-livedata-core-ktx:aar:@2.11.0",
+  "androidx.lifecycle:lifecycle-livedata-core:aar:@2.11.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "androidx.lifecycle:lifecycle-process:aar:"
+version  = "2.11.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:9743f0c7baf27d34497b7e9a1cd497d8260251b03124507963abfaad66c3f552"
+path     = "lifecycle-process-2.11.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.lifecycle:lifecycle-runtime:jar:@2.11.0",
+  "androidx.startup:startup-runtime:aar:@1.2.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.lifecycle:lifecycle-runtime-android:aar:"
+version  = "2.11.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:8711865f8d3603bc05decc03bb42aab2faa8d8bc55b3b12a0a8e516b562b60ca"
+path     = "lifecycle-runtime-android-2.11.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.arch.core:core-common:jar:@2.2.0",
+  "androidx.arch.core:core-runtime:jar:@2.2.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.core:core-viewtree:jar:@1.0.0",
+  "androidx.lifecycle:lifecycle-common-jvm:jar:@2.11.0",
+  "androidx.profileinstaller:profileinstaller:aar:@1.4.1",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "androidx.lifecycle:lifecycle-runtime-android:aar:"
+version  = "2.11.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:8711865f8d3603bc05decc03bb42aab2faa8d8bc55b3b12a0a8e516b562b60ca"
+path     = "lifecycle-runtime-android-2.11.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.arch.core:core-common:jar:@2.2.0",
+  "androidx.arch.core:core-runtime:jar:@2.2.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.core:core-viewtree:jar:@1.0.0",
+  "androidx.lifecycle:lifecycle-common-jvm:jar:@2.11.0",
+  "androidx.profileinstaller:profileinstaller:aar:@1.4.1",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "androidx.lifecycle:lifecycle-runtime-compose-android:aar:"
+version  = "2.11.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:7b31489e6e162143c481f14e1ae5a4dc089f8ec58e65976a0502b910c641987f"
+path     = "lifecycle-runtime-compose-android-2.11.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.lifecycle:lifecycle-runtime-android:aar:@2.11.0",
+  "androidx.lifecycle:lifecycle-runtime-ktx-android:aar:@2.11.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.lifecycle:lifecycle-runtime-compose-android:aar:"
+version  = "2.11.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:7b31489e6e162143c481f14e1ae5a4dc089f8ec58e65976a0502b910c641987f"
+path     = "lifecycle-runtime-compose-android-2.11.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.lifecycle:lifecycle-runtime-android:aar:@2.11.0",
+  "androidx.lifecycle:lifecycle-runtime-ktx-android:aar:@2.11.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.lifecycle:lifecycle-runtime-compose:jar:"
+version  = "2.11.0"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.compose.runtime:runtime:jar:@1.12.0-rc01",
+  "androidx.lifecycle:lifecycle-runtime-compose-android:jar:@2.11.0",
+  "androidx.lifecycle:lifecycle-runtime:jar:@2.11.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.lifecycle:lifecycle-runtime-ktx-android:aar:"
+version  = "2.11.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:1fead96607f8b4ebd2bc5840c6fcf08b09fc47ceb1665e4b381dce80b19f32a0"
+path     = "lifecycle-runtime-ktx-android-2.11.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.lifecycle:lifecycle-runtime-android:aar:@2.11.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "androidx.lifecycle:lifecycle-runtime-ktx-android:aar:"
+version  = "2.11.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:1fead96607f8b4ebd2bc5840c6fcf08b09fc47ceb1665e4b381dce80b19f32a0"
+path     = "lifecycle-runtime-ktx-android-2.11.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.lifecycle:lifecycle-runtime-android:aar:@2.11.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "androidx.lifecycle:lifecycle-runtime-ktx:jar:"
+version  = "2.11.0"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.lifecycle:lifecycle-runtime-ktx-android:jar:@2.11.0",
+  "androidx.lifecycle:lifecycle-runtime:jar:@2.11.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.lifecycle:lifecycle-runtime:jar:"
+version  = "2.11.0"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.arch.core:core-common:jar:@2.2.0",
+  "androidx.collection:collection:jar:@1.6.0",
+  "androidx.lifecycle:lifecycle-common:jar:@2.11.0",
+  "androidx.lifecycle:lifecycle-runtime-android:jar:@2.11.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.lifecycle:lifecycle-service:aar:"
+version  = "2.11.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:262c24e5218c19610c12a07465cf34e2e45b9cf63eb10471013f6ba01ff18522"
+path     = "lifecycle-service-2.11.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.lifecycle:lifecycle-runtime:jar:@2.11.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.lifecycle:lifecycle-viewmodel-android:aar:"
+version  = "2.11.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:509aa5c0711e61a1571024b4f8431dc9aa20960d23cbadb01f21a33fd864352a"
+path     = "lifecycle-viewmodel-android-2.11.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.core:core-viewtree:jar:@1.0.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "androidx.lifecycle:lifecycle-viewmodel-android:aar:"
+version  = "2.11.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:509aa5c0711e61a1571024b4f8431dc9aa20960d23cbadb01f21a33fd864352a"
+path     = "lifecycle-viewmodel-android-2.11.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.core:core-viewtree:jar:@1.0.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "androidx.lifecycle:lifecycle-viewmodel-compose-android:aar:"
+version  = "2.11.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:2bafd402807bd4af05c06cf58c48cbdad09521e2145273faae90908b7712f689"
+path     = "lifecycle-viewmodel-compose-android-2.11.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime-saveable-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-android:aar:@1.12.0-rc01",
+  "androidx.lifecycle:lifecycle-common-jvm:jar:@2.11.0",
+  "androidx.lifecycle:lifecycle-runtime-compose-android:aar:@2.11.0",
+  "androidx.lifecycle:lifecycle-viewmodel-android:aar:@2.11.0",
+  "androidx.lifecycle:lifecycle-viewmodel-savedstate-android:aar:@2.11.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:@1.11.0",
+]
+
+[[artifact]]
+name     = "androidx.lifecycle:lifecycle-viewmodel-compose-android:aar:"
+version  = "2.11.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:2bafd402807bd4af05c06cf58c48cbdad09521e2145273faae90908b7712f689"
+path     = "lifecycle-viewmodel-compose-android-2.11.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime-saveable-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-android:aar:@1.12.0-rc01",
+  "androidx.lifecycle:lifecycle-common-jvm:jar:@2.11.0",
+  "androidx.lifecycle:lifecycle-runtime-compose-android:aar:@2.11.0",
+  "androidx.lifecycle:lifecycle-viewmodel-android:aar:@2.11.0",
+  "androidx.lifecycle:lifecycle-viewmodel-savedstate-android:aar:@2.11.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:@1.11.0",
+]
+
+[[artifact]]
+name     = "androidx.lifecycle:lifecycle-viewmodel-compose:jar:"
+version  = "2.11.0"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.compose.runtime:runtime-saveable:jar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime:jar:@1.12.0-rc01",
+  "androidx.lifecycle:lifecycle-common:jar:@2.11.0",
+  "androidx.lifecycle:lifecycle-runtime-compose:jar:@2.11.0",
+  "androidx.lifecycle:lifecycle-viewmodel-compose-android:jar:@2.11.0",
+  "androidx.lifecycle:lifecycle-viewmodel-savedstate:jar:@2.11.0",
+  "androidx.lifecycle:lifecycle-viewmodel:jar:@2.11.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-serialization-core:jar:@1.11.0",
+]
+
+[[artifact]]
+name     = "androidx.lifecycle:lifecycle-viewmodel-ktx:aar:"
+version  = "2.11.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:230af6c866076d320d92c22c7c44bb52afca97f6892ddf987e2906ef2919998f"
+path     = "lifecycle-viewmodel-ktx-2.11.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.lifecycle:lifecycle-viewmodel:jar:@2.11.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "androidx.lifecycle:lifecycle-viewmodel-navigation3-android:aar:"
+version  = "2.11.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:07889cc98a311023c49cff1feabb23adadcf72121e327e7b9431f1d4831a5ab9"
+path     = "lifecycle-viewmodel-navigation3-android-2.11.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.activity:activity-compose:jar:@1.13.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime-saveable-android:aar:@1.12.0-rc01",
+  "androidx.lifecycle:lifecycle-viewmodel-android:aar:@2.11.0",
+  "androidx.lifecycle:lifecycle-viewmodel-compose-android:aar:@2.11.0",
+  "androidx.lifecycle:lifecycle-viewmodel-savedstate-android:aar:@2.11.0",
+  "androidx.navigation3:navigation3-runtime-android:aar:@1.0.1",
+  "androidx.savedstate:savedstate-android:aar:@1.4.0",
+  "androidx.savedstate:savedstate-compose-android:aar:@1.4.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.lifecycle:lifecycle-viewmodel-navigation3:jar:"
+version  = "2.11.0"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "androidx.collection:collection:jar:@1.6.0",
+  "androidx.compose.runtime:runtime-saveable:jar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime:jar:@1.12.0-rc01",
+  "androidx.lifecycle:lifecycle-viewmodel-compose:jar:@2.11.0",
+  "androidx.lifecycle:lifecycle-viewmodel-navigation3-android:jar:@2.11.0",
+  "androidx.lifecycle:lifecycle-viewmodel-savedstate:jar:@2.11.0",
+  "androidx.lifecycle:lifecycle-viewmodel:jar:@2.11.0",
+  "androidx.navigation3:navigation3-runtime:jar:@1.0.1",
+  "androidx.savedstate:savedstate-compose:jar:@1.4.0",
+  "androidx.savedstate:savedstate:jar:@1.4.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.lifecycle:lifecycle-viewmodel-savedstate-android:aar:"
+version  = "2.11.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:1761707c1ddee002bd97e1a0889a5016f7cd6bd8e0b6b069bcba8b2523d63723"
+path     = "lifecycle-viewmodel-savedstate-android-2.11.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.core:core-ktx:jar:@1.16.0",
+  "androidx.lifecycle:lifecycle-common-jvm:jar:@2.11.0",
+  "androidx.lifecycle:lifecycle-livedata-core:aar:@2.11.0",
+  "androidx.lifecycle:lifecycle-viewmodel-android:aar:@2.11.0",
+  "androidx.savedstate:savedstate-android:aar:@1.4.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+  "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:@1.11.0",
+]
+
+[[artifact]]
+name     = "androidx.lifecycle:lifecycle-viewmodel-savedstate-android:aar:"
+version  = "2.11.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:1761707c1ddee002bd97e1a0889a5016f7cd6bd8e0b6b069bcba8b2523d63723"
+path     = "lifecycle-viewmodel-savedstate-android-2.11.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.core:core-ktx:jar:@1.16.0",
+  "androidx.lifecycle:lifecycle-common-jvm:jar:@2.11.0",
+  "androidx.lifecycle:lifecycle-livedata-core:aar:@2.11.0",
+  "androidx.lifecycle:lifecycle-viewmodel-android:aar:@2.11.0",
+  "androidx.savedstate:savedstate-android:aar:@1.4.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+  "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:@1.11.0",
+]
+
+[[artifact]]
+name     = "androidx.lifecycle:lifecycle-viewmodel-savedstate:aar:"
+version  = "2.11.0"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.collection:collection:jar:@1.6.0",
+  "androidx.lifecycle:lifecycle-common:jar:@2.11.0",
+  "androidx.lifecycle:lifecycle-viewmodel-savedstate-android:jar:@2.11.0",
+  "androidx.lifecycle:lifecycle-viewmodel:jar:@2.11.0",
+  "androidx.savedstate:savedstate:jar:@1.4.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+  "org.jetbrains.kotlinx:kotlinx-serialization-core:jar:@1.11.0",
+]
+
+[[artifact]]
+name     = "androidx.lifecycle:lifecycle-viewmodel-savedstate:jar:"
+version  = "2.11.0"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.collection:collection:jar:@1.6.0",
+  "androidx.lifecycle:lifecycle-common:jar:@2.11.0",
+  "androidx.lifecycle:lifecycle-viewmodel-savedstate-android:jar:@2.11.0",
+  "androidx.lifecycle:lifecycle-viewmodel:jar:@2.11.0",
+  "androidx.savedstate:savedstate:jar:@1.4.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+  "org.jetbrains.kotlinx:kotlinx-serialization-core:jar:@1.11.0",
+]
+
+[[artifact]]
+name     = "androidx.lifecycle:lifecycle-viewmodel:jar:"
+version  = "2.11.0"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.collection:collection:jar:@1.6.0",
+  "androidx.lifecycle:lifecycle-viewmodel-android:jar:@2.11.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:atomicfu:jar:@0.33.0",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "androidx.loader:loader:aar:"
+version  = "1.2.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:ca2108312a5b4d318b9ec4ea22aea0ec53c77f098057d0c0bbf73dae8b309e02"
+path     = "loader-1.2.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.collection:collection:jar:@1.6.0",
+  "androidx.core:core:aar:@1.19.0",
+  "androidx.lifecycle:lifecycle-livedata-core:aar:@2.11.0",
+  "androidx.lifecycle:lifecycle-viewmodel-ktx:aar:@2.11.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "androidx.metrics:metrics-performance:aar:"
+version  = "1.0.0-beta01"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:bebce4e8ed6922fac3dd840f439d3fd7d4de1e6ef93a2477ad75927dc1986e61"
+path     = "metrics-performance-1.0.0-beta01.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.collection:collection:jar:@1.6.0",
+  "androidx.core:core:aar:@1.19.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.navigation3:navigation3-runtime-android:aar:"
+version  = "1.0.1"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:0a9963328acbde74dd8695534faed2df3a72b69a9ff74c7a7b0a33c4333d4716"
+path     = "navigation3-runtime-android-1.0.1.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime-saveable-android:aar:@1.12.0-rc01",
+  "androidx.lifecycle:lifecycle-runtime-android:aar:@2.11.0",
+  "androidx.navigationevent:navigationevent-android:aar:@1.1.2",
+  "androidx.savedstate:savedstate-android:aar:@1.4.0",
+  "androidx.savedstate:savedstate-compose-android:aar:@1.4.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:@1.11.0",
+]
+
+[[artifact]]
+name     = "androidx.navigation3:navigation3-runtime-android:aar:"
+version  = "1.0.1"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:0a9963328acbde74dd8695534faed2df3a72b69a9ff74c7a7b0a33c4333d4716"
+path     = "navigation3-runtime-android-1.0.1.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime-saveable-android:aar:@1.12.0-rc01",
+  "androidx.lifecycle:lifecycle-runtime-android:aar:@2.11.0",
+  "androidx.navigationevent:navigationevent-android:aar:@1.1.2",
+  "androidx.savedstate:savedstate-android:aar:@1.4.0",
+  "androidx.savedstate:savedstate-compose-android:aar:@1.4.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:@1.11.0",
+]
+
+[[artifact]]
+name     = "androidx.navigation3:navigation3-runtime:jar:"
+version  = "1.0.1"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "androidx.collection:collection:jar:@1.6.0",
+  "androidx.compose.runtime:runtime-saveable:jar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime:jar:@1.12.0-rc01",
+  "androidx.lifecycle:lifecycle-runtime:jar:@2.11.0",
+  "androidx.navigation3:navigation3-runtime-android:jar:@1.0.1",
+  "androidx.navigationevent:navigationevent:jar:@1.1.2",
+  "androidx.savedstate:savedstate-compose:jar:@1.4.0",
+  "androidx.savedstate:savedstate:jar:@1.4.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-serialization-core:jar:@1.11.0",
+]
+
+[[artifact]]
+name     = "androidx.navigation3:navigation3-ui-android:aar:"
+version  = "1.0.1"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:55f3b7e93532d2f17ec490d3b3f284a230b3e450c03f6bc219856fd972d7d26e"
+path     = "navigation3-ui-android-1.0.1.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.activity:activity-compose:aar:@1.13.0",
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.compose.animation:animation-android:aar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime-saveable-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-android:aar:@1.12.0-rc01",
+  "androidx.lifecycle:lifecycle-runtime-android:aar:@2.11.0",
+  "androidx.lifecycle:lifecycle-runtime-compose-android:aar:@2.11.0",
+  "androidx.navigation3:navigation3-runtime-android:aar:@1.0.1",
+  "androidx.navigationevent:navigationevent-compose-android:aar:@1.1.2",
+  "androidx.savedstate:savedstate-android:aar:@1.4.0",
+  "androidx.savedstate:savedstate-compose-android:aar:@1.4.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.navigation3:navigation3-ui-android:aar:"
+version  = "1.0.1"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:55f3b7e93532d2f17ec490d3b3f284a230b3e450c03f6bc219856fd972d7d26e"
+path     = "navigation3-ui-android-1.0.1.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.activity:activity-compose:aar:@1.13.0",
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.compose.animation:animation-android:aar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime-saveable-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-android:aar:@1.12.0-rc01",
+  "androidx.lifecycle:lifecycle-runtime-android:aar:@2.11.0",
+  "androidx.lifecycle:lifecycle-runtime-compose-android:aar:@2.11.0",
+  "androidx.navigation3:navigation3-runtime-android:aar:@1.0.1",
+  "androidx.navigationevent:navigationevent-compose-android:aar:@1.1.2",
+  "androidx.savedstate:savedstate-android:aar:@1.4.0",
+  "androidx.savedstate:savedstate-compose-android:aar:@1.4.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.navigation3:navigation3-ui:jar:"
+version  = "1.0.1"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "androidx.compose.animation:animation:jar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime-saveable:jar:@1.12.0-rc01",
+  "androidx.compose.runtime:runtime:jar:@1.12.0-rc01",
+  "androidx.compose.ui:ui:jar:@1.12.0-rc01",
+  "androidx.navigation3:navigation3-runtime:jar:@1.0.1",
+  "androidx.navigation3:navigation3-ui-android:jar:@1.0.1",
+  "androidx.navigationevent:navigationevent-compose:jar:@1.1.2",
+  "androidx.savedstate:savedstate-compose:jar:@1.4.0",
+  "androidx.savedstate:savedstate:jar:@1.4.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.navigationevent:navigationevent-android:aar:"
+version  = "1.1.2"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:40a357103ab703762bf434f424a8486be18652b4aa25110f0d635a4cef5dcd63"
+path     = "navigationevent-android-1.1.2.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.compose.runtime:runtime-annotation-android:aar:@1.12.0-rc01",
+  "androidx.core:core-viewtree:aar:@1.0.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "androidx.navigationevent:navigationevent-android:aar:"
+version  = "1.1.2"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:40a357103ab703762bf434f424a8486be18652b4aa25110f0d635a4cef5dcd63"
+path     = "navigationevent-android-1.1.2.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.compose.runtime:runtime-annotation-android:aar:@1.12.0-rc01",
+  "androidx.core:core-viewtree:aar:@1.0.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "androidx.navigationevent:navigationevent-compose-android:aar:"
+version  = "1.1.2"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:ac9773dc9076d3b035ccf5494316d78a5f9abc18a8fa73fb211f92957286e1aa"
+path     = "navigationevent-compose-android-1.1.2.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-android:aar:@1.12.0-rc01",
+  "androidx.navigationevent:navigationevent-android:aar:@1.1.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "androidx.navigationevent:navigationevent-compose-android:aar:"
+version  = "1.1.2"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:ac9773dc9076d3b035ccf5494316d78a5f9abc18a8fa73fb211f92957286e1aa"
+path     = "navigationevent-compose-android-1.1.2.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.compose.ui:ui-android:aar:@1.12.0-rc01",
+  "androidx.navigationevent:navigationevent-android:aar:@1.1.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "androidx.navigationevent:navigationevent-compose:jar:"
+version  = "1.1.2"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "androidx.compose.runtime:runtime:jar:@1.12.0-rc01",
+  "androidx.navigationevent:navigationevent-compose-android:jar:@1.1.2",
+  "androidx.navigationevent:navigationevent:jar:@1.1.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "androidx.navigationevent:navigationevent:jar:"
+version  = "1.1.2"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.collection:collection:jar:@1.6.0",
+  "androidx.compose.runtime:runtime-annotation:jar:@1.12.0-rc01",
+  "androidx.navigationevent:navigationevent-android:jar:@1.1.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:atomicfu:jar:@0.33.0",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "androidx.profileinstaller:profileinstaller:aar:"
+version  = "1.4.1"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:b519f9317ded1e2c1c2993038c0692e30da326ca99097d9331ff2d3a5861a428"
+path     = "profileinstaller-1.4.1.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.concurrent:concurrent-futures:jar:@1.3.0",
+  "androidx.startup:startup-runtime:aar:@1.2.0",
+  "com.google.guava:listenablefuture:jar:@9999.0-empty-to-avoid-conflict-with-guava",
+]
+
+[[artifact]]
+name     = "androidx.profileinstaller:profileinstaller:aar:"
+version  = "1.4.1"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:b519f9317ded1e2c1c2993038c0692e30da326ca99097d9331ff2d3a5861a428"
+path     = "profileinstaller-1.4.1.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.concurrent:concurrent-futures:jar:@1.3.0",
+  "androidx.startup:startup-runtime:aar:@1.2.0",
+  "com.google.guava:listenablefuture:jar:@9999.0-empty-to-avoid-conflict-with-guava",
+]
+
+[[artifact]]
+name     = "androidx.resourceinspection:resourceinspection-annotation:jar:"
+version  = "1.0.1"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:8cff870ec6fb31db48a52f4a792335b4bf8de07e03bd37823181526433ccd5cb"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+]
+
+[[artifact]]
+name     = "androidx.room:room-common-jvm:jar:"
+version  = "2.8.4"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:dc7b4e1a75a790f29c97afd5516b8bf8002d9b6e83e295bc569b33566f3b1ec0"
+scopes   = ["main", "processor"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.room:room-common:jar:"
+version  = "2.8.4"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.room:room-common-jvm:jar:@2.8.4",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.room:room-compiler-processing:jar:"
+version  = "2.8.4"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:a4282eceb6720a712f15cff50747f160a7efe6ac3974e86d514c45e3f416085f"
+scopes   = ["processor"]
+deps = [
+  "com.google.auto.value:auto-value-annotations:jar:@1.11.1",
+  "com.google.auto:auto-common:jar:@1.2.2",
+  "com.google.devtools.ksp:symbol-processing-api:jar:@2.3.11",
+  "com.google.guava:guava:jar:@33.6.0-jre",
+  "com.squareup:javapoet:jar:@1.13.0",
+  "com.squareup:kotlinpoet-javapoet:jar:@2.2.0",
+  "com.squareup:kotlinpoet-jvm:jar:@2.3.0",
+  "org.jetbrains.kotlin:kotlin-metadata-jvm:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "androidx.room:room-compiler:jar:"
+version  = "2.8.4"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:9c253ed45e1b0cbfde8a62ff0bd7a2405fb9099176e0f0f9d11a57135cce95bb"
+scopes   = ["processor"]
+deps = [
+  "androidx.room:room-common-jvm:jar:@2.8.4",
+  "androidx.room:room-compiler-processing:jar:@2.8.4",
+  "androidx.room:room-external-antlr:jar:@2.8.4",
+  "androidx.room:room-migration-jvm:jar:@2.8.4",
+  "com.google.auto.value:auto-value-annotations:jar:@1.11.1",
+  "com.google.auto:auto-common:jar:@1.2.2",
+  "com.google.devtools.ksp:symbol-processing-api:jar:@2.3.11",
+  "com.intellij:annotations:jar:@12.0",
+  "com.squareup:javapoet:jar:@1.13.0",
+  "com.squareup:kotlinpoet-javapoet:jar:@2.2.0",
+  "com.squareup:kotlinpoet-jvm:jar:@2.3.0",
+  "commons-codec:commons-codec:jar:@1.22.1",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.xerial:sqlite-jdbc:jar:@3.53.2.1",
+]
+
+[[artifact]]
+name     = "androidx.room:room-external-antlr:jar:"
+version  = "2.8.4"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:6bf794bffe8de263826502511b4c7df0570312b6cc99312ca7fc6bdb0880ca1e"
+scopes   = ["processor"]
+
+[[artifact]]
+name     = "androidx.room:room-ktx:aar:"
+version  = "2.8.4"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:f604fde53e259759633467c11bd3d8a36cc24d6ddb88894c96cddc5a0cf1f83d"
+path     = "room-ktx-2.8.4.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.room:room-common:jar:@2.8.4",
+  "androidx.room:room-runtime:jar:@2.8.4",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "androidx.room:room-migration-jvm:jar:"
+version  = "2.8.4"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:18e63f4ec289cf3f4545face849c6bbdd33eea9596eebe0b7293d49c00c511e2"
+scopes   = ["processor"]
+deps = [
+  "androidx.room:room-common-jvm:jar:@2.8.4",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:jar:@1.11.0",
+]
+
+[[artifact]]
+name     = "androidx.room:room-runtime-android:aar:"
+version  = "2.8.4"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:3293575082024fa0a92b081c4e2d0609f14b5c109635ec227bc509db141a4e20"
+path     = "room-runtime-android-2.8.4.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-experimental:aar:@1.6.0",
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.arch.core:core-runtime:jar:@2.2.0",
+  "androidx.collection:collection-jvm:jar:@1.6.0",
+  "androidx.room:room-common-jvm:jar:@2.8.4",
+  "androidx.sqlite:sqlite-android:aar:@2.7.0",
+  "androidx.sqlite:sqlite-framework-android:aar:@2.7.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "androidx.room:room-runtime:jar:"
+version  = "2.8.4"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.collection:collection:jar:@1.6.0",
+  "androidx.room:room-common:jar:@2.8.4",
+  "androidx.room:room-runtime-android:jar:@2.8.4",
+  "androidx.sqlite:sqlite-framework:jar:@2.7.0",
+  "androidx.sqlite:sqlite:jar:@2.7.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:atomicfu:jar:@0.33.0",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "androidx.savedstate:savedstate-android:aar:"
+version  = "1.4.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:1656ce62cd233d488bdbbd42e533b80b22435b7a690acae6dbe7302392512c14"
+path     = "savedstate-android-1.4.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.core:core-ktx:aar:@1.19.0",
+  "androidx.core:core-viewtree:aar:@1.0.0",
+  "androidx.lifecycle:lifecycle-common-jvm:jar:@2.11.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+  "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:@1.11.0",
+]
+
+[[artifact]]
+name     = "androidx.savedstate:savedstate-android:aar:"
+version  = "1.4.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:1656ce62cd233d488bdbbd42e533b80b22435b7a690acae6dbe7302392512c14"
+path     = "savedstate-android-1.4.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.core:core-ktx:aar:@1.19.0",
+  "androidx.core:core-viewtree:aar:@1.0.0",
+  "androidx.lifecycle:lifecycle-common-jvm:jar:@2.11.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+  "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:@1.11.0",
+]
+
+[[artifact]]
+name     = "androidx.savedstate:savedstate-compose-android:aar:"
+version  = "1.4.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:0f0ae3032d6c6eea834ee22179c8976160d09d841d30e47f53f56b1b3438774b"
+path     = "savedstate-compose-android-1.4.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.core:core-ktx:aar:@1.19.0",
+  "androidx.savedstate:savedstate-android:aar:@1.4.0",
+]
+
+[[artifact]]
+name     = "androidx.savedstate:savedstate-compose-android:aar:"
+version  = "1.4.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:0f0ae3032d6c6eea834ee22179c8976160d09d841d30e47f53f56b1b3438774b"
+path     = "savedstate-compose-android-1.4.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
+  "androidx.core:core-ktx:aar:@1.19.0",
+  "androidx.savedstate:savedstate-android:aar:@1.4.0",
+]
+
+[[artifact]]
+name     = "androidx.savedstate:savedstate-compose:jar:"
+version  = "1.4.0"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "androidx.compose.runtime:runtime:jar:@1.12.0-rc01",
+  "androidx.savedstate:savedstate-compose-android:jar:@1.4.0",
+  "androidx.savedstate:savedstate:jar:@1.4.0",
+]
+
+[[artifact]]
+name     = "androidx.savedstate:savedstate-ktx:aar:"
+version  = "1.4.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:23593939446bc5a154a1e35fddd87b82f19e2adf072207f115bf29a8b431c1d3"
+path     = "savedstate-ktx-1.4.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.savedstate:savedstate:jar:@1.4.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.savedstate:savedstate:jar:"
+version  = "1.4.0"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.lifecycle:lifecycle-common:jar:@2.11.0",
+  "androidx.savedstate:savedstate-android:jar:@1.4.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
+  "org.jetbrains.kotlinx:kotlinx-serialization-core:jar:@1.11.0",
+]
+
+[[artifact]]
+name     = "androidx.sqlite:sqlite-android:aar:"
+version  = "2.7.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:61694731fb7108d40e2b9ffbb72af21f8b3de33b4af304130cc62f42fa5e001d"
+path     = "sqlite-android-2.7.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.sqlite:sqlite-android:aar:"
+version  = "2.7.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:61694731fb7108d40e2b9ffbb72af21f8b3de33b4af304130cc62f42fa5e001d"
+path     = "sqlite-android-2.7.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.sqlite:sqlite-framework-android:aar:"
+version  = "2.7.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:1e74396eea06ce66f234da8ae3702ac813d5524464250857c1435927c1a63dc6"
+path     = "sqlite-framework-android-2.7.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.sqlite:sqlite-android:aar:@2.7.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.sqlite:sqlite-framework-android:aar:"
+version  = "2.7.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:1e74396eea06ce66f234da8ae3702ac813d5524464250857c1435927c1a63dc6"
+path     = "sqlite-framework-android-2.7.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.sqlite:sqlite-android:aar:@2.7.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.sqlite:sqlite-framework:jar:"
+version  = "2.7.0"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.sqlite:sqlite-framework-android:jar:@2.7.0",
+  "androidx.sqlite:sqlite:jar:@2.7.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.sqlite:sqlite:jar:"
+version  = "2.7.0"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.sqlite:sqlite-android:jar:@2.7.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.startup:startup-runtime:aar:"
+version  = "1.2.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:f51d361d17b30b09cfb9e2aebf301d113f99437cbf462a066092795fb60eddd2"
+path     = "startup-runtime-1.2.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.tracing:tracing:aar:@1.3.0",
+]
+
+[[artifact]]
+name     = "androidx.tracing:tracing-android:aar:"
+version  = "1.3.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:f59782bbe3470a6b0c531cef262dd1fc9d9a0233490bb5e6d553e1fe6a1816b2"
+path     = "tracing-android-1.3.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.tracing:tracing-ktx:aar:"
+version  = "1.3.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:7df502d572295cf23c6da4a38b3f199a4794dfcd947780cd36110eea407a0a4d"
+path     = "tracing-ktx-1.3.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.tracing:tracing:jar:@1.3.0",
+]
+
+[[artifact]]
+name     = "androidx.tracing:tracing-ktx:aar:"
+version  = "1.3.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:7df502d572295cf23c6da4a38b3f199a4794dfcd947780cd36110eea407a0a4d"
+path     = "tracing-ktx-1.3.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.tracing:tracing:jar:@1.3.0",
+]
+
+[[artifact]]
+name     = "androidx.tracing:tracing:aar:"
+version  = "1.3.0"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "androidx.tracing:tracing-android:jar:@1.3.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.tracing:tracing:jar:"
+version  = "1.3.0"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "androidx.tracing:tracing-android:jar:@1.3.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.vectordrawable:vectordrawable-animated:aar:"
+version  = "1.2.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:a070bdd04222a040794e5e9fa4b778d575f7b8f4e84d06d9a38ec4d599770a69"
+path     = "vectordrawable-animated-1.2.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.collection:collection:jar:@1.6.0",
+  "androidx.core:core:aar:@1.19.0",
+  "androidx.interpolator:interpolator:aar:@1.0.0",
+  "androidx.vectordrawable:vectordrawable:aar:@1.2.0",
+]
+
+[[artifact]]
+name     = "androidx.vectordrawable:vectordrawable:aar:"
+version  = "1.2.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:4f44b94817ad266ed8641b0b8fab4e6d038902a62840bb6528473222e1cdcfc9"
+path     = "vectordrawable-1.2.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.collection:collection:jar:@1.6.0",
+  "androidx.core:core:aar:@1.19.0",
+]
+
+[[artifact]]
+name     = "androidx.versionedparcelable:versionedparcelable:aar:"
+version  = "1.2.1"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:ed7224932d08144446ec8b58c56be83e04c23a0becd4f3f4d40084baab6c7b53"
+path     = "versionedparcelable-1.2.1.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.collection:collection:jar:@1.6.0",
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "androidx.viewpager:viewpager:aar:"
+version  = "1.1.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:809f12e2cc3cdd4f9537bcae1824d5617a747b43a73d56f6e8f80a9873520807"
+path     = "viewpager-1.1.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.core:core:aar:@1.19.0",
+  "androidx.customview:customview:aar:@1.2.0",
+]
+
+[[artifact]]
+name     = "androidx.window:window-core-android:aar:"
+version  = "1.5.1"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:b289ce85090f1f976569fa92bbac84011f54ba1b21f0ce883655b34c8f9f9eea"
+path     = "window-core-android-1.5.1.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.window:window-core-android:aar:"
+version  = "1.5.1"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:b289ce85090f1f976569fa92bbac84011f54ba1b21f0ce883655b34c8f9f9eea"
+path     = "window-core-android-1.5.1.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.window:window-core:jar:"
+version  = "1.5.1"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.window:window-core-android:jar:@1.5.1",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "androidx.window:window:aar:"
+version  = "1.5.1"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:3c3061966f012fc22f2e99701f683e82e732435ae2f2a1d5b2f99d82bb7b8864"
+path     = "window-1.5.1.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.collection:collection:jar:@1.6.0",
+  "androidx.core:core:aar:@1.19.0",
+  "androidx.window:window-core:jar:@1.5.1",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "androidx.work:work-runtime-ktx:aar:"
+version  = "2.11.2"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:1f4908483508d780d19ddb6ff345c75672327388499d7ddbb7dd0dd6b588a753"
+path     = "work-runtime-ktx-2.11.2.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.work:work-runtime:aar:@2.11.2",
+]
+
+[[artifact]]
+name     = "androidx.work:work-runtime:aar:"
+version  = "2.11.2"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:7ed55d308f72d274bad72b224d568f70ae82b968de40aea31465688fb5c08d5c"
+path     = "work-runtime-2.11.2.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-experimental:aar:@1.6.0",
+  "androidx.concurrent:concurrent-futures-ktx:jar:@1.3.0",
+  "androidx.core:core:aar:@1.19.0",
+  "androidx.lifecycle:lifecycle-livedata:aar:@2.11.0",
+  "androidx.lifecycle:lifecycle-service:aar:@2.11.0",
+  "androidx.room:room-runtime:jar:@2.8.4",
+  "androidx.startup:startup-runtime:aar:@1.2.0",
+  "androidx.tracing:tracing-ktx:aar:@1.3.0",
+  "com.google.guava:listenablefuture:jar:@9999.0-empty-to-avoid-conflict-with-guava",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "com.caverock:androidsvg-aar:aar:"
+version  = "1.4"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:02a5b08a2b35d2d58eb2eaca9d84ac00fb341da725fdbd653ea3ed130437e95a"
+path     = "androidsvg-aar-1.4.aar"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "com.google.accompanist:accompanist-drawablepainter:aar:"
+version  = "0.37.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:0453c4c54ec3ef13ae18b83300f1d2a078b1ca92d3a3781437516630e3b850df"
+path     = "accompanist-drawablepainter-0.37.3.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.compose.ui:ui:jar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "com.google.accompanist:accompanist-permissions:aar:"
+version  = "0.37.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:59dd56659a4f59d40cb4f4520a4560fc22b31d2efa74d853c14c24a5b8232d17"
+path     = "accompanist-permissions-0.37.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.activity:activity-compose:jar:@1.13.0",
+  "androidx.compose.foundation:foundation:jar:@1.12.0-rc01",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "com.google.android.gms:play-services-base:aar:"
+version  = "18.10.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:4f5be791c644fde538a2bfc64c8611c926aed575fef5db0d3fb39c05cc6fa8ec"
+path     = "play-services-base-18.10.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.collection:collection:jar:@1.6.0",
+  "androidx.core:core:aar:@1.19.0",
+  "androidx.fragment:fragment:aar:@1.8.9",
+  "com.google.android.gms:play-services-basement:aar:@18.10.0",
+  "com.google.android.gms:play-services-tasks:aar:@18.4.1",
+]
+
+[[artifact]]
+name     = "com.google.android.gms:play-services-basement:aar:"
+version  = "18.10.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:859963500c141053043e6b02ff3065609184078d8c72799f4d162058be52fff8"
+path     = "play-services-basement-18.10.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.collection:collection:jar:@1.6.0",
+  "androidx.core:core:aar:@1.19.0",
+  "androidx.fragment:fragment:aar:@1.8.9",
+]
+
+[[artifact]]
+name     = "com.google.android.gms:play-services-oss-licenses:aar:"
+version  = "17.1.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:39a455bcb4f2fe6647116e54e4e2889dbb64efa9ba5a50231184c3ac1bb617bd"
+path     = "play-services-oss-licenses-17.1.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.loader:loader:aar:@1.2.0",
+  "com.google.android.gms:play-services-base:aar:@18.10.0",
+  "com.google.android.gms:play-services-basement:aar:@18.10.0",
+  "com.google.android.gms:play-services-tasks:aar:@18.4.1",
+]
+
+[[artifact]]
+name     = "com.google.android.gms:play-services-tasks:aar:"
+version  = "18.4.1"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:e8e3a012e50209f80ce2d988ad3b31927d20fee155d0b6538859bc0d903673d2"
+path     = "play-services-tasks-18.4.1.aar"
+scopes   = ["main"]
+deps = [
+  "com.google.android.gms:play-services-basement:aar:@18.10.0",
+]
+
+[[artifact]]
+name     = "com.google.auto.value:auto-value-annotations:jar:"
+version  = "1.11.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:6c61a11420a5cddf3313888e9d335d5eedfbeb9a8da26591470fbfe61f5bf859"
+scopes   = ["processor"]
+
+[[artifact]]
+name     = "com.google.auto:auto-common:jar:"
+version  = "1.2.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:f50b1ce8a41fad31a8a819c052f8ffa362ea0a3dbe9ef8f7c7dc9a36d4738a59"
+scopes   = ["processor"]
+deps = [
+  "com.google.guava:guava:jar:@33.6.0-jre",
+]
+
+[[artifact]]
+name     = "com.google.code.findbugs:jsr305:jar:"
+version  = "3.0.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:766ad2a0783f2687962c8ad74ceecc38a28b9f72a2d085ee438b7813e928d0c7"
+scopes   = ["main", "processor"]
+
+[[artifact]]
+name     = "com.google.dagger:dagger-compiler:jar:"
+version  = "2.60.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:5894b1d5acfbfd11a9ef4cbbe3471a6697d50549b967576e123bd9cd397575a6"
+scopes   = ["processor"]
+deps = [
+  "com.google.code.findbugs:jsr305:jar:@3.0.2",
+  "com.google.dagger:dagger-spi:jar:@2.60.1",
+  "com.google.dagger:dagger:jar:@2.60.1",
+  "com.google.devtools.ksp:symbol-processing-api:jar:@2.3.11",
+  "com.google.googlejavaformat:google-java-format:jar:@1.36.1",
+  "com.google.guava:failureaccess:jar:@1.0.3",
+  "com.google.guava:guava:jar:@33.6.0-jre",
+  "com.squareup:javapoet:jar:@1.13.0",
+  "com.squareup:kotlinpoet:jar:@2.3.0",
+  "javax.inject:javax.inject:jar:@1",
+  "net.ltgt.gradle.incap:incap:jar:@1.0.0",
+  "org.checkerframework:checker-compat-qual:jar:@2.5.6",
+  "org.jetbrains.kotlin:kotlin-metadata-jvm:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "com.google.dagger:dagger-lint-aar:aar:"
+version  = "2.60.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:353d67061603769702b0e53175af1bf62ca58596c9fb1bfbf13ea9fbda76caba"
+path     = "dagger-lint-aar-2.60.1.aar"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "com.google.dagger:dagger-spi:jar:"
+version  = "2.60.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:a101f27e6c6348fbb3198778970624b3ba2214ecc738b2146c7a1244cb42c417"
+scopes   = ["processor"]
+deps = [
+  "com.google.code.findbugs:jsr305:jar:@3.0.2",
+  "com.google.dagger:dagger:jar:@2.60.1",
+  "com.google.devtools.ksp:symbol-processing-api:jar:@2.3.11",
+  "com.google.guava:failureaccess:jar:@1.0.3",
+  "com.google.guava:guava:jar:@33.6.0-jre",
+  "com.squareup:javapoet:jar:@1.13.0",
+  "javax.inject:javax.inject:jar:@1",
+]
+
+[[artifact]]
+name     = "com.google.dagger:dagger:jar:"
+version  = "2.60.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b012d0df527b51bfcd8953d5fcb4d022a45ebe66010d6f181ede68d1572b5cb2"
+scopes   = ["main", "processor"]
+deps = [
+  "jakarta.inject:jakarta.inject-api:jar:@2.0.1.MR",
+  "javax.inject:javax.inject:jar:@1",
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "com.google.dagger:hilt-android-compiler:jar:"
+version  = "2.60.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:59652c8b93ca835240a2b707211df036fb3bca80b12a8ecd1caa7762a0c8f93c"
+scopes   = ["processor"]
+deps = [
+  "com.google.code.findbugs:jsr305:jar:@3.0.2",
+  "com.google.dagger:dagger-compiler:jar:@2.60.1",
+  "com.google.dagger:dagger-spi:jar:@2.60.1",
+  "com.google.dagger:dagger:jar:@2.60.1",
+  "com.google.devtools.ksp:symbol-processing-api:jar:@2.3.11",
+  "com.google.guava:failureaccess:jar:@1.0.3",
+  "com.google.guava:guava:jar:@33.6.0-jre",
+  "com.squareup:javapoet:jar:@1.13.0",
+  "javax.inject:javax.inject:jar:@1",
+  "net.ltgt.gradle.incap:incap:jar:@1.0.0",
+  "org.jetbrains.kotlin:kotlin-metadata-jvm:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "com.google.dagger:hilt-android:aar:"
+version  = "2.60.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:2f56128cb843697a683bacd697c1bb18e93c9f87be835922ad1c192c1786f177"
+path     = "hilt-android-2.60.1.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.activity:activity:jar:@1.13.0",
+  "androidx.annotation:annotation-experimental:jar:@1.6.0",
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.fragment:fragment:jar:@1.8.9",
+  "androidx.lifecycle:lifecycle-common:jar:@2.11.0",
+  "androidx.lifecycle:lifecycle-viewmodel-savedstate:jar:@2.11.0",
+  "androidx.lifecycle:lifecycle-viewmodel:jar:@2.11.0",
+  "androidx.savedstate:savedstate:jar:@1.4.0",
+  "com.google.code.findbugs:jsr305:jar:@3.0.2",
+  "com.google.dagger:dagger-lint-aar:jar:@2.60.1",
+  "com.google.dagger:dagger:jar:@2.60.1",
+  "com.google.dagger:hilt-core:jar:@2.60.1",
+  "javax.inject:javax.inject:jar:@1",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "com.google.dagger:hilt-core:jar:"
+version  = "2.60.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:a1be36be762a86450e2a9dca97a8554a3252caaf236fdd9bf9fca7636926d2c6"
+scopes   = ["main"]
+deps = [
+  "com.google.code.findbugs:jsr305:jar:@3.0.2",
+  "com.google.dagger:dagger:jar:@2.60.1",
+  "jakarta.inject:jakarta.inject-api:jar:@2.0.1.MR",
+  "javax.inject:javax.inject:jar:@1",
+]
+
+[[artifact]]
+name     = "com.google.devtools.ksp:symbol-processing-api:jar:"
+version  = "2.3.11"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:88819c9243629ee710c992d3efdc146dae31aafbb7d8029ce5d29d4fbd5d2326"
+scopes   = ["processor"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "com.google.errorprone:error_prone_annotations:jar:"
+version  = "2.50.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:4667724877f1d37a689202da191e23efa7657c62eef93ccdac406eccfe5cdd0a"
+scopes   = ["main", "processor"]
+
+[[artifact]]
+name     = "com.google.googlejavaformat:google-java-format:jar:"
+version  = "1.36.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:57f9b550a662dcbbdf344073e3f5812b837a0e6e430548d8a0a3c9090cada65d"
+scopes   = ["processor"]
+deps = [
+  "com.google.guava:guava:jar:@33.6.0-jre",
+  "org.commonmark:commonmark-ext-gfm-tables:jar:@0.30.0",
+  "org.commonmark:commonmark:jar:@0.30.0",
+]
+
+[[artifact]]
+name     = "com.google.guava:failureaccess:jar:"
+version  = "1.0.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:cbfc3906b19b8f55dd7cfd6dfe0aa4532e834250d7f080bd8d211a3e246b59cb"
+scopes   = ["main", "processor"]
+
+[[artifact]]
+name     = "com.google.guava:guava:jar:"
+version  = "33.6.0-android"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:9532ca9ba8aceb4cd2067171f981c799988b7f5844e3e274811a3bb757034bc4"
+scopes   = ["main"]
+deps = [
+  "com.google.errorprone:error_prone_annotations:jar:@2.50.0",
+  "com.google.guava:failureaccess:jar:@1.0.3",
+  "com.google.guava:listenablefuture:jar:@9999.0-empty-to-avoid-conflict-with-guava",
+  "com.google.j2objc:j2objc-annotations:jar:@3.1",
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "com.google.guava:guava:jar:"
+version  = "33.6.0-jre"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:dc573e1fca4fd5454f4a5fd3d7da2df03002876a4175bafc14a95980dd7713b3"
+scopes   = ["processor"]
+deps = [
+  "com.google.errorprone:error_prone_annotations:jar:@2.50.0",
+  "com.google.guava:failureaccess:jar:@1.0.3",
+  "com.google.guava:listenablefuture:jar:@9999.0-empty-to-avoid-conflict-with-guava",
+  "com.google.j2objc:j2objc-annotations:jar:@3.1",
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "com.google.guava:listenablefuture:jar:"
+version  = "9999.0-empty-to-avoid-conflict-with-guava"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b372a037d4230aa57fbeffdef30fd6123f9c0c2db85d0aced00c91b974f33f99"
+scopes   = ["main", "processor"]
+
+[[artifact]]
+name     = "com.google.j2objc:j2objc-annotations:jar:"
+version  = "3.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:84d3a150518485f8140ea99b8a985656749629f6433c92b80c75b36aba3b099b"
+scopes   = ["main", "processor"]
+
+[[artifact]]
+name     = "com.google.protobuf:protobuf-javalite:jar:"
+version  = "4.35.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:45d3769189888e491ab7d58125f2014c2a86fb8104c7aa3878c723943fce7a14"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "com.google.protobuf:protobuf-kotlin-lite:jar:"
+version  = "4.29.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:e5974381748f04e06bd9b5c9326e644838e847b685c7e97c03119cb9ae0001e4"
+scopes   = ["main"]
+deps = [
+  "com.google.protobuf:protobuf-javalite:jar:@4.35.1",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "com.intellij:annotations:jar:"
+version  = "12.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:f8ab13b14be080fe2f617f90e55599760e4a1b4deeea5c595df63d0d6375ed6d"
+scopes   = ["processor"]
+
+[[artifact]]
+name     = "com.squareup.okhttp3:logging-interceptor:jar:"
+version  = "4.12.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:f3e8d5f0903c250c2b55d2f47fcfe008e80634385da8385161c7a63aaed0c74c"
+scopes   = ["main"]
+deps = [
+  "com.squareup.okhttp3:okhttp:jar:@5.4.0",
+  "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "com.squareup.okhttp3:okhttp:jar:"
+version  = "5.4.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:aebaab3fe77633befcf69fd0ee3052083999a7eaa98d6f2f7c4b498e7bdbb732"
+scopes   = ["main"]
+deps = [
+  "com.squareup.okio:okio:jar:@3.18.1",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "com.squareup.okio:okio-jvm:jar:"
+version  = "3.18.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b97b640557a650d15411f2be29aef558c4e422a83653cb18ba494311dbed18be"
+scopes   = ["main"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "com.squareup.okio:okio:jar:"
+version  = "3.18.1"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "com.squareup.okio:okio-jvm:jar:@3.18.1",
+]
+
+[[artifact]]
+name     = "com.squareup.retrofit2:converter-kotlinx-serialization:jar:"
+version  = "2.11.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:4853591a285de90dac3b0ac98d3cbb7325dc37afe675b7dd6990431963067256"
+scopes   = ["main"]
+deps = [
+  "com.squareup.retrofit2:retrofit:jar:@2.11.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:@1.11.0",
+]
+
+[[artifact]]
+name     = "com.squareup.retrofit2:retrofit:jar:"
+version  = "2.11.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:9f4fbbce70728584fbeed38d4061f36d4477e89bca74b4e2ac8aeb6819b0fe43"
+scopes   = ["main"]
+deps = [
+  "com.squareup.okhttp3:okhttp:jar:@5.4.0",
+]
+
+[[artifact]]
+name     = "com.squareup:javapoet:jar:"
+version  = "1.13.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:4c7517e848a71b36d069d12bb3bf46a70fd4cda3105d822b0ed2e19c00b69291"
+scopes   = ["processor"]
+
+[[artifact]]
+name     = "com.squareup:kotlinpoet-javapoet:jar:"
+version  = "2.2.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:228dd31de97447209f1cc03d648117fbc4f7c39aa2ffab34f12b474921026fb0"
+scopes   = ["processor"]
+deps = [
+  "com.squareup:javapoet:jar:@1.13.0",
+  "com.squareup:kotlinpoet-jvm:jar:@2.3.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "com.squareup:kotlinpoet-jvm:jar:"
+version  = "2.3.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:696c9ad8c08d9363c63f06d87054c6159de620829b83cd1b9f9d3abfa04257dc"
+scopes   = ["processor"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-reflect:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "com.squareup:kotlinpoet:jar:"
+version  = "2.3.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:e9f5f40873c7a42225f49c3d4d78945fa1b24054e175003f49126ceb3a24c31b"
+scopes   = ["processor"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "commons-codec:commons-codec:jar:"
+version  = "1.22.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:78a5d732fbd715e2d10bd7150d2f8030bae57267f8aacc5c88f642cb6c2e5d3f"
+scopes   = ["processor"]
+
+[[artifact]]
+name     = "io.coil-kt:coil-base:aar:"
+version  = "2.7.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:f45c1e118038266734321f54c3b84ce2d52b491bb00481134724ac33d3d5e2b2"
+path     = "coil-base-2.7.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.appcompat:appcompat-resources:jar:@1.7.1",
+  "androidx.collection:collection:jar:@1.6.0",
+  "androidx.core:core-ktx:jar:@1.16.0",
+  "androidx.exifinterface:exifinterface:jar:@1.4.2",
+  "androidx.lifecycle:lifecycle-runtime:jar:@2.11.0",
+  "androidx.profileinstaller:profileinstaller:jar:@1.4.1",
+  "com.squareup.okhttp3:okhttp:jar:@5.4.0",
+  "com.squareup.okio:okio:jar:@3.18.1",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "io.coil-kt:coil-compose-base:aar:"
+version  = "2.7.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:2885960db57beb8a7d521810386f48b98b2c21c0350bfd9d9e80d812d25b2eb1"
+path     = "coil-compose-base-2.7.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.compose.foundation:foundation:jar:@1.12.0-rc01",
+  "androidx.core:core-ktx:jar:@1.16.0",
+  "com.google.accompanist:accompanist-drawablepainter:jar:@0.37.3",
+  "io.coil-kt:coil-base:jar:@2.7.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "io.coil-kt:coil-compose:aar:"
+version  = "2.7.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:8d2ead07c9c9a08696be52a03e689a4afe57d57610e7bf9f05fd88893ee76935"
+path     = "coil-compose-2.7.0.aar"
+scopes   = ["main"]
+deps = [
+  "io.coil-kt:coil-compose-base:jar:@2.7.0",
+  "io.coil-kt:coil:jar:@2.7.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "io.coil-kt:coil-svg:aar:"
+version  = "2.7.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:6fde8e6b3fd9dd8cc6b9d8e3af4fd3a42c34582562f25e6c600d5fc442279ad3"
+path     = "coil-svg-2.7.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.core:core-ktx:jar:@1.16.0",
+  "com.caverock:androidsvg-aar:jar:@1.4",
+  "io.coil-kt:coil-base:jar:@2.7.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "io.coil-kt:coil:aar:"
+version  = "2.7.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:6e8e46eb813c7290c5ae9954d43f3ffa022c0500096ed4585801a38262b3f851"
+path     = "coil-2.7.0.aar"
+scopes   = ["main"]
+deps = [
+  "io.coil-kt:coil-base:jar:@2.7.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "jakarta.inject:jakarta.inject-api:jar:"
+version  = "2.0.1.MR"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:c6020d26574f3c5eca0a4f28861408d947b663b977450987ec4e265dfaf168a2"
+scopes   = ["main", "processor"]
+
+[[artifact]]
+name     = "javax.inject:javax.inject:jar:"
+version  = "1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:91c77044a50c481636c32d916fd89c9118a72195390452c81065080f957de7ff"
+scopes   = ["main", "processor"]
+
+[[artifact]]
+name     = "net.ltgt.gradle.incap:incap:jar:"
+version  = "1.0.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:cd140bf025c109b8e24e9d8a432714362b8e973bea1bec6ee0c6f43045d10110"
+scopes   = ["processor"]
+
+[[artifact]]
+name     = "org.apiguardian:apiguardian-api:jar:"
+version  = "1.1.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b509448ac506d607319f182537f0b35d71007582ec741832a1f111e5b5b70b38"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "org.checkerframework:checker-compat-qual:jar:"
+version  = "2.5.6"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:11d134b245e9cacc474514d2d66b5b8618f8039a1465cdc55bbc0b34e0008b7a"
+scopes   = ["processor"]
+
+[[artifact]]
+name     = "org.commonmark:commonmark-ext-gfm-tables:jar:"
+version  = "0.30.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:5e28b48e66f7697bee4dfeb4c8f8f08a84a2827d91b53bbd9bd5445e82d14bda"
+scopes   = ["processor"]
+deps = [
+  "org.commonmark:commonmark:jar:@0.30.0",
+]
+
+[[artifact]]
+name     = "org.commonmark:commonmark:jar:"
+version  = "0.30.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:090f0a758ac2f4f51aa86dff9dff0fdf7403666d0efd29f59886dc8e8b1eac53"
+scopes   = ["processor"]
+
+[[artifact]]
+name     = "org.jetbrains.kotlin:kotlin-metadata-jvm:jar:"
+version  = "2.4.10"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:233aaa84ca268e26d6d3a99ce30401e6dc111a7ae10e0a0b4794ce6351d7adc4"
+scopes   = ["processor"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "org.jetbrains.kotlin:kotlin-reflect:jar:"
+version  = "2.4.10"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:25a1aef7454d46548ecaaf51021b0e52e38141a62ed75af124da109b7324c4e5"
+scopes   = ["processor"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "org.jetbrains.kotlin:kotlin-stdlib-common:jar:"
+version  = "2.4.10"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:"
+version  = "2.4.10"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:e7a8fe7cacf3b9c838f6b3fcb26dfdd41f844551a3ba67fd3f959a0d9d5c0bef"
+scopes   = ["main"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:"
+version  = "2.4.10"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:08346b7f4cfba40c1139161c9f30b68199f425cecf3b63de67838063f34a05c7"
+scopes   = ["main"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "org.jetbrains.kotlin:kotlin-stdlib:jar:"
+version  = "2.4.10"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:4ec0293bc3751423b203f1d8493251c57c42e73eb6377a6b8560d0974ff0a6df"
+scopes   = ["main", "processor"]
+deps = [
+  "org.jetbrains:annotations:jar:@26.1.0",
+]
+
+[[artifact]]
+name     = "org.jetbrains.kotlinx:atomicfu-jvm:jar:"
+version  = "0.33.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:cdc94bfe4f739a0121860e61977d5c1e6a3d53c21f2471493393ba9e900d394e"
+scopes   = ["main"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "org.jetbrains.kotlinx:atomicfu:jar:"
+version  = "0.33.0"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "org.jetbrains.kotlinx:atomicfu-jvm:jar:@0.33.0",
+]
+
+[[artifact]]
+name     = "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:"
+version  = "1.10.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:bc5e60e0e61842558dd19c52bdd24882d40b001e6b1beaea9c4120af7b95ba1c"
+scopes   = ["main"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:"
+version  = "1.10.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:069c5988633230e074ec0d39321ec3cdaa4547c49e90ba936c63d8fc91c8c00d"
+scopes   = ["main"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains:annotations:jar:@26.1.0",
+]
+
+[[artifact]]
+name     = "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:"
+version  = "1.10.1"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "org.jetbrains.kotlinx:kotlinx-coroutines-guava:jar:"
+version  = "1.10.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b64fd23fd6f48d1f7020d9e1aff3e44a95e86de94fd9ac59eb60a4331c7af0ff"
+scopes   = ["main"]
+deps = [
+  "com.google.guava:guava:jar:@33.6.0-android",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.10.1",
+]
+
+[[artifact]]
+name     = "org.jetbrains.kotlinx:kotlinx-datetime-jvm:jar:"
+version  = "0.6.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:bc94b0fcb4464742f02cf54a3e8db9e7b141a1a052ca8ddaf662a60affa21530"
+scopes   = ["main"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "org.jetbrains.kotlinx:kotlinx-datetime:jar:"
+version  = "0.6.1"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-datetime-jvm:jar:@0.6.1",
+  "org.jetbrains.kotlinx:kotlinx-serialization-core:jar:@1.11.0",
+]
+
+[[artifact]]
+name     = "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:"
+version  = "1.11.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:f4a801c647d4351327cd9e1ac4113e2be9ea37a64ab0abae269c25a52e28f35d"
+scopes   = ["main", "processor"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+]
+
+[[artifact]]
+name     = "org.jetbrains.kotlinx:kotlinx-serialization-core:jar:"
+version  = "1.11.0"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:@1.11.0",
+]
+
+[[artifact]]
+name     = "org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:jar:"
+version  = "1.11.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:563a25b4eb5c9128ae9c2479f3d1a5c44dcd176112b91cf03682e906eba5c935"
+scopes   = ["processor"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:@1.11.0",
+]
+
+[[artifact]]
+name     = "org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:jar:"
+version  = "1.8.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:7b7c445880cef94dc464f4733da1b33b94bee78805041ea08ae06e8507e4620e"
+scopes   = ["main"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:@1.11.0",
+]
+
+[[artifact]]
+name     = "org.jetbrains.kotlinx:kotlinx-serialization-json:jar:"
+version  = "1.8.0"
+source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+scopes   = ["main"]
+deps = [
+  "org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:jar:@1.8.0",
+]
+
+[[artifact]]
+name     = "org.jetbrains:annotations:jar:"
+version  = "26.1.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:ebc7aec252ed0c7d2d04c039d7f00e69f7b86b1f493c741d67b3ef31b986b054"
+scopes   = ["main", "processor"]
+
+[[artifact]]
+name     = "org.jspecify:jspecify:jar:"
+version  = "1.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:070d75f261fe4c5b8202508366715f7f2d4660f88c8ef7e6d3575e48c9683b66"
+scopes   = ["main", "test", "processor"]
+
+[[artifact]]
+name     = "org.junit.platform:junit-platform-commons:jar:"
+version  = "6.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:a4774ae923c109544034aeae7c762cf017fbcdd1342403ba90e0921984b608c3"
+scopes   = ["test"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "org.junit.platform:junit-platform-engine:jar:"
+version  = "6.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:21ad7ad3a35beda16387979317be1833a72a71d812f9a66ee4b9a7bafb56334c"
+scopes   = ["test"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.1",
+  "org.junit.platform:junit-platform-commons:jar:@6.1.3",
+  "org.opentest4j:opentest4j:jar:@1.3.0",
+]
+
+[[artifact]]
+name     = "org.junit.platform:junit-platform-launcher:jar:"
+version  = "6.1.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:a5e12b743cf960df7be5c5a93428b0d9e2df76ca9282762f5ddc47c0d7170050"
+scopes   = ["test"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.1",
+  "org.junit.platform:junit-platform-engine:jar:@6.1.3",
+]
+
+[[artifact]]
+name     = "org.opentest4j:opentest4j:jar:"
+version  = "1.3.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:48e2df636cab6563ced64dcdff8abb2355627cb236ef0bf37598682ddf742f1b"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "org.xerial:sqlite-jdbc:jar:"
+version  = "3.53.2.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:f55e405ed96d5ffe629e05b7b51b059e1c7d64527c0cc90a972fbac06730ccc1"
+scopes   = ["processor"]
+
+[[module]]
+path    = "."
+group   = "com.google.samples.apps.nowinandroid"
+name    = "nia"
+version = "0.1.0"
+java    = 21
+kotlin  = "^2.4.0"
+
+[[module]]
+path    = "app"
+group   = "com.google.samples.apps.nowinandroid"
+name    = "nia-app"
+version = "0.1.0"
+java    = 21
+kotlin  = "^2.4.0"
+
+[[module]]
+path    = "core/analytics"
+group   = "com.google.samples.apps.nowinandroid"
+name    = "nia-core-analytics"
+version = "0.1.0"
+java    = 21
+kotlin  = "^2.4.0"
+
+[[module]]
+path    = "core/common"
+group   = "com.google.samples.apps.nowinandroid"
+name    = "nia-core-common"
+version = "0.1.0"
+java    = 21
+kotlin  = "^2.4.0"
+
+[[module]]
+path    = "core/data"
+group   = "com.google.samples.apps.nowinandroid"
+name    = "nia-core-data"
+version = "0.1.0"
+java    = 21
+kotlin  = "^2.4.0"
+
+[[module]]
+path    = "core/database"
+group   = "com.google.samples.apps.nowinandroid"
+name    = "nia-core-database"
+version = "0.1.0"
+java    = 21
+kotlin  = "^2.4.0"
+
+[[module]]
+path    = "core/datastore"
+group   = "com.google.samples.apps.nowinandroid"
+name    = "nia-core-datastore"
+version = "0.1.0"
+java    = 21
+kotlin  = "^2.4.0"
+
+[[module]]
+path    = "core/datastore-proto"
+group   = "com.google.samples.apps.nowinandroid"
+name    = "nia-core-datastore-proto"
+version = "0.1.0"
+java    = 21
+kotlin  = "^2.4.0"
+
+[[module]]
+path    = "core/designsystem"
+group   = "com.google.samples.apps.nowinandroid"
+name    = "nia-core-designsystem"
+version = "0.1.0"
+java    = 21
+kotlin  = "^2.4.0"
+
+[[module]]
+path    = "core/domain"
+group   = "com.google.samples.apps.nowinandroid"
+name    = "nia-core-domain"
+version = "0.1.0"
+java    = 21
+kotlin  = "^2.4.0"
+
+[[module]]
+path    = "core/model"
+group   = "com.google.samples.apps.nowinandroid"
+name    = "nia-core-model"
+version = "0.1.0"
+java    = 21
+kotlin  = "^2.4.0"
+
+[[module]]
+path    = "core/navigation"
+group   = "com.google.samples.apps.nowinandroid"
+name    = "nia-core-navigation"
+version = "0.1.0"
+java    = 21
+kotlin  = "^2.4.0"
+
+[[module]]
+path    = "core/network"
+group   = "com.google.samples.apps.nowinandroid"
+name    = "nia-core-network"
+version = "0.1.0"
+java    = 21
+kotlin  = "^2.4.0"
+
+[[module]]
+path    = "core/notifications"
+group   = "com.google.samples.apps.nowinandroid"
+name    = "nia-core-notifications"
+version = "0.1.0"
+java    = 21
+kotlin  = "^2.4.0"
+
+[[module]]
+path    = "core/ui"
+group   = "com.google.samples.apps.nowinandroid"
+name    = "nia-core-ui"
+version = "0.1.0"
+java    = 21
+kotlin  = "^2.4.0"
+
+[[module]]
+path    = "feature/bookmarks/api"
+group   = "com.google.samples.apps.nowinandroid"
+name    = "nia-feature-bookmarks-api"
+version = "0.1.0"
+java    = 21
+kotlin  = "^2.4.0"
+
+[[module]]
+path    = "feature/bookmarks/impl"
+group   = "com.google.samples.apps.nowinandroid"
+name    = "nia-feature-bookmarks-impl"
+version = "0.1.0"
+java    = 21
+kotlin  = "^2.4.0"
+
+[[module]]
+path    = "feature/foryou/api"
+group   = "com.google.samples.apps.nowinandroid"
+name    = "nia-feature-foryou-api"
+version = "0.1.0"
+java    = 21
+kotlin  = "^2.4.0"
+
+[[module]]
+path    = "feature/foryou/impl"
+group   = "com.google.samples.apps.nowinandroid"
+name    = "nia-feature-foryou-impl"
+version = "0.1.0"
+java    = 21
+kotlin  = "^2.4.0"
+
+[[module]]
+path    = "feature/interests/api"
+group   = "com.google.samples.apps.nowinandroid"
+name    = "nia-feature-interests-api"
+version = "0.1.0"
+java    = 21
+kotlin  = "^2.4.0"
+
+[[module]]
+path    = "feature/interests/impl"
+group   = "com.google.samples.apps.nowinandroid"
+name    = "nia-feature-interests-impl"
+version = "0.1.0"
+java    = 21
+kotlin  = "^2.4.0"
+
+[[module]]
+path    = "feature/search/api"
+group   = "com.google.samples.apps.nowinandroid"
+name    = "nia-feature-search-api"
+version = "0.1.0"
+java    = 21
+kotlin  = "^2.4.0"
+
+[[module]]
+path    = "feature/search/impl"
+group   = "com.google.samples.apps.nowinandroid"
+name    = "nia-feature-search-impl"
+version = "0.1.0"
+java    = 21
+kotlin  = "^2.4.0"
+
+[[module]]
+path    = "feature/settings/api"
+group   = "com.google.samples.apps.nowinandroid"
+name    = "nia-feature-settings-api"
+version = "0.1.0"
+java    = 21
+kotlin  = "^2.4.0"
+
+[[module]]
+path    = "feature/settings/impl"
+group   = "com.google.samples.apps.nowinandroid"
+name    = "nia-feature-settings-impl"
+version = "0.1.0"
+java    = 21
+kotlin  = "^2.4.0"
+
+[[module]]
+path    = "feature/topic/api"
+group   = "com.google.samples.apps.nowinandroid"
+name    = "nia-feature-topic-api"
+version = "0.1.0"
+java    = 21
+kotlin  = "^2.4.0"
+
+[[module]]
+path    = "feature/topic/impl"
+group   = "com.google.samples.apps.nowinandroid"
+name    = "nia-feature-topic-impl"
+version = "0.1.0"
+java    = 21
+kotlin  = "^2.4.0"
+
+[[module]]
+path    = "sync/work"
+group   = "com.google.samples.apps.nowinandroid"
+name    = "nia-sync-work"
+version = "0.1.0"
+java    = 21
+kotlin  = "^2.4.0"

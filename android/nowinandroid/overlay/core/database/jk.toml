@@ -7,7 +7,7 @@ kotlin  = "^2.4.0"
 
 [android]
 namespace   = "com.google.samples.apps.nowinandroid.core.database"
-compile-sdk = 34
+compile-sdk = 36
 min-sdk     = 23
 library     = true
 
@@ -18,13 +18,13 @@ ksp-options = ["room.schemaLocation=schemas"]
 [dependencies]
 kotlinx-datetime = { group = "org.jetbrains.kotlinx", name = "kotlinx-datetime", version = "=0.6.1" }
 nia-core-model   = { workspace = true }
-room-runtime     = { group = "androidx.room", name = "room-runtime", version = "=2.8.3" }
-room-ktx         = { group = "androidx.room", name = "room-ktx", version = "=2.8.3" }
-hilt-android     = { group = "com.google.dagger", name = "hilt-android", version = "=2.59" }
+room-runtime     = { group = "androidx.room", name = "room-runtime", version = "=2.8.4" }
+room-ktx         = { group = "androidx.room", name = "room-ktx", version = "=2.8.4" }
+hilt-android     = { group = "com.google.dagger", name = "hilt-android", version = "=2.60.1" }
 
 [processor-dependencies]
-room-compiler = { group = "androidx.room", name = "room-compiler", version = "=2.8.3" }
-hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version = "=2.59" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version = "=2.8.4" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version = "=2.60.1" }
 
 [test-dependencies]
 junit-platform-launcher = { group = "org.junit.platform", name = "junit-platform-launcher", version = "=6.1.1" }

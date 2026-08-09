@@ -25,17 +25,19 @@ out of getting here; see jk's `docs/android-plan.md`).
 Recorded honestly; each traces to a jk gap or a deliberate call:
 
 - **Kotlin `^2.4.0`** (NiA pins 2.3.0): jk's Build-Tools-API worker floor is 2.4.
-- **compile-sdk 34** (NiA pins 36): keeps the provisioned platform small; bump per
-  module if API-35+ symbols are needed.
-- **No `[platform-dependencies]` compose BOM** — compose versions are pinned explicitly.
-  jk's BOM pins are currently hard (Gradle's `platform()` is a recommendation);
-  the soft-pin semantics is decided but parked on solver work (finding 13).
-- **kotlinx-datetime 0.6.1 exact** everywhere (matches NiA's source-level API usage).
-- **`guava` added to `sync/work`**: jk resolves all scopes in one graph, so
-  processor-scope guava evicts main-scope `listenablefuture:1.0` with the
-  `9999.0-empty` artifact (finding 15); guava on main supplies the class either way.
-- **Flavors select per-module** (`--variant contentType=demo`): workspace variant
-  propagation (the app's selection reaching sibling AAR builds) is a recorded follow-up.
-- Skipped Gradle-side machinery with no jk equivalent yet: jacoco, roborazzi,
-  baseline-profile generation, the Firebase/oss-licenses Gradle plugins (the
-  oss-licenses *runtime* dependency builds fine).
+- **compile-sdk 36** (matches current NiA): platform is provisioned from the managed SDK.
+- **`compose-bom-alpha = 2026.07.01`** (NiA uses `2025.09.01`): latest alpha BOM aligns
+  Material3 adaptive 1.3 + navigation-suite + Compose runtime for Navigation3. A pure
+  *stable* compose-bom cannot co-resolve suite 1.4 with adaptive-navigation3 1.3 today —
+  Google's own catalog uses the alpha BOM for this stack.
+- **Lifecycle `=2.11.0`**, **Navigation3 `=1.0.1`**, **Hilt `=2.60.1`**, **Activity Compose
+  `=1.13.0`**, **Room `=2.8.4`**, **Work `=2.11.2`** — newest stables as of the lock date
+  (NiA's catalog is older on several of these).
+- **No `runtime-tracing`**: AndroidX POM floors fight Compose runtime under PubGrub; optional
+  tracing dep omitted (use `tracing-ktx` only).
+- **kotlinx-datetime `=0.6.1`** exact (source-level API).
+- **`guava` on `sync/work`**: processor-scope guava vs `listenablefuture` (finding 15).
+- **Flavors select per-module** (`--variant contentType=demo`): workspace-wide variant
+  propagation is a recorded follow-up.
+- Skipped Gradle-side machinery: jacoco, roborazzi, baseline-profile, Firebase/oss-licenses
+  Gradle plugins (runtime oss-licenses dep is fine).

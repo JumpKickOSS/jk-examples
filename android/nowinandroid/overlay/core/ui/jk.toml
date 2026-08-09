@@ -7,10 +7,13 @@ kotlin  = "^2.4.0"
 
 [android]
 namespace   = "com.google.samples.apps.nowinandroid.core.ui"
-compile-sdk = 34
+compile-sdk = 36
 min-sdk     = 23
 library     = true
 compose     = true
+
+[platform-dependencies]
+compose = { group = "androidx.compose", name = "compose-bom-alpha", version = "=2026.07.01" }
 
 [dependencies]
 metrics              = { group = "androidx.metrics", name = "metrics-performance", version = "=1.0.0-beta01" }
@@ -21,7 +24,7 @@ nia-core-model       = { workspace = true }
 browser              = { group = "androidx.browser", name = "browser", version = "=1.8.0" }
 coil                 = { group = "io.coil-kt", name = "coil", version = "=2.7.0" }
 coil-compose         = { group = "io.coil-kt", name = "coil-compose", version = "=2.7.0" }
-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview", version = "1.9.2" }
+compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 
 [test-dependencies]
 junit-platform-launcher = { group = "org.junit.platform", name = "junit-platform-launcher", version = "=6.1.1" }

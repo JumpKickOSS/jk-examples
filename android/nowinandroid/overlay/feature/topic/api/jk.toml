@@ -7,7 +7,7 @@ kotlin  = "^2.4.0"
 
 [android]
 namespace   = "com.google.samples.apps.nowinandroid.feature.topic.api"
-compile-sdk = 34
+compile-sdk = 36
 min-sdk     = 23
 library     = true
 compose     = true
@@ -15,11 +15,14 @@ compose     = true
 [[kotlin-plugins]]
 coordinate = "org.jetbrains.kotlin:kotlin-serialization-compiler-plugin-embeddable"
 
+[platform-dependencies]
+compose = { group = "androidx.compose", name = "compose-bom-alpha", version = "=2026.07.01" }
+
 [dependencies]
 nia-core-navigation = { workspace = true }
 nia-core-model = { workspace = true }
 serialization-json   = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version = "=1.8.0" }
-navigation3-runtime  = { group = "androidx.navigation3", name = "navigation3-runtime", version = "=1.0.0" }
+navigation3-runtime  = { group = "androidx.navigation3", name = "navigation3-runtime", version = "=1.0.1" }
 [test-dependencies]
 junit-platform-launcher = { group = "org.junit.platform", name = "junit-platform-launcher", version = "=6.1.1" }
 
