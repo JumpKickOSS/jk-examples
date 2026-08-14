@@ -13,7 +13,9 @@ cd micronaut/hello-http
 jk lock
 jk build
 jk test
-jk run   # then: curl -s localhost:8080/hello
+jk run                              # INFO (default)
+MICRONAUT_ENVIRONMENTS=dev jk run   # DEBUG
+# then: curl -s localhost:8080/hello
 ```
 
 Optional AOT (deploy optimization, not every edit cycle):

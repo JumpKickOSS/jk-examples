@@ -31,10 +31,27 @@ public class Note {
         this.body = body;
     }
 
-    public Long getId() { return id; }
-    public String getTitle() { return title; }
-    public void setTitle(String title) { this.title = title; }
-    public String getBody() { return body; }
-    public void setBody(String body) { this.body = body; }
-    public Instant getCreatedAt() { return createdAt; }
+    public Long getId() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getBody() {
+        return body;
+    }
+
+    public void setBody(String body) {
+        this.body = body;
+    }
+
+    public Instant getCreatedAt() {
+        return createdAt;
+    }
 }
