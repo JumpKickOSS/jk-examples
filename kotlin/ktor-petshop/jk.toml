@@ -4,7 +4,6 @@ group   = "com.example"
 version = "0.1.0"
 kotlin  = "2.2.0"
 java    = 25
-layout  = "traditional"
 
 [workspace]
 modules = ["domain", "app"]
