@@ -165,4 +165,4 @@ case "$MODE" in
     ;;
 esac
 
-echo "Record rows in the jk monorepo docs/perf/netty-benchmark.md with machine + tool versions."
+echo "Record rows with machine + tool versions beside the scenario (PARITY.md or a bench log)."

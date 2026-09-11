@@ -2,7 +2,7 @@
 
 Pinned: **netty-4.1.115.Final**. Graph aligned with Mill `example/thirdparty/netty/build.mill`.
 
-| Maven `artifactId` | Directory | jk `[project].name` | Notes |
+| Maven `artifactId` | Directory | jk `name` | Notes |
 |--------------------|-----------|---------------------|-------|
 | `netty-buffer` | `buffer/` | `buffer` | workspace member |
 | `netty-codec` | `codec/` | `codec` | workspace member |
