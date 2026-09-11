@@ -24,9 +24,10 @@ in     = "com.google.samples.apps.nowinandroid.sync.status.StubSyncSubscriber"
 reason = "upstream Now in Android source, unmodified by this port; NiA logs with android.util.Log in a handful of places on purpose"
 
 [[guards.no-android-log.allow]]
-in     = "com.google.samples.apps.nowinandroid.util.ProfileVerifierLogger"
+in     = "com.google.samples.apps.nowinandroid.di.JankStatsModule"
 reason = "upstream Now in Android source, unmodified by this port; NiA logs with android.util.Log in a handful of places on purpose"
 
+# The logger's calls sit in a coroutine body, which Kotlin compiles to this class.
 [[guards.no-android-log.allow]]
-in     = "com.google.samples.apps.nowinandroid.di.JankStatsModule"
+in     = "com.google.samples.apps.nowinandroid.util.ProfileVerifierLogger$invoke$1"
 reason = "upstream Now in Android source, unmodified by this port; NiA logs with android.util.Log in a handful of places on purpose"
