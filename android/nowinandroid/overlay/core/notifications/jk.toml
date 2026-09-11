@@ -19,7 +19,7 @@ extra-src = ["src/prod/kotlin"]
 [dependencies]
 nia-core-model  = { workspace = true }
 nia-core-common = { workspace = true }
-core-ktx        = { group = "androidx.core", name = "core-ktx", version = "=1.16.0" }
+core-ktx        = { group = "androidx.core", name = "core-ktx", version = "=1.19.0" }
 hilt-android    = { group = "com.google.dagger", name = "hilt-android", version = "=2.60.1" }
 
 [processor-dependencies]

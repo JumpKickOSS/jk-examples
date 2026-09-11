@@ -3,7 +3,7 @@ generated-by = "jk 0.13.2"
 resolution-algorithm = "pubgrub-v1"
 kotlin = "2.4.20"
 jk-min = "0.12.0"
-manifests-sha256 = "964629be2b026431465b9761845af91bec72458d257ac955e021d2f3ef0c19fe"
+manifests-sha256 = "35ced155a9f925b303d592286c276cf901b65f576e01efce2f7f43b8dab95a81"
 project-id = "2d22aa92728d217c54eba54e6bc7ebdf"
 
 [jdk]
@@ -1575,13 +1575,12 @@ deps = [
 
 [[artifact]]
 name     = "androidx.core:core-ktx:aar:"
-version  = "1.16.0"
+version  = "1.19.0"
 source   = "google+https://dl.google.com/dl/android/maven2/"
-checksum = "sha256:1766dbd82f64a12dcd359ecb6f15f3cf35db4d66d22961a7c51b2ffc6468314c"
-path     = "core-ktx-1.16.0.aar"
+checksum = "sha256:db1ae24b15c36358ad46497d561b19c325642565432d56479ebe47ee3baa0d7e"
+path     = "core-ktx-1.19.0.aar"
 scopes   = ["main"]
 deps = [
-  "androidx.annotation:annotation:jar:@1.10.0",
   "androidx.core:core:aar:@1.19.0",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
@@ -2420,7 +2419,7 @@ scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation-jvm:jar:@1.10.0",
   "androidx.collection:collection-jvm:jar:@1.6.0",
-  "androidx.core:core-ktx:jar:@1.16.0",
+  "androidx.core:core-ktx:jar:@1.19.0",
   "androidx.lifecycle:lifecycle-common-jvm:jar:@2.11.0",
   "androidx.lifecycle:lifecycle-livedata-core:aar:@2.11.0",
   "androidx.lifecycle:lifecycle-viewmodel-android:aar:@2.11.0",
@@ -2441,7 +2440,7 @@ scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation-jvm:jar:@1.10.0",
   "androidx.collection:collection-jvm:jar:@1.6.0",
-  "androidx.core:core-ktx:jar:@1.16.0",
+  "androidx.core:core-ktx:jar:@1.19.0",
   "androidx.lifecycle:lifecycle-common-jvm:jar:@2.11.0",
   "androidx.lifecycle:lifecycle-livedata-core:aar:@2.11.0",
   "androidx.lifecycle:lifecycle-viewmodel-android:aar:@2.11.0",
@@ -3774,7 +3773,7 @@ deps = [
   "androidx.annotation:annotation:jar:@1.10.0",
   "androidx.appcompat:appcompat-resources:jar:@1.8.0",
   "androidx.collection:collection:jar:@1.6.0",
-  "androidx.core:core-ktx:jar:@1.16.0",
+  "androidx.core:core-ktx:jar:@1.19.0",
   "androidx.exifinterface:exifinterface:jar:@1.4.2",
   "androidx.lifecycle:lifecycle-runtime:jar:@2.11.0",
   "androidx.profileinstaller:profileinstaller:jar:@1.4.1",
@@ -3793,7 +3792,7 @@ path     = "coil-compose-base-2.7.0.aar"
 scopes   = ["main"]
 deps = [
   "androidx.compose.foundation:foundation:jar:@1.12.0-rc01",
-  "androidx.core:core-ktx:jar:@1.16.0",
+  "androidx.core:core-ktx:jar:@1.19.0",
   "com.google.accompanist:accompanist-drawablepainter:jar:@0.37.3",
   "io.coil-kt:coil-base:jar:@2.7.0",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
@@ -3820,7 +3819,7 @@ checksum = "sha256:6fde8e6b3fd9dd8cc6b9d8e3af4fd3a42c34582562f25e6c600d5fc442279
 path     = "coil-svg-2.7.0.aar"
 scopes   = ["main"]
 deps = [
-  "androidx.core:core-ktx:jar:@1.16.0",
+  "androidx.core:core-ktx:jar:@1.19.0",
   "com.caverock:androidsvg-aar:jar:@1.4",
   "io.coil-kt:coil-base:jar:@2.7.0",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",

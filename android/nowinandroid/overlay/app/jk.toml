@@ -61,7 +61,7 @@ adaptive-layout   = { group = "androidx.compose.material3.adaptive", name = "ada
 adaptive-nav      = { group = "androidx.compose.material3.adaptive", name = "adaptive-navigation" }
 adaptive-nav3     = { group = "androidx.compose.material3.adaptive", name = "adaptive-navigation3" }
 window-size-class = { group = "androidx.compose.material3", name = "material3-window-size-class" }
-core-ktx          = { group = "androidx.core", name = "core-ktx", version = "=1.16.0" }
+core-ktx          = { group = "androidx.core", name = "core-ktx", version = "=1.19.0" }
 splashscreen      = { group = "androidx.core", name = "core-splashscreen", version = "=1.0.1" }
 lifecycle-rt-compose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version = "=2.11.0" }
 lifecycle-vm-nav3 = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-navigation3", version = "=2.11.0" }
