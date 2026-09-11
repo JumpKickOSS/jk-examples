@@ -19,7 +19,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/notes")
 public class NoteController {
 
-    public record NewNote(@NotBlank @Size(max = 120) String title, @Size(max = 4000) String body) {}
+    public record NewNote(
+            @NotBlank @Size(max = 120) String title,
+            @Size(max = 4000) String body) {}
 
     private final NoteService service;
 

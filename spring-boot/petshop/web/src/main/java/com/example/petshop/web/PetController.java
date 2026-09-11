@@ -20,7 +20,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class PetController {
 
     public record NewPet(
-            @NotBlank @Size(max = 80) String name, @NotBlank @Size(max = 40) String species) {}
+            @NotBlank @Size(max = 80) String name,
+            @NotBlank @Size(max = 40) String species) {}
 
     private final PetService pets;
 
