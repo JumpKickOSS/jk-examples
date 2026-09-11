@@ -1,25 +1,31 @@
 version = 1
-generated-by = "jk 0.10.1"
+generated-by = "jk 0.13.2"
 resolution-algorithm = "pubgrub-v1"
-kotlin = "2.4.10"
-jk = { version = "0.10.1", sha256 = "de9820d6c9dd57ea9093f654d6fa03639ab5822f0d10ffc87db04d12db110259" }
-manifests-sha256 = "ec525e797ad3e7edeeb5481b1899ad9925020061d7b8049dad252e1e33586bbc"
+kotlin = "2.4.20"
+jk-min = "0.12.0"
+manifests-sha256 = "158ce97dbbaeac19fad4af39132e45e1293a007616a02d6babd5efca4c99bddf"
+project-id = "dc2b41fc081a4f0b671c6ad43d4dbcdc"
+
+[jdk]
+suggested-vendor = "temurin"
+suggested-version = "25.0.4.1"
 
 [[artifact]]
 name     = "ch.qos.logback:logback-classic:jar:"
-version  = "1.6.1"
+version  = "1.6.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:be8970a67c145e610071817622212b50ee531f2ee8649d70a704e8549b958bbd"
+checksum = "sha256:beebede8db065fe1b72909ecc66bb49acda618901635d86c25fce14a5915e37e"
 scopes   = ["main"]
 deps = [
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "ch.qos.logback:logback-core:jar:@1.6.3",
+  "org.slf4j:slf4j-api:jar:@2.0.19",
 ]
 
 [[artifact]]
 name     = "ch.qos.logback:logback-core:jar:"
-version  = "1.6.1"
+version  = "1.6.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:ca24a516db9c9bf43ff5c41ce9648ee546869aa7a30d349c531b3755af4f9db6"
+checksum = "sha256:a6967a28c8b086dee75a694d2f6fb8830c71153539866d7d8af065c9b6df91e0"
 scopes   = ["main"]
 
 [[artifact]]
@@ -30,18 +36,18 @@ checksum = "sha256:86739675892fb1c17d6bd36d05347e89ff313957421bb01a45a743ce774e8
 scopes   = ["main", "test"]
 deps = [
   "co.touchlab:stately-strict-jvm:jar:@2.1.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "co.touchlab:stately-concurrency:jar:"
 version  = "2.1.0"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main", "test"]
 deps = [
   "co.touchlab:stately-concurrency-jvm:jar:@2.1.0",
   "co.touchlab:stately-strict:jar:@2.1.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -52,18 +58,18 @@ checksum = "sha256:0e0d9e7f20eaee18f7862309064c8db58ce6a3a861d8871f561546af63df1
 scopes   = ["main", "test"]
 deps = [
   "co.touchlab:stately-concurrency-jvm:jar:@2.1.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "co.touchlab:stately-concurrent-collections:jar:"
 version  = "2.1.0"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main", "test"]
 deps = [
   "co.touchlab:stately-concurrency:jar:@2.1.0",
   "co.touchlab:stately-concurrent-collections-jvm:jar:@2.1.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -73,17 +79,17 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:581070db2802cbad81f6e6e2d9d2494835443153b314458d53aa43c68260c9fa"
 scopes   = ["main", "test"]
 deps = [
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "co.touchlab:stately-strict:jar:"
 version  = "2.1.0"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main", "test"]
 deps = [
   "co.touchlab:stately-strict-jvm:jar:@2.1.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -95,39 +101,39 @@ scopes   = ["main"]
 
 [[artifact]]
 name     = "com.fasterxml.jackson.core:jackson-core:jar:"
-version  = "2.22.1"
+version  = "2.22.2"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:941ff029bcdb93e83d209ce516c1a7fb8bbac07d0a2fa122f5bf194b2cd7b4f4"
+checksum = "sha256:ff167a6317be15895706c26668f45b898efe40ab8780970658210fe1393d52a6"
 scopes   = ["main"]
 
 [[artifact]]
 name     = "com.fasterxml.jackson.core:jackson-databind:jar:"
-version  = "2.22.1"
+version  = "2.22.2"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:7dcd7e53bec1f56c7ad278bd1ca0840bebcc595d61ce44d6a8439abb75b965b2"
+checksum = "sha256:d0da14c12b16b5d54719aa172d83b542ff4abeb8b0fb7db476fde8ceece760ca"
 scopes   = ["main"]
 deps = [
   "com.fasterxml.jackson.core:jackson-annotations:jar:@2.22",
-  "com.fasterxml.jackson.core:jackson-core:jar:@2.22.1",
+  "com.fasterxml.jackson.core:jackson-core:jar:@2.22.2",
 ]
 
 [[artifact]]
 name     = "com.fasterxml.jackson.module:jackson-module-kotlin:jar:"
-version  = "2.22.1"
+version  = "2.22.2"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:37f44b1403a9532742a3695c9c0cd04c161fd6b338fe6e4fc6e6ffa26e0a1f33"
+checksum = "sha256:174e917ea64c0559df824e92317782a92eba7278de488d4a11df0b8597791874"
 scopes   = ["main"]
 deps = [
   "com.fasterxml.jackson.core:jackson-annotations:jar:@2.22",
-  "com.fasterxml.jackson.core:jackson-databind:jar:@2.22.1",
-  "org.jetbrains.kotlin:kotlin-reflect:jar:@2.4.10",
+  "com.fasterxml.jackson.core:jackson-databind:jar:@2.22.2",
+  "org.jetbrains.kotlin:kotlin-reflect:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "com.h2database:h2:jar:"
-version  = "2.4.240"
+version  = "2.5.250"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:29b70e427cc1c40cdc376283adbb0cc62853073797bb5fe5761f81fe73d57ce0"
+checksum = "sha256:82a80a2ac06901b03cdb233c663d21c4f49c884bf6d0cf85022729e8db9ab86f"
 scopes   = ["main"]
 
 [[artifact]]
@@ -144,17 +150,17 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:50079c79a7dbbb6bebebf5922a63ba4759fd9286dcdb5d502a383cb7c0bc60c0"
 scopes   = ["test"]
 deps = [
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "io.insert-koin:koin-core-annotations:jar:"
 version  = "4.2.2"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["test"]
 deps = [
   "io.insert-koin:koin-core-annotations-jvm:jar:@4.2.2",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -166,19 +172,19 @@ scopes   = ["main", "test"]
 deps = [
   "co.touchlab:stately-concurrency-jvm:jar:@2.1.0",
   "co.touchlab:stately-concurrent-collections-jvm:jar:@2.1.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "io.insert-koin:koin-core:jar:"
 version  = "4.2.2"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main", "test"]
 deps = [
   "co.touchlab:stately-concurrency:jar:@2.1.0",
   "co.touchlab:stately-concurrent-collections:jar:@2.1.0",
   "io.insert-koin:koin-core-jvm:jar:@4.2.2",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -191,21 +197,21 @@ deps = [
   "io.insert-koin:koin-core-jvm:jar:@4.2.2",
   "io.ktor:ktor-server-core-jvm:jar:@3.5.2",
   "io.ktor:ktor-server-di-jvm:jar:@3.5.2",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
 ]
 
 [[artifact]]
 name     = "io.insert-koin:koin-ktor:jar:"
 version  = "4.2.2"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "io.insert-koin:koin-core:jar:@4.2.2",
   "io.insert-koin:koin-ktor-jvm:jar:@4.2.2",
   "io.ktor:ktor-server-core:jar:@3.5.2",
   "io.ktor:ktor-server-di:jar:@3.5.2",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.11.0",
 ]
 
@@ -217,8 +223,8 @@ checksum = "sha256:7bab2047f607d59da31cbfbf425a4671a337b48132880c2a204960229ffa4
 scopes   = ["main"]
 deps = [
   "io.insert-koin:koin-core-jvm:jar:@4.2.2",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
+  "org.slf4j:slf4j-api:jar:@2.0.19",
 ]
 
 [[artifact]]
@@ -230,22 +236,22 @@ scopes   = ["test"]
 deps = [
   "io.insert-koin:koin-core-annotations-jvm:jar:@4.2.2",
   "io.insert-koin:koin-core-jvm:jar:@4.2.2",
-  "org.jetbrains.kotlin:kotlin-reflect:jar:@2.4.10",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
-  "org.jetbrains.kotlin:kotlin-test:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-reflect:jar:@2.4.20",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
+  "org.jetbrains.kotlin:kotlin-test:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "io.insert-koin:koin-test:jar:"
 version  = "4.2.2"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["test"]
 deps = [
   "io.insert-koin:koin-core-annotations:jar:@4.2.2",
   "io.insert-koin:koin-core:jar:@4.2.2",
   "io.insert-koin:koin-test-jvm:jar:@4.2.2",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
-  "org.jetbrains.kotlin:kotlin-test:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
+  "org.jetbrains.kotlin:kotlin-test:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -256,10 +262,10 @@ checksum = "sha256:eb1749628f36ba6098b75af4b9b8a3abf5663fa0c3e1b6d282710f2d84552
 scopes   = ["test"]
 deps = [
   "io.ktor:ktor-client-core-jvm:jar:@3.5.2",
-  "org.apache.httpcomponents.client5:httpclient5:jar:@5.6.3",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.apache.httpcomponents.client5:httpclient5:jar:@5.6.4",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "org.slf4j:slf4j-api:jar:@2.0.19",
 ]
 
 [[artifact]]
@@ -273,9 +279,9 @@ deps = [
   "io.ktor:ktor-http-cio-jvm:jar:@3.5.2",
   "io.ktor:ktor-network-tls-jvm:jar:@3.5.2",
   "io.ktor:ktor-websockets-jvm:jar:@3.5.2",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "org.slf4j:slf4j-api:jar:@2.0.19",
 ]
 
 [[artifact]]
@@ -290,10 +296,10 @@ deps = [
   "io.ktor:ktor-http-jvm:jar:@3.5.2",
   "io.ktor:ktor-sse-jvm:jar:@3.5.2",
   "io.ktor:ktor-websocket-serialization-jvm:jar:@3.5.2",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
   "org.jetbrains.kotlinx:kotlinx-coroutines-slf4j:jar:@1.11.0",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "org.slf4j:slf4j-api:jar:@2.0.19",
 ]
 
 [[artifact]]
@@ -304,20 +310,20 @@ checksum = "sha256:7712ed1d51716180a9666fe88da5c5ef0e49123483ae2cd14ae3e9252ee71
 scopes   = ["main", "test"]
 deps = [
   "io.ktor:ktor-utils-jvm:jar:@3.5.2",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "org.slf4j:slf4j-api:jar:@2.0.19",
 ]
 
 [[artifact]]
 name     = "io.ktor:ktor-events:jar:"
 version  = "3.5.2"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "io.ktor:ktor-events-jvm:jar:@3.5.2",
   "io.ktor:ktor-utils:jar:@3.5.2",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.11.0",
 ]
 
@@ -331,21 +337,21 @@ deps = [
   "io.ktor:ktor-http-jvm:jar:@3.5.2",
   "io.ktor:ktor-io-jvm:jar:@3.5.2",
   "io.ktor:ktor-network-jvm:jar:@3.5.2",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "org.slf4j:slf4j-api:jar:@2.0.19",
 ]
 
 [[artifact]]
 name     = "io.ktor:ktor-http-cio:jar:"
 version  = "3.5.2"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "io.ktor:ktor-http-cio-jvm:jar:@3.5.2",
   "io.ktor:ktor-http:jar:@3.5.2",
   "io.ktor:ktor-io:jar:@3.5.2",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.11.0",
 ]
 
@@ -357,21 +363,21 @@ checksum = "sha256:6afc8074f60732ed60cd904a3e52b46a98425b35a1b9446d2cfa457f2ee63
 scopes   = ["main", "test"]
 deps = [
   "io.ktor:ktor-utils-jvm:jar:@3.5.2",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
   "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:@1.11.0",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "org.slf4j:slf4j-api:jar:@2.0.19",
 ]
 
 [[artifact]]
 name     = "io.ktor:ktor-http:jar:"
 version  = "3.5.2"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "io.ktor:ktor-http-jvm:jar:@3.5.2",
   "io.ktor:ktor-utils:jar:@3.5.2",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.11.0",
   "org.jetbrains.kotlinx:kotlinx-serialization-core:jar:@1.11.0",
 ]
@@ -383,20 +389,20 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:b990b4319b711218fbcee2f98e1dcf289a25a17194837992efb5b970b3b6c64c"
 scopes   = ["main", "test"]
 deps = [
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
   "org.jetbrains.kotlinx:kotlinx-io-core-jvm:jar:@0.9.1",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "org.slf4j:slf4j-api:jar:@2.0.19",
 ]
 
 [[artifact]]
 name     = "io.ktor:ktor-io:jar:"
 version  = "3.5.2"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "io.ktor:ktor-io-jvm:jar:@3.5.2",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.11.0",
   "org.jetbrains.kotlinx:kotlinx-io-core:jar:@0.9.1",
 ]
@@ -409,9 +415,9 @@ checksum = "sha256:f1d966faf5e9adf903a968480f6c1a4223d596583a972ebbaf3fa1fd7f9be
 scopes   = ["main", "test"]
 deps = [
   "io.ktor:ktor-utils-jvm:jar:@3.5.2",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "org.slf4j:slf4j-api:jar:@2.0.19",
 ]
 
 [[artifact]]
@@ -422,9 +428,9 @@ checksum = "sha256:3254d9479e28c6e9ebdc28fcdef3a54bdf35ead6aa0f9b92db67dbc6cdd1b
 scopes   = ["test"]
 deps = [
   "io.ktor:ktor-network-tls-jvm:jar:@3.5.2",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "org.slf4j:slf4j-api:jar:@2.0.19",
 ]
 
 [[artifact]]
@@ -437,9 +443,9 @@ deps = [
   "io.ktor:ktor-http-jvm:jar:@3.5.2",
   "io.ktor:ktor-network-jvm:jar:@3.5.2",
   "io.ktor:ktor-utils-jvm:jar:@3.5.2",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "org.slf4j:slf4j-api:jar:@2.0.19",
 ]
 
 [[artifact]]
@@ -449,12 +455,12 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:cc6a0d3005505a245a878fda991c1732352245ced123d1abf1fdde77d79e048f"
 scopes   = ["main"]
 deps = [
-  "com.fasterxml.jackson.core:jackson-databind:jar:@2.22.1",
-  "com.fasterxml.jackson.module:jackson-module-kotlin:jar:@2.22.1",
+  "com.fasterxml.jackson.core:jackson-databind:jar:@2.22.2",
+  "com.fasterxml.jackson.module:jackson-module-kotlin:jar:@2.22.2",
   "io.ktor:ktor-serialization-jvm:jar:@3.5.2",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "org.slf4j:slf4j-api:jar:@2.0.19",
 ]
 
 [[artifact]]
@@ -465,20 +471,20 @@ checksum = "sha256:b7c85d08714ce39e9c17a235038de6f9c2b121e5fb57ce90c5a349a65f61e
 scopes   = ["main", "test"]
 deps = [
   "io.ktor:ktor-websockets-jvm:jar:@3.5.2",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "org.slf4j:slf4j-api:jar:@2.0.19",
 ]
 
 [[artifact]]
 name     = "io.ktor:ktor-serialization:jar:"
 version  = "3.5.2"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "io.ktor:ktor-serialization-jvm:jar:@3.5.2",
   "io.ktor:ktor-websockets:jar:@3.5.2",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.11.0",
 ]
 
@@ -491,10 +497,10 @@ scopes   = ["test"]
 deps = [
   "io.ktor:ktor-server-core-jvm:jar:@3.5.2",
   "org.fusesource.jansi:jansi:jar:@2.4.3",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
   "org.jetbrains.kotlinx:kotlinx-coroutines-slf4j:jar:@1.11.0",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "org.slf4j:slf4j-api:jar:@2.0.19",
 ]
 
 [[artifact]]
@@ -505,9 +511,9 @@ checksum = "sha256:b66558e844d600d2c23e4bf90ec9cfd8b2085b51aaf40373412aba29a0cb3
 scopes   = ["main"]
 deps = [
   "io.ktor:ktor-server-core-jvm:jar:@3.5.2",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "org.slf4j:slf4j-api:jar:@2.0.19",
 ]
 
 [[artifact]]
@@ -524,16 +530,16 @@ deps = [
   "io.ktor:ktor-serialization-jvm:jar:@3.5.2",
   "io.ktor:ktor-utils-jvm:jar:@3.5.2",
   "io.ktor:ktor-websockets-jvm:jar:@3.5.2",
-  "org.jetbrains.kotlin:kotlin-reflect:jar:@2.4.10",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-reflect:jar:@2.4.20",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "org.slf4j:slf4j-api:jar:@2.0.19",
 ]
 
 [[artifact]]
 name     = "io.ktor:ktor-server-core:jar:"
 version  = "3.5.2"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "io.ktor:ktor-events:jar:@3.5.2",
@@ -543,8 +549,8 @@ deps = [
   "io.ktor:ktor-server-core-jvm:jar:@3.5.2",
   "io.ktor:ktor-utils:jar:@3.5.2",
   "io.ktor:ktor-websockets:jar:@3.5.2",
-  "org.jetbrains.kotlin:kotlin-reflect:jar:@2.4.10",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-reflect:jar:@2.4.20",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.11.0",
 ]
 
@@ -556,20 +562,20 @@ checksum = "sha256:63ff3cd614addf627974df1213271f279caa5f4fe2335322bd129539532b9
 scopes   = ["main"]
 deps = [
   "io.ktor:ktor-server-core-jvm:jar:@3.5.2",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "org.slf4j:slf4j-api:jar:@2.0.19",
 ]
 
 [[artifact]]
 name     = "io.ktor:ktor-server-di:jar:"
 version  = "3.5.2"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "io.ktor:ktor-server-core:jar:@3.5.2",
   "io.ktor:ktor-server-di-jvm:jar:@3.5.2",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.11.0",
 ]
 
@@ -581,14 +587,14 @@ checksum = "sha256:597bd7e672c5f1d1f6f54f928ea2424d4b840e695b89e528f396e8c140ca8
 scopes   = ["main"]
 deps = [
   "io.ktor:ktor-server-core-jvm:jar:@3.5.2",
-  "io.netty:netty-codec-http2:jar:@4.2.16.Final",
-  "io.netty:netty-codec:jar:@4.2.16.Final",
-  "io.netty:netty-transport-native-epoll:jar:@4.2.16.Final",
-  "io.netty:netty-transport-native-kqueue:jar:@4.2.16.Final",
+  "io.netty:netty-codec-http2:jar:@4.2.18.Final",
+  "io.netty:netty-codec:jar:@4.2.18.Final",
+  "io.netty:netty-transport-native-epoll:jar:@4.2.18.Final",
+  "io.netty:netty-transport-native-kqueue:jar:@4.2.18.Final",
   "org.eclipse.jetty.alpn:alpn-api:jar:@1.1.3.v20160715",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "org.slf4j:slf4j-api:jar:@2.0.19",
 ]
 
 [[artifact]]
@@ -607,10 +613,10 @@ deps = [
   "io.ktor:ktor-server-core-jvm:jar:@3.5.2",
   "io.ktor:ktor-server-websockets-jvm:jar:@3.5.2",
   "io.ktor:ktor-test-dispatcher-jvm:jar:@3.5.2",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
   "org.jetbrains.kotlinx:kotlinx-coroutines-debug:jar:@1.11.0",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "org.slf4j:slf4j-api:jar:@2.0.19",
 ]
 
 [[artifact]]
@@ -623,9 +629,9 @@ deps = [
   "io.ktor:ktor-server-core-jvm:jar:@3.5.2",
   "io.ktor:ktor-websocket-serialization-jvm:jar:@3.5.2",
   "io.ktor:ktor-websockets-jvm:jar:@3.5.2",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "org.slf4j:slf4j-api:jar:@2.0.19",
 ]
 
 [[artifact]]
@@ -636,9 +642,9 @@ checksum = "sha256:c510904fe0e7dd6b9df2fa7c5474696fda64d7366129ce5fa9ace2ebf450d
 scopes   = ["test"]
 deps = [
   "io.ktor:ktor-utils-jvm:jar:@3.5.2",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "org.slf4j:slf4j-api:jar:@2.0.19",
 ]
 
 [[artifact]]
@@ -648,10 +654,10 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:ee12b62e476a2f051f2abf46219e778dc442353ff678ec2b4380b9d2d9da1d5b"
 scopes   = ["test"]
 deps = [
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
   "org.jetbrains.kotlinx:kotlinx-coroutines-test-jvm:jar:@1.11.0",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "org.slf4j:slf4j-api:jar:@2.0.19",
 ]
 
 [[artifact]]
@@ -662,21 +668,21 @@ checksum = "sha256:5cb9c040d290aa31ce5e4930d825dda5d25625a8603074b29943c519d5b02
 scopes   = ["main", "test"]
 deps = [
   "io.ktor:ktor-io-jvm:jar:@3.5.2",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
   "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:@1.11.0",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "org.slf4j:slf4j-api:jar:@2.0.19",
 ]
 
 [[artifact]]
 name     = "io.ktor:ktor-utils:jar:"
 version  = "3.5.2"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "io.ktor:ktor-io:jar:@3.5.2",
   "io.ktor:ktor-utils-jvm:jar:@3.5.2",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.11.0",
   "org.jetbrains.kotlinx:kotlinx-serialization-core:jar:@1.11.0",
 ]
@@ -689,9 +695,9 @@ checksum = "sha256:7ffcac7ed3d723e0bd33b219b9e3df6d5953e5b810f66c4c8e686f571f5d8
 scopes   = ["test"]
 deps = [
   "io.ktor:ktor-serialization-jvm:jar:@3.5.2",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "org.slf4j:slf4j-api:jar:@2.0.19",
 ]
 
 [[artifact]]
@@ -703,253 +709,253 @@ scopes   = ["main", "test"]
 deps = [
   "io.ktor:ktor-http-jvm:jar:@3.5.2",
   "io.ktor:ktor-utils-jvm:jar:@3.5.2",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "org.slf4j:slf4j-api:jar:@2.0.19",
 ]
 
 [[artifact]]
 name     = "io.ktor:ktor-websockets:jar:"
 version  = "3.5.2"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "io.ktor:ktor-http:jar:@3.5.2",
   "io.ktor:ktor-utils:jar:@3.5.2",
   "io.ktor:ktor-websockets-jvm:jar:@3.5.2",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.11.0",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-buffer:jar:"
-version  = "4.2.16.Final"
+version  = "4.2.18.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:cc36ae9fbd0b03fe755eb4eb4424ca53b59cfd297d7fd47d49e5b1059beded6c"
+checksum = "sha256:fdf236d2b76aa9710684401fdad7dff9dec56e43da5d39172c9a55ba5f14b360"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-common:jar:@4.2.16.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-codec-base:jar:"
-version  = "4.2.16.Final"
+version  = "4.2.18.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:feb410225938d9970de6b624a0c031d079804fa5cc5e1ec6e9298f16db5998a7"
+checksum = "sha256:7e4612bead7ba88ac6f7908fa722f90ad6835ea96505c9e40b2f93686c1f61f3"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.16.Final",
-  "io.netty:netty-common:jar:@4.2.16.Final",
-  "io.netty:netty-transport:jar:@4.2.16.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-codec-compression:jar:"
-version  = "4.2.16.Final"
+version  = "4.2.18.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:13c8565414dd2115281303ef4ad1f7cc69bd7771d8d12c7d2fb31307dff26d11"
+checksum = "sha256:9d8a4b9a6a2a166ec5a4bbe51a78b4f6a726457c51d81495743c7e7ccb9f4765"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.16.Final",
-  "io.netty:netty-codec-base:jar:@4.2.16.Final",
-  "io.netty:netty-common:jar:@4.2.16.Final",
-  "io.netty:netty-transport:jar:@4.2.16.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-codec-base:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-codec-http2:jar:"
-version  = "4.2.16.Final"
+version  = "4.2.18.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:fe1ffc7ed6bfb40f91c4e265fe76e3be7f9049deef0e8cf5a992420e4f02b542"
+checksum = "sha256:a45a2b06c377b9c87c21ae2b37f04c8d808192590a73d977e7a60fd59921f283"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.16.Final",
-  "io.netty:netty-codec-base:jar:@4.2.16.Final",
-  "io.netty:netty-codec-http:jar:@4.2.16.Final",
-  "io.netty:netty-common:jar:@4.2.16.Final",
-  "io.netty:netty-handler:jar:@4.2.16.Final",
-  "io.netty:netty-transport:jar:@4.2.16.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-codec-base:jar:@4.2.18.Final",
+  "io.netty:netty-codec-http:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-handler:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-codec-http:jar:"
-version  = "4.2.16.Final"
+version  = "4.2.18.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:0d16f981de8d0d304a2ab1a81f0a674892089fbaa8a583100aebb4a5b00456ec"
+checksum = "sha256:2d50765eb58591ce35146c54ca032a257808d2165d8985a8522c70ea1470e8d7"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.16.Final",
-  "io.netty:netty-codec-base:jar:@4.2.16.Final",
-  "io.netty:netty-codec-compression:jar:@4.2.16.Final",
-  "io.netty:netty-common:jar:@4.2.16.Final",
-  "io.netty:netty-handler:jar:@4.2.16.Final",
-  "io.netty:netty-transport:jar:@4.2.16.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-codec-base:jar:@4.2.18.Final",
+  "io.netty:netty-codec-compression:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-handler:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-codec-marshalling:jar:"
-version  = "4.2.16.Final"
+version  = "4.2.18.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:9691818c6e59a97e454f8381c86dfe840302168d985098a278dca07781efc75e"
+checksum = "sha256:eccf83cbbd1319db879424c4559d465dc43251fe1a8ff759c4320b5adbcf26b7"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.16.Final",
-  "io.netty:netty-codec-base:jar:@4.2.16.Final",
-  "io.netty:netty-common:jar:@4.2.16.Final",
-  "io.netty:netty-transport:jar:@4.2.16.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-codec-base:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-codec-protobuf:jar:"
-version  = "4.2.16.Final"
+version  = "4.2.18.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:bb66f23ccb543dd842ddda91b6c8e97e222220d2efa5459f6a46a22ade3b2170"
+checksum = "sha256:1bcaedd0da94f8579477f0848e910c24aced8b1ed7c3e1bff16d56fd0229b516"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.16.Final",
-  "io.netty:netty-codec-base:jar:@4.2.16.Final",
-  "io.netty:netty-common:jar:@4.2.16.Final",
-  "io.netty:netty-transport:jar:@4.2.16.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-codec-base:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-codec:jar:"
-version  = "4.2.16.Final"
+version  = "4.2.18.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:41868bcc428954e707e39a30686ceddc0bd238391d3989d04dfb72d5f0735926"
+checksum = "sha256:439645eb5061f8f50fbf27afacce394e4cecc4d373e1f7a384837e4661d5f430"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.16.Final",
-  "io.netty:netty-codec-base:jar:@4.2.16.Final",
-  "io.netty:netty-codec-compression:jar:@4.2.16.Final",
-  "io.netty:netty-codec-marshalling:jar:@4.2.16.Final",
-  "io.netty:netty-codec-protobuf:jar:@4.2.16.Final",
-  "io.netty:netty-common:jar:@4.2.16.Final",
-  "io.netty:netty-transport:jar:@4.2.16.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-codec-base:jar:@4.2.18.Final",
+  "io.netty:netty-codec-compression:jar:@4.2.18.Final",
+  "io.netty:netty-codec-marshalling:jar:@4.2.18.Final",
+  "io.netty:netty-codec-protobuf:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-common:jar:"
-version  = "4.2.16.Final"
+version  = "4.2.18.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:9825ee68a0dc4cd2b53e2f532502401b2211bad9b77e8b04882d9e64487283ff"
+checksum = "sha256:5d97cae5669685872339698efe13f74fe3cdb2dccdb36963b2352bd95acf7070"
 scopes   = ["main"]
 
 [[artifact]]
 name     = "io.netty:netty-handler:jar:"
-version  = "4.2.16.Final"
+version  = "4.2.18.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:a259ca496da05ac1981f95cd856211f894a328056a6129e9cd70dbbd5df401f7"
+checksum = "sha256:6d5a08d9dd6d7d0211202e22dbb1629b23a62550335c7e80892da1d4cb115540"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.16.Final",
-  "io.netty:netty-codec-base:jar:@4.2.16.Final",
-  "io.netty:netty-common:jar:@4.2.16.Final",
-  "io.netty:netty-resolver:jar:@4.2.16.Final",
-  "io.netty:netty-transport-native-unix-common:jar:@4.2.16.Final",
-  "io.netty:netty-transport:jar:@4.2.16.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-codec-base:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-resolver:jar:@4.2.18.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-resolver:jar:"
-version  = "4.2.16.Final"
+version  = "4.2.18.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:c9eca6a99036485cf1d186b4a6a595b0a54c53808319ee03924270eae04c32bb"
+checksum = "sha256:68373ec544cf769ba17bf2ef455166d98f2c260dff536edf35ef57067a9c155f"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-common:jar:@4.2.16.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-transport-classes-epoll:jar:"
-version  = "4.2.16.Final"
+version  = "4.2.18.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:9f2b53210db9c8d24e787ed43f3896aaf30d686ed270c7afbb29ab6330c6aa23"
+checksum = "sha256:3677ca998f3db749d3fdb0fb1b1674f9809f4fbe8f819a346f4858dfb16c4d95"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.16.Final",
-  "io.netty:netty-common:jar:@4.2.16.Final",
-  "io.netty:netty-transport-native-unix-common:jar:@4.2.16.Final",
-  "io.netty:netty-transport:jar:@4.2.16.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-transport-classes-kqueue:jar:"
-version  = "4.2.16.Final"
+version  = "4.2.18.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:6599b495f69420cb240ab0a1aa60a19a2df3bc72791729170e0993727637a689"
+checksum = "sha256:be48ee5b8a2328a1f4f2160270344175612dd9567787727de0dbaecb694beb51"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.16.Final",
-  "io.netty:netty-common:jar:@4.2.16.Final",
-  "io.netty:netty-transport-native-unix-common:jar:@4.2.16.Final",
-  "io.netty:netty-transport:jar:@4.2.16.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-transport-native-epoll:jar:"
-version  = "4.2.16.Final"
+version  = "4.2.18.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:4e616ae5df3aefee2bbac34cce7290fcaede74593f8cf0a7241d0388fef20e9f"
+checksum = "sha256:15efbb26cde751e9bab669cc52da5e909f41626f9e04378e2c4cd61202d1359e"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.16.Final",
-  "io.netty:netty-common:jar:@4.2.16.Final",
-  "io.netty:netty-transport-classes-epoll:jar:@4.2.16.Final",
-  "io.netty:netty-transport-native-unix-common:jar:@4.2.16.Final",
-  "io.netty:netty-transport:jar:@4.2.16.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport-classes-epoll:jar:@4.2.18.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-transport-native-kqueue:jar:"
-version  = "4.2.16.Final"
+version  = "4.2.18.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:58fb194ead6d5144c63d71fc5c5b00b9857ea3339a7403b71c7954d6809a513c"
+checksum = "sha256:4ee651cdac49aedac42d0d22e726cb4a578f0c02286fc041153ec58925cac818"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.16.Final",
-  "io.netty:netty-common:jar:@4.2.16.Final",
-  "io.netty:netty-transport-classes-kqueue:jar:@4.2.16.Final",
-  "io.netty:netty-transport-native-unix-common:jar:@4.2.16.Final",
-  "io.netty:netty-transport:jar:@4.2.16.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport-classes-kqueue:jar:@4.2.18.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-transport-native-unix-common:jar:"
-version  = "4.2.16.Final"
+version  = "4.2.18.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:41ca8fe192083d17917be7ddcecded4da4fc1db1d1656d03d0bcb14e2f431155"
+checksum = "sha256:cada7023d09136af128511ca94421d69dc84d0f1f64c9e1f127a1271bb62932a"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.16.Final",
-  "io.netty:netty-common:jar:@4.2.16.Final",
-  "io.netty:netty-transport:jar:@4.2.16.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-transport:jar:"
-version  = "4.2.16.Final"
+version  = "4.2.18.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:cfa3f654caff906653385f4b7ddaa539d795b78f5711a622482b17d2b73484c0"
+checksum = "sha256:eac4f12068db4489e60c6520fad663e5d872f0436a7c641aa9e08db649947863"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.16.Final",
-  "io.netty:netty-common:jar:@4.2.16.Final",
-  "io.netty:netty-resolver:jar:@4.2.16.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-resolver:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
 name     = "net.bytebuddy:byte-buddy-agent:jar:"
-version  = "1.18.11-jdk5"
+version  = "1.18.13-jdk5"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:870aa53eec815ea009b642c829942d97938d15c19c1b25d2fd6f0e79d2755713"
+checksum = "sha256:76ada1b597219f42fbb05ff80553fa3d1f3a19998d44ac29714865b75a4043cd"
 scopes   = ["test"]
 
 [[artifact]]
 name     = "net.bytebuddy:byte-buddy:jar:"
-version  = "1.18.11-jdk5"
+version  = "1.18.13-jdk5"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:a178d5a44788a8461bc0b1cfb484aa69657077ba24d36438a1098e2e02efd2f0"
+checksum = "sha256:4c3ba3487fe10851bd9e1218091c32e8aae0187ee2f257298d9900ab906c5391"
 scopes   = ["test"]
 
 [[artifact]]
@@ -971,14 +977,14 @@ scopes   = ["test"]
 
 [[artifact]]
 name     = "org.apache.httpcomponents.client5:httpclient5:jar:"
-version  = "5.6.3"
+version  = "5.6.4"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:80712ff129210d7c73d9fcc1195cbee5c3c34744965c7a05ea107b3648922f18"
+checksum = "sha256:bdef5f8841145cd76c4c605ff301bc840eea0d5292332b7b892a93316c0d8ee1"
 scopes   = ["test"]
 deps = [
   "org.apache.httpcomponents.core5:httpcore5-h2:jar:@5.4.3",
   "org.apache.httpcomponents.core5:httpcore5:jar:@5.4.3",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "org.slf4j:slf4j-api:jar:@2.0.19",
 ]
 
 [[artifact]]
@@ -1021,54 +1027,56 @@ scopes   = ["test"]
 
 [[artifact]]
 name     = "org.jetbrains.exposed:exposed-core:jar:"
-version  = "0.57.0"
+version  = "1.5.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:9be798c157da3148a8c811885a890d82cff300430c30f185b6d8fbfef70ce8a2"
+checksum = "sha256:007939746e1c7d267cbce277532874f8468cf2b3de7fc1dc1cf8953389fe3a88"
 scopes   = ["main"]
 deps = [
-  "org.jetbrains.kotlin:kotlin-reflect:jar:@2.4.10",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-reflect:jar:@2.4.20",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "org.jetbrains.kotlinx:kotlinx-datetime-jvm:jar:@0.8.0-0.6.x-compat",
+  "org.slf4j:slf4j-api:jar:@2.0.19",
 ]
 
 [[artifact]]
 name     = "org.jetbrains.exposed:exposed-dao:jar:"
-version  = "0.57.0"
+version  = "1.5.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:c8d3acbb0265ec86f64cdce39e62a237a503189e78bb5740cc25078d3af0260c"
+checksum = "sha256:a0b5e635274cc06d067f40dee136b75a427014beae49676b1108b194a6152f55"
 scopes   = ["main"]
 deps = [
-  "org.jetbrains.exposed:exposed-core:jar:@0.57.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.exposed:exposed-core:jar:@1.5.0",
+  "org.jetbrains.exposed:exposed-jdbc:jar:@1.5.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "org.jetbrains.exposed:exposed-jdbc:jar:"
-version  = "0.57.0"
+version  = "1.5.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:74a3197771ede63e551b08708797f5a710736f9fb360833ad249c2459b9af852"
+checksum = "sha256:26ef0fc526a6d399917b28fb419b0a9ffa3f2fda5bcf4243a2a2ed0690e1a0e4"
 scopes   = ["main"]
 deps = [
-  "org.jetbrains.exposed:exposed-core:jar:@0.57.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.exposed:exposed-core:jar:@1.5.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "org.jetbrains.kotlin:kotlin-reflect:jar:"
-version  = "2.4.10"
+version  = "2.4.20"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:25a1aef7454d46548ecaaf51021b0e52e38141a62ed75af124da109b7324c4e5"
+checksum = "sha256:b4aac2a4686ffdc110602ce153e4a90ffd7f37fa86fcca9d3b3aa39c08f8c2fc"
 scopes   = ["main", "test"]
 deps = [
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "org.jetbrains.kotlin:kotlin-stdlib:jar:"
-version  = "2.4.10"
+version  = "2.4.20"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:4ec0293bc3751423b203f1d8493251c57c42e73eb6377a6b8560d0974ff0a6df"
+checksum = "sha256:2226de463d309d4a5500a481320b3dea515a6981dcae1def531fbc158884e25f"
 scopes   = ["main", "test"]
 deps = [
   "org.jetbrains:annotations:jar:@26.1.0",
@@ -1076,12 +1084,12 @@ deps = [
 
 [[artifact]]
 name     = "org.jetbrains.kotlin:kotlin-test:jar:"
-version  = "2.4.10"
+version  = "2.4.20"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:5d334a7b17ce9b223e4db35e355f0082fb0551d36c0424a599bf35686ba2ab7b"
+checksum = "sha256:fa281d657898a34f6b0c7383f374f0a0161e61b6cea0095f135d917721d63f22"
 scopes   = ["test"]
 deps = [
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -1091,14 +1099,14 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:d1d75aa01dffbb4d1c520e67e4c4e7f5f6174718e7cb4632412503f2f0e604fa"
 scopes   = ["main", "test"]
 deps = [
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains:annotations:jar:@26.1.0",
 ]
 
 [[artifact]]
 name     = "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:"
 version  = "1.11.0"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
@@ -1111,11 +1119,11 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:8de3d5f6f938e58a5bca46270a8ef6448c99548510be7e3f798bca813462afcf"
 scopes   = ["test"]
 deps = [
-  "net.bytebuddy:byte-buddy-agent:jar:@1.18.11-jdk5",
-  "net.bytebuddy:byte-buddy:jar:@1.18.11-jdk5",
+  "net.bytebuddy:byte-buddy-agent:jar:@1.18.13-jdk5",
+  "net.bytebuddy:byte-buddy:jar:@1.18.13-jdk5",
   "net.java.dev.jna:jna-platform:jar:@5.19.1",
   "net.java.dev.jna:jna:jar:@5.19.1",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
 ]
 
@@ -1126,9 +1134,9 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:1043471e7d5f99680df3a056cf766276e0fe339e48030dea503fc1c94c33743e"
 scopes   = ["test"]
 deps = [
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "org.slf4j:slf4j-api:jar:@2.0.19",
 ]
 
 [[artifact]]
@@ -1138,9 +1146,19 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:d4f7ee71da708af4719dceb6d3200c8f9dc5146ea1a812cb628ed53c64196f96"
 scopes   = ["test"]
 deps = [
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
   "org.jetbrains:annotations:jar:@26.1.0",
+]
+
+[[artifact]]
+name     = "org.jetbrains.kotlinx:kotlinx-datetime-jvm:jar:"
+version  = "0.8.0-0.6.x-compat"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:c764cb4882bb30a5b4279e07324ef60ed4f82f23a7bb420ee62550266d0f6162"
+scopes   = ["main"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -1150,16 +1168,16 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:8589de0b7c476bfdd02a24641685f609ade72f5e595cf2909c168acdba7e6ba4"
 scopes   = ["main", "test"]
 deps = [
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "org.jetbrains.kotlinx:kotlinx-io-bytestring:jar:"
 version  = "0.9.1"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-io-bytestring-jvm:jar:@0.9.1",
 ]
 
@@ -1170,17 +1188,17 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:765d8851d8ca694706931331b92386844800867e041b720f1f193dbda874d370"
 scopes   = ["main", "test"]
 deps = [
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-io-bytestring-jvm:jar:@0.9.1",
 ]
 
 [[artifact]]
 name     = "org.jetbrains.kotlinx:kotlinx-io-core:jar:"
 version  = "0.9.1"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-io-bytestring:jar:@0.9.1",
   "org.jetbrains.kotlinx:kotlinx-io-core-jvm:jar:@0.9.1",
 ]
@@ -1192,13 +1210,13 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:f4a801c647d4351327cd9e1ac4113e2be9ea37a64ab0abae269c25a52e28f35d"
 scopes   = ["main", "test"]
 deps = [
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "org.jetbrains.kotlinx:kotlinx-serialization-core:jar:"
 version  = "1.11.0"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:@1.11.0",
@@ -1220,59 +1238,59 @@ scopes   = ["test"]
 
 [[artifact]]
 name     = "org.junit.jupiter:junit-jupiter-api:jar:"
-version  = "6.1.2"
+version  = "6.1.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:e60794b7d94e03c4bca1c0833cfca18762da5eaac0a61b16281cbbb708103e4c"
+checksum = "sha256:555d6cf20fa1710884dd01b86cc5785397ba73e21ada2d4b784f5f1a14dcafc4"
 scopes   = ["test"]
 deps = [
   "org.apiguardian:apiguardian-api:jar:@1.1.2",
   "org.jspecify:jspecify:jar:@1.0.1",
-  "org.junit.platform:junit-platform-commons:jar:@6.1.2",
+  "org.junit.platform:junit-platform-commons:jar:@6.1.3",
   "org.opentest4j:opentest4j:jar:@1.3.0",
 ]
 
 [[artifact]]
 name     = "org.junit.jupiter:junit-jupiter-engine:jar:"
-version  = "6.1.2"
+version  = "6.1.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:57227ce289ed84ab205136997d2e5117f6cc695a16b7e235d59f70cdf33c3d7a"
+checksum = "sha256:414559e78bbfa3bdb2eab009ac3ab1e22369ac31117c270a0bd666da115c5c6c"
 scopes   = ["test"]
 deps = [
   "org.apiguardian:apiguardian-api:jar:@1.1.2",
   "org.jspecify:jspecify:jar:@1.0.1",
-  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.2",
-  "org.junit.platform:junit-platform-engine:jar:@6.1.2",
+  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3",
+  "org.junit.platform:junit-platform-engine:jar:@6.1.3",
 ]
 
 [[artifact]]
 name     = "org.junit.jupiter:junit-jupiter-params:jar:"
-version  = "6.1.2"
+version  = "6.1.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:c1ed2164f6ba388518757b38f219dbe350ac098afcd126cbcbd6256fb99666ae"
+checksum = "sha256:05c51cedba2c06a9770707391e006cee825876937dea580b94a265ce145d4939"
 scopes   = ["test"]
 deps = [
   "org.apiguardian:apiguardian-api:jar:@1.1.2",
   "org.jspecify:jspecify:jar:@1.0.1",
-  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.2",
+  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3",
 ]
 
 [[artifact]]
 name     = "org.junit.jupiter:junit-jupiter:jar:"
-version  = "6.1.2"
+version  = "6.1.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:2a7877196573a1d32fa726313deffdde2e90cca764647e605093020b08973616"
+checksum = "sha256:6b0a14075c74221de53047e363860b7d19fce802bebc152df2c35c4089c6c379"
 scopes   = ["test"]
 deps = [
-  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.2",
-  "org.junit.jupiter:junit-jupiter-engine:jar:@6.1.2",
-  "org.junit.jupiter:junit-jupiter-params:jar:@6.1.2",
+  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3",
+  "org.junit.jupiter:junit-jupiter-engine:jar:@6.1.3",
+  "org.junit.jupiter:junit-jupiter-params:jar:@6.1.3",
 ]
 
 [[artifact]]
 name     = "org.junit.platform:junit-platform-commons:jar:"
-version  = "6.1.2"
+version  = "6.1.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:204894c039d321743ee11e7d1dc8360170d7c64391fbea1211178a645c33a92a"
+checksum = "sha256:a4774ae923c109544034aeae7c762cf017fbcdd1342403ba90e0921984b608c3"
 scopes   = ["test"]
 deps = [
   "org.apiguardian:apiguardian-api:jar:@1.1.2",
@@ -1281,27 +1299,27 @@ deps = [
 
 [[artifact]]
 name     = "org.junit.platform:junit-platform-engine:jar:"
-version  = "6.1.2"
+version  = "6.1.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:484e90828846ad6b88efe226b6fe014a75941b32b226e914d9a7758802f46f91"
+checksum = "sha256:21ad7ad3a35beda16387979317be1833a72a71d812f9a66ee4b9a7bafb56334c"
 scopes   = ["test"]
 deps = [
   "org.apiguardian:apiguardian-api:jar:@1.1.2",
   "org.jspecify:jspecify:jar:@1.0.1",
-  "org.junit.platform:junit-platform-commons:jar:@6.1.2",
+  "org.junit.platform:junit-platform-commons:jar:@6.1.3",
   "org.opentest4j:opentest4j:jar:@1.3.0",
 ]
 
 [[artifact]]
 name     = "org.junit.platform:junit-platform-launcher:jar:"
-version  = "6.1.2"
+version  = "6.1.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:858197212c1b2acc257c9eec9b450a31923c61c1bc61e66acf0057d57bbe577a"
+checksum = "sha256:1dec64b1fc0b7c47a11302aa5b4d37d8160c041b396e27067709ce775601a7b6"
 scopes   = ["test"]
 deps = [
   "org.apiguardian:apiguardian-api:jar:@1.1.2",
   "org.jspecify:jspecify:jar:@1.0.1",
-  "org.junit.platform:junit-platform-engine:jar:@6.1.2",
+  "org.junit.platform:junit-platform-engine:jar:@6.1.3",
 ]
 
 [[artifact]]
@@ -1313,34 +1331,36 @@ scopes   = ["test"]
 
 [[artifact]]
 name     = "org.slf4j:slf4j-api:jar:"
-version  = "2.0.18"
+version  = "2.0.19"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:44508fd1576500688c790b190acdd16fec4f8c79a3e0b900afd70503cf055f55"
+checksum = "sha256:e91ff6d720609e7a194ffe758c3ed5c84e798617ae07b0a0f6a4fe229741b4bb"
 scopes   = ["main", "test"]
+
+[[plugin]]
+coordinate = "cc.jumpkick.guards:monorepo"
+version    = "0.13.2"
+checksum   = "sha256:68be2a3aac3f8ccd9732623872de6cdcc68da7edd66d9c036c1847096f511b88"
 
 [[module]]
 path    = "."
 group   = "com.example"
 name    = "ktor-petshop"
 version = "0.1.0"
-java    = 21
-kotlin  = "2.2.0"
-layout  = "traditional"
+java    = 25
+kotlin  = "latest"
 
 [[module]]
 path    = "app"
 group   = "com.example"
 name    = "ktor-petshop-app"
 version = "0.1.0"
-java    = 21
-kotlin  = "2.2.0"
-layout  = "traditional"
+java    = 25
+kotlin  = "latest"
 
 [[module]]
 path    = "domain"
 group   = "com.example"
 name    = "ktor-petshop-domain"
 version = "0.1.0"
-java    = 21
-kotlin  = "2.2.0"
-layout  = "traditional"
+java    = 25
+kotlin  = "latest"

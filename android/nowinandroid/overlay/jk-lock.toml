@@ -1,10 +1,14 @@
 version = 1
-generated-by = "jk 0.11.0"
+generated-by = "jk 0.13.2"
 resolution-algorithm = "pubgrub-v1"
-kotlin = "2.4.10"
-jk = { version = "0.11.0", sha256 = "82cd11616581dc98a1580bba089cee9ea4344740dd31254a8156165a9fafcc2f" }
-manifests-sha256 = "b4d3e889c9ab1dc773c1e04d75581a5ae53bf549e5c8a3305afa8b1de9bf498b"
-project-id = "7a8f0ddabd0d4638fab40c8b21bb9bf5"
+kotlin = "2.4.20"
+jk-min = "0.12.0"
+manifests-sha256 = "964629be2b026431465b9761845af91bec72458d257ac955e021d2f3ef0c19fe"
+project-id = "2d22aa92728d217c54eba54e6bc7ebdf"
+
+[jdk]
+suggested-vendor = "temurin"
+suggested-version = "25.0.4.1"
 
 [[artifact]]
 name     = "androidx.activity:activity-compose:aar:"
@@ -25,7 +29,7 @@ deps = [
   "androidx.lifecycle:lifecycle-viewmodel:jar:@2.11.0",
   "androidx.navigationevent:navigationevent-compose:jar:@1.1.2",
   "androidx.savedstate:savedstate:jar:@1.4.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
 ]
 
@@ -48,7 +52,7 @@ deps = [
   "androidx.lifecycle:lifecycle-viewmodel:jar:@2.11.0",
   "androidx.navigationevent:navigationevent-compose:jar:@1.1.2",
   "androidx.savedstate:savedstate:jar:@1.4.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
 ]
 
@@ -64,7 +68,7 @@ deps = [
   "androidx.lifecycle:lifecycle-runtime-ktx:jar:@2.11.0",
   "androidx.lifecycle:lifecycle-viewmodel-ktx:aar:@2.11.0",
   "androidx.savedstate:savedstate-ktx:aar:@1.4.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -86,7 +90,7 @@ deps = [
   "androidx.profileinstaller:profileinstaller:aar:@1.4.1",
   "androidx.savedstate:savedstate:jar:@1.4.0",
   "androidx.tracing:tracing:jar:@1.3.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
 ]
 
@@ -109,7 +113,7 @@ deps = [
   "androidx.profileinstaller:profileinstaller:aar:@1.4.1",
   "androidx.savedstate:savedstate:jar:@1.4.0",
   "androidx.tracing:tracing:jar:@1.3.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
 ]
 
@@ -121,7 +125,7 @@ checksum = "sha256:86ca66e1b758b439918140f87f6513d4d806d3d5637dfdac04495f3b1f5ed
 path     = "annotation-experimental-1.6.0.aar"
 scopes   = ["main"]
 deps = [
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -132,7 +136,7 @@ checksum = "sha256:86ca66e1b758b439918140f87f6513d4d806d3d5637dfdac04495f3b1f5ed
 path     = "annotation-experimental-1.6.0.aar"
 scopes   = ["main"]
 deps = [
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -142,17 +146,17 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:ddd072ddbb553178e205517ce777b2f05aa9e412982d9ecb4eedc74f1212f697"
 scopes   = ["main", "processor"]
 deps = [
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "androidx.annotation:annotation:jar:"
 version  = "1.10.0"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation-jvm:jar:@1.10.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -172,10 +176,10 @@ deps = [
 
 [[artifact]]
 name     = "androidx.appcompat:appcompat-resources:aar:"
-version  = "1.7.1"
+version  = "1.8.0"
 source   = "google+https://dl.google.com/dl/android/maven2/"
-checksum = "sha256:8e2db31224ca53b108c784da2b361959062716d416b210cfef3d5a3828306df0"
-path     = "appcompat-resources-1.7.1.aar"
+checksum = "sha256:3fe48cc3df409bed03063a4f5f5f9f8c51f1d63ea9e88d41e6489bf58495a5af"
+path     = "appcompat-resources-1.8.0.aar"
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation:jar:@1.10.0",
@@ -183,6 +187,8 @@ deps = [
   "androidx.core:core:aar:@1.19.0",
   "androidx.vectordrawable:vectordrawable-animated:aar:@1.2.0",
   "androidx.vectordrawable:vectordrawable:aar:@1.2.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
+  "org.jspecify:jspecify:jar:@1.0.1",
 ]
 
 [[artifact]]
@@ -209,7 +215,34 @@ deps = [
   "androidx.profileinstaller:profileinstaller:aar:@1.4.1",
   "androidx.resourceinspection:resourceinspection-annotation:jar:@1.0.1",
   "androidx.savedstate:savedstate:jar:@1.4.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
+]
+
+[[artifact]]
+name     = "androidx.appcompat:appcompat:aar:"
+version  = "1.7.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:67189713b30a3fab6971713cc5fab1cb7f022bcf648a257563715c91d719d584"
+path     = "appcompat-1.7.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.activity:activity:aar:@1.13.0",
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.appcompat:appcompat-resources:aar:@1.7.0",
+  "androidx.collection:collection:jar:@1.6.0",
+  "androidx.core:core-ktx:aar:@1.19.0",
+  "androidx.core:core:aar:@1.19.0",
+  "androidx.cursoradapter:cursoradapter:aar:@1.0.0",
+  "androidx.drawerlayout:drawerlayout:aar:@1.2.0",
+  "androidx.emoji2:emoji2-views-helper:aar:@1.6.0",
+  "androidx.emoji2:emoji2:aar:@1.6.0",
+  "androidx.fragment:fragment:aar:@1.8.9",
+  "androidx.lifecycle:lifecycle-runtime:jar:@2.11.0",
+  "androidx.lifecycle:lifecycle-viewmodel:jar:@2.11.0",
+  "androidx.profileinstaller:profileinstaller:aar:@1.4.1",
+  "androidx.resourceinspection:resourceinspection-annotation:jar:@1.0.1",
+  "androidx.savedstate:savedstate:jar:@1.4.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -282,7 +315,7 @@ checksum = "sha256:839fcec147704611a222159fa84e3e062f68eee80caa549ddd1222d5210a1
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation-jvm:jar:@1.10.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jspecify:jspecify:jar:@1.0.1",
 ]
 
@@ -294,18 +327,18 @@ checksum = "sha256:939b4a8697640e77d83e4e8b4c4a9d18f8130198c5961194af8dd9db9dc7c
 scopes   = ["main"]
 deps = [
   "androidx.collection:collection-jvm:jar:@1.6.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "androidx.collection:collection:jar:"
 version  = "1.6.0"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation:jar:@1.10.0",
   "androidx.collection:collection-jvm:jar:@1.6.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -327,7 +360,7 @@ deps = [
   "androidx.compose.ui:ui-geometry-android:aar:@1.12.0-rc01",
   "androidx.compose.ui:ui-graphics-android:aar:@1.12.0-rc01",
   "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -349,7 +382,7 @@ deps = [
   "androidx.compose.ui:ui-geometry-android:aar:@1.12.0-rc01",
   "androidx.compose.ui:ui-graphics-android:aar:@1.12.0-rc01",
   "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -368,7 +401,7 @@ deps = [
   "androidx.compose.ui:ui-graphics-android:aar:@1.12.0-rc01",
   "androidx.compose.ui:ui-unit-android:aar:@1.12.0-rc01",
   "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
 ]
 
@@ -388,26 +421,26 @@ deps = [
   "androidx.compose.ui:ui-graphics-android:aar:@1.12.0-rc01",
   "androidx.compose.ui:ui-unit-android:aar:@1.12.0-rc01",
   "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
 ]
 
 [[artifact]]
 name     = "androidx.compose.animation:animation-core:jar:"
 version  = "1.12.0-rc01"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 scopes   = ["main"]
 deps = [
   "androidx.compose.animation:animation-core-android:jar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
 ]
 
 [[artifact]]
 name     = "androidx.compose.animation:animation:jar:"
 version  = "1.12.0-rc01"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 scopes   = ["main"]
 deps = [
@@ -416,7 +449,7 @@ deps = [
   "androidx.compose.foundation:foundation-layout:jar:@1.12.0-rc01",
   "androidx.compose.runtime:runtime:jar:@1.12.0-rc01",
   "androidx.compose.ui:ui-geometry:jar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -439,7 +472,7 @@ deps = [
   "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
   "androidx.core:core:aar:@1.19.0",
   "androidx.emoji2:emoji2:aar:@1.6.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -462,7 +495,7 @@ deps = [
   "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
   "androidx.core:core:aar:@1.19.0",
   "androidx.emoji2:emoji2:aar:@1.6.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -483,7 +516,7 @@ deps = [
   "androidx.compose.ui:ui-unit-android:aar:@1.12.0-rc01",
   "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
   "androidx.core:core:aar:@1.19.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -504,25 +537,25 @@ deps = [
   "androidx.compose.ui:ui-unit-android:aar:@1.12.0-rc01",
   "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
   "androidx.core:core:aar:@1.19.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "androidx.compose.foundation:foundation-layout:jar:"
 version  = "1.12.0-rc01"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 scopes   = ["main"]
 deps = [
   "androidx.compose.foundation:foundation-layout-android:jar:@1.12.0-rc01",
   "androidx.compose.ui:ui:jar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "androidx.compose.foundation:foundation:jar:"
 version  = "1.12.0-rc01"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 scopes   = ["main"]
 deps = [
@@ -531,7 +564,7 @@ deps = [
   "androidx.compose.foundation:foundation-android:jar:@1.12.0-rc01",
   "androidx.compose.runtime:runtime:jar:@1.12.0-rc01",
   "androidx.compose.ui:ui:jar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -549,7 +582,7 @@ deps = [
   "androidx.compose.ui:ui-android:aar:@1.12.0-rc01",
   "androidx.window:window-core-android:aar:@1.5.1",
   "androidx.window:window:aar:@1.5.1",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -567,7 +600,7 @@ deps = [
   "androidx.compose.ui:ui-android:aar:@1.12.0-rc01",
   "androidx.window:window-core-android:aar:@1.5.1",
   "androidx.window:window:aar:@1.5.1",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -591,7 +624,7 @@ deps = [
   "androidx.compose.ui:ui-geometry-android:aar:@1.12.0-rc01",
   "androidx.core:core:aar:@1.19.0",
   "androidx.window:window-core-android:aar:@1.5.1",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -615,13 +648,13 @@ deps = [
   "androidx.compose.ui:ui-geometry-android:aar:@1.12.0-rc01",
   "androidx.core:core:aar:@1.19.0",
   "androidx.window:window-core-android:aar:@1.5.1",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "androidx.compose.material3.adaptive:adaptive-layout:jar:"
 version  = "1.3.0-rc01"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 scopes   = ["main"]
 deps = [
@@ -629,7 +662,7 @@ deps = [
   "androidx.compose.material3.adaptive:adaptive-layout-android:jar:@1.3.0-rc01",
   "androidx.compose.material3.adaptive:adaptive:jar:@1.3.0-rc01",
   "androidx.compose.ui:ui:jar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -647,7 +680,7 @@ deps = [
   "androidx.compose.foundation:foundation-android:aar:@1.12.0-rc01",
   "androidx.compose.material3.adaptive:adaptive-layout-android:aar:@1.3.0-rc01",
   "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -665,7 +698,7 @@ deps = [
   "androidx.compose.foundation:foundation-android:aar:@1.12.0-rc01",
   "androidx.compose.material3.adaptive:adaptive-layout-android:aar:@1.3.0-rc01",
   "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -683,44 +716,44 @@ deps = [
   "androidx.compose.material3.adaptive:adaptive-navigation-android:aar:@1.3.0-rc01",
   "androidx.navigation3:navigation3-ui-android:aar:@1.0.1",
   "androidx.navigationevent:navigationevent-compose-android:aar:@1.1.2",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "androidx.compose.material3.adaptive:adaptive-navigation3:jar:"
 version  = "1.3.0-rc01"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 scopes   = ["main"]
 deps = [
   "androidx.compose.material3.adaptive:adaptive-navigation3-android:jar:@1.3.0-rc01",
   "androidx.compose.material3.adaptive:adaptive-navigation:jar:@1.3.0-rc01",
   "androidx.navigation3:navigation3-ui:jar:@1.0.1",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "androidx.compose.material3.adaptive:adaptive-navigation:jar:"
 version  = "1.3.0-rc01"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 scopes   = ["main"]
 deps = [
   "androidx.compose.material3.adaptive:adaptive-layout:jar:@1.3.0-rc01",
   "androidx.compose.material3.adaptive:adaptive-navigation-android:jar:@1.3.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "androidx.compose.material3.adaptive:adaptive:jar:"
 version  = "1.3.0-rc01"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 scopes   = ["main"]
 deps = [
   "androidx.compose.material3.adaptive:adaptive-android:jar:@1.3.0-rc01",
   "androidx.window:window-core:jar:@1.5.1",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -737,20 +770,20 @@ deps = [
   "androidx.compose.material3.adaptive:adaptive-android:aar:@1.3.0-rc01",
   "androidx.compose.material3:material3-android:aar:@1.5.0-alpha25",
   "androidx.window:window-core-android:aar:@1.5.1",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "androidx.compose.material3:material3-adaptive-navigation-suite:jar:"
 version  = "1.5.0-alpha25"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 scopes   = ["main"]
 deps = [
   "androidx.compose.material3.adaptive:adaptive:jar:@1.3.0-rc01",
   "androidx.compose.material3:material3-adaptive-navigation-suite-android:jar:@1.5.0-alpha25",
   "androidx.compose.material3:material3:jar:@1.5.0-alpha25",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -777,7 +810,7 @@ deps = [
   "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
   "androidx.graphics:graphics-shapes-android:aar:@1.1.0",
   "androidx.lifecycle:lifecycle-common-java8:jar:@2.11.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -804,7 +837,7 @@ deps = [
   "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
   "androidx.graphics:graphics-shapes-android:aar:@1.1.0",
   "androidx.lifecycle:lifecycle-common-java8:jar:@2.11.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -821,7 +854,7 @@ deps = [
   "androidx.compose.foundation:foundation-android:aar:@1.12.0-rc01",
   "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
   "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -839,13 +872,13 @@ deps = [
   "androidx.compose.ui:ui-unit-android:aar:@1.12.0-rc01",
   "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
   "androidx.window:window:aar:@1.5.1",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "androidx.compose.material3:material3-window-size-class:jar:"
 version  = "1.5.0-alpha25"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 scopes   = ["main"]
 deps = [
@@ -853,13 +886,13 @@ deps = [
   "androidx.compose.runtime:runtime:jar:@1.12.0-rc01",
   "androidx.compose.ui:ui-unit:jar:@1.12.0-rc01",
   "androidx.compose.ui:ui:jar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "androidx.compose.material3:material3:jar:"
 version  = "1.5.0-alpha25"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 scopes   = ["main"]
 deps = [
@@ -871,7 +904,7 @@ deps = [
   "androidx.compose.ui:ui-text:jar:@1.12.0-rc01",
   "androidx.compose.ui:ui:jar:@1.12.0-rc01",
   "androidx.graphics:graphics-shapes:jar:@1.1.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -884,14 +917,14 @@ path     = "material-icons-core-android-1.7.8.aar"
 scopes   = ["main"]
 deps = [
   "androidx.compose.ui:ui-android:jar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib-common:jar:@2.4.10",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib-common:jar:@2.4.20",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "androidx.compose.material:material-icons-core:jar:"
 version  = "1.7.8"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 scopes   = ["main"]
 deps = [
@@ -909,13 +942,13 @@ path     = "material-icons-extended-android-1.7.8.aar"
 scopes   = ["main"]
 deps = [
   "androidx.compose.material:material-icons-core-android:jar:@1.7.8",
-  "org.jetbrains.kotlin:kotlin-stdlib-common:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib-common:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "androidx.compose.material:material-icons-extended:jar:"
 version  = "1.7.8"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 scopes   = ["main"]
 deps = [
@@ -937,7 +970,7 @@ deps = [
   "androidx.compose.foundation:foundation-android:aar:@1.12.0-rc01",
   "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
   "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -954,20 +987,20 @@ deps = [
   "androidx.compose.foundation:foundation-android:aar:@1.12.0-rc01",
   "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
   "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "androidx.compose.material:material-ripple:jar:"
 version  = "1.12.0-rc01"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 scopes   = ["main"]
 deps = [
   "androidx.compose.foundation:foundation:jar:@1.12.0-rc01",
   "androidx.compose.material:material-ripple-android:jar:@1.12.0-rc01",
   "androidx.compose.runtime:runtime:jar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -982,7 +1015,7 @@ deps = [
   "androidx.annotation:annotation-experimental:aar:@1.6.0",
   "androidx.collection:collection-jvm:jar:@1.6.0",
   "androidx.compose.runtime:runtime-annotation-android:aar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
 ]
@@ -999,7 +1032,7 @@ deps = [
   "androidx.annotation:annotation-experimental:aar:@1.6.0",
   "androidx.collection:collection-jvm:jar:@1.6.0",
   "androidx.compose.runtime:runtime-annotation-android:aar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
 ]
@@ -1013,7 +1046,7 @@ pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 path     = "runtime-annotation-android-1.12.0-rc01.aar"
 scopes   = ["main"]
 deps = [
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -1025,18 +1058,18 @@ pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 path     = "runtime-annotation-android-1.12.0-rc01.aar"
 scopes   = ["main"]
 deps = [
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "androidx.compose.runtime:runtime-annotation:jar:"
 version  = "1.12.0-rc01"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 scopes   = ["main"]
 deps = [
   "androidx.compose.runtime:runtime-annotation-android:jar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -1050,7 +1083,7 @@ scopes   = ["main"]
 deps = [
   "androidx.collection:collection-jvm:jar:@1.6.0",
   "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
 ]
 
@@ -1065,21 +1098,21 @@ scopes   = ["main"]
 deps = [
   "androidx.collection:collection-jvm:jar:@1.6.0",
   "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
 ]
 
 [[artifact]]
 name     = "androidx.compose.runtime:runtime-retain:jar:"
 version  = "1.12.0-rc01"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 scopes   = ["main"]
 deps = [
   "androidx.collection:collection:jar:@1.6.0",
   "androidx.compose.runtime:runtime-retain-android:jar:@1.12.0-rc01",
   "androidx.compose.runtime:runtime:jar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
 ]
 
@@ -1097,7 +1130,7 @@ deps = [
   "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
   "androidx.lifecycle:lifecycle-runtime-compose-android:aar:@2.11.0",
   "androidx.savedstate:savedstate-compose-android:aar:@1.4.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -1114,13 +1147,13 @@ deps = [
   "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
   "androidx.lifecycle:lifecycle-runtime-compose-android:aar:@2.11.0",
   "androidx.savedstate:savedstate-compose-android:aar:@1.4.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "androidx.compose.runtime:runtime-saveable:jar:"
 version  = "1.12.0-rc01"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 scopes   = ["main"]
 deps = [
@@ -1129,20 +1162,20 @@ deps = [
   "androidx.compose.runtime:runtime:jar:@1.12.0-rc01",
   "androidx.lifecycle:lifecycle-runtime-compose:jar:@2.11.0",
   "androidx.savedstate:savedstate-compose:jar:@1.4.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "androidx.compose.runtime:runtime:jar:"
 version  = "1.12.0-rc01"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 scopes   = ["main"]
 deps = [
   "androidx.collection:collection:jar:@1.6.0",
   "androidx.compose.runtime:runtime-android:jar:@1.12.0-rc01",
   "androidx.compose.runtime:runtime-annotation:jar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
 ]
 
@@ -1178,7 +1211,7 @@ deps = [
   "androidx.savedstate:savedstate-compose-android:aar:@1.4.0",
   "androidx.savedstate:savedstate-ktx:aar:@1.4.0",
   "androidx.window:window:aar:@1.5.1",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
   "org.jspecify:jspecify:jar:@1.0.1",
@@ -1216,7 +1249,7 @@ deps = [
   "androidx.savedstate:savedstate-compose-android:aar:@1.4.0",
   "androidx.savedstate:savedstate-ktx:aar:@1.4.0",
   "androidx.window:window:aar:@1.5.1",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
   "org.jspecify:jspecify:jar:@1.0.1",
@@ -1234,7 +1267,7 @@ deps = [
   "androidx.annotation:annotation-jvm:jar:@1.10.0",
   "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
   "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -1249,18 +1282,18 @@ deps = [
   "androidx.annotation:annotation-jvm:jar:@1.10.0",
   "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
   "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "androidx.compose.ui:ui-geometry:jar:"
 version  = "1.12.0-rc01"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 scopes   = ["main"]
 deps = [
   "androidx.compose.ui:ui-geometry-android:jar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -1280,7 +1313,7 @@ deps = [
   "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
   "androidx.core:core:aar:@1.19.0",
   "androidx.graphics:graphics-path:aar:@1.1.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -1300,20 +1333,20 @@ deps = [
   "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
   "androidx.core:core:aar:@1.19.0",
   "androidx.graphics:graphics-path:aar:@1.1.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "androidx.compose.ui:ui-graphics:jar:"
 version  = "1.12.0-rc01"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation:jar:@1.10.0",
   "androidx.compose.ui:ui-graphics-android:jar:@1.12.0-rc01",
   "androidx.compose.ui:ui-unit:jar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -1335,7 +1368,7 @@ deps = [
   "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
   "androidx.core:core:aar:@1.19.0",
   "androidx.emoji2:emoji2:aar:@1.6.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
 ]
 
@@ -1358,21 +1391,21 @@ deps = [
   "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
   "androidx.core:core:aar:@1.19.0",
   "androidx.emoji2:emoji2:aar:@1.6.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
 ]
 
 [[artifact]]
 name     = "androidx.compose.ui:ui-text:jar:"
 version  = "1.12.0-rc01"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 scopes   = ["main"]
 deps = [
   "androidx.compose.ui:ui-graphics:jar:@1.12.0-rc01",
   "androidx.compose.ui:ui-text-android:jar:@1.12.0-rc01",
   "androidx.compose.ui:ui-unit:jar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -1386,20 +1419,20 @@ scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation-jvm:jar:@1.10.0",
   "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "androidx.compose.ui:ui-tooling-preview:jar:"
 version  = "1.12.0-rc01"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation:jar:@1.10.0",
   "androidx.compose.runtime:runtime:jar:@1.12.0-rc01",
   "androidx.compose.ui:ui-tooling-preview-android:jar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -1418,7 +1451,7 @@ deps = [
   "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
   "androidx.compose.ui:ui-geometry-android:aar:@1.12.0-rc01",
   "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -1437,20 +1470,20 @@ deps = [
   "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
   "androidx.compose.ui:ui-geometry-android:aar:@1.12.0-rc01",
   "androidx.compose.ui:ui-util-android:aar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "androidx.compose.ui:ui-unit:jar:"
 version  = "1.12.0-rc01"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation:jar:@1.10.0",
   "androidx.compose.ui:ui-geometry:jar:@1.12.0-rc01",
   "androidx.compose.ui:ui-unit-android:jar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -1465,7 +1498,7 @@ deps = [
   "androidx.annotation:annotation-experimental:aar:@1.6.0",
   "androidx.collection:collection-jvm:jar:@1.6.0",
   "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -1480,24 +1513,24 @@ deps = [
   "androidx.annotation:annotation-experimental:aar:@1.6.0",
   "androidx.collection:collection-jvm:jar:@1.6.0",
   "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "androidx.compose.ui:ui-util:jar:"
 version  = "1.12.0-rc01"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 scopes   = ["main"]
 deps = [
   "androidx.compose.ui:ui-util-android:jar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "androidx.compose.ui:ui:jar:"
 version  = "1.12.0-rc01"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 scopes   = ["main"]
 deps = [
@@ -1512,7 +1545,7 @@ deps = [
   "androidx.compose.ui:ui-util:jar:@1.12.0-rc01",
   "androidx.lifecycle:lifecycle-runtime-compose:jar:@2.11.0",
   "androidx.savedstate:savedstate-compose:jar:@1.4.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jspecify:jspecify:jar:@1.0.1",
 ]
 
@@ -1524,7 +1557,7 @@ checksum = "sha256:8de3069a4602d487b63ba061c7d46c78739e7ae5bf3dfd14bfbb9ae80277b
 scopes   = ["main"]
 deps = [
   "androidx.concurrent:concurrent-futures:jar:@1.3.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
 ]
 
@@ -1550,7 +1583,7 @@ scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation:jar:@1.10.0",
   "androidx.core:core:aar:@1.19.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -1562,7 +1595,7 @@ path     = "core-ktx-1.19.0.aar"
 scopes   = ["main"]
 deps = [
   "androidx.core:core:aar:@1.19.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -1574,7 +1607,7 @@ path     = "core-splashscreen-1.0.1.aar"
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation:jar:@1.10.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -1585,7 +1618,7 @@ checksum = "sha256:dc1b678d58ebcf2bfa1587be68ff826694ce3d221251b9ef30d4d4b36297e
 path     = "core-viewtree-1.0.0.aar"
 scopes   = ["main"]
 deps = [
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -1596,7 +1629,7 @@ checksum = "sha256:dc1b678d58ebcf2bfa1587be68ff826694ce3d221251b9ef30d4d4b36297e
 path     = "core-viewtree-1.0.0.aar"
 scopes   = ["main"]
 deps = [
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -1618,7 +1651,7 @@ deps = [
   "androidx.tracing:tracing:jar:@1.3.0",
   "androidx.versionedparcelable:versionedparcelable:aar:@1.2.1",
   "com.google.guava:listenablefuture:jar:@9999.0-empty-to-avoid-conflict-with-guava",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
   "org.jspecify:jspecify:jar:@1.0.1",
 ]
@@ -1643,7 +1676,7 @@ path     = "customview-poolingcontainer-1.1.0.aar"
 scopes   = ["main"]
 deps = [
   "androidx.core:core-ktx:aar:@1.19.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -1671,8 +1704,8 @@ deps = [
   "androidx.annotation:annotation-jvm:jar:@1.10.0",
   "androidx.datastore:datastore-core-android:aar:@1.2.0",
   "androidx.datastore:datastore-core-okio-jvm:jar:@1.2.0",
-  "com.squareup.okio:okio-jvm:jar:@3.18.1",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "com.squareup.okio:okio-jvm:jar:@3.18.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
 ]
 
@@ -1685,7 +1718,7 @@ path     = "datastore-core-android-1.2.0.aar"
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation-jvm:jar:@1.10.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
 ]
 
@@ -1698,7 +1731,7 @@ path     = "datastore-core-android-1.2.0.aar"
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation-jvm:jar:@1.10.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
 ]
 
@@ -1709,8 +1742,8 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:7ade6239a67674834f5724428e772c4176229ed30be253ac7e52082a2907ee05"
 scopes   = ["main"]
 deps = [
-  "com.squareup.okio:okio-jvm:jar:@3.18.1",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "com.squareup.okio:okio-jvm:jar:@3.18.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
   "org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:jar:@1.8.0",
 ]
@@ -1718,13 +1751,13 @@ deps = [
 [[artifact]]
 name     = "androidx.datastore:datastore-core-okio:jar:"
 version  = "1.2.0"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "androidx.datastore:datastore-core-okio-jvm:jar:@1.2.0",
   "androidx.datastore:datastore-core:jar:@1.2.0",
-  "com.squareup.okio:okio:jar:@3.18.1",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "com.squareup.okio:okio:jar:@3.18.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:atomicfu:jar:@0.33.0",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
   "org.jetbrains.kotlinx:kotlinx-serialization-json:jar:@1.8.0",
@@ -1733,12 +1766,12 @@ deps = [
 [[artifact]]
 name     = "androidx.datastore:datastore-core:jar:"
 version  = "1.2.0"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation:jar:@1.10.0",
   "androidx.datastore:datastore-core-android:jar:@1.2.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:atomicfu:jar:@0.33.0",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
 ]
@@ -1746,14 +1779,14 @@ deps = [
 [[artifact]]
 name     = "androidx.datastore:datastore:jar:"
 version  = "1.2.0"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation:jar:@1.10.0",
   "androidx.datastore:datastore-android:jar:@1.2.0",
   "androidx.datastore:datastore-core-okio:jar:@1.2.0",
   "androidx.datastore:datastore-core:jar:@1.2.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
 ]
 
@@ -1833,7 +1866,7 @@ deps = [
   "androidx.profileinstaller:profileinstaller:aar:@1.4.1",
   "androidx.savedstate:savedstate:jar:@1.4.0",
   "androidx.viewpager:viewpager:aar:@1.1.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -1857,7 +1890,7 @@ deps = [
   "androidx.profileinstaller:profileinstaller:aar:@1.4.1",
   "androidx.savedstate:savedstate:jar:@1.4.0",
   "androidx.viewpager:viewpager:aar:@1.1.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -1870,7 +1903,7 @@ scopes   = ["main"]
 deps = [
   "androidx.collection:collection:jar:@1.6.0",
   "androidx.core:core:aar:@1.19.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -1885,7 +1918,7 @@ deps = [
   "androidx.annotation:annotation-jvm:jar:@1.10.0",
   "androidx.collection:collection-jvm:jar:@1.6.0",
   "androidx.core:core-ktx:aar:@1.19.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -1900,19 +1933,19 @@ deps = [
   "androidx.annotation:annotation-jvm:jar:@1.10.0",
   "androidx.collection:collection-jvm:jar:@1.6.0",
   "androidx.core:core-ktx:aar:@1.19.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "androidx.graphics:graphics-shapes:jar:"
 version  = "1.1.0"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation:jar:@1.10.0",
   "androidx.collection:collection:jar:@1.6.0",
   "androidx.graphics:graphics-shapes-android:jar:@1.1.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -1933,9 +1966,9 @@ checksum = "sha256:4369f2d0898ed1fa9d439d21655c964e15d13a3731dee893508ab5fad3a30
 scopes   = ["processor"]
 deps = [
   "androidx.room:room-compiler-processing:jar:@2.8.4",
-  "com.google.devtools.ksp:symbol-processing-api:jar:@2.3.11",
+  "com.google.devtools.ksp:symbol-processing-api:jar:@2.3.12",
   "com.squareup:javapoet:jar:@1.13.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -1951,7 +1984,7 @@ deps = [
   "androidx.hilt:hilt-lifecycle-viewmodel:aar:@1.4.0",
   "androidx.lifecycle:lifecycle-viewmodel-compose:jar:@2.11.0",
   "com.google.dagger:hilt-android:jar:@2.60.1",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -1963,7 +1996,7 @@ path     = "hilt-lifecycle-viewmodel-1.4.0.aar"
 scopes   = ["main"]
 deps = [
   "com.google.dagger:hilt-android:jar:@2.60.1",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -2010,7 +2043,7 @@ checksum = "sha256:e6a66e67b9f63a0fb6344f165c1d872376e5fe6d235bffb138af45122cf45
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation-jvm:jar:@1.10.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
   "org.jspecify:jspecify:jar:@1.0.1",
 ]
@@ -2018,12 +2051,12 @@ deps = [
 [[artifact]]
 name     = "androidx.lifecycle:lifecycle-common:jar:"
 version  = "2.11.0"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation:jar:@1.10.0",
   "androidx.lifecycle:lifecycle-common-jvm:jar:@2.11.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
 ]
 
@@ -2036,7 +2069,7 @@ path     = "lifecycle-livedata-core-ktx-2.11.0.aar"
 scopes   = ["main"]
 deps = [
   "androidx.lifecycle:lifecycle-livedata-core:aar:@2.11.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -2050,7 +2083,7 @@ deps = [
   "androidx.arch.core:core-common:jar:@2.2.0",
   "androidx.arch.core:core-runtime:aar:@2.2.0",
   "androidx.lifecycle:lifecycle-common:jar:@2.11.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jspecify:jspecify:jar:@1.0.1",
 ]
 
@@ -2066,7 +2099,7 @@ deps = [
   "androidx.arch.core:core-runtime:aar:@2.2.0",
   "androidx.lifecycle:lifecycle-livedata-core-ktx:aar:@2.11.0",
   "androidx.lifecycle:lifecycle-livedata-core:aar:@2.11.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
   "org.jspecify:jspecify:jar:@1.0.1",
 ]
@@ -2082,7 +2115,7 @@ deps = [
   "androidx.annotation:annotation:jar:@1.10.0",
   "androidx.lifecycle:lifecycle-runtime:jar:@2.11.0",
   "androidx.startup:startup-runtime:aar:@1.2.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -2100,7 +2133,7 @@ deps = [
   "androidx.core:core-viewtree:jar:@1.0.0",
   "androidx.lifecycle:lifecycle-common-jvm:jar:@2.11.0",
   "androidx.profileinstaller:profileinstaller:aar:@1.4.1",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
   "org.jspecify:jspecify:jar:@1.0.1",
 ]
@@ -2120,7 +2153,7 @@ deps = [
   "androidx.core:core-viewtree:jar:@1.0.0",
   "androidx.lifecycle:lifecycle-common-jvm:jar:@2.11.0",
   "androidx.profileinstaller:profileinstaller:aar:@1.4.1",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
   "org.jspecify:jspecify:jar:@1.0.1",
 ]
@@ -2137,7 +2170,7 @@ deps = [
   "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
   "androidx.lifecycle:lifecycle-runtime-android:aar:@2.11.0",
   "androidx.lifecycle:lifecycle-runtime-ktx-android:aar:@2.11.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -2152,20 +2185,20 @@ deps = [
   "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
   "androidx.lifecycle:lifecycle-runtime-android:aar:@2.11.0",
   "androidx.lifecycle:lifecycle-runtime-ktx-android:aar:@2.11.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "androidx.lifecycle:lifecycle-runtime-compose:jar:"
 version  = "2.11.0"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation:jar:@1.10.0",
   "androidx.compose.runtime:runtime:jar:@1.12.0-rc01",
   "androidx.lifecycle:lifecycle-runtime-compose-android:jar:@2.11.0",
   "androidx.lifecycle:lifecycle-runtime:jar:@2.11.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -2178,7 +2211,7 @@ scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation-jvm:jar:@1.10.0",
   "androidx.lifecycle:lifecycle-runtime-android:aar:@2.11.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
 ]
 
@@ -2192,26 +2225,26 @@ scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation-jvm:jar:@1.10.0",
   "androidx.lifecycle:lifecycle-runtime-android:aar:@2.11.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
 ]
 
 [[artifact]]
 name     = "androidx.lifecycle:lifecycle-runtime-ktx:jar:"
 version  = "2.11.0"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation:jar:@1.10.0",
   "androidx.lifecycle:lifecycle-runtime-ktx-android:jar:@2.11.0",
   "androidx.lifecycle:lifecycle-runtime:jar:@2.11.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "androidx.lifecycle:lifecycle-runtime:jar:"
 version  = "2.11.0"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation:jar:@1.10.0",
@@ -2219,7 +2252,7 @@ deps = [
   "androidx.collection:collection:jar:@1.6.0",
   "androidx.lifecycle:lifecycle-common:jar:@2.11.0",
   "androidx.lifecycle:lifecycle-runtime-android:jar:@2.11.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -2231,7 +2264,7 @@ path     = "lifecycle-service-2.11.0.aar"
 scopes   = ["main"]
 deps = [
   "androidx.lifecycle:lifecycle-runtime:jar:@2.11.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -2245,7 +2278,7 @@ deps = [
   "androidx.annotation:annotation-jvm:jar:@1.10.0",
   "androidx.collection:collection-jvm:jar:@1.6.0",
   "androidx.core:core-viewtree:jar:@1.0.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
 ]
@@ -2261,7 +2294,7 @@ deps = [
   "androidx.annotation:annotation-jvm:jar:@1.10.0",
   "androidx.collection:collection-jvm:jar:@1.6.0",
   "androidx.core:core-viewtree:jar:@1.0.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
 ]
@@ -2282,7 +2315,7 @@ deps = [
   "androidx.lifecycle:lifecycle-runtime-compose-android:aar:@2.11.0",
   "androidx.lifecycle:lifecycle-viewmodel-android:aar:@2.11.0",
   "androidx.lifecycle:lifecycle-viewmodel-savedstate-android:aar:@2.11.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:@1.11.0",
 ]
 
@@ -2302,14 +2335,14 @@ deps = [
   "androidx.lifecycle:lifecycle-runtime-compose-android:aar:@2.11.0",
   "androidx.lifecycle:lifecycle-viewmodel-android:aar:@2.11.0",
   "androidx.lifecycle:lifecycle-viewmodel-savedstate-android:aar:@2.11.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:@1.11.0",
 ]
 
 [[artifact]]
 name     = "androidx.lifecycle:lifecycle-viewmodel-compose:jar:"
 version  = "2.11.0"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation:jar:@1.10.0",
@@ -2320,7 +2353,7 @@ deps = [
   "androidx.lifecycle:lifecycle-viewmodel-compose-android:jar:@2.11.0",
   "androidx.lifecycle:lifecycle-viewmodel-savedstate:jar:@2.11.0",
   "androidx.lifecycle:lifecycle-viewmodel:jar:@2.11.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-serialization-core:jar:@1.11.0",
 ]
 
@@ -2333,7 +2366,7 @@ path     = "lifecycle-viewmodel-ktx-2.11.0.aar"
 scopes   = ["main"]
 deps = [
   "androidx.lifecycle:lifecycle-viewmodel:jar:@2.11.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
 ]
 
@@ -2355,13 +2388,13 @@ deps = [
   "androidx.navigation3:navigation3-runtime-android:aar:@1.0.1",
   "androidx.savedstate:savedstate-android:aar:@1.4.0",
   "androidx.savedstate:savedstate-compose-android:aar:@1.4.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "androidx.lifecycle:lifecycle-viewmodel-navigation3:jar:"
 version  = "2.11.0"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "androidx.collection:collection:jar:@1.6.0",
@@ -2374,7 +2407,7 @@ deps = [
   "androidx.navigation3:navigation3-runtime:jar:@1.0.1",
   "androidx.savedstate:savedstate-compose:jar:@1.4.0",
   "androidx.savedstate:savedstate:jar:@1.4.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -2392,7 +2425,7 @@ deps = [
   "androidx.lifecycle:lifecycle-livedata-core:aar:@2.11.0",
   "androidx.lifecycle:lifecycle-viewmodel-android:aar:@2.11.0",
   "androidx.savedstate:savedstate-android:aar:@1.4.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
   "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:@1.11.0",
@@ -2413,7 +2446,7 @@ deps = [
   "androidx.lifecycle:lifecycle-livedata-core:aar:@2.11.0",
   "androidx.lifecycle:lifecycle-viewmodel-android:aar:@2.11.0",
   "androidx.savedstate:savedstate-android:aar:@1.4.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
   "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:@1.11.0",
@@ -2422,7 +2455,7 @@ deps = [
 [[artifact]]
 name     = "androidx.lifecycle:lifecycle-viewmodel-savedstate:aar:"
 version  = "2.11.0"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation:jar:@1.10.0",
@@ -2431,7 +2464,7 @@ deps = [
   "androidx.lifecycle:lifecycle-viewmodel-savedstate-android:jar:@2.11.0",
   "androidx.lifecycle:lifecycle-viewmodel:jar:@2.11.0",
   "androidx.savedstate:savedstate:jar:@1.4.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
   "org.jetbrains.kotlinx:kotlinx-serialization-core:jar:@1.11.0",
 ]
@@ -2439,7 +2472,7 @@ deps = [
 [[artifact]]
 name     = "androidx.lifecycle:lifecycle-viewmodel-savedstate:jar:"
 version  = "2.11.0"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation:jar:@1.10.0",
@@ -2448,7 +2481,7 @@ deps = [
   "androidx.lifecycle:lifecycle-viewmodel-savedstate-android:jar:@2.11.0",
   "androidx.lifecycle:lifecycle-viewmodel:jar:@2.11.0",
   "androidx.savedstate:savedstate:jar:@1.4.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
   "org.jetbrains.kotlinx:kotlinx-serialization-core:jar:@1.11.0",
 ]
@@ -2456,13 +2489,13 @@ deps = [
 [[artifact]]
 name     = "androidx.lifecycle:lifecycle-viewmodel:jar:"
 version  = "2.11.0"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation:jar:@1.10.0",
   "androidx.collection:collection:jar:@1.6.0",
   "androidx.lifecycle:lifecycle-viewmodel-android:jar:@2.11.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:atomicfu:jar:@0.33.0",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
 ]
@@ -2480,7 +2513,7 @@ deps = [
   "androidx.core:core:aar:@1.19.0",
   "androidx.lifecycle:lifecycle-livedata-core:aar:@2.11.0",
   "androidx.lifecycle:lifecycle-viewmodel-ktx:aar:@2.11.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jspecify:jspecify:jar:@1.0.1",
 ]
 
@@ -2494,7 +2527,7 @@ scopes   = ["main"]
 deps = [
   "androidx.collection:collection:jar:@1.6.0",
   "androidx.core:core:aar:@1.19.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -2512,7 +2545,7 @@ deps = [
   "androidx.navigationevent:navigationevent-android:aar:@1.1.2",
   "androidx.savedstate:savedstate-android:aar:@1.4.0",
   "androidx.savedstate:savedstate-compose-android:aar:@1.4.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:@1.11.0",
 ]
 
@@ -2531,14 +2564,14 @@ deps = [
   "androidx.navigationevent:navigationevent-android:aar:@1.1.2",
   "androidx.savedstate:savedstate-android:aar:@1.4.0",
   "androidx.savedstate:savedstate-compose-android:aar:@1.4.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:@1.11.0",
 ]
 
 [[artifact]]
 name     = "androidx.navigation3:navigation3-runtime:jar:"
 version  = "1.0.1"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "androidx.collection:collection:jar:@1.6.0",
@@ -2549,7 +2582,7 @@ deps = [
   "androidx.navigationevent:navigationevent:jar:@1.1.2",
   "androidx.savedstate:savedstate-compose:jar:@1.4.0",
   "androidx.savedstate:savedstate:jar:@1.4.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-serialization-core:jar:@1.11.0",
 ]
 
@@ -2574,7 +2607,7 @@ deps = [
   "androidx.navigationevent:navigationevent-compose-android:aar:@1.1.2",
   "androidx.savedstate:savedstate-android:aar:@1.4.0",
   "androidx.savedstate:savedstate-compose-android:aar:@1.4.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -2598,13 +2631,13 @@ deps = [
   "androidx.navigationevent:navigationevent-compose-android:aar:@1.1.2",
   "androidx.savedstate:savedstate-android:aar:@1.4.0",
   "androidx.savedstate:savedstate-compose-android:aar:@1.4.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "androidx.navigation3:navigation3-ui:jar:"
 version  = "1.0.1"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "androidx.compose.animation:animation:jar:@1.12.0-rc01",
@@ -2616,7 +2649,7 @@ deps = [
   "androidx.navigationevent:navigationevent-compose:jar:@1.1.2",
   "androidx.savedstate:savedstate-compose:jar:@1.4.0",
   "androidx.savedstate:savedstate:jar:@1.4.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -2631,7 +2664,7 @@ deps = [
   "androidx.collection:collection-jvm:jar:@1.6.0",
   "androidx.compose.runtime:runtime-annotation-android:aar:@1.12.0-rc01",
   "androidx.core:core-viewtree:aar:@1.0.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
 ]
@@ -2648,7 +2681,7 @@ deps = [
   "androidx.collection:collection-jvm:jar:@1.6.0",
   "androidx.compose.runtime:runtime-annotation-android:aar:@1.12.0-rc01",
   "androidx.core:core-viewtree:aar:@1.0.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
 ]
@@ -2664,7 +2697,7 @@ deps = [
   "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
   "androidx.compose.ui:ui-android:aar:@1.12.0-rc01",
   "androidx.navigationevent:navigationevent-android:aar:@1.1.2",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
 ]
 
@@ -2679,34 +2712,34 @@ deps = [
   "androidx.compose.runtime:runtime-android:aar:@1.12.0-rc01",
   "androidx.compose.ui:ui-android:aar:@1.12.0-rc01",
   "androidx.navigationevent:navigationevent-android:aar:@1.1.2",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
 ]
 
 [[artifact]]
 name     = "androidx.navigationevent:navigationevent-compose:jar:"
 version  = "1.1.2"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "androidx.compose.runtime:runtime:jar:@1.12.0-rc01",
   "androidx.navigationevent:navigationevent-compose-android:jar:@1.1.2",
   "androidx.navigationevent:navigationevent:jar:@1.1.2",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
 ]
 
 [[artifact]]
 name     = "androidx.navigationevent:navigationevent:jar:"
 version  = "1.1.2"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation:jar:@1.10.0",
   "androidx.collection:collection:jar:@1.6.0",
   "androidx.compose.runtime:runtime-annotation:jar:@1.12.0-rc01",
   "androidx.navigationevent:navigationevent-android:jar:@1.1.2",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:atomicfu:jar:@0.33.0",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
 ]
@@ -2757,18 +2790,18 @@ checksum = "sha256:dc7b4e1a75a790f29c97afd5516b8bf8002d9b6e83e295bc569b33566f3b1
 scopes   = ["main", "processor"]
 deps = [
   "androidx.annotation:annotation-jvm:jar:@1.10.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "androidx.room:room-common:jar:"
 version  = "2.8.4"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation:jar:@1.10.0",
   "androidx.room:room-common-jvm:jar:@2.8.4",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -2780,13 +2813,13 @@ scopes   = ["processor"]
 deps = [
   "com.google.auto.value:auto-value-annotations:jar:@1.11.1",
   "com.google.auto:auto-common:jar:@1.2.2",
-  "com.google.devtools.ksp:symbol-processing-api:jar:@2.3.11",
-  "com.google.guava:guava:jar:@33.6.0-jre",
+  "com.google.devtools.ksp:symbol-processing-api:jar:@2.3.12",
+  "com.google.guava:guava:jar:@33.7.1-jre",
   "com.squareup:javapoet:jar:@1.13.0",
   "com.squareup:kotlinpoet-javapoet:jar:@2.2.0",
-  "com.squareup:kotlinpoet-jvm:jar:@2.3.0",
-  "org.jetbrains.kotlin:kotlin-metadata-jvm:jar:@2.4.10",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "com.squareup:kotlinpoet-jvm:jar:@2.4.0",
+  "org.jetbrains.kotlin:kotlin-metadata-jvm:jar:@2.4.20",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jspecify:jspecify:jar:@1.0.1",
 ]
 
@@ -2803,14 +2836,14 @@ deps = [
   "androidx.room:room-migration-jvm:jar:@2.8.4",
   "com.google.auto.value:auto-value-annotations:jar:@1.11.1",
   "com.google.auto:auto-common:jar:@1.2.2",
-  "com.google.devtools.ksp:symbol-processing-api:jar:@2.3.11",
+  "com.google.devtools.ksp:symbol-processing-api:jar:@2.3.12",
   "com.intellij:annotations:jar:@12.0",
   "com.squareup:javapoet:jar:@1.13.0",
   "com.squareup:kotlinpoet-javapoet:jar:@2.2.0",
-  "com.squareup:kotlinpoet-jvm:jar:@2.3.0",
+  "com.squareup:kotlinpoet-jvm:jar:@2.4.0",
   "commons-codec:commons-codec:jar:@1.22.1",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
-  "org.xerial:sqlite-jdbc:jar:@3.53.2.1",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
+  "org.xerial:sqlite-jdbc:jar:@3.53.4.0",
 ]
 
 [[artifact]]
@@ -2830,7 +2863,7 @@ scopes   = ["main"]
 deps = [
   "androidx.room:room-common:jar:@2.8.4",
   "androidx.room:room-runtime:jar:@2.8.4",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
 ]
 
@@ -2842,7 +2875,7 @@ checksum = "sha256:18e63f4ec289cf3f4545face849c6bbdd33eea9596eebe0b7293d49c00c51
 scopes   = ["processor"]
 deps = [
   "androidx.room:room-common-jvm:jar:@2.8.4",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:jar:@1.11.0",
 ]
 
@@ -2859,9 +2892,9 @@ deps = [
   "androidx.arch.core:core-runtime:jar:@2.2.0",
   "androidx.collection:collection-jvm:jar:@1.6.0",
   "androidx.room:room-common-jvm:jar:@2.8.4",
-  "androidx.sqlite:sqlite-android:aar:@2.7.0",
-  "androidx.sqlite:sqlite-framework-android:aar:@2.7.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "androidx.sqlite:sqlite-android:aar:@2.7.1",
+  "androidx.sqlite:sqlite-framework-android:aar:@2.7.1",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
   "org.jspecify:jspecify:jar:@1.0.1",
@@ -2870,16 +2903,16 @@ deps = [
 [[artifact]]
 name     = "androidx.room:room-runtime:jar:"
 version  = "2.8.4"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation:jar:@1.10.0",
   "androidx.collection:collection:jar:@1.6.0",
   "androidx.room:room-common:jar:@2.8.4",
   "androidx.room:room-runtime-android:jar:@2.8.4",
-  "androidx.sqlite:sqlite-framework:jar:@2.7.0",
-  "androidx.sqlite:sqlite:jar:@2.7.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "androidx.sqlite:sqlite-framework:jar:@2.7.1",
+  "androidx.sqlite:sqlite:jar:@2.7.1",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:atomicfu:jar:@0.33.0",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
 ]
@@ -2896,7 +2929,7 @@ deps = [
   "androidx.core:core-ktx:aar:@1.19.0",
   "androidx.core:core-viewtree:aar:@1.0.0",
   "androidx.lifecycle:lifecycle-common-jvm:jar:@2.11.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
   "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:@1.11.0",
 ]
@@ -2913,7 +2946,7 @@ deps = [
   "androidx.core:core-ktx:aar:@1.19.0",
   "androidx.core:core-viewtree:aar:@1.0.0",
   "androidx.lifecycle:lifecycle-common-jvm:jar:@2.11.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
   "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:@1.11.0",
 ]
@@ -2949,7 +2982,7 @@ deps = [
 [[artifact]]
 name     = "androidx.savedstate:savedstate-compose:jar:"
 version  = "1.4.0"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "androidx.compose.runtime:runtime:jar:@1.12.0-rc01",
@@ -2966,94 +2999,106 @@ path     = "savedstate-ktx-1.4.0.aar"
 scopes   = ["main"]
 deps = [
   "androidx.savedstate:savedstate:jar:@1.4.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "androidx.savedstate:savedstate:jar:"
 version  = "1.4.0"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation:jar:@1.10.0",
   "androidx.lifecycle:lifecycle-common:jar:@2.11.0",
   "androidx.savedstate:savedstate-android:jar:@1.4.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.10.1",
   "org.jetbrains.kotlinx:kotlinx-serialization-core:jar:@1.11.0",
 ]
 
 [[artifact]]
 name     = "androidx.sqlite:sqlite-android:aar:"
-version  = "2.7.0"
+version  = "2.7.1"
 source   = "google+https://dl.google.com/dl/android/maven2/"
-checksum = "sha256:61694731fb7108d40e2b9ffbb72af21f8b3de33b4af304130cc62f42fa5e001d"
-path     = "sqlite-android-2.7.0.aar"
+checksum = "sha256:1f4c8887570a1cca255fd263ddb29a34c77eee64ada1cf8062de6aa23bf649b6"
+path     = "sqlite-android-2.7.1.aar"
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation-jvm:jar:@1.10.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "androidx.sqlite:sqlite-android:aar:"
-version  = "2.7.0"
+version  = "2.7.1"
 source   = "google+https://dl.google.com/dl/android/maven2/"
-checksum = "sha256:61694731fb7108d40e2b9ffbb72af21f8b3de33b4af304130cc62f42fa5e001d"
-path     = "sqlite-android-2.7.0.aar"
+checksum = "sha256:1f4c8887570a1cca255fd263ddb29a34c77eee64ada1cf8062de6aa23bf649b6"
+path     = "sqlite-android-2.7.1.aar"
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation-jvm:jar:@1.10.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "androidx.sqlite:sqlite-framework-android:aar:"
-version  = "2.7.0"
+version  = "2.7.1"
 source   = "google+https://dl.google.com/dl/android/maven2/"
-checksum = "sha256:1e74396eea06ce66f234da8ae3702ac813d5524464250857c1435927c1a63dc6"
-path     = "sqlite-framework-android-2.7.0.aar"
+checksum = "sha256:18ccafddeae782ee2dbf763190bc7b9ce8f46e95f2b9b88de16924019a4c1a5f"
+path     = "sqlite-framework-android-2.7.1.aar"
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation-jvm:jar:@1.10.0",
-  "androidx.sqlite:sqlite-android:aar:@2.7.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "androidx.sqlite:sqlite-android:aar:@2.7.1",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "androidx.sqlite:sqlite-framework-android:aar:"
-version  = "2.7.0"
+version  = "2.7.1"
 source   = "google+https://dl.google.com/dl/android/maven2/"
-checksum = "sha256:1e74396eea06ce66f234da8ae3702ac813d5524464250857c1435927c1a63dc6"
-path     = "sqlite-framework-android-2.7.0.aar"
+checksum = "sha256:18ccafddeae782ee2dbf763190bc7b9ce8f46e95f2b9b88de16924019a4c1a5f"
+path     = "sqlite-framework-android-2.7.1.aar"
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation-jvm:jar:@1.10.0",
-  "androidx.sqlite:sqlite-android:aar:@2.7.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "androidx.sqlite:sqlite-android:aar:@2.7.1",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "androidx.sqlite:sqlite-framework:jar:"
-version  = "2.7.0"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+version  = "2.7.1"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation:jar:@1.10.0",
-  "androidx.sqlite:sqlite-framework-android:jar:@2.7.0",
-  "androidx.sqlite:sqlite:jar:@2.7.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "androidx.sqlite:sqlite-framework-android:jar:@2.7.1",
+  "androidx.sqlite:sqlite:jar:@2.7.1",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "androidx.sqlite:sqlite:jar:"
-version  = "2.7.0"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+version  = "2.7.1"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation:jar:@1.10.0",
-  "androidx.sqlite:sqlite-android:jar:@2.7.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "androidx.sqlite:sqlite-android:jar:@2.7.1",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
+]
+
+[[artifact]]
+name     = "androidx.startup:startup-runtime:aar:"
+version  = "1.2.0"
+source   = "google+https://dl.google.com/dl/android/maven2/"
+checksum = "sha256:f51d361d17b30b09cfb9e2aebf301d113f99437cbf462a066092795fb60eddd2"
+path     = "startup-runtime-1.2.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation:jar:@1.10.0",
+  "androidx.tracing:tracing:aar:@1.3.0",
 ]
 
 [[artifact]]
@@ -3077,7 +3122,7 @@ path     = "tracing-android-1.3.0.aar"
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation-jvm:jar:@1.10.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -3105,21 +3150,21 @@ deps = [
 [[artifact]]
 name     = "androidx.tracing:tracing:aar:"
 version  = "1.3.0"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "androidx.tracing:tracing-android:jar:@1.3.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "androidx.tracing:tracing:jar:"
 version  = "1.3.0"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "androidx.tracing:tracing-android:jar:@1.3.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -3185,7 +3230,7 @@ path     = "window-core-android-1.5.1.aar"
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation-jvm:jar:@1.10.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -3197,18 +3242,18 @@ path     = "window-core-android-1.5.1.aar"
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation-jvm:jar:@1.10.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "androidx.window:window-core:jar:"
 version  = "1.5.1"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation:jar:@1.10.0",
   "androidx.window:window-core-android:jar:@1.5.1",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -3223,7 +3268,7 @@ deps = [
   "androidx.collection:collection:jar:@1.6.0",
   "androidx.core:core:aar:@1.19.0",
   "androidx.window:window-core:jar:@1.5.1",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
   "org.jspecify:jspecify:jar:@1.0.1",
 ]
@@ -3256,7 +3301,7 @@ deps = [
   "androidx.startup:startup-runtime:aar:@1.2.0",
   "androidx.tracing:tracing-ktx:aar:@1.3.0",
   "com.google.guava:listenablefuture:jar:@9999.0-empty-to-avoid-conflict-with-guava",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
   "org.jspecify:jspecify:jar:@1.0.1",
 ]
@@ -3278,7 +3323,7 @@ path     = "accompanist-drawablepainter-0.37.3.aar"
 scopes   = ["main"]
 deps = [
   "androidx.compose.ui:ui:jar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
 ]
 
@@ -3292,31 +3337,31 @@ scopes   = ["main"]
 deps = [
   "androidx.activity:activity-compose:jar:@1.13.0",
   "androidx.compose.foundation:foundation:jar:@1.12.0-rc01",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
 ]
 
 [[artifact]]
 name     = "com.google.android.gms:play-services-base:aar:"
-version  = "18.10.0"
+version  = "18.10.1"
 source   = "google+https://dl.google.com/dl/android/maven2/"
-checksum = "sha256:4f5be791c644fde538a2bfc64c8611c926aed575fef5db0d3fb39c05cc6fa8ec"
-path     = "play-services-base-18.10.0.aar"
+checksum = "sha256:4628707dcf038c478b2d6c67be9f35a8e862d79b20a00484704bbbb6a4c2b952"
+path     = "play-services-base-18.10.1.aar"
 scopes   = ["main"]
 deps = [
   "androidx.collection:collection:jar:@1.6.0",
   "androidx.core:core:aar:@1.19.0",
   "androidx.fragment:fragment:aar:@1.8.9",
-  "com.google.android.gms:play-services-basement:aar:@18.10.0",
+  "com.google.android.gms:play-services-basement:aar:@18.11.0",
   "com.google.android.gms:play-services-tasks:aar:@18.4.1",
 ]
 
 [[artifact]]
 name     = "com.google.android.gms:play-services-basement:aar:"
-version  = "18.10.0"
+version  = "18.11.0"
 source   = "google+https://dl.google.com/dl/android/maven2/"
-checksum = "sha256:859963500c141053043e6b02ff3065609184078d8c72799f4d162058be52fff8"
-path     = "play-services-basement-18.10.0.aar"
+checksum = "sha256:2c0de81d1576e5f3ede9f564d3fdd60094cb1ea7eb205d5307a677ebf0cbbd33"
+path     = "play-services-basement-18.11.0.aar"
 scopes   = ["main"]
 deps = [
   "androidx.collection:collection:jar:@1.6.0",
@@ -3332,9 +3377,10 @@ checksum = "sha256:39a455bcb4f2fe6647116e54e4e2889dbb64efa9ba5a50231184c3ac1bb61
 path     = "play-services-oss-licenses-17.1.0.aar"
 scopes   = ["main"]
 deps = [
+  "androidx.appcompat:appcompat:aar:@1.7.0",
   "androidx.loader:loader:aar:@1.2.0",
-  "com.google.android.gms:play-services-base:aar:@18.10.0",
-  "com.google.android.gms:play-services-basement:aar:@18.10.0",
+  "com.google.android.gms:play-services-base:aar:@18.10.1",
+  "com.google.android.gms:play-services-basement:aar:@18.11.0",
   "com.google.android.gms:play-services-tasks:aar:@18.4.1",
 ]
 
@@ -3346,7 +3392,7 @@ checksum = "sha256:e8e3a012e50209f80ce2d988ad3b31927d20fee155d0b6538859bc0d90367
 path     = "play-services-tasks-18.4.1.aar"
 scopes   = ["main"]
 deps = [
-  "com.google.android.gms:play-services-basement:aar:@18.10.0",
+  "com.google.android.gms:play-services-basement:aar:@18.11.0",
 ]
 
 [[artifact]]
@@ -3363,7 +3409,7 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:f50b1ce8a41fad31a8a819c052f8ffa362ea0a3dbe9ef8f7c7dc9a36d4738a59"
 scopes   = ["processor"]
 deps = [
-  "com.google.guava:guava:jar:@33.6.0-jre",
+  "com.google.guava:guava:jar:@33.7.1-jre",
 ]
 
 [[artifact]]
@@ -3383,17 +3429,17 @@ deps = [
   "com.google.code.findbugs:jsr305:jar:@3.0.2",
   "com.google.dagger:dagger-spi:jar:@2.60.1",
   "com.google.dagger:dagger:jar:@2.60.1",
-  "com.google.devtools.ksp:symbol-processing-api:jar:@2.3.11",
+  "com.google.devtools.ksp:symbol-processing-api:jar:@2.3.12",
   "com.google.googlejavaformat:google-java-format:jar:@1.36.1",
   "com.google.guava:failureaccess:jar:@1.0.3",
-  "com.google.guava:guava:jar:@33.6.0-jre",
+  "com.google.guava:guava:jar:@33.7.1-jre",
   "com.squareup:javapoet:jar:@1.13.0",
-  "com.squareup:kotlinpoet:jar:@2.3.0",
+  "com.squareup:kotlinpoet:jar:@2.4.0",
   "javax.inject:javax.inject:jar:@1",
   "net.ltgt.gradle.incap:incap:jar:@1.0.0",
   "org.checkerframework:checker-compat-qual:jar:@2.5.6",
-  "org.jetbrains.kotlin:kotlin-metadata-jvm:jar:@2.4.10",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-metadata-jvm:jar:@2.4.20",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -3413,9 +3459,9 @@ scopes   = ["processor"]
 deps = [
   "com.google.code.findbugs:jsr305:jar:@3.0.2",
   "com.google.dagger:dagger:jar:@2.60.1",
-  "com.google.devtools.ksp:symbol-processing-api:jar:@2.3.11",
+  "com.google.devtools.ksp:symbol-processing-api:jar:@2.3.12",
   "com.google.guava:failureaccess:jar:@1.0.3",
-  "com.google.guava:guava:jar:@33.6.0-jre",
+  "com.google.guava:guava:jar:@33.7.1-jre",
   "com.squareup:javapoet:jar:@1.13.0",
   "javax.inject:javax.inject:jar:@1",
 ]
@@ -3443,14 +3489,14 @@ deps = [
   "com.google.dagger:dagger-compiler:jar:@2.60.1",
   "com.google.dagger:dagger-spi:jar:@2.60.1",
   "com.google.dagger:dagger:jar:@2.60.1",
-  "com.google.devtools.ksp:symbol-processing-api:jar:@2.3.11",
+  "com.google.devtools.ksp:symbol-processing-api:jar:@2.3.12",
   "com.google.guava:failureaccess:jar:@1.0.3",
-  "com.google.guava:guava:jar:@33.6.0-jre",
+  "com.google.guava:guava:jar:@33.7.1-jre",
   "com.squareup:javapoet:jar:@1.13.0",
   "javax.inject:javax.inject:jar:@1",
   "net.ltgt.gradle.incap:incap:jar:@1.0.0",
-  "org.jetbrains.kotlin:kotlin-metadata-jvm:jar:@2.4.10",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-metadata-jvm:jar:@2.4.20",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -3474,7 +3520,7 @@ deps = [
   "com.google.dagger:dagger:jar:@2.60.1",
   "com.google.dagger:hilt-core:jar:@2.60.1",
   "javax.inject:javax.inject:jar:@1",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -3492,12 +3538,12 @@ deps = [
 
 [[artifact]]
 name     = "com.google.devtools.ksp:symbol-processing-api:jar:"
-version  = "2.3.11"
+version  = "2.3.12"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:88819c9243629ee710c992d3efdc146dae31aafbb7d8029ce5d29d4fbd5d2326"
+checksum = "sha256:fc7d11cea3bcd873589c8914ad6320bdc877bce14cc7c2f717394646af56bd37"
 scopes   = ["processor"]
 deps = [
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -3514,7 +3560,7 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:57f9b550a662dcbbdf344073e3f5812b837a0e6e430548d8a0a3c9090cada65d"
 scopes   = ["processor"]
 deps = [
-  "com.google.guava:guava:jar:@33.6.0-jre",
+  "com.google.guava:guava:jar:@33.7.1-jre",
   "org.commonmark:commonmark-ext-gfm-tables:jar:@0.30.0",
   "org.commonmark:commonmark:jar:@0.30.0",
 ]
@@ -3542,9 +3588,9 @@ deps = [
 
 [[artifact]]
 name     = "com.google.guava:guava:jar:"
-version  = "33.6.0-jre"
+version  = "33.7.1-jre"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:dc573e1fca4fd5454f4a5fd3d7da2df03002876a4175bafc14a95980dd7713b3"
+checksum = "sha256:796d8e28ac64e83a47c4c5935a8fecc4682650a04bbdead738ef0f5a3a0e6c46"
 scopes   = ["processor"]
 deps = [
   "com.google.errorprone:error_prone_annotations:jar:@2.50.0",
@@ -3570,9 +3616,9 @@ scopes   = ["main", "processor"]
 
 [[artifact]]
 name     = "com.google.protobuf:protobuf-javalite:jar:"
-version  = "4.35.1"
+version  = "4.36.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:45d3769189888e491ab7d58125f2014c2a86fb8104c7aa3878c723943fce7a14"
+checksum = "sha256:91d3dba2521322103230c509d41a017da3a5e6766610adcb10c5bb127cbb26c5"
 scopes   = ["main"]
 
 [[artifact]]
@@ -3582,8 +3628,8 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:e5974381748f04e06bd9b5c9326e644838e847b685c7e97c03119cb9ae0001e4"
 scopes   = ["main"]
 deps = [
-  "com.google.protobuf:protobuf-javalite:jar:@4.35.1",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "com.google.protobuf:protobuf-javalite:jar:@4.36.1",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -3600,38 +3646,52 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:f3e8d5f0903c250c2b55d2f47fcfe008e80634385da8385161c7a63aaed0c74c"
 scopes   = ["main"]
 deps = [
-  "com.squareup.okhttp3:okhttp:jar:@5.4.0",
-  "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:@2.4.10",
+  "com.squareup.okhttp3:okhttp:jar:@5.5.0",
+  "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:@2.4.20",
+]
+
+[[artifact]]
+name     = "com.squareup.okhttp3:okhttp-android:aar:"
+version  = "5.5.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:6c7fd12f092e64ca2eae0b8a8023900c0d7ffec57888cf8abc8085c6f42e1dcc"
+path     = "okhttp-android-5.5.0.aar"
+scopes   = ["main"]
+deps = [
+  "androidx.annotation:annotation-jvm:jar:@1.10.0",
+  "androidx.startup:startup-runtime:jar:@1.2.0",
+  "com.squareup.okio:okio-jvm:jar:@3.18.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "com.squareup.okhttp3:okhttp:jar:"
-version  = "5.4.0"
-source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:aebaab3fe77633befcf69fd0ee3052083999a7eaa98d6f2f7c4b498e7bdbb732"
+version  = "5.5.0"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
-  "com.squareup.okio:okio:jar:@3.18.1",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "com.squareup.okhttp3:okhttp-android:jar:@5.5.0",
+  "com.squareup.okio:okio:jar:@3.18.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "com.squareup.okio:okio-jvm:jar:"
-version  = "3.18.1"
+version  = "3.18.2"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:b97b640557a650d15411f2be29aef558c4e422a83653cb18ba494311dbed18be"
+checksum = "sha256:681fed549d1d2c63710f42c9eab433d642c71af778babd67035c50f8c425aaff"
 scopes   = ["main"]
 deps = [
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "com.squareup.okio:okio:jar:"
-version  = "3.18.1"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+version  = "3.18.2"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
-  "com.squareup.okio:okio-jvm:jar:@3.18.1",
+  "com.squareup.okio:okio-jvm:jar:@3.18.2",
 ]
 
 [[artifact]]
@@ -3642,7 +3702,7 @@ checksum = "sha256:4853591a285de90dac3b0ac98d3cbb7325dc37afe675b7dd6990431963067
 scopes   = ["main"]
 deps = [
   "com.squareup.retrofit2:retrofit:jar:@2.11.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:@1.11.0",
 ]
 
@@ -3653,7 +3713,7 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:9f4fbbce70728584fbeed38d4061f36d4477e89bca74b4e2ac8aeb6819b0fe43"
 scopes   = ["main"]
 deps = [
-  "com.squareup.okhttp3:okhttp:jar:@5.4.0",
+  "com.squareup.okhttp3:okhttp:jar:@5.5.0",
 ]
 
 [[artifact]]
@@ -3671,29 +3731,29 @@ checksum = "sha256:228dd31de97447209f1cc03d648117fbc4f7c39aa2ffab34f12b474921026
 scopes   = ["processor"]
 deps = [
   "com.squareup:javapoet:jar:@1.13.0",
-  "com.squareup:kotlinpoet-jvm:jar:@2.3.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "com.squareup:kotlinpoet-jvm:jar:@2.4.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "com.squareup:kotlinpoet-jvm:jar:"
-version  = "2.3.0"
+version  = "2.4.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:696c9ad8c08d9363c63f06d87054c6159de620829b83cd1b9f9d3abfa04257dc"
+checksum = "sha256:e953c425aa2887b54dfa29b474915f7a50bf9f5d8cd243209dc9a039a8ab3af0"
 scopes   = ["processor"]
 deps = [
-  "org.jetbrains.kotlin:kotlin-reflect:jar:@2.4.10",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-reflect:jar:@2.4.20",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "com.squareup:kotlinpoet:jar:"
-version  = "2.3.0"
-source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:e9f5f40873c7a42225f49c3d4d78945fa1b24054e175003f49126ceb3a24c31b"
+version  = "2.4.0"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["processor"]
 deps = [
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "com.squareup:kotlinpoet-jvm:jar:@2.4.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -3712,15 +3772,15 @@ path     = "coil-base-2.7.0.aar"
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation:jar:@1.10.0",
-  "androidx.appcompat:appcompat-resources:jar:@1.7.1",
+  "androidx.appcompat:appcompat-resources:jar:@1.8.0",
   "androidx.collection:collection:jar:@1.6.0",
   "androidx.core:core-ktx:jar:@1.16.0",
   "androidx.exifinterface:exifinterface:jar:@1.4.2",
   "androidx.lifecycle:lifecycle-runtime:jar:@2.11.0",
   "androidx.profileinstaller:profileinstaller:jar:@1.4.1",
-  "com.squareup.okhttp3:okhttp:jar:@5.4.0",
-  "com.squareup.okio:okio:jar:@3.18.1",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "com.squareup.okhttp3:okhttp:jar:@5.5.0",
+  "com.squareup.okio:okio:jar:@3.18.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-android:jar:@1.10.1",
 ]
 
@@ -3736,7 +3796,7 @@ deps = [
   "androidx.core:core-ktx:jar:@1.16.0",
   "com.google.accompanist:accompanist-drawablepainter:jar:@0.37.3",
   "io.coil-kt:coil-base:jar:@2.7.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -3749,7 +3809,7 @@ scopes   = ["main"]
 deps = [
   "io.coil-kt:coil-compose-base:jar:@2.7.0",
   "io.coil-kt:coil:jar:@2.7.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -3763,7 +3823,7 @@ deps = [
   "androidx.core:core-ktx:jar:@1.16.0",
   "com.caverock:androidsvg-aar:jar:@1.4",
   "io.coil-kt:coil-base:jar:@2.7.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -3775,7 +3835,7 @@ path     = "coil-2.7.0.aar"
 scopes   = ["main"]
 deps = [
   "io.coil-kt:coil-base:jar:@2.7.0",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
@@ -3832,56 +3892,56 @@ scopes   = ["processor"]
 
 [[artifact]]
 name     = "org.jetbrains.kotlin:kotlin-metadata-jvm:jar:"
-version  = "2.4.10"
+version  = "2.4.20"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:233aaa84ca268e26d6d3a99ce30401e6dc111a7ae10e0a0b4794ce6351d7adc4"
+checksum = "sha256:98d9b1847908adfde7a8b2d4cc35708d7ddccae0698cec56bcb506bcf9392595"
 scopes   = ["processor"]
 deps = [
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "org.jetbrains.kotlin:kotlin-reflect:jar:"
-version  = "2.4.10"
+version  = "2.4.20"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:25a1aef7454d46548ecaaf51021b0e52e38141a62ed75af124da109b7324c4e5"
+checksum = "sha256:b4aac2a4686ffdc110602ce153e4a90ffd7f37fa86fcca9d3b3aa39c08f8c2fc"
 scopes   = ["processor"]
 deps = [
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "org.jetbrains.kotlin:kotlin-stdlib-common:jar:"
-version  = "2.4.10"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+version  = "2.4.20"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 
 [[artifact]]
 name     = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:"
-version  = "2.4.10"
+version  = "2.4.20"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:e7a8fe7cacf3b9c838f6b3fcb26dfdd41f844551a3ba67fd3f959a0d9d5c0bef"
+checksum = "sha256:f734859ccafd60897d7afa1fd58ad76842286f625630c6403c4271e417f1a8d9"
 scopes   = ["main"]
 deps = [
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:"
-version  = "2.4.10"
+version  = "2.4.20"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:08346b7f4cfba40c1139161c9f30b68199f425cecf3b63de67838063f34a05c7"
+checksum = "sha256:a39cf9486d1fefb22fc38c35b4ecab658b0cfea90a7135a723881d961f605cc8"
 scopes   = ["main"]
 deps = [
-  "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:@2.4.10",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:@2.4.20",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "org.jetbrains.kotlin:kotlin-stdlib:jar:"
-version  = "2.4.10"
+version  = "2.4.20"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:4ec0293bc3751423b203f1d8493251c57c42e73eb6377a6b8560d0974ff0a6df"
+checksum = "sha256:2226de463d309d4a5500a481320b3dea515a6981dcae1def531fbc158884e25f"
 scopes   = ["main", "processor"]
 deps = [
   "org.jetbrains:annotations:jar:@26.1.0",
@@ -3894,13 +3954,13 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:cdc94bfe4f739a0121860e61977d5c1e6a3d53c21f2471493393ba9e900d394e"
 scopes   = ["main"]
 deps = [
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "org.jetbrains.kotlinx:atomicfu:jar:"
 version  = "0.33.0"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "org.jetbrains.kotlinx:atomicfu-jvm:jar:@0.33.0",
@@ -3913,7 +3973,7 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:bc5e60e0e61842558dd19c52bdd24882d40b001e6b1beaea9c4120af7b95ba1c"
 scopes   = ["main"]
 deps = [
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.10.1",
 ]
 
@@ -3924,14 +3984,14 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:069c5988633230e074ec0d39321ec3cdaa4547c49e90ba936c63d8fc91c8c00d"
 scopes   = ["main"]
 deps = [
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains:annotations:jar:@26.1.0",
 ]
 
 [[artifact]]
 name     = "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:"
 version  = "1.10.1"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.10.1",
@@ -3945,7 +4005,7 @@ checksum = "sha256:b64fd23fd6f48d1f7020d9e1aff3e44a95e86de94fd9ac59eb60a4331c7af
 scopes   = ["main"]
 deps = [
   "com.google.guava:guava:jar:@33.6.0-android",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.10.1",
 ]
 
@@ -3956,16 +4016,16 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:bc94b0fcb4464742f02cf54a3e8db9e7b141a1a052ca8ddaf662a60affa21530"
 scopes   = ["main"]
 deps = [
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "org.jetbrains.kotlinx:kotlinx-datetime:jar:"
 version  = "0.6.1"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-datetime-jvm:jar:@0.6.1",
   "org.jetbrains.kotlinx:kotlinx-serialization-core:jar:@1.11.0",
 ]
@@ -3977,13 +4037,13 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:f4a801c647d4351327cd9e1ac4113e2be9ea37a64ab0abae269c25a52e28f35d"
 scopes   = ["main", "processor"]
 deps = [
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
 ]
 
 [[artifact]]
 name     = "org.jetbrains.kotlinx:kotlinx-serialization-core:jar:"
 version  = "1.11.0"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:@1.11.0",
@@ -3996,7 +4056,7 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:563a25b4eb5c9128ae9c2479f3d1a5c44dcd176112b91cf03682e906eba5c935"
 scopes   = ["processor"]
 deps = [
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:@1.11.0",
 ]
 
@@ -4007,14 +4067,14 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:7b7c445880cef94dc464f4733da1b33b94bee78805041ea08ae06e8507e4620e"
 scopes   = ["main"]
 deps = [
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.10",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
   "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:@1.11.0",
 ]
 
 [[artifact]]
 name     = "org.jetbrains.kotlinx:kotlinx-serialization-json:jar:"
 version  = "1.8.0"
-source   = "jumpkick+https://storage.googleapis.com/jkbuild-releases/repo/"
+source   = "jumpkick+https://jumpkick.build/repo/"
 scopes   = ["main"]
 deps = [
   "org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:jar:@1.8.0",
@@ -4079,10 +4139,15 @@ scopes   = ["test"]
 
 [[artifact]]
 name     = "org.xerial:sqlite-jdbc:jar:"
-version  = "3.53.2.1"
+version  = "3.53.4.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:f55e405ed96d5ffe629e05b7b51b059e1c7d64527c0cc90a972fbac06730ccc1"
+checksum = "sha256:bcb1f51e36f940867e83342f9efbf5968ac44a6bef4d397bb4af7b17b45cd2fb"
 scopes   = ["processor"]
+
+[[plugin]]
+coordinate = "cc.jumpkick.guards:android"
+version    = "0.13.2"
+checksum   = "sha256:c9f977cb10ace56f15dbbf4dc411f6d283294cd8ec9f0434166778b715536110"
 
 [[module]]
 path    = "."
