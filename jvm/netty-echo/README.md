@@ -1,28 +1,19 @@
-# netty-echo (JK-1174 / JK-1175)
+# jvm/netty-echo — Netty echo server on the published artifact
 
-Idiomatic **JumpKick** sample using published **Netty 4.1** (`netty-all`).
+An idiomatic single-module JumpKick app on `io.netty:netty-all` (`latest`, pinned by
+`jk-lock.toml`). This is the small dogfood unit for cold / warm / no-op benches; the full
+multi-module port of Netty's own sources is [`../netty`](../netty/).
 
-This is **not** the full Mill-style monorepo port of `github.com/netty/netty` sources
-(~50 modules). That remains a multi-week overlay project (see Mill’s
-`example/thirdparty/netty`). This module is the dogfood unit for:
+It demonstrates:
 
-- declarative `jk.toml` + application main
-- cold / warm / no-op benches against Maven/Mill-style messaging (JK-1175)
+- a declarative `jk.toml` with `[application] main`
+- the test-tier table (`[test] exclude-tags` plus one profile per tag) and the house guard baseline
 
-## Build
-
-```bash
-export PATH="$HOME/.jk/bin:$PATH"   # or your install
-jk lock
-jk build
+```sh
+jk build          # compiles, runs the unit tier, packages target/netty-echo-0.1.0.jar
 jk test
-# jk run   # listens on 8080
+jk guard
+jk run            # listens on 8080
 ```
 
-## Bench
-
-From the `jk` repo:
-
-```bash
-./scripts/netty-echo-bench.sh /path/to/jk-examples/jvm/netty-echo
-```
+Bench, from the `jk` repo: `./scripts/netty-echo-bench.sh /path/to/jk-examples/jvm/netty-echo`.

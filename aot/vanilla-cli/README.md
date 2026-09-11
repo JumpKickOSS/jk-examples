@@ -1,9 +1,16 @@
-# vanilla-cli — core JVM AOT
+# aot/vanilla-cli — core JVM AOT
 
-Plain Java app, no plugins. Validates:
+A plain Java CLI with one dependency and no framework or plugin. It demonstrates the path every
+JVM project gets for free:
 
-- `jk build --aot-cache` — the training run + mapped-cache start (JDK 25 AOT;
-  AppCDS fallback on older JDKs), entirely core jk (no framework involved).
-- `jk run` — classpath exec of a plain application.
+- `jk build --aot-cache` — the training run and the mapped-cache start (JDK 25 AOT, AppCDS
+  fallback on older JDKs), entirely core jk.
+- `jk run` — classpath execution of a plain application.
 
-Run: `jk build --aot-cache && jk run`
+`gson` floats to `latest`; `jk-lock.toml` pins it.
+
+```sh
+jk build --aot-cache
+jk run
+jk guard
+```

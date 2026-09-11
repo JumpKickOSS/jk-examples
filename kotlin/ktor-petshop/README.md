@@ -1,25 +1,27 @@
-# kotlin/ktor-petshop — Ktor + Koin + Exposed (JK-1171)
+# kotlin/ktor-petshop — Ktor + Koin + Exposed
 
-Idiomatic multi-module Kotlin pet shop:
+An idiomatic multi-module Kotlin pet shop:
 
 | Module | Role |
 |--------|------|
-| `domain` | `Pet` data class + `PetRepository` interface |
-| `app` | Ktor Netty, **Koin** DI, **Exposed** + **H2**, REST `/api/pets`, `testApplication` tests |
+| `domain` | `Pet` data class + `PetRepository` interface, package `com.example.petshop.domain` |
+| `app` | Ktor Netty, **Koin** DI, **Exposed** + **H2**, REST `/api/pets`, `testApplication` tests, `[image]` |
 
-## Stack
+Everything floats: `kotlin = "latest"` at the root, and every Ktor, Koin, Exposed, H2 and
+Logback coordinate is `latest`. `jk-lock.toml` pins them (Exposed is on its 1.x API,
+`org.jetbrains.exposed.v1.*`).
 
-- Ktor server (Netty) + Jackson content negotiation  
-- Koin (`koin-ktor`) for repository injection  
-- Exposed JDBC + in-memory H2  
-- JUnit 5 + `ktor-server-test-host`
+It exercises:
 
-## Run
+- a Kotlin workspace with one root lock and inherited identity
+- root-level test tiers (`[test] exclude-tags`, one profile per tag)
+- the `monorepo` guard pack — `one-module-per-package` is why `domain` has its own package —
+  plus a per-language file-size ratchet (`cap = { java = 800, kt = 600 }`)
 
-```bash
-jk lock
+```sh
 jk build
-jk test --modules app
-jk run -C app
-# GET http://localhost:8080/api/pets
+jk test -m ktor-petshop-app
+jk run             # GET http://localhost:8080/api/pets
+jk guard
+jk image -m ktor-petshop-app
 ```

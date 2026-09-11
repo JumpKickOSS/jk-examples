@@ -1,29 +1,25 @@
-# Micronaut hello-http
+# micronaut/hello-http — a Micronaut HTTP service
 
-Minimal **Micronaut 5** HTTP service for JumpKick dogfood (JK-1538).
+Minimal Micronaut service on the built-in `[micronaut]` plugin. It demonstrates:
 
-Uses the built-in `[micronaut]` plugin with a **5.x major-line floor** (caret). First
-`jk lock` pins an exact platform version; `jk update` may lift within 5.x.
-
-## Run
+- `[micronaut] version = "latest"` — the platform BOM floats, starters are versionless, and
+  `jk-lock.toml` pins the exact platform.
+- `assembly = true` — one runnable fat jar (Maven shade parity).
+- `[image]` with a JRE 25 base and `aot-cache = true` — `jk image` writes a shippable container.
+- `@MicronautTest` with `@Client("/")` as the smoke test, in the unit tier of the
+  `[test] exclude-tags` table.
+- The house guard baseline (there is no Micronaut guard pack yet).
 
 ```sh
-# from a current jk install (see repo root README)
-cd micronaut/hello-http
-jk lock
 jk build
 jk test
-jk run   # then: curl -s localhost:8080/hello
+jk run             # then: curl -s localhost:8080/hello
+jk guard
+jk image           # optional: an OCI image with a trained AOT cache
 ```
 
-Optional AOT (deploy optimization, not every edit cycle):
+`src/test/resources/application-test.properties` binds the test server to `localhost`.
+Without it Micronaut advertises the machine's hostname, and on a host that resolves only to
+IPv6 link-local or VPN addresses the injected client waits on a socket nothing answers.
 
-```toml
-[micronaut]
-version = "5"
-aot = true
-```
-
-## Layout
-
-Traditional `src/main/java` + `src/test/java`. Fat assembly jar for `java -jar` / `jk run`.
+Optional deploy optimization, not for every edit cycle: `[micronaut] aot = true`.
