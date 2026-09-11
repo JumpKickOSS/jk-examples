@@ -1,6 +1,5 @@
 # Netty module: handler-ssl-ocsp (Maven artifact netty-handler-ssl-ocsp)
-# Generated from Mill thirdparty/netty graph — loyal multi-module port (JK-1174).
-[project]
+# Generated from Mill thirdparty/netty graph — loyal multi-module port.
 name    = "handler-ssl-ocsp"
 # group/version/java inherit from workspace root
 

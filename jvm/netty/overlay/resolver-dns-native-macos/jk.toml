@@ -1,6 +1,5 @@
 # Netty module: resolver-dns-native-macos (Maven artifact netty-resolver-dns-native-macos)
-# Generated from Mill thirdparty/netty graph — loyal multi-module port (JK-1174).
-[project]
+# Generated from Mill thirdparty/netty graph — loyal multi-module port.
 name    = "resolver-dns-native-macos"
 # group/version/java inherit from workspace root
 

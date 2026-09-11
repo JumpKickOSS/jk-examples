@@ -1,6 +1,5 @@
 # Netty module: codec-xml (Maven artifact netty-codec-xml)
-# Generated from Mill thirdparty/netty graph — loyal multi-module port (JK-1174).
-[project]
+# Generated from Mill thirdparty/netty graph — loyal multi-module port.
 name    = "codec-xml"
 # group/version/java inherit from workspace root
 

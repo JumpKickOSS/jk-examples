@@ -1,6 +1,5 @@
 # Netty module: transport-blockhound-tests (Maven artifact netty-transport-blockhound-tests)
-# Generated from Mill thirdparty/netty graph — loyal multi-module port (JK-1174).
-[project]
+# Generated from Mill thirdparty/netty graph — loyal multi-module port.
 name    = "transport-blockhound-tests"
 # group/version/java inherit from workspace root
 

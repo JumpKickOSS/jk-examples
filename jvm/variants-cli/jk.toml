@@ -6,16 +6,18 @@
 #   jk build --variant contentType=prod     # real Backend using commons-lang3
 #   jk build --variant demo                 # bare value works: only one custom dimension
 #   jk build                                # FAILS: the dimension declares no default
+#
+# commons-lang3 is pinned exactly on purpose: the prod variant's jar listing in the README
+# names one library build, so the union lock must hold still.
 
-[project]
 name    = "variants-cli"
 group   = "dev.jkexamples"
 version = "1.0.0"
 java    = 25
 
 [application]
-main       = "dev.jkexamples.vcli.Main"
-shadow-jar = true   # java -jar runnable for either variant (jk run cannot select variants yet)
+main     = "dev.jkexamples.vcli.Main"
+assembly = true   # java -jar runnable for either variant
 
 [variants.contentType.demo]
 extra-src = ["src-demo"]
@@ -25,6 +27,3 @@ extra-src = ["src-prod"]
 
 [variants.contentType.prod.dependencies]
 commons-lang3 = { group = "org.apache.commons", name = "commons-lang3", version = "=3.18.0" }
-
-[repositories]
-central = "https://repo.maven.apache.org/maven2/"

@@ -1,6 +1,5 @@
 # Netty module: testsuite-native-image-client (Maven artifact netty-testsuite-native-image-client)
-# Generated from Mill thirdparty/netty graph — loyal multi-module port (JK-1174).
-[project]
+# Generated from Mill thirdparty/netty graph — loyal multi-module port.
 name    = "testsuite-native-image-client"
 # group/version/java inherit from workspace root
 

@@ -1,6 +1,6 @@
 package com.example.petshop.routes
 
-import com.example.petshop.PetRepository
+import com.example.petshop.domain.PetRepository
 import io.ktor.http.HttpStatusCode
 import io.ktor.server.request.receive
 import io.ktor.server.response.respond

@@ -1,6 +1,5 @@
 # Netty module: transport-sctp (Maven artifact netty-transport-sctp)
-# Generated from Mill thirdparty/netty graph — loyal multi-module port (JK-1174).
-[project]
+# Generated from Mill thirdparty/netty graph — loyal multi-module port.
 name    = "transport-sctp"
 # group/version/java inherit from workspace root
 

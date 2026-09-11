@@ -1,6 +1,5 @@
 # Netty module: transport-rxtx (Maven artifact netty-transport-rxtx)
-# Generated from Mill thirdparty/netty graph — loyal multi-module port (JK-1174).
-[project]
+# Generated from Mill thirdparty/netty graph — loyal multi-module port.
 name    = "transport-rxtx"
 # group/version/java inherit from workspace root
 

@@ -1,6 +1,5 @@
 # Netty module: transport-native-unix-common-tests (Maven artifact netty-transport-native-unix-common-tests)
-# Generated from Mill thirdparty/netty graph — loyal multi-module port (JK-1174).
-[project]
+# Generated from Mill thirdparty/netty graph — loyal multi-module port.
 name    = "transport-native-unix-common-tests"
 # group/version/java inherit from workspace root
 

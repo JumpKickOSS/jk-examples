@@ -1,6 +1,5 @@
 # Netty module: transport (Maven artifact netty-transport)
-# Generated from Mill thirdparty/netty graph — loyal multi-module port (JK-1174).
-[project]
+# Generated from Mill thirdparty/netty graph — loyal multi-module port.
 name    = "transport"
 # group/version/java inherit from workspace root
 

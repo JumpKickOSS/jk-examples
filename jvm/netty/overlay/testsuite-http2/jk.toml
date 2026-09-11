@@ -1,6 +1,5 @@
 # Netty module: testsuite-http2 (Maven artifact netty-testsuite-http2)
-# Generated from Mill thirdparty/netty graph — loyal multi-module port (JK-1174).
-[project]
+# Generated from Mill thirdparty/netty graph — loyal multi-module port.
 name    = "testsuite-http2"
 # group/version/java inherit from workspace root
 

@@ -1,6 +1,5 @@
 # Netty module: codec-mqtt (Maven artifact netty-codec-mqtt)
-# Generated from Mill thirdparty/netty graph — loyal multi-module port (JK-1174).
-[project]
+# Generated from Mill thirdparty/netty graph — loyal multi-module port.
 name    = "codec-mqtt"
 # group/version/java inherit from workspace root
 

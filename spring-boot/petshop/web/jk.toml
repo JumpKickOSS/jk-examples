@@ -1,11 +1,10 @@
-[project]
 name = "petshop-web"
 
 [application]
 main = "com.example.petshop.PetshopApplication"
 
 [spring-boot]
-version = "4.1.0"
+version = "latest"
 
 [dependencies]
 petshop-service = { workspace = true }

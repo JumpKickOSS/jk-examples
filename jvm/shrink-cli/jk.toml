@@ -1,16 +1,20 @@
-# The shrink plugin: R8 --classfile full mode over the app + runtime closure, packaged
+# The minified jar: R8 --classfile full mode over the app + runtime closure, packaged
 # as one slim executable jar. Validation is behavioral (the jar runs) and structural
-# (unreferenced library code is absent).
+# (unreferenced library code is absent) — which is why commons-lang3 is pinned exactly:
+# the README's size numbers describe one specific library build.
 
-[project]
 name    = "shrink-cli"
 group   = "dev.jkharness"
 version = "1.0.0"
 java    = 25
-[application]
-main = "dev.jkharness.slim.Main"
 
-[shrink]
+[application]
+main     = "dev.jkharness.slim.Main"
+minified = true
+
+[minified]
+# keep = ["-keep class dev.jkharness.slim.** { *; }"]   # jk derives keep rules from the jar's indexes
+# obfuscate = false
 
 [dependencies]
 commons-lang3 = { group = "org.apache.commons", name = "commons-lang3", version = "=3.18.0" }

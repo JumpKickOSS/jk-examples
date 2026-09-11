@@ -1,4 +1,3 @@
-[project]
 group   = "com.example"
 name    = "hello-http"
 version = "0.1.0"
@@ -9,10 +8,10 @@ main = "com.example.hello.Application"
 # Micronaut apps ship as a single runnable fat jar (Maven shade parity).
 assembly = true
 
-# Micronaut 5.x major-line floor (caret); lock pins exact — JK-1544
+# Newest stable Micronaut platform; jk-lock.toml pins the exact version.
 [micronaut]
-version = "5"
-# Optional deploy optimization (JK-1536):
+version = "latest"
+# Optional deploy optimization:
 # aot = true
 # aot-runtime = "jit"   # or "native" with [native]
 

@@ -1,4 +1,4 @@
-# The decision matrix as running code (see jk docs/variants.md):
+# The decision matrix as running code (see jk docs/user/projects.md, "Features, profiles, variants"):
 #
 #   PROFILE  — how to build:   [profiles.strict] turns javac lint into errors. Optional;
 #              same artifact either way.            jk build --profile strict
@@ -10,15 +10,14 @@
 # Environments (dev/test/prod config) are NONE of these — that's runtime configuration
 # (env vars, config files, Spring profiles): build once, promote the same artifact.
 
-[project]
 name    = "profiles-vs-variants"
 group   = "dev.jkexamples"
 version = "1.0.0"
 java    = 25
 
 [application]
-main       = "dev.jkexamples.matrix.Main"
-shadow-jar = true   # java -jar runnable with the feature dep on the classpath
+main     = "dev.jkexamples.matrix.Main"
+assembly = true   # java -jar runnable with the feature dep on the classpath
 
 [profiles.strict]
 javac = ["-Werror"]
@@ -30,10 +29,7 @@ default = ["json"]
 deps = ["gson"]
 
 [dependencies]
-gson = { group = "com.google.code.gson", name = "gson", version = "=2.13.2" }
+gson = { group = "com.google.code.gson", name = "gson", version = "latest", optional = true }
 
 [variants.build-type.release]
 extra-src = ["src-release"]
-
-[repositories]
-central = "https://repo.maven.apache.org/maven2/"

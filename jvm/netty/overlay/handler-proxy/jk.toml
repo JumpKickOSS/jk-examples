@@ -1,6 +1,5 @@
 # Netty module: handler-proxy (Maven artifact netty-handler-proxy)
-# Generated from Mill thirdparty/netty graph — loyal multi-module port (JK-1174).
-[project]
+# Generated from Mill thirdparty/netty graph — loyal multi-module port.
 name    = "handler-proxy"
 # group/version/java inherit from workspace root
 

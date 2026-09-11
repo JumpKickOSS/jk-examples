@@ -1,17 +1,17 @@
-# Spring Boot 4.1 kitchen sink: web + data-jpa + validation + actuator, layered boot
+# Spring Boot kitchen sink: web + data-jpa + validation + actuator, layered boot
 # jar, Spring AOT on — exercises the spring-boot plugin's whole surface (BOM
 # auto-import, boot-jar packager, AOT step, build-info, dev-scope devtools).
 
-[project]
 name    = "kitchen-sink"
 group   = "dev.jkharness"
 version = "1.0.0"
 java    = 25
+
 [application]
 main = "dev.jkharness.kitchensink.KitchenSinkApplication"
 
 [spring-boot]
-version    = "4.1.0"
+version    = "latest"
 aot        = true
 build-info = true
 
@@ -29,6 +29,3 @@ devtools = { group = "org.springframework.boot", name = "spring-boot-devtools" }
 
 [test-dependencies]
 starter-test = { group = "org.springframework.boot", name = "spring-boot-starter-test" }
-
-[repositories]
-central = "https://repo.maven.apache.org/maven2/"

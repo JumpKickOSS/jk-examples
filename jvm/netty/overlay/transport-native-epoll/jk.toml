@@ -1,6 +1,5 @@
 # Netty module: transport-native-epoll (Maven artifact netty-transport-native-epoll)
-# Generated from Mill thirdparty/netty graph — loyal multi-module port (JK-1174).
-[project]
+# Generated from Mill thirdparty/netty graph — loyal multi-module port.
 name    = "transport-native-epoll"
 # group/version/java inherit from workspace root
 

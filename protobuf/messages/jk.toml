@@ -1,23 +1,20 @@
 # The protobuf plugin: provisioned per-OS protoc, Java + Kotlin DSL codegen (lite),
 # generated sources joining both compilers and the packaged jar.
 
-[project]
 name    = "messages"
 group   = "dev.jkharness"
 version = "1.0.0"
 java    = 25
-kotlin  = "^2.4.0"
+kotlin  = "latest"
 
 [application]
 main = "dev.jkharness.pb.MainKt"
 
+# protoc and the runtime library float together; the lock pins one protobuf release for both.
 [protobuf]
-version = "4.29.2"
+version = "latest"
 lite    = true
 kotlin  = true
 
 [dependencies]
-protobuf-kotlin-lite = { group = "com.google.protobuf", name = "protobuf-kotlin-lite", version = "=4.29.2" }
-
-[repositories]
-central = "https://repo.maven.apache.org/maven2/"
+protobuf-kotlin-lite = { group = "com.google.protobuf", name = "protobuf-kotlin-lite", version = "latest" }

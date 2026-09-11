@@ -1,7 +1,6 @@
 # Vanilla JVM AOT: no framework, no plugin — exercises jk's core `jk build --aot-cache`
 # (self-assembled AOT layout on JDK 25; AppCDS fallback below) and `jk run` startup.
 
-[project]
 name    = "vanilla-cli"
 group   = "dev.jkharness"
 version = "1.0.0"
@@ -11,7 +10,4 @@ java    = 25
 main = "dev.jkharness.aot.Main"
 
 [dependencies]
-gson = { group = "com.google.code.gson", name = "gson", version = "2.11.0" }
-
-[repositories]
-central = "https://repo.maven.apache.org/maven2/"
+gson = { group = "com.google.code.gson", name = "gson", version = "latest" }

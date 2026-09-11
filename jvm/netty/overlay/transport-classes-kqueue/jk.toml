@@ -1,6 +1,5 @@
 # Netty module: transport-classes-kqueue (Maven artifact netty-transport-classes-kqueue)
-# Generated from Mill thirdparty/netty graph — loyal multi-module port (JK-1174).
-[project]
+# Generated from Mill thirdparty/netty graph — loyal multi-module port.
 name    = "transport-classes-kqueue"
 # group/version/java inherit from workspace root
 

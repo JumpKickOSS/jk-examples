@@ -1,6 +1,5 @@
 # Netty module: transport-udt (Maven artifact netty-transport-udt)
-# Generated from Mill thirdparty/netty graph — loyal multi-module port (JK-1174).
-[project]
+# Generated from Mill thirdparty/netty graph — loyal multi-module port.
 name    = "transport-udt"
 # group/version/java inherit from workspace root
 
