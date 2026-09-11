@@ -1,0 +1,3 @@
+# House rules from the Spring Boot starter pack; `jk lock` pins it, `jk guard explain` lists its rules.
+[guards]
+extends = ["cc.jumpkick.guards:spring:0.13.2"]

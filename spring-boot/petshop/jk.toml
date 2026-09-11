@@ -5,3 +5,27 @@ java    = 25
 
 [workspace]
 modules = ["domain", "service", "web"]
+
+# Test tiers. Bare `jk test` is the unit tier; each profile owns exactly one of the excluded
+# tags, so every tagged test runs in one tier and none is silently skipped.
+[test]
+exclude-tags = ["integration", "slow", "network", "bench"]
+
+[profiles.integration]
+include-tags = ["integration"]
+exclude-tags = []
+
+[profiles.network]
+include-tags = ["network"]
+exclude-tags = ["integration"]
+
+[profiles.slow]
+include-tags = ["slow"]
+exclude-tags = ["integration", "network"]
+
+[profiles.bench]
+include-tags = ["bench"]
+exclude-tags = ["integration", "network", "slow"]
+
+[profiles.ci]
+exclude-tags = ["integration", "slow", "network", "bench"]

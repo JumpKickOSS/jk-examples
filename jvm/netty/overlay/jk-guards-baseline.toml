@@ -1,0 +1,228 @@
+# Engine-owned. Tightened on every jk build; grown only by `jk guard freeze <id> --reason`.
+# Never edit by hand: an entry without a reason is a suppression, and there is no suppression syntax.
+
+[converge-versions]
+population = { artifacts = 98, declared = 850 }
+[[converge-versions.entries]]
+at     = "convergence com.google.code.gson:gson"
+reason = "Netty's own per-module Maven pins (Mill parity); the port does not converge them"
+[[converge-versions.entries]]
+at     = "convergence com.google.guava:guava"
+reason = "Netty's own per-module Maven pins (Mill parity); the port does not converge them"
+[[converge-versions.entries]]
+at     = "convergence org.junit.platform:junit-platform-commons"
+reason = "Netty's own per-module Maven pins (Mill parity); the port does not converge them"
+
+[file-size]
+population = { units = 2636 }
+[[file-size.entries]]
+unit   = "buffer/src/main/java/io/netty/buffer/AbstractByteBuf.java"
+value  = 1189
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "buffer/src/main/java/io/netty/buffer/AdaptivePoolingAllocator.java"
+value  = 952
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "buffer/src/main/java/io/netty/buffer/AdvancedLeakAwareCompositeByteBuf.java"
+value  = 850
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "buffer/src/main/java/io/netty/buffer/ByteBufUtil.java"
+value  = 1372
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "buffer/src/main/java/io/netty/buffer/CompositeByteBuf.java"
+value  = 1809
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "buffer/src/main/java/io/netty/buffer/EmptyByteBuf.java"
+value  = 826
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "buffer/src/main/java/io/netty/buffer/SwappedByteBuf.java"
+value  = 842
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "buffer/src/main/java/io/netty/buffer/WrappedByteBuf.java"
+value  = 822
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "buffer/src/main/java/io/netty/buffer/WrappedCompositeByteBuf.java"
+value  = 1018
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "buffer/src/test/java/io/netty/buffer/AbstractByteBufTest.java"
+value  = 5347
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "buffer/src/test/java/io/netty/buffer/AbstractCompositeByteBufTest.java"
+value  = 1336
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "buffer/src/test/java/io/netty/buffer/ByteBufUtilTest.java"
+value  = 886
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "codec-haproxy/src/test/java/io/netty/handler/codec/haproxy/HAProxyMessageDecoderTest.java"
+value  = 1052
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "codec-http/src/main/java/io/netty/handler/codec/http/HttpObjectDecoder.java"
+value  = 838
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "codec-http/src/main/java/io/netty/handler/codec/http/multipart/HttpPostMultipartRequestDecoder.java"
+value  = 889
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "codec-http/src/test/java/io/netty/handler/codec/http/HttpContentCompressorTest.java"
+value  = 828
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "codec-http/src/test/java/io/netty/handler/codec/http/HttpResponseDecoderTest.java"
+value  = 826
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "codec-http/src/test/java/io/netty/handler/codec/http/multipart/HttpPostRequestDecoderTest.java"
+value  = 889
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "codec-http/src/test/java/io/netty/handler/codec/spdy/SpdyFrameDecoderTest.java"
+value  = 1092
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "codec-http2/src/main/java/io/netty/handler/codec/http2/AbstractHttp2StreamChannel.java"
+value  = 833
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "codec-http2/src/main/java/io/netty/handler/codec/http2/HpackHuffmanDecoder.java"
+value  = 4151
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "codec-http2/src/test/java/io/netty/handler/codec/http2/DefaultHttp2ConnectionDecoderTest.java"
+value  = 860
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "codec-http2/src/test/java/io/netty/handler/codec/http2/DefaultHttp2RemoteFlowControllerTest.java"
+value  = 898
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "codec-http2/src/test/java/io/netty/handler/codec/http2/Http2ConnectionRoundtripTest.java"
+value  = 997
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "codec-http2/src/test/java/io/netty/handler/codec/http2/Http2MultiplexTest.java"
+value  = 1198
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "codec-mqtt/src/test/java/io/netty/handler/codec/mqtt/MqttCodecTest.java"
+value  = 826
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "codec/src/main/java/io/netty/handler/codec/DefaultHeaders.java"
+value  = 1133
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "codec/src/main/java/io/netty/handler/codec/ReplayingDecoderByteBuf.java"
+value  = 907
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "codec/src/main/java/io/netty/handler/codec/compression/Bzip2DivSufSort.java"
+value  = 1881
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "common/src/main/java/io/netty/util/AsciiString.java"
+value  = 1065
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "common/src/main/java/io/netty/util/internal/PlatformDependent.java"
+value  = 1120
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "common/src/main/java/io/netty/util/internal/PlatformDependent0.java"
+value  = 868
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "example/src/main/java/io/netty/example/worldclock/WorldClockProtocol.java"
+value  = 2612
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "handler/src/main/java/io/netty/handler/ssl/ReferenceCountedOpenSslContext.java"
+value  = 831
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "handler/src/main/java/io/netty/handler/ssl/ReferenceCountedOpenSslEngine.java"
+value  = 1946
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "handler/src/main/java/io/netty/handler/ssl/SslHandler.java"
+value  = 1518
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "resolver-dns/src/main/java/io/netty/resolver/dns/DnsNameResolver.java"
+value  = 1056
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "resolver-dns/src/main/java/io/netty/resolver/dns/DnsResolveContext.java"
+value  = 1042
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "transport/src/main/java/io/netty/channel/AbstractChannel.java"
+value  = 820
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "transport/src/main/java/io/netty/channel/AbstractChannelHandlerContext.java"
+value  = 1034
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "transport/src/main/java/io/netty/channel/DefaultChannelPipeline.java"
+value  = 1096
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "transport/src/test/java/io/netty/channel/DefaultChannelPipelineTest.java"
+value  = 1840
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "transport/src/test/java/io/netty/channel/local/LocalChannelTest.java"
+value  = 1051
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+
+[one-module-per-package]
+population = { packages = 155 }
+[[one-module-per-package.entries]]
+at     = "io.netty.buffer | buffer + microbench"
+reason = "upstream Netty layout: microbench and split-out modules share packages with the module that owns them"
+[[one-module-per-package.entries]]
+at     = "io.netty.handler.codec | codec + microbench"
+reason = "upstream Netty layout: microbench and split-out modules share packages with the module that owns them"
+[[one-module-per-package.entries]]
+at     = "io.netty.handler.codec.http | codec-http + microbench"
+reason = "upstream Netty layout: microbench and split-out modules share packages with the module that owns them"
+[[one-module-per-package.entries]]
+at     = "io.netty.handler.codec.http.multipart | codec-http + microbench"
+reason = "upstream Netty layout: microbench and split-out modules share packages with the module that owns them"
+[[one-module-per-package.entries]]
+at     = "io.netty.handler.codec.http2 | codec-http2 + microbench"
+reason = "upstream Netty layout: microbench and split-out modules share packages with the module that owns them"
+[[one-module-per-package.entries]]
+at     = "io.netty.handler.codec.mqtt | codec-mqtt + microbench"
+reason = "upstream Netty layout: microbench and split-out modules share packages with the module that owns them"
+[[one-module-per-package.entries]]
+at     = "io.netty.handler.codec.protobuf | codec + microbench"
+reason = "upstream Netty layout: microbench and split-out modules share packages with the module that owns them"
+[[one-module-per-package.entries]]
+at     = "io.netty.handler.codec.xml | codec + codec-xml"
+reason = "upstream Netty layout: microbench and split-out modules share packages with the module that owns them"
+[[one-module-per-package.entries]]
+at     = "io.netty.handler.ssl.ocsp | handler + handler-ssl-ocsp"
+reason = "upstream Netty layout: microbench and split-out modules share packages with the module that owns them"
+[[one-module-per-package.entries]]
+at     = "io.netty.testsuite.svm.client | testsuite-native-image-client + testsuite-native-image-client-runtime-init"
+reason = "upstream Netty layout: microbench and split-out modules share packages with the module that owns them"
+[[one-module-per-package.entries]]
+at     = "io.netty.util | common + microbench"
+reason = "upstream Netty layout: microbench and split-out modules share packages with the module that owns them"
+[[one-module-per-package.entries]]
+at     = "io.netty.util.concurrent | common + microbench"
+reason = "upstream Netty layout: microbench and split-out modules share packages with the module that owns them"

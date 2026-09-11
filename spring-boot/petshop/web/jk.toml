@@ -6,6 +6,11 @@ main = "com.example.petshop.PetshopApplication"
 [spring-boot]
 version = "latest"
 
+# A shippable container: a JRE 25 base and a JEP 514 AOT cache trained with the image's own JVM.
+[image]
+base      = "docker.io/bellsoft/liberica-runtime-container:jre-25-slim-glibc"
+aot-cache = true
+
 [dependencies]
 petshop-service = { workspace = true }
 starter-webmvc = { group = "org.springframework.boot", name = "spring-boot-starter-webmvc" }

@@ -15,6 +15,11 @@ version    = "latest"
 aot        = true
 build-info = true
 
+# A shippable container: a JRE 25 base and a JEP 514 AOT cache trained with the image's own JVM.
+[image]
+base      = "docker.io/bellsoft/liberica-runtime-container:jre-25-slim-glibc"
+aot-cache = true
+
 [dependencies]
 starter-web        = { group = "org.springframework.boot", name = "spring-boot-starter-web" }
 starter-data-jpa   = { group = "org.springframework.boot", name = "spring-boot-starter-data-jpa" }

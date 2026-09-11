@@ -1,0 +1,4 @@
+# House rules: the Spring Boot pack for the framework, the monorepo pack for the workspace
+# (one module per package, converged versions, no snapshots, a Java floor).
+[guards]
+extends = ["cc.jumpkick.guards:spring:0.13.2", "cc.jumpkick.guards:monorepo:0.13.2"]

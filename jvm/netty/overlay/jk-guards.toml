@@ -1,0 +1,23 @@
+# House rules for the Netty port: the monorepo pack for the workspace shape, plus the per-file
+# ratchet. Upstream sources are what they are; the baseline records today's sites and the cap
+# only tightens from there. Applied to checkout/ by setup.sh like every other overlay file.
+[guards]
+extends = ["cc.jumpkick.guards:monorepo:0.13.2"]
+
+[guards.file-size]
+kind     = "metric"
+measure  = "lines"
+cap      = 800
+baseline = true
+why      = "a file that no longer fits a review no longer fits a reviewer"
+
+# The port keeps Netty's own per-module Maven pins (gson, guava, the JUnit platform), so the pack's
+# convergence rule is a baseline here: today's divergences are recorded, new ones are refused.
+[guards.converge-versions]
+baseline = true
+
+# Upstream Netty puts JMH benchmarks and a few split-out modules in packages another module owns
+# (microbench in io.netty.buffer, codec-xml in io.netty.handler.codec.xml, ...). A baseline again:
+# the sites upstream ships are recorded, and the port refuses new ones.
+[guards.one-module-per-package]
+baseline = true

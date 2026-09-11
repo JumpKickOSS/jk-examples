@@ -15,6 +15,11 @@ version = "latest"
 # aot = true
 # aot-runtime = "jit"   # or "native" with [native]
 
+# A shippable container: a JRE 25 base and a JEP 514 AOT cache trained with the image's own JVM.
+[image]
+base      = "docker.io/bellsoft/liberica-runtime-container:jre-25-slim-glibc"
+aot-cache = true
+
 [dependencies]
 micronaut-http-server-netty = { group = "io.micronaut", name = "micronaut-http-server-netty" }
 micronaut-jackson-databind  = { group = "io.micronaut", name = "micronaut-jackson-databind" }
@@ -27,3 +32,27 @@ micronaut-inject-java = { group = "io.micronaut", name = "micronaut-inject-java"
 micronaut-test-junit5 = { group = "io.micronaut.test", name = "micronaut-test-junit5" }
 micronaut-http-client = { group = "io.micronaut", name = "micronaut-http-client" }
 junit-jupiter         = { group = "org.junit.jupiter", name = "junit-jupiter" }
+
+# Test tiers. Bare `jk test` is the unit tier; each profile owns exactly one of the excluded
+# tags, so every tagged test runs in one tier and none is silently skipped.
+[test]
+exclude-tags = ["integration", "slow", "network", "bench"]
+
+[profiles.integration]
+include-tags = ["integration"]
+exclude-tags = []
+
+[profiles.network]
+include-tags = ["network"]
+exclude-tags = ["integration"]
+
+[profiles.slow]
+include-tags = ["slow"]
+exclude-tags = ["integration", "network"]
+
+[profiles.bench]
+include-tags = ["bench"]
+exclude-tags = ["integration", "network", "slow"]
+
+[profiles.ci]
+exclude-tags = ["integration", "slow", "network", "bench"]
