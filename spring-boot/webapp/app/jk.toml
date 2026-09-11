@@ -1,0 +1,28 @@
+name        = "app"
+description = "The Spring Boot service: the /api endpoints, the static SPA, and its fallback"
+
+[application]
+main = "com.example.webapp.WebappApplication"
+
+[spring-boot]
+version = "latest"
+
+[image]
+base      = "docker.io/bellsoft/liberica-runtime-container:jre-25-slim-glibc"
+aot-cache = true
+
+# `jk dev` runs the Vite dev server beside the app: it waits for 5173 to answer, prints that URL
+# as the front door, and Ctrl-C stops both. Vite proxies /api to the JVM (web/vite.config.ts).
+[dev.sidecars]
+web = { command = "npm run dev", cwd = "../web", ready = "http://localhost:5173", front-door = true }
+
+[dependencies]
+web.workspace  = true   # the SPA bundle: a resource jar with static/ at its root
+starter-webmvc = { group = "org.springframework.boot", name = "spring-boot-starter-webmvc" }
+
+[dev-dependencies]
+devtools = { group = "org.springframework.boot", name = "spring-boot-devtools" }
+
+[test-dependencies]
+starter-test        = { group = "org.springframework.boot", name = "spring-boot-starter-test" }
+starter-webmvc-test = { group = "org.springframework.boot", name = "spring-boot-starter-webmvc-test" }

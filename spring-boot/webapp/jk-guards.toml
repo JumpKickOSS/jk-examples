@@ -1,0 +1,4 @@
+# House rules: the Spring Boot pack for the framework, the monorepo pack for the workspace.
+# `jk lock` pins both; `jk guard explain` lists every rule they bring.
+[guards]
+extends = ["cc.jumpkick.guards:spring:0.13.2", "cc.jumpkick.guards:monorepo:0.13.2"]

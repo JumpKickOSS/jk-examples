@@ -1,0 +1,8 @@
+name        = "web"
+description = "The single-page front end, packaged as a resource jar the app serves from classpath:/static/"
+
+# No JVM sources, on purpose. With nothing under src/ this module uses the simple layout, so
+# `resources/` is its resource root and `npm run build` (web/vite.config.ts, build.outDir)
+# writes the bundle straight into `resources/static/`. jk packages that directory as
+# web-<version>.jar; `app` depends on this module, so the SPA rides in as a sibling jar and
+# Spring Boot finds `static/index.html` on its classpath. No copy step between the two builds.
