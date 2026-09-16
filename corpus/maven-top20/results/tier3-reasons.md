@@ -1,54 +1,54 @@
-# Tier-3 reasons (import ERRORs and jk failures), grouped — run3
+# Tier-3 reasons (import ERRORs and jk failures), grouped — run4
 
-Generated 2026-09-16 05:54. Module prefixes, coordinates, versions and paths are normalized so one line = one distinct cause = one ticket candidate.
+Generated 2026-09-16 08:56. Module prefixes, coordinates, versions and paths are normalized so one line = one distinct cause = one ticket candidate.
 
 ## import Tier 3 (not imported)
 
-- (5) `<build><extensions>` is not supported. Move build extensions to a custom jk task once tasks land.  
-  repos: hadoop, nacos, quarkus, thingsboard, tutorials
-- (4) packaging `war` (`maven-war-plugin`) is not supported: jk builds jars, Boot jars and native images. Keep building this module with `jk mvn package`.  
-  repos: apollo, java-design-patterns, jenkins, tutorials
-- (3) `<parent>` G:A could not be resolved (…); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.  
-  repos: hadoop, quarkus, spring-cloud-alibaba
-- (1) `<parent>` G:A:${revision} could not be resolved (…); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.  
-  repos: spring-cloud-alibaba
-- (1) `<parent>` G:A:${revision}${changelist} could not be resolved (…); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.  
-  repos: jenkins
+- (6) `<build><extensions>` is not supported. Move build extensions to a custom jk task once tasks land.  
+  repos: hadoop, nacos, neo4j, quarkus, thingsboard, tutorials
+- (3) packaging `war` (`maven-war-plugin`) is not supported: jk builds jars, Boot jars and native images. Keep building this module with `jk mvn package`.  
+  repos: hadoop, java-design-patterns, jenkins
+- (2) `<parent>` G:A could not be resolved (…); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.  
+  repos: hadoop, quarkus
+- (1) `<modules>` are declared only in profiles that are not active on this machine (default-jdk8, default-heavy, integration-jdk8, integration-heavy, default-jdk17, default, default-jdk22, default-jdk23, default-jdk24, default-jdk25, default-jdk26, integration-jdk17, integration, integration-jdk22, integration-jdk23, integration-jdk24, integration-jdk25, integration-jdk26, live-all, parents, default-disabled, integration-disabled); no module was imported, so the workspace builds nothing. Activate one with Maven's `-P` and re-import, or list the modules at the top level.  
+  repos: tutorials
 - (1) the effective model could not be built (…); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.  
   repos: hadoop
 
 ## jk lock failure
 
-- (4) Cannot resolve dependencies: · G:A N depends on G:A [N,+∞) · The project depends on G:A N  
-  repos: analysis-ik, cryptomator, java-design-patterns, nacos
-- (2) POM not found in any declared repo: G:A  
-  repos: quarkus, thingsboard
-- (2) environment references are not allowed here: version (${revision}) … — CI-friendly ${revision}/${changelist} versions copied verbatim from the pom  
-  repos: jenkins, spring-cloud-alibaba
-- (2) platform BOM conflict on G:A: G:A constrains to N, but G:A constrains to N. Pick one BOM or pin the coord explicitly.  
-  repos: keycloak, zipkin
+- (5) platform BOM conflict on G:A: G:A constrains to N, but G:A constrains to N. Pick one BOM or pin the coord explicitly.  
+  repos: dataease, keycloak, nacos, spring-cloud-alibaba, zipkin
+- (2) Cannot resolve dependencies: · G:A N depends on G:A [N,+∞) · The project depends on G:A N  
+  repos: analysis-ik, neo4j
+- (1) Cannot resolve dependencies: · G:A N is named by a POM but no declared repository has it — skipped · G:A N.Final depends on com.github.everit-org.json-sch  
+  repos: floci
 - (1) Cannot resolve dependencies: · No versions of G:A match N-SNAPSHOT · The project depends on G:A N-SNAPSHOT  
   repos: questdb
 - (1) Cannot resolve dependencies: · No versions of G:A match unresolved · The project depends on G:A unresolved  
   repos: hadoop
-- (1) Cannot resolve dependencies: · Package G:A was not found in any repository · The project depends on G:A N-SNAPSHOT  
+- (1) Illegal character in path at index 51: org/openjfx/javafx-base/N/javafx-base-N-${javafx.platform}.jar  
+  repos: cryptomator
+- (1) Invalid key: Unexpected '+', expected end-of-input  
+  repos: quarkus
+- (1) POM not found in any declared repo: G:A  
+  repos: jenkins
+- (1) platform BOM conflict on G:A: G:A constrains to N, but G:A constrains to N. Pick one BOM or pin the co  
+  repos: java-design-patterns
+- (1) platform BOM conflict on G:A: G:A constrains to N, but G:A constrains to N. Pick one BOM or pin the coord  
   repos: apollo
-- (1) java.util.NoSuchElementException  
-  repos: floci
+- (1) workspace artifact collision: `edqs-N-SNAPSHOT.jar` would be produced by both `common/edqs` and `edqs`. Final artifacts share <workspaceRoot>/target/, so two modules can't emit the same `<artifact>-<version>.jar`. Di  
+  repos: thingsboard
 
 ## jk build failure
 
-- (1) <path> error: cannot find symbol · symbol:   method setDescription(java.lang.String) · location: variable webLog of type com.macro.mall.common.domain.W  
-  repos: mall
 - (1) <path> error: malformed HTML  
   repos: xxl-job
 
 ## jk test failure
 
-- (1) test discovery exited 70 before any test ran — test discovery failed under <path> PreconditionViolationException: Cannot create Launcher without at least one TestEngine; consider adding an en  
-  repos: neo4j
-- (1) test failure: com.thealgorithms.sorts.BubbleSortRecursiveTest#shouldAcceptWhenRandomArrayIsPassed() — java.lang.StackOverflowError  
-  repos: TheAlgorithms-Java
+- (1) test failure: com.macro.mall.portal.MallPortalApplicationTests#contextLoads() — java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@6e612122 testClass = com.macro.mall.portal.MallPortalApplicationTests, locatio  
+  repos: mall
 
 ## Maven-side failure (for context)
 
