@@ -1,58 +1,86 @@
-# Tier-3 reasons (import ERRORs and jk failures), grouped — run5
+# Tier-3 reasons (import ERRORs and jk failures), grouped — run6
 
-Generated 2026-09-16 10:36. Module prefixes, coordinates, versions and paths are normalized so one line = one distinct cause = one ticket candidate.
+Generated 2026-09-16 12:15. Module prefixes, coordinates, versions and paths are normalized so one line = one distinct cause = one ticket candidate.
 
 ## import Tier 3 (not imported)
 
-- (6) `<build><extensions>` is not supported. Move build extensions to a custom jk task once tasks land.  
-  repos: hadoop, nacos, neo4j, quarkus, thingsboard, tutorials
 - (3) packaging `war` (`maven-war-plugin`) is not supported: jk builds jars, Boot jars and native images. Keep building this module with `jk mvn package`.  
   repos: hadoop, java-design-patterns, jenkins
 - (2) `<parent>` G:A could not be resolved (…); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.  
   repos: hadoop, quarkus
+- (2) `<type>exe</type>` on G:A names an artifact jk has no manifest spelling for; the dependency was not written. A jar of the same module is `{ group, name, version }`, a classified jar adds `classifier`.  
+  repos: quarkus, thingsboard
+- (1) `<build><extensions>` G:A builds only the modules git shows as changed, a selection `jk build` makes from its own action cache; nothing is written for it. Drop it from the POM when the jk build does not need it, or keep running that step with `jk mvn`.  
+  repos: tutorials
+- (1) `<build><extensions>` G:A is the `maven-archetype` packaging, a project template jk does not build; nothing is written for it. Drop it from the POM when the jk build does not need it, or keep running that step with `jk mvn`.  
+  repos: quarkus
+- (1) `<build><extensions>` G:A is the ssh transport of `mvn deploy`; `jk publish` speaks HTTP(S), `s3://` and `gs://`; nothing is written for it. Drop it from the POM when the jk build does not need it, or keep running that step with `jk mvn`.  
+  repos: thingsboard
+- (1) `<build><extensions>` G:A reports the Maven build to CI; the build's outputs do not depend on it; nothing is written for it. Drop it from the POM when the jk build does not need it, or keep running that step with `jk mvn`.  
+  repos: quarkus
 - (1) `<modules>` are declared only in profiles that are not active on this machine (default-jdk8, default-heavy, integration-jdk8, integration-heavy, default-jdk17, default, default-jdk22, default-jdk23, default-jdk24, default-jdk25, default-jdk26, integration-jdk17, integration, integration-jdk22, integration-jdk23, integration-jdk24, integration-jdk25, integration-jdk26, live-all, parents, default-disabled, integration-disabled); no module was imported, so the workspace builds nothing. Activate one with Maven's `-P` and re-import, or list the modules at the top level.  
   repos: tutorials
+- (1) `<type>executable-war</type>` on G:A names an artifact jk has no manifest spelling for; the dependency was not written. A jar of the same module is `{ group, name, version }`, a classified jar adds `classifier`.  
+  repos: jenkins
+- (1) `<type>war</type>` on G:A names an artifact jk has no manifest spelling for; the dependency was not written. A jar of the same module is `{ group, name, version }`, a classified jar adds `classifier`.  
+  repos: hadoop
+- (1) `<type>zip</type>` on G:A names an artifact jk has no manifest spelling for; the dependency was not written. A jar of the same module is `{ group, name, version }`, a classified jar adds `classifier`.  
+  repos: keycloak
+- (1) `common/edqs` and `edqs` and `msa/edqs` both carry the name `edqs` (G:A, G:A, G:A), and `application` depend on it. A workspace edge is spelled by module name alone, so the edge is written as `edqs.workspace = true` and jk refuses the workspace as ambiguous until one of the two modules is renamed.  
+  repos: thingsboard
+- (1) `common/transport/coap` and `transport/coap` and `msa/transport/coap` both carry the name `coap` (G:A, G:A, G:A), and `application` depend on it. A workspace edge is spelled by module name alone, so the edge is written as `coap.workspace = true` and jk refuses the workspace as ambiguous until one of the two modules is renamed.  
+  repos: thingsboard
+- (1) `common/transport/http` and `transport/http` and `msa/transport/http` both carry the name `http` (G:A, G:A, G:A), and `application` depend on it. A workspace edge is spelled by module name alone, so the edge is written as `http.workspace = true` and jk refuses the workspace as ambiguous until one of the two modules is renamed.  
+  repos: thingsboard
+- (1) `common/transport/lwm2m` and `transport/lwm2m` and `msa/transport/lwm2m` both carry the name `lwm2m` (G:A, G:A, G:A), and `application` depend on it. A workspace edge is spelled by module name alone, so the edge is written as `lwm2m.workspace = true` and jk refuses the workspace as ambiguous until one of the two modules is renamed.  
+  repos: thingsboard
+- (1) `common/transport/mqtt` and `transport/mqtt` and `msa/transport/mqtt` both carry the name `mqtt` (G:A, G:A, G:A), and `application` depend on it. A workspace edge is spelled by module name alone, so the edge is written as `mqtt.workspace = true` and jk refuses the workspace as ambiguous until one of the two modules is renamed.  
+  repos: thingsboard
+- (1) `common/transport/snmp` and `transport/snmp` and `msa/transport/snmp` both carry the name `snmp` (G:A, G:A, G:A), and `application` depend on it. A workspace edge is spelled by module name alone, so the edge is written as `snmp.workspace = true` and jk refuses the workspace as ambiguous until one of the two modules is renamed.  
+  repos: thingsboard
 - (1) the effective model could not be built (…); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.  
   repos: hadoop
 
 ## jk lock failure
 
-- (3) Cannot resolve dependencies: · No versions of G:A match N · The project depends on G:A N  
-  repos: dataease, java-design-patterns, nacos
+- (2) POM not found in any declared repo: G:A  
+  repos: keycloak, quarkus
 - (1) Cannot resolve dependencies: · G:A N depends on G:A [N,+∞) · G:A N depends on G:A N  
   repos: zipkin
-- (1) Cannot resolve dependencies: · No versions of G:A match N-SNAPSHOT · The project depends on G:A N-SNAPSHOT  
+- (1) Cannot resolve dependencies: · No versions of G:A match N · The project depends on G:A N  
+  repos: nacos
+- (1) Cannot resolve dependencies: · No versions of G:A match N-SNAPSHOT · N-SNAPSHOT is a snapshot, and no repository G:A may resolve from serves snapshots: central (releases only), jumpkick (releases only), g  
   repos: questdb
+- (1) Cannot resolve dependencies: · No versions of G:A match N.ALL · The project depends on G:A N.ALL  
+  repos: mall
 - (1) Cannot resolve dependencies: · No versions of G:A match unresolved · The project depends on G:A unresolved  
   repos: hadoop
-- (1) Invalid key: Unexpected '+', expected end-of-input  
-  repos: quarkus
-- (1) POM not found in any declared repo: G:A  
+- (1) Cannot resolve dependencies: · Resolution budget exceeded: exceeded resolve time budget; set JK_RESOLVE_TIMEOUT_MS to raise (0 = unlimited)  
+  repos: java-design-patterns
+- (1) dependency resolution failed while reading the dependencies of G:A:@N: java.lang.IllegalArgumentException: malformed Maven range: [N, 3[  
   repos: jenkins
-- (1) dependency resolution failed while reading the dependencies of G:A:@N.Final: java.lang.IllegalArgumentException: malformed Maven range: [N, 3[  
-  repos: keycloak
-- (1) workspace artifact collision: `edqs-N-SNAPSHOT.jar` would be produced by both `common/edqs` and `edqs`. Final artifacts share <workspaceRoot>/target/, so two modules can't emit the same `<artifact>-<version>.jar`. Di  
+- (1) no upstream checksum for G:A from central (org/jetbrains/kotlin/kotlin-bom/N/kotlin-bom-N.pom): the repository publishes neither a .sha256 nor a .sha1 sidecar, so the bytes cannot be verified before they are pinned.  
+  repos: dataease
+- (1) workspace edge `edqs` is ambiguous: `edqs` depends on it, and `common/edqs` and `edqs` and `msa/edqs` both carry that name. A workspace edge is spelled by module name alone, so rename one of them.  
   repos: thingsboard
 
 ## jk build failure
 
-- (1) <path> error: malformed HTML  
-  repos: xxl-job
 - (1) <path> error: module not found: org.jetbrains.annotations  
   repos: cryptomator
 - (1) <path> error: package com.ctrip.framework.apollo.openapi.model does not exist  
   repos: apollo
-- (1) java.lang.RuntimeException: java.lang.NoClassDefFoundError: org/apache/logging/log4j/util/Strings  
+- (1) <path> error: package org.neo4j.shaded.lucene9.index does not exist  
   repos: neo4j
-- (1) java.util.ConcurrentModificationException  
+- (1) Spring AOT processing failed (exit 1): · at com.google.inject.internal.ConstructorInjectorStore.get(G:A) · at com.google.inject.internal.ConstructorBindingImpl.initialize(G:A)  
   repos: spring-cloud-alibaba
 
 ## jk test failure
 
 - (1) test discovery exited 3 before any test ran · Fix: the runner's full output is above; rerun with --verbose for the live stream.  
   repos: floci
-- (1) test failure: com.macro.mall.search.MallSearchApplicationTests — G:A#testGetAllEsProductList() — java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@3b6c740b testClass = com.macro.mall.se  
-  repos: mall
+- (1) test failure: com.xxl.job.openapi.ExecutorBizTest — G:A#trigger() — java.lang.RuntimeException: Http Request Error (Connection refused (connect failed)). for url : http://G:A/trigger  
+  repos: xxl-job
 
 ## Maven-side failure (for context)
 
