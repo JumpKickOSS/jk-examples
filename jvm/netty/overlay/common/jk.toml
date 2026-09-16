@@ -4,39 +4,39 @@ name    = "common"
 # group/version/java inherit from workspace root
 
 [dependencies]
-jctools-core = { group = "org.jctools", name = "jctools-core", version = "=4.0.5" }
+jctools-core = "=4.0.5"
 
 [provided-dependencies]
 # Graal SVM annotations for *Substitution.java (Maven provided / Mill compileMvnDeps)
-svm = { group = "org.graalvm.nativeimage", name = "svm", version = "=19.3.6" }
-jctools-core = { group = "org.jctools", name = "jctools-core", version = "=4.0.5" }
+native-image-svm = "=19.3.6"
+jctools-core = "=4.0.5"
 annotations-java5 = { group = "org.jetbrains", name = "annotations-java5", version = "=23.0.0" }
-commons-logging = { group = "commons-logging", name = "commons-logging", version = "=1.2" }
-log4j-api = { group = "org.apache.logging.log4j", name = "log4j-api", version = "=2.17.2" }
-log4j-1-2-api = { group = "org.apache.logging.log4j", name = "log4j-1.2-api", version = "=2.17.2" }
-slf4j-api = { group = "org.slf4j", name = "slf4j-api", version = "=1.7.36" }
+commons-logging = "=1.2"
+log4j-api = "=2.17.2"
+log4j12-api = "=2.17.2"
+slf4j-api = "=1.7.36"
 # Optional BlockHound hooks (compile-only in Netty)
 blockhound = { group = "io.projectreactor.tools", name = "blockhound", version = "=1.0.6.RELEASE" }
 
 [test-dependencies]
-junit-jupiter-api = { group = "org.junit.jupiter", name = "junit-jupiter-api", version = "=6.1.0" }
-junit-jupiter-params = { group = "org.junit.jupiter", name = "junit-jupiter-params", version = "=6.1.0" }
-junit-jupiter-engine = { group = "org.junit.jupiter", name = "junit-jupiter-engine", version = "=6.1.0" }
-hamcrest-library = { group = "org.hamcrest", name = "hamcrest-library", version = "=1.3" }
-assertj-core = { group = "org.assertj", name = "assertj-core", version = "=3.18.0" }
-mockito-core = { group = "org.mockito", name = "mockito-core", version = "=2.18.3" }
-reflections = { group = "org.reflections", name = "reflections", version = "=0.10.2" }
-gson = { group = "com.google.code.gson", name = "gson", version = "=2.8.9" }
-guava = { group = "com.google.guava", name = "guava", version = "=28.2-jre" }
-jctools-core = { group = "org.jctools", name = "jctools-core", version = "=4.0.5" }
-log4j-core = { group = "org.apache.logging.log4j", name = "log4j-core", version = "=2.17.2" }
-log4j-api = { group = "org.apache.logging.log4j", name = "log4j-api", version = "=2.17.2" }
-log4j-1-2-api = { group = "org.apache.logging.log4j", name = "log4j-1.2-api", version = "=2.17.2" }
-commons-logging = { group = "commons-logging", name = "commons-logging", version = "=1.2" }
+junit-jupiter-api = "=6.1.0"
+junit-jupiter-params = "=6.1.0"
+junit-jupiter-engine = "=6.1.0"
+hamcrest-library = "=1.3"
+assertj-core = "=3.18.0"
+mockito-core = "=2.18.3"
+reflections = "=0.10.2"
+gson = "=2.8.9"
+guava = "=28.2-jre"
+jctools-core = "=4.0.5"
+log4j-core = "=2.17.2"
+log4j-api = "=2.17.2"
+log4j12-api = "=2.17.2"
+commons-logging = "=1.2"
 annotations-java5 = { group = "org.jetbrains", name = "annotations-java5", version = "=23.0.0" }
-logback-classic = { group = "ch.qos.logback", name = "logback-classic", version = "=1.1.7" }
+logback-classic = "=1.1.7"
 
 # Align with junit-jupiter 5.9.x — override jk's putIfAbsent "latest" launcher (was Platform 6.x)
-junit-platform-launcher = { group = "org.junit.platform", name = "junit-platform-launcher", version = "=6.1.0" }
-junit-platform-engine = { group = "org.junit.platform", name = "junit-platform-engine", version = "=6.1.0" }
+junit-platform-launcher = "=6.1.0"
+junit-platform-engine = "=6.1.0"
 junit-platform-commons = { group = "org.junit.platform", name = "junit-platform-commons", version = "=6.1.0" }
