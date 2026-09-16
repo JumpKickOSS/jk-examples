@@ -62,9 +62,10 @@ Prerequisite: a **current** JumpKick — scenarios track `jk` `main` closely; st
 fail in confusing ways.
 
 ```sh
-# from a jk checkout
-./gradlew dist && ./install.sh build/dist/jk
-# or your release install
+# release install
+curl -fsSL https://jumpkick.build/install.sh | bash
+# or from a jk checkout
+jk build --skip-tests && jk install --skip-tests
 
 # then, in this repo:
 cd spring-boot/petshop && jk build && jk guard
@@ -88,8 +89,8 @@ Treat this repository as the **out-of-tree acceptance surface**:
 
 | Layer | Where |
 |-------|--------|
-| Fast unit / module tests | [jk](https://github.com/JumpKickOSS/jk) `./gradlew checkFast` |
-| Integration / e2e (tagged) | [jk](https://github.com/JumpKickOSS/jk) `./gradlew checkAll` |
+| Fast unit / module tests | [jk](https://github.com/JumpKickOSS/jk) gate: `jk format` → `jk guard` → `jk build` |
+| Integration / e2e (tagged) | [jk](https://github.com/JumpKickOSS/jk) `jk test --profile integration` |
 | **Product scenarios** | **This repo** — `jk build` / `test` / `guard` / `run` on real layouts |
 
 When changing resolve, packaging, plugins, workspaces, guards, or the CLI↔engine wire, re-run the
