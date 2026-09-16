@@ -1,0 +1,20 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/thingsboard && jk --no-progress --no-ansi --no-notify import pom.xml --report /home/bsant/src/oss/jk-examples/corpus/maven-top20/results/thingsboard/import-report.md)   # 01:51:41
+
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/thingsboard/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/thingsboard/netty-mqtt/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/thingsboard/common/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/thingsboard/rule-engine/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/thingsboard/dao/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/thingsboard/edqs/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/thingsboard/transport/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/thingsboard/ui-ngx/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/thingsboard/tools/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/thingsboard/application/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/thingsboard/msa/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/thingsboard/rest-client/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/thingsboard/monitoring/jk.toml
+jk: + Import > Wrote /home/bsant/src/oss/jk-examples/corpus/maven-top20/results/thingsboard/import-report.md
+Import notes: 255 issue(s)
+
+# -> ok exit=0 wall=0.1s

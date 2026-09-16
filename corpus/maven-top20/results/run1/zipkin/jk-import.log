@@ -1,0 +1,14 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/zipkin && jk --no-progress --no-ansi --no-notify import pom.xml --report /home/bsant/src/oss/jk-examples/corpus/maven-top20/results/zipkin/import-report.md)   # 01:59:58
+
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/zipkin/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/zipkin/zipkin/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/zipkin/zipkin-tests/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/zipkin/zipkin-junit5/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/zipkin/zipkin-storage/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/zipkin/zipkin-collector/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/zipkin/zipkin-server/jk.toml
+jk: + Import > Wrote /home/bsant/src/oss/jk-examples/corpus/maven-top20/results/zipkin/import-report.md
+Import notes: 52 issue(s)
+
+# -> ok exit=0 wall=0.1s

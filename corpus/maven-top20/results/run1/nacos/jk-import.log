@@ -1,0 +1,38 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/nacos && jk --no-progress --no-ansi --no-notify import pom.xml --report /home/bsant/src/oss/jk-examples/corpus/maven-top20/results/nacos/import-report.md)   # 01:51:42
+
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/nacos/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/nacos/config/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/nacos/core/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/nacos/naming/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/nacos/address/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/nacos/test/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/nacos/api/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/nacos/client/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/nacos/example/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/nacos/common/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/nacos/distribution/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/nacos/console/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/nacos/cmdb/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/nacos/istio/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/nacos/consistency/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/nacos/auth/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/nacos/sys/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/nacos/plugin/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/nacos/plugin-default-impl/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/nacos/prometheus/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/nacos/persistence/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/nacos/logger-adapter-impl/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/nacos/k8s-sync/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/nacos/bootstrap/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/nacos/server/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/nacos/lock/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/nacos/maintainer-client/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/nacos/client-basic/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/nacos/ai/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/nacos/copilot/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/nacos/ai-registry-adaptor/jk.toml
+jk: + Import > Wrote /home/bsant/src/oss/jk-examples/corpus/maven-top20/results/nacos/import-report.md
+Import notes: 330 issue(s)
+
+# -> ok exit=0 wall=0.2s

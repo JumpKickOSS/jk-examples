@@ -1,0 +1,17 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/apollo && jk --no-progress --no-ansi --no-notify import pom.xml --report /home/bsant/src/oss/jk-examples/corpus/maven-top20/results/apollo/import-report.md)   # 01:51:40
+
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/apollo/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/apollo/apollo-build-sql-converter/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/apollo/apollo-buildtools/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/apollo/apollo-common/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/apollo/apollo-biz/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/apollo/apollo-configservice/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/apollo/apollo-adminservice/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/apollo/apollo-portal/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/apollo/apollo-assembly/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/apollo/apollo-audit/jk.toml
+jk: + Import > Wrote /home/bsant/src/oss/jk-examples/corpus/maven-top20/results/apollo/import-report.md
+Import notes: 114 issue(s)
+
+# -> ok exit=0 wall=0.1s

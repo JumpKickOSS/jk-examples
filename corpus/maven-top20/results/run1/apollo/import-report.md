@@ -1,0 +1,123 @@
+# jk import report
+
+Source: `/home/bsant/src/scratch/maven-corpus/apollo/pom.xml`
+
+## Tier 2 — imported with best-effort
+
+These were mapped but you should review the result.
+
+- Maven profile `github`: activation=activeByDefault; properties=[package.environment] (no jk equivalent — fold maven.compiler.* into project.jdk; drop the rest).
+- `<plugin>maven-surefire-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- `<plugin>maven-source-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- `<plugin>maven-war-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- `<plugin>maven-install-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- `<plugin>maven-deploy-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- `<plugin>findbugs-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- `<plugin>versions-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- `<plugin>maven-jar-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- `<plugin>git-commit-id-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- `<plugin>flatten-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- `<plugin>jacoco-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- `<plugin>spotless-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [apollo-build-sql-converter] `<parent>` was referenced (com.ctrip.framework.apollo:apollo:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [apollo-build-sql-converter] `<dependency>` org.freemarker:freemarker has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-build-sql-converter] `<dependency>` com.h2database:h2 has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-build-sql-converter] `<dependency>` org.springframework.boot:spring-boot-starter-jdbc has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-build-sql-converter] Maven profile `sql-converter`: plugins=[maven-compiler-plugin,exec-maven-plugin] (plugin mapping is not yet implemented).
+- [apollo-buildtools] `<parent>` was referenced (com.ctrip.framework.apollo:apollo:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [apollo-buildtools] `<plugin>maven-resources-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [apollo-common] `<parent>` was referenced (com.ctrip.framework.apollo:apollo:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [apollo-common] `<dependency>` com.ctrip.framework.apollo:apollo-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-common] `<dependency>` com.ctrip.framework.apollo:apollo-audit-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-common] `<dependency>` org.springframework.boot:spring-boot-starter-actuator has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-common] `<dependency>` org.springframework.boot:spring-boot-starter-web has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-common] `<dependency>` org.springframework.boot:spring-boot-starter-validation has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-common] `<dependency>` org.springframework.boot:spring-boot-starter-security has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-common] `<dependency>` org.springframework.boot:spring-boot-starter-data-jpa has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-common] `<dependency>` com.mysql:mysql-connector-j has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-common] `<dependency>` org.postgresql:postgresql has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-common] `<dependency>` com.h2database:h2 has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-common] `<dependency>` org.springframework.boot:spring-boot-h2console has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-common] `<dependency>` org.springframework.data:spring-data-commons has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-common] `<exclusions>` on org.apache.httpcomponents:httpclient — exclusion support lands in a later slice; exclusions were dropped.
+- [apollo-common] `<dependency>` org.apache.httpcomponents:httpclient has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-common] `<dependency>` org.codehaus.janino:janino has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-common] `<dependency>` org.apache.commons:commons-lang3 has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-common] `<dependency>` org.yaml:snakeyaml has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-common] `<dependency>` io.micrometer:micrometer-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-common] `<dependency>` io.micrometer:micrometer-registry-prometheus has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-biz] `<parent>` was referenced (com.ctrip.framework.apollo:apollo:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [apollo-biz] `<dependency>` com.ctrip.framework.apollo:apollo-common has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-biz] `<dependency>` com.ctrip.framework.apollo:apollo-audit-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-biz] `<dependency>` com.ctrip.framework.apollo:apollo-audit-spring-boot-starter has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-biz] `<dependency>` org.springframework.cloud:spring-cloud-starter-netflix-eureka-client has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-biz] `<dependency>` org.springframework.cloud:spring-cloud-starter-consul-discovery has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-biz] `<dependency>` org.springframework.cloud:spring-cloud-starter-zookeeper-discovery has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-configservice] `<parent>` was referenced (com.ctrip.framework.apollo:apollo:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [apollo-configservice] `<dependency>` com.ctrip.framework.apollo:apollo-biz has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-configservice] `<exclusions>` on org.springframework.cloud:spring-cloud-starter-netflix-eureka-server — exclusion support lands in a later slice; exclusions were dropped.
+- [apollo-configservice] `<dependency>` org.springframework.cloud:spring-cloud-starter-netflix-eureka-server has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-configservice] `<dependency>` com.sun.jersey.contribs:jersey-apache-client4 has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-configservice] `<dependency>` jakarta.xml.bind:jakarta.xml.bind-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-configservice] `<dependency>` org.glassfish.jaxb:jaxb-runtime has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-configservice] `<dependency>` jakarta.activation:jakarta.activation-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-configservice] `<dependency>` org.javassist:javassist has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-configservice] Maven profile `nacos-discovery`: 1 dependency (convert to a jk feature `nacos-discovery` if opt-in, or move into the main deps list).
+- [apollo-configservice] `<plugin>spring-boot-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [apollo-configservice] `<plugin>maven-assembly-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [apollo-configservice] `<plugin>docker-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [apollo-adminservice] `<parent>` was referenced (com.ctrip.framework.apollo:apollo:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [apollo-adminservice] `<dependency>` com.ctrip.framework.apollo:apollo-biz has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-adminservice] `<dependency>` com.ctrip.framework.apollo:apollo-audit-spring-boot-starter has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-adminservice] `<exclusions>` on org.springframework.cloud:spring-cloud-starter-netflix-eureka-server — exclusion support lands in a later slice; exclusions were dropped.
+- [apollo-adminservice] `<dependency>` org.springframework.cloud:spring-cloud-starter-netflix-eureka-server has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-adminservice] `<dependency>` com.sun.jersey.contribs:jersey-apache-client4 has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-adminservice] `<dependency>` jakarta.xml.bind:jakarta.xml.bind-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-adminservice] `<dependency>` org.glassfish.jaxb:jaxb-runtime has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-adminservice] `<dependency>` jakarta.activation:jakarta.activation-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-adminservice] `<dependency>` org.javassist:javassist has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-adminservice] Maven profile `nacos-discovery`: 1 dependency (convert to a jk feature `nacos-discovery` if opt-in, or move into the main deps list).
+- [apollo-adminservice] `<plugin>spring-boot-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [apollo-adminservice] `<plugin>maven-assembly-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [apollo-adminservice] `<plugin>docker-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [apollo-portal] `<parent>` was referenced (com.ctrip.framework.apollo:apollo:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [apollo-portal] `<dependency>` org.springframework.security:spring-security-ldap has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-portal] `<dependency>` com.ctrip.framework.apollo:apollo-common has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-portal] `<dependency>` com.ctrip.framework.apollo:apollo-openapi has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-portal] `<dependency>` org.openapitools:jackson-databind-nullable has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-portal] `<dependency>` io.swagger.core.v3:swagger-annotations has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-portal] `<dependency>` io.swagger.core.v3:swagger-models has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-portal] `<dependency>` com.ctrip.framework.apollo:apollo-audit-spring-boot-starter has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-portal] `<dependency>` org.springframework.boot:spring-boot-starter-oauth2-client has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-portal] `<dependency>` org.springframework.boot:spring-boot-starter-oauth2-resource-server has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-portal] `<dependency>` org.springframework.boot:spring-boot-jackson2 has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-portal] `<dependency>` org.springframework.session:spring-session-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-portal] `<dependency>` org.springframework.session:spring-session-data-redis has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-portal] `<dependency>` org.springframework.session:spring-session-jdbc has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-portal] `<dependency><optional>true</optional></dependency>` on org.springframework.boot:spring-boot-configuration-processor — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [apollo-portal] `<dependency>` org.springframework.boot:spring-boot-configuration-processor has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-portal] `<dependency>` org.yaml:snakeyaml has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-portal] `<dependency>` jakarta.xml.bind:jakarta.xml.bind-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-portal] `<dependency>` org.glassfish.jaxb:jaxb-runtime has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-portal] `<dependency>` jakarta.activation:jakarta.activation-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-portal] `<dependency>` com.sun.mail:jakarta.mail has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-portal] `<dependency>` org.javassist:javassist has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-portal] `<dependency>` org.apache.httpcomponents.client5:httpclient5 has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-portal] `<dependency>` org.springframework.boot:spring-boot-starter-webmvc-test has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-portal] `<dependency>` org.springframework.boot:spring-boot-starter-security-test has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-portal] `<dependency>` org.eclipse.jetty:jetty-server has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-portal] `<plugin>spring-boot-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [apollo-portal] `<plugin>maven-assembly-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [apollo-portal] `<plugin>docker-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [apollo-portal] `<plugin>replacer</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [apollo-portal] `<plugin>openapi-generator-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [apollo-portal] `<plugin>build-helper-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [apollo-assembly] `<parent>` was referenced (com.ctrip.framework.apollo:apollo:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [apollo-assembly] `<dependency>` com.ctrip.framework.apollo:apollo-configservice has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-assembly] `<dependency>` com.ctrip.framework.apollo:apollo-adminservice has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-assembly] `<dependency>` com.ctrip.framework.apollo:apollo-portal has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [apollo-assembly] `<plugin>maven-resources-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [apollo-assembly] `<plugin>spring-boot-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [apollo-audit] `<parent>` was referenced (com.ctrip.framework.apollo:apollo:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [apollo-audit] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+

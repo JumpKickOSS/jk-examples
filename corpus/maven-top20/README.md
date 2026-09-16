@@ -73,15 +73,43 @@ jk itself writes (`jk.toml`, `jk-lock.toml`, `target/`), which the next run's re
 ## Running
 
 ```sh
-./run.sh                       # all 20, star order, appends to results/<today>.jsonl
-./run.sh --order small-first   # same, cheapest repos first (fills the table from the cheap end)
-./run.sh --only nacos          # one repo
+./run.sh                       # all 20, star order: re-measure jk, reuse each repo's last Maven row (--jk-only is the default)
+./run.sh --both                # re-measure the Maven side too (run #1 semantics; also used when no Maven row exists yet)
+./run.sh --order small-first   # cheapest repos first (fills the table from the cheap end)
+./run.sh --only nacos          # one repo (repeatable)
 ./run.sh --render              # only rewrite RESULTS.md / tier3-reasons.md from rows on disk
-./run.sh --skip-mvn            # jk side only
+./run.sh --skip-mvn            # never run Maven, even when no earlier row exists
 ./run.sh --fresh-m2            # wipe the corpus .m2 first so Maven cold is cold again
+JK_COMMIT=<sha> ./run.sh       # record the commit of a main-built jk in every row (the binary embeds none)
+./run.sh --run run2-main-b5dd989b9   # label the rows; every label gets its own table and a side-by-side column
 ```
 
-Never `jk update` mid-run; the tool version is recorded in the table header.
+Run labels are how the ratchet compares two jk builds: rows carry `run` (default `run1`, file
+`results/<date>.jsonl`; any other label goes to `results/<date>-<label>.jsonl`). `RESULTS.md` renders a
+side-by-side table (one column per label, Maven as the fixed reference), a per-label table, and the
+Ratchet counts of the latest label with the delta against the previous one. `results/tier3-reasons.md`
+is always the latest label's.
+
+Never `jk update` mid-run. Every row records `jk --version`, the jk commit (from `JK_COMMIT`, else the
+`v<version>` tag resolved in the jk checkout at `JK_SRC`, default `~/src/oss/jk`), and the sha256 of the
+`jk` binary and the engine jar, so two runs' rows are attributable to the exact jk that produced them.
+Rows whose Maven side was reused carry `mvn_reused_from = <date of the measured row>` and a `*` in the
+table.
+
+`repos.toml` may give a repo a `maven_jdk` when its Maven build demands more than the level its root pom
+declares (an enforcer rule, or dependencies compiled for a newer class-file level); jk still imports the
+declared level. Run #1 found three such repos (analysis-ik, jenkins, zipkin: all need 21).
+
+## What counts, what does not
+
+- A `jk test` or `mvn test` step that exits 0 with zero parsed tests is rendered `no tests ran` and never
+  counts as a pass or as "equal totals" (tutorials and dataease root aggregators, poms that set
+  `maven.test.skip`).
+- A `jk build` that exits 0 but whose imported workspace covers none of the poms is rendered
+  `built nothing`; one that covers only some is `ok (n/m modules)`. Only builds that compiled something
+  count in the ratchet.
+- A step killed by the 45-minute repo cap is `capped`, distinct from a step that hit its own 20-minute
+  test timeout (`timeout`).
 
 ## Reading the ratchet
 

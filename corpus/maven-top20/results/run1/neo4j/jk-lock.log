@@ -1,0 +1,18 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/neo4j && jk --no-progress --no-ansi --no-notify lock)   # 01:51:44
+
+‼ Cannot resolve dependencies:
+  │ No versions of com.google.testing.compile:compile-testing match unresolved
+  │   available: 0.23.0, 0.22.0, 0.21.0, 0.20, 0.19, 0.18, 0.17, 0.16, 0.15, 0.14, 0.13, 0.12, …
+  │ The project depends on com.google.testing.compile:compile-testing unresolved
+  │ Therefore, the project's requirements cannot be resolved
+
+Suggestions:
+  • Pin com.google.testing.compile:compile-testing to 0.23.0 (e.g. `com.google.testing.compile:compile-testing:0.23.0`)
+  • Or relax the version constraint on com.google.testing.compile:compile-testing so one of [0.23.0, 0.22.0, 0.21.0] is allowed
+  • Relax or remove the project constraint on com.google.testing.compile:compile-testing
+
+
+jk: ! Lock > Failed to lock dependencies
+
+# -> fail exit=6 wall=0.5s

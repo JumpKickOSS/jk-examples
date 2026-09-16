@@ -1,0 +1,40 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/analysis-ik && /home/bsant/.jk/store/tools/maven/3.9.9/bin/mvn -B -q -Dmaven.repo.local=/home/bsant/src/scratch/maven-corpus/.m2 test)   # 01:53:26
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.wltea.analyzer.lucene.IKAnalyzerTests
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+IK_SMART分词超长叠词耗时: 14ms, 分词结果数量: 6
+Token: 2023, Type: 2
+Token: 年, Type: 32
+Token: 人才, Type: 4
+IK_SMART分词Issue #1155复杂crossPath耗时: 10ms
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.193 sec
+Running org.wltea.analyzer.core.IKArbitratorTests
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+
+Results :
+
+Tests run: 22, Failures: 0, Errors: 0, Skipped: 0
+
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+
+Results :
+
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+
+Results :
+
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+
+# -> ok exit=0 wall=2.5s

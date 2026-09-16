@@ -1,0 +1,12 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/questdb && jk --no-progress --no-ansi --no-notify import pom.xml --report /home/bsant/src/oss/jk-examples/corpus/maven-top20/results/questdb/import-report.md)   # 01:51:35
+
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/questdb/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/questdb/core/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/questdb/benchmarks/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/questdb/utils/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/questdb/compat/jk.toml
+jk: + Import > Wrote /home/bsant/src/oss/jk-examples/corpus/maven-top20/results/questdb/import-report.md
+Import notes: 32 issue(s)
+
+# -> ok exit=0 wall=0.2s

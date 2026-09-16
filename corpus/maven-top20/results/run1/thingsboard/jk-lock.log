@@ -1,0 +1,18 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/thingsboard && jk --no-progress --no-ansi --no-notify lock)   # 01:51:41
+
+‼ Cannot resolve dependencies:
+  │ No versions of com.google.guava:guava match unresolved
+  │   available: 33.7.1-jre, 33.7.1-android, 33.7.0-jre, 33.7.0-android, 33.6.0-jre, 33.6.0-android, 33.5.0-jre, 33.5.0-android, 33.4.8-jre, 33.4.8-android, 33.4.7-jre, 33.4.7-android, …
+  │ The project depends on com.google.guava:guava unresolved
+  │ Therefore, the project's requirements cannot be resolved
+
+Suggestions:
+  • Pin com.google.guava:guava to 33.7.1-jre (e.g. `com.google.guava:guava:33.7.1-jre`)
+  • Or relax the version constraint on com.google.guava:guava so one of [33.7.1-jre, 33.7.1-android, 33.7.0-jre] is allowed
+  • Relax or remove the project constraint on com.google.guava:guava
+
+
+jk: ! Lock > Failed to lock dependencies
+
+# -> fail exit=6 wall=0.7s

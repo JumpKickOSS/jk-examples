@@ -1,0 +1,234 @@
+# jk import report
+
+Source: `/home/bsant/src/scratch/maven-corpus/jenkins/pom.xml`
+
+## Tier 3 — not imported
+
+These constructs have no jk equivalent and were skipped or stubbed.
+
+- [websocket/spi] `<parent>` org.jenkins-ci.main:jenkins-parent:${revision}${changelist} could not be resolved (Non-resolvable import POM: no repository has org.jenkins-ci.main:jenkins-bom:2.583-SNAPSHOT (asked repo.jenkins-ci.org, jumpkick, central, google)); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.
+- [websocket/jetty12-ee9] `<parent>` org.jenkins-ci.main:jenkins-parent:${revision}${changelist} could not be resolved (Non-resolvable import POM: no repository has org.jenkins-ci.main:jenkins-bom:2.583-SNAPSHOT (asked repo.jenkins-ci.org, jumpkick, central, google); 'dependencies.dependency.version' for org.kohsuke:access-modifier-annotation:jar is missing.; 'dependencies.dependency.version' for org.kohsuke.metainf-services:metainf-services:jar is missing.); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.
+- [core] `<parent>` org.jenkins-ci.main:jenkins-parent:${revision}${changelist} could not be resolved (Non-resolvable import POM: no repository has org.jenkins-ci.main:jenkins-bom:2.583-SNAPSHOT (asked repo.jenkins-ci.org, jumpkick, central, google); 'dependencies.dependency.version' for org.jenkins-ci.main:remoting:jar is missing.; 'dependencies.dependency.version' for args4j:args4j:jar is missing.; 'dependencies.dependency.version' for com.google.guava:guava:jar is missing.; 'dependencies.dependency.version' for com.google.inject:guice:jar is missing.; 'dependencies.dependency.version' for com.sun.xml.txw2:txw2:jar is missing.; 'dependencies.dependency.version' for com.thoughtworks.xstream:xstream:jar is missing.; 'dependencies.dependency.version' for commons-beanutils:commons-beanutils:jar is missing.; 'dependencies.dependency.version' for commons-codec:commons-codec:jar is missing.; 'dependencies.dependency.version' for commons-collections:commons-collections:jar is missing.; 'dependencies.dependency.version' for commons-io:commons-io:jar is missing.; 'dependencies.dependency.version' for jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:jar is missing.; 'dependencies.dependency.version' for jaxen:jaxen:jar is missing.; 'dependencies.dependency.version' for net.java.dev.jna:jna:jar is missing.; 'dependencies.dependency.version' for net.java.sezpoz:sezpoz:jar is missing.; 'dependencies.dependency.version' for net.jcip:jcip-annotations:jar is missing.; 'dependencies.dependency.version' for org.antlr:antlr4-runtime:jar is missing.; 'dependencies.dependency.version' for org.apache.ant:ant:jar is missing.; 'dependencies.dependency.version' for org.apache.commons:commons-fileupload2-core:jar is missing.; 'dependencies.dependency.version' for org.apache.commons:commons-fileupload2-jakarta-servlet5:jar is missing.; 'dependencies.dependency.version' for org.codehaus.groovy:groovy-all:jar is missing.; 'dependencies.dependency.version' for org.fusesource.jansi:jansi:jar is missing.; 'dependencies.dependency.version' for org.jenkins-ci:annotation-indexer:jar is missing.; 'dependencies.dependency.version' for org.jenkins-ci:commons-jelly-tags-fmt:jar is missing.; 'dependencies.dependency.version' for org.jenkins-ci:commons-jelly-tags-xml:jar is missing.; 'dependencies.dependency.version' for org.jenkins-ci:commons-jexl:jar is missing.; 'dependencies.dependency.version' for org.jenkins-ci:crypto-util:jar is missing.; 'dependencies.dependency.version' for org.jenkins-ci:memory-monitor:jar is missing.; 'dependencies.dependency.version' for org.jenkins-ci:symbol-annotation:jar is missing.; 'dependencies.dependency.version' for org.jenkins-ci:task-reactor:jar is missing.; 'dependencies.dependency.version' for org.jenkins-ci:version-number:jar is missing.; 'dependencies.dependency.version' for org.jfree:jfreechart:jar is missing.; 'dependencies.dependency.version' for org.jvnet.hudson:commons-jelly-tags-define:jar is missing.; 'dependencies.dependency.version' for org.jvnet.localizer:localizer:jar is missing.; 'dependencies.dependency.version' for org.jvnet.winp:winp:jar is missing.; 'dependencies.dependency.version' for org.kohsuke:access-modifier-annotation:jar is missing.; 'dependencies.dependency.version' for org.kohsuke:windows-package-checker:jar is missing.; 'dependencies.dependency.version' for org.kohsuke.metainf-services:metainf-services:jar is missing.; 'dependencies.dependency.version' for org.kohsuke.stapler:json-lib:jar is missing.; 'dependencies.dependency.version' for org.kohsuke.stapler:stapler:jar is missing.; 'dependencies.dependency.version' for org.kohsuke.stapler:stapler-adjunct-codemirror:jar is missing.; 'dependencies.dependency.version' for org.kohsuke.stapler:stapler-groovy:jar is missing.; 'dependencies.dependency.version' for org.slf4j:jcl-over-slf4j:jar is missing.; 'dependencies.dependency.version' for org.slf4j:log4j-over-slf4j:jar is missing.; 'dependencies.dependency.version' for org.springframework.security:spring-security-web:jar is missing.; 'dependencies.dependency.version' for jakarta.servlet:jakarta.servlet-api:jar is missing.; 'dependencies.dependency.version' for org.slf4j:slf4j-jdk14:jar is missing.); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.
+- [war] `<parent>` org.jenkins-ci.main:jenkins-parent:${revision}${changelist} could not be resolved (Non-resolvable import POM: no repository has org.jenkins-ci.main:jenkins-bom:2.583-SNAPSHOT (asked repo.jenkins-ci.org, jumpkick, central, google); 'dependencies.dependency.version' for org.jenkins-ci.main:remoting:jar is missing.; 'dependencies.dependency.version' for org.slf4j:slf4j-jdk14:jar is missing.); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.
+- [test] `<parent>` org.jenkins-ci.main:jenkins-parent:${revision}${changelist} could not be resolved (Non-resolvable import POM: no repository has org.jenkins-ci.main:jenkins-bom:2.583-SNAPSHOT (asked repo.jenkins-ci.org, jumpkick, central, google); 'dependencies.dependency.version' for jakarta.servlet:jakarta.servlet-api:jar is missing.); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.
+- [cli] `<parent>` org.jenkins-ci.main:jenkins-parent:${revision}${changelist} could not be resolved (Non-resolvable import POM: no repository has org.jenkins-ci.main:jenkins-bom:2.583-SNAPSHOT (asked repo.jenkins-ci.org, jumpkick, central, google); 'dependencies.dependency.version' for commons-io:commons-io:jar is missing.; 'dependencies.dependency.version' for org.jenkins-ci:annotation-indexer:jar is missing.; 'dependencies.dependency.version' for org.jvnet.localizer:localizer:jar is missing.; 'dependencies.dependency.version' for org.slf4j:slf4j-jdk14:jar is missing.; 'dependencies.dependency.version' for org.kohsuke:access-modifier-annotation:jar is missing.); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.
+
+## Tier 2 — imported with best-effort
+
+These were mapped but you should review the result.
+
+- `<resources>` with `<filtering>true</filtering>` on src/filter/resources — jk has no resource filtering; `${...}` placeholders in those files are copied as written. Read the values at runtime or check the filled-in file in.
+- `<resources>` directory src/filter/resources is outside `src/main/resources` — jk's layout reads `src/main/resources` only; move the files there.
+- `<plugin>buildnumber-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>maven-war-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>spotbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>maven-remote-resources-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>maven-eclipse-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>maven-release-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>mrm-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>maven-invoker-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>maven-checkstyle-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>frontend-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>maven-clean-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bom] `<resources>` with `<filtering>true</filtering>` on src/filter/resources — jk has no resource filtering; `${...}` placeholders in those files are copied as written. Read the values at runtime or check the filled-in file in.
+- [bom] `<resources>` directory src/filter/resources is outside `src/main/resources` — jk's layout reads `src/main/resources` only; move the files there.
+- [bom] `<plugin>buildnumber-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bom] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bom] `<plugin>maven-war-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bom] `<plugin>spotbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bom] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bom] `<plugin>maven-remote-resources-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bom] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bom] `<plugin>maven-eclipse-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bom] `<plugin>maven-release-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bom] `<plugin>mrm-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bom] `<plugin>maven-invoker-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bom] `<plugin>maven-checkstyle-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bom] `<plugin>flatten-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bom] `<dependencyManagement>` inherited from parent org.jenkins-ci.main:jenkins-parent:2.583-SNAPSHOT is carried as `[platform]` org.jenkins-ci.main:jenkins-parent:2.583-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [bom] `<dependencyManagement>` in this POM pins 50 versions no declared dependency uses (args4j:args4j, com.github.spotbugs:spotbugs-annotations, com.google.guava:guava, com.sun.xml.txw2:txw2, com.thoughtworks.xstream:xstream, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [websocket/spi] `<dependency>` org.jenkins-ci.main:jenkins-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [websocket/jetty12-ee9] `<dependency><optional>true</optional></dependency>` on org.jenkins-ci:winstone — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [websocket/jetty12-ee9] `<dependency>` org.jenkins-ci:winstone has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [websocket/jetty12-ee9] `<dependency>` org.jenkins-ci.main:websocket-spi has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [websocket/jetty12-ee9] `<dependency>` org.kohsuke:access-modifier-annotation has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [websocket/jetty12-ee9] `<dependency><optional>true</optional></dependency>` on org.kohsuke.metainf-services:metainf-services — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [websocket/jetty12-ee9] `<dependency>` org.kohsuke.metainf-services:metainf-services has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [websocket/jetty12-ee9] `<dependency>` org.jenkins-ci.main:jenkins-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [websocket/jetty12-ee9] `<annotationProcessorPaths>` entry org.jenkins-ci:annotation-indexer has no version in the POM or its dependencyManagement; jk wrote `=unresolved`.
+- [websocket/jetty12-ee9] `<annotationProcessorPaths>` entry org.kohsuke.metainf-services:metainf-services has no version in the POM or its dependencyManagement; jk wrote `=unresolved`.
+- [core] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [core] `<plugin>maven-hpi-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [core] `<plugin>bridge-method-injector</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [core] `<plugin>localizer-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [core] `<plugin>access-modifier-checker</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [core] `<plugin>antlr4-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [core] `<plugin>maven-dependency-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [core] `<plugin>maven-antrun-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [core] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [core] `<dependency>` ${project.groupId}:cli has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` ${project.groupId}:remoting has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` args4j:args4j has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<exclusions>` on com.github.spotbugs:spotbugs-annotations — exclusion support lands in a later slice; exclusions were dropped.
+- [core] `<dependency>` com.github.spotbugs:spotbugs-annotations has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<exclusions>` on com.google.guava:guava — exclusion support lands in a later slice; exclusions were dropped.
+- [core] `<dependency>` com.google.guava:guava has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<exclusions>` on com.google.inject:guice — exclusion support lands in a later slice; exclusions were dropped.
+- [core] `<dependency>` com.google.inject:guice has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<exclusions>` on com.sun.xml.txw2:txw2 — exclusion support lands in a later slice; exclusions were dropped.
+- [core] `<dependency>` com.sun.xml.txw2:txw2 has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<exclusions>` on com.thoughtworks.xstream:xstream — exclusion support lands in a later slice; exclusions were dropped.
+- [core] `<dependency>` com.thoughtworks.xstream:xstream has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` commons-beanutils:commons-beanutils has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` commons-codec:commons-codec has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` commons-collections:commons-collections has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` commons-io:commons-io has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` io.jenkins.tools:bridge-method-annotation has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<exclusions>` on jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api — exclusion support lands in a later slice; exclusions were dropped.
+- [core] `<dependency>` jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<exclusions>` on jaxen:jaxen — exclusion support lands in a later slice; exclusions were dropped.
+- [core] `<dependency>` jaxen:jaxen has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` net.java.dev.jna:jna has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` net.java.sezpoz:sezpoz has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` net.jcip:jcip-annotations has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` org.antlr:antlr4-runtime has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` org.apache.ant:ant has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` org.apache.commons:commons-fileupload2-core has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` org.apache.commons:commons-fileupload2-jakarta-servlet5 has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` org.codehaus.groovy:groovy-all has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` org.fusesource.jansi:jansi has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` org.jenkins-ci:annotation-indexer has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` org.jenkins-ci:commons-jelly-tags-fmt has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<exclusions>` on org.jenkins-ci:commons-jelly-tags-xml — exclusion support lands in a later slice; exclusions were dropped.
+- [core] `<dependency>` org.jenkins-ci:commons-jelly-tags-xml has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` org.jenkins-ci:commons-jexl has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` org.jenkins-ci:crypto-util has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` org.jenkins-ci:memory-monitor has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` org.jenkins-ci:symbol-annotation has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` org.jenkins-ci:task-reactor has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` org.jenkins-ci:version-number has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<exclusions>` on org.jenkins-ci.main:websocket-spi — exclusion support lands in a later slice; exclusions were dropped.
+- [core] `<dependency>` org.jenkins-ci.main:websocket-spi has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` org.jfree:jfreechart has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` org.jvnet.hudson:commons-jelly-tags-define has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` org.jvnet.localizer:localizer has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` org.jvnet.winp:winp has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` org.kohsuke:access-modifier-annotation has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` org.kohsuke:windows-package-checker has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency><optional>true</optional></dependency>` on org.kohsuke.metainf-services:metainf-services — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [core] `<dependency>` org.kohsuke.metainf-services:metainf-services has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` org.kohsuke.stapler:json-lib has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` org.kohsuke.stapler:stapler has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` org.kohsuke.stapler:stapler-adjunct-codemirror has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<exclusions>` on org.kohsuke.stapler:stapler-groovy — exclusion support lands in a later slice; exclusions were dropped.
+- [core] `<dependency>` org.kohsuke.stapler:stapler-groovy has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` org.slf4j:jcl-over-slf4j has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` org.slf4j:log4j-over-slf4j has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<exclusions>` on org.springframework.security:spring-security-web — exclusion support lands in a later slice; exclusions were dropped.
+- [core] `<dependency>` org.springframework.security:spring-security-web has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` jakarta.servlet:jakarta.servlet-api has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency><optional>true</optional></dependency>` on org.jenkins-ci:core-annotation-processors — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [core] `<dependency>` org.jenkins-ci:core-annotation-processors has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` org.hamcrest:hamcrest has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` org.jenkins-ci:test-annotations has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` org.junit.jupiter:junit-jupiter has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` org.mockito:mockito-junit-jupiter has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` org.slf4j:slf4j-jdk14 has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` org.xmlunit:xmlunit-core has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` org.xmlunit:xmlunit-matchers has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<dependency>` org.jenkins-ci.main:jenkins-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [core] `<annotationProcessorPaths>` entry net.java.sezpoz:sezpoz has no version in the POM or its dependencyManagement; jk wrote `=unresolved`.
+- [core] `<annotationProcessorPaths>` entry org.jenkins-ci:annotation-indexer has no version in the POM or its dependencyManagement; jk wrote `=unresolved`.
+- [core] `<annotationProcessorPaths>` entry org.jenkins-ci:core-annotation-processors has no version in the POM or its dependencyManagement; jk wrote `=unresolved`.
+- [core] `<annotationProcessorPaths>` entry org.kohsuke:windows-package-checker has no version in the POM or its dependencyManagement; jk wrote `=unresolved`.
+- [core] `<annotationProcessorPaths>` entry org.kohsuke.metainf-services:metainf-services has no version in the POM or its dependencyManagement; jk wrote `=unresolved`.
+- [core] `<annotationProcessorPaths>` entry org.kohsuke.stapler:stapler has no version in the POM or its dependencyManagement; jk wrote `=unresolved`.
+- [core] Maven profile `debug` (activation activeByDefault): no convertible payload; dropped.
+- [core] Maven profile `enable-jacoco`: plugins=[jacoco-maven-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [war] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [war] `<plugin>maven-war-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [war] `<plugin>maven-dependency-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [war] `<plugin>maven-antrun-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [war] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [war] `<plugin>maven-hpi-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [war] `<release>` declared 11; jk's floor is 17; bytecode level raised — written as `java = 17`.
+- [war] `<dependency>` ${project.groupId}:cli has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [war] `<dependency>` ${project.groupId}:remoting has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [war] `<dependency>` org.jenkins-ci.main:jenkins-core has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [war] `<dependency>` org.jenkins-ci.main:websocket-jetty12-ee9 has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [war] `<dependency>` org.slf4j:slf4j-jdk14 has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [war] `<dependency>` org.jenkins-ci:winstone has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [war] `<dependency>` org.junit.jupiter:junit-jupiter has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [war] `<dependency>` org.jenkins-ci.main:jenkins-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [test] `<plugin>maven-hpi-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [test] `<plugin>maven-dependency-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [test] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [test] `<plugin>maven-deploy-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [test] `<dependency>` ${project.groupId}:jenkins-core has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [test] `<dependency>` jakarta.servlet:jakarta.servlet-api has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [test] `<dependency>` ${project.groupId}:jenkins-war has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [test] `<dependency>` org.hamcrest:hamcrest has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [test] `<dependency>` org.jenkins-ci:test-annotations has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [test] `<exclusions>` on org.jenkins-ci.main:jenkins-test-harness — exclusion support lands in a later slice; exclusions were dropped.
+- [test] `<exclusions>` on org.jenkins-ci.main:jenkins-test-harness-tools — exclusion support lands in a later slice; exclusions were dropped.
+- [test] `<dependency>` org.junit.jupiter:junit-jupiter has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [test] `<dependency>` org.mockito:mockito-junit-jupiter has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [test] `<dependency>` org.jenkins-ci.main:jenkins-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [test] `<dependencyManagement>` in this POM pins 15 versions no declared dependency uses (io.jenkins.plugins:caffeine-api, io.jenkins.plugins:commons-lang3-api, io.jenkins.plugins:commons-text-api, io.jenkins.plugins:font-awesome-api, io.jenkins.plugins:ionicons-api, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [test] `<annotationProcessorPaths>` entry org.jenkins-ci:annotation-indexer has no version in the POM or its dependencyManagement; jk wrote `=unresolved`.
+- [test] `<annotationProcessorPaths>` entry net.java.sezpoz:sezpoz has no version in the POM or its dependencyManagement; jk wrote `=unresolved`.
+- [test] `<annotationProcessorPaths>` entry org.kohsuke.stapler:stapler has no version in the POM or its dependencyManagement; jk wrote `=unresolved`.
+- [test] `<annotationProcessorPaths>` entry org.openjdk.jmh:jmh-generator-annprocess has no version in the POM or its dependencyManagement; jk wrote `=unresolved`.
+- [test] Maven profile `light-test`: no convertible payload; dropped.
+- [test] Maven profile `smoke-test`: plugins=[maven-surefire-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [test] Maven profile `all-tests` (activation property=!test, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [test] Maven profile `enable-jacoco`: plugins=[jacoco-maven-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [test] Maven profile `release`: no convertible payload; dropped.
+- [cli] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [cli] `<plugin>maven-shade-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [cli] `<plugin>localizer-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [cli] `<dependency><optional>true</optional></dependency>` on commons-io:commons-io — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [cli] `<dependency>` commons-io:commons-io has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [cli] `<dependency><optional>true</optional></dependency>` on org.apache.sshd:sshd-common — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [cli] `<dependency>` org.apache.sshd:sshd-common has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [cli] `<dependency><optional>true</optional></dependency>` on org.apache.sshd:sshd-core — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [cli] `<dependency>` org.apache.sshd:sshd-core has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [cli] `<dependency><optional>true</optional></dependency>` on org.bouncycastle:bcprov-jdk18on — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [cli] `<dependency><optional>true</optional></dependency>` on org.glassfish.tyrus.bundles:tyrus-standalone-client-jdk — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [cli] `<dependency><optional>true</optional></dependency>` on org.jenkins-ci:annotation-indexer — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [cli] `<dependency>` org.jenkins-ci:annotation-indexer has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [cli] `<dependency><optional>true</optional></dependency>` on org.jvnet.localizer:localizer — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [cli] `<dependency>` org.jvnet.localizer:localizer has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [cli] `<dependency><optional>true</optional></dependency>` on org.slf4j:slf4j-jdk14 — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [cli] `<dependency>` org.slf4j:slf4j-jdk14 has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [cli] `<dependency><optional>true</optional></dependency>` on com.github.spotbugs:spotbugs-annotations — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [cli] `<exclusions>` on com.github.spotbugs:spotbugs-annotations — exclusion support lands in a later slice; exclusions were dropped.
+- [cli] `<dependency>` com.github.spotbugs:spotbugs-annotations has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [cli] `<dependency>` org.kohsuke:access-modifier-annotation has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [cli] `<dependency>` org.junit.jupiter:junit-jupiter has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [cli] `<dependency>` org.jenkins-ci.main:jenkins-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [cli] `<annotationProcessorPaths>` entry org.jenkins-ci:annotation-indexer has no version in the POM or its dependencyManagement; jk wrote `=unresolved`.
+- [cli] Maven profile `enable-jacoco`: plugins=[jacoco-maven-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [coverage] `<resources>` with `<filtering>true</filtering>` on src/filter/resources — jk has no resource filtering; `${...}` placeholders in those files are copied as written. Read the values at runtime or check the filled-in file in.
+- [coverage] `<resources>` directory src/filter/resources is outside `src/main/resources` — jk's layout reads `src/main/resources` only; move the files there.
+- [coverage] `<plugin>buildnumber-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [coverage] `<plugin>maven-deploy-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [coverage] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [coverage] `<plugin>maven-war-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [coverage] `<plugin>spotbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [coverage] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [coverage] `<plugin>maven-remote-resources-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [coverage] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [coverage] `<plugin>maven-eclipse-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [coverage] `<plugin>maven-release-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [coverage] `<plugin>mrm-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [coverage] `<plugin>maven-invoker-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [coverage] `<plugin>maven-checkstyle-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [coverage] `<exclusions>` on org.jenkins-ci.main:jenkins-core — exclusion support lands in a later slice; exclusions were dropped.
+- [coverage] `<dependencyManagement>` inherited from parent org.jenkins-ci.main:jenkins-parent:2.583-SNAPSHOT is carried as `[platform]` org.jenkins-ci.main:jenkins-parent:2.583-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [coverage] dependencies org.jenkins-ci.main:cli, org.jenkins-ci.main:jenkins-core, org.jenkins-ci.main:jenkins-test inherited from a parent.
+- [coverage] Maven profile `enable-jacoco`: plugins=[jacoco-maven-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+

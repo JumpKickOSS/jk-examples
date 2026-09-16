@@ -1,0 +1,269 @@
+# jk import report
+
+Source: `/home/bsant/src/scratch/maven-corpus/thingsboard/pom.xml`
+
+## Tier 3 — not imported
+
+These constructs have no jk equivalent and were skipped or stubbed.
+
+- `<build><extensions>` is not supported. Move build extensions to a custom jk task once tasks land.
+- [netty-mqtt] `<build><extensions>` is not supported. Move build extensions to a custom jk task once tasks land.
+
+## Tier 2 — imported with best-effort
+
+These were mapped but you should review the result.
+
+- Maven profile `default`: activation=activeByDefault.
+- Maven profile `download-dependencies`: properties=[downloadSources,downloadJavadocs] (no jk equivalent — fold maven.compiler.* into project.jdk; drop the rest).
+- Maven profile `skip-deb`: activation=property=pkg.skip.deb (no jk equivalent — replace with an explicit jk profile or feature); properties=[pkg.deb.phase] (no jk equivalent — fold maven.compiler.* into project.jdk; drop the rest).
+- Maven profile `skip-pkg`: activation=property=pkg.skip (no jk equivalent — replace with an explicit jk profile or feature); properties=[pkg.skip.bootjar,pkg.skip.deb,pkg.skip.rpm,pkg.skip.zip,pkg.deb.phase] (no jk equivalent — fold maven.compiler.* into project.jdk; drop the rest).
+- Maven profile `packaging`: activation=activeByDefault.
+- `<plugin>license-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- `<plugin>maven-clean-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [netty-mqtt] `<dependency>` org.thingsboard.common:util has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [netty-mqtt] `<dependency>` io.netty:netty-codec-mqtt has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [netty-mqtt] `<dependency>` io.netty:netty-handler has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [netty-mqtt] `<dependency><optional>true</optional></dependency>` on com.google.code.findbugs:jsr305 — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [netty-mqtt] `<dependency>` com.google.guava:guava has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [netty-mqtt] `<dependency>` org.slf4j:slf4j-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [netty-mqtt] `<dependency>` org.slf4j:log4j-over-slf4j has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [netty-mqtt] `<dependency>` ch.qos.logback:logback-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [netty-mqtt] `<dependency>` ch.qos.logback:logback-classic has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [netty-mqtt] `<dependency>` jakarta.annotation:jakarta.annotation-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [netty-mqtt] `<dependency>` org.springframework.boot:spring-boot-starter-test has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [netty-mqtt] `<dependency>` org.awaitility:awaitility has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [netty-mqtt] `<dependency>` org.testcontainers:testcontainers has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [netty-mqtt] `<dependency>` org.testcontainers:junit-jupiter has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [netty-mqtt] `<dependency>` software.xdev:testcontainers-junit4-mock has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [netty-mqtt] `<dependency>` org.testcontainers:hivemq has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [netty-mqtt] `<plugin>maven-jar-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [common] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [rule-engine] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [dao] `<dependency>` org.thingsboard.common:data has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` org.thingsboard.common:cache has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` org.thingsboard.common:message has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` org.thingsboard.common:stats has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` org.thingsboard.common:dao-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` org.thingsboard.common:util has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` org.thingsboard.common:discovery-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` com.networknt:json-schema-validator has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` org.slf4j:slf4j-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` org.slf4j:log4j-over-slf4j has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` ch.qos.logback:logback-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` ch.qos.logback:logback-classic has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` org.postgresql:postgresql has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` org.bouncycastle:bcpkix-jdk18on has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` org.springframework.boot:spring-boot-starter-test has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` org.junit.vintage:junit-vintage-engine has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` org.awaitility:awaitility has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` org.dbunit:dbunit has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` com.github.springtestdbunit:spring-test-dbunit has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` org.apache.commons:commons-lang3 has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` org.apache.commons:commons-collections4 has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` com.fasterxml.jackson.core:jackson-databind has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` org.hibernate.validator:hibernate-validator has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` org.glassfish:jakarta.el has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` org.springframework:spring-context has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` org.springframework:spring-tx has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` org.springframework:spring-web has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` org.springframework.security:spring-security-oauth2-client has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` com.datastax.oss:java-driver-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` com.datastax.oss:java-driver-query-builder has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<classifier>linux-x86_64</classifier>` on io.netty:netty-transport-native-epoll — classifier support lands in a later slice; the coord was emitted without it.
+- [dao] `<dependency>` io.netty:netty-transport-native-epoll has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` io.dropwizard.metrics:metrics-jmx has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` io.takari.junit:takari-cpsuite has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` com.google.guava:guava has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` com.google.protobuf:protobuf-java has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` org.apache.curator:curator-x-discovery has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` com.github.ben-manes.caffeine:caffeine has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` org.springframework.boot:spring-boot-autoconfigure has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` org.bouncycastle:bcprov-jdk18on has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` org.springframework.boot:spring-boot-starter-data-jpa has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` org.springframework:spring-test has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` org.testcontainers:cassandra has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` org.testcontainers:postgresql has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` org.testcontainers:jdbc has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` org.testcontainers:junit-jupiter has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` org.springframework:spring-context-support has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` org.elasticsearch.client:elasticsearch-rest-client has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` org.eclipse.leshan:leshan-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` com.jayway.jsonpath:json-path has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` org.thingsboard.rule-engine:rule-engine-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` io.hypersistence:hypersistence-utils-hibernate-63 has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` com.github.weisj:jsvg has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<dependency>` com.drewnoakes:metadata-extractor has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [dao] `<plugin>maven-surefire-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [dao] `<plugin>maven-jar-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [edqs] `<dependency>` org.thingsboard.common:edqs has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [edqs] `<dependency>` org.slf4j:slf4j-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [edqs] `<dependency>` org.slf4j:log4j-over-slf4j has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [edqs] `<dependency>` ch.qos.logback:logback-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [edqs] `<dependency>` ch.qos.logback:logback-classic has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [edqs] `<dependency>` org.apache.curator:curator-recipes has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [edqs] `<dependency>` com.google.protobuf:protobuf-java has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [edqs] `<dependency>` io.grpc:grpc-protobuf has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [edqs] `<dependency>` io.grpc:grpc-stub has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [edqs] `<classifier>bin</classifier>` on com.sun.winsw:winsw — classifier support lands in a later slice; the coord was emitted without it.
+- [edqs] `<dependency>` com.sun.winsw:winsw has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [edqs] `<dependency>` org.springframework.boot:spring-boot-starter-test has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [edqs] `<dependency>` org.junit.vintage:junit-vintage-engine has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [edqs] `<dependency>` org.awaitility:awaitility has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [edqs] `<dependency>` org.assertj:assertj-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [edqs] `<plugin>maven-surefire-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [edqs] `<plugin>maven-resources-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [edqs] `<plugin>maven-dependency-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [edqs] `<plugin>maven-jar-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [edqs] `<plugin>spring-boot-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [edqs] `<plugin>gradle-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [edqs] `<plugin>maven-assembly-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [edqs] `<plugin>protobuf-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [edqs] `<plugin>build-helper-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [edqs] `<plugin>maven-deploy-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [transport] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [ui-ngx] Maven profile `yarn-build`: activation=activeByDefault; plugins=[frontend-maven-plugin] (plugin mapping is not yet implemented).
+- [ui-ngx] Maven profile `yarn-start`: activation=property=yarn-start (no jk equivalent — replace with an explicit jk profile or feature); plugins=[frontend-maven-plugin] (plugin mapping is not yet implemented).
+- [ui-ngx] `<plugin>frontend-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [ui-ngx] `<plugin>maven-clean-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [tools] `<dependency>` org.thingsboard.common:data has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [tools] `<dependency>` org.springframework.boot:spring-boot-starter-web has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [tools] `<dependency>` org.eclipse.paho:org.eclipse.paho.client.mqttv3 has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [tools] `<dependency>` com.google.guava:guava has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [tools] `<exclusions>` on org.apache.cassandra:cassandra-all — exclusion support lands in a later slice; exclusions were dropped.
+- [tools] `<dependency>` org.apache.cassandra:cassandra-all has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [tools] `<dependency>` commons-io:commons-io has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<classifier>linux-x86_64</classifier>` on io.netty:netty-transport-native-epoll — classifier support lands in a later slice; the coord was emitted without it.
+- [application] `<dependency>` io.netty:netty-transport-native-epoll has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.thingsboard.common:actor has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.thingsboard.common:util has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.thingsboard.rule-engine:rule-engine-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.thingsboard.common:cluster-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.thingsboard.common:version-control has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.thingsboard.rule-engine:rule-engine-components has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.thingsboard.common.transport:transport-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.thingsboard.common.transport:mqtt has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.thingsboard.common.transport:http has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.thingsboard.common.transport:coap has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.thingsboard.common.transport:lwm2m has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.thingsboard.common.transport:snmp has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.thingsboard:dao has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.thingsboard.common:queue has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.thingsboard.common.script:script-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.thingsboard.common.script:remote-js-client has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.thingsboard.common:stats has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.thingsboard.common:edge-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.thingsboard.common:edqs has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.thingsboard.common:discovery-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.thingsboard:dao has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` io.takari.junit:takari-cpsuite has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.eclipse.paho:org.eclipse.paho.client.mqttv3 has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.eclipse.paho:org.eclipse.paho.mqttv5.client has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.springframework.integration:spring-integration-redis has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.springframework.boot:spring-boot-starter-security has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.springframework.boot:spring-boot-starter-web has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.springframework.boot:spring-boot-starter-websocket has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.springframework.security:spring-security-oauth2-client has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.springframework.security:spring-security-oauth2-jose has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` io.jsonwebtoken:jjwt has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.springframework.boot:spring-boot-starter-freemarker has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` commons-io:commons-io has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.apache.commons:commons-csv has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.springframework:spring-context-support has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.slf4j:slf4j-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.slf4j:log4j-over-slf4j has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` ch.qos.logback:logback-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` ch.qos.logback:logback-classic has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` com.sun.mail:jakarta.mail has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` jakarta.xml.bind:jakarta.xml.bind-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` javax.xml.bind:jaxb-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` com.twilio.sdk:twilio has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` com.amazonaws:aws-java-sdk-sns has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.apache.curator:curator-recipes has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` com.google.protobuf:protobuf-java has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` io.netty:netty-all has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` io.netty:netty-tcnative-boringssl-static has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` io.grpc:grpc-netty-shaded has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` io.grpc:grpc-protobuf has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` io.grpc:grpc-stub has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.opensmpp:opensmpp-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.thingsboard:springdoc-openapi-starter-webmvc-ui has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<classifier>bin</classifier>` on com.sun.winsw:winsw — classifier support lands in a later slice; the coord was emitted without it.
+- [application] `<dependency>` com.sun.winsw:winsw has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.thingsboard:tools has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.thingsboard:rest-client has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.thingsboard.client:thingsboard-ce-client has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.springframework.security:spring-security-test has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` com.jayway.jsonpath:json-path has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` com.jayway.jsonpath:json-path-assert has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.springframework.boot:spring-boot-starter-test has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.junit.vintage:junit-vintage-engine has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.awaitility:awaitility has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.dbunit:dbunit has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` com.github.springtestdbunit:spring-test-dbunit has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.testcontainers:cassandra has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.testcontainers:postgresql has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.testcontainers:jdbc has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.javadelight:delight-nashorn-sandbox has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.passay:passay has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` com.github.ua-parser:uap-java has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.java-websocket:Java-WebSocket has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.jboss.aerogear:aerogear-otp-java has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` com.slack.api:slack-api-client has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` com.google.oauth-client:google-oauth-client has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` com.google.firebase:firebase-admin has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.rocksdb:rocksdbjni has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.thingsboard.langchain4j:langchain4j-open-ai has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.thingsboard.langchain4j:langchain4j-azure-open-ai has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.thingsboard.langchain4j:langchain4j-google-genai has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.thingsboard.langchain4j:langchain4j-mistral-ai has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.thingsboard.langchain4j:langchain4j-anthropic has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.thingsboard.langchain4j:langchain4j-bedrock has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.thingsboard.langchain4j:langchain4j-open-ai-official has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] `<dependency>` org.thingsboard.langchain4j:langchain4j-ollama has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [application] Maven profile `openapi-spec`: properties=[pkg.disabled,pkg.package.phase,pkg.process-resources.phase] (no jk equivalent — fold maven.compiler.* into project.jdk; drop the rest); plugins=[build-helper-maven-plugin,spring-boot-maven-plugin,springdoc-openapi-maven-plugin,maven-enforcer-plugin,maven-surefire-plugin] (plugin mapping is not yet implemented).
+- [application] `<plugin>git-commit-id-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [application] `<plugin>maven-surefire-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [application] `<plugin>maven-resources-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [application] `<plugin>maven-dependency-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [application] `<plugin>maven-jar-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [application] `<plugin>spring-boot-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [application] `<plugin>gradle-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [application] `<plugin>maven-assembly-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [application] `<plugin>protobuf-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [application] `<plugin>build-helper-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [msa] Maven profile `skip-deb`: activation=property=pkg.skip.deb (no jk equivalent — replace with an explicit jk profile or feature); properties=[pkg.deb.phase] (no jk equivalent — fold maven.compiler.* into project.jdk; drop the rest).
+- [msa] Maven profile `skip-pkg`: activation=property=pkg.skip (no jk equivalent — replace with an explicit jk profile or feature); properties=[pkg.deb.phase] (no jk equivalent — fold maven.compiler.* into project.jdk; drop the rest).
+- [msa] Maven profile `black-box-tests`: activation=property=blackBoxTests.skip (no jk equivalent — replace with an explicit jk profile or feature).
+- [msa] Maven profile `push-docker-amd-arm-images`: activation=property=push-docker-amd-arm-images (no jk equivalent — replace with an explicit jk profile or feature); plugins=[exec-maven-plugin] (plugin mapping is not yet implemented).
+- [msa] Maven profile `push-lts-docker-amd-arm-images`: activation=property=push-lts-docker-amd-arm-images (no jk equivalent — replace with an explicit jk profile or feature); properties=[docker.lts.tag,docker.skip.latest.tag] (no jk equivalent — fold maven.compiler.* into project.jdk; drop the rest); plugins=[exec-maven-plugin] (plugin mapping is not yet implemented).
+- [msa] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [rest-client] `<dependency>` org.thingsboard.common:data has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [rest-client] `<dependency>` org.springframework:spring-web has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [rest-client] `<dependency>` org.thingsboard.common:util has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [rest-client] `<dependency>` com.auth0:java-jwt has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [rest-client] `<dependency>` org.apache.httpcomponents.core5:httpcore5 has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [rest-client] `<plugin>maven-source-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [rest-client] `<plugin>maven-deploy-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [monitoring] `<dependency>` org.thingsboard.common:data has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [monitoring] `<dependency>` org.thingsboard.common:util has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [monitoring] `<dependency>` org.thingsboard:rest-client has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [monitoring] `<dependency>` org.springframework.boot:spring-boot-starter has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [monitoring] `<dependency>` org.eclipse.paho:org.eclipse.paho.client.mqttv3 has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [monitoring] `<dependency>` org.apache.httpcomponents:httpclient has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [monitoring] `<dependency>` com.slack.api:slack-api-client has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [monitoring] `<dependency>` org.java-websocket:Java-WebSocket has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [monitoring] `<dependency>` com.google.guava:guava has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [monitoring] `<dependency>` org.apache.commons:commons-lang3 has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [monitoring] `<dependency>` org.slf4j:slf4j-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [monitoring] `<dependency>` org.slf4j:log4j-over-slf4j has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [monitoring] `<dependency>` ch.qos.logback:logback-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [monitoring] `<dependency>` ch.qos.logback:logback-classic has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [monitoring] `<dependency>` org.springframework.boot:spring-boot-starter-test has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [monitoring] `<plugin>maven-resources-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [monitoring] `<plugin>maven-dependency-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [monitoring] `<plugin>maven-jar-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [monitoring] `<plugin>spring-boot-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [monitoring] `<plugin>gradle-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [monitoring] `<plugin>maven-assembly-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [monitoring] `<plugin>build-helper-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+

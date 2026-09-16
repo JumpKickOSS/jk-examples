@@ -1,0 +1,7 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/dataease && jk --no-progress --no-ansi --no-notify test)   # 01:51:41
+
++ [1 of 1] io.dataease:sdk - took 2ms
+jk: + Test > Tests passed - took 119ms
+
+# -> ok exit=0 wall=0.2s

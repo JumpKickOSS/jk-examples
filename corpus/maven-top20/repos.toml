@@ -1,6 +1,8 @@
 # Pinned corpus: the 20 most-starred GitHub Java repositories (gh search, 2026-09-15) whose
 # default-branch root has a pom.xml, are not docs/tutorial/Android/Tycho projects, and declare Java >= 17.
 # `modules` = count of pom.xml files in the clone. `sha` = default-branch head at pin time.
+# `java` = the level the root pom declares (jk imports this). `maven_jdk` = the JDK the Maven build actually
+# demands when its enforcer / dependencies need more than the declared level (found on run #1).
 # Ranking source: gh search repos --language=java --sort=stars (top 100, then stars:9000..19040).
 
 [[repo]]
@@ -105,6 +107,7 @@ sha = "81dc9a3e13a3ec4c4f74bedb772e3382b8de0760"
 stars = 26546
 java = "17"
 modules = 9
+maven_jdk = "21"   # enforcer RequireJavaVersion [21,)
 note = "level comes from the org.jenkins-ci:jenkins parent; frontend-maven-plugin downloads node"
 
 [[repo]]
@@ -147,6 +150,7 @@ sha = "6d2d70fd1a237cbf75cde254e8e4d6319b81266c"
 stars = 17521
 java = "17"
 modules = 4
+maven_jdk = "21"   # Lucene 10 / Elasticsearch 9.4 jars are Java 21 class files; compiling on 17 fails
 note = "Elasticsearch plugin"
 
 [[repo]]
@@ -158,6 +162,7 @@ sha = "878ce2a1fad54ca941d17fdcf2e1d924b148eb1f"
 stars = 17460
 java = "17"
 modules = 19
+maven_jdk = "21"   # enforcer RequireJavaVersion [21,22),[25,26)
 note = "UI module needs node via frontend-maven-plugin"
 
 [[repo]]

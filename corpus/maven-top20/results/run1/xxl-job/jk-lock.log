@@ -1,0 +1,18 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/xxl-job && jk --no-progress --no-ansi --no-notify lock)   # 01:51:38
+
+‼ Cannot resolve dependencies:
+  │ No versions of org.apache.groovy:groovy match unresolved
+  │   available: 6.0.0-RC-2, 6.0.0-RC-1, 6.0.0-beta-3, 6.0.0-beta-2, 6.0.0-beta-1, 6.0.0-alpha-2, 6.0.0-alpha-1, 5.1.2, 5.1.1, 5.1.0, 5.0.8, 5.0.7, …
+  │ The project depends on org.apache.groovy:groovy unresolved
+  │ Therefore, the project's requirements cannot be resolved
+
+Suggestions:
+  • Pin org.apache.groovy:groovy to 6.0.0-RC-2 (e.g. `org.apache.groovy:groovy:6.0.0-RC-2`)
+  • Or relax the version constraint on org.apache.groovy:groovy so one of [6.0.0-RC-2, 6.0.0-RC-1, 6.0.0-beta-3] is allowed
+  • Relax or remove the project constraint on org.apache.groovy:groovy
+
+
+jk: ! Lock > Failed to lock dependencies
+
+# -> fail exit=6 wall=0.7s

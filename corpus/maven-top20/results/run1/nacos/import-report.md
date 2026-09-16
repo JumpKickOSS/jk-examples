@@ -1,0 +1,344 @@
+# jk import report
+
+Source: `/home/bsant/src/scratch/maven-corpus/nacos/pom.xml`
+
+## Tier 3 — not imported
+
+These constructs have no jk equivalent and were skipped or stubbed.
+
+- [istio] `<build><extensions>` is not supported. Move build extensions to a custom jk task once tasks land.
+- [consistency] `<build><extensions>` is not supported. Move build extensions to a custom jk task once tasks land.
+
+## Tier 2 — imported with best-effort
+
+These were mapped but you should review the result.
+
+- Maven profile `jdk17`: activation=jdk=[17,); plugins=[maven-javadoc-plugin] (plugin mapping is not yet implemented).
+- Maven profile `release-sign-artifacts`: activation=property=performRelease (no jk equivalent — replace with an explicit jk profile or feature); properties=[maven.javadoc.skip] (no jk equivalent — fold maven.compiler.* into project.jdk; drop the rest); plugins=[maven-gpg-plugin] (plugin mapping is not yet implemented).
+- Maven profile `sonar-apache`: properties=[sonar.host.url] (no jk equivalent — fold maven.compiler.* into project.jdk; drop the rest).
+- `<plugin>versions-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- `<plugin>dependency-mediator-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- `<plugin>clirr-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- `<plugin>maven-enforcer-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- `<plugin>maven-javadoc-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- `<plugin>maven-source-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- `<plugin>maven-checkstyle-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- `<plugin>spotless-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- `<plugin>apache-rat-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- `<plugin>maven-resources-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- `<plugin>jacoco-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- `<plugin>maven-surefire-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- `<plugin>spotbugs-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- `<plugin>sonar-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- `<plugin>maven-assembly-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- `<plugin>easyj-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- `<plugin>build-helper-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- `<plugin>central-publishing-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [config] `<parent>` was referenced (com.alibaba.nacos:nacos-all:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [config] `<dependency>` org.springframework.boot:spring-boot-starter-web has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [config] `<dependency>` com.alibaba.nacos:nacos-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [config] `<dependency>` com.alibaba.nacos:nacos-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [config] `<dependency>` com.alibaba.nacos:nacos-persistence has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [config] `<dependency>` commons-io:commons-io has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [config] `<dependency>` ch.qos.logback:logback-classic has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [config] `<dependency>` com.alibaba.nacos:nacos-encryption-plugin has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [config] `<dependency>` com.alibaba.nacos:nacos-config-plugin has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [config] `<dependency>` org.apache.httpcomponents.client5:httpclient5 has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [config] `<dependency>` org.springframework.boot:spring-boot-starter-tomcat has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [config] `<dependency>` com.fasterxml.jackson.core:jackson-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [config] `<dependency>` com.fasterxml.jackson.core:jackson-databind has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [config] `<dependency>` io.micrometer:micrometer-registry-prometheus has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [config] `<dependency>` io.micrometer:micrometer-registry-influx has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [config] `<dependency>` io.micrometer:micrometer-registry-elastic has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [config] `<dependency>` org.springframework.boot:spring-boot-starter-aspectj has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [config] `<dependency>` org.yaml:snakeyaml has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [config] `<dependency>` com.alibaba.nacos:nacos-datasource-plugin has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [config] `<dependency>` org.springframework.boot:spring-boot-test-autoconfigure has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [config] `<dependency>` org.springframework:spring-test has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [config] `<dependency>` org.hamcrest:hamcrest has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [config] `<dependency>` com.mysql:mysql-connector-j has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [config] `<dependency>` org.apache.derby:derby has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [config] `<dependency>` org.springframework.boot:spring-boot-starter-webmvc-test has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [config] Maven profile `springboot`: 1 dependency (convert to a jk feature `springboot` if opt-in, or move into the main deps list); plugins=[spring-boot-maven-plugin] (plugin mapping is not yet implemented).
+- [config] `<plugin>maven-assembly-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [core] `<parent>` was referenced (com.alibaba.nacos:nacos-all:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [core] `<dependency>` com.alibaba.nacos:nacos-common has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [core] `<dependency>` com.alibaba.nacos:nacos-consistency has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [core] `<dependency>` com.alibaba.nacos:nacos-persistence has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [core] `<dependency>` com.alibaba.nacos:nacos-auth has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [core] `<dependency>` com.alibaba.nacos:nacos-trace-plugin has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [core] `<dependency>` com.alibaba.nacos:nacos-visibility-plugin has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [core] `<dependency><optional>true</optional></dependency>` on org.springframework.boot:spring-boot-starter-webmvc — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [core] `<dependency>` org.springframework.boot:spring-boot-starter-webmvc has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [core] `<dependency>` org.springframework.boot:spring-boot-starter-aspectj has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [core] `<dependency><optional>true</optional></dependency>` on org.springframework.boot:spring-boot-configuration-processor — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [core] `<dependency>` org.springframework.boot:spring-boot-configuration-processor has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [core] `<dependency>` org.springframework.boot:spring-boot-starter-security has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [core] `<dependency>` org.springframework.boot:spring-boot-starter-actuator has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [core] `<dependency>` org.springframework.security:spring-security-test has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [core] `<dependency>` org.springframework:spring-test has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [core] `<dependency>` org.springframework.boot:spring-boot-test-autoconfigure has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [core] `<dependency>` org.springframework.boot:spring-boot-test has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [core] `<dependency>` io.grpc:grpc-testing has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [core] `<dependency>` org.apache.tomcat.embed:tomcat-embed-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [core] `<dependency>` com.alipay.sofa:jraft-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [core] `<dependency>` com.alipay.sofa:rpc-grpc-impl has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [core] `<dependency>` org.apache.httpcomponents.client5:httpclient5 has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [core] `<dependency>` commons-collections:commons-collections has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [core] `<dependency>` io.micrometer:micrometer-registry-prometheus has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [core] `<dependency>` io.micrometer:micrometer-registry-influx has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [core] `<dependency>` io.micrometer:micrometer-registry-elastic has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [core] `<exclusions>` on com.asarkar.grpc:grpc-test — exclusion support lands in a later slice; exclusions were dropped.
+- [core] `<dependency>` org.springframework:spring-webmvc has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [core] `<dependency>` org.springframework.boot:spring-boot-starter-webmvc-test has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [naming] `<parent>` was referenced (com.alibaba.nacos:nacos-all:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [naming] `<dependency>` com.alibaba.nacos:nacos-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [naming] `<dependency>` com.alibaba.nacos:nacos-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [naming] `<dependency>` org.springframework.boot:spring-boot has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [naming] `<dependency>` org.springframework.boot:spring-boot-starter-web has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [naming] `<dependency>` org.springframework.boot:spring-boot-starter-test has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [naming] `<dependency>` commons-collections:commons-collections has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [naming] `<dependency>` org.slf4j:slf4j-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [naming] `<dependency>` ch.qos.logback:logback-classic has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [naming] `<dependency>` ch.qos.logback:logback-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [naming] `<dependency>` org.apache.httpcomponents.core5:httpcore5 has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [naming] `<dependency>` org.apache.httpcomponents.client5:httpclient5 has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [naming] `<dependency>` com.mysql:mysql-connector-j has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [naming] `<dependency>` org.slf4j:log4j-over-slf4j has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [naming] `<dependency>` org.slf4j:jcl-over-slf4j has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [naming] `<dependency>` org.slf4j:jul-to-slf4j has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [naming] `<dependency>` com.alibaba.nacos:nacos-cmdb has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [naming] `<dependency>` io.micrometer:micrometer-registry-prometheus has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [naming] `<dependency>` io.micrometer:micrometer-registry-elastic has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [naming] `<dependency>` io.micrometer:micrometer-registry-influx has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [naming] `<plugin>maven-assembly-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [address] `<parent>` was referenced (com.alibaba.nacos:nacos-all:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [address] `<exclusions>` on com.alibaba.nacos:nacos-naming — exclusion support lands in a later slice; exclusions were dropped.
+- [address] `<dependency>` com.alibaba.nacos:nacos-naming has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [address] `<dependency>` org.springframework:spring-test has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [address] Maven profile `release-address`: plugins=[maven-jar-plugin,spring-boot-maven-plugin] (plugin mapping is not yet implemented).
+- [test] `<parent>` was referenced (com.alibaba.nacos:nacos-all:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [test] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [api] `<parent>` was referenced (com.alibaba.nacos:nacos-all:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [api] `<dependency>` com.fasterxml.jackson.core:jackson-annotations has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [api] `<dependency>` com.fasterxml.jackson.core:jackson-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [api] `<dependency>` com.fasterxml.jackson.core:jackson-databind has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [api] `<dependency>` org.springframework:spring-test has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [api] `<dependency>` io.grpc:grpc-netty-shaded has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [api] `<dependency>` io.grpc:grpc-protobuf has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [api] `<dependency>` io.grpc:grpc-stub has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [api] `<dependency>` io.grpc:grpc-util has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [api] `<dependency>` io.grpc:grpc-inprocess has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [api] `<dependency>` com.google.api.grpc:proto-google-common-protos has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [api] `<dependency>` com.google.protobuf:protobuf-java has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [api] `<dependency>` javax.annotation:javax.annotation-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [client] `<parent>` was referenced (com.alibaba.nacos:nacos-all:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [client] `<dependency><optional>true</optional></dependency>` on org.slf4j:slf4j-api — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [client] `<dependency>` org.slf4j:slf4j-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [client] `<dependency><optional>true</optional></dependency>` on com.alibaba.nacos:nacos-api — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [client] `<dependency>` com.alibaba.nacos:nacos-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [client] `<dependency><optional>true</optional></dependency>` on com.alibaba.nacos:nacos-common — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [client] `<dependency>` com.alibaba.nacos:nacos-common has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [client] `<dependency>` com.alibaba.nacos:nacos-client-basic has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [client] `<dependency>` com.alibaba.nacos:nacos-encryption-plugin has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [client] `<dependency>` com.alibaba.nacos:nacos-logback-adapter-12 has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [client] `<dependency>` com.alibaba.nacos:logback-adapter has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [client] `<dependency>` com.alibaba.nacos:nacos-log4j2-adapter has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [client] `<dependency>` com.fasterxml.jackson.core:jackson-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [client] `<dependency>` com.fasterxml.jackson.core:jackson-databind has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [client] `<dependency>` org.apache.httpcomponents.client5:httpclient5 has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [client] `<dependency>` org.apache.httpcomponents.core5:httpcore5 has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [client] `<dependency>` org.yaml:snakeyaml has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [client] `<dependency>` io.micrometer:micrometer-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [client] `<dependency>` io.micrometer:micrometer-registry-prometheus has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [client] Maven profile `release-sign-artifacts`: plugins=[maven-shade-plugin,maven-jar-plugin] (plugin mapping is not yet implemented).
+- [client] Maven profile `release-nacos`: plugins=[maven-shade-plugin,maven-jar-plugin] (plugin mapping is not yet implemented).
+- [example] `<parent>` was referenced (com.alibaba.nacos:nacos-all:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [example] `<dependency>` com.alibaba.nacos:nacos-common has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [example] `<dependency>` com.alibaba.nacos:nacos-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [example] `<dependency>` com.alibaba.nacos:nacos-client has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [example] `<dependency>` ch.qos.logback:logback-classic has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [common] `<parent>` was referenced (com.alibaba.nacos:nacos-all:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [common] `<dependency>` org.slf4j:slf4j-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [common] `<dependency>` commons-io:commons-io has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [common] `<dependency>` org.apache.httpcomponents.client5:httpclient5 has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [common] `<dependency>` com.alibaba.nacos:nacos-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [common] `<dependency>` com.fasterxml.jackson.core:jackson-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [common] `<dependency>` com.fasterxml.jackson.core:jackson-databind has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [common] `<dependency><optional>true</optional></dependency>` on tools.jackson.core:jackson-core — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [common] `<dependency>` tools.jackson.core:jackson-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [common] `<dependency><optional>true</optional></dependency>` on tools.jackson.core:jackson-databind — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [common] `<dependency>` tools.jackson.core:jackson-databind has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [common] `<dependency>` com.mysql:mysql-connector-j has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [distribution] `<parent>` was referenced (com.alibaba.nacos:nacos-all:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [distribution] `<dependency>` com.alibaba.nacos:nacos-bootstrap has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [distribution] Maven profile `release-address`: plugins=[maven-assembly-plugin] (plugin mapping is not yet implemented).
+- [distribution] Maven profile `release-client`: 1 dependency (convert to a jk feature `release-client` if opt-in, or move into the main deps list); plugins=[maven-assembly-plugin] (plugin mapping is not yet implemented).
+- [distribution] Maven profile `release-nacos`: plugins=[maven-assembly-plugin] (plugin mapping is not yet implemented).
+- [distribution] Maven profile `release-native`: plugins=[maven-assembly-plugin] (plugin mapping is not yet implemented).
+- [console] `<parent>` was referenced (com.alibaba.nacos:nacos-all:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [console] `<dependency>` com.alibaba.nacos:nacos-config has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [console] `<dependency>` com.alibaba.nacos:nacos-naming has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [console] `<dependency>` com.alibaba.nacos:nacos-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [console] `<dependency>` com.alibaba.nacos:nacos-ai has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [console] `<dependency>` com.alibaba.nacos:nacos-lock has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [console] `<dependency>` com.alibaba.nacos:nacos-maintainer-client has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [console] `<dependency>` com.alibaba.nacos:nacos-istio has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [console] `<dependency>` com.alibaba.nacos:nacos-prometheus has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [console] `<dependency>` com.alibaba.nacos:nacos-k8s-sync has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [console] `<dependency>` io.modelcontextprotocol.sdk:mcp has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [console] `<dependency>` org.slf4j:log4j-over-slf4j has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [console] `<dependency>` org.slf4j:jcl-over-slf4j has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [console] `<dependency>` org.slf4j:jul-to-slf4j has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [console] `<dependency>` org.springframework.boot:spring-boot-starter-security has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [console] `<dependency>` org.apache.derby:derby has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [console] `<dependency>` org.springframework.boot:spring-boot-test-autoconfigure has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [console] `<dependency>` org.springframework:spring-test has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [console] `<dependency>` org.hamcrest:hamcrest has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [console] `<dependency>` org.springframework.boot:spring-boot-starter-webmvc-test has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [console] Maven profile `dev`: activation=activeByDefault; 1 dependency (convert to a jk feature `dev` if opt-in, or move into the main deps list).
+- [console] Maven profile `native-win64`: activation=os=windows (use jk target predicates per dep); properties=[hints.os.rocksdb] (no jk equivalent — fold maven.compiler.* into project.jdk; drop the rest).
+- [console] Maven profile `native-linux32`: activation=os=unix (use jk target predicates per dep); properties=[hints.os.rocksdb] (no jk equivalent — fold maven.compiler.* into project.jdk; drop the rest).
+- [console] Maven profile `native-linux64`: activation=os=unix (use jk target predicates per dep); properties=[hints.os.rocksdb] (no jk equivalent — fold maven.compiler.* into project.jdk; drop the rest).
+- [console] Maven profile `native-linux-aarch64`: activation=os=unix (use jk target predicates per dep); properties=[hints.os.rocksdb] (no jk equivalent — fold maven.compiler.* into project.jdk; drop the rest).
+- [console] Maven profile `native-linux-ppc64le`: activation=os=unix (use jk target predicates per dep); properties=[hints.os.rocksdb] (no jk equivalent — fold maven.compiler.* into project.jdk; drop the rest).
+- [console] Maven profile `native-linux-s390x`: activation=os=unix (use jk target predicates per dep); properties=[hints.os.rocksdb] (no jk equivalent — fold maven.compiler.* into project.jdk; drop the rest).
+- [console] Maven profile `native-osx-arm64`: activation=os=mac (use jk target predicates per dep); properties=[hints.os.rocksdb] (no jk equivalent — fold maven.compiler.* into project.jdk; drop the rest).
+- [console] Maven profile `native-osx-x86_64`: activation=os=mac (use jk target predicates per dep); properties=[hints.os.rocksdb] (no jk equivalent — fold maven.compiler.* into project.jdk; drop the rest).
+- [console] Maven profile `native`: plugins=[spring-boot-maven-plugin,native-maven-plugin] (plugin mapping is not yet implemented).
+- [console] `<plugin>native-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [cmdb] `<parent>` was referenced (com.alibaba.nacos:nacos-all:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [cmdb] `<dependency>` com.alibaba.nacos:nacos-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [cmdb] `<dependency>` com.alibaba.nacos:nacos-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [cmdb] `<dependency>` org.springframework.boot:spring-boot has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [cmdb] `<dependency>` org.springframework.boot:spring-boot-starter-web has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [cmdb] `<plugin>maven-surefire-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [cmdb] `<plugin>maven-assembly-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [istio] `<parent>` was referenced (com.alibaba.nacos:nacos-all:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [istio] `<dependency>` com.alibaba.nacos:nacos-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [istio] `<dependency>` com.alibaba.nacos:nacos-common has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [istio] `<classifier>pure</classifier>` on com.alibaba.nacos:nacos-client — classifier support lands in a later slice; the coord was emitted without it.
+- [istio] `<dependency>` com.alibaba.nacos:nacos-config has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [istio] `<dependency>` com.alibaba.nacos:nacos-naming has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [istio] `<dependency>` com.alibaba.nacos:nacos-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [istio] `<dependency>` io.grpc:grpc-netty-shaded has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [istio] `<dependency>` io.grpc:grpc-protobuf has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [istio] `<dependency>` io.grpc:grpc-stub has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [istio] `<dependency>` com.google.api.grpc:proto-google-common-protos has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [istio] `<dependency>` com.google.protobuf:protobuf-java has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [istio] `<dependency>` org.springframework.boot:spring-boot-starter-test has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [istio] `<plugin>maven-source-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [istio] `<plugin>maven-assembly-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [istio] `<plugin>protobuf-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [consistency] `<parent>` was referenced (com.alibaba.nacos:nacos-all:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [consistency] `<dependency>` com.alibaba.nacos:nacos-common has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [consistency] `<dependency>` com.caucho:hessian has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [consistency] `<dependency>` com.google.protobuf:protobuf-java has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [consistency] `<plugin>protobuf-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [auth] `<parent>` was referenced (com.alibaba.nacos:nacos-all:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [auth] `<dependency>` com.alibaba.nacos:nacos-common has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [auth] `<dependency>` com.alibaba.nacos:nacos-auth-plugin has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [auth] `<dependency>` com.alibaba.nacos:nacos-sys has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [auth] `<dependency><optional>true</optional></dependency>` on org.springframework.boot:spring-boot-starter — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [auth] `<dependency>` org.springframework.boot:spring-boot-starter has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [auth] `<dependency>` org.springframework:spring-test has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [auth] `<dependency>` org.apache.tomcat.embed:tomcat-embed-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [sys] `<parent>` was referenced (com.alibaba.nacos:nacos-all:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [sys] `<dependency>` com.alibaba.nacos:nacos-common has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [sys] `<dependency>` org.springframework.boot:spring-boot-starter has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [sys] `<dependency>` org.springframework:spring-test has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [sys] `<dependency>` org.springframework.boot:spring-boot-test has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [sys] `<dependency>` com.alibaba.nacos:nacos-custom-environment-plugin has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [plugin] `<parent>` was referenced (com.alibaba.nacos:nacos-all:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [plugin] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [plugin-default-impl] `<parent>` was referenced (com.alibaba.nacos:nacos-all:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [plugin-default-impl] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [prometheus] `<parent>` was referenced (com.alibaba.nacos:nacos-all:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [prometheus] `<dependency>` com.alibaba.nacos:nacos-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [prometheus] `<dependency>` com.alibaba.nacos:nacos-naming has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [prometheus] `<dependency>` com.alibaba.nacos:nacos-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [prometheus] `<dependency>` org.springframework.boot:spring-boot-test-autoconfigure has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [prometheus] `<dependency>` org.springframework:spring-test has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [prometheus] `<dependency>` org.hamcrest:hamcrest has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [prometheus] `<dependency>` org.springframework.boot:spring-boot-starter-webmvc-test has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [prometheus] `<plugin>maven-source-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [prometheus] `<plugin>maven-assembly-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [persistence] `<parent>` was referenced (com.alibaba.nacos:nacos-all:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [persistence] `<dependency>` org.springframework.boot:spring-boot-starter-jdbc has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [persistence] `<dependency>` com.alibaba.nacos:nacos-datasource-plugin has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [persistence] `<dependency>` com.alibaba.nacos:nacos-sys has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [persistence] `<dependency>` com.alibaba.nacos:nacos-consistency has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [persistence] `<dependency>` io.micrometer:micrometer-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [persistence] `<dependency>` com.mysql:mysql-connector-j has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [persistence] `<dependency>` org.apache.derby:derby has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [persistence] `<dependency>` org.springframework:spring-test has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [logger-adapter-impl] `<parent>` was referenced (com.alibaba.nacos:nacos-all:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [logger-adapter-impl] `<dependency><optional>true</optional></dependency>` on com.alibaba.nacos:nacos-common — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [logger-adapter-impl] `<dependency>` com.alibaba.nacos:nacos-common has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [logger-adapter-impl] Maven profile `release-sign-artifacts`: plugins=[maven-shade-plugin,maven-jar-plugin] (plugin mapping is not yet implemented).
+- [logger-adapter-impl] Maven profile `release-nacos`: plugins=[maven-shade-plugin,maven-jar-plugin] (plugin mapping is not yet implemented).
+- [logger-adapter-impl] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [k8s-sync] `<parent>` was referenced (com.alibaba.nacos:nacos-all:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [k8s-sync] `<dependency>` com.alibaba.nacos:nacos-naming has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [k8s-sync] `<dependency>` io.kubernetes:client-java-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [k8s-sync] `<dependency>` io.kubernetes:client-java has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [k8s-sync] `<dependency>` org.springframework.boot:spring-boot-starter-test has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [bootstrap] `<parent>` was referenced (com.alibaba.nacos:nacos-all:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [bootstrap] `<dependency>` com.alibaba.nacos:nacos-console has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [bootstrap] `<dependency>` com.alibaba.nacos:nacos-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [bootstrap] `<dependency>` com.alibaba.nacos:nacos-server has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [bootstrap] `<dependency>` com.alibaba.nacos:nacos-ai-registry-adaptor has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [bootstrap] Maven profile `dev`: activation=property=spring.profiles.active (no jk equivalent — replace with an explicit jk profile or feature); 1 dependency (convert to a jk feature `dev` if opt-in, or move into the main deps list).
+- [bootstrap] Maven profile `release-nacos`: plugins=[maven-jar-plugin,spring-boot-maven-plugin] (plugin mapping is not yet implemented).
+- [server] `<parent>` was referenced (com.alibaba.nacos:nacos-all:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [server] `<dependency>` com.alibaba.nacos:nacos-naming has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [server] `<dependency>` com.alibaba.nacos:nacos-config has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [server] `<dependency>` com.alibaba.nacos:nacos-istio has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [server] `<dependency>` com.alibaba.nacos:nacos-prometheus has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [server] Maven profile `dev`: activation=activeByDefault; 1 dependency (convert to a jk feature `dev` if opt-in, or move into the main deps list).
+- [lock] `<parent>` was referenced (com.alibaba.nacos:nacos-all:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [lock] `<dependency>` com.alibaba.nacos:nacos-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [lock] `<dependency>` com.alibaba.nacos:nacos-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [lock] `<dependency>` org.springframework.boot:spring-boot has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [lock] `<dependency>` org.springframework.boot:spring-boot-starter-web has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [lock] `<dependency>` org.springframework.boot:spring-boot-starter-test has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [maintainer-client] `<parent>` was referenced (com.alibaba.nacos:nacos-all:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [maintainer-client] `<dependency>` commons-collections:commons-collections has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [maintainer-client] `<exclusions>` on com.alibaba.nacos:nacos-common — exclusion support lands in a later slice; exclusions were dropped.
+- [maintainer-client] `<dependency>` com.alibaba.nacos:nacos-common has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [maintainer-client] `<dependency>` com.alibaba.nacos:nacos-client-basic has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [maintainer-client] `<plugin>spring-boot-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [client-basic] `<parent>` was referenced (com.alibaba.nacos:nacos-all:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [client-basic] `<dependency><optional>true</optional></dependency>` on com.alibaba.nacos:nacos-api — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [client-basic] `<dependency>` com.alibaba.nacos:nacos-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [client-basic] `<dependency><optional>true</optional></dependency>` on com.alibaba.nacos:nacos-common — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [client-basic] `<dependency>` com.alibaba.nacos:nacos-common has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [client-basic] `<dependency><optional>true</optional></dependency>` on org.slf4j:slf4j-api — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [client-basic] `<dependency>` org.slf4j:slf4j-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [client-basic] `<dependency>` com.alibaba.nacos:nacos-auth-plugin has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [ai] `<parent>` was referenced (com.alibaba.nacos:nacos-all:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [ai] `<dependency>` com.alibaba.nacos:nacos-common has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [ai] `<dependency>` com.alibaba.nacos:nacos-naming has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [ai] `<dependency>` com.alibaba.nacos:nacos-config has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [ai] `<dependency>` com.alibaba.nacos:nacos-ai-plugin has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [ai] `<dependency>` com.alibaba.nacos:nacos-visibility-plugin has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [ai] `<dependency>` org.springframework.boot:spring-boot-test-autoconfigure has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [ai] `<dependency>` com.fasterxml.jackson.core:jackson-databind has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [ai] `<dependency>` org.apache.derby:derby has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [ai] `<dependency>` org.mockito:mockito-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [ai] `<dependency>` org.mockito:mockito-inline has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [copilot] `<parent>` was referenced (com.alibaba.nacos:nacos-all:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [copilot] `<dependency>` com.alibaba.nacos:nacos-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [copilot] `<dependency>` com.alibaba.nacos:nacos-common has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [copilot] `<dependency>` com.alibaba.nacos:nacos-sys has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [copilot] `<dependency>` com.alibaba.nacos:nacos-maintainer-client has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [copilot] `<dependency>` com.alibaba.nacos:nacos-auth has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [copilot] `<dependency>` org.springframework.boot:spring-boot-starter-web has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [copilot] `<exclusions>` on io.agentscope:agentscope-core — exclusion support lands in a later slice; exclusions were dropped.
+- [copilot] `<dependency>` org.springframework.boot:spring-boot-test-autoconfigure has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [ai-registry-adaptor] `<parent>` was referenced (com.alibaba.nacos:nacos-all:${revision}) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [ai-registry-adaptor] `<dependency>` com.alibaba.nacos:nacos-ai has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [ai-registry-adaptor] `<dependency>` commons-codec:commons-codec has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [ai-registry-adaptor] `<dependency>` org.springframework.boot:spring-boot-test-autoconfigure has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [ai-registry-adaptor] `<dependency>` org.yaml:snakeyaml has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+

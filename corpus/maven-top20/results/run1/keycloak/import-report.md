@@ -1,0 +1,185 @@
+# jk import report
+
+Source: `/home/bsant/src/scratch/maven-corpus/keycloak/pom.xml`
+
+## Tier 2 — imported with best-effort
+
+These were mapped but you should review the result.
+
+- Maven profile `testsuite`: activation=property=!skipTestsuite (no jk equivalent — replace with an explicit jk profile or feature).
+- Maven profile `adapters`: activation=property=!skipAdapters (no jk equivalent — replace with an explicit jk profile or feature).
+- Maven profile `docs`: activation=property=!skipDocs (no jk equivalent — replace with an explicit jk profile or feature).
+- Maven profile `eap8-adapters`: activation=property=eap8-adapters (no jk equivalent — replace with an explicit jk profile or feature); properties=[ee.maven.groupId,ee.maven.version,wildfly.version,wildfly.core.version,saml.adapter.galleon.pack.metadata.dir,org.wildfly.galleon-plugins.version,org.jboss.galleon.version,org.wildfly.maven.plugins.licenses-plugin.version] (no jk equivalent — fold maven.compiler.* into project.jdk; drop the rest).
+- Maven profile `upstream-adapters`: activation=property=!eap8-adapters (no jk equivalent — replace with an explicit jk profile or feature); properties=[ee.maven.groupId,ee.maven.version,wildfly.version,wildfly.core.version,saml.adapter.galleon.pack.metadata.dir,org.wildfly.galleon-plugins.version,org.jboss.galleon.version,org.wildfly.maven.plugins.licenses-plugin.version] (no jk equivalent — fold maven.compiler.* into project.jdk; drop the rest).
+- Maven profile `distribution`: contained no convertible payload; dropped.
+- Maven profile `jboss-release`: plugins=[maven-source-plugin,maven-javadoc-plugin] (plugin mapping is not yet implemented).
+- Maven profile `operator`: activation=property=operator (no jk equivalent — replace with an explicit jk profile or feature).
+- Maven profile `operator-prod`: activation=property=operator-prod (no jk equivalent — replace with an explicit jk profile or feature).
+- Maven profile `central-staging`: plugins=[central-publishing-maven-plugin] (plugin mapping is not yet implemented).
+- Maven profile `nexus3-staging`: plugins=[nxrm3-maven-plugin] (plugin mapping is not yet implemented).
+- Maven profile `gpg`: plugins=[maven-gpg-plugin] (plugin mapping is not yet implemented).
+- Maven profile `crypto-default`: activation=property=!fips140-2 (no jk equivalent — replace with an explicit jk profile or feature); properties=[keycloak.crypto.artifactId] (no jk equivalent — fold maven.compiler.* into project.jdk; drop the rest).
+- Maven profile `fips140-2`: activation=property=fips140-2 (no jk equivalent — replace with an explicit jk profile or feature); properties=[keycloak.crypto.artifactId] (no jk equivalent — fold maven.compiler.* into project.jdk; drop the rest).
+- [boms] `<parent>` was referenced (org.jboss:jboss-parent:39) but jk-import did not flatten its dependencyManagement / properties / build config. Run `mvn help:effective-pom` and re-import if any dependency versions are unresolved.
+- [boms] Maven profile `gpg`: plugins=[maven-gpg-plugin] (plugin mapping is not yet implemented).
+- [boms] Maven profile `central-staging`: plugins=[central-publishing-maven-plugin] (plugin mapping is not yet implemented).
+- [boms] Maven profile `nexus3-staging`: plugins=[nxrm3-maven-plugin] (plugin mapping is not yet implemented).
+- [boms] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [common] `<dependency>` org.jboss.logging:jboss-logging has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [common] `<dependency>` org.hamcrest:hamcrest has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [common] `<dependency>` org.junit.jupiter:junit-jupiter has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [common] `<dependency>` jakarta.activation:jakarta.activation-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [core] `<dependency>` org.keycloak:keycloak-common has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [core] `<dependency>` com.fasterxml.jackson.core:jackson-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [core] `<dependency>` com.fasterxml.jackson.core:jackson-databind has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [core] `<dependency>` com.fasterxml.jackson.datatype:jackson-datatype-jdk8 has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [core] `<dependency>` com.fasterxml.jackson.datatype:jackson-datatype-jsr310 has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [core] `<dependency>` com.webauthn4j:webauthn4j-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [core] `<dependency>` org.jboss.logging:jboss-logging has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [core] `<dependency>` org.eclipse.microprofile.openapi:microprofile-openapi-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [core] `<dependency>` junit:junit has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [core] Maven profile `jdk-15`: activation=jdk=[15,); plugins=[maven-compiler-plugin] (plugin mapping is not yet implemented).
+- [core] `<plugin>maven-jar-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [crypto] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [dependencies] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [server-spi] `<dependency>` jakarta.transaction:jakarta.transaction-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [server-spi] `<dependency>` io.quarkus.resteasy.reactive:resteasy-reactive-common has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [server-spi] `<dependency>` org.keycloak:keycloak-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [server-spi] `<dependency>` org.jboss.logging:jboss-logging has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [server-spi] `<dependency>` org.apache.httpcomponents:httpclient has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [server-spi] `<dependency>` org.infinispan.protostream:protostream has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [server-spi] `<dependency>` junit:junit has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [server-spi-private] `<dependency>` org.keycloak:keycloak-server-spi has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [server-spi-private] `<dependency>` jakarta.transaction:jakarta.transaction-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [server-spi-private] `<dependency>` jakarta.persistence:jakarta.persistence-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [server-spi-private] `<dependency>` org.hibernate.orm:hibernate-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [server-spi-private] `<dependency>` io.quarkus.resteasy.reactive:resteasy-reactive-common has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [server-spi-private] `<dependency>` org.keycloak:keycloak-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [server-spi-private] `<dependency>` org.jboss.logging:jboss-logging has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [server-spi-private] `<dependency>` org.apache.httpcomponents:httpclient has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [server-spi-private] `<dependency>` io.opentelemetry:opentelemetry-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [server-spi-private] `<dependency>` com.google.guava:guava has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [server-spi-private] `<dependency>` junit:junit has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [server-spi-private] `<dependency>` org.hamcrest:hamcrest has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [server-spi-private] `<plugin>maven-surefire-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [saml-core-api] `<dependency>` org.jboss.logging:jboss-logging has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [saml-core-api] `<dependency>` org.keycloak:keycloak-common has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [saml-core-api] `<dependency>` org.apache.santuario:xmlsec has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [saml-core-api] `<dependency>` jakarta.xml.bind:jakarta.xml.bind-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [saml-core-api] `<dependency>` jakarta.xml.ws:jakarta.xml.ws-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [saml-core-api] `<dependency>` com.sun.xml.messaging.saaj:saaj-impl has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [saml-core-api] `<dependency>` com.sun.xml.ws:rt has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [saml-core] `<dependency>` org.jboss.logging:jboss-logging has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [saml-core] `<dependency>` org.keycloak:keycloak-common has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [saml-core] `<dependency>` org.keycloak:keycloak-saml-core-public has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [saml-core] `<dependency>` org.apache.santuario:xmlsec has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [saml-core] `<dependency>` org.keycloak:${keycloak.crypto.artifactId} has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [saml-core] `<dependency>` junit:junit has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [saml-core] `<dependency>` org.hamcrest:hamcrest has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [saml-core] `<dependency>` commons-io:commons-io has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [saml-core] `<dependency>` jakarta.xml.bind:jakarta.xml.bind-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [saml-core] `<dependency>` jakarta.xml.ws:jakarta.xml.ws-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [saml-core] `<plugin>maven-surefire-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [federation] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [services] `<dependency>` org.keycloak:keycloak-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` org.keycloak:keycloak-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` org.keycloak:${keycloak.crypto.artifactId} has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` org.freemarker:freemarker has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` jakarta.mail:jakarta.mail-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` org.eclipse.angus:angus-mail has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` org.keycloak:keycloak-common has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` org.keycloak:keycloak-server-spi has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` org.keycloak:keycloak-server-spi-private has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` org.twitter4j:twitter4j-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` org.jboss.logging:jboss-logging has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` org.jboss.logging:commons-logging-jboss-logging has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` org.jboss.logging:jboss-logging-annotations has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency><optional>true</optional></dependency>` on org.jboss.logging:jboss-logging-processor — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [services] `<dependency>` org.jboss.logging:jboss-logging-processor has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` org.jboss.resteasy:resteasy-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` io.quarkus.resteasy.reactive:resteasy-reactive has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` io.quarkus.resteasy.reactive:resteasy-reactive-common has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<exclusions>` on io.quarkus:quarkus-micrometer — exclusion support lands in a later slice; exclusions were dropped.
+- [services] `<dependency>` io.quarkus:quarkus-micrometer has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` org.apache.httpcomponents:httpclient has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` jakarta.ws.rs:jakarta.ws.rs-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` jakarta.transaction:jakarta.transaction-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` jakarta.xml.soap:jakarta.xml.soap-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` org.jboss.resteasy:resteasy-core-spi has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` jakarta.servlet:jakarta.servlet-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` com.googlecode.owasp-java-html-sanitizer:owasp-java-html-sanitizer has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` com.googlecode.owasp-java-html-sanitizer:java8-shim has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` com.googlecode.owasp-java-html-sanitizer:java10-shim has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` com.fasterxml.jackson.core:jackson-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` com.fasterxml.jackson.core:jackson-databind has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` com.fasterxml.jackson.core:jackson-annotations has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` javax.annotation:javax.annotation-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` com.fasterxml.jackson.datatype:jackson-datatype-jdk8 has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` com.fasterxml.jackson.jakarta.rs:jackson-jakarta-rs-yaml-provider has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` com.google.zxing:javase has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` org.keycloak:keycloak-saml-core-public has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` org.keycloak:keycloak-saml-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` commons-io:commons-io has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` com.apicatalog:titanium-json-ld has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` io.setl:rdf-urdna has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` junit:junit has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` org.junit.jupiter:junit-jupiter-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` org.junit.jupiter:junit-jupiter-params has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` org.junit.platform:junit-platform-engine has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` org.hamcrest:hamcrest has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<exclusions>` on com.icegreen:greenmail — exclusion support lands in a later slice; exclusions were dropped.
+- [services] `<dependency>` com.icegreen:greenmail has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` com.webauthn4j:webauthn4j-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` com.github.ua-parser:uap-java has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` org.yaml:snakeyaml has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` org.eclipse.microprofile.openapi:microprofile-openapi-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` io.smallrye.common:smallrye-common-annotation has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` org.keycloak:keycloak-model-storage-private has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] `<dependency>` org.keycloak:keycloak-config-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [services] Maven profile `jboss-release`: plugins=[maven-resources-plugin,smallrye-open-api-maven-plugin,openapi-generator-maven-plugin,asciidoctor-maven-plugin] (plugin mapping is not yet implemented).
+- [services] Maven profile `product`: activation=property=product (no jk equivalent — replace with an explicit jk profile or feature); plugins=[asciidoctor-maven-plugin] (plugin mapping is not yet implemented).
+- [services] `<plugin>maven-jar-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [services] `<plugin>maven-surefire-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [themes] `<dependency>` org.keycloak:keycloak-admin-ui has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [themes] `<dependency>` org.keycloak:keycloak-account-ui has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [themes] `<dependency>` org.keycloak:keycloak-themes-vendor has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [themes] Maven profile `communityTranslations`: activation=property=!skipCommunityTranslations (no jk equivalent — replace with an explicit jk profile or feature).
+- [themes] `<plugin>theme-verifier-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [misc/db-compatibility-verifier] `<dependency>` com.fasterxml.jackson.core:jackson-core has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [misc/db-compatibility-verifier] `<dependency>` com.fasterxml.jackson.core:jackson-databind has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [misc/db-compatibility-verifier] `<dependency>` org.junit.jupiter:junit-jupiter-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [misc/db-compatibility-verifier] `<plugin>maven-surefire-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [misc/db-compatibility-verifier] `<plugin>maven-deploy-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [misc/theme-verifier] `<dependency>` org.junit.jupiter:junit-jupiter-api has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [misc/theme-verifier] `<plugin>maven-surefire-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [misc/theme-verifier] `<plugin>maven-deploy-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [model] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [util] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [rest] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [integration] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [authz] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [js] `<exclusions>` on org.keycloak:keycloak-admin-v2-services — exclusion support lands in a later slice; exclusions were dropped.
+- [js] `<dependency>` org.keycloak:keycloak-admin-v2-services has no resolved `<version>`; jk wrote `=unresolved`. Run `mvn help:effective-pom` and re-import.
+- [js] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [js] `<plugin>theme-verifier-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [js] `<plugin>maven-clean-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [js] `<plugin>frontend-maven-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [js] `<plugin>maven-antrun-plugin</plugin>` was not imported. Plugin-aware mappings (Spotless, JaCoCo, Spring Boot, ...) arrive in slice D.
+- [test-framework] `<dependencyManagement>` entry org.junit.jupiter:junit-jupiter is a version pin, not a BOM import. jk has no equivalent; the pin was dropped. Inline the version on the matching `<dependency>` instead.
+- [test-framework] `<dependencyManagement>` entry org.hamcrest:hamcrest is a version pin, not a BOM import. jk has no equivalent; the pin was dropped. Inline the version on the matching `<dependency>` instead.
+- [test-framework] `<dependencyManagement>` entry org.testcontainers:testcontainers-jdbc is a version pin, not a BOM import. jk has no equivalent; the pin was dropped. Inline the version on the matching `<dependency>` instead.
+- [test-framework] `<dependencyManagement>` entry org.testcontainers:testcontainers-mariadb is a version pin, not a BOM import. jk has no equivalent; the pin was dropped. Inline the version on the matching `<dependency>` instead.
+- [test-framework] `<dependencyManagement>` entry org.testcontainers:testcontainers-mssqlserver is a version pin, not a BOM import. jk has no equivalent; the pin was dropped. Inline the version on the matching `<dependency>` instead.
+- [test-framework] `<dependencyManagement>` entry org.testcontainers:testcontainers-mysql is a version pin, not a BOM import. jk has no equivalent; the pin was dropped. Inline the version on the matching `<dependency>` instead.
+- [test-framework] `<dependencyManagement>` entry org.testcontainers:testcontainers-oracle-free is a version pin, not a BOM import. jk has no equivalent; the pin was dropped. Inline the version on the matching `<dependency>` instead.
+- [test-framework] `<dependencyManagement>` entry org.testcontainers:testcontainers-postgresql is a version pin, not a BOM import. jk has no equivalent; the pin was dropped. Inline the version on the matching `<dependency>` instead.
+- [test-framework] `<dependencyManagement>` entry org.jboss.shrinkwrap:shrinkwrap-api is a version pin, not a BOM import. jk has no equivalent; the pin was dropped. Inline the version on the matching `<dependency>` instead.
+- [test-framework] `<dependencyManagement>` entry org.jboss.shrinkwrap:shrinkwrap-impl-base is a version pin, not a BOM import. jk has no equivalent; the pin was dropped. Inline the version on the matching `<dependency>` instead.
+- [test-framework] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [tests] Maven profile `test-migration-util`: contained no convertible payload; dropped.
+- [tests] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [quarkus] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [scim] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [ssf] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [authzen] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+

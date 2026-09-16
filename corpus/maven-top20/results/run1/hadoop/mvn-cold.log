@@ -1,0 +1,3 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/hadoop && sh ./mvnw -B -q -Dmaven.repo.local=/home/bsant/src/scratch/maven-corpus/.m2 -DskipTests package)   # 00:19:18
+# -> ok exit=0 wall=825.8s

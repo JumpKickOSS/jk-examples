@@ -1,0 +1,8 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/zipkin && jk --no-progress --no-ansi --no-notify lock)   # 01:59:58
+
+jdk = 8 is not supported — jk targets JDK 17 and above (LTS: 17, 21, 25, … plus the latest release).
+
+jk: ! Lock > Failed to lock dependencies
+
+# -> fail exit=2 wall=0.1s

@@ -1,0 +1,6 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/tutorials && jk --no-progress --no-ansi --no-notify test)   # 01:52:21
+
++ Test Successful: No tests - took 107ms
+
+# -> ok exit=0 wall=0.2s
