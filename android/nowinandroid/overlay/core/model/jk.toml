@@ -5,10 +5,10 @@ java    = 21
 kotlin  = "^2.4.0"
 
 [dependencies]
-kotlinx-datetime = { group = "org.jetbrains.kotlinx", name = "kotlinx-datetime", version = "=0.6.1" }
+kotlinx-datetime = "=0.6.1"
 
 [test-dependencies]
-junit-platform-launcher = { group = "org.junit.platform", name = "junit-platform-launcher", version = "=6.1.1" }
+junit-platform-launcher = "=6.1.1"
 
 [repositories]
 central = "https://repo.maven.apache.org/maven2/"

@@ -20,11 +20,11 @@ compose = { group = "androidx.compose", name = "compose-bom-alpha", version = "=
 [dependencies]
 nia-core-navigation = { workspace = true }
 nia-core-model = { workspace = true }
-serialization-json   = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version = "=1.8.0" }
+kotlinx-serialization-json   = "=1.8.0"
 navigation3-runtime  = { group = "androidx.navigation3", name = "navigation3-runtime", version = "=1.0.1" }
 nia-core-domain = { workspace = true }
 [test-dependencies]
-junit-platform-launcher = { group = "org.junit.platform", name = "junit-platform-launcher", version = "=6.1.1" }
+junit-platform-launcher = "=6.1.1"
 
 [repositories]
 central = "https://repo.maven.apache.org/maven2/"

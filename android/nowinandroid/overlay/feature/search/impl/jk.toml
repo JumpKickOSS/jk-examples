@@ -36,7 +36,7 @@ nia-core-data = { workspace = true }
 hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version = "=2.60.1" }
 
 [test-dependencies]
-junit-platform-launcher = { group = "org.junit.platform", name = "junit-platform-launcher", version = "=6.1.1" }
+junit-platform-launcher = "=6.1.1"
 
 [repositories]
 central = "https://repo.maven.apache.org/maven2/"

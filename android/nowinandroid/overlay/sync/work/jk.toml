@@ -26,14 +26,14 @@ nia-core-notifications = { workspace = true }
 hilt-android     = { group = "com.google.dagger", name = "hilt-android", version = "=2.60.1" }
 # ListenableFuture lives in guava (the 9999.0-empty listenablefuture artifact is by design);
 # jk finding 15: unified-scope resolution lets processor-scope guava evict main-scope LF 1.0.
-guava            = { group = "com.google.guava", name = "guava", version = "=33.6.0-android" }
+guava            = "=33.6.0-android"
 
 [processor-dependencies]
 hilt-compiler     = { group = "com.google.dagger", name = "hilt-android-compiler", version = "=2.60.1" }
 hilt-ext-compiler = { group = "androidx.hilt", name = "hilt-compiler", version = "=1.2.0" }
 
 [test-dependencies]
-junit-platform-launcher = { group = "org.junit.platform", name = "junit-platform-launcher", version = "=6.1.1" }
+junit-platform-launcher = "=6.1.1"
 
 [repositories]
 central = "https://repo.maven.apache.org/maven2/"

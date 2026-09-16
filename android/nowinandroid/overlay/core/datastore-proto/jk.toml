@@ -14,7 +14,7 @@ kotlin  = true
 protobuf-kotlin-lite = { group = "com.google.protobuf", name = "protobuf-kotlin-lite", version = "=4.29.2" }
 
 [test-dependencies]
-junit-platform-launcher = { group = "org.junit.platform", name = "junit-platform-launcher", version = "=6.1.1" }
+junit-platform-launcher = "=6.1.1"
 
 [repositories]
 central = "https://repo.maven.apache.org/maven2/"

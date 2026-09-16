@@ -16,7 +16,7 @@ compose = { group = "androidx.compose", name = "compose-bom-alpha", version = "=
 
 [dependencies]
 metrics              = { group = "androidx.metrics", name = "metrics-performance", version = "=1.0.0-beta01" }
-kotlinx-datetime     = { group = "org.jetbrains.kotlinx", name = "kotlinx-datetime", version = "=0.6.1" }
+kotlinx-datetime     = "=0.6.1"
 nia-core-analytics   = { workspace = true }
 nia-core-designsystem = { workspace = true }
 nia-core-model       = { workspace = true }
@@ -26,7 +26,7 @@ coil-compose         = { group = "io.coil-kt", name = "coil-compose", version = 
 compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 
 [test-dependencies]
-junit-platform-launcher = { group = "org.junit.platform", name = "junit-platform-launcher", version = "=6.1.1" }
+junit-platform-launcher = "=6.1.1"
 
 [repositories]
 central = "https://repo.maven.apache.org/maven2/"
