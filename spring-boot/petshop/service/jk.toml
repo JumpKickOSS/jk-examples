@@ -2,4 +2,4 @@ name = "petshop-service"
 
 [dependencies]
 petshop-domain = { workspace = true }
-spring-context = { group = "org.springframework", name = "spring-context", version = "latest" }
+spring-context = "latest"

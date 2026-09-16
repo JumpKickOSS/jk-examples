@@ -10,4 +10,4 @@ java    = 25
 main = "dev.jkharness.aot.Main"
 
 [dependencies]
-gson = { group = "com.google.code.gson", name = "gson", version = "latest" }
+gson = "latest"

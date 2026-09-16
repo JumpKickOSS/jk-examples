@@ -18,17 +18,17 @@ ktor-server-content-negotiation = { group = "io.ktor", name = "ktor-server-conte
 ktor-serialization-jackson = { group = "io.ktor", name = "ktor-serialization-jackson-jvm", version = "latest" }
 
 # Koin
-koin-core = { group = "io.insert-koin", name = "koin-core", version = "latest" }
-koin-ktor = { group = "io.insert-koin", name = "koin-ktor", version = "latest" }
+koin-core = "latest"
+koin-ktor = "latest"
 koin-logger-slf4j = { group = "io.insert-koin", name = "koin-logger-slf4j", version = "latest" }
 
 # Exposed + H2
-exposed-core = { group = "org.jetbrains.exposed", name = "exposed-core", version = "latest" }
-exposed-dao = { group = "org.jetbrains.exposed", name = "exposed-dao", version = "latest" }
-exposed-jdbc = { group = "org.jetbrains.exposed", name = "exposed-jdbc", version = "latest" }
-h2 = { group = "com.h2database", name = "h2", version = "latest" }
+exposed-core = "latest"
+exposed-dao = "latest"
+exposed-jdbc = "latest"
+h2 = "latest"
 
-logback-classic = { group = "ch.qos.logback", name = "logback-classic", version = "latest" }
+logback-classic = "latest"
 
 [test-dependencies]
 junit-jupiter = "latest"

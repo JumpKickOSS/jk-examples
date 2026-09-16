@@ -17,7 +17,7 @@ minified = true
 # obfuscate = false
 
 [dependencies]
-commons-lang3 = { group = "org.apache.commons", name = "commons-lang3", version = "=3.18.0" }
+commons-lang3 = "=3.18.0"
 
 [repositories]
 central = "https://repo.maven.apache.org/maven2/"

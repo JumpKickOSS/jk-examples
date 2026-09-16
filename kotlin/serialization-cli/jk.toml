@@ -16,4 +16,4 @@ main = "dev.jkharness.ser.MainKt"
 coordinate = "org.jetbrains.kotlin:kotlin-serialization-compiler-plugin-embeddable"
 
 [dependencies]
-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version = "latest" }
+kotlinx-serialization-json = "latest"
