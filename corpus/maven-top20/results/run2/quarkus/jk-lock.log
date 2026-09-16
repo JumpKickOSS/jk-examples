@@ -1,0 +1,10 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/quarkus && jk --no-progress --no-ansi --no-notify lock)   # 02:16:54
+
+[Resolve Deps] Failure
+ | POM not found in any declared repo: tools.jackson:jackson-bom:unresolved
+ +--
+
+jk: ! Lock > Failed to lock dependencies
+
+# -> fail exit=6 wall=0.9s

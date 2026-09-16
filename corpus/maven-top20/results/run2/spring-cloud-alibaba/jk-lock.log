@@ -1,0 +1,8 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/spring-cloud-alibaba && jk --no-progress --no-ansi --no-notify lock)   # 02:12:04
+
+environment references are not allowed here: version (${revision}). ${VAR} is honoured only in repository credentials, repository object-store keys, and [test] env — anything that feeds a compile or package cache key must stay a literal, or the same commit would build differently on different machines.
+
+jk: ! Lock > Failed to lock dependencies
+
+# -> fail exit=2 wall=0.1s

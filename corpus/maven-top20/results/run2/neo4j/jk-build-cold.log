@@ -1,0 +1,9 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/neo4j && jk --no-progress --no-ansi --no-notify build --skip-tests)   # 02:18:20
+
++ [1 of 3] org.neo4j.build:community-build - took 8ms
++ [2 of 3] org.neo4j.build:packaging-build - took 8ms
++ [3 of 3] org.neo4j:annotations - took 614ms
+jk: + Build > Build successful for 3 modules - took 1.0s
+
+# -> ok exit=0 wall=1.1s

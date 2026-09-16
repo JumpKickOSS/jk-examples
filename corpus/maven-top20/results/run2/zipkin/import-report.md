@@ -1,0 +1,98 @@
+# jk import report
+
+Source: `/home/bsant/src/scratch/maven-corpus/zipkin/pom.xml`
+
+## Tier 2 — imported with best-effort
+
+These were mapped but you should review the result.
+
+- `<plugin>maven-dependency-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>maven-help-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>maven-failsafe-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin] `<resources>` directory .. is outside `src/main/resources` — jk's layout reads `src/main/resources` only; move the files there.
+- [zipkin] `<plugin>maven-dependency-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin] `<plugin>maven-help-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin] `<plugin>maven-failsafe-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin] `<plugin>maven-bundle-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin] `<plugin>maven-shade-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin] `maven.compiler.release` declared 8; jk's floor is 17; bytecode level raised — written as `java = 17`.
+- [zipkin] `<dependency><optional>true</optional></dependency>` on com.google.code.gson:gson — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [zipkin] dependencies org.junit.jupiter:junit-jupiter, org.junit.jupiter:junit-jupiter-engine, org.junit.platform:junit-platform-launcher, org.assertj:assertj-core, org.mockito:mockito-junit-jupiter inherited from workspace parent io.zipkin:zipkin-parent:3.6.2-SNAPSHOT.
+- [zipkin-tests] `<plugin>maven-dependency-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin-tests] `<plugin>maven-help-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin-tests] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin-tests] `<plugin>maven-failsafe-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin-tests] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin-tests] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin-tests] dependencies io.zipkin.zipkin2:zipkin inherited from a parent.
+- [zipkin-tests] dependencies org.junit.jupiter:junit-jupiter, org.junit.jupiter:junit-jupiter-engine, org.junit.platform:junit-platform-launcher, org.mockito:mockito-junit-jupiter inherited from workspace parent io.zipkin:zipkin-parent:3.6.2-SNAPSHOT.
+- [zipkin-junit5] `<plugin>maven-dependency-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin-junit5] `<plugin>maven-help-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin-junit5] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin-junit5] `<plugin>maven-failsafe-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin-junit5] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin-junit5] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin-junit5] `<exclusions>` on com.squareup.okhttp3:mockwebserver — exclusion support lands in a later slice; exclusions were dropped.
+- [zipkin-junit5] dependencies io.zipkin.zipkin2:zipkin, io.zipkin.zipkin2:zipkin-collector, io.zipkin.zipkin2:zipkin-tests inherited from a parent.
+- [zipkin-junit5] dependencies org.junit.jupiter:junit-jupiter, org.junit.jupiter:junit-jupiter-engine, org.junit.platform:junit-platform-launcher, org.assertj:assertj-core, org.mockito:mockito-junit-jupiter inherited from workspace parent io.zipkin:zipkin-parent:3.6.2-SNAPSHOT.
+- [zipkin-storage] `<plugin>maven-dependency-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin-storage] `<plugin>maven-help-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin-storage] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin-storage] `<plugin>maven-failsafe-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin-storage] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin-storage] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin-storage] dependencies io.zipkin.zipkin2:zipkin, io.zipkin.zipkin2:zipkin-tests inherited from a parent.
+- [zipkin-storage] dependencies org.junit.jupiter:junit-jupiter, org.junit.jupiter:junit-jupiter-engine, org.junit.platform:junit-platform-launcher, org.assertj:assertj-core, org.mockito:mockito-junit-jupiter inherited from workspace parent io.zipkin:zipkin-parent:3.6.2-SNAPSHOT.
+- [zipkin-storage] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [zipkin-collector] `<plugin>maven-dependency-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin-collector] `<plugin>maven-help-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin-collector] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin-collector] `<plugin>maven-failsafe-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin-collector] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin-collector] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin-collector] dependencies io.zipkin.zipkin2:zipkin, io.zipkin.zipkin2:zipkin-tests inherited from a parent.
+- [zipkin-collector] dependencies org.junit.jupiter:junit-jupiter, org.junit.jupiter:junit-jupiter-engine, org.junit.platform:junit-platform-launcher, org.assertj:assertj-core, org.mockito:mockito-junit-jupiter inherited from workspace parent io.zipkin:zipkin-parent:3.6.2-SNAPSHOT.
+- [zipkin-collector] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [zipkin-server] `<resources>` with `<filtering>true</filtering>` on src/main/resources — jk has no resource filtering; `${...}` placeholders in those files are copied as written. Read the values at runtime or check the filled-in file in.
+- [zipkin-server] `<plugin>maven-dependency-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin-server] `<plugin>maven-help-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin-server] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin-server] `<plugin>maven-failsafe-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin-server] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin-server] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin-server] `<plugin>wire-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin-server] `<plugin>git-commit-id-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin-server] `<plugin>spring-boot-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [zipkin-server] `<exclusions>` on org.springframework.boot:spring-boot-starter — exclusion support lands in a later slice; exclusions were dropped.
+- [zipkin-server] `<exclusions>` on org.springframework.boot:spring-boot-starter-actuator — exclusion support lands in a later slice; exclusions were dropped.
+- [zipkin-server] `<exclusions>` on com.linecorp.armeria:armeria-spring-boot3-autoconfigure — exclusion support lands in a later slice; exclusions were dropped.
+- [zipkin-server] `<dependency><optional>true</optional></dependency>` on io.zipkin.zipkin2:zipkin-storage-cassandra — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [zipkin-server] `<dependency><optional>true</optional></dependency>` on io.zipkin.zipkin2:zipkin-storage-elasticsearch — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [zipkin-server] `<dependency><optional>true</optional></dependency>` on io.zipkin.zipkin2:zipkin-storage-mysql-v1 — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [zipkin-server] `<dependency><optional>true</optional></dependency>` on org.mariadb.jdbc:mariadb-java-client — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [zipkin-server] `<dependency><optional>true</optional></dependency>` on com.zaxxer:HikariCP — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [zipkin-server] `<dependency><optional>true</optional></dependency>` on io.zipkin.zipkin2:zipkin-collector-activemq — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [zipkin-server] `<dependency><optional>true</optional></dependency>` on io.zipkin.zipkin2:zipkin-collector-kafka — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [zipkin-server] `<dependency><optional>true</optional></dependency>` on io.zipkin.zipkin2:zipkin-collector-rabbitmq — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [zipkin-server] `<dependency><optional>true</optional></dependency>` on io.zipkin.zipkin2:zipkin-collector-scribe — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [zipkin-server] `<dependency><optional>true</optional></dependency>` on io.zipkin.zipkin2:zipkin-collector-pulsar — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [zipkin-server] `<dependency><optional>true</optional></dependency>` on io.zipkin.brave:brave — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [zipkin-server] `<dependency><optional>true</optional></dependency>` on io.zipkin.brave:brave-context-slf4j — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [zipkin-server] `<dependency><optional>true</optional></dependency>` on io.zipkin.reporter2:zipkin-reporter-brave — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [zipkin-server] `<exclusions>` on com.squareup.okhttp3:okhttp — exclusion support lands in a later slice; exclusions were dropped.
+- [zipkin-server] `<exclusions>` on org.springframework.boot:spring-boot-test-autoconfigure — exclusion support lands in a later slice; exclusions were dropped.
+- [zipkin-server] `<exclusions>` on org.springframework.boot:spring-boot-test — exclusion support lands in a later slice; exclusions were dropped.
+- [zipkin-server] `<exclusions>` on org.springframework:spring-web — exclusion support lands in a later slice; exclusions were dropped.
+- [zipkin-server] `<dependency><optional>true</optional></dependency>` on com.linecorp.armeria:armeria-spring-boot3-actuator-autoconfigure — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [zipkin-server] versions for io.micrometer:micrometer-registry-prometheus, io.micrometer:micrometer-registry-prometheus-simpleclient, io.micrometer:micrometer-core, org.apache.logging.log4j:log4j-core, io.zipkin.brave:brave, io.zipkin.brave:brave-context-slf4j, org.apache.logging.log4j:log4j-jul, org.apache.logging.log4j:log4j-1.2-api managed by a BOM imported by this POM.
+- [zipkin-server] dependencies io.zipkin.zipkin2:zipkin, io.zipkin.zipkin2:zipkin-collector, io.zipkin.zipkin2:zipkin-storage-cassandra, io.zipkin.zipkin2:zipkin-storage-elasticsearch, io.zipkin.zipkin2:zipkin-storage-mysql-v1, io.zipkin.zipkin2:zipkin-collector-activemq, io.zipkin.zipkin2:zipkin-collector-kafka, io.zipkin.zipkin2:zipkin-collector-rabbitmq, io.zipkin.zipkin2:zipkin-collector-scribe, io.zipkin.zipkin2:zipkin-collector-pulsar, io.zipkin.zipkin2:zipkin-tests, com.linecorp.armeria:armeria-spring-boot3-actuator-autoconfigure, io.zipkin:zipkin-lens inherited from a parent.
+- [zipkin-server] dependencies org.junit.jupiter:junit-jupiter, org.junit.jupiter:junit-jupiter-engine, org.junit.platform:junit-platform-launcher, org.assertj:assertj-core, org.mockito:mockito-junit-jupiter inherited from workspace parent io.zipkin:zipkin-parent:3.6.2-SNAPSHOT.
+- [zipkin-server] Maven profile `actuator` (activation property=!skipActuator, a command-line switch jk has no equivalent for): active on this machine and folded into the import: 1 dependency.
+- [zipkin-server] Maven profile `include-lens` (activation property=!skipLens, a command-line switch jk has no equivalent for): active on this machine and folded into the import: 1 dependency.
+

@@ -1,0 +1,34 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/keycloak && jk --no-progress --no-ansi --no-notify import pom.xml --report /home/bsant/src/oss/jk-examples/corpus/maven-top20/results/keycloak/import-report.md)   # 02:10:50
+
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/keycloak/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/keycloak/boms/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/keycloak/common/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/keycloak/core/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/keycloak/crypto/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/keycloak/dependencies/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/keycloak/server-spi/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/keycloak/server-spi-private/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/keycloak/saml-core-api/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/keycloak/saml-core/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/keycloak/federation/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/keycloak/services/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/keycloak/themes/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/keycloak/misc/db-compatibility-verifier/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/keycloak/misc/theme-verifier/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/keycloak/model/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/keycloak/util/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/keycloak/rest/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/keycloak/integration/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/keycloak/authz/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/keycloak/js/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/keycloak/test-framework/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/keycloak/tests/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/keycloak/quarkus/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/keycloak/scim/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/keycloak/ssf/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/keycloak/authzen/jk.toml
+jk: + Import > Wrote /home/bsant/src/oss/jk-examples/corpus/maven-top20/results/keycloak/import-report.md
+Import notes: 138 issue(s)
+
+# -> ok exit=0 wall=6.9s

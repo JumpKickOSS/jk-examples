@@ -1,0 +1,11 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/analysis-ik && jk --no-progress --no-ansi --no-notify import pom.xml --report /home/bsant/src/oss/jk-examples/corpus/maven-top20/results/analysis-ik/import-report.md)   # 02:15:31
+
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/analysis-ik/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/analysis-ik/core/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/analysis-ik/elasticsearch/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/analysis-ik/opensearch/jk.toml
+jk: + Import > Wrote /home/bsant/src/oss/jk-examples/corpus/maven-top20/results/analysis-ik/import-report.md
+Import notes: 10 issue(s)
+
+# -> ok exit=0 wall=0.4s

@@ -1,0 +1,8 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/cryptomator && jk --no-progress --no-ansi --no-notify import pom.xml --report /home/bsant/src/oss/jk-examples/corpus/maven-top20/results/cryptomator/import-report.md)   # 02:15:54
+
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/cryptomator/jk.toml
+jk: + Import > Wrote /home/bsant/src/oss/jk-examples/corpus/maven-top20/results/cryptomator/import-report.md
+Import notes: 16 issue(s)
+
+# -> ok exit=0 wall=0.2s

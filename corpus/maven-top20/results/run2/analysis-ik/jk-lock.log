@@ -1,0 +1,18 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/analysis-ik && jk --no-progress --no-ansi --no-notify lock)   # 02:15:31
+
+‼ Cannot resolve dependencies:
+  │ Org.elasticsearch:elasticsearch 9.4.0 depends on org.apache.lucene:lucene-core [10.4.0,+∞)
+  │ The project depends on org.apache.lucene:lucene-core 10.2.2
+  │ Therefore, org.elasticsearch:elasticsearch 9.4.0 and the project cannot be resolved
+  │ The project depends on org.elasticsearch:elasticsearch 9.4.0
+  │ Therefore, the project's requirements cannot be resolved
+
+Suggestions:
+  • Relax or remove the project constraint on org.apache.lucene:lucene-core
+  • Relax or remove the project constraint on org.elasticsearch:elasticsearch
+
+
+jk: ! Lock > Failed to lock dependencies
+
+# -> fail exit=6 wall=0.3s

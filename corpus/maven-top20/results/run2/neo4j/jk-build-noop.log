@@ -1,0 +1,6 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/neo4j && jk --no-progress --no-ansi --no-notify build --skip-tests)   # 02:18:21
+
+jk: + Build > Build successful, all modules up to date - took 155ms
+
+# -> ok exit=0 wall=0.2s

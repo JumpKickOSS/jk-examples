@@ -1,0 +1,7 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/dataease && jk --no-progress --no-ansi --no-notify lock)   # 02:13:09
+
++ [12] org.bouncycastle:bcprov-jdk15to18:1.84
+jk: + Lock > Workspace lock successful. Resolved 12 dependencies - took 830ms
+
+# -> ok exit=0 wall=0.9s

@@ -1,0 +1,6 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/tutorials && jk --no-progress --no-ansi --no-notify build --skip-tests)   # 02:10:47
+
+jk: + Build > Build successful. Built target/lib/parent-modules-1.0.0-SNAPSHOT.jar - took 304ms
+
+# -> ok exit=0 wall=0.4s

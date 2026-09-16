@@ -1,0 +1,18 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/nacos && jk --no-progress --no-ansi --no-notify lock)   # 02:11:06
+
+‼ Cannot resolve dependencies:
+  │ Ch.qos.logback:logback-classic 1.5.32 depends on org.slf4j:slf4j-api [2.0.17,+∞)
+  │ The project depends on org.slf4j:slf4j-api 2.0.13
+  │ Therefore, ch.qos.logback:logback-classic 1.5.32 and the project cannot be resolved
+  │ The project depends on ch.qos.logback:logback-classic 1.5.32
+  │ Therefore, the project's requirements cannot be resolved
+
+Suggestions:
+  • Relax or remove the project constraint on org.slf4j:slf4j-api
+  • Relax or remove the project constraint on ch.qos.logback:logback-classic
+
+
+jk: ! Lock > Failed to lock dependencies
+
+# -> fail exit=6 wall=0.8s

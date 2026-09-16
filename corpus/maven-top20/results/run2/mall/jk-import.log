@@ -1,0 +1,15 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/mall && jk --no-progress --no-ansi --no-notify import pom.xml --report /home/bsant/src/oss/jk-examples/corpus/maven-top20/results/mall/import-report.md)   # 02:07:27
+
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/mall/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/mall/mall-common/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/mall/mall-mbg/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/mall/mall-security/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/mall/mall-demo/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/mall/mall-admin/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/mall/mall-search/jk.toml
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/mall/mall-portal/jk.toml
+jk: + Import > Wrote /home/bsant/src/oss/jk-examples/corpus/maven-top20/results/mall/import-report.md
+Import notes: 58 issue(s)
+
+# -> ok exit=0 wall=61.6s

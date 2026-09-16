@@ -1,0 +1,140 @@
+# jk import report
+
+Source: `/home/bsant/src/scratch/maven-corpus/thingsboard/pom.xml`
+
+## Tier 3 — not imported
+
+These constructs have no jk equivalent and were skipped or stubbed.
+
+- `<build><extensions>` is not supported. Move build extensions to a custom jk task once tasks land.
+- [netty-mqtt] `<build><extensions>` is not supported. Move build extensions to a custom jk task once tasks land.
+- [common] `<build><extensions>` is not supported. Move build extensions to a custom jk task once tasks land.
+- [rule-engine] `<build><extensions>` is not supported. Move build extensions to a custom jk task once tasks land.
+- [dao] `<build><extensions>` is not supported. Move build extensions to a custom jk task once tasks land.
+- [edqs] `<build><extensions>` is not supported. Move build extensions to a custom jk task once tasks land.
+- [transport] `<build><extensions>` is not supported. Move build extensions to a custom jk task once tasks land.
+- [ui-ngx] `<build><extensions>` is not supported. Move build extensions to a custom jk task once tasks land.
+- [tools] `<build><extensions>` is not supported. Move build extensions to a custom jk task once tasks land.
+- [application] `<build><extensions>` is not supported. Move build extensions to a custom jk task once tasks land.
+- [msa] `<build><extensions>` is not supported. Move build extensions to a custom jk task once tasks land.
+- [rest-client] `<build><extensions>` is not supported. Move build extensions to a custom jk task once tasks land.
+- [monitoring] `<build><extensions>` is not supported. Move build extensions to a custom jk task once tasks land.
+
+## Tier 2 — imported with best-effort
+
+These were mapped but you should review the result.
+
+- `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>maven-clean-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [netty-mqtt] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [netty-mqtt] `<dependency><optional>true</optional></dependency>` on com.google.code.findbugs:jsr305 — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [netty-mqtt] `<exclusions>` on org.springframework.boot:spring-boot-starter-test — exclusion support lands in a later slice; exclusions were dropped.
+- [netty-mqtt] `<exclusions>` on org.testcontainers:testcontainers — exclusion support lands in a later slice; exclusions were dropped.
+- [netty-mqtt] `<exclusions>` on org.testcontainers:junit-jupiter — exclusion support lands in a later slice; exclusions were dropped.
+- [netty-mqtt] `<dependencyManagement>` in workspace parent org.thingsboard:thingsboard:4.4.0-SNAPSHOT pins 173 versions no declared dependency uses (org.apache.tomcat.embed:tomcat-embed-core, org.apache.tomcat.embed:tomcat-embed-el, org.apache.tomcat.embed:tomcat-embed-websocket, org.apache.httpcomponents.core5:httpcore5, org.apache.httpcomponents.core5:httpcore5-h2, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [netty-mqtt] versions for org.thingsboard.common:util, com.google.guava:guava, ch.qos.logback:logback-core, ch.qos.logback:logback-classic, org.springframework.boot:spring-boot-starter-test, org.testcontainers:testcontainers, org.testcontainers:junit-jupiter, software.xdev:testcontainers-junit4-mock managed by workspace parent org.thingsboard:thingsboard:4.4.0-SNAPSHOT.
+- [netty-mqtt] versions for io.netty:netty-codec-mqtt, io.netty:netty-handler, org.slf4j:slf4j-api, org.slf4j:log4j-over-slf4j, jakarta.annotation:jakarta.annotation-api, org.awaitility:awaitility, org.testcontainers:hivemq managed by a BOM imported by workspace parent org.thingsboard:thingsboard:4.4.0-SNAPSHOT.
+- [netty-mqtt] dependencies org.projectlombok:lombok inherited from workspace parent org.thingsboard:thingsboard:4.4.0-SNAPSHOT.
+- [common] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [common] `<dependencyManagement>` in workspace parent org.thingsboard:thingsboard:4.4.0-SNAPSHOT pins 181 versions no declared dependency uses (org.apache.tomcat.embed:tomcat-embed-core, org.apache.tomcat.embed:tomcat-embed-el, org.apache.tomcat.embed:tomcat-embed-websocket, org.apache.httpcomponents.core5:httpcore5, org.apache.httpcomponents.core5:httpcore5-h2, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [common] dependencies org.projectlombok:lombok inherited from workspace parent org.thingsboard:thingsboard:4.4.0-SNAPSHOT.
+- [common] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [rule-engine] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [rule-engine] `<dependencyManagement>` in workspace parent org.thingsboard:thingsboard:4.4.0-SNAPSHOT pins 181 versions no declared dependency uses (org.apache.tomcat.embed:tomcat-embed-core, org.apache.tomcat.embed:tomcat-embed-el, org.apache.tomcat.embed:tomcat-embed-websocket, org.apache.httpcomponents.core5:httpcore5, org.apache.httpcomponents.core5:httpcore5-h2, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [rule-engine] dependencies org.projectlombok:lombok inherited from workspace parent org.thingsboard:thingsboard:4.4.0-SNAPSHOT.
+- [rule-engine] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [dao] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [dao] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [dao] `<exclusions>` on org.springframework.boot:spring-boot-starter-test — exclusion support lands in a later slice; exclusions were dropped.
+- [dao] `<classifier>linux-x86_64</classifier>` on io.netty:netty-transport-native-epoll — classifier support lands in a later slice; the coord was emitted without it.
+- [dao] `<exclusions>` on io.takari.junit:takari-cpsuite — exclusion support lands in a later slice; exclusions were dropped.
+- [dao] `<exclusions>` on org.testcontainers:junit-jupiter — exclusion support lands in a later slice; exclusions were dropped.
+- [dao] `<exclusions>` on org.elasticsearch.client:elasticsearch-rest-client — exclusion support lands in a later slice; exclusions were dropped.
+- [dao] `<dependencyManagement>` in workspace parent org.thingsboard:thingsboard:4.4.0-SNAPSHOT pins 149 versions no declared dependency uses (org.apache.tomcat.embed:tomcat-embed-core, org.apache.tomcat.embed:tomcat-embed-el, org.apache.tomcat.embed:tomcat-embed-websocket, org.apache.httpcomponents.core5:httpcore5, org.apache.httpcomponents.core5:httpcore5-h2, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [dao] versions for org.thingsboard.common:data, org.thingsboard.common:cache, org.thingsboard.common:message, org.thingsboard.common:stats, org.thingsboard.common:dao-api, org.thingsboard.common:util, org.thingsboard.common:discovery-api, com.networknt:json-schema-validator, ch.qos.logback:logback-core, ch.qos.logback:logback-classic, org.postgresql:postgresql, org.bouncycastle:bcpkix-jdk18on, org.springframework.boot:spring-boot-starter-test, org.dbunit:dbunit, com.github.springtestdbunit:spring-test-dbunit, org.apache.commons:commons-lang3, org.apache.commons:commons-collections4, org.glassfish:jakarta.el, com.datastax.oss:java-driver-core, com.datastax.oss:java-driver-query-builder, io.dropwizard.metrics:metrics-jmx, io.takari.junit:takari-cpsuite, com.google.guava:guava, com.google.protobuf:protobuf-java, org.apache.curator:curator-x-discovery, org.bouncycastle:bcprov-jdk18on, org.testcontainers:junit-jupiter, org.eclipse.leshan:leshan-core, org.thingsboard.rule-engine:rule-engine-api, io.hypersistence:hypersistence-utils-hibernate-63, com.github.weisj:jsvg, com.drewnoakes:metadata-extractor managed by workspace parent org.thingsboard:thingsboard:4.4.0-SNAPSHOT.
+- [dao] versions for org.slf4j:slf4j-api, org.slf4j:log4j-over-slf4j, org.junit.vintage:junit-vintage-engine, org.awaitility:awaitility, com.fasterxml.jackson.core:jackson-databind, org.hibernate.validator:hibernate-validator, org.springframework:spring-context, org.springframework:spring-tx, org.springframework:spring-web, org.springframework.security:spring-security-oauth2-client, io.netty:netty-transport-native-epoll, com.github.ben-manes.caffeine:caffeine, org.springframework.boot:spring-boot-autoconfigure, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework:spring-test, org.testcontainers:cassandra, org.testcontainers:postgresql, org.testcontainers:jdbc, org.springframework:spring-context-support, org.elasticsearch.client:elasticsearch-rest-client, com.jayway.jsonpath:json-path managed by a BOM imported by workspace parent org.thingsboard:thingsboard:4.4.0-SNAPSHOT.
+- [dao] dependencies org.projectlombok:lombok inherited from workspace parent org.thingsboard:thingsboard:4.4.0-SNAPSHOT.
+- [edqs] `build-helper-maven-plugin` goal `attach-artifact` was not imported; only `add-source` and `add-test-source` map to source roots.
+- [edqs] `<resources>` with `<filtering>true</filtering>` on src/main/resources — jk has no resource filtering; `${...}` placeholders in those files are copied as written. Read the values at runtime or check the filled-in file in.
+- [edqs] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [edqs] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [edqs] `<plugin>maven-dependency-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [edqs] `<plugin>spring-boot-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [edqs] `<plugin>gradle-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [edqs] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [edqs] `<plugin>protobuf-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [edqs] `<plugin>maven-deploy-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [edqs] `<classifier>bin</classifier>` on com.sun.winsw:winsw — classifier support lands in a later slice; the coord was emitted without it.
+- [edqs] `<exclusions>` on org.springframework.boot:spring-boot-starter-test — exclusion support lands in a later slice; exclusions were dropped.
+- [edqs] `<dependencyManagement>` in workspace parent org.thingsboard:thingsboard:4.4.0-SNAPSHOT pins 172 versions no declared dependency uses (org.apache.tomcat.embed:tomcat-embed-core, org.apache.tomcat.embed:tomcat-embed-el, org.apache.tomcat.embed:tomcat-embed-websocket, org.apache.httpcomponents.core5:httpcore5, org.apache.httpcomponents.core5:httpcore5-h2, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [edqs] versions for org.thingsboard.common:edqs, ch.qos.logback:logback-core, ch.qos.logback:logback-classic, org.apache.curator:curator-recipes, com.google.protobuf:protobuf-java, io.grpc:grpc-protobuf, io.grpc:grpc-stub, com.sun.winsw:winsw, org.springframework.boot:spring-boot-starter-test managed by workspace parent org.thingsboard:thingsboard:4.4.0-SNAPSHOT.
+- [edqs] versions for org.slf4j:slf4j-api, org.slf4j:log4j-over-slf4j, org.junit.vintage:junit-vintage-engine, org.awaitility:awaitility, org.assertj:assertj-core managed by a BOM imported by workspace parent org.thingsboard:thingsboard:4.4.0-SNAPSHOT.
+- [edqs] dependencies org.projectlombok:lombok inherited from workspace parent org.thingsboard:thingsboard:4.4.0-SNAPSHOT.
+- [transport] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [transport] `<dependencyManagement>` in workspace parent org.thingsboard:thingsboard:4.4.0-SNAPSHOT pins 181 versions no declared dependency uses (org.apache.tomcat.embed:tomcat-embed-core, org.apache.tomcat.embed:tomcat-embed-el, org.apache.tomcat.embed:tomcat-embed-websocket, org.apache.httpcomponents.core5:httpcore5, org.apache.httpcomponents.core5:httpcore5-h2, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [transport] dependencies org.projectlombok:lombok inherited from workspace parent org.thingsboard:thingsboard:4.4.0-SNAPSHOT.
+- [transport] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [ui-ngx] `<resources>` directory target/generated-resources is outside `src/main/resources` — jk's layout reads `src/main/resources` only; move the files there.
+- [ui-ngx] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [ui-ngx] `<plugin>frontend-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [ui-ngx] `<plugin>maven-clean-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [ui-ngx] `<dependencyManagement>` in workspace parent org.thingsboard:thingsboard:4.4.0-SNAPSHOT pins 181 versions no declared dependency uses (org.apache.tomcat.embed:tomcat-embed-core, org.apache.tomcat.embed:tomcat-embed-el, org.apache.tomcat.embed:tomcat-embed-websocket, org.apache.httpcomponents.core5:httpcore5, org.apache.httpcomponents.core5:httpcore5-h2, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [ui-ngx] dependencies org.projectlombok:lombok inherited from workspace parent org.thingsboard:thingsboard:4.4.0-SNAPSHOT.
+- [ui-ngx] Maven profile `yarn-build` (activation activeByDefault): active on this machine and folded into the import: plugins=[frontend-maven-plugin].
+- [ui-ngx] Maven profile `yarn-start` (activation property=yarn-start, a command-line switch jk has no equivalent for): plugins=[frontend-maven-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [tools] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [tools] `<exclusions>` on org.apache.cassandra:cassandra-all — exclusion support lands in a later slice; exclusions were dropped.
+- [tools] `<dependencyManagement>` in workspace parent org.thingsboard:thingsboard:4.4.0-SNAPSHOT pins 176 versions no declared dependency uses (org.apache.tomcat.embed:tomcat-embed-core, org.apache.tomcat.embed:tomcat-embed-el, org.apache.tomcat.embed:tomcat-embed-websocket, org.apache.httpcomponents.core5:httpcore5, org.apache.httpcomponents.core5:httpcore5-h2, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [tools] versions for org.thingsboard.common:data, org.eclipse.paho:org.eclipse.paho.client.mqttv3, com.google.guava:guava, org.apache.cassandra:cassandra-all, commons-io:commons-io managed by workspace parent org.thingsboard:thingsboard:4.4.0-SNAPSHOT.
+- [tools] versions for org.springframework.boot:spring-boot-starter-web managed by a BOM imported by workspace parent org.thingsboard:thingsboard:4.4.0-SNAPSHOT.
+- [tools] dependencies org.projectlombok:lombok inherited from workspace parent org.thingsboard:thingsboard:4.4.0-SNAPSHOT.
+- [application] `build-helper-maven-plugin` goal `attach-artifact` was not imported; only `add-source` and `add-test-source` map to source roots.
+- [application] `<resources>` with `<filtering>true</filtering>` on src/main/resources — jk has no resource filtering; `${...}` placeholders in those files are copied as written. Read the values at runtime or check the filled-in file in.
+- [application] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [application] `<plugin>git-commit-id-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [application] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [application] `<plugin>maven-dependency-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [application] `<plugin>spring-boot-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [application] `<plugin>gradle-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [application] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [application] `<plugin>protobuf-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [application] `<classifier>linux-x86_64</classifier>` on io.netty:netty-transport-native-epoll — classifier support lands in a later slice; the coord was emitted without it.
+- [application] `<exclusions>` on io.takari.junit:takari-cpsuite — exclusion support lands in a later slice; exclusions were dropped.
+- [application] `<exclusions>` on com.twilio.sdk:twilio — exclusion support lands in a later slice; exclusions were dropped.
+- [application] `<exclusions>` on com.amazonaws:aws-java-sdk-sns — exclusion support lands in a later slice; exclusions were dropped.
+- [application] `<classifier>bin</classifier>` on com.sun.winsw:winsw — classifier support lands in a later slice; the coord was emitted without it.
+- [application] `<exclusions>` on org.springframework.boot:spring-boot-starter-test — exclusion support lands in a later slice; exclusions were dropped.
+- [application] `<exclusions>` on com.google.firebase:firebase-admin — exclusion support lands in a later slice; exclusions were dropped.
+- [application] `<dependencyManagement>` in workspace parent org.thingsboard:thingsboard:4.4.0-SNAPSHOT pins 125 versions no declared dependency uses (org.apache.tomcat.embed:tomcat-embed-core, org.apache.tomcat.embed:tomcat-embed-el, org.apache.tomcat.embed:tomcat-embed-websocket, org.apache.httpcomponents.core5:httpcore5, org.apache.httpcomponents.core5:httpcore5-h2, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [application] versions for io.netty:netty-transport-native-epoll, org.springframework.integration:spring-integration-redis, org.springframework.boot:spring-boot-starter-security, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-websocket, org.springframework.security:spring-security-oauth2-client, org.springframework.security:spring-security-oauth2-jose, org.springframework.boot:spring-boot-starter-freemarker, org.springframework:spring-context-support, org.slf4j:slf4j-api, org.slf4j:log4j-over-slf4j, jakarta.xml.bind:jakarta.xml.bind-api, io.netty:netty-all, io.netty:netty-tcnative-boringssl-static, org.springframework.security:spring-security-test, com.jayway.jsonpath:json-path, com.jayway.jsonpath:json-path-assert, org.junit.vintage:junit-vintage-engine, org.awaitility:awaitility, org.testcontainers:cassandra, org.testcontainers:postgresql, org.testcontainers:jdbc, org.thingsboard.langchain4j:langchain4j-open-ai, org.thingsboard.langchain4j:langchain4j-azure-open-ai, org.thingsboard.langchain4j:langchain4j-google-genai, org.thingsboard.langchain4j:langchain4j-mistral-ai, org.thingsboard.langchain4j:langchain4j-anthropic, org.thingsboard.langchain4j:langchain4j-bedrock, org.thingsboard.langchain4j:langchain4j-open-ai-official, org.thingsboard.langchain4j:langchain4j-ollama managed by a BOM imported by workspace parent org.thingsboard:thingsboard:4.4.0-SNAPSHOT.
+- [application] versions for org.thingsboard.common:actor, org.thingsboard.common:util, org.thingsboard.rule-engine:rule-engine-api, org.thingsboard.common:cluster-api, org.thingsboard.common:version-control, org.thingsboard.rule-engine:rule-engine-components, org.thingsboard.common.transport:transport-api, org.thingsboard.common.transport:mqtt, org.thingsboard.common.transport:http, org.thingsboard.common.transport:coap, org.thingsboard.common.transport:lwm2m, org.thingsboard.common.transport:snmp, org.thingsboard:dao, org.thingsboard.common:queue, org.thingsboard.common.script:script-api, org.thingsboard.common.script:remote-js-client, org.thingsboard.common:stats, org.thingsboard.common:edge-api, org.thingsboard.common:edqs, org.thingsboard.common:discovery-api, org.thingsboard:dao, io.takari.junit:takari-cpsuite, org.eclipse.paho:org.eclipse.paho.client.mqttv3, org.eclipse.paho:org.eclipse.paho.mqttv5.client, io.jsonwebtoken:jjwt, commons-io:commons-io, org.apache.commons:commons-csv, ch.qos.logback:logback-core, ch.qos.logback:logback-classic, com.sun.mail:jakarta.mail, javax.xml.bind:jaxb-api, com.twilio.sdk:twilio, com.amazonaws:aws-java-sdk-sns, org.apache.curator:curator-recipes, com.google.protobuf:protobuf-java, io.grpc:grpc-netty-shaded, io.grpc:grpc-protobuf, io.grpc:grpc-stub, org.opensmpp:opensmpp-core, org.thingsboard:springdoc-openapi-starter-webmvc-ui, com.sun.winsw:winsw, org.thingsboard:tools, org.thingsboard:rest-client, org.thingsboard.client:thingsboard-ce-client, org.springframework.boot:spring-boot-starter-test, org.dbunit:dbunit, com.github.springtestdbunit:spring-test-dbunit, org.javadelight:delight-nashorn-sandbox, org.passay:passay, com.github.ua-parser:uap-java, org.java-websocket:Java-WebSocket, org.jboss.aerogear:aerogear-otp-java, com.slack.api:slack-api-client, com.google.oauth-client:google-oauth-client, com.google.firebase:firebase-admin, org.rocksdb:rocksdbjni managed by workspace parent org.thingsboard:thingsboard:4.4.0-SNAPSHOT.
+- [application] dependencies org.projectlombok:lombok inherited from workspace parent org.thingsboard:thingsboard:4.4.0-SNAPSHOT.
+- [application] Maven profile `openapi-spec`: plugins=[build-helper-maven-plugin,spring-boot-maven-plugin,springdoc-openapi-maven-plugin,maven-enforcer-plugin,maven-surefire-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [msa] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [msa] `<dependencyManagement>` in workspace parent org.thingsboard:thingsboard:4.4.0-SNAPSHOT pins 181 versions no declared dependency uses (org.apache.tomcat.embed:tomcat-embed-core, org.apache.tomcat.embed:tomcat-embed-el, org.apache.tomcat.embed:tomcat-embed-websocket, org.apache.httpcomponents.core5:httpcore5, org.apache.httpcomponents.core5:httpcore5-h2, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [msa] dependencies org.projectlombok:lombok inherited from workspace parent org.thingsboard:thingsboard:4.4.0-SNAPSHOT.
+- [msa] Maven profile `skip-deb` (activation property=pkg.skip.deb, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [msa] Maven profile `skip-pkg` (activation property=pkg.skip, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [msa] Maven profile `black-box-tests` (activation property=blackBoxTests.skip, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [msa] Maven profile `push-docker-amd-arm-images` (activation property=push-docker-amd-arm-images, a command-line switch jk has no equivalent for): plugins=[exec-maven-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [msa] Maven profile `push-lts-docker-amd-arm-images` (activation property=push-lts-docker-amd-arm-images, a command-line switch jk has no equivalent for): plugins=[exec-maven-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [msa] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [rest-client] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [rest-client] `<plugin>maven-deploy-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [rest-client] `<dependencyManagement>` in workspace parent org.thingsboard:thingsboard:4.4.0-SNAPSHOT pins 177 versions no declared dependency uses (org.apache.tomcat.embed:tomcat-embed-core, org.apache.tomcat.embed:tomcat-embed-el, org.apache.tomcat.embed:tomcat-embed-websocket, org.apache.httpcomponents.core5:httpcore5-h2, ch.qos.logback:logback-core, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [rest-client] versions for org.thingsboard.common:data, org.thingsboard.common:util, com.auth0:java-jwt, org.apache.httpcomponents.core5:httpcore5 managed by workspace parent org.thingsboard:thingsboard:4.4.0-SNAPSHOT.
+- [rest-client] versions for org.springframework:spring-web managed by a BOM imported by workspace parent org.thingsboard:thingsboard:4.4.0-SNAPSHOT.
+- [rest-client] dependencies org.projectlombok:lombok inherited from workspace parent org.thingsboard:thingsboard:4.4.0-SNAPSHOT.
+- [monitoring] `build-helper-maven-plugin` goal `attach-artifact` was not imported; only `add-source` and `add-test-source` map to source roots.
+- [monitoring] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [monitoring] `<plugin>maven-dependency-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [monitoring] `<plugin>spring-boot-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [monitoring] `<plugin>gradle-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [monitoring] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [monitoring] `<exclusions>` on org.apache.httpcomponents:httpclient — exclusion support lands in a later slice; exclusions were dropped.
+- [monitoring] `<exclusions>` on org.springframework.boot:spring-boot-starter-test — exclusion support lands in a later slice; exclusions were dropped.
+- [monitoring] `<dependencyManagement>` in workspace parent org.thingsboard:thingsboard:4.4.0-SNAPSHOT pins 165 versions no declared dependency uses (org.apache.tomcat.embed:tomcat-embed-core, org.apache.tomcat.embed:tomcat-embed-el, org.apache.tomcat.embed:tomcat-embed-websocket, org.apache.httpcomponents.core5:httpcore5, org.apache.httpcomponents.core5:httpcore5-h2, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [monitoring] versions for org.thingsboard.common:data, org.thingsboard.common:util, org.thingsboard:rest-client, org.eclipse.paho:org.eclipse.paho.client.mqttv3, org.apache.httpcomponents:httpclient, com.slack.api:slack-api-client, org.java-websocket:Java-WebSocket, com.google.guava:guava, org.apache.commons:commons-lang3, ch.qos.logback:logback-core, ch.qos.logback:logback-classic, org.springframework.boot:spring-boot-starter-test managed by workspace parent org.thingsboard:thingsboard:4.4.0-SNAPSHOT.
+- [monitoring] versions for org.springframework.boot:spring-boot-starter, org.slf4j:slf4j-api, org.slf4j:log4j-over-slf4j managed by a BOM imported by workspace parent org.thingsboard:thingsboard:4.4.0-SNAPSHOT.
+- [monitoring] dependencies org.projectlombok:lombok inherited from workspace parent org.thingsboard:thingsboard:4.4.0-SNAPSHOT.
+

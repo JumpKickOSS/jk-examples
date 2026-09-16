@@ -1,0 +1,6 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/TheAlgorithms-Java && jk --no-progress --no-ansi --no-notify build --skip-tests)   # 02:18:01
+
+jk: + Build > Build successful, project up to date - took 73ms
+
+# -> ok exit=0 wall=0.1s

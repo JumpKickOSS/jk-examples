@@ -1,0 +1,190 @@
+# jk import report
+
+Source: `/home/bsant/src/scratch/maven-corpus/apollo/pom.xml`
+
+## Tier 2 — imported with best-effort
+
+These were mapped but you should review the result.
+
+- `<resources>` with `<filtering>true</filtering>` on src/main/resources — jk has no resource filtering; `${...}` placeholders in those files are copied as written. Read the values at runtime or check the filled-in file in.
+- `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>maven-war-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>maven-install-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>maven-deploy-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>findbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>git-commit-id-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>flatten-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-build-sql-converter] `<resources>` with `<filtering>true</filtering>` on src/main/resources — jk has no resource filtering; `${...}` placeholders in those files are copied as written. Read the values at runtime or check the filled-in file in.
+- [apollo-build-sql-converter] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-build-sql-converter] `<plugin>maven-war-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-build-sql-converter] `<plugin>maven-install-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-build-sql-converter] `<plugin>maven-deploy-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-build-sql-converter] `<plugin>findbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-build-sql-converter] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-build-sql-converter] `<plugin>git-commit-id-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-build-sql-converter] `<plugin>flatten-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-build-sql-converter] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-build-sql-converter] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-build-sql-converter] `<exclusions>` on org.springframework.boot:spring-boot-starter-test — exclusion support lands in a later slice; exclusions were dropped.
+- [apollo-build-sql-converter] `<exclusions>` on org.junit.vintage:junit-vintage-engine — exclusion support lands in a later slice; exclusions were dropped.
+- [apollo-build-sql-converter] `<dependencyManagement>` inherited from parent com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT is carried as `[platform]` com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [apollo-build-sql-converter] versions for org.freemarker:freemarker, com.h2database:h2, org.springframework.boot:spring-boot-starter-jdbc managed by a BOM imported by parent com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT.
+- [apollo-build-sql-converter] dependencies org.springframework.boot:spring-boot-starter-test, org.awaitility:awaitility, org.junit.vintage:junit-vintage-engine inherited from parent com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT.
+- [apollo-build-sql-converter] Maven profile `sql-converter`: plugins=[exec-maven-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [apollo-buildtools] `<resources>` with `<filtering>true</filtering>` on src/main/resources — jk has no resource filtering; `${...}` placeholders in those files are copied as written. Read the values at runtime or check the filled-in file in.
+- [apollo-buildtools] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-buildtools] `<plugin>maven-war-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-buildtools] `<plugin>maven-install-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-buildtools] `<plugin>maven-deploy-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-buildtools] `<plugin>findbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-buildtools] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-buildtools] `<plugin>git-commit-id-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-buildtools] `<plugin>flatten-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-buildtools] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-buildtools] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-buildtools] `<exclusions>` on org.springframework.boot:spring-boot-starter-test — exclusion support lands in a later slice; exclusions were dropped.
+- [apollo-buildtools] `<exclusions>` on org.junit.vintage:junit-vintage-engine — exclusion support lands in a later slice; exclusions were dropped.
+- [apollo-buildtools] `<dependencyManagement>` inherited from parent com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT is carried as `[platform]` com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [apollo-buildtools] dependencies org.springframework.boot:spring-boot-starter-test, org.awaitility:awaitility, org.junit.vintage:junit-vintage-engine inherited from parent com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT.
+- [apollo-common] `<resources>` with `<filtering>true</filtering>` on src/main/resources — jk has no resource filtering; `${...}` placeholders in those files are copied as written. Read the values at runtime or check the filled-in file in.
+- [apollo-common] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-common] `<plugin>maven-war-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-common] `<plugin>maven-install-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-common] `<plugin>maven-deploy-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-common] `<plugin>findbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-common] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-common] `<plugin>git-commit-id-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-common] `<plugin>flatten-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-common] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-common] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-common] `<exclusions>` on com.mysql:mysql-connector-j — exclusion support lands in a later slice; exclusions were dropped.
+- [apollo-common] `<exclusions>` on org.apache.httpcomponents:httpclient — exclusion support lands in a later slice; exclusions were dropped.
+- [apollo-common] `<exclusions>` on org.springframework.boot:spring-boot-starter-test — exclusion support lands in a later slice; exclusions were dropped.
+- [apollo-common] `<exclusions>` on org.junit.vintage:junit-vintage-engine — exclusion support lands in a later slice; exclusions were dropped.
+- [apollo-common] `<dependencyManagement>` inherited from parent com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT is carried as `[platform]` com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [apollo-common] versions for com.ctrip.framework.apollo:apollo-core, com.ctrip.framework.apollo:apollo-audit-api, org.apache.httpcomponents:httpclient, org.apache.commons:commons-lang3 managed by parent com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT.
+- [apollo-common] versions for org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-validation, org.springframework.boot:spring-boot-starter-security, org.springframework.boot:spring-boot-starter-data-jpa, com.mysql:mysql-connector-j, org.postgresql:postgresql, com.h2database:h2, org.springframework.boot:spring-boot-h2console, org.springframework.data:spring-data-commons, org.codehaus.janino:janino, org.yaml:snakeyaml, io.micrometer:micrometer-core, io.micrometer:micrometer-registry-prometheus managed by a BOM imported by parent com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT.
+- [apollo-common] dependencies org.springframework.boot:spring-boot-starter-test, org.awaitility:awaitility, org.junit.vintage:junit-vintage-engine inherited from parent com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT.
+- [apollo-biz] `<resources>` with `<filtering>true</filtering>` on src/main/resources — jk has no resource filtering; `${...}` placeholders in those files are copied as written. Read the values at runtime or check the filled-in file in.
+- [apollo-biz] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-biz] `<plugin>maven-war-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-biz] `<plugin>maven-install-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-biz] `<plugin>maven-deploy-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-biz] `<plugin>findbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-biz] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-biz] `<plugin>git-commit-id-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-biz] `<plugin>flatten-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-biz] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-biz] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-biz] `<exclusions>` on org.springframework.boot:spring-boot-starter-test — exclusion support lands in a later slice; exclusions were dropped.
+- [apollo-biz] `<exclusions>` on org.junit.vintage:junit-vintage-engine — exclusion support lands in a later slice; exclusions were dropped.
+- [apollo-biz] `<dependencyManagement>` inherited from parent com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT is carried as `[platform]` com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [apollo-biz] versions for com.ctrip.framework.apollo:apollo-common, com.ctrip.framework.apollo:apollo-audit-api, com.ctrip.framework.apollo:apollo-audit-spring-boot-starter managed by parent com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT.
+- [apollo-biz] versions for org.springframework.cloud:spring-cloud-starter-netflix-eureka-client, org.springframework.cloud:spring-cloud-starter-consul-discovery, org.springframework.cloud:spring-cloud-starter-zookeeper-discovery managed by a BOM imported by parent com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT.
+- [apollo-biz] dependencies org.springframework.boot:spring-boot-starter-test, org.awaitility:awaitility, org.junit.vintage:junit-vintage-engine inherited from parent com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT.
+- [apollo-configservice] `<resources>` with `<filtering>true</filtering>` on src/main/resources — jk has no resource filtering; `${...}` placeholders in those files are copied as written. Read the values at runtime or check the filled-in file in.
+- [apollo-configservice] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-configservice] `<plugin>maven-war-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-configservice] `<plugin>maven-install-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-configservice] `<plugin>maven-deploy-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-configservice] `<plugin>findbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-configservice] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-configservice] `<plugin>git-commit-id-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-configservice] `<plugin>flatten-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-configservice] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-configservice] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-configservice] `<plugin>spring-boot-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-configservice] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-configservice] `<plugin>docker-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-configservice] `<exclusions>` on org.springframework.cloud:spring-cloud-starter-netflix-eureka-server — exclusion support lands in a later slice; exclusions were dropped.
+- [apollo-configservice] `<exclusions>` on org.springframework.boot:spring-boot-starter-test — exclusion support lands in a later slice; exclusions were dropped.
+- [apollo-configservice] `<exclusions>` on org.junit.vintage:junit-vintage-engine — exclusion support lands in a later slice; exclusions were dropped.
+- [apollo-configservice] `<dependencyManagement>` inherited from parent com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT is carried as `[platform]` com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [apollo-configservice] versions for com.ctrip.framework.apollo:apollo-biz, com.sun.jersey.contribs:jersey-apache-client4, org.javassist:javassist managed by parent com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT.
+- [apollo-configservice] versions for org.springframework.cloud:spring-cloud-starter-netflix-eureka-server, jakarta.xml.bind:jakarta.xml.bind-api, org.glassfish.jaxb:jaxb-runtime, jakarta.activation:jakarta.activation-api managed by a BOM imported by parent com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT.
+- [apollo-configservice] dependencies org.springframework.boot:spring-boot-starter-test, org.awaitility:awaitility, org.junit.vintage:junit-vintage-engine inherited from parent com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT.
+- [apollo-configservice] `<dependency>` com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [apollo-configservice] Maven profile `nacos-discovery`: 1 dependency → `[features.nacos-discovery]` (optional deps spring-cloud-starter-alibaba-nacos-discovery; not in `default`, activate with `--features nacos-discovery`).
+- [apollo-adminservice] `<resources>` with `<filtering>true</filtering>` on src/main/resources — jk has no resource filtering; `${...}` placeholders in those files are copied as written. Read the values at runtime or check the filled-in file in.
+- [apollo-adminservice] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-adminservice] `<plugin>maven-war-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-adminservice] `<plugin>maven-install-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-adminservice] `<plugin>maven-deploy-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-adminservice] `<plugin>findbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-adminservice] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-adminservice] `<plugin>git-commit-id-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-adminservice] `<plugin>flatten-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-adminservice] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-adminservice] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-adminservice] `<plugin>spring-boot-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-adminservice] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-adminservice] `<plugin>docker-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-adminservice] `<exclusions>` on org.springframework.cloud:spring-cloud-starter-netflix-eureka-server — exclusion support lands in a later slice; exclusions were dropped.
+- [apollo-adminservice] `<exclusions>` on org.springframework.boot:spring-boot-starter-test — exclusion support lands in a later slice; exclusions were dropped.
+- [apollo-adminservice] `<exclusions>` on org.junit.vintage:junit-vintage-engine — exclusion support lands in a later slice; exclusions were dropped.
+- [apollo-adminservice] `<dependencyManagement>` inherited from parent com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT is carried as `[platform]` com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [apollo-adminservice] versions for com.ctrip.framework.apollo:apollo-biz, com.ctrip.framework.apollo:apollo-audit-spring-boot-starter, com.sun.jersey.contribs:jersey-apache-client4, org.javassist:javassist managed by parent com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT.
+- [apollo-adminservice] versions for org.springframework.cloud:spring-cloud-starter-netflix-eureka-server, jakarta.xml.bind:jakarta.xml.bind-api, org.glassfish.jaxb:jaxb-runtime, jakarta.activation:jakarta.activation-api managed by a BOM imported by parent com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT.
+- [apollo-adminservice] dependencies org.springframework.boot:spring-boot-starter-test, org.awaitility:awaitility, org.junit.vintage:junit-vintage-engine inherited from parent com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT.
+- [apollo-adminservice] `<dependency>` com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [apollo-adminservice] Maven profile `nacos-discovery`: 1 dependency → `[features.nacos-discovery]` (optional deps spring-cloud-starter-alibaba-nacos-discovery; not in `default`, activate with `--features nacos-discovery`).
+- [apollo-portal] `<resources>` with `<filtering>true</filtering>` on src/main/resources — jk has no resource filtering; `${...}` placeholders in those files are copied as written. Read the values at runtime or check the filled-in file in.
+- [apollo-portal] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-portal] `<plugin>maven-war-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-portal] `<plugin>maven-install-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-portal] `<plugin>maven-deploy-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-portal] `<plugin>findbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-portal] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-portal] `<plugin>git-commit-id-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-portal] `<plugin>flatten-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-portal] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-portal] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-portal] `<plugin>spring-boot-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-portal] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-portal] `<plugin>docker-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-portal] `<plugin>replacer</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-portal] `<plugin>openapi-generator-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-portal] `<dependency><optional>true</optional></dependency>` on org.springframework.boot:spring-boot-configuration-processor — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [apollo-portal] `<exclusions>` on org.springframework.boot:spring-boot-starter-test — exclusion support lands in a later slice; exclusions were dropped.
+- [apollo-portal] `<exclusions>` on org.junit.vintage:junit-vintage-engine — exclusion support lands in a later slice; exclusions were dropped.
+- [apollo-portal] `<dependencyManagement>` inherited from parent com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT is carried as `[platform]` com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [apollo-portal] versions for org.springframework.security:spring-security-ldap, org.springframework.boot:spring-boot-starter-oauth2-client, org.springframework.boot:spring-boot-starter-oauth2-resource-server, org.springframework.boot:spring-boot-jackson2, org.springframework.session:spring-session-core, org.springframework.session:spring-session-data-redis, org.springframework.session:spring-session-jdbc, org.springframework.boot:spring-boot-configuration-processor, org.yaml:snakeyaml, jakarta.xml.bind:jakarta.xml.bind-api, org.glassfish.jaxb:jaxb-runtime, jakarta.activation:jakarta.activation-api, org.apache.httpcomponents.client5:httpclient5, org.springframework.boot:spring-boot-starter-webmvc-test, org.springframework.boot:spring-boot-starter-security-test, org.eclipse.jetty:jetty-server managed by a BOM imported by parent com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT.
+- [apollo-portal] versions for com.ctrip.framework.apollo:apollo-common, com.ctrip.framework.apollo:apollo-openapi, org.openapitools:jackson-databind-nullable, io.swagger.core.v3:swagger-annotations, io.swagger.core.v3:swagger-models, com.ctrip.framework.apollo:apollo-audit-spring-boot-starter, com.sun.mail:jakarta.mail, org.javassist:javassist managed by parent com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT.
+- [apollo-portal] dependencies org.springframework.boot:spring-boot-starter-test, org.awaitility:awaitility, org.junit.vintage:junit-vintage-engine inherited from parent com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT.
+- [apollo-assembly] `<resources>` with `<filtering>true</filtering>` on src/main/resources — jk has no resource filtering; `${...}` placeholders in those files are copied as written. Read the values at runtime or check the filled-in file in.
+- [apollo-assembly] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-assembly] `<plugin>maven-war-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-assembly] `<plugin>maven-install-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-assembly] `<plugin>maven-deploy-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-assembly] `<plugin>findbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-assembly] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-assembly] `<plugin>git-commit-id-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-assembly] `<plugin>flatten-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-assembly] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-assembly] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-assembly] `<plugin>spring-boot-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-assembly] `<exclusions>` on org.springframework.boot:spring-boot-starter-test — exclusion support lands in a later slice; exclusions were dropped.
+- [apollo-assembly] `<exclusions>` on org.junit.vintage:junit-vintage-engine — exclusion support lands in a later slice; exclusions were dropped.
+- [apollo-assembly] `<dependencyManagement>` inherited from parent com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT is carried as `[platform]` com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [apollo-assembly] versions for com.ctrip.framework.apollo:apollo-configservice, com.ctrip.framework.apollo:apollo-adminservice, com.ctrip.framework.apollo:apollo-portal managed by parent com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT.
+- [apollo-assembly] dependencies org.springframework.boot:spring-boot-starter-test, org.awaitility:awaitility, org.junit.vintage:junit-vintage-engine inherited from parent com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT.
+- [apollo-audit] `<resources>` with `<filtering>true</filtering>` on src/main/resources — jk has no resource filtering; `${...}` placeholders in those files are copied as written. Read the values at runtime or check the filled-in file in.
+- [apollo-audit] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-audit] `<plugin>maven-war-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-audit] `<plugin>maven-install-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-audit] `<plugin>maven-deploy-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-audit] `<plugin>findbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-audit] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-audit] `<plugin>git-commit-id-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-audit] `<plugin>flatten-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-audit] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-audit] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [apollo-audit] `<exclusions>` on org.springframework.boot:spring-boot-starter-test — exclusion support lands in a later slice; exclusions were dropped.
+- [apollo-audit] `<exclusions>` on org.junit.vintage:junit-vintage-engine — exclusion support lands in a later slice; exclusions were dropped.
+- [apollo-audit] `<dependencyManagement>` inherited from parent com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT is carried as `[platform]` com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [apollo-audit] dependencies org.springframework.boot:spring-boot-starter-test, org.awaitility:awaitility, org.junit.vintage:junit-vintage-engine inherited from parent com.ctrip.framework.apollo:apollo:3.0.0-SNAPSHOT.
+- [apollo-audit] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+

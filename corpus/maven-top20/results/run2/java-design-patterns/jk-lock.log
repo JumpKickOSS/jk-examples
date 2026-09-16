@@ -1,0 +1,18 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/java-design-patterns && jk --no-progress --no-ansi --no-notify lock)   # 02:07:23
+
+‼ Cannot resolve dependencies:
+  │ Com.fasterxml.jackson.core:jackson-databind 2.22.1 depends on com.fasterxml.jackson.core:jackson-core [2.22.1,+∞)
+  │ The project depends on com.fasterxml.jackson.core:jackson-databind 2.22.1
+  │ Therefore, not com.fasterxml.jackson.core:jackson-core [2.22.1,+∞) and the project cannot be resolved
+  │ The project depends on com.fasterxml.jackson.core:jackson-core 2.21.4
+  │ Therefore, the project's requirements cannot be resolved
+
+Suggestions:
+  • Relax or remove the project constraint on com.fasterxml.jackson.core:jackson-databind
+  • Relax or remove the project constraint on com.fasterxml.jackson.core:jackson-core
+
+
+jk: ! Lock > Failed to lock dependencies
+
+# -> fail exit=6 wall=4.2s

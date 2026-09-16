@@ -1,0 +1,7 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/TheAlgorithms-Java && jk --no-progress --no-ansi --no-notify lock)   # 02:17:59
+
++ [17] org.jspecify:jspecify:1.0.0
+jk: + Lock > Lock successful. Resolved 17 dependencies - took 99ms
+
+# -> ok exit=0 wall=0.1s

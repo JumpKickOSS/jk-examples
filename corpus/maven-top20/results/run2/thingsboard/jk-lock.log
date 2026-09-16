@@ -1,0 +1,10 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/thingsboard && jk --no-progress --no-ansi --no-notify lock)   # 02:15:29
+
+[Resolve Deps] Failure
+ | POM not found in any declared repo: org.thingsboard.langchain4j:langchain4j-bom:1.16.1-TB1
+ +--
+
+jk: ! Lock > Failed to lock dependencies
+
+# -> fail exit=6 wall=1.4s

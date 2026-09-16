@@ -1,0 +1,7 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/tutorials && jk --no-progress --no-ansi --no-notify lock)   # 02:10:47
+
++ [24] org.hamcrest:hamcrest:2.2
+jk: + Lock > Lock successful. Resolved 24 dependencies - took 135ms
+
+# -> ok exit=0 wall=0.2s

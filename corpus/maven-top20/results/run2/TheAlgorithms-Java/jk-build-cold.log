@@ -1,0 +1,6 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/TheAlgorithms-Java && jk --no-progress --no-ansi --no-notify build --skip-tests)   # 02:17:59
+
+jk: + Build > Build successful. Built target/lib/Java-1.0-SNAPSHOT.jar - took 2.4s
+
+# -> ok exit=0 wall=2.5s

@@ -1,0 +1,1333 @@
+# jk import report
+
+Source: `/home/bsant/src/scratch/maven-corpus/java-design-patterns/pom.xml`
+
+## Tier 2 — imported with best-effort
+
+These were mapped but you should review the result.
+
+- `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [abstract-document] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [abstract-document] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [abstract-document] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [abstract-document] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [abstract-document] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [abstract-document] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [abstract-document] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [abstract-factory] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [abstract-factory] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [abstract-factory] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [abstract-factory] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [abstract-factory] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [abstract-factory] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [abstract-factory] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [active-object] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [active-object] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [active-object] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [active-object] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [active-object] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [active-object] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [active-object] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [acyclic-visitor] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [acyclic-visitor] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [acyclic-visitor] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [acyclic-visitor] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [acyclic-visitor] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [acyclic-visitor] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [acyclic-visitor] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [adapter] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [adapter] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [adapter] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [adapter] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [adapter] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [adapter] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [adapter] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [ambassador] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [ambassador] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [ambassador] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [ambassador] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [ambassador] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [ambassador] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [ambassador] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [anti-corruption-layer] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [anti-corruption-layer] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [anti-corruption-layer] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [anti-corruption-layer] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [anti-corruption-layer] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, commons-dbcp:commons-dbcp, org.htmlunit:htmlunit, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [anti-corruption-layer] versions for org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-test, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [anti-corruption-layer] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [arrange-act-assert] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [arrange-act-assert] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [arrange-act-assert] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [arrange-act-assert] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 19 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [arrange-act-assert] versions for org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [arrange-act-assert] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [async-method-invocation] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [async-method-invocation] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [async-method-invocation] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [async-method-invocation] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [async-method-invocation] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [async-method-invocation] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [async-method-invocation] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [backends-for-frontends] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [backends-for-frontends] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [backends-for-frontends] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [backends-for-frontends] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 18 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [backends-for-frontends] versions for org.junit.jupiter:junit-jupiter-engine, org.slf4j:slf4j-api managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [backends-for-frontends] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [balking] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [balking] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [balking] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [balking] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [balking] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [balking] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [balking] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [bloc] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bloc] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bloc] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bloc] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bloc] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 19 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [bloc] versions for org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [bloc] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [bridge] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bridge] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bridge] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bridge] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bridge] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [bridge] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [bridge] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [builder] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [builder] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [builder] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [builder] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [builder] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [builder] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [builder] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [business-delegate] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [business-delegate] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [business-delegate] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [business-delegate] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [business-delegate] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [business-delegate] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [business-delegate] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [bytecode] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bytecode] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bytecode] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bytecode] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bytecode] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [bytecode] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [bytecode] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [caching] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [caching] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [caching] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [caching] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [caching] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [caching] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 14 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [caching] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core, org.mongodb:bson, org.mongodb:mongodb-driver-legacy managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [caching] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [callback] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [callback] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [callback] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [callback] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [callback] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [callback] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [callback] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [chain-of-responsibility] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [chain-of-responsibility] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [chain-of-responsibility] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [chain-of-responsibility] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [chain-of-responsibility] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [chain-of-responsibility] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [chain-of-responsibility] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [circuit-breaker] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [circuit-breaker] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [circuit-breaker] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [circuit-breaker] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [circuit-breaker] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [circuit-breaker] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [circuit-breaker] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [clean-architecture] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [clean-architecture] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [clean-architecture] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [clean-architecture] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [clean-architecture] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [clean-architecture] versions for org.junit.jupiter:junit-jupiter-engine, org.slf4j:slf4j-api, ch.qos.logback:logback-classic managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [clean-architecture] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [client-session] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [client-session] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [client-session] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [client-session] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [client-session] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [client-session] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [client-session] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [collecting-parameter] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [collecting-parameter] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [collecting-parameter] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [collecting-parameter] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [collecting-parameter] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 19 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [collecting-parameter] versions for org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [collecting-parameter] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [collection-pipeline] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [collection-pipeline] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [collection-pipeline] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [collection-pipeline] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [collection-pipeline] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [collection-pipeline] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [collection-pipeline] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [combinator] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [combinator] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [combinator] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [combinator] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [combinator] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [combinator] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [combinator] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [command] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [command] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [command] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [command] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [command] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [command] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [command] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [command-query-responsibility-segregation] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [command-query-responsibility-segregation] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [command-query-responsibility-segregation] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [command-query-responsibility-segregation] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [command-query-responsibility-segregation] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [command-query-responsibility-segregation] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, com.h2database:h2 managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [command-query-responsibility-segregation] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [commander] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [commander] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [commander] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [commander] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 18 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [commander] versions for org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [commander] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [component] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [component] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [component] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [component] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [component] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [component] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [component] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [composite] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [composite] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [composite] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [composite] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [composite] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [composite] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [composite] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [composite-entity] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [composite-entity] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [composite-entity] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [composite-entity] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [composite-entity] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [composite-entity] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [composite-entity] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [composite-view] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [composite-view] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [composite-view] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [composite-view] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [composite-view] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [composite-view] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [composite-view] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [context-object] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [context-object] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [context-object] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [context-object] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [context-object] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [context-object] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [context-object] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [converter] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [converter] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [converter] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [converter] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [converter] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [converter] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [converter] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [curiously-recurring-template-pattern] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [curiously-recurring-template-pattern] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [curiously-recurring-template-pattern] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [curiously-recurring-template-pattern] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [curiously-recurring-template-pattern] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [curiously-recurring-template-pattern] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [curiously-recurring-template-pattern] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [currying] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [currying] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [currying] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [currying] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [currying] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [currying] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [currying] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [dao-factory] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [dao-factory] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [dao-factory] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [dao-factory] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 13 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [dao-factory] versions for com.h2database:h2, org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.mongodb:mongodb-driver-legacy, com.google.code.gson:gson, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [dao-factory] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [data-access-object] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [data-access-object] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [data-access-object] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [data-access-object] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [data-access-object] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 15 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [data-access-object] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, com.h2database:h2, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [data-access-object] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [data-bus] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [data-bus] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [data-bus] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [data-bus] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [data-bus] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [data-bus] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [data-bus] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [data-locality] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [data-locality] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [data-locality] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [data-locality] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [data-locality] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [data-locality] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [data-locality] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [data-mapper] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [data-mapper] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [data-mapper] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [data-mapper] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [data-mapper] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [data-mapper] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [data-mapper] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [data-transfer-object] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [data-transfer-object] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [data-transfer-object] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [data-transfer-object] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [data-transfer-object] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [data-transfer-object] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [data-transfer-object] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [decorator] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [decorator] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [decorator] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [decorator] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [decorator] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [decorator] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [decorator] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [delegation] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [delegation] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [delegation] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [delegation] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [delegation] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [delegation] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [delegation] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [dependency-injection] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [dependency-injection] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [dependency-injection] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [dependency-injection] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [dependency-injection] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [dependency-injection] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, com.google.inject:guice managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [dependency-injection] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [dirty-flag] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [dirty-flag] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [dirty-flag] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [dirty-flag] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [dirty-flag] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [dirty-flag] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [dirty-flag] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [domain-model] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [domain-model] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [domain-model] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [domain-model] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [domain-model] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 15 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [domain-model] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, com.h2database:h2, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [domain-model] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [double-buffer] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [double-buffer] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [double-buffer] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [double-buffer] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [double-buffer] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [double-buffer] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [double-buffer] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [double-checked-locking] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [double-checked-locking] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [double-checked-locking] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [double-checked-locking] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [double-checked-locking] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [double-checked-locking] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [double-checked-locking] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [double-dispatch] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [double-dispatch] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [double-dispatch] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [double-dispatch] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [double-dispatch] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [double-dispatch] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [double-dispatch] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [dynamic-proxy] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [dynamic-proxy] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [dynamic-proxy] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [dynamic-proxy] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [dynamic-proxy] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [dynamic-proxy] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [dynamic-proxy] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [event-aggregator] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [event-aggregator] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [event-aggregator] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [event-aggregator] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [event-aggregator] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [event-aggregator] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [event-aggregator] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [event-based-asynchronous] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [event-based-asynchronous] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [event-based-asynchronous] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [event-based-asynchronous] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [event-based-asynchronous] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [event-based-asynchronous] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [event-based-asynchronous] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [event-driven-architecture] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [event-driven-architecture] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [event-driven-architecture] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [event-driven-architecture] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [event-driven-architecture] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [event-driven-architecture] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [event-driven-architecture] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [event-queue] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [event-queue] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [event-queue] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [event-queue] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [event-queue] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [event-queue] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [event-queue] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [event-sourcing] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [event-sourcing] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [event-sourcing] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [event-sourcing] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [event-sourcing] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [event-sourcing] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [event-sourcing] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [execute-around] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [execute-around] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [execute-around] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [execute-around] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [execute-around] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [execute-around] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.junit.jupiter:junit-jupiter-migrationsupport managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [execute-around] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [extension-objects] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [extension-objects] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [extension-objects] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [extension-objects] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [extension-objects] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [extension-objects] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [extension-objects] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [facade] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [facade] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [facade] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [facade] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [facade] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [facade] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [facade] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [factory] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [factory] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [factory] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [factory] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [factory] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [factory] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [factory] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [factory-kit] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [factory-kit] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [factory-kit] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [factory-kit] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [factory-kit] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [factory-kit] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [factory-kit] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [factory-method] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [factory-method] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [factory-method] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [factory-method] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [factory-method] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [factory-method] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [factory-method] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [fanout-fanin] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [fanout-fanin] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [fanout-fanin] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [fanout-fanin] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [fanout-fanin] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [fanout-fanin] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [fanout-fanin] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [feature-toggle] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [feature-toggle] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [feature-toggle] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [feature-toggle] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [feature-toggle] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [feature-toggle] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [feature-toggle] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [filterer] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [filterer] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [filterer] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [filterer] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [filterer] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [filterer] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [filterer] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [fluent-interface] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [fluent-interface] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [fluent-interface] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [fluent-interface] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [fluent-interface] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [fluent-interface] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [fluent-interface] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [flux] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [flux] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [flux] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [flux] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [flux] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [flux] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [flux] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [flyweight] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [flyweight] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [flyweight] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [flyweight] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [flyweight] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [flyweight] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [flyweight] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [fork-join] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [fork-join] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [fork-join] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [fork-join] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [fork-join] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 19 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [fork-join] versions for org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [fork-join] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [front-controller] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [front-controller] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [front-controller] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [front-controller] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [front-controller] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 15 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [front-controller] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.junit.jupiter:junit-jupiter-params, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [front-controller] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [function-composition] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [function-composition] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [function-composition] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [function-composition] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [function-composition] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [function-composition] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [function-composition] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [game-loop] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [game-loop] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [game-loop] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [game-loop] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [game-loop] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [game-loop] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [game-loop] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [gateway] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [gateway] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [gateway] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [gateway] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [gateway] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [gateway] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [gateway] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [guarded-suspension] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [guarded-suspension] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [guarded-suspension] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [guarded-suspension] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [guarded-suspension] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [guarded-suspension] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [guarded-suspension] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [half-sync-half-async] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [half-sync-half-async] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [half-sync-half-async] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [half-sync-half-async] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [half-sync-half-async] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [half-sync-half-async] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [half-sync-half-async] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [health-check] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [health-check] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [health-check] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [health-check] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [health-check] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 14 versions no declared dependency uses (commons-dbcp:commons-dbcp, org.htmlunit:htmlunit, com.google.code.gson:gson, com.google.inject:guice, com.github.stefanbirkner:system-lambda, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [health-check] versions for org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-test, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, com.h2database:h2 managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [health-check] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [hexagonal-architecture] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [hexagonal-architecture] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [hexagonal-architecture] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [hexagonal-architecture] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [hexagonal-architecture] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 14 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [hexagonal-architecture] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, com.google.inject:guice, org.mongodb:bson, org.mongodb:mongodb-driver-legacy managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [hexagonal-architecture] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [identity-map] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [identity-map] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [identity-map] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [identity-map] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [identity-map] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [identity-map] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [identity-map] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [immutable] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [immutable] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [immutable] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [immutable] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [immutable] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [immutable] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [immutable] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [intercepting-filter] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [intercepting-filter] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [intercepting-filter] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [intercepting-filter] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [intercepting-filter] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [intercepting-filter] versions for org.junit.jupiter:junit-jupiter-engine, org.junit.jupiter:junit-jupiter-params, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [intercepting-filter] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [interpreter] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [interpreter] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [interpreter] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [interpreter] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [interpreter] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [interpreter] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.junit.jupiter:junit-jupiter-params managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [interpreter] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [iterator] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [iterator] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [iterator] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [iterator] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [iterator] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [iterator] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.junit.jupiter:junit-jupiter-params managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [iterator] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [layered-architecture] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [layered-architecture] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [layered-architecture] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [layered-architecture] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [layered-architecture] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, commons-dbcp:commons-dbcp, org.htmlunit:htmlunit, com.google.code.gson:gson, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [layered-architecture] versions for org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-data-jpa, com.h2database:h2, org.springframework.boot:spring-boot-starter-test managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [layered-architecture] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [lazy-loading] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [lazy-loading] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [lazy-loading] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [lazy-loading] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [lazy-loading] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [lazy-loading] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [lazy-loading] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [leader-election] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [leader-election] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [leader-election] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [leader-election] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [leader-election] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [leader-election] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [leader-election] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [leader-followers] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [leader-followers] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [leader-followers] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [leader-followers] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [leader-followers] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [leader-followers] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [leader-followers] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [lockable-object] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [lockable-object] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [lockable-object] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [lockable-object] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [lockable-object] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [lockable-object] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [lockable-object] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [map-reduce] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [map-reduce] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [map-reduce] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [map-reduce] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [map-reduce] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 19 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [map-reduce] versions for org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [map-reduce] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [marker-interface] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [marker-interface] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [marker-interface] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [marker-interface] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [marker-interface] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [marker-interface] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [marker-interface] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [master-worker] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [master-worker] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [master-worker] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [master-worker] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [master-worker] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [master-worker] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [master-worker] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [mediator] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [mediator] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [mediator] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [mediator] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [mediator] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 15 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [mediator] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.junit.jupiter:junit-jupiter-params, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [mediator] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [memento] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [memento] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [memento] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [memento] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [memento] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [memento] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [memento] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [metadata-mapping] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [metadata-mapping] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [metadata-mapping] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [metadata-mapping] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [metadata-mapping] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [metadata-mapping] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, com.h2database:h2 managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [metadata-mapping] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [microservices-aggregrator] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [microservices-aggregrator] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [microservices-aggregrator] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [microservices-aggregrator] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 20 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [microservices-aggregrator] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [microservices-aggregrator] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [microservices-api-gateway] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [microservices-api-gateway] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [microservices-api-gateway] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [microservices-api-gateway] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 20 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [microservices-api-gateway] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [microservices-api-gateway] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [microservices-client-side-ui-composition] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [microservices-client-side-ui-composition] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [microservices-client-side-ui-composition] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [microservices-client-side-ui-composition] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [microservices-client-side-ui-composition] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [microservices-client-side-ui-composition] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [microservices-distributed-tracing] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [microservices-distributed-tracing] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [microservices-distributed-tracing] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [microservices-distributed-tracing] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, commons-dbcp:commons-dbcp, org.htmlunit:htmlunit, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [microservices-distributed-tracing] versions for org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [microservices-distributed-tracing] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [microservices-distributed-tracing] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [microservices-idempotent-consumer] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [microservices-idempotent-consumer] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [microservices-idempotent-consumer] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [microservices-idempotent-consumer] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [microservices-idempotent-consumer] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 15 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, commons-dbcp:commons-dbcp, org.htmlunit:htmlunit, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [microservices-idempotent-consumer] versions for org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core, com.h2database:h2 managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [microservices-idempotent-consumer] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [microservices-log-aggregation] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [microservices-log-aggregation] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [microservices-log-aggregation] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [microservices-log-aggregation] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [microservices-log-aggregation] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [microservices-log-aggregation] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [microservices-log-aggregation] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [microservices-self-registration] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [microservices-self-registration] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [microservices-self-registration] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [microservices-self-registration] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 20 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [microservices-self-registration] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [microservices-self-registration] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [microservices-messaging] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [microservices-messaging] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [microservices-messaging] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [microservices-messaging] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [microservices-messaging] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [microservices-messaging] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [model-view-controller] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [model-view-controller] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [model-view-controller] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [model-view-controller] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [model-view-controller] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [model-view-controller] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [model-view-controller] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [model-view-intent] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [model-view-intent] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [model-view-intent] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [model-view-intent] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [model-view-intent] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [model-view-intent] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [model-view-intent] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [model-view-presenter] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [model-view-presenter] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [model-view-presenter] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [model-view-presenter] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [model-view-presenter] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [model-view-presenter] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [model-view-presenter] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [model-view-viewmodel] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [model-view-viewmodel] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [model-view-viewmodel] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [model-view-viewmodel] `<plugin>jetty-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [model-view-viewmodel] `<plugin>maven-war-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [model-view-viewmodel] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [model-view-viewmodel] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 19 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [model-view-viewmodel] versions for org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [model-view-viewmodel] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [monad] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [monad] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [monad] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [monad] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [monad] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [monad] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [monad] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [money] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [money] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [money] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [money] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [money] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 19 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [money] versions for org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [money] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [monitor] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [monitor] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [monitor] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [monitor] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [monitor] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [monitor] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [monitor] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [monolithic-architecture] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [monolithic-architecture] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [monolithic-architecture] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [monolithic-architecture] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [monolithic-architecture] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 15 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-test, commons-dbcp:commons-dbcp, org.htmlunit:htmlunit, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [monolithic-architecture] versions for org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-data-jpa, com.h2database:h2, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [monolithic-architecture] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [monostate] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [monostate] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [monostate] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [monostate] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [monostate] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [monostate] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [monostate] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [multiton] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [multiton] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [multiton] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [multiton] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [multiton] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [multiton] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.junit.jupiter:junit-jupiter-params managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [multiton] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [mute-idiom] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [mute-idiom] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [mute-idiom] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [mute-idiom] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [mute-idiom] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [mute-idiom] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [mute-idiom] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [notification] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [notification] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [notification] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [notification] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [notification] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-params managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [notification] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [null-object] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [null-object] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [null-object] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [null-object] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [null-object] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [null-object] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [null-object] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [object-mother] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [object-mother] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [object-mother] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [object-mother] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 18 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [object-mother] versions for org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [object-mother] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [object-pool] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [object-pool] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [object-pool] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [object-pool] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [object-pool] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [object-pool] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [object-pool] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [observer] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [observer] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [observer] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [observer] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [observer] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 15 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [observer] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.junit.jupiter:junit-jupiter-params, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [observer] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [optimistic-offline-lock] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [optimistic-offline-lock] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [optimistic-offline-lock] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [optimistic-offline-lock] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 18 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [optimistic-offline-lock] versions for org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [optimistic-offline-lock] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [page-controller] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [page-controller] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [page-controller] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [page-controller] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [page-controller] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, commons-dbcp:commons-dbcp, org.htmlunit:htmlunit, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [page-controller] versions for org.springframework.boot:spring-boot-starter-web, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core, org.springframework.boot:spring-boot-starter-test managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [page-controller] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [page-object] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [page-object] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [page-object] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [page-object] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [page-object] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 19 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [page-object] versions for org.htmlunit:htmlunit managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [page-object] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [page-object] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [parameter-object] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [parameter-object] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [parameter-object] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [parameter-object] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [parameter-object] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [parameter-object] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [parameter-object] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [partial-response] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [partial-response] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [partial-response] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [partial-response] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [partial-response] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [partial-response] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [partial-response] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [pipeline] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [pipeline] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [pipeline] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [pipeline] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [pipeline] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [pipeline] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [pipeline] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [poison-pill] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [poison-pill] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [poison-pill] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [poison-pill] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [poison-pill] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [poison-pill] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [poison-pill] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [polling-publisher] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [polling-publisher] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [polling-publisher] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [polling-publisher] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, commons-dbcp:commons-dbcp, org.htmlunit:htmlunit, com.google.code.gson:gson, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [polling-publisher] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [polling-publisher] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [presentation-model] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [presentation-model] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [presentation-model] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [presentation-model] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [presentation-model] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [presentation-model] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [presentation-model] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [private-class-data] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [private-class-data] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [private-class-data] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [private-class-data] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [private-class-data] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [private-class-data] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [private-class-data] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [producer-consumer] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [producer-consumer] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [producer-consumer] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [producer-consumer] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [producer-consumer] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [producer-consumer] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [producer-consumer] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [promise] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [promise] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [promise] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [promise] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [promise] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [promise] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [promise] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [property] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [property] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [property] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [property] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [property] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [property] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [property] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [prototype] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [prototype] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [prototype] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [prototype] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [prototype] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 15 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [prototype] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.junit.jupiter:junit-jupiter-params, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [prototype] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [proxy] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [proxy] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [proxy] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [proxy] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [proxy] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [proxy] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [proxy] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [publish-subscribe] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [publish-subscribe] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [publish-subscribe] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [publish-subscribe] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 18 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [publish-subscribe] versions for org.junit.jupiter:junit-jupiter-engine, ch.qos.logback:logback-classic managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [publish-subscribe] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [queue-based-load-leveling] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [queue-based-load-leveling] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [queue-based-load-leveling] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [queue-based-load-leveling] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [queue-based-load-leveling] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [queue-based-load-leveling] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [queue-based-load-leveling] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [reactor] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [reactor] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [reactor] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [reactor] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [reactor] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [reactor] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [reactor] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [registry] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [registry] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [registry] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [registry] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [registry] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [registry] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [registry] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [repository] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [repository] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [repository] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [repository] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [repository] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 15 versions no declared dependency uses (org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.htmlunit:htmlunit, com.google.code.gson:gson, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [repository] versions for org.springframework.boot:spring-boot-starter, commons-dbcp:commons-dbcp, com.h2database:h2, org.junit.jupiter:junit-jupiter-engine, org.springframework.boot:spring-boot-starter-test managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [repository] versions for org.hibernate:hibernate-core managed by a parent.
+- [repository] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [resource-acquisition-is-initialization] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [resource-acquisition-is-initialization] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [resource-acquisition-is-initialization] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [resource-acquisition-is-initialization] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [resource-acquisition-is-initialization] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [resource-acquisition-is-initialization] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [resource-acquisition-is-initialization] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [retry] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [retry] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [retry] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [retry] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [retry] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [retry] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [retry] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [role-object] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [role-object] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [role-object] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [role-object] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [role-object] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [role-object] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [role-object] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [rule-engine] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [rule-engine] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [rule-engine] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [rule-engine] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [rule-engine] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [rule-engine] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [rule-engine] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [saga] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [saga] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [saga] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [saga] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [saga] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [saga] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [saga] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [separated-interface] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [separated-interface] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [separated-interface] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [separated-interface] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [separated-interface] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 15 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [separated-interface] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.junit.jupiter:junit-jupiter-params, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [separated-interface] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [serialized-entity] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [serialized-entity] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [serialized-entity] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [serialized-entity] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [serialized-entity] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 15 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [serialized-entity] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core, com.h2database:h2 managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [serialized-entity] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [serialized-lob] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [serialized-lob] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [serialized-lob] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [serialized-lob] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [serialized-lob] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [serialized-lob] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, com.h2database:h2 managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [serialized-lob] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [servant] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [servant] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [servant] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [servant] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [servant] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [servant] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [servant] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [server-session] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [server-session] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [server-session] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [server-session] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [server-session] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [server-session] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [service-layer] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [service-layer] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [service-layer] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [service-layer] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [service-layer] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 15 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [service-layer] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, com.h2database:h2, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [service-layer] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [service-locator] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [service-locator] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [service-locator] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [service-locator] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [service-locator] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [service-locator] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [service-locator] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [service-stub] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [service-stub] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [service-stub] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [service-stub] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [service-stub] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [service-stub] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [service-to-worker] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [service-to-worker] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [service-to-worker] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [service-to-worker] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [service-to-worker] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 19 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [service-to-worker] versions for org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [service-to-worker] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [session-facade] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [session-facade] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [session-facade] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [session-facade] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [session-facade] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 15 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [session-facade] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.junit.jupiter:junit-jupiter-params, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [session-facade] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [sharding] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [sharding] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [sharding] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [sharding] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [sharding] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [sharding] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [sharding] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [single-table-inheritance] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [single-table-inheritance] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [single-table-inheritance] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [single-table-inheritance] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, commons-dbcp:commons-dbcp, org.htmlunit:htmlunit, com.google.code.gson:gson, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [single-table-inheritance] versions for org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-data-jpa, com.h2database:h2, org.springframework.boot:spring-boot-starter-test managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [single-table-inheritance] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [singleton] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [singleton] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [singleton] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [singleton] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [singleton] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [singleton] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [singleton] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [spatial-partition] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [spatial-partition] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [spatial-partition] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [spatial-partition] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [spatial-partition] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [spatial-partition] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [spatial-partition] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [special-case] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [special-case] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [special-case] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [special-case] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [special-case] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [special-case] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [special-case] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [specification] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [specification] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [specification] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [specification] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [specification] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 15 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [specification] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.junit.jupiter:junit-jupiter-params, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [specification] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [state] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [state] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [state] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [state] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [state] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [state] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [state] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [step-builder] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [step-builder] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [step-builder] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [step-builder] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [step-builder] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [step-builder] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [step-builder] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [strangler] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [strangler] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [strangler] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [strangler] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [strangler] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [strangler] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [strangler] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [strategy] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [strategy] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [strategy] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [strategy] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [strategy] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 15 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [strategy] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.junit.jupiter:junit-jupiter-params, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [strategy] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [subclass-sandbox] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [subclass-sandbox] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [subclass-sandbox] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [subclass-sandbox] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [subclass-sandbox] versions for com.github.stefanbirkner:system-lambda, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [subclass-sandbox] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [table-inheritance] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [table-inheritance] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [table-inheritance] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [table-inheritance] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 19 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [table-inheritance] versions for org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [table-inheritance] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [table-module] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [table-module] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [table-module] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [table-module] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [table-module] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 15 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [table-module] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, com.h2database:h2, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [table-module] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [template-method] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [template-method] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [template-method] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [template-method] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [template-method] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [template-method] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [template-method] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [templateview] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [templateview] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [templateview] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [templateview] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [templateview] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [templateview] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [templateview] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [thread-pool-executor] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [thread-pool-executor] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [thread-pool-executor] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [thread-pool-executor] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [thread-pool-executor] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [thread-pool-executor] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [thread-pool-executor] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [thread-specific-storage] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [thread-specific-storage] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [thread-specific-storage] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [thread-specific-storage] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [thread-specific-storage] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [thread-specific-storage] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [thread-specific-storage] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [throttling] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [throttling] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [throttling] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [throttling] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [throttling] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [throttling] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [throttling] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [tolerant-reader] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [tolerant-reader] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [tolerant-reader] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [tolerant-reader] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [tolerant-reader] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [tolerant-reader] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [tolerant-reader] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [trampoline] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [trampoline] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [trampoline] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [trampoline] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [trampoline] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [trampoline] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [trampoline] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [trampoline] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [transaction-script] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [transaction-script] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [transaction-script] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [transaction-script] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [transaction-script] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 15 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [transaction-script] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, com.h2database:h2, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [transaction-script] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [transactional-outbox] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [transactional-outbox] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [transactional-outbox] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [transactional-outbox] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [transactional-outbox] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 14 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-actuator, commons-dbcp:commons-dbcp, org.htmlunit:htmlunit, com.google.code.gson:gson, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [transactional-outbox] versions for org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-web, com.h2database:h2, org.springframework.boot:spring-boot-starter-test, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [twin] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [twin] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [twin] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [twin] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [twin] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [twin] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [twin] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [type-object] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [type-object] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [type-object] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [type-object] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [type-object] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 15 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [type-object] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, com.google.code.gson:gson, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [type-object] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [unit-of-work] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [unit-of-work] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [unit-of-work] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [unit-of-work] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [unit-of-work] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [unit-of-work] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [unit-of-work] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [update-method] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [update-method] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [update-method] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [update-method] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [update-method] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [update-method] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [update-method] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [value-object] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [value-object] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [value-object] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [value-object] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [value-object] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [value-object] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [value-object] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [version-number] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [version-number] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [version-number] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [version-number] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [version-number] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [version-number] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [version-number] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [view-helper] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [view-helper] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [view-helper] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [view-helper] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [view-helper] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [view-helper] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [view-helper] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [virtual-proxy] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [virtual-proxy] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [virtual-proxy] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [virtual-proxy] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [virtual-proxy] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [virtual-proxy] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [virtual-proxy] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [visitor] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [visitor] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [visitor] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [visitor] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [visitor] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [visitor] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [visitor] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [write-ahead-log] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [write-ahead-log] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [write-ahead-log] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [write-ahead-log] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [write-ahead-log] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 16 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [write-ahead-log] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine, org.mockito:mockito-core managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [backpressure] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [backpressure] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [backpressure] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [backpressure] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [backpressure] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 18 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [backpressure] versions for ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [backpressure] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [actor-model] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [actor-model] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [actor-model] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [actor-model] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [actor-model] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [actor-model] versions for org.junit.jupiter:junit-jupiter-api, org.junit.platform:junit-platform-launcher managed by a BOM imported by this POM.
+- [actor-model] versions for org.junit.jupiter:junit-jupiter-engine, org.slf4j:slf4j-api, ch.qos.logback:logback-classic managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [actor-model] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [rate-limiting-pattern] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [rate-limiting-pattern] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [rate-limiting-pattern] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [rate-limiting-pattern] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [rate-limiting-pattern] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [rate-limiting-pattern] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [fallback] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [fallback] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [fallback] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [fallback] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [fallback] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [fallback] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [fallback] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [onion-architecture] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [onion-architecture] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [onion-architecture] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [onion-architecture] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 20 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [onion-architecture] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [onion-architecture] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [microservices-bulkhead] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [microservices-bulkhead] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [microservices-bulkhead] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [microservices-bulkhead] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [microservices-bulkhead] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [microservices-bulkhead] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [microservices-bulkhead] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [microservices-load-shedding] `<plugin>license-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [microservices-load-shedding] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [microservices-load-shedding] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [microservices-load-shedding] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [microservices-load-shedding] `<dependencyManagement>` in workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT pins 17 versions no declared dependency uses (org.springframework.boot:spring-boot-starter, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-actuator, org.springframework.boot:spring-boot-starter-data-jpa, org.springframework.boot:spring-boot-starter-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [microservices-load-shedding] versions for org.slf4j:slf4j-api, ch.qos.logback:logback-classic, org.junit.jupiter:junit-jupiter-engine managed by workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+- [microservices-load-shedding] dependencies org.projectlombok:lombok inherited from workspace parent com.iluwatar:java-design-patterns:1.26.0-SNAPSHOT.
+

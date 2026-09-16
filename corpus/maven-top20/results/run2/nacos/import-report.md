@@ -1,0 +1,661 @@
+# jk import report
+
+Source: `/home/bsant/src/scratch/maven-corpus/nacos/pom.xml`
+
+## Tier 3 — not imported
+
+These constructs have no jk equivalent and were skipped or stubbed.
+
+- [istio] `<build><extensions>` is not supported. Move build extensions to a custom jk task once tasks land.
+- [consistency] `<build><extensions>` is not supported. Move build extensions to a custom jk task once tasks land.
+
+## Tier 2 — imported with best-effort
+
+These were mapped but you should review the result.
+
+- `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>dependency-mediator-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>clirr-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>maven-checkstyle-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>spotbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>sonar-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>easyj-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>central-publishing-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [config] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [config] `<plugin>dependency-mediator-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [config] `<plugin>clirr-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [config] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [config] `<plugin>maven-checkstyle-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [config] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [config] `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [config] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [config] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [config] `<plugin>spotbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [config] `<plugin>sonar-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [config] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [config] `<plugin>easyj-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [config] `<plugin>central-publishing-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [config] `<dependencyManagement>` inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT is carried as `[platform]` com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [config] `<dependencyManagement>` in a parent pins 24 versions no declared dependency uses (com.alibaba.nacos:nacos-config, com.alibaba.nacos:nacos-lock, com.alibaba.nacos:nacos-naming, com.alibaba.nacos:nacos-client, com.alibaba.nacos:nacos-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [config] versions for org.springframework.boot:spring-boot-starter-web, com.alibaba.nacos:nacos-encryption-plugin, org.apache.httpcomponents.client5:httpclient5, org.springframework.boot:spring-boot-starter-tomcat, com.fasterxml.jackson.core:jackson-core, com.fasterxml.jackson.core:jackson-databind, io.micrometer:micrometer-registry-prometheus, io.micrometer:micrometer-registry-influx, io.micrometer:micrometer-registry-elastic, org.springframework.boot:spring-boot-starter-aspectj, org.springframework.boot:spring-boot-test-autoconfigure, org.springframework:spring-test, org.hamcrest:hamcrest, org.springframework.boot:spring-boot-starter-webmvc-test managed by a BOM imported by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [config] versions for com.alibaba.nacos:nacos-persistence, commons-io:commons-io, ch.qos.logback:logback-classic, com.alibaba.nacos:nacos-config-plugin, org.yaml:snakeyaml, com.alibaba.nacos:nacos-datasource-plugin, com.mysql:mysql-connector-j, org.apache.derby:derby managed by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [config] dependencies com.alibaba.nacos:nacos-api, com.alibaba.nacos:nacos-core inherited from a parent.
+- [config] dependencies org.junit.jupiter:junit-jupiter, org.mockito:mockito-core, org.mockito:mockito-inline, org.mockito:mockito-junit-jupiter inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [config] `<dependency>` com.alibaba.nacos:nacos-core has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [config] Maven profile `springboot`: 1 dependency → `[features.springboot]` (optional deps nacos-core; not in `default`, activate with `--features springboot`).
+- [config] Maven profile `springboot`: plugins=[spring-boot-maven-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [core] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [core] `<plugin>dependency-mediator-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [core] `<plugin>clirr-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [core] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [core] `<plugin>maven-checkstyle-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [core] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [core] `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [core] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [core] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [core] `<plugin>spotbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [core] `<plugin>sonar-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [core] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [core] `<plugin>easyj-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [core] `<plugin>central-publishing-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [core] `<dependency><optional>true</optional></dependency>` on org.springframework.boot:spring-boot-starter-webmvc — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [core] `<dependency><optional>true</optional></dependency>` on org.springframework.boot:spring-boot-configuration-processor — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [core] `<exclusions>` on com.alipay.sofa:jraft-core — exclusion support lands in a later slice; exclusions were dropped.
+- [core] `<exclusions>` on com.alipay.sofa:rpc-grpc-impl — exclusion support lands in a later slice; exclusions were dropped.
+- [core] `<exclusions>` on com.asarkar.grpc:grpc-test — exclusion support lands in a later slice; exclusions were dropped.
+- [core] `<dependencyManagement>` inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT is carried as `[platform]` com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [core] `<dependencyManagement>` in a parent pins 21 versions no declared dependency uses (com.alibaba.nacos:nacos-config, com.alibaba.nacos:nacos-core, com.alibaba.nacos:nacos-lock, com.alibaba.nacos:nacos-naming, com.alibaba.nacos:nacos-api, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [core] versions for com.alibaba.nacos:nacos-persistence, com.alibaba.nacos:nacos-trace-plugin, io.grpc:grpc-testing, com.alipay.sofa:jraft-core, com.alipay.sofa:rpc-grpc-impl, commons-collections:commons-collections managed by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [core] versions for com.alibaba.nacos:nacos-visibility-plugin, org.springframework.boot:spring-boot-starter-webmvc, org.springframework.boot:spring-boot-starter-aspectj, org.springframework.boot:spring-boot-configuration-processor, org.springframework.boot:spring-boot-starter-security, org.springframework.boot:spring-boot-starter-actuator, org.springframework.security:spring-security-test, org.springframework:spring-test, org.springframework.boot:spring-boot-test-autoconfigure, org.springframework.boot:spring-boot-test, org.apache.tomcat.embed:tomcat-embed-core, org.apache.httpcomponents.client5:httpclient5, io.micrometer:micrometer-registry-prometheus, io.micrometer:micrometer-registry-influx, io.micrometer:micrometer-registry-elastic, org.springframework:spring-webmvc, org.springframework.boot:spring-boot-starter-webmvc-test managed by a BOM imported by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [core] dependencies com.alibaba.nacos:nacos-common, com.alibaba.nacos:nacos-consistency, com.alibaba.nacos:nacos-auth inherited from a parent.
+- [core] dependencies org.junit.jupiter:junit-jupiter, org.mockito:mockito-core, org.mockito:mockito-inline, org.mockito:mockito-junit-jupiter inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [naming] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [naming] `<plugin>dependency-mediator-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [naming] `<plugin>clirr-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [naming] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [naming] `<plugin>maven-checkstyle-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [naming] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [naming] `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [naming] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [naming] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [naming] `<plugin>spotbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [naming] `<plugin>sonar-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [naming] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [naming] `<plugin>easyj-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [naming] `<plugin>central-publishing-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [naming] `<dependencyManagement>` inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT is carried as `[platform]` com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [naming] `<dependencyManagement>` in a parent pins 25 versions no declared dependency uses (com.alibaba.nacos:nacos-config, com.alibaba.nacos:nacos-lock, com.alibaba.nacos:nacos-naming, com.alibaba.nacos:nacos-client, com.alibaba.nacos:nacos-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [naming] versions for org.springframework.boot:spring-boot, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-test, org.apache.httpcomponents.core5:httpcore5, org.apache.httpcomponents.client5:httpclient5, org.slf4j:log4j-over-slf4j, org.slf4j:jcl-over-slf4j, org.slf4j:jul-to-slf4j, io.micrometer:micrometer-registry-prometheus, io.micrometer:micrometer-registry-elastic, io.micrometer:micrometer-registry-influx managed by a BOM imported by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [naming] versions for commons-collections:commons-collections, org.slf4j:slf4j-api, ch.qos.logback:logback-classic, ch.qos.logback:logback-core, com.mysql:mysql-connector-j managed by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [naming] dependencies com.alibaba.nacos:nacos-core, com.alibaba.nacos:nacos-api, com.alibaba.nacos:nacos-cmdb inherited from a parent.
+- [naming] dependencies org.junit.jupiter:junit-jupiter, org.mockito:mockito-core, org.mockito:mockito-inline, org.mockito:mockito-junit-jupiter inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [address] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [address] `<plugin>dependency-mediator-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [address] `<plugin>clirr-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [address] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [address] `<plugin>maven-checkstyle-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [address] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [address] `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [address] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [address] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [address] `<plugin>spotbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [address] `<plugin>sonar-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [address] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [address] `<plugin>easyj-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [address] `<plugin>central-publishing-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [address] `<exclusions>` on com.alibaba.nacos:nacos-naming — exclusion support lands in a later slice; exclusions were dropped.
+- [address] `<dependencyManagement>` inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT is carried as `[platform]` com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [address] `<dependencyManagement>` in a parent pins 27 versions no declared dependency uses (com.alibaba.nacos:nacos-config, com.alibaba.nacos:nacos-core, com.alibaba.nacos:nacos-lock, com.alibaba.nacos:nacos-api, com.alibaba.nacos:nacos-client, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [address] versions for org.springframework:spring-test managed by a BOM imported by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [address] dependencies com.alibaba.nacos:nacos-naming inherited from a parent.
+- [address] dependencies org.junit.jupiter:junit-jupiter, org.mockito:mockito-core, org.mockito:mockito-inline, org.mockito:mockito-junit-jupiter inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [address] Maven profile `release-address`: plugins=[maven-jar-plugin,spring-boot-maven-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [test] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [test] `<plugin>dependency-mediator-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [test] `<plugin>clirr-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [test] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [test] `<plugin>maven-checkstyle-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [test] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [test] `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [test] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [test] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [test] `<plugin>spotbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [test] `<plugin>sonar-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [test] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [test] `<plugin>easyj-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [test] `<plugin>central-publishing-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [test] `<dependencyManagement>` inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT is carried as `[platform]` com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [test] `<dependencyManagement>` in a parent pins 28 versions no declared dependency uses (com.alibaba.nacos:nacos-config, com.alibaba.nacos:nacos-core, com.alibaba.nacos:nacos-lock, com.alibaba.nacos:nacos-naming, com.alibaba.nacos:nacos-api, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [test] dependencies org.junit.jupiter:junit-jupiter, org.mockito:mockito-core, org.mockito:mockito-inline, org.mockito:mockito-junit-jupiter inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [test] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [api] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [api] `<plugin>dependency-mediator-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [api] `<plugin>clirr-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [api] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [api] `<plugin>maven-checkstyle-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [api] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [api] `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [api] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [api] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [api] `<plugin>spotbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [api] `<plugin>sonar-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [api] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [api] `<plugin>easyj-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [api] `<plugin>central-publishing-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [api] `maven.compiler.target` declared 8; jk's floor is 17; bytecode level raised — written as `java = 17`.
+- [api] `<dependencyManagement>` inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT is carried as `[platform]` com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [api] `<dependencyManagement>` in a parent pins 28 versions no declared dependency uses (com.alibaba.nacos:nacos-config, com.alibaba.nacos:nacos-core, com.alibaba.nacos:nacos-lock, com.alibaba.nacos:nacos-naming, com.alibaba.nacos:nacos-api, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [api] versions for com.fasterxml.jackson.core:jackson-annotations, com.fasterxml.jackson.core:jackson-core, com.fasterxml.jackson.core:jackson-databind, org.springframework:spring-test managed by a BOM imported by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [api] versions for io.grpc:grpc-netty-shaded, io.grpc:grpc-protobuf, io.grpc:grpc-stub, io.grpc:grpc-util, io.grpc:grpc-inprocess, com.google.api.grpc:proto-google-common-protos, com.google.protobuf:protobuf-java, javax.annotation:javax.annotation-api managed by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [api] dependencies org.junit.jupiter:junit-jupiter, org.mockito:mockito-core, org.mockito:mockito-inline, org.mockito:mockito-junit-jupiter inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [client] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [client] `<plugin>dependency-mediator-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [client] `<plugin>clirr-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [client] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [client] `<plugin>maven-checkstyle-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [client] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [client] `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [client] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [client] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [client] `<plugin>spotbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [client] `<plugin>sonar-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [client] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [client] `<plugin>easyj-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [client] `<plugin>central-publishing-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [client] `maven.compiler.target` declared 8; jk's floor is 17; bytecode level raised — written as `java = 17`.
+- [client] `<dependency><optional>true</optional></dependency>` on org.slf4j:slf4j-api — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [client] `<dependency><optional>true</optional></dependency>` on com.alibaba.nacos:nacos-api — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [client] `<dependency><optional>true</optional></dependency>` on com.alibaba.nacos:nacos-common — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [client] `<dependencyManagement>` inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT is carried as `[platform]` com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [client] `<dependencyManagement>` in a parent pins 25 versions no declared dependency uses (com.alibaba.nacos:nacos-config, com.alibaba.nacos:nacos-core, com.alibaba.nacos:nacos-lock, com.alibaba.nacos:nacos-naming, com.alibaba.nacos:nacos-client, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [client] versions for org.slf4j:slf4j-api, com.alibaba.nacos:nacos-client-basic, com.alibaba.nacos:nacos-logback-adapter-12, com.alibaba.nacos:logback-adapter, com.alibaba.nacos:nacos-log4j2-adapter, org.yaml:snakeyaml managed by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [client] versions for com.alibaba.nacos:nacos-encryption-plugin, com.fasterxml.jackson.core:jackson-core, com.fasterxml.jackson.core:jackson-databind, org.apache.httpcomponents.client5:httpclient5, org.apache.httpcomponents.core5:httpcore5, io.micrometer:micrometer-core, io.micrometer:micrometer-registry-prometheus managed by a BOM imported by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [client] dependencies com.alibaba.nacos:nacos-api, com.alibaba.nacos:nacos-common inherited from a parent.
+- [client] dependencies org.junit.jupiter:junit-jupiter, org.mockito:mockito-core, org.mockito:mockito-inline, org.mockito:mockito-junit-jupiter inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [client] Maven profile `release-sign-artifacts`: plugins=[maven-shade-plugin,maven-jar-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [client] Maven profile `release-nacos`: plugins=[maven-shade-plugin,maven-jar-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [example] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [example] `<plugin>dependency-mediator-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [example] `<plugin>clirr-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [example] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [example] `<plugin>maven-checkstyle-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [example] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [example] `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [example] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [example] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [example] `<plugin>spotbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [example] `<plugin>sonar-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [example] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [example] `<plugin>easyj-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [example] `<plugin>central-publishing-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [example] `<dependencyManagement>` inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT is carried as `[platform]` com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [example] `<dependencyManagement>` in a parent pins 25 versions no declared dependency uses (com.alibaba.nacos:nacos-config, com.alibaba.nacos:nacos-lock, com.alibaba.nacos:nacos-naming, com.alibaba.nacos:nacos-api, com.alibaba.nacos:nacos-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [example] versions for ch.qos.logback:logback-classic managed by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [example] dependencies com.alibaba.nacos:nacos-common, com.alibaba.nacos:nacos-core, com.alibaba.nacos:nacos-client inherited from a parent.
+- [example] dependencies org.junit.jupiter:junit-jupiter, org.mockito:mockito-core, org.mockito:mockito-inline, org.mockito:mockito-junit-jupiter inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [common] `<resources>` with `<filtering>true</filtering>` on src/main/resources — jk has no resource filtering; `${...}` placeholders in those files are copied as written. Read the values at runtime or check the filled-in file in.
+- [common] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [common] `<plugin>dependency-mediator-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [common] `<plugin>clirr-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [common] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [common] `<plugin>maven-checkstyle-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [common] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [common] `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [common] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [common] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [common] `<plugin>spotbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [common] `<plugin>sonar-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [common] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [common] `<plugin>easyj-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [common] `<plugin>central-publishing-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [common] `maven.compiler.target` declared 8; jk's floor is 17; bytecode level raised — written as `java = 17`.
+- [common] `<dependency><optional>true</optional></dependency>` on tools.jackson.core:jackson-core — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [common] `<dependency><optional>true</optional></dependency>` on tools.jackson.core:jackson-databind — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [common] `<dependencyManagement>` inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT is carried as `[platform]` com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [common] `<dependencyManagement>` in a parent pins 27 versions no declared dependency uses (com.alibaba.nacos:nacos-config, com.alibaba.nacos:nacos-core, com.alibaba.nacos:nacos-lock, com.alibaba.nacos:nacos-naming, com.alibaba.nacos:nacos-client, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [common] versions for org.slf4j:slf4j-api, commons-io:commons-io, com.mysql:mysql-connector-j managed by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [common] versions for org.apache.httpcomponents.client5:httpclient5, com.fasterxml.jackson.core:jackson-core, com.fasterxml.jackson.core:jackson-databind, tools.jackson.core:jackson-core, tools.jackson.core:jackson-databind managed by a BOM imported by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [common] dependencies com.alibaba.nacos:nacos-api inherited from a parent.
+- [common] dependencies org.junit.jupiter:junit-jupiter, org.mockito:mockito-core, org.mockito:mockito-inline, org.mockito:mockito-junit-jupiter inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [distribution] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [distribution] `<plugin>dependency-mediator-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [distribution] `<plugin>clirr-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [distribution] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [distribution] `<plugin>maven-checkstyle-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [distribution] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [distribution] `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [distribution] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [distribution] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [distribution] `<plugin>spotbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [distribution] `<plugin>sonar-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [distribution] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [distribution] `<plugin>easyj-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [distribution] `<plugin>central-publishing-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [distribution] `<dependencyManagement>` inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT is carried as `[platform]` com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [distribution] `<dependencyManagement>` in a parent pins 27 versions no declared dependency uses (com.alibaba.nacos:nacos-config, com.alibaba.nacos:nacos-core, com.alibaba.nacos:nacos-lock, com.alibaba.nacos:nacos-naming, com.alibaba.nacos:nacos-api, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [distribution] dependencies com.alibaba.nacos:nacos-bootstrap, com.alibaba.nacos:nacos-default-plugin-all inherited from a parent.
+- [distribution] dependencies org.junit.jupiter:junit-jupiter, org.mockito:mockito-core, org.mockito:mockito-inline, org.mockito:mockito-junit-jupiter inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [distribution] Maven profile `release-address`: plugins=[maven-assembly-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [distribution] `<dependency>` com.alibaba.nacos:nacos-client has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [distribution] Maven profile `release-client`: 1 dependency → `[features.release-client]` (optional deps nacos-client; not in `default`, activate with `--features release-client`).
+- [distribution] Maven profile `release-client`: plugins=[maven-assembly-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [distribution] Maven profile `release-nacos`: plugins=[maven-assembly-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [distribution] Maven profile `release-native`: plugins=[maven-assembly-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [console] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [console] `<plugin>dependency-mediator-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [console] `<plugin>clirr-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [console] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [console] `<plugin>maven-checkstyle-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [console] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [console] `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [console] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [console] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [console] `<plugin>spotbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [console] `<plugin>sonar-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [console] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [console] `<plugin>easyj-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [console] `<plugin>central-publishing-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [console] `<plugin>native-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [console] `<dependencyManagement>` inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT is carried as `[platform]` com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [console] `<dependencyManagement>` in a parent pins 20 versions no declared dependency uses (com.alibaba.nacos:nacos-api, com.alibaba.nacos:nacos-client, com.alibaba.nacos:nacos-test, com.alibaba.nacos:nacos-common, com.alibaba.nacos:nacos-cmdb, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [console] versions for com.alibaba.nacos:nacos-ai, com.alibaba.nacos:nacos-maintainer-client, io.modelcontextprotocol.sdk:mcp, org.apache.derby:derby managed by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [console] versions for org.slf4j:log4j-over-slf4j, org.slf4j:jcl-over-slf4j, org.slf4j:jul-to-slf4j, org.springframework.boot:spring-boot-starter-security, org.springframework.boot:spring-boot-test-autoconfigure, org.springframework:spring-test, org.hamcrest:hamcrest, org.springframework.boot:spring-boot-starter-webmvc-test managed by a BOM imported by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [console] dependencies com.alibaba.nacos:nacos-config, com.alibaba.nacos:nacos-naming, com.alibaba.nacos:nacos-core, com.alibaba.nacos:nacos-lock, com.alibaba.nacos:nacos-istio, com.alibaba.nacos:nacos-prometheus, com.alibaba.nacos:nacos-k8s-sync, com.alibaba.nacos:nacos-default-plugin-all inherited from a parent.
+- [console] dependencies org.junit.jupiter:junit-jupiter, org.mockito:mockito-core, org.mockito:mockito-inline, org.mockito:mockito-junit-jupiter inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [console] Maven profile `dev` (activation activeByDefault): active on this machine and folded into the import: 1 dependency.
+- [console] Maven profile `native-win64` (activation os=windows): no convertible payload; dropped.
+- [console] Maven profile `native-linux32` (activation os=unix): no convertible payload; dropped.
+- [console] Maven profile `native-linux64` (activation os=unix): no convertible payload; dropped.
+- [console] Maven profile `native-linux-aarch64` (activation os=unix): no convertible payload; dropped.
+- [console] Maven profile `native-linux-ppc64le` (activation os=unix): no convertible payload; dropped.
+- [console] Maven profile `native-linux-s390x` (activation os=unix): no convertible payload; dropped.
+- [console] Maven profile `native-osx-arm64` (activation os=mac): no convertible payload; dropped.
+- [console] Maven profile `native-osx-x86_64` (activation os=mac): no convertible payload; dropped.
+- [console] Maven profile `native`: plugins=[spring-boot-maven-plugin,native-maven-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [cmdb] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [cmdb] `<plugin>dependency-mediator-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [cmdb] `<plugin>clirr-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [cmdb] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [cmdb] `<plugin>maven-checkstyle-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [cmdb] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [cmdb] `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [cmdb] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [cmdb] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [cmdb] `<plugin>spotbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [cmdb] `<plugin>sonar-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [cmdb] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [cmdb] `<plugin>easyj-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [cmdb] `<plugin>central-publishing-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [cmdb] `<dependencyManagement>` inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT is carried as `[platform]` com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [cmdb] `<dependencyManagement>` in a parent pins 26 versions no declared dependency uses (com.alibaba.nacos:nacos-config, com.alibaba.nacos:nacos-lock, com.alibaba.nacos:nacos-naming, com.alibaba.nacos:nacos-client, com.alibaba.nacos:nacos-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [cmdb] versions for org.springframework.boot:spring-boot, org.springframework.boot:spring-boot-starter-web managed by a BOM imported by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [cmdb] dependencies com.alibaba.nacos:nacos-core, com.alibaba.nacos:nacos-api inherited from a parent.
+- [cmdb] dependencies org.junit.jupiter:junit-jupiter, org.mockito:mockito-core, org.mockito:mockito-inline, org.mockito:mockito-junit-jupiter inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [istio] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [istio] `<plugin>dependency-mediator-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [istio] `<plugin>clirr-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [istio] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [istio] `<plugin>maven-checkstyle-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [istio] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [istio] `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [istio] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [istio] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [istio] `<plugin>spotbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [istio] `<plugin>sonar-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [istio] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [istio] `<plugin>easyj-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [istio] `<plugin>central-publishing-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [istio] `<plugin>protobuf-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [istio] `<classifier>pure</classifier>` on com.alibaba.nacos:nacos-client — classifier support lands in a later slice; the coord was emitted without it.
+- [istio] `<dependencyManagement>` inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT is carried as `[platform]` com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [istio] `<dependencyManagement>` in a parent pins 23 versions no declared dependency uses (com.alibaba.nacos:nacos-lock, com.alibaba.nacos:nacos-client, com.alibaba.nacos:nacos-test, com.alibaba.nacos:nacos-cmdb, com.alibaba.nacos:nacos-console, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [istio] versions for io.grpc:grpc-netty-shaded, io.grpc:grpc-protobuf, io.grpc:grpc-stub, com.google.api.grpc:proto-google-common-protos, com.google.protobuf:protobuf-java managed by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [istio] versions for org.springframework.boot:spring-boot-starter-test managed by a BOM imported by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [istio] dependencies com.alibaba.nacos:nacos-api, com.alibaba.nacos:nacos-common, com.alibaba.nacos:nacos-client, com.alibaba.nacos:nacos-config, com.alibaba.nacos:nacos-naming, com.alibaba.nacos:nacos-core inherited from a parent.
+- [istio] dependencies org.junit.jupiter:junit-jupiter, org.mockito:mockito-core, org.mockito:mockito-inline, org.mockito:mockito-junit-jupiter inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [consistency] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [consistency] `<plugin>dependency-mediator-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [consistency] `<plugin>clirr-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [consistency] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [consistency] `<plugin>maven-checkstyle-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [consistency] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [consistency] `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [consistency] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [consistency] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [consistency] `<plugin>spotbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [consistency] `<plugin>sonar-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [consistency] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [consistency] `<plugin>easyj-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [consistency] `<plugin>central-publishing-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [consistency] `<plugin>protobuf-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [consistency] `<dependencyManagement>` inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT is carried as `[platform]` com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [consistency] `<dependencyManagement>` in a parent pins 27 versions no declared dependency uses (com.alibaba.nacos:nacos-config, com.alibaba.nacos:nacos-core, com.alibaba.nacos:nacos-lock, com.alibaba.nacos:nacos-naming, com.alibaba.nacos:nacos-api, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [consistency] versions for com.caucho:hessian, com.google.protobuf:protobuf-java managed by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [consistency] dependencies com.alibaba.nacos:nacos-common inherited from a parent.
+- [consistency] dependencies org.junit.jupiter:junit-jupiter, org.mockito:mockito-core, org.mockito:mockito-inline, org.mockito:mockito-junit-jupiter inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [auth] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [auth] `<plugin>dependency-mediator-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [auth] `<plugin>clirr-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [auth] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [auth] `<plugin>maven-checkstyle-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [auth] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [auth] `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [auth] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [auth] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [auth] `<plugin>spotbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [auth] `<plugin>sonar-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [auth] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [auth] `<plugin>easyj-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [auth] `<plugin>central-publishing-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [auth] `<dependency><optional>true</optional></dependency>` on org.springframework.boot:spring-boot-starter — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [auth] `<dependencyManagement>` inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT is carried as `[platform]` com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [auth] `<dependencyManagement>` in a parent pins 25 versions no declared dependency uses (com.alibaba.nacos:nacos-config, com.alibaba.nacos:nacos-core, com.alibaba.nacos:nacos-lock, com.alibaba.nacos:nacos-naming, com.alibaba.nacos:nacos-api, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [auth] versions for com.alibaba.nacos:nacos-auth-plugin, org.springframework.boot:spring-boot-starter, org.springframework:spring-test, org.apache.tomcat.embed:tomcat-embed-core managed by a BOM imported by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [auth] dependencies com.alibaba.nacos:nacos-common, com.alibaba.nacos:nacos-sys inherited from a parent.
+- [auth] dependencies org.junit.jupiter:junit-jupiter, org.mockito:mockito-core, org.mockito:mockito-inline, org.mockito:mockito-junit-jupiter inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [sys] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [sys] `<plugin>dependency-mediator-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [sys] `<plugin>clirr-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [sys] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [sys] `<plugin>maven-checkstyle-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [sys] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [sys] `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [sys] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [sys] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [sys] `<plugin>spotbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [sys] `<plugin>sonar-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [sys] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [sys] `<plugin>easyj-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [sys] `<plugin>central-publishing-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [sys] `<dependencyManagement>` inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT is carried as `[platform]` com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [sys] `<dependencyManagement>` in a parent pins 26 versions no declared dependency uses (com.alibaba.nacos:nacos-config, com.alibaba.nacos:nacos-core, com.alibaba.nacos:nacos-lock, com.alibaba.nacos:nacos-naming, com.alibaba.nacos:nacos-api, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [sys] versions for org.springframework.boot:spring-boot-starter, org.springframework:spring-test, org.springframework.boot:spring-boot-test, com.alibaba.nacos:nacos-custom-environment-plugin managed by a BOM imported by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [sys] dependencies com.alibaba.nacos:nacos-common inherited from a parent.
+- [sys] dependencies org.junit.jupiter:junit-jupiter, org.mockito:mockito-core, org.mockito:mockito-inline, org.mockito:mockito-junit-jupiter inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [plugin] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [plugin] `<plugin>dependency-mediator-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [plugin] `<plugin>clirr-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [plugin] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [plugin] `<plugin>maven-checkstyle-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [plugin] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [plugin] `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [plugin] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [plugin] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [plugin] `<plugin>spotbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [plugin] `<plugin>sonar-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [plugin] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [plugin] `<plugin>easyj-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [plugin] `<plugin>central-publishing-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [plugin] `<dependencyManagement>` inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT is carried as `[platform]` com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [plugin] `<dependencyManagement>` in a parent pins 28 versions no declared dependency uses (com.alibaba.nacos:nacos-config, com.alibaba.nacos:nacos-core, com.alibaba.nacos:nacos-lock, com.alibaba.nacos:nacos-naming, com.alibaba.nacos:nacos-api, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [plugin] dependencies org.junit.jupiter:junit-jupiter, org.mockito:mockito-core, org.mockito:mockito-inline, org.mockito:mockito-junit-jupiter inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [plugin] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [plugin-default-impl] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [plugin-default-impl] `<plugin>dependency-mediator-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [plugin-default-impl] `<plugin>clirr-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [plugin-default-impl] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [plugin-default-impl] `<plugin>maven-checkstyle-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [plugin-default-impl] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [plugin-default-impl] `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [plugin-default-impl] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [plugin-default-impl] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [plugin-default-impl] `<plugin>spotbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [plugin-default-impl] `<plugin>sonar-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [plugin-default-impl] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [plugin-default-impl] `<plugin>easyj-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [plugin-default-impl] `<plugin>central-publishing-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [plugin-default-impl] `<dependencyManagement>` inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT is carried as `[platform]` com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [plugin-default-impl] `<dependencyManagement>` in a parent pins 28 versions no declared dependency uses (com.alibaba.nacos:nacos-config, com.alibaba.nacos:nacos-core, com.alibaba.nacos:nacos-lock, com.alibaba.nacos:nacos-naming, com.alibaba.nacos:nacos-api, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [plugin-default-impl] dependencies org.junit.jupiter:junit-jupiter, org.mockito:mockito-core, org.mockito:mockito-inline, org.mockito:mockito-junit-jupiter inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [plugin-default-impl] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [prometheus] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [prometheus] `<plugin>dependency-mediator-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [prometheus] `<plugin>clirr-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [prometheus] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [prometheus] `<plugin>maven-checkstyle-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [prometheus] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [prometheus] `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [prometheus] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [prometheus] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [prometheus] `<plugin>spotbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [prometheus] `<plugin>sonar-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [prometheus] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [prometheus] `<plugin>easyj-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [prometheus] `<plugin>central-publishing-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [prometheus] `<dependencyManagement>` inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT is carried as `[platform]` com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [prometheus] `<dependencyManagement>` in a parent pins 25 versions no declared dependency uses (com.alibaba.nacos:nacos-config, com.alibaba.nacos:nacos-lock, com.alibaba.nacos:nacos-client, com.alibaba.nacos:nacos-test, com.alibaba.nacos:nacos-common, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [prometheus] versions for org.springframework.boot:spring-boot-test-autoconfigure, org.springframework:spring-test, org.hamcrest:hamcrest, org.springframework.boot:spring-boot-starter-webmvc-test managed by a BOM imported by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [prometheus] dependencies com.alibaba.nacos:nacos-api, com.alibaba.nacos:nacos-naming, com.alibaba.nacos:nacos-core inherited from a parent.
+- [prometheus] dependencies org.junit.jupiter:junit-jupiter, org.mockito:mockito-core, org.mockito:mockito-inline, org.mockito:mockito-junit-jupiter inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [persistence] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [persistence] `<plugin>dependency-mediator-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [persistence] `<plugin>clirr-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [persistence] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [persistence] `<plugin>maven-checkstyle-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [persistence] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [persistence] `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [persistence] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [persistence] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [persistence] `<plugin>spotbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [persistence] `<plugin>sonar-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [persistence] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [persistence] `<plugin>easyj-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [persistence] `<plugin>central-publishing-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [persistence] `<dependencyManagement>` inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT is carried as `[platform]` com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [persistence] `<dependencyManagement>` in a parent pins 26 versions no declared dependency uses (com.alibaba.nacos:nacos-config, com.alibaba.nacos:nacos-core, com.alibaba.nacos:nacos-lock, com.alibaba.nacos:nacos-naming, com.alibaba.nacos:nacos-api, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [persistence] versions for org.springframework.boot:spring-boot-starter-jdbc, com.alibaba.nacos:nacos-sys, com.alibaba.nacos:nacos-consistency, io.micrometer:micrometer-core, org.springframework:spring-test managed by a BOM imported by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [persistence] versions for com.alibaba.nacos:nacos-datasource-plugin, com.mysql:mysql-connector-j, org.apache.derby:derby managed by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [persistence] dependencies org.junit.jupiter:junit-jupiter, org.mockito:mockito-core, org.mockito:mockito-inline, org.mockito:mockito-junit-jupiter inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [logger-adapter-impl] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [logger-adapter-impl] `<plugin>dependency-mediator-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [logger-adapter-impl] `<plugin>clirr-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [logger-adapter-impl] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [logger-adapter-impl] `<plugin>maven-checkstyle-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [logger-adapter-impl] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [logger-adapter-impl] `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [logger-adapter-impl] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [logger-adapter-impl] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [logger-adapter-impl] `<plugin>spotbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [logger-adapter-impl] `<plugin>sonar-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [logger-adapter-impl] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [logger-adapter-impl] `<plugin>easyj-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [logger-adapter-impl] `<plugin>central-publishing-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [logger-adapter-impl] `<dependency><optional>true</optional></dependency>` on com.alibaba.nacos:nacos-common — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [logger-adapter-impl] `<dependencyManagement>` inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT is carried as `[platform]` com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [logger-adapter-impl] `<dependencyManagement>` in a parent pins 27 versions no declared dependency uses (com.alibaba.nacos:nacos-config, com.alibaba.nacos:nacos-core, com.alibaba.nacos:nacos-lock, com.alibaba.nacos:nacos-naming, com.alibaba.nacos:nacos-api, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [logger-adapter-impl] versions for com.alibaba.nacos:nacos-common managed by a BOM imported by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [logger-adapter-impl] dependencies org.junit.jupiter:junit-jupiter, org.mockito:mockito-core, org.mockito:mockito-inline, org.mockito:mockito-junit-jupiter inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [logger-adapter-impl] Maven profile `release-sign-artifacts`: plugins=[maven-shade-plugin,maven-jar-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [logger-adapter-impl] Maven profile `release-nacos`: plugins=[maven-shade-plugin,maven-jar-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [logger-adapter-impl] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [k8s-sync] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [k8s-sync] `<plugin>dependency-mediator-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [k8s-sync] `<plugin>clirr-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [k8s-sync] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [k8s-sync] `<plugin>maven-checkstyle-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [k8s-sync] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [k8s-sync] `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [k8s-sync] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [k8s-sync] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [k8s-sync] `<plugin>spotbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [k8s-sync] `<plugin>sonar-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [k8s-sync] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [k8s-sync] `<plugin>easyj-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [k8s-sync] `<plugin>central-publishing-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [k8s-sync] `<dependencyManagement>` inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT is carried as `[platform]` com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [k8s-sync] `<dependencyManagement>` in a parent pins 27 versions no declared dependency uses (com.alibaba.nacos:nacos-config, com.alibaba.nacos:nacos-core, com.alibaba.nacos:nacos-lock, com.alibaba.nacos:nacos-api, com.alibaba.nacos:nacos-client, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [k8s-sync] versions for io.kubernetes:client-java-api, io.kubernetes:client-java managed by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [k8s-sync] versions for org.springframework.boot:spring-boot-starter-test managed by a BOM imported by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [k8s-sync] dependencies com.alibaba.nacos:nacos-naming inherited from a parent.
+- [k8s-sync] dependencies org.junit.jupiter:junit-jupiter, org.mockito:mockito-core, org.mockito:mockito-inline, org.mockito:mockito-junit-jupiter inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [bootstrap] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bootstrap] `<plugin>dependency-mediator-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bootstrap] `<plugin>clirr-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bootstrap] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bootstrap] `<plugin>maven-checkstyle-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bootstrap] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bootstrap] `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bootstrap] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bootstrap] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bootstrap] `<plugin>spotbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bootstrap] `<plugin>sonar-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bootstrap] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bootstrap] `<plugin>easyj-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bootstrap] `<plugin>central-publishing-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bootstrap] `<dependencyManagement>` inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT is carried as `[platform]` com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [bootstrap] `<dependencyManagement>` in a parent pins 25 versions no declared dependency uses (com.alibaba.nacos:nacos-config, com.alibaba.nacos:nacos-lock, com.alibaba.nacos:nacos-naming, com.alibaba.nacos:nacos-api, com.alibaba.nacos:nacos-client, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [bootstrap] versions for com.alibaba.nacos:nacos-console, com.alibaba.nacos:nacos-core, com.alibaba.nacos:nacos-server managed by a BOM imported by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [bootstrap] versions for com.alibaba.nacos:nacos-ai-registry-adaptor managed by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [bootstrap] dependencies org.junit.jupiter:junit-jupiter, org.mockito:mockito-core, org.mockito:mockito-inline, org.mockito:mockito-junit-jupiter inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [bootstrap] Maven profile `dev` (activation property=spring.profiles.active, a command-line switch jk has no equivalent for): 1 dependency → `[features.dev]` (optional deps nacos-default-plugin-all; not in `default`, activate with `--features dev`).
+- [bootstrap] Maven profile `release-nacos`: plugins=[maven-jar-plugin,spring-boot-maven-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [server] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [server] `<plugin>dependency-mediator-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [server] `<plugin>clirr-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [server] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [server] `<plugin>maven-checkstyle-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [server] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [server] `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [server] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [server] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [server] `<plugin>spotbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [server] `<plugin>sonar-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [server] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [server] `<plugin>easyj-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [server] `<plugin>central-publishing-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [server] `<dependencyManagement>` inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT is carried as `[platform]` com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [server] `<dependencyManagement>` in a parent pins 24 versions no declared dependency uses (com.alibaba.nacos:nacos-core, com.alibaba.nacos:nacos-lock, com.alibaba.nacos:nacos-api, com.alibaba.nacos:nacos-client, com.alibaba.nacos:nacos-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [server] versions for com.alibaba.nacos:nacos-naming, com.alibaba.nacos:nacos-config, com.alibaba.nacos:nacos-istio, com.alibaba.nacos:nacos-prometheus managed by a BOM imported by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [server] dependencies com.alibaba.nacos:nacos-default-plugin-all inherited from a parent.
+- [server] dependencies org.junit.jupiter:junit-jupiter, org.mockito:mockito-core, org.mockito:mockito-inline, org.mockito:mockito-junit-jupiter inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [server] Maven profile `dev` (activation activeByDefault): active on this machine and folded into the import: 1 dependency.
+- [lock] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [lock] `<plugin>dependency-mediator-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [lock] `<plugin>clirr-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [lock] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [lock] `<plugin>maven-checkstyle-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [lock] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [lock] `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [lock] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [lock] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [lock] `<plugin>spotbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [lock] `<plugin>sonar-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [lock] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [lock] `<plugin>easyj-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [lock] `<plugin>central-publishing-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [lock] `<dependencyManagement>` inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT is carried as `[platform]` com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [lock] `<dependencyManagement>` in a parent pins 26 versions no declared dependency uses (com.alibaba.nacos:nacos-config, com.alibaba.nacos:nacos-lock, com.alibaba.nacos:nacos-naming, com.alibaba.nacos:nacos-client, com.alibaba.nacos:nacos-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [lock] versions for org.springframework.boot:spring-boot, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-starter-test managed by a BOM imported by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [lock] dependencies com.alibaba.nacos:nacos-core, com.alibaba.nacos:nacos-api inherited from a parent.
+- [lock] dependencies org.junit.jupiter:junit-jupiter, org.mockito:mockito-core, org.mockito:mockito-inline, org.mockito:mockito-junit-jupiter inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [maintainer-client] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [maintainer-client] `<plugin>dependency-mediator-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [maintainer-client] `<plugin>clirr-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [maintainer-client] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [maintainer-client] `<plugin>maven-checkstyle-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [maintainer-client] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [maintainer-client] `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [maintainer-client] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [maintainer-client] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [maintainer-client] `<plugin>spotbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [maintainer-client] `<plugin>sonar-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [maintainer-client] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [maintainer-client] `<plugin>easyj-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [maintainer-client] `<plugin>central-publishing-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [maintainer-client] `<plugin>spring-boot-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [maintainer-client] `maven.compiler.target` declared 8; jk's floor is 17; bytecode level raised — written as `java = 17`.
+- [maintainer-client] `<exclusions>` on com.alibaba.nacos:nacos-common — exclusion support lands in a later slice; exclusions were dropped.
+- [maintainer-client] `<dependencyManagement>` inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT is carried as `[platform]` com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [maintainer-client] `<dependencyManagement>` in a parent pins 27 versions no declared dependency uses (com.alibaba.nacos:nacos-config, com.alibaba.nacos:nacos-core, com.alibaba.nacos:nacos-lock, com.alibaba.nacos:nacos-naming, com.alibaba.nacos:nacos-api, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [maintainer-client] versions for commons-collections:commons-collections, com.alibaba.nacos:nacos-client-basic managed by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [maintainer-client] versions for com.alibaba.nacos:nacos-common managed by a BOM imported by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [maintainer-client] dependencies org.junit.jupiter:junit-jupiter, org.mockito:mockito-core, org.mockito:mockito-inline, org.mockito:mockito-junit-jupiter inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [client-basic] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [client-basic] `<plugin>dependency-mediator-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [client-basic] `<plugin>clirr-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [client-basic] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [client-basic] `<plugin>maven-checkstyle-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [client-basic] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [client-basic] `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [client-basic] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [client-basic] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [client-basic] `<plugin>spotbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [client-basic] `<plugin>sonar-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [client-basic] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [client-basic] `<plugin>easyj-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [client-basic] `<plugin>central-publishing-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [client-basic] `maven.compiler.target` declared 8; jk's floor is 17; bytecode level raised — written as `java = 17`.
+- [client-basic] `<dependency><optional>true</optional></dependency>` on com.alibaba.nacos:nacos-api — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [client-basic] `<dependency><optional>true</optional></dependency>` on com.alibaba.nacos:nacos-common — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [client-basic] `<dependency><optional>true</optional></dependency>` on org.slf4j:slf4j-api — jk has no `<optional>`; emitted as a normal dep. Use a feature flag if it should be opt-in.
+- [client-basic] `<dependencyManagement>` inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT is carried as `[platform]` com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [client-basic] `<dependencyManagement>` in a parent pins 25 versions no declared dependency uses (com.alibaba.nacos:nacos-config, com.alibaba.nacos:nacos-core, com.alibaba.nacos:nacos-lock, com.alibaba.nacos:nacos-naming, com.alibaba.nacos:nacos-client, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [client-basic] versions for com.alibaba.nacos:nacos-common, com.alibaba.nacos:nacos-auth-plugin managed by a BOM imported by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [client-basic] versions for org.slf4j:slf4j-api managed by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [client-basic] dependencies com.alibaba.nacos:nacos-api inherited from a parent.
+- [client-basic] dependencies org.junit.jupiter:junit-jupiter, org.mockito:mockito-core, org.mockito:mockito-inline, org.mockito:mockito-junit-jupiter inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [ai] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [ai] `<plugin>dependency-mediator-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [ai] `<plugin>clirr-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [ai] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [ai] `<plugin>maven-checkstyle-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [ai] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [ai] `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [ai] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [ai] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [ai] `<plugin>spotbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [ai] `<plugin>sonar-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [ai] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [ai] `<plugin>easyj-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [ai] `<plugin>central-publishing-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [ai] `<dependencyManagement>` inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT is carried as `[platform]` com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [ai] `<dependencyManagement>` in a parent pins 23 versions no declared dependency uses (com.alibaba.nacos:nacos-core, com.alibaba.nacos:nacos-lock, com.alibaba.nacos:nacos-api, com.alibaba.nacos:nacos-client, com.alibaba.nacos:nacos-test, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [ai] versions for com.alibaba.nacos:nacos-common, com.alibaba.nacos:nacos-naming, com.alibaba.nacos:nacos-config, com.alibaba.nacos:nacos-ai-plugin, com.alibaba.nacos:nacos-visibility-plugin, org.springframework.boot:spring-boot-test-autoconfigure, com.fasterxml.jackson.core:jackson-databind, org.mockito:mockito-core, org.mockito:mockito-inline managed by a BOM imported by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [ai] versions for org.apache.derby:derby managed by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [ai] dependencies org.junit.jupiter:junit-jupiter, org.mockito:mockito-junit-jupiter inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [copilot] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [copilot] `<plugin>dependency-mediator-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [copilot] `<plugin>clirr-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [copilot] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [copilot] `<plugin>maven-checkstyle-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [copilot] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [copilot] `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [copilot] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [copilot] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [copilot] `<plugin>spotbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [copilot] `<plugin>sonar-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [copilot] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [copilot] `<plugin>easyj-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [copilot] `<plugin>central-publishing-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [copilot] `<exclusions>` on io.agentscope:agentscope-core — exclusion support lands in a later slice; exclusions were dropped.
+- [copilot] `<dependencyManagement>` inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT is carried as `[platform]` com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [copilot] `<dependencyManagement>` in a parent pins 24 versions no declared dependency uses (com.alibaba.nacos:nacos-config, com.alibaba.nacos:nacos-core, com.alibaba.nacos:nacos-lock, com.alibaba.nacos:nacos-naming, com.alibaba.nacos:nacos-client, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [copilot] versions for com.alibaba.nacos:nacos-api, com.alibaba.nacos:nacos-common, com.alibaba.nacos:nacos-sys, com.alibaba.nacos:nacos-auth, org.springframework.boot:spring-boot-starter-web, org.springframework.boot:spring-boot-test-autoconfigure managed by a BOM imported by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [copilot] versions for com.alibaba.nacos:nacos-maintainer-client managed by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [copilot] dependencies org.junit.jupiter:junit-jupiter, org.mockito:mockito-core, org.mockito:mockito-inline, org.mockito:mockito-junit-jupiter inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [ai-registry-adaptor] `<plugin>versions-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [ai-registry-adaptor] `<plugin>dependency-mediator-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [ai-registry-adaptor] `<plugin>clirr-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [ai-registry-adaptor] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [ai-registry-adaptor] `<plugin>maven-checkstyle-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [ai-registry-adaptor] `<plugin>spotless-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [ai-registry-adaptor] `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [ai-registry-adaptor] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [ai-registry-adaptor] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [ai-registry-adaptor] `<plugin>spotbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [ai-registry-adaptor] `<plugin>sonar-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [ai-registry-adaptor] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [ai-registry-adaptor] `<plugin>easyj-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [ai-registry-adaptor] `<plugin>central-publishing-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [ai-registry-adaptor] `<dependencyManagement>` inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT is carried as `[platform]` com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT, so its managed versions govern transitive dependencies as well.
+- [ai-registry-adaptor] `<dependencyManagement>` in a parent pins 28 versions no declared dependency uses (com.alibaba.nacos:nacos-config, com.alibaba.nacos:nacos-core, com.alibaba.nacos:nacos-lock, com.alibaba.nacos:nacos-naming, com.alibaba.nacos:nacos-api, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [ai-registry-adaptor] versions for com.alibaba.nacos:nacos-ai, org.yaml:snakeyaml managed by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [ai-registry-adaptor] versions for commons-codec:commons-codec, org.springframework.boot:spring-boot-test-autoconfigure managed by a BOM imported by parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+- [ai-registry-adaptor] dependencies org.junit.jupiter:junit-jupiter, org.mockito:mockito-core, org.mockito:mockito-inline, org.mockito:mockito-junit-jupiter inherited from parent com.alibaba.nacos:nacos-all:3.3.0-SNAPSHOT.
+

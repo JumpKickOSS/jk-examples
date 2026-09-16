@@ -1,0 +1,8 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/floci && jk --no-progress --no-ansi --no-notify import pom.xml --report /home/bsant/src/oss/jk-examples/corpus/maven-top20/results/floci/import-report.md)   # 02:13:11
+
+jk: + Import > Wrote /home/bsant/src/scratch/maven-corpus/floci/jk.toml
+jk: + Import > Wrote /home/bsant/src/oss/jk-examples/corpus/maven-top20/results/floci/import-report.md
+Import notes: 13 issue(s)
+
+# -> ok exit=0 wall=0.6s

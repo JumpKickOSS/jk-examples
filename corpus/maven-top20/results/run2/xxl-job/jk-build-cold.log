@@ -1,0 +1,615 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/xxl-job && jk --no-progress --no-ansi --no-notify build --skip-tests)   # 02:19:12
+
++ [1 of 3] com.xuxueli:xxl-job-executor-samples - took 13ms
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/glue/impl/SpringGlueFactory.java:17: warning: no main description
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/handler/impl/MethodJobHandler.java:8: warning: no main description
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/AdminBiz.java:8: warning: no main description
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/executor/dto/IdleBeatRequest.java:6: warning: no main description
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/executor/dto/KillRequest.java:6: warning: no main description
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/executor/dto/LogRequest.java:6: warning: no main description
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/AdminJobBiz.java:19: warning: no @param for request
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/AdminJobBiz.java:19: warning: no @return
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/AdminJobBiz.java:24: warning: no @param for request
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/AdminJobBiz.java:24: warning: no @return
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/AdminJobBiz.java:29: warning: no @param for request
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/AdminJobBiz.java:29: warning: no @return
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/AdminJobBiz.java:34: warning: no @param for request
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/AdminJobBiz.java:34: warning: no @return
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/AdminJobBiz.java:39: warning: no @param for request
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/AdminJobBiz.java:39: warning: no @return
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/AdminJobBiz.java:44: warning: no @param for request
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/AdminJobBiz.java:44: warning: no @return
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/CallbackData.java:17: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/CallbackData.java:18: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/CallbackData.java:41: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/CallbackData.java:49: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/CallbackData.java:33: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/CallbackData.java:25: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/CallbackData.java:45: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/CallbackData.java:53: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/CallbackData.java:37: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/CallbackData.java:29: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/CallbackRequest.java:6: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/CallbackRequest.java:11: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/CallbackRequest.java:14: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/CallbackRequest.java:18: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/CallbackRequest.java:22: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/constant/Const.java:39: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/constant/Const.java:6: warning: use of default constructor, which does not provide a comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/server/EmbedServer.java:35: warning: use of default constructor, which does not provide a comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/server/EmbedServer.java:41: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/server/EmbedServer.java:123: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/server/EmbedServer.java:151: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/executor/impl/ExecutorBizImpl.java:24: warning: use of default constructor, which does not provide a comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/constant/ExecutorBlockStrategyEnum.java:35: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/constant/ExecutorBlockStrategyEnum.java:38: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/thread/ExecutorRegistryThreadHelper.java:30: warning: no @param for xxlJobExecutor
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/thread/ExecutorRegistryThreadHelper.java:76: warning: no @param for xxlJobExecutor
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/thread/ExecutorRegistryThreadHelper.java:18: warning: use of default constructor, which does not provide a comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/glue/GlueFactory.java:52: warning: no @throws for java.lang.Exception
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/glue/GlueFactory.java:18: warning: use of default constructor, which does not provide a comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/glue/GlueFactory.java:22: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/handler/IJobHandler.java:14: warning: no @throws for java.lang.Exception
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/handler/IJobHandler.java:23: warning: no @throws for java.lang.Exception
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/handler/IJobHandler.java:31: warning: no @throws for java.lang.Exception
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/handler/impl/GlueJobHandler.java:23: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/handler/impl/GlueJobHandler.java:28: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/glue/GlueTypeEnum.java:29: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/glue/GlueTypeEnum.java:33: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/glue/GlueTypeEnum.java:37: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/glue/GlueTypeEnum.java:41: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/glue/GlueTypeEnum.java:45: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/glue/GlueTypeEnum.java:8: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/glue/GlueTypeEnum.java:9: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/glue/GlueTypeEnum.java:13: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/glue/GlueTypeEnum.java:15: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/glue/GlueTypeEnum.java:14: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/glue/GlueTypeEnum.java:11: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/glue/GlueTypeEnum.java:12: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/glue/GlueTypeEnum.java:10: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/executor/dto/IdleBeatRequest.java:13: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/executor/dto/IdleBeatRequest.java:15: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/executor/dto/IdleBeatRequest.java:19: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/executor/dto/IdleBeatRequest.java:23: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/handler/IJobHandler.java:8: warning: use of default constructor, which does not provide a comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/JobAddRequest.java:32: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/JobAddRequest.java:59: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/JobAddRequest.java:51: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/JobAddRequest.java:115: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/JobAddRequest.java:131: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/JobAddRequest.java:99: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/JobAddRequest.java:107: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/JobAddRequest.java:91: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/JobAddRequest.java:123: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/JobAddRequest.java:155: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/JobAddRequest.java:147: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/JobAddRequest.java:139: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/JobAddRequest.java:35: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/JobAddRequest.java:83: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/JobAddRequest.java:43: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/JobAddRequest.java:75: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/JobAddRequest.java:67: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/JobAddRequest.java:63: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/JobAddRequest.java:55: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/JobAddRequest.java:119: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/JobAddRequest.java:135: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/JobAddRequest.java:103: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/JobAddRequest.java:111: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/JobAddRequest.java:95: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/JobAddRequest.java:127: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/JobAddRequest.java:159: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/JobAddRequest.java:151: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/JobAddRequest.java:143: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-core
+ | xxl-job-core/src/main/java/com/xxl/job/core/openapi/admin/dto/JobAddRequest.java:39: warning: no comment
+ +--
++ [2 of 3] com.xuxueli:xxl-job-core - took 1.2s
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/alarm/JobAlarm.java:7: warning: no main description
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/exception/XxlJobException.java:4: warning: no main description
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/misfire/MisfireStrategyEnum.java:8: warning: no main description
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/openapi/impl/AdminBizImpl.java:11: warning: no main description
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/thread/JobScheduleHelper.java:21: warning: no main description
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/type/ScheduleTypeEnum.java:9: warning: no main description
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/framework/mapper/XxlJobUserMapper.java:10: warning: no main description
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/framework/web/xxlsso/XxlSsoConfig.java:13: warning: no main description
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/XxlJobAdminApplication.java:7: warning: no main description
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/openapi/impl/AdminBizImpl.java:14: warning: use of default constructor, which does not provide a comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/openapi/impl/AdminJobBizImpl.java:25: warning: use of default constructor, which does not provide a comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/framework/constant/Consts.java:8: warning: use of default constructor, which does not provide a comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:390: warning: no @return
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:402: warning: no @param for timeZone
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:447: warning: no @param for expression
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:447: warning: no @throws for java.text.ParseException
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:1185: warning: no @param for afterTime
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:1185: warning: no @return
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:1605: warning: no @return
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:224: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:219: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:215: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:217: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:228: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:257: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:260: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:265: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:214: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:256: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:223: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:222: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:263: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:221: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:267: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:213: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:255: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:216: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:227: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:259: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:258: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:225: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:220: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:264: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:212: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:254: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:218: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:261: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:981: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:740: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:974: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:874: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:1169: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:941: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:915: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:878: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:1614: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:1159: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:1153: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:1135: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:1610: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:967: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:536: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/cron/CronExpression.java:435: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/type/ScheduleType.java:20: warning: no @return
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/type/ScheduleType.java:20: warning: no @throws for java.lang.Exception
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/type/strategy/CronScheduleType.java:9: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/type/strategy/CronScheduleType.java:9: warning: use of default constructor, which does not provide a comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/alarm/JobAlarm.java:14: warning: no description for @param
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/alarm/JobAlarm.java:15: warning: no description for @param
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/alarm/JobAlarm.java:16: warning: no description for @return
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/alarm/impl/EmailJobAlarm.java:33: warning: no description for @param
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/alarm/impl/EmailJobAlarm.java:27: warning: use of default constructor, which does not provide a comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/route/strategy/ExecutorRouteBusyover.java:17: warning: use of default constructor, which does not provide a comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/route/strategy/ExecutorRouteConsistentHash.java:22: warning: use of default constructor, which does not provide a comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/route/strategy/ExecutorRouteFailover.java:16: warning: use of default constructor, which does not provide a comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/route/strategy/ExecutorRouteFirst.java:11: warning: use of default constructor, which does not provide a comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/route/strategy/ExecutorRouteLast.java:11: warning: use of default constructor, which does not provide a comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/route/strategy/ExecutorRouteLFU.java:19: warning: use of default constructor, which does not provide a comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/route/strategy/ExecutorRouteLFU.java:29: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/route/strategy/ExecutorRouteLRU.java:21: warning: use of default constructor, which does not provide a comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/route/strategy/ExecutorRouteLRU.java:31: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/route/ExecutorRouter.java:13: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/route/ExecutorRouter.java:12: warning: use of default constructor, which does not provide a comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/route/strategy/ExecutorRouteRandom.java:14: warning: use of default constructor, which does not provide a comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/route/strategy/ExecutorRouteRound.java:17: warning: use of default constructor, which does not provide a comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/route/ExecutorRouteStrategyEnum.java:40: warning: no @param for name
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/route/ExecutorRouteStrategyEnum.java:40: warning: no @param for defaultItem
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/route/ExecutorRouteStrategyEnum.java:40: warning: no @return
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/route/ExecutorRouteStrategyEnum.java:30: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/route/ExecutorRouteStrategyEnum.java:33: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/route/ExecutorRouteStrategyEnum.java:19: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/route/ExecutorRouteStrategyEnum.java:15: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/route/ExecutorRouteStrategyEnum.java:18: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/route/ExecutorRouteStrategyEnum.java:11: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/route/ExecutorRouteStrategyEnum.java:12: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/route/ExecutorRouteStrategyEnum.java:16: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/route/ExecutorRouteStrategyEnum.java:17: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/route/ExecutorRouteStrategyEnum.java:14: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/route/ExecutorRouteStrategyEnum.java:13: warning: no comment
+ +--
+[Package Javadoc] Warning in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/route/ExecutorRouteStrategyEnum.java:20: warning: no comment
+ +--
+[Package Javadoc] Failure in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/trigger/JobTrigger.java:52: error: malformed HTML
+ +--
+[Package Javadoc] Failure in com.xuxueli:xxl-job-admin
+ | xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/thread/JobTriggerPoolHelper.java:94: error: malformed HTML
+ +--
+! [3 of 3] com.xuxueli:xxl-job-admin -- failed
+jk: ! Build > Failed to build com.xuxueli:xxl-job-admin - took 1.8s
+
+# -> fail exit=1 wall=1.8s

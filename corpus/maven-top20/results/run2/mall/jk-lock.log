@@ -1,0 +1,12 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/mall && jk --no-progress --no-ansi --no-notify lock)   # 02:08:29
+
++ [89] com.rabbitmq:amqp-client:5.25.0
++ [121] com.fasterxml.jackson.core:jackson-databind:2.21.2
++ [157] io.projectreactor:reactor-core:3.7.18
++ [185] org.springframework.boot:spring-boot-starter-security:3.5.14
++ [206] co.elastic.clients:elasticsearch-java:8.18.8
++ [207] com.alipay.sdk:alipay-sdk-java:4.40.630.ALL
+jk: + Lock > Workspace lock successful. Resolved 207 dependencies - took 42.6s
+
+# -> ok exit=0 wall=42.7s

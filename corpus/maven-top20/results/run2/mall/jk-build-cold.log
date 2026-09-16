@@ -1,0 +1,184 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/mall && jk --no-progress --no-ansi --no-notify build --skip-tests)   # 02:09:11
+
+[Compile Java] Failure in com.macro.mall:mall-common
+ |    error: cannot find symbol
+ |   symbol: method setDescription(java.lang.String)
+ | location: variable webLog of type com.macro.mall.common.domain.WebLog
+ | 
+ |     mall-common/src/main/java/com/macro/mall/common/log/WebLogAspect.java:68
+ |   66|         if (method.isAnnotationPresent(Operation.class)) {        
+ |   67|             Operation log = method.getAnnotation(Operation.class);
+ |   68|             webLog.setDescription(log.summary());                 
+ |   69|         }                                                         
+ |   70|         long endTime = System.currentTimeMillis();                
+ +--
+ |    error: cannot find symbol
+ |   symbol: method setBasePath(java.lang.String)
+ | location: variable webLog of type com.macro.mall.common.domain.WebLog
+ | 
+ |     mall-common/src/main/java/com/macro/mall/common/log/WebLogAspect.java:72
+ |   70|         long endTime = System.currentTimeMillis();                     
+ |   71|         String urlStr = request.getRequestURL().toString();            
+ |   72|         webLog.setBasePath(StrUtil.removeSuffix(urlStr, URLUtil.url(...
+ |   73|         webLog.setUsername(request.getRemoteUser());                   
+ |   74|         webLog.setIp(RequestUtil.getRequestIp(request));               
+ +--
+ |    error: cannot find symbol
+ |   symbol: method setUsername(java.lang.String)
+ | location: variable webLog of type com.macro.mall.common.domain.WebLog
+ | 
+ |     mall-common/src/main/java/com/macro/mall/common/log/WebLogAspect.java:73
+ |   71|         String urlStr = request.getRequestURL().toString();            
+ |   72|         webLog.setBasePath(StrUtil.removeSuffix(urlStr, URLUtil.url(...
+ |   73|         webLog.setUsername(request.getRemoteUser());                   
+ |   74|         webLog.setIp(RequestUtil.getRequestIp(request));               
+ |   75|         webLog.setMethod(request.getMethod());                         
+ +--
+ |    error: cannot find symbol
+ |   symbol: method setIp(java.lang.String)
+ | location: variable webLog of type com.macro.mall.common.domain.WebLog
+ | 
+ |     mall-common/src/main/java/com/macro/mall/common/log/WebLogAspect.java:74
+ |   72|         webLog.setBasePath(StrUtil.removeSuffix(urlStr, URLUtil.url(...
+ |   73|         webLog.setUsername(request.getRemoteUser());                   
+ |   74|         webLog.setIp(RequestUtil.getRequestIp(request));               
+ |   75|         webLog.setMethod(request.getMethod());                         
+ |   76|         webLog.setParameter(getParameter(method, joinPoint.getArgs()));
+ +--
+ |    error: cannot find symbol
+ |   symbol: method setMethod(java.lang.String)
+ | location: variable webLog of type com.macro.mall.common.domain.WebLog
+ | 
+ |     mall-common/src/main/java/com/macro/mall/common/log/WebLogAspect.java:75
+ |   73|         webLog.setUsername(request.getRemoteUser());                   
+ |   74|         webLog.setIp(RequestUtil.getRequestIp(request));               
+ |   75|         webLog.setMethod(request.getMethod());                         
+ |   76|         webLog.setParameter(getParameter(method, joinPoint.getArgs()));
+ |   77|         webLog.setResult(result);                                      
+ +--
+ |    error: cannot find symbol
+ |   symbol: method setParameter(java.lang.Object)
+ | location: variable webLog of type com.macro.mall.common.domain.WebLog
+ | 
+ |     mall-common/src/main/java/com/macro/mall/common/log/WebLogAspect.java:76
+ |   74|         webLog.setIp(RequestUtil.getRequestIp(request));               
+ |   75|         webLog.setMethod(request.getMethod());                         
+ |   76|         webLog.setParameter(getParameter(method, joinPoint.getArgs()));
+ |   77|         webLog.setResult(result);                                      
+ |   78|         webLog.setSpendTime((int) (endTime - startTime));              
+ +--
+ |    error: cannot find symbol
+ |   symbol: method setResult(java.lang.Object)
+ | location: variable webLog of type com.macro.mall.common.domain.WebLog
+ | 
+ |     mall-common/src/main/java/com/macro/mall/common/log/WebLogAspect.java:77
+ |   75|         webLog.setMethod(request.getMethod());                         
+ |   76|         webLog.setParameter(getParameter(method, joinPoint.getArgs()));
+ |   77|         webLog.setResult(result);                                      
+ |   78|         webLog.setSpendTime((int) (endTime - startTime));              
+ |   79|         webLog.setStartTime(startTime);                                
+ +--
+ |    error: cannot find symbol
+ |   symbol: method setSpendTime(int)
+ | location: variable webLog of type com.macro.mall.common.domain.WebLog
+ | 
+ |     mall-common/src/main/java/com/macro/mall/common/log/WebLogAspect.java:78
+ |   76|         webLog.setParameter(getParameter(method, joinPoint.getArgs()));
+ |   77|         webLog.setResult(result);                                      
+ |   78|         webLog.setSpendTime((int) (endTime - startTime));              
+ |   79|         webLog.setStartTime(startTime);                                
+ |   80|         webLog.setUri(request.getRequestURI());                        
+ +--
+ |    error: cannot find symbol
+ |   symbol: method setStartTime(long)
+ | location: variable webLog of type com.macro.mall.common.domain.WebLog
+ | 
+ |     mall-common/src/main/java/com/macro/mall/common/log/WebLogAspect.java:79
+ |   77|         webLog.setResult(result);                         
+ |   78|         webLog.setSpendTime((int) (endTime - startTime)); 
+ |   79|         webLog.setStartTime(startTime);                   
+ |   80|         webLog.setUri(request.getRequestURI());           
+ |   81|         webLog.setUrl(request.getRequestURL().toString());
+ +--
+ |    error: cannot find symbol
+ |   symbol: method setUri(java.lang.String)
+ | location: variable webLog of type com.macro.mall.common.domain.WebLog
+ | 
+ |     mall-common/src/main/java/com/macro/mall/common/log/WebLogAspect.java:80
+ |   78|         webLog.setSpendTime((int) (endTime - startTime)); 
+ |   79|         webLog.setStartTime(startTime);                   
+ |   80|         webLog.setUri(request.getRequestURI());           
+ |   81|         webLog.setUrl(request.getRequestURL().toString());
+ |   82|         Map<String,Object> logMap = new HashMap<>();      
+ +--
+ |    error: cannot find symbol
+ |   symbol: method setUrl(java.lang.String)
+ | location: variable webLog of type com.macro.mall.common.domain.WebLog
+ | 
+ |     mall-common/src/main/java/com/macro/mall/common/log/WebLogAspect.java:81
+ |   79|         webLog.setStartTime(startTime);                   
+ |   80|         webLog.setUri(request.getRequestURI());           
+ |   81|         webLog.setUrl(request.getRequestURL().toString());
+ |   82|         Map<String,Object> logMap = new HashMap<>();      
+ |   83|         logMap.put("url",webLog.getUrl());                
+ +--
+ |    error: cannot find symbol
+ |   symbol: method getUrl()
+ | location: variable webLog of type com.macro.mall.common.domain.WebLog
+ | 
+ |     mall-common/src/main/java/com/macro/mall/common/log/WebLogAspect.java:83
+ |   81|         webLog.setUrl(request.getRequestURL().toString());
+ |   82|         Map<String,Object> logMap = new HashMap<>();      
+ |   83|         logMap.put("url",webLog.getUrl());                
+ |   84|         logMap.put("method",webLog.getMethod());          
+ |   85|         logMap.put("parameter",webLog.getParameter());    
+ +--
+ |    error: cannot find symbol
+ |   symbol: method getMethod()
+ | location: variable webLog of type com.macro.mall.common.domain.WebLog
+ | 
+ |     mall-common/src/main/java/com/macro/mall/common/log/WebLogAspect.java:84
+ |   82|         Map<String,Object> logMap = new HashMap<>();  
+ |   83|         logMap.put("url",webLog.getUrl());            
+ |   84|         logMap.put("method",webLog.getMethod());      
+ |   85|         logMap.put("parameter",webLog.getParameter());
+ |   86|         logMap.put("spendTime",webLog.getSpendTime());
+ +--
+ |    error: cannot find symbol
+ |   symbol: method getParameter()
+ | location: variable webLog of type com.macro.mall.common.domain.WebLog
+ | 
+ |     mall-common/src/main/java/com/macro/mall/common/log/WebLogAspect.java:85
+ |   83|         logMap.put("url",webLog.getUrl());                
+ |   84|         logMap.put("method",webLog.getMethod());          
+ |   85|         logMap.put("parameter",webLog.getParameter());    
+ |   86|         logMap.put("spendTime",webLog.getSpendTime());    
+ |   87|         logMap.put("description",webLog.getDescription());
+ +--
+ |    error: cannot find symbol
+ |   symbol: method getSpendTime()
+ | location: variable webLog of type com.macro.mall.common.domain.WebLog
+ | 
+ |     mall-common/src/main/java/com/macro/mall/common/log/WebLogAspect.java:86
+ |   84|         logMap.put("method",webLog.getMethod());          
+ |   85|         logMap.put("parameter",webLog.getParameter());    
+ |   86|         logMap.put("spendTime",webLog.getSpendTime());    
+ |   87|         logMap.put("description",webLog.getDescription());
+ |   88| //        LOGGER.info("{}", JSONUtil.parse(webLog));      
+ +--
+ |    error: cannot find symbol
+ |   symbol: method getDescription()
+ | location: variable webLog of type com.macro.mall.common.domain.WebLog
+ | 
+ |     mall-common/src/main/java/com/macro/mall/common/log/WebLogAspect.java:87
+ |   85|         logMap.put("parameter",webLog.getParameter());                 
+ |   86|         logMap.put("spendTime",webLog.getSpendTime());                 
+ |   87|         logMap.put("description",webLog.getDescription());             
+ |   88| //        LOGGER.info("{}", JSONUtil.parse(webLog));                   
+ |   89|         LOGGER.info(Markers.appendEntries(logMap), JSONUtil.parse(we...
+ +--
+! [1 of 7] com.macro.mall:mall-common -- failed
+jk: ! Build > Failed to build com.macro.mall:mall-common - took 4.8s
+
+# -> fail exit=1 wall=5.0s

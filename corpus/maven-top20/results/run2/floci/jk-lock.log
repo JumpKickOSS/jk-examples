@@ -1,0 +1,10 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/floci && jk --no-progress --no-ansi --no-notify lock)   # 02:13:12
+
+[Resolve Deps] Failure
+ | java.util.NoSuchElementException
+ +--
+
+jk: ! Lock > Failed to lock dependencies
+
+# -> fail exit=6 wall=12.3s

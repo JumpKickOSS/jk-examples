@@ -1,0 +1,808 @@
+# jk import report
+
+Source: `/home/bsant/src/scratch/maven-corpus/quarkus/pom.xml`
+
+## Tier 3 — not imported
+
+These constructs have no jk equivalent and were skipped or stubbed.
+
+- `<build><extensions>` is not supported. Move build extensions to a custom jk task once tasks land.
+- [independent-projects/tools] `<parent>` io.quarkus:quarkus-parent:999-SNAPSHOT could not be resolved (Non-resolvable import POM: no repository has io.quarkus:quarkus-bootstrap-bom:999-SNAPSHOT (asked jumpkick, central, google)); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.
+- [independent-projects/extension-maven-plugin] `<parent>` io.quarkus:quarkus-parent:999-SNAPSHOT could not be resolved (Non-resolvable import POM: no repository has io.quarkus:quarkus-bootstrap-bom:999-SNAPSHOT (asked jumpkick, central, google); Non-resolvable import POM: no repository has io.quarkus:quarkus-bootstrap-bom-test:999-SNAPSHOT (asked jumpkick, central, google); 'dependencies.dependency.version' for io.quarkus:quarkus-bootstrap-core:jar is missing.; 'dependencies.dependency.version' for io.quarkus:quarkus-bootstrap-maven-resolver:jar is missing.; 'dependencies.dependency.version' for javax.inject:javax.inject:jar is missing.; 'dependencies.dependency.version' for org.apache.maven:maven-plugin-api:jar is missing.; 'dependencies.dependency.version' for org.apache.maven.plugin-tools:maven-plugin-annotations:jar is missing.; 'dependencies.dependency.version' for org.apache.maven:maven-core:jar is missing.; 'dependencies.dependency.version' for org.apache.maven:maven-embedder:jar is missing.; 'dependencies.dependency.version' for org.apache.maven:maven-settings-builder:jar is missing.; 'dependencies.dependency.version' for org.apache.maven:maven-resolver-provider:jar is missing.; 'dependencies.dependency.version' for org.apache.maven:maven-model:jar is missing.; 'dependencies.dependency.version' for org.apache.maven:maven-model-builder:jar is missing.; 'dependencies.dependency.version' for org.apache.maven:maven-artifact:jar is missing.; 'dependencies.dependency.version' for org.apache.maven:maven-settings:jar is missing.; 'dependencies.dependency.version' for org.apache.maven:maven-builder-support:jar is missing.; 'dependencies.dependency.version' for org.apache.maven:maven-repository-metadata:jar is missing.; 'dependencies.dependency.version' for commons-io:commons-io:jar is missing.; 'dependencies.dependency.version' for jakarta.inject:jakarta.inject-api:jar is missing.; 'dependencies.dependency.version' for org.apache.maven.plugin-testing:maven-plugin-testing-harness:jar is missing.); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.
+- [bom/application] `<parent>` io.quarkus:quarkus-project:999-SNAPSHOT could not be resolved (Non-resolvable import POM: no repository has io.quarkus:quarkus-bootstrap-bom:999-SNAPSHOT (asked jumpkick, central, google); Non-resolvable import POM: no repository has io.quarkus:quarkus-bom-dev-ui:999-SNAPSHOT (asked jumpkick, central, google); Invalid repository vertx-snapshots-repository: Illegal character in path at index 1: ${vertx.snapshotRepository}); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.
+- [bom/test] `<build><extensions>` is not supported. Move build extensions to a custom jk task once tasks land.
+- [bom/dev-ui] `<build><extensions>` is not supported. Move build extensions to a custom jk task once tasks land.
+- [build-parent] `<parent>` io.quarkus:quarkus-project:999-SNAPSHOT could not be resolved (Non-resolvable import POM: no repository has io.quarkus:quarkus-bom:999-SNAPSHOT (asked jumpkick, central, google)); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.
+- [core] `<parent>` io.quarkus:quarkus-build-parent:999-SNAPSHOT could not be resolved (Non-resolvable import POM: no repository has io.quarkus:quarkus-bom:999-SNAPSHOT (asked jumpkick, central, google)); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.
+- [test-framework] `<parent>` io.quarkus:quarkus-build-parent:999-SNAPSHOT could not be resolved (Non-resolvable import POM: no repository has io.quarkus:quarkus-bom:999-SNAPSHOT (asked jumpkick, central, google)); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.
+- [extensions] `<parent>` io.quarkus:quarkus-build-parent:999-SNAPSHOT could not be resolved (Non-resolvable import POM: no repository has io.quarkus:quarkus-bom:999-SNAPSHOT (asked jumpkick, central, google)); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.
+- [devtools] `<parent>` io.quarkus:quarkus-build-parent:999-SNAPSHOT could not be resolved (Non-resolvable import POM: no repository has io.quarkus:quarkus-bom:999-SNAPSHOT (asked jumpkick, central, google)); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.
+- [integration-tests] `<parent>` io.quarkus:quarkus-build-parent:999-SNAPSHOT could not be resolved (Non-resolvable import POM: no repository has io.quarkus:quarkus-bom-test:999-SNAPSHOT (asked jumpkick, central, google); Non-resolvable import POM: no repository has io.quarkus:quarkus-bom:999-SNAPSHOT (asked jumpkick, central, google)); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.
+- [docs] `<parent>` io.quarkus:quarkus-build-parent:999-SNAPSHOT could not be resolved (Non-resolvable import POM: no repository has io.quarkus:quarkus-bom:999-SNAPSHOT (asked jumpkick, central, google); 'dependencies.dependency.version' for tools.jackson.core:jackson-databind:jar is missing.; 'dependencies.dependency.version' for tools.jackson.dataformat:jackson-dataformat-yaml:jar is missing.; 'dependencies.dependency.version' for io.quarkus:quarkus-devtools-registry-client:jar is missing.; 'dependencies.dependency.version' for io.quarkus:quarkus-bootstrap-core:jar is missing.; 'dependencies.dependency.version' for org.testcontainers:testcontainers:jar is missing.; 'dependencies.dependency.version' for io.quarkus:quarkus-junit:jar is missing.); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.
+
+## Tier 2 — imported with best-effort
+
+These were mapped but you should review the result.
+
+- `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>forbiddenapis</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>module-services-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>maven-clean-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/parent] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/parent] `<plugin>forbiddenapis</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/parent] `<plugin>module-services-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/parent] `<plugin>maven-clean-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/parent] Maven profile `clean-cache` (activation property=clean-cache, a command-line switch jk has no equivalent for): active on this machine and folded into the import: plugins=[maven-clean-plugin].
+- [independent-projects/parent] Maven profile `release`: plugins=[maven-resources-plugin,maven-gpg-plugin,maven-jar-plugin,maven-source-plugin,maven-javadoc-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [independent-projects/parent] Maven profile `ci` (activation property=env.CI, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [independent-projects/ide-config] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/ide-config] `<plugin>forbiddenapis</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/ide-config] `<plugin>module-services-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/ide-config] `<plugin>maven-clean-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/ide-config] Maven profile `quick-build` (activation property=quickly, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [independent-projects/ide-config] Maven profile `quick-build-docs` (activation property=quicklyDocs, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [independent-projects/ide-config] Maven profile `quick-build-ci` (activation property=quickly-ci, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [independent-projects/revapi] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/revapi] `<plugin>forbiddenapis</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/revapi] `<plugin>module-services-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/revapi] `<plugin>maven-clean-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/revapi] `<plugin>maven-deploy-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/revapi] Maven profile `quick-build` (activation property=quickly, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [independent-projects/revapi] Maven profile `quick-build-docs` (activation property=quicklyDocs, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [independent-projects/revapi] Maven profile `quick-build-ci` (activation property=quickly-ci, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [independent-projects/arc] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/arc] `<plugin>forbiddenapis</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/arc] `<plugin>module-services-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/arc] `<plugin>maven-clean-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/arc] `<plugin>formatter-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/arc] `<plugin>impsort-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/arc] `<dependencyManagement>` in this POM pins 16 versions no declared dependency uses (io.quarkus.arc:arc, io.quarkus.arc:arc-processor, io.quarkus.arc:arc-arquillian, io.quarkus.arc:arc-cdi-tck-porting-pkg, jakarta.enterprise:jakarta.enterprise.cdi-api, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [independent-projects/arc] Maven profile `quick-build` (activation property=quickly, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [independent-projects/arc] Maven profile `quick-build-docs` (activation property=quicklyDocs, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [independent-projects/arc] Maven profile `quick-build-ci` (activation property=quickly-ci, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [independent-projects/arc] Maven profile `format` (activation activeByDefault+property=!no-format, a command-line switch jk has no equivalent for): active on this machine and folded into the import: plugins=[formatter-maven-plugin,impsort-maven-plugin].
+- [independent-projects/arc] Maven profile `validate` (activation activeByDefault+property=no-format, a command-line switch jk has no equivalent for): plugins=[formatter-maven-plugin,impsort-maven-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [independent-projects/arc] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [independent-projects/bootstrap] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/bootstrap] `<plugin>forbiddenapis</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/bootstrap] `<plugin>module-services-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/bootstrap] `<plugin>maven-clean-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/bootstrap] `<plugin>formatter-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/bootstrap] `<plugin>impsort-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/bootstrap] Maven profile `quick-build` (activation property=quickly, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [independent-projects/bootstrap] Maven profile `quick-build-docs` (activation property=quicklyDocs, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [independent-projects/bootstrap] Maven profile `quick-build-ci` (activation property=quickly-ci, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [independent-projects/bootstrap] Maven profile `format` (activation activeByDefault+property=!no-format, a command-line switch jk has no equivalent for): active on this machine and folded into the import: plugins=[formatter-maven-plugin,impsort-maven-plugin].
+- [independent-projects/bootstrap] Maven profile `validate` (activation activeByDefault+property=no-format, a command-line switch jk has no equivalent for): plugins=[formatter-maven-plugin,impsort-maven-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [independent-projects/bootstrap] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [independent-projects/qute] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/qute] `<plugin>forbiddenapis</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/qute] `<plugin>module-services-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/qute] `<plugin>maven-clean-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/qute] `<plugin>formatter-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/qute] `<plugin>impsort-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/qute] `<dependencyManagement>` in this POM pins 9 versions no declared dependency uses (org.assertj:assertj-core, io.quarkus.qute:qute-core, io.quarkus.qute:qute-generator, io.quarkus.qute:qute-debug, org.jboss.logging:jboss-logging, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [independent-projects/qute] Maven profile `quick-build` (activation property=quickly, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [independent-projects/qute] Maven profile `quick-build-docs` (activation property=quicklyDocs, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [independent-projects/qute] Maven profile `quick-build-ci` (activation property=quickly-ci, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [independent-projects/qute] Maven profile `format` (activation activeByDefault+property=!no-format, a command-line switch jk has no equivalent for): active on this machine and folded into the import: plugins=[formatter-maven-plugin,impsort-maven-plugin].
+- [independent-projects/qute] Maven profile `validate` (activation activeByDefault+property=no-format, a command-line switch jk has no equivalent for): plugins=[formatter-maven-plugin,impsort-maven-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [independent-projects/qute] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [independent-projects/tools] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/tools] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/tools] `<dependency>` io.quarkus:quarkus-bootstrap-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [independent-projects/tools] `<dependency>` tools.jackson:jackson-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [independent-projects/tools] `<dependency>` org.mockito:mockito-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [independent-projects/tools] `<dependency>` org.junit:junit-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [independent-projects/tools] `<dependencyManagement>` in this POM pins 17 versions no declared dependency uses (io.quarkus:quarkus-devtools-base-codestarts, io.quarkus:quarkus-devtools-testing, io.quarkus:quarkus-devtools-registry-client, org.apache.commons:commons-compress, io.quarkus.qute:qute-core, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [independent-projects/tools] Maven profile `quick-build` (activation property=quickly, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [independent-projects/tools] Maven profile `quick-build-docs` (activation property=quicklyDocs, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [independent-projects/tools] Maven profile `quick-build-ci` (activation property=quickly-ci, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [independent-projects/tools] Maven profile `format` (activation activeByDefault+property=!no-format, a command-line switch jk has no equivalent for): plugins=[formatter-maven-plugin,impsort-maven-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [independent-projects/tools] Maven profile `validate` (activation activeByDefault+property=no-format, a command-line switch jk has no equivalent for): plugins=[formatter-maven-plugin,impsort-maven-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [independent-projects/tools] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [independent-projects/enforcer-rules] `<resources>` with `<filtering>true</filtering>` on src/main/resources — jk has no resource filtering; `${...}` placeholders in those files are copied as written. Read the values at runtime or check the filled-in file in.
+- [independent-projects/enforcer-rules] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/enforcer-rules] `<plugin>forbiddenapis</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/enforcer-rules] `<plugin>module-services-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/enforcer-rules] `<plugin>maven-clean-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/enforcer-rules] `<plugin>sisu-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/enforcer-rules] `<plugin>maven-invoker-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/enforcer-rules] `<plugin>formatter-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/enforcer-rules] `<plugin>impsort-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/enforcer-rules] `<exclusions>` on org.apache.maven:maven-core — exclusion support lands in a later slice; exclusions were dropped.
+- [independent-projects/enforcer-rules] Maven profile `quick-build` (activation property=quickly, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [independent-projects/enforcer-rules] Maven profile `quick-build-docs` (activation property=quicklyDocs, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [independent-projects/enforcer-rules] Maven profile `quick-build-ci` (activation property=quickly-ci, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [independent-projects/enforcer-rules] Maven profile `format` (activation activeByDefault+property=!no-format, a command-line switch jk has no equivalent for): active on this machine and folded into the import: plugins=[formatter-maven-plugin,impsort-maven-plugin].
+- [independent-projects/enforcer-rules] Maven profile `validate` (activation activeByDefault+property=no-format, a command-line switch jk has no equivalent for): plugins=[formatter-maven-plugin,impsort-maven-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [independent-projects/vertx-utils] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/vertx-utils] `<plugin>forbiddenapis</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/vertx-utils] `<plugin>module-services-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/vertx-utils] `<plugin>maven-clean-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/resteasy-reactive] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/resteasy-reactive] `<plugin>forbiddenapis</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/resteasy-reactive] `<plugin>module-services-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/resteasy-reactive] `<plugin>maven-clean-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/resteasy-reactive] `<plugin>formatter-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/resteasy-reactive] `<plugin>impsort-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/resteasy-reactive] `<dependencyManagement>` in this POM pins 42 versions no declared dependency uses (io.quarkus.resteasy.reactive:resteasy-reactive, io.quarkus.resteasy.reactive:resteasy-reactive-processor, io.quarkus.resteasy.reactive:resteasy-reactive-build-support, io.quarkus.resteasy.reactive:resteasy-reactive-common-types, io.quarkus.resteasy.reactive:resteasy-reactive-common-processor, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [independent-projects/resteasy-reactive] Maven profile `quick-build` (activation property=quickly, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [independent-projects/resteasy-reactive] Maven profile `quick-build-docs` (activation property=quicklyDocs, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [independent-projects/resteasy-reactive] Maven profile `quick-build-ci` (activation property=quickly-ci, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [independent-projects/resteasy-reactive] Maven profile `format` (activation activeByDefault+property=!no-format, a command-line switch jk has no equivalent for): active on this machine and folded into the import: plugins=[formatter-maven-plugin,impsort-maven-plugin].
+- [independent-projects/resteasy-reactive] Maven profile `validate` (activation activeByDefault+property=no-format, a command-line switch jk has no equivalent for): plugins=[formatter-maven-plugin,impsort-maven-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [independent-projects/resteasy-reactive] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [independent-projects/extension-maven-plugin] `<testResources>` with `<filtering>true</filtering>` on src/test/resources-filtered — jk has no resource filtering; `${...}` placeholders in those files are copied as written. Read the values at runtime or check the filled-in file in.
+- [independent-projects/extension-maven-plugin] `<testResources>` directory src/test/resources-filtered is outside `src/test/resources` — jk's layout reads `src/test/resources` only; move the files there.
+- [independent-projects/extension-maven-plugin] `<plugin>sisu-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/extension-maven-plugin] `<plugin>maven-plugin-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/extension-maven-plugin] `maven.compiler.release` declared 11; jk's floor is 17; bytecode level raised — written as `java = 17`.
+- [independent-projects/extension-maven-plugin] `<dependency>` io.quarkus:quarkus-bootstrap-core has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [independent-projects/extension-maven-plugin] `<exclusions>` on io.quarkus:quarkus-bootstrap-maven-resolver — exclusion support lands in a later slice; exclusions were dropped.
+- [independent-projects/extension-maven-plugin] `<dependency>` io.quarkus:quarkus-bootstrap-maven-resolver has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [independent-projects/extension-maven-plugin] `<exclusions>` on io.quarkus:quarkus-devtools-common — exclusion support lands in a later slice; exclusions were dropped.
+- [independent-projects/extension-maven-plugin] `<dependency>` io.quarkus:quarkus-devtools-common has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [independent-projects/extension-maven-plugin] `<dependency>` javax.inject:javax.inject has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [independent-projects/extension-maven-plugin] `<dependency>` org.apache.maven:maven-plugin-api has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [independent-projects/extension-maven-plugin] `<dependency>` org.apache.maven.plugin-tools:maven-plugin-annotations has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [independent-projects/extension-maven-plugin] `<dependency>` org.apache.maven:maven-core has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [independent-projects/extension-maven-plugin] `<dependency>` org.apache.maven:maven-embedder has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [independent-projects/extension-maven-plugin] `<dependency>` org.apache.maven:maven-settings-builder has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [independent-projects/extension-maven-plugin] `<dependency>` org.apache.maven:maven-resolver-provider has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [independent-projects/extension-maven-plugin] `<dependency>` org.apache.maven:maven-model has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [independent-projects/extension-maven-plugin] `<dependency>` org.apache.maven:maven-model-builder has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [independent-projects/extension-maven-plugin] `<dependency>` org.apache.maven:maven-artifact has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [independent-projects/extension-maven-plugin] `<dependency>` org.apache.maven:maven-settings has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [independent-projects/extension-maven-plugin] `<dependency>` org.apache.maven:maven-builder-support has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [independent-projects/extension-maven-plugin] `<dependency>` org.apache.maven:maven-repository-metadata has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [independent-projects/extension-maven-plugin] `<dependency>` io.smallrye:jandex has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [independent-projects/extension-maven-plugin] `<dependency>` commons-io:commons-io has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [independent-projects/extension-maven-plugin] `<dependency>` tools.jackson.core:jackson-databind has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [independent-projects/extension-maven-plugin] `<dependency>` tools.jackson.dataformat:jackson-dataformat-yaml has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [independent-projects/extension-maven-plugin] `<dependency>` jakarta.inject:jakarta.inject-api has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [independent-projects/extension-maven-plugin] `<dependency>` io.smallrye.beanbag:smallrye-beanbag has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [independent-projects/extension-maven-plugin] `<exclusions>` on io.smallrye.beanbag:smallrye-beanbag-maven — exclusion support lands in a later slice; exclusions were dropped.
+- [independent-projects/extension-maven-plugin] `<dependency>` io.smallrye.beanbag:smallrye-beanbag-maven has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [independent-projects/extension-maven-plugin] `<exclusions>` on io.smallrye.beanbag:smallrye-beanbag-sisu — exclusion support lands in a later slice; exclusions were dropped.
+- [independent-projects/extension-maven-plugin] `<dependency>` io.smallrye.beanbag:smallrye-beanbag-sisu has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [independent-projects/extension-maven-plugin] `<dependency>` org.junit.jupiter:junit-jupiter has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [independent-projects/extension-maven-plugin] `<dependency>` org.apache.maven.plugin-testing:maven-plugin-testing-harness has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [independent-projects/extension-maven-plugin] `<dependency>` org.apache.maven:maven-compat has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [independent-projects/extension-maven-plugin] `<dependency>` org.mockito:mockito-core has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [independent-projects/extension-maven-plugin] `<exclusions>` on org.apache.maven.shared:maven-invoker — exclusion support lands in a later slice; exclusions were dropped.
+- [independent-projects/extension-maven-plugin] `<dependency>` io.quarkus:quarkus-bootstrap-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [independent-projects/extension-maven-plugin] `<dependency>` io.quarkus:quarkus-bootstrap-bom-test has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [independent-projects/extension-maven-plugin] `<dependency>` tools.jackson:jackson-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [independent-projects/extension-maven-plugin] `<dependency>` io.smallrye.beanbag:smallrye-beanbag-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [independent-projects/extension-maven-plugin] `<dependency>` org.junit:junit-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [independent-projects/extension-maven-plugin] `<dependency>` org.mockito:mockito-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [independent-projects/extension-maven-plugin] Maven profile `quick-build` (activation property=quickly, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [independent-projects/extension-maven-plugin] Maven profile `quick-build-docs` (activation property=quicklyDocs, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [independent-projects/extension-maven-plugin] Maven profile `quick-build-ci` (activation property=quickly-ci, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [independent-projects/extension-maven-plugin] Maven profile `format` (activation activeByDefault+property=!no-format, a command-line switch jk has no equivalent for): plugins=[formatter-maven-plugin,impsort-maven-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [independent-projects/extension-maven-plugin] Maven profile `validate` (activation activeByDefault+property=no-format, a command-line switch jk has no equivalent for): plugins=[formatter-maven-plugin,impsort-maven-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [independent-projects/junit-virtual-threads] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/junit-virtual-threads] `<plugin>forbiddenapis</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/junit-virtual-threads] `<plugin>module-services-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/junit-virtual-threads] `<plugin>maven-clean-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/junit-virtual-threads] `<plugin>formatter-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/junit-virtual-threads] `<plugin>impsort-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [independent-projects/junit-virtual-threads] versions for org.junit.jupiter:junit-jupiter, org.junit.platform:junit-platform-testkit, io.smallrye.common:smallrye-common-annotation managed by a BOM imported by this POM.
+- [independent-projects/junit-virtual-threads] Maven profile `quick-build` (activation property=quickly, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [independent-projects/junit-virtual-threads] Maven profile `quick-build-docs` (activation property=quicklyDocs, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [independent-projects/junit-virtual-threads] Maven profile `quick-build-ci` (activation property=quickly-ci, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [independent-projects/junit-virtual-threads] Maven profile `format` (activation activeByDefault+property=!no-format, a command-line switch jk has no equivalent for): active on this machine and folded into the import: plugins=[formatter-maven-plugin,impsort-maven-plugin].
+- [independent-projects/junit-virtual-threads] Maven profile `validate` (activation activeByDefault+property=no-format, a command-line switch jk has no equivalent for): plugins=[formatter-maven-plugin,impsort-maven-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [bom/application] `<plugin>quarkus-platform-bom-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bom/application] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bom/application] `<exclusions>` on io.quarkus:quarkus-bootstrap-bom — exclusion support lands in a later slice; exclusions were dropped.
+- [bom/application] `<dependency>` io.quarkus:quarkus-bootstrap-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [bom/application] `<dependency>` io.quarkus:quarkus-bootstrap-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [bom/application] `<dependency>` io.quarkus:quarkus-bom-dev-ui has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [bom/application] `<dependency>` io.smallrye.common:smallrye-common-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [bom/application] `<dependency>` io.netty:netty-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [bom/application] `<dependency>` tools.jackson:jackson-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [bom/application] `<dependency>` com.fasterxml.jackson:jackson-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [bom/application] `<dependency>` org.jboss.resteasy:resteasy-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [bom/application] `<dependency>` org.junit:junit-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [bom/application] `<dependency>` io.fabric8:kubernetes-client-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [bom/application] `<dependency>` io.vertx:vertx-dependencies has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [bom/application] `<dependency>` io.grpc:grpc-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [bom/application] `<dependency>` io.micrometer:micrometer-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [bom/application] `<dependency>` org.testcontainers:testcontainers-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [bom/application] `<dependency>` io.opentelemetry.instrumentation:opentelemetry-instrumentation-bom-alpha has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [bom/application] `<dependency>` com.oracle.database.jdbc:ojdbc-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [bom/application] `<dependency>` org.hibernate.search:hibernate-search-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [bom/application] `<dependency>` io.smallrye.reactive:mutiny-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [bom/application] `<dependency>` io.smallrye.reactive:vertx-mutiny-clients-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [bom/application] `<dependency>` com.google.http-client:google-http-client-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [bom/application] `<dependency>` org.jetbrains.kotlin:kotlin-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [bom/application] `<dependency>` org.jetbrains.kotlinx:kotlinx-coroutines-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [bom/application] `<dependency>` org.mockito:mockito-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [bom/application] `<dependency>` io.smallrye.reactive:smallrye-reactive-messaging-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [bom/application] `<dependency>` org.bouncycastle:bc-jdk18on-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [bom/application] `<dependency>` com.github.docker-java:docker-java-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [bom/application] `<dependency>` io.smallrye.config:smallrye-config-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [bom/application] `<dependency>` io.smallrye:smallrye-fault-tolerance-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [bom/application] `<dependency>` io.smallrye.stork:stork-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [bom/application] `<dependencyManagement>` in this POM pins 1124 versions no declared dependency uses (io.quarkus:quarkus-bom-quarkus-platform-descriptor, io.quarkus:quarkus-bom-quarkus-platform-properties, io.netty:netty-tcnative-classes, io.smallrye:smallrye-openssl, io.smallrye:smallrye-openssl, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [bom/application] dependency handle `jackson-bom` collides in [platform-dependencies]; com.fasterxml.jackson:jackson-bom was written as `jackson-bom-2`.
+- [bom/test] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bom/test] `<plugin>forbiddenapis</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bom/test] `<plugin>module-services-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bom/test] `<plugin>maven-clean-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bom/test] `<exclusions>` on io.quarkus:quarkus-bom — exclusion support lands in a later slice; exclusions were dropped.
+- [bom/test] `<dependencyManagement>` in this POM pins 5 versions no declared dependency uses (io.reactivex:rxjava, io.smallrye.certs:smallrye-certificate-generator-junit5, io.strimzi:strimzi-test-container, javax.xml.bind:jaxb-api, io.opentelemetry.proto:opentelemetry-proto); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [bom/dev-ui] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bom/dev-ui] `<plugin>forbiddenapis</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bom/dev-ui] `<plugin>module-services-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bom/dev-ui] `<plugin>maven-clean-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [bom/dev-ui] `<dependencyManagement>` in this POM pins 55 versions no declared dependency uses (org.mvnpm.at.vaadin:router, org.mvnpm:path-to-regexp, org.mvnpm:type-fest, org.mvnpm:tagged-tag, org.mvnpm.at.mvnpm:vaadin-webcomponents, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [build-parent] `<exclusions>` on io.quarkus:quarkus-bom — exclusion support lands in a later slice; exclusions were dropped.
+- [build-parent] `<dependency>` io.quarkus:quarkus-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [build-parent] `<dependency>` io.quarkus:quarkus-bom has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [build-parent] `<dependencyManagement>` in this POM pins 29 versions no declared dependency uses (io.quarkus:quarkus-devmode-test-utils, org.freemarker:freemarker, org.commonmark:commonmark, org.eclipse.jgit:org.eclipse.jgit, org.jboss.jdeparser:jdeparser, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [build-parent] Maven profile `format` (activation activeByDefault+property=!no-format, a command-line switch jk has no equivalent for): plugins=[formatter-maven-plugin,impsort-maven-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [build-parent] Maven profile `validate` (activation activeByDefault+property=no-format, a command-line switch jk has no equivalent for): plugins=[formatter-maven-plugin,impsort-maven-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [build-parent] Maven profile `format-kotlin` (activation activeByDefault+property=!no-format, a command-line switch jk has no equivalent for+file-existence, which jk has no equivalent for): plugins=[spotless-maven-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [build-parent] Maven profile `dokka` (activation property=dokka, a command-line switch jk has no equivalent for+file-existence, which jk has no equivalent for): plugins=[dokka-maven-plugin,maven-jar-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [build-parent] Maven profile `eclipse` (activation property=m2e.version, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [build-parent] Maven profile `test-coverage`: plugins=[jacoco-maven-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [build-parent] Maven profile `api-check`: plugins=[build-helper-maven-plugin,revapi-maven-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [build-parent] Maven profile `Windows` (activation os=Windows): no convertible payload; dropped.
+- [build-parent] Maven profile `mac-m1` (activation os=mac): no convertible payload; dropped.
+- [build-parent] Maven profile `aarch64` (activation os=?): no convertible payload; dropped.
+- [core] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [test-framework] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [test-framework] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [extensions] `<resources>` with `<filtering>true</filtering>` on src/main/resources — jk has no resource filtering; `${...}` placeholders in those files are copied as written. Read the values at runtime or check the filled-in file in.
+- [extensions] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [extensions] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [devtools] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [integration-tests] `<plugin>properties-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [integration-tests] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [integration-tests] `<exclusions>` on io.quarkus:quarkus-bom-test — exclusion support lands in a later slice; exclusions were dropped.
+- [integration-tests] `<dependency>` io.quarkus:quarkus-bom-test has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [integration-tests] `<dependency>` io.quarkus:quarkus-bom-test has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [integration-tests] `<dependencyManagement>` in this POM pins 3 versions no declared dependency uses (io.quarkus:quarkus-integration-test-class-transformer-deployment, io.quarkus:quarkus-integration-test-class-transformer, io.quarkus:quarkus-project-core-extension-codestarts); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [integration-tests] Maven profile `test-modules` (activation property=!no-test-modules, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [integration-tests] Maven profile `native` (activation property=native, a command-line switch jk has no equivalent for+file-existence, which jk has no equivalent for): plugins=[maven-failsafe-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [integration-tests] Maven profile `native-ci` (activation property=env.CI, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [integration-tests] Maven profile `unbind-executions` (activation file-existence, which jk has no equivalent for): plugins=[maven-source-plugin,maven-jar-plugin,maven-install-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [docs] `build-helper-maven-plugin` goal `parse-version` was not imported; only `add-source` and `add-test-source` map to source roots.
+- [docs] `build-helper-maven-plugin` goal `parse-version` was not imported; only `add-source` and `add-test-source` map to source roots.
+- [docs] `build-helper-maven-plugin` goal `parse-version` was not imported; only `add-source` and `add-test-source` map to source roots.
+- [docs] `build-helper-maven-plugin` goal `parse-version` was not imported; only `add-source` and `add-test-source` map to source roots.
+- [docs] `build-helper-maven-plugin` goal `parse-version` was not imported; only `add-source` and `add-test-source` map to source roots.
+- [docs] `<plugin>quarkus-config-doc-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [docs] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [docs] `<plugin>exec-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [docs] `<plugin>asciidoctor-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [docs] `<plugin>maven-assembly-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [docs] `<plugin>graphviz-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [docs] `<dependency>` tools.jackson.core:jackson-databind has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<dependency>` tools.jackson.dataformat:jackson-dataformat-yaml has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<dependency>` com.github.javaparser:javaparser-core has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<dependency>` io.fabric8:maven-model-helper has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<dependency>` org.eclipse.collections:eclipse-collections has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<dependency>` io.quarkus:quarkus-extension-processor has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<dependency>` io.quarkus:quarkus-devtools-registry-client has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-bootstrap-core — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-bootstrap-core has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<dependency>` org.asciidoctor:asciidoctorj has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<dependency>` org.eclipse.jgit:org.eclipse.jgit has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<dependency>` org.testcontainers:testcontainers has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<dependency>` io.quarkus:quarkus-junit has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-aesh-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-aesh-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-aesh-ssh-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-aesh-ssh-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-aesh-websocket-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-aesh-websocket-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-agroal-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-agroal-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-amazon-lambda-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-amazon-lambda-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-amazon-lambda-common-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-amazon-lambda-common-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-amazon-lambda-http-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-amazon-lambda-http-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-amazon-lambda-rest-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-amazon-lambda-rest-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-amazon-lambda-xray-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-amazon-lambda-xray-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-apache-httpclient-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-apache-httpclient-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-apicurio-registry-avro-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-apicurio-registry-avro-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-apicurio-registry-json-schema-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-apicurio-registry-json-schema-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-arc-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-arc-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-assistant-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-assistant-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-avro-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-avro-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-awt-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-awt-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-azure-functions-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-azure-functions-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-azure-functions-http-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-azure-functions-http-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-cache-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-cache-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-cache-kotlin-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-cache-kotlin-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-caffeine-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-caffeine-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-config-yaml-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-config-yaml-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-confluent-registry-avro-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-confluent-registry-avro-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-confluent-registry-json-schema-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-confluent-registry-json-schema-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-container-image-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-container-image-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-container-image-buildpack-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-container-image-buildpack-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-container-image-docker-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-container-image-docker-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-container-image-docker-common-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-container-image-docker-common-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-container-image-jib-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-container-image-jib-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-container-image-openshift-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-container-image-openshift-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-container-image-podman-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-container-image-podman-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-core-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-core-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-cyclonedx-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-cyclonedx-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-cyclonedx-endpoint-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-cyclonedx-endpoint-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-data-hibernate-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-data-hibernate-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-datasource-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-datasource-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-devjsonrpc-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-devjsonrpc-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-devmcp-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-devmcp-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-devservices-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-devservices-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-devui-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-devui-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-elasticsearch-java-client-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-elasticsearch-java-client-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-elasticsearch-rest-client-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-elasticsearch-rest-client-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-elasticsearch-rest-client-common-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-elasticsearch-rest-client-common-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-elytron-security-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-elytron-security-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-elytron-security-common-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-elytron-security-common-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-elytron-security-jdbc-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-elytron-security-jdbc-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-elytron-security-ldap-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-elytron-security-ldap-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-elytron-security-oauth2-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-elytron-security-oauth2-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-elytron-security-properties-file-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-elytron-security-properties-file-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-flyway-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-flyway-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-flyway-db2-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-flyway-db2-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-flyway-mssql-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-flyway-mssql-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-flyway-mysql-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-flyway-mysql-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-flyway-oracle-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-flyway-oracle-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-flyway-postgresql-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-flyway-postgresql-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-funqy-amazon-lambda-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-funqy-amazon-lambda-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-funqy-google-cloud-functions-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-funqy-google-cloud-functions-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-funqy-http-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-funqy-http-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-funqy-knative-events-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-funqy-knative-events-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-funqy-server-common-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-funqy-server-common-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-google-cloud-functions-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-google-cloud-functions-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-google-cloud-functions-http-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-google-cloud-functions-http-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-grpc-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-grpc-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-grpc-common-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-grpc-common-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-hal-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-hal-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-hibernate-envers-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-hibernate-envers-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-hibernate-orm-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-hibernate-orm-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-hibernate-orm-panache-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-hibernate-orm-panache-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-hibernate-orm-panache-common-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-hibernate-orm-panache-common-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-hibernate-orm-panache-kotlin-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-hibernate-orm-panache-kotlin-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-hibernate-orm-rest-data-panache-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-hibernate-orm-rest-data-panache-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-hibernate-reactive-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-hibernate-reactive-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-hibernate-reactive-panache-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-hibernate-reactive-panache-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-hibernate-reactive-panache-common-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-hibernate-reactive-panache-common-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-hibernate-reactive-panache-kotlin-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-hibernate-reactive-panache-kotlin-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-hibernate-reactive-rest-data-panache-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-hibernate-reactive-rest-data-panache-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-hibernate-search-backend-elasticsearch-common-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-hibernate-search-backend-elasticsearch-common-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-hibernate-search-orm-elasticsearch-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-hibernate-search-orm-elasticsearch-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-hibernate-search-orm-outbox-polling-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-hibernate-search-orm-outbox-polling-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-hibernate-search-standalone-elasticsearch-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-hibernate-search-standalone-elasticsearch-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-hibernate-validator-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-hibernate-validator-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-http3-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-http3-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-infinispan-cache-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-infinispan-cache-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-infinispan-client-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-infinispan-client-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-info-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-info-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-jackson-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-jackson-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-jacoco-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-jacoco-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-jaxb-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-jaxb-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-jaxp-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-jaxp-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-jdbc-db2-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-jdbc-db2-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-jdbc-h2-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-jdbc-h2-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-jdbc-mariadb-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-jdbc-mariadb-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-jdbc-mssql-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-jdbc-mssql-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-jdbc-mysql-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-jdbc-mysql-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-jdbc-oracle-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-jdbc-oracle-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-jdbc-postgresql-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-jdbc-postgresql-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-jfr-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-jfr-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-jlink-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-jlink-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-jsonb-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-jsonb-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-jsonp-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-jsonp-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-kafka-client-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-kafka-client-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-kafka-streams-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-kafka-streams-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-keycloak-admin-client-common-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-keycloak-admin-client-common-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-keycloak-admin-rest-client-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-keycloak-admin-rest-client-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-keycloak-admin-resteasy-client-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-keycloak-admin-resteasy-client-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-keycloak-authorization-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-keycloak-authorization-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-kind-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-kind-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-kotlin-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-kotlin-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-kubernetes-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-kubernetes-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-kubernetes-client-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-kubernetes-client-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-kubernetes-client-internal-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-kubernetes-client-internal-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-kubernetes-config-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-kubernetes-config-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-kubernetes-service-binding-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-kubernetes-service-binding-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-liquibase-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-liquibase-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-liquibase-mongodb-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-liquibase-mongodb-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-load-shedding-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-load-shedding-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-logging-gelf-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-logging-gelf-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-logging-json-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-logging-json-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-mailer-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-mailer-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-messaging-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-messaging-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-messaging-amqp-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-messaging-amqp-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-messaging-kafka-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-messaging-kafka-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-messaging-mqtt-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-messaging-mqtt-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-messaging-pulsar-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-messaging-pulsar-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-messaging-rabbitmq-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-messaging-rabbitmq-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-micrometer-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-micrometer-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-micrometer-opentelemetry-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-micrometer-opentelemetry-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-micrometer-registry-prometheus-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-micrometer-registry-prometheus-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-minikube-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-minikube-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-modular-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-modular-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-mongodb-client-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-mongodb-client-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-mongodb-panache-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-mongodb-panache-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-mongodb-panache-common-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-mongodb-panache-common-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-mongodb-panache-kotlin-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-mongodb-panache-kotlin-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-mongodb-rest-data-panache-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-mongodb-rest-data-panache-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-mutiny-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-mutiny-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-mutiny-reactive-streams-operators-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-mutiny-reactive-streams-operators-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-narayana-jta-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-narayana-jta-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-narayana-lra-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-narayana-lra-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-narayana-stm-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-narayana-stm-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-netty-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-netty-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-observability-devservices-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-observability-devservices-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-observation-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-observation-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-oidc-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-oidc-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-oidc-client-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-oidc-client-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-oidc-client-graphql-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-oidc-client-graphql-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-oidc-client-registration-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-oidc-client-registration-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-oidc-common-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-oidc-common-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-oidc-db-token-state-manager-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-oidc-db-token-state-manager-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-oidc-redis-token-state-manager-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-oidc-redis-token-state-manager-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-oidc-token-propagation-common-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-oidc-token-propagation-common-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-openshift-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-openshift-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-openshift-client-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-openshift-client-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-opentelemetry-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-opentelemetry-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-picocli-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-picocli-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-proxy-registry-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-proxy-registry-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-quartz-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-quartz-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-qute-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-qute-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-reactive-datasource-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-reactive-datasource-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-reactive-db2-client-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-reactive-db2-client-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-reactive-mssql-client-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-reactive-mssql-client-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-reactive-mysql-client-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-reactive-mysql-client-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-reactive-oracle-client-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-reactive-oracle-client-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-reactive-pg-client-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-reactive-pg-client-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-reactive-routes-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-reactive-routes-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-reactive-transactions-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-reactive-transactions-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-redis-cache-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-redis-cache-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-redis-client-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-redis-client-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-rest-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-rest-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-rest-client-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-rest-client-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-rest-client-config-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-rest-client-config-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-rest-client-jackson-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-rest-client-jackson-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-rest-client-jaxb-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-rest-client-jaxb-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-rest-client-jaxrs-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-rest-client-jaxrs-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-rest-client-jsonb-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-rest-client-jsonb-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-rest-client-kotlin-serialization-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-rest-client-kotlin-serialization-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-rest-client-oidc-filter-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-rest-client-oidc-filter-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-rest-client-oidc-token-propagation-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-rest-client-oidc-token-propagation-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-rest-common-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-rest-common-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-rest-csrf-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-rest-csrf-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-rest-data-hibernate-json-types-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-rest-data-hibernate-json-types-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-rest-data-panache-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-rest-data-panache-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-rest-jackson-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-rest-jackson-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-rest-jackson-common-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-rest-jackson-common-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-rest-jaxb-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-rest-jaxb-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-rest-jsonb-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-rest-jsonb-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-rest-jsonb-common-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-rest-jsonb-common-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-rest-kotlin-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-rest-kotlin-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-rest-kotlin-serialization-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-rest-kotlin-serialization-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-rest-kotlin-serialization-common-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-rest-kotlin-serialization-common-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-rest-links-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-rest-links-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-rest-qute-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-rest-qute-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-rest-servlet-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-rest-servlet-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-resteasy-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-resteasy-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-resteasy-client-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-resteasy-client-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-resteasy-client-jackson-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-resteasy-client-jackson-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-resteasy-client-jaxb-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-resteasy-client-jaxb-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-resteasy-client-jsonb-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-resteasy-client-jsonb-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-resteasy-client-mutiny-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-resteasy-client-mutiny-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-resteasy-client-oidc-filter-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-resteasy-client-oidc-filter-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-resteasy-client-oidc-token-propagation-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-resteasy-client-oidc-token-propagation-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-resteasy-common-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-resteasy-common-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-resteasy-jackson-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-resteasy-jackson-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-resteasy-jaxb-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-resteasy-jaxb-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-resteasy-jsonb-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-resteasy-jsonb-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-resteasy-links-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-resteasy-links-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-resteasy-multipart-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-resteasy-multipart-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-resteasy-mutiny-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-resteasy-mutiny-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-resteasy-mutiny-common-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-resteasy-mutiny-common-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-resteasy-qute-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-resteasy-qute-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-resteasy-server-common-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-resteasy-server-common-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-scheduler-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-scheduler-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-security-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-security-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-security-jpa-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-security-jpa-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-security-jpa-common-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-security-jpa-common-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-security-jpa-reactive-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-security-jpa-reactive-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-security-webauthn-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-security-webauthn-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-signals-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-signals-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-smallrye-context-propagation-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-smallrye-context-propagation-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-smallrye-fault-tolerance-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-smallrye-fault-tolerance-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-smallrye-graphql-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-smallrye-graphql-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-smallrye-graphql-client-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-smallrye-graphql-client-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-smallrye-health-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-smallrye-health-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-smallrye-jwt-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-smallrye-jwt-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-smallrye-jwt-build-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-smallrye-jwt-build-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-smallrye-openapi-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-smallrye-openapi-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-smallrye-reactive-streams-operators-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-smallrye-reactive-streams-operators-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-smallrye-reactive-type-converters-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-smallrye-reactive-type-converters-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-smallrye-stork-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-smallrye-stork-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-spiffe-client-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-spiffe-client-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-spring-boot-properties-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-spring-boot-properties-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-spring-cache-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-spring-cache-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-spring-cloud-config-client-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-spring-cloud-config-client-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-spring-data-jpa-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-spring-data-jpa-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-spring-data-rest-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-spring-data-rest-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-spring-di-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-spring-di-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-spring-scheduled-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-spring-scheduled-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-spring-security-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-spring-security-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-spring-tx-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-spring-tx-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-spring-web-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-spring-web-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-spring-web-rest-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-spring-web-rest-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-spring-web-resteasy-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-spring-web-resteasy-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-swagger-ui-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-swagger-ui-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-tls-registry-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-tls-registry-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-undertow-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-undertow-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-vertx-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-vertx-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-vertx-graphql-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-vertx-graphql-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-vertx-http-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-vertx-http-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-vertx-kotlin-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-vertx-kotlin-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-virtual-threads-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-virtual-threads-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-web-dependency-locator-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-web-dependency-locator-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-websockets-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-websockets-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-websockets-client-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-websockets-client-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] `<exclusions>` on io.quarkus:quarkus-websockets-next-deployment — exclusion support lands in a later slice; exclusions were dropped.
+- [docs] `<dependency>` io.quarkus:quarkus-websockets-next-deployment has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [docs] Maven profile `unbind-skip-docs` (activation property=skipDocs, a command-line switch jk has no equivalent for): plugins=[maven-source-plugin,maven-jar-plugin,maven-install-plugin,graphviz-maven-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [docs] Maven profile `documentation-pdf` (activation property=documentation-pdf, a command-line switch jk has no equivalent for): plugins=[asciidoctor-maven-plugin,maven-assembly-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [docs] Maven profile `go-offline` (activation property=go-offline, a command-line switch jk has no equivalent for): `<repositories>` central, confluent → merged into `[repositories]`; a repository is never conditional in jk.
+

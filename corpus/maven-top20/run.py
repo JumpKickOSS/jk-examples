@@ -217,6 +217,19 @@ def jk_results_headline(root: Path) -> str:
     if not p.is_file():
         return ""
     lines = p.read_text(encoding="utf-8", errors="replace").splitlines()
+    if "### Failed tests" in lines:
+        i = lines.index("### Failed tests")
+        cls = meth = exc = ""
+        for line in lines[i + 1:]:
+            if line.startswith("#### ") and not cls:
+                cls = line[5:].strip()
+            elif line.startswith("##### ") and not meth:
+                meth = line[6:].strip().split("`")[1] if "`" in line else line[6:].strip()
+            elif cls and meth and line.strip() and not line.startswith("```") and not exc:
+                exc = line.strip()
+                break
+        if cls:
+            return f"test failure: {cls}#{meth} — {exc}"[:260]
     if "## Failures" in lines:
         i = lines.index("## Failures")
         step = ""
@@ -731,6 +744,10 @@ def normalize_reason(text: str) -> str:
     t = re.sub(r"^-?\s*(`[^`]*`\s*)+:\s*", "", text)              # drop "- `module` `step`: " prefix
     t = re.sub(r"^\[[^\]]+\]\s*", "", t)                         # drop [module] / [step — module] prefix
     t = re.sub(r"jdk = \d+ is not supported", "jdk = <8|11> is not supported", t)
+    t = re.sub(r"could not be resolved \(.*?\); nothing was inherited", "could not be resolved (…); nothing was inherited", t)
+    t = re.sub(r"could not be built \(.*?\); nothing was inherited", "could not be built (…); nothing was inherited", t)
+    t = re.sub(r"`<parent>` G:A(:\S+)? could not", "`<parent>` G:A could not", t)
+    t = re.sub(r"test failure: (\S+)#(\S+) — (\S+).*", r"test failure: \1#\2 — \3", t) if t.startswith("test failure:") and False else t
     t = re.sub(r"\[[^\]]*,\s*\+∞\)", "[N,+∞)", t)                  # open version ranges
     t = re.sub(r"`?[\w.-]+:[\w.-]+(:[\w.-]+)?`?", "G:A", t)        # coordinates
     t = re.sub(r"/home/\S+", "<path>", t)

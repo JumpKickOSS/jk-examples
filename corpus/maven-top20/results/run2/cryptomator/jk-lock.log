@@ -1,0 +1,18 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/cryptomator && jk --no-progress --no-ansi --no-notify lock)   # 02:15:54
+
+‼ Cannot resolve dependencies:
+  │ Org.cryptomator:cryptofs 2.10.0 depends on jakarta.inject:jakarta.inject-api [2.0.1.MR,+∞)
+  │ The project depends on jakarta.inject:jakarta.inject-api 2.0.1
+  │ Therefore, org.cryptomator:cryptofs 2.10.0 and the project cannot be resolved
+  │ The project depends on org.cryptomator:cryptofs 2.10.0
+  │ Therefore, the project's requirements cannot be resolved
+
+Suggestions:
+  • Relax or remove the project constraint on jakarta.inject:jakarta.inject-api
+  • Relax or remove the project constraint on org.cryptomator:cryptofs
+
+
+jk: ! Lock > Failed to lock dependencies
+
+# -> fail exit=6 wall=2.4s

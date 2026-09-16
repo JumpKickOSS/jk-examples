@@ -1,0 +1,32 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/neo4j && jk --no-progress --no-ansi --no-notify test)   # 02:18:21
+
++ [1 of 3] org.neo4j.build:packaging-build - took 4ms
++ [2 of 3] org.neo4j.build:community-build - took 5ms
+[Test] Failure in org.neo4j:annotations > 1 test failed
+ | 
+ | FAILED (test run)
+ | 
+ | test discovery exited 70
+ | 
+ | 	at org.junit.platform.commons.util.Preconditions.condition(Preconditions.java:389)
+ | 	at org.junit.platform.launcher.core.DefaultLauncher.<init>(DefaultLauncher.java:61)
+ | 	at org.junit.platform.launcher.core.LauncherFactory.createDefaultLauncher(LauncherFactory.java:142)
+ | 	at org.junit.platform.launcher.core.LauncherFactory.lambda$create$0(LauncherFactory.java:133)
+ | 	at org.junit.platform.launcher.core.DefaultLauncherSession.lambda$new$0(DefaultLauncherSession.java:67)
+ | 	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25)
+ | 	at org.junit.platform.launcher.core.DefaultLauncherSession.<init>(DefaultLauncherSession.java:67)
+ | 	at org.junit.platform.launcher.core.SessionPerRequestLauncher.createSession(SessionPerRequestLauncher.java:99)
+ | 	at org.junit.platform.launcher.core.SessionPerRequestLauncher.discover(SessionPerRequestLauncher.java:65)
+ | 	at cc.jumpkick.testrunner.LauncherPath.runListOnly(LauncherPath.java:112)
+ | 	at cc.jumpkick.testrunner.TestRunner.runListOnly(TestRunner.java:91)
+ | 	at cc.jumpkick.testrunner.TestRunner.run(TestRunner.java:57)
+ | 	at cc.jumpkick.plugin.process.PluginMain.main(PluginMain.java:65)
+ +--
+[Run Tests] Failure in org.neo4j:annotations
+ | 1 test failure
+ +--
+! [3 of 3] org.neo4j:annotations -- failed
+jk: ! Test > Failed to test org.neo4j:annotations -- failed - took 865ms
+
+# -> fail exit=4 wall=0.9s

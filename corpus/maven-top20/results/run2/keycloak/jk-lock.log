@@ -1,0 +1,10 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/keycloak && jk --no-progress --no-ansi --no-notify lock)   # 02:10:57
+
+[Resolve Deps] Failure
+ | platform BOM conflict on `com.github.ben-manes.caffeine:caffeine`: org.apache.directory.api:api-parent:2.1.8 constrains to 2.9.3, but io.quarkus.platform:quarkus-bom:3.39.2 constrains to 3.2.4. Pick one BOM or pin the coord explicitly.
+ +--
+
+jk: ! Lock > Failed to lock dependencies
+
+# -> fail exit=6 wall=0.3s

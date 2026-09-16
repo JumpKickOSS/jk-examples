@@ -1,0 +1,7 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/neo4j && jk --no-progress --no-ansi --no-notify lock)   # 02:18:18
+
++ [19] org.junit.platform:junit-platform-commons:6.1.3
+jk: + Lock > Workspace lock successful. Resolved 19 dependencies - took 1.4s
+
+# -> ok exit=0 wall=1.4s

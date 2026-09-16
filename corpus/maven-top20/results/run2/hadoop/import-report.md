@@ -1,0 +1,168 @@
+# jk import report
+
+Source: `/home/bsant/src/scratch/maven-corpus/hadoop/pom.xml`
+
+## Tier 3 — not imported
+
+These constructs have no jk equivalent and were skipped or stubbed.
+
+- the effective model could not be built (Invalid repository ${distMgmtSnapshotsId}: Illegal character in path at index 1: ${distMgmtSnapshotsUrl}); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.
+- [hadoop-project] `<parent>` org.apache.hadoop:hadoop-main:3.6.0-SNAPSHOT could not be resolved (Invalid repository ${distMgmtSnapshotsId}: Illegal character in path at index 1: ${distMgmtSnapshotsUrl}); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.
+- [hadoop-project] `<build><extensions>` is not supported. Move build extensions to a custom jk task once tasks land.
+- [hadoop-project-dist] `<parent>` org.apache.hadoop:hadoop-project:3.6.0-SNAPSHOT could not be resolved (Invalid repository ${distMgmtSnapshotsId}: Illegal character in path at index 1: ${distMgmtSnapshotsUrl}); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.
+- [hadoop-assemblies] `<parent>` org.apache.hadoop:hadoop-project:3.6.0-SNAPSHOT could not be resolved (Invalid repository ${distMgmtSnapshotsId}: Illegal character in path at index 1: ${distMgmtSnapshotsUrl}); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.
+- [hadoop-maven-plugins] `<parent>` org.apache.hadoop:hadoop-project:3.6.0-SNAPSHOT could not be resolved (Invalid repository ${distMgmtSnapshotsId}: Illegal character in path at index 1: ${distMgmtSnapshotsUrl}); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.
+- [hadoop-common-project] `<parent>` org.apache.hadoop:hadoop-project:3.6.0-SNAPSHOT could not be resolved (Invalid repository ${distMgmtSnapshotsId}: Illegal character in path at index 1: ${distMgmtSnapshotsUrl}); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.
+- [hadoop-hdfs-project] `<parent>` org.apache.hadoop:hadoop-project:3.6.0-SNAPSHOT could not be resolved (Invalid repository ${distMgmtSnapshotsId}: Illegal character in path at index 1: ${distMgmtSnapshotsUrl}); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.
+- [hadoop-yarn-project] `<parent>` org.apache.hadoop:hadoop-project:3.6.0-SNAPSHOT could not be resolved (Invalid repository ${distMgmtSnapshotsId}: Illegal character in path at index 1: ${distMgmtSnapshotsUrl}); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.
+- [hadoop-mapreduce-project] `<parent>` org.apache.hadoop:hadoop-project:3.6.0-SNAPSHOT could not be resolved (Invalid repository ${distMgmtSnapshotsId}: Illegal character in path at index 1: ${distMgmtSnapshotsUrl}); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.
+- [hadoop-tools] `<parent>` org.apache.hadoop:hadoop-project:3.6.0-SNAPSHOT could not be resolved (Invalid repository ${distMgmtSnapshotsId}: Illegal character in path at index 1: ${distMgmtSnapshotsUrl}); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.
+- [hadoop-minicluster] `<parent>` org.apache.hadoop:hadoop-project:3.6.0-SNAPSHOT could not be resolved (Invalid repository ${distMgmtSnapshotsId}: Illegal character in path at index 1: ${distMgmtSnapshotsUrl}); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.
+- [hadoop-client-modules] `<parent>` org.apache.hadoop:hadoop-project:3.6.0-SNAPSHOT could not be resolved (Invalid repository ${distMgmtSnapshotsId}: Illegal character in path at index 1: ${distMgmtSnapshotsUrl}); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.
+- [hadoop-build-tools] `<parent>` org.apache.hadoop:hadoop-main:3.6.0-SNAPSHOT could not be resolved (Invalid repository ${distMgmtSnapshotsId}: Illegal character in path at index 1: ${distMgmtSnapshotsUrl}); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.
+- [hadoop-cloud-storage-project] `<parent>` org.apache.hadoop:hadoop-project:3.6.0-SNAPSHOT could not be resolved (Invalid repository ${distMgmtSnapshotsId}: Illegal character in path at index 1: ${distMgmtSnapshotsUrl}); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.
+- [hadoop-dist] `<parent>` org.apache.hadoop:hadoop-project:3.6.0-SNAPSHOT could not be resolved (Invalid repository ${distMgmtSnapshotsId}: Illegal character in path at index 1: ${distMgmtSnapshotsUrl}); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.
+
+## Tier 2 — imported with best-effort
+
+These were mapped but you should review the result.
+
+- `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>maven-site-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>maven-bundle-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>maven-checkstyle-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>dependency-check-maven</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>spotbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- `<plugin>cyclonedx-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [hadoop-project] `<plugin>maven-clean-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [hadoop-project] `<plugin>maven-antrun-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [hadoop-project] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [hadoop-project] `<plugin>jacoco-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [hadoop-project] `<plugin>maven-pdf-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [hadoop-project] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [hadoop-project] `<plugin>replacer</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [hadoop-project] `<dependencyManagement>` in this POM pins 259 versions no declared dependency uses (com.squareup.okhttp3:mockwebserver3-junit5, org.jetbrains.kotlin:kotlin-stdlib-jdk8, io.github.zhtttylz:jdiff, org.apache.hadoop.thirdparty:hadoop-shaded-protobuf_3_25, org.apache.hadoop.thirdparty:hadoop-shaded-guava, …); jk applies managed versions to declared dependencies only, so transitive versions follow the resolver.
+- [hadoop-project] Maven profile `native-win` (activation os=Windows): plugins=[maven-surefire-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [hadoop-project] Maven profile `test-patch`: compiler settings → `[profiles.test-patch]` `javac`; select with `--profile test-patch`.
+- [hadoop-project] Maven profile `dist`: plugins=[maven-javadoc-plugin,maven-source-plugin,maven-enforcer-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [hadoop-project] Maven profile `resource-bundle` (activation file-existence, which jk has no equivalent for): plugins=[maven-remote-resources-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [hadoop-project] Maven profile `hbase2` (activation property=hbase.profile, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [hadoop-project] Maven profile `quiet-surefire`: plugins=[maven-surefire-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [hadoop-project-dist] `<plugin>spotbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [hadoop-project-dist] `<dependency>` org.apache.hadoop:hadoop-annotations has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-project-dist] `<dependency>` xerces:xercesImpl has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-project-dist] Maven profile `docs`: 1 dependency → `[features.docs]` (optional deps xercesImpl; not in `default`, activate with `--features docs`).
+- [hadoop-project-dist] Maven profile `docs`: plugins=[maven-javadoc-plugin,maven-dependency-plugin,maven-antrun-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [hadoop-project-dist] Maven profile `dist`: plugins=[exec-maven-plugin,maven-antrun-plugin,maven-assembly-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [hadoop-project-dist] Maven profile `doclet` (activation jdk=(,10)): plugins=[maven-javadoc-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [hadoop-project-dist] Maven profile `doclet-jdk17` (activation jdk=[17,)): plugins=[maven-javadoc-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [hadoop-assemblies] `<plugin>maven-enforcer-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [hadoop-assemblies] `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [hadoop-maven-plugins] `<plugin>maven-plugin-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [hadoop-maven-plugins] `<exclusions>` on org.apache.maven:maven-plugin-api — exclusion support lands in a later slice; exclusions were dropped.
+- [hadoop-maven-plugins] `<dependency>` org.apache.maven:maven-plugin-api has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-maven-plugins] `<exclusions>` on org.apache.maven:maven-core — exclusion support lands in a later slice; exclusions were dropped.
+- [hadoop-maven-plugins] `<dependency>` org.apache.maven:maven-core has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-maven-plugins] `<dependency>` org.codehaus.plexus:plexus-classworlds has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-maven-plugins] `<dependency>` org.eclipse.sisu:org.eclipse.sisu.inject has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-maven-plugins] `<exclusions>` on org.apache.maven.plugin-tools:maven-plugin-annotations — exclusion support lands in a later slice; exclusions were dropped.
+- [hadoop-maven-plugins] `<dependency>` org.apache.maven.plugin-tools:maven-plugin-annotations has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-maven-plugins] `<dependency>` commons-io:commons-io has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-maven-plugins] `<dependency>` com.fasterxml.jackson.core:jackson-databind has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-maven-plugins] `<dependency>` org.apache.hadoop.thirdparty:hadoop-shaded-guava has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-common-project] `<plugin>maven-deploy-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [hadoop-common-project] `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [hadoop-common-project] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [hadoop-hdfs-project] `<plugin>maven-deploy-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [hadoop-hdfs-project] `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [hadoop-hdfs-project] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [hadoop-yarn-project] `<plugin>maven-antrun-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [hadoop-yarn-project] `<dependency>` org.apache.hadoop:hadoop-yarn-api has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-yarn-project] `<dependency>` org.apache.hadoop:hadoop-yarn-client has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-yarn-project] `<dependency>` org.apache.hadoop:hadoop-yarn-common has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-yarn-project] `<dependency>` org.apache.hadoop:hadoop-yarn-server-common has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-yarn-project] `<dependency>` org.apache.hadoop:hadoop-yarn-server-nodemanager has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-yarn-project] `<dependency>` org.apache.hadoop:hadoop-yarn-server-resourcemanager has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-yarn-project] `<dependency>` org.apache.hadoop:hadoop-yarn-server-web-proxy has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-yarn-project] `<dependency>` org.apache.hadoop:hadoop-yarn-server-router has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-yarn-project] `<dependency>` org.apache.hadoop:hadoop-yarn-server-globalpolicygenerator has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-yarn-project] `<dependency>` org.apache.hadoop:hadoop-yarn-services-core has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-yarn-project] `<dependency>` org.apache.hadoop:hadoop-yarn-applications-catalog-webapp has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-yarn-project] `<dependency>` org.apache.hadoop:hadoop-yarn-applications-distributedshell has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-yarn-project] `<dependency>` org.apache.hadoop:hadoop-yarn-applications-unmanaged-am-launcher has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-yarn-project] `<dependency>` org.apache.hadoop:hadoop-yarn-server-tests has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-yarn-project] `<exclusions>` on org.apache.hadoop:hadoop-yarn-server-timelineservice-hbase-client — exclusion support lands in a later slice; exclusions were dropped.
+- [hadoop-yarn-project] `<dependency>` org.apache.hadoop:hadoop-yarn-server-timelineservice-hbase-client has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-yarn-project] `<exclusions>` on org.apache.hadoop:hadoop-yarn-csi — exclusion support lands in a later slice; exclusions were dropped.
+- [hadoop-yarn-project] `<dependency>` org.apache.hadoop:hadoop-yarn-csi has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-yarn-project] `<dependency>` org.apache.hadoop:hadoop-yarn-server-timelineservice-documentstore has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-yarn-project] `<dependency>` org.apache.hadoop:hadoop-yarn-server-timelineservice-hbase-tests has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-yarn-project] `<dependency>` org.apache.hadoop:hadoop-yarn-ui has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-yarn-project] `<dependency>` org.apache.hadoop:hadoop-yarn-capacity-scheduler-ui has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-yarn-project] `<dependency>` org.apache.hadoop:hadoop-yarn-server-timelineservice-hbase-server-2 has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-yarn-project] Maven profile `yarn-ui`: no convertible payload; dropped.
+- [hadoop-yarn-project] Maven profile `dist`: plugins=[maven-source-plugin,maven-assembly-plugin,maven-antrun-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [hadoop-yarn-project] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [hadoop-mapreduce-project] `<plugin>maven-antrun-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [hadoop-mapreduce-project] `<plugin>spotbugs-maven-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [hadoop-mapreduce-project] `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [hadoop-mapreduce-project] `<plugin>maven-surefire-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [hadoop-mapreduce-project] `<dependency>` org.apache.hadoop:hadoop-mapreduce-client-app has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-mapreduce-project] `<dependency>` org.apache.hadoop:hadoop-mapreduce-client-common has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-mapreduce-project] `<dependency>` org.apache.hadoop:hadoop-mapreduce-client-core has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-mapreduce-project] `<dependency>` org.apache.hadoop:hadoop-mapreduce-client-hs has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-mapreduce-project] `<dependency>` org.apache.hadoop:hadoop-mapreduce-client-jobclient has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-mapreduce-project] `<dependency>` org.apache.hadoop:hadoop-mapreduce-client-nativetask has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-mapreduce-project] `<dependency>` org.apache.hadoop:hadoop-mapreduce-client-shuffle has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-mapreduce-project] `<dependency>` org.apache.hadoop:hadoop-mapreduce-examples has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-mapreduce-project] `<dependency>` org.apache.hadoop:hadoop-mapreduce-client-hs-plugins has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-mapreduce-project] Maven profile `dist`: plugins=[maven-source-plugin,maven-antrun-plugin,maven-assembly-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [hadoop-mapreduce-project] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [hadoop-tools] `<plugin>maven-deploy-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [hadoop-tools] `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [hadoop-tools] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [hadoop-minicluster] `<dependency>` org.apache.hadoop:hadoop-common has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-minicluster] `<type>test-jar</type>` on org.apache.hadoop:hadoop-common is in Maven scope `compile`; jk models test-jar deps as kind=tests, which is only legal in test scopes — moved to [test-dependencies].
+- [hadoop-minicluster] `<exclusions>` on org.apache.hadoop:hadoop-hdfs — exclusion support lands in a later slice; exclusions were dropped.
+- [hadoop-minicluster] `<dependency>` org.apache.hadoop:hadoop-hdfs has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-minicluster] `<type>test-jar</type>` on org.apache.hadoop:hadoop-hdfs is in Maven scope `compile`; jk models test-jar deps as kind=tests, which is only legal in test scopes — moved to [test-dependencies].
+- [hadoop-minicluster] `<dependency>` org.apache.hadoop:hadoop-yarn-server-tests has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-minicluster] `<type>test-jar</type>` on org.apache.hadoop:hadoop-yarn-server-tests is in Maven scope `compile`; jk models test-jar deps as kind=tests, which is only legal in test scopes — moved to [test-dependencies].
+- [hadoop-minicluster] `<dependency>` org.apache.hadoop:hadoop-mapreduce-client-jobclient has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-minicluster] `<type>test-jar</type>` on org.apache.hadoop:hadoop-mapreduce-client-jobclient is in Maven scope `compile`; jk models test-jar deps as kind=tests, which is only legal in test scopes — moved to [test-dependencies].
+- [hadoop-minicluster] `<dependency>` org.apache.hadoop:hadoop-common has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-minicluster] `<dependency>` org.apache.hadoop:hadoop-hdfs has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-minicluster] `<dependency>` org.apache.hadoop:hadoop-mapreduce-client-app has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-minicluster] `<dependency>` org.apache.hadoop:hadoop-yarn-api has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-minicluster] `<dependency>` org.apache.hadoop:hadoop-mapreduce-client-core has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-minicluster] `<dependency>` org.apache.hadoop:hadoop-mapreduce-client-jobclient has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-minicluster] `<dependency>` org.apache.hadoop:hadoop-mapreduce-client-hs has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-minicluster] `<dependency>` org.apache.hadoop:hadoop-yarn-server-web-proxy has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-client-modules] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [hadoop-build-tools] `<resources>` directory target/extra-resources is outside `src/main/resources` — jk's layout reads `src/main/resources` only; move the files there.
+- [hadoop-build-tools] `<plugin>maven-site-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [hadoop-build-tools] `<plugin>maven-remote-resources-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [hadoop-build-tools] `<plugin>maven-antrun-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [hadoop-build-tools] `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [hadoop-cloud-storage-project] `<plugin>maven-deploy-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [hadoop-cloud-storage-project] `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [hadoop-cloud-storage-project] Maven profile `dist` (activation property=tar, a command-line switch jk has no equivalent for): no convertible payload; dropped.
+- [hadoop-cloud-storage-project] `<modules>` block present but this import was run in single-POM mode. Re-run as `jk import pom.xml` from the project root to materialise a workspace.
+- [hadoop-dist] `<plugin>maven-deploy-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [hadoop-dist] `<plugin>apache-rat-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [hadoop-dist] `<plugin>maven-install-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [hadoop-dist] `<plugin>maven-gpg-plugin</plugin>` was not imported; docs/user/migration.md lists where it lands in jk.
+- [hadoop-dist] `<dependency>` org.apache.hadoop:hadoop-common has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-dist] `<dependency>` org.apache.hadoop:hadoop-hdfs-client has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-dist] `<dependency>` org.apache.hadoop:hadoop-hdfs-native-client has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-dist] `<dependency>` org.apache.hadoop:hadoop-mapreduce-client-app has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-dist] `<dependency>` org.apache.hadoop:hadoop-mapreduce-client-nativetask has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-dist] `<dependency>` org.apache.hadoop:hadoop-yarn-api has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-dist] `<dependency>` org.apache.hadoop:hadoop-client-check-invariants has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-dist] `<dependency>` org.apache.hadoop:hadoop-client-check-test-invariants has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-dist] `<dependency>` org.apache.hadoop:hadoop-client-integration-tests has no resolved `<version>` anywhere in its parent chain; jk wrote `=unresolved`. Pin it in the POM and re-import.
+- [hadoop-dist] Maven profile `dist` (activation property=tar, a command-line switch jk has no equivalent for): plugins=[exec-maven-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [hadoop-dist] Maven profile `docker-build`: plugins=[docker-maven-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+- [hadoop-dist] Maven profile `docker-push`: plugins=[docker-maven-plugin] — port by hand; docs/user/migration.md lists where each plugin lands.
+

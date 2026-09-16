@@ -1,0 +1,7 @@
+
+$ (cd /home/bsant/src/scratch/maven-corpus/xxl-job && jk --no-progress --no-ansi --no-notify lock)   # 02:19:09
+
++ [116] org.junit.jupiter:junit-jupiter:6.0.3
+jk: + Lock > Workspace lock successful. Resolved 116 dependencies - took 2.2s
+
+# -> ok exit=0 wall=2.2s

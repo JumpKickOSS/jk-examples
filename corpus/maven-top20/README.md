@@ -81,7 +81,7 @@ jk itself writes (`jk.toml`, `jk-lock.toml`, `target/`), which the next run's re
 ./run.sh --skip-mvn            # never run Maven, even when no earlier row exists
 ./run.sh --fresh-m2            # wipe the corpus .m2 first so Maven cold is cold again
 JK_COMMIT=<sha> ./run.sh       # record the commit of a main-built jk in every row (the binary embeds none)
-./run.sh --run run2-main-b5dd989b9   # label the rows; every label gets its own table and a side-by-side column
+./run.sh --run run2              # label the rows; every label gets its own table and a side-by-side column
 ```
 
 Run labels are how the ratchet compares two jk builds: rows carry `run` (default `run1`, file
@@ -110,6 +110,10 @@ declared level. Run #1 found three such repos (analysis-ik, jenkins, zipkin: all
   count in the ratchet.
 - A step killed by the 45-minute repo cap is `capped`, distinct from a step that hit its own 20-minute
   test timeout (`timeout`).
+- jk's action cache lives under `~/.jk` and survives the clone reset, so only the *first* jk measurement
+  of a repo after a jk install is a true cold build; a re-measured `jk cold` is cache-warm (TheAlgorithms:
+  12.8 s first, 2.5 s re-measured). Maven has the same property through the corpus `.m2` for downloads but
+  not for compilation. A `--cache-dir` sweep per run is the follow-up if cold-vs-cold matters.
 
 ## Reading the ratchet
 
