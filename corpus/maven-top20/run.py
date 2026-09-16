@@ -595,7 +595,10 @@ def tests_cell(step: dict | None, t: dict | None, line: dict | None = None) -> s
     if st in (None, "skipped", "capped"):
         return "—" if st != "capped" else "capped"
     if total == 0:
-        return "no tests ran" if st == "ok" else f"{st}, no results"
+        # jk answers a run that found no test with exit 2 and `no tests ran`; Maven answers exit 0.
+        if st == "ok" or (step or {}).get("exit") == 2:
+            return "no tests ran"
+        return f"{st}, no results"
     cell = f"{passed}/{total}"
     return cell if st == "ok" else f"{cell} ({st})"
 
