@@ -1,6 +1,6 @@
 # Tier-3 reasons (import ERRORs and jk failures), grouped — run9
 
-Generated 2026-09-16 20:31. Module prefixes, coordinates, versions and paths are normalized so one line = one distinct cause = one ticket candidate.
+Generated 2026-09-16 20:43. Module prefixes, coordinates, versions and paths are normalized so one line = one distinct cause = one ticket candidate.
 
 ## import Tier 3 (not imported)
 

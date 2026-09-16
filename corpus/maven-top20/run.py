@@ -733,6 +733,7 @@ def render(repos: list[dict], rows: dict[str, dict] | None = None) -> None:
     lines += ["`built nothing` / `ok (n/m modules)` = `jk build` exited 0 but the imported workspace covers none / only n of the m poms; a build of nothing does not count in the ratchet.", "",
               "`no tests ran` = the step exited 0 but no test result was produced (e.g. an aggregator root imported with no sources, or a pom that sets `maven.test.skip`); it never counts as a pass.", "",
               "`capped` = killed by the 45-minute repo cap; `timeout` = the step's own 20-minute test timeout.", ""]
+    lines += lock_diff_section(repos)
     sk = cfg.get("skipped", [])
     lines += ["## Skipped (in the same star range, root pom.xml present)", "",
               "| repo | stars | reason | detail |", "|------|------:|--------|--------|"]
@@ -751,6 +752,43 @@ def render(repos: list[dict], rows: dict[str, dict] | None = None) -> None:
     lines += ["Rule: a run that lowers any of these counts is a regression; a run that raises one moves the bar.", ""]
     (HERE / "RESULTS.md").write_text("\n".join(lines))
     render_tier3(repos, runs.get(latest_label, {}), latest_label)
+
+
+def lock_diff_section(repos: list[dict]) -> list[str]:
+    """The latest lockdiff.py report's summary table, when one exists (results/lock-diff/<date>.jsonl)."""
+    files = sorted((RESULTS / "lock-diff").glob("*.jsonl"))
+    if not files:
+        return []
+    rows: dict[str, dict] = {}
+    for line in files[-1].read_text().splitlines():
+        if line.strip():
+            r = json.loads(line)
+            rows[r["repo"]] = r
+    date = files[-1].stem
+    lines = ["## Lock vs Maven resolution", "",
+             f"From `lockdiff.py` on {date} ([lock-diff/{date}.md](lock-diff/{date}.md) has the per-repo examples): for every repo whose "
+             "`jk lock` is green, each module Maven and jk both build, coordinate by coordinate. `pairs` = (module, coordinate) pairs whose "
+             "version differs; rules: bom = a `[platform-dependencies]` BOM's version where Maven's differs, managed = an inline "
+             "`<dependencyManagement>` version Maven applied to a transitive and jk did not, pin = another member's direct pin, depth = "
+             "nearest-by-depth (Maven) against highest-declared (jk), unknown = unexplained.", "",
+             "| repo | maven | modules compared | modules that differ | pairs / coords | by rule (pairs) |",
+             "|------|-------|-----------------:|--------------------:|---------------:|-----------------|"]
+    tot = {"repos": 0, "compared": 0, "differ": 0, "pairs": 0}
+    for repo in repos:
+        r = rows.get(repo["name"])
+        if not r:
+            continue
+        mv = r.get("maven", {})
+        mcell = f"ok ({mv.get('mode')})" if mv.get("status") == "ok" else f"maven unavailable: {mv.get('reason', mv.get('status', ''))}".replace("|", "\\|")[:120]
+        rules = ", ".join(f"{k} {v}" for k, v in r.get("by_rule", {}).items() if v) or "—"
+        lines.append(f"| {r['full']} | {mcell} | {r['modules_compared']} | {r['modules_differ']} | {r['pairs_differ']} / {r['coords_differ']} | {rules} |")
+        if r["modules_compared"]:
+            tot["repos"] += 1
+            tot["compared"] += r["modules_compared"]
+            tot["differ"] += r["modules_differ"]
+            tot["pairs"] += r["pairs_differ"]
+    lines += ["", f"{tot['repos']} repos answered by Maven: {tot['differ']} of {tot['compared']} modules differ on at least one version, {tot['pairs']} pairs.", ""]
+    return lines
 
 
 def normalize_reason(text: str) -> str:

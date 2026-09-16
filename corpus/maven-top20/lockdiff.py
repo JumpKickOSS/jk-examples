@@ -1,0 +1,722 @@
+#!/usr/bin/env python3
+"""Diff each corpus repo's jk lock against Maven's resolved versions, module by module.
+
+For every repo whose latest `jk lock` is green, the clone (with the jk.toml / jk-lock.toml the
+harness wrote) is copied to $LOCKDIFF_SCRATCH/<name> (default /home/bsant/src/scratch/lock-diff),
+Maven's verbose dependency tree is written per module (`dependency:tree -Dverbose`, offline first
+against the corpus .m2, online when offline fails, 15 minutes per repo), and jk's per-module
+closure is read with `jk tree <module> -t -f -s all`.  For each module both builds know, every
+coordinate whose resolved version differs is classified by the rule that produced jk's answer:
+
+  managed    Maven's version is one an inline <dependencyManagement> entry in the repo's own POMs
+             sets (`version managed from X` in the tree); jk applies managed versions to declared
+             dependencies only, so the transitive kept its declared / highest / BOM version
+  bom        Maven managed the coordinate too, from a BOM; jk's answer is another BOM's (`pinned-by`)
+             or unmanaged, so the two BOM sets or their order differ
+  bom-reach  jk's version is a [platform-dependencies] BOM's (`pinned-by`) where Maven's module
+             manages nothing: the BOM reaches the module in jk (workspace table, plugin BOM) but
+             Maven's module never imports it
+  pin        jk's version is a version some *other* workspace member declares directly; under
+             `pins = "nearest"` a member's pin is the version for the whole lock
+  depth      neither side managed it; Maven's verbose tree omitted jk's version "for conflict" with a
+             nearer declaration (nearest-by-depth), jk kept the highest declared version
+  cascade    the coordinate's parent in Maven's tree is itself a differing coordinate, so the two
+             builds read different POMs for it
+  unknown    a version difference none of the above explains
+
+jk's version is the lock row the module reads (member row, else the plain row of the matching scope);
+a `jk tree` line that disagrees with that row is counted apart as `tree_vs_lock`.  Same-version scope
+disagreements and coordinates only one side resolves are counted separately.
+Writes lock-diff/<date>.md (one section per repo, a summary table) and one JSON line per repo to
+results/lock-diff/<date>.jsonl.  Never touches the corpus clones themselves.
+"""
+from __future__ import annotations
+
+import argparse
+import datetime as dt
+import json
+import os
+import re
+import shutil
+import subprocess
+import sys
+import time
+import tomllib
+from collections import Counter, defaultdict
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import run as harness  # noqa: E402  (the corpus harness: scratch paths, launchers, rows)
+
+HERE = harness.HERE
+SCRATCH = Path(os.environ.get("LOCKDIFF_SCRATCH", "/home/bsant/src/scratch/lock-diff"))
+OUT_MD = HERE / "lock-diff"
+OUT_JSONL = harness.RESULTS / "lock-diff"
+REPO_CAP = int(os.environ.get("LOCKDIFF_REPO_CAP", 15 * 60))
+TREE_FILE = "target/jk-lockdiff-tree.txt"
+DEP_PLUGIN = "org.apache.maven.plugins:maven-dependency-plugin:3.8.1:tree"
+PACKAGINGS = {"jar", "pom", "war", "ear", "aar", "test-jar", "maven-plugin", "bundle", "ejb", "zip", "so", "dll", "dylib"}
+MAVEN_MAIN_SCOPES = {"compile", "runtime", "provided", "system"}
+JK_MAIN_SCOPES = {"main", "runtime", "provided", "processor"}
+RULES = ("managed", "bom", "bom-reach", "pin", "depth", "cascade", "unknown")
+
+
+# --------------------------------------------------------------------------- Maven version order
+
+_QUALIFIERS = ["alpha", "beta", "milestone", "rc", "snapshot", "", "sp"]
+_ALIASES = {"ga": "", "final": "", "release": "", "cr": "rc", "a": "alpha", "b": "beta", "m": "milestone"}
+
+
+def _items(v: str) -> list:
+    out: list = []
+    for tok in re.findall(r"\d+|[A-Za-z]+", v.lower()):
+        if tok.isdigit():
+            out.append(int(tok))
+        else:
+            out.append(_ALIASES.get(tok, tok))
+    while out and out[-1] in (0, ""):
+        out.pop()
+    return out
+
+
+def _cmp_item(a, b) -> int:
+    if isinstance(a, int) and isinstance(b, int):
+        return (a > b) - (a < b)
+    if isinstance(a, int):
+        return 1            # a number is newer than any qualifier
+    if isinstance(b, int):
+        return -1
+    ka = (str(_QUALIFIERS.index(a)) if a in _QUALIFIERS else f"{len(_QUALIFIERS)}-{a}")
+    kb = (str(_QUALIFIERS.index(b)) if b in _QUALIFIERS else f"{len(_QUALIFIERS)}-{b}")
+    return (ka > kb) - (ka < kb)
+
+
+def compare_versions(a: str, b: str) -> int:
+    """Maven ComparableVersion, near enough for a direction: >0 when a is newer than b."""
+    ia, ib = _items(a), _items(b)
+    for x, y in zip(ia, ib):
+        c = _cmp_item(x, y)
+        if c:
+            return c
+    if len(ia) == len(ib):
+        return 0
+    rest = ia[len(ib):] if len(ia) > len(ib) else ib[len(ia):]
+    sign = 1 if len(ia) > len(ib) else -1
+    nxt = rest[0]
+    if isinstance(nxt, int):
+        return sign
+    return sign * _cmp_item(nxt, "")
+
+
+# --------------------------------------------------------------------------- Maven side
+
+def coord_key(group: str, artifact: str, classifier: str = "") -> str:
+    """group:artifact — classified variants (netty's native jars) share the main artifact's version."""
+    return f"{group}:{artifact}"
+
+
+def parse_maven_tree(text: str) -> dict:
+    """One module's verbose tree → {root, resolved: {key: entry}, omitted: {key: [entries]}}."""
+    lines = [l.rstrip() for l in text.splitlines() if l.strip()]
+    if not lines:
+        return {}
+    root_parts = lines[0].split(":")
+    module = {"root": lines[0], "root_ga": f"{root_parts[0]}:{root_parts[1]}", "resolved": {}, "omitted": defaultdict(list)}
+    stack: list[str] = []          # resolved keys by depth, for each entry's parent chain
+    for line in lines[1:]:
+        m = re.match(r"^((?:[|+\\ -]{3})*)(.*)$", line)
+        if not m:
+            continue
+        depth = len(m.group(1)) // 3
+        content = m.group(2).strip()
+        omitted = content.startswith("(")
+        if omitted:
+            content = content[1:]
+            if content.endswith(")"):
+                content = content[:-1]
+        gav, _, note = content.partition(" ")
+        note = note.strip()
+        if note.startswith("- "):
+            note = note[2:]
+        note = note.strip("() ")
+        parts = gav.split(":")
+        if len(parts) < 4:
+            continue
+        group, artifact, typ = parts[0], parts[1], parts[2]
+        if len(parts) == 6:
+            classifier, version, scope = parts[3], parts[4], parts[5]
+        elif len(parts) == 5:
+            classifier, version, scope = "", parts[3], parts[4]
+        else:
+            classifier, version, scope = "", parts[3], ""
+        managed_from = None
+        mm = re.search(r"version managed from (\S+?)(?:;|$)", note)
+        if mm:
+            managed_from = mm.group(1)
+        conflict_with = None
+        mc = re.search(r"omitted for conflict with (\S+)", note)
+        if mc:
+            conflict_with = mc.group(1)
+        del stack[depth - 1:]
+        entry = {"group": group, "artifact": artifact, "type": typ, "classifier": classifier, "version": version,
+                 "scope": scope, "depth": depth, "managed_from": managed_from, "optional": "optional" in note,
+                 "conflict_with": conflict_with, "duplicate": "omitted for duplicate" in note,
+                 "cycle": "omitted for cycle" in note, "parents": list(stack)}
+        key = coord_key(group, artifact, classifier)
+        if omitted:
+            module["omitted"][key].append(entry)
+        else:
+            if key not in module["resolved"] or depth < module["resolved"][key]["depth"]:
+                module["resolved"][key] = entry
+            stack.append(key)
+    return module
+
+
+def maven_trees(root: Path, repo: dict, log: Path, deadline: float) -> dict:
+    """Run the verbose tree goal across the reactor, offline first; return {status, mode, wall, reason}."""
+    launcher = harness.maven_launcher(root)
+    env = harness.maven_env(repo.get("maven_jdk", repo["java"]))
+    base = launcher + ["-B", "-fae", f"-Dmaven.repo.local={harness.M2}", DEP_PLUGIN,
+                       "-Dverbose=true", "-DoutputType=text", f"-DoutputFile={TREE_FILE}"]
+    t0 = time.time()
+    r = harness.run(base + ["-o"], root, log, deadline - time.time(), env)
+    mode = "offline"
+    if r["status"] != "ok" and deadline - time.time() > 60:
+        r = harness.run(base, root, log, deadline - time.time(), env)
+        mode = "online"
+    out = {"status": r["status"], "mode": mode, "wall": round(time.time() - t0, 1), "reason": ""}
+    if r["status"] != "ok":
+        out["reason"] = harness.first_mvn_error(log) or f"mvn dependency:tree {r['status']}"
+    return out
+
+
+def maven_modules(root: Path) -> dict[str, dict]:
+    """Every module whose tree was written, keyed by its path relative to the repo root ('.' = root)."""
+    out = {}
+    for f in sorted(root.rglob(TREE_FILE.split("/")[-1])):
+        if f.parent.name != "target":
+            continue
+        rel = f.parent.parent.relative_to(root).as_posix()
+        parsed = parse_maven_tree(f.read_text(encoding="utf-8", errors="replace"))
+        if parsed:
+            out[rel or "."] = parsed
+    return out
+
+
+# --------------------------------------------------------------------------- jk side
+
+def jk_modules(root: Path) -> list[str]:
+    d = tomllib.load(open(root / "jk.toml", "rb"))
+    mods = d.get("workspace", {}).get("modules")
+    if mods is None:
+        return ["."]
+    return list(mods)
+
+
+def jk_tree(root: Path, module: str, log: Path) -> dict | None:
+    """`jk tree <module> -t -f -s all` → {scope: {key: version}} plus the platform BOMs it lists."""
+    cmd = harness.JK + ["--no-timeline", "tree"] + ([] if module == "." else [module]) + ["-t", "-f", "-s", "all"]
+    p = subprocess.run(cmd, cwd=root, capture_output=True, text=True, timeout=600)
+    with open(log, "a", encoding="utf-8") as f:
+        f.write(f"\n$ (cd {root} && {' '.join(cmd)})   # exit {p.returncode}\n{p.stdout}{p.stderr}")
+    if p.returncode != 0:
+        return None
+    scopes: dict[str, dict[str, str]] = defaultdict(dict)
+    platforms: list[str] = []
+    scope = None
+    for line in p.stdout.splitlines():
+        s = line.rstrip()
+        mh = re.match(r"^\s*[|` ]*[+`]-\[(\w[\w-]*)\]\s*$", s)
+        if mh:
+            scope = mh.group(1)
+            continue
+        me = re.match(r"^\s*[|` ]*[+`]- (\S+)(\s+\(platform\))?\s*$", s)
+        if not me or scope is None:
+            continue
+        gav = me.group(1)
+        parts = gav.split(":")
+        if len(parts) < 3:
+            continue
+        group, artifact, version = parts[0], parts[1], parts[-1]
+        middle = parts[2:-1]
+        if middle and middle[0] in PACKAGINGS:
+            middle = middle[1:]
+        classifier = ":".join(middle)
+        if scope == "platform" or me.group(2):
+            platforms.append(f"{group}:{artifact}:{version}")
+            continue
+        key = coord_key(group, artifact, classifier)
+        prev = scopes[scope].get(key)
+        if prev is None or compare_versions(version, prev) > 0:
+            scopes[scope][key] = version
+    return {"scopes": dict(scopes), "platforms": platforms}
+
+
+def jk_version_for(tree: dict, key: str, maven_scope: str) -> tuple[str | None, set[str]]:
+    """The version jk resolved for key on the side Maven's scope maps to, and every jk scope naming it."""
+    scopes_with = {s for s, m in tree["scopes"].items() if key in m}
+    if not scopes_with:
+        return None, set()
+    if maven_scope == "test":
+        order = ["test", "main", "runtime", "provided", "processor"]
+    else:
+        order = ["main", "runtime", "provided", "processor", "test"]
+    for s in order:
+        if s in scopes_with:
+            return tree["scopes"][s][key], scopes_with
+    s = sorted(scopes_with)[0]
+    return tree["scopes"][s][key], scopes_with
+
+
+class Lock:
+    """jk-lock.toml rows keyed by coordinate, member-partition aware."""
+
+    def __init__(self, path: Path):
+        d = tomllib.load(open(path, "rb"))
+        self.generated_by = d.get("generated-by", "")
+        self.rows: dict[str, list[dict]] = defaultdict(list)
+        for row in d.get("artifact", []):
+            g, a, _typ, cls = (row["name"].split(":") + ["", "", "", ""])[:4]
+            self.rows[coord_key(g, a, cls)].append(row)
+        self.modules = {m["path"]: f"{m['group']}:{m['name']}" for m in d.get("module", [])}
+
+    def row(self, key: str, module: str, maven_scope: str = "compile") -> dict | None:
+        """The row a module reads for key: its member row first, else the plain row whose scopes match the side."""
+        rows = self.rows.get(key, [])
+        for r in rows:
+            if module in r.get("members", []):
+                return r
+        plain = [r for r in rows if not r.get("members")]
+        want = {"test"} if maven_scope == "test" else JK_MAIN_SCOPES
+        for r in plain:
+            if set(r.get("scopes", [])) & want:
+                return r
+        return plain[0] if plain else (rows[0] if rows else None)
+
+
+def declared_pins(root: Path, modules: list[str]) -> dict[str, dict[str, list[str]]]:
+    """group:artifact → {version → [module paths that declare it directly]} across the workspace."""
+    pins: dict[str, dict[str, list[str]]] = defaultdict(lambda: defaultdict(list))
+    tables = ("dependencies", "test-dependencies", "runtime-dependencies", "provided-dependencies",
+              "processor-dependencies", "compile-only-dependencies")
+    for mod in ["."] + [m for m in modules if m != "."]:
+        p = root / mod / "jk.toml"
+        if not p.is_file():
+            continue
+        try:
+            d = tomllib.load(open(p, "rb"))
+        except Exception:
+            continue
+        for table in tables:
+            for alias, spec in (d.get(table) or {}).items():
+                if isinstance(spec, str):
+                    parts = spec.split(":")
+                    if len(parts) >= 3 and parts[2]:
+                        pins[f"{parts[0]}:{parts[1]}"][parts[2]].append(mod)
+                elif isinstance(spec, dict):
+                    if spec.get("workspace"):
+                        continue
+                    g, v = spec.get("group"), spec.get("version")
+                    a = spec.get("artifact") or spec.get("name") or alias
+                    if g and v and not str(v).startswith(("^", "~", "[", "(", "latest")):
+                        pins[f"{g}:{a}"][str(v)].append(mod)
+    return pins
+
+
+# --------------------------------------------------------------------------- the repo's own POMs
+
+def _strip(tag: str) -> str:
+    return tag.split("}", 1)[1] if "}" in tag else tag
+
+
+def _pom(path: Path):
+    import xml.etree.ElementTree as ET
+    try:
+        root = ET.parse(path).getroot()
+    except ET.ParseError:
+        return None
+    for el in root.iter():
+        el.tag = _strip(el.tag)
+    return root
+
+
+def pom_facts(root: Path) -> dict:
+    """What the repo's own POMs say: inline-managed versions per group:artifact and optional edges.
+
+    `${property}` is interpolated from the POM's own <properties> and its in-repo parent chain
+    (`<relativePath>`, default ../pom.xml), plus project.version / revision; anything still
+    unresolved is dropped.  Returns {"managed": {ga: {version: [pom]}}, "optional": {ga}}.
+    """
+    poms = {p: _pom(p) for p in harness.poms(root)}
+    poms = {p: x for p, x in poms.items() if x is not None}
+
+    def parent_of(path: Path, el) -> Path | None:
+        par = el.find("parent")
+        if par is None:
+            return None
+        rel = (par.findtext("relativePath") or "../pom.xml").strip()
+        cand = (path.parent / rel).resolve()
+        if cand.is_dir():
+            cand = cand / "pom.xml"
+        return cand if cand in poms else None
+
+    def props(path: Path) -> dict[str, str]:
+        chain, seen, cur = [], set(), path
+        while cur is not None and cur not in seen:
+            seen.add(cur)
+            chain.append(cur)
+            cur = parent_of(cur, poms[cur])
+        out: dict[str, str] = {}
+        for p in reversed(chain):                      # child properties win
+            el = poms[p]
+            for prop in el.findall("properties/*"):
+                if prop.text:
+                    out[prop.tag] = prop.text.strip()
+            ver = el.findtext("version") or el.findtext("parent/version")
+            if ver:
+                out["project.version"] = ver.strip()
+            grp = el.findtext("groupId") or el.findtext("parent/groupId")
+            if grp:
+                out["project.groupId"] = grp.strip()
+        return out
+
+    def interp(v: str, pr: dict[str, str], depth: int = 0) -> str:
+        if depth > 5 or "${" not in v:
+            return v
+        out = re.sub(r"\$\{([^}]+)\}", lambda m: pr.get(m.group(1), m.group(0)), v)
+        return interp(out, pr, depth + 1) if out != v else out
+
+    managed: dict[str, dict[str, list[str]]] = defaultdict(lambda: defaultdict(list))
+    optional: set[str] = set()
+    for path, el in poms.items():
+        pr = props(path)
+        rel = path.parent.relative_to(root).as_posix() or "."
+        for dep in el.findall("dependencyManagement/dependencies/dependency"):
+            if (dep.findtext("scope") or "").strip() == "import":
+                continue
+            g, a, v = (interp((dep.findtext(t) or "").strip(), pr) for t in ("groupId", "artifactId", "version"))
+            if g and a and v and "${" not in g + a + v:
+                managed[f"{g}:{a}"][v].append(rel)
+        for dep in el.findall("dependencies/dependency"):
+            if (dep.findtext("optional") or "").strip() == "true":
+                g, a = (interp((dep.findtext(t) or "").strip(), pr) for t in ("groupId", "artifactId"))
+                if g and a and "${" not in g + a:
+                    optional.add(f"{g}:{a}")
+    return {"managed": {k: dict(v) for k, v in managed.items()}, "optional": optional}
+
+
+# --------------------------------------------------------------------------- the diff
+
+def classify(key: str, module: str, jk_v: str, mv: dict, omitted: list[dict], lock_row: dict | None,
+             pins: dict, facts: dict) -> tuple[str, str]:
+    """(rule, evidence) for one module's version difference; `cascade` is applied afterwards."""
+    ga = key
+    pinned_by = (lock_row or {}).get("pinned-by")
+    jk_side = f"jk: BOM {pinned_by}" if pinned_by else "jk: no BOM manages it"
+    if mv["managed_from"]:
+        inline = facts["managed"].get(ga, {})
+        if mv["version"] in inline:
+            kept = " (jk kept the declared version)" if mv["managed_from"] == jk_v else ""
+            return "managed", f"Maven: inline <dependencyManagement> in {inline[mv['version']][0]}/pom.xml sets {mv['version']} (depth {mv['depth']}); {jk_side}{kept}"
+        return "bom", f"Maven: managed from {mv['managed_from']} by an imported BOM, no inline entry says {mv['version']}; {jk_side}"
+    if pinned_by:
+        return "bom-reach", f"{jk_side}; Maven: {module} manages nothing for it and took the declared version at depth {mv['depth']}"
+    my_pins = pins.get(ga, {})
+    if jk_v in my_pins and not (module in my_pins[jk_v] or "." in my_pins[jk_v]):
+        return "pin", f"jk: pinned by member {', '.join(sorted(my_pins[jk_v])[:3])}; Maven: {module} resolved on its own (depth {mv['depth']})"
+    omitted_versions = {o["version"] for o in omitted if o["conflict_with"]}
+    if jk_v in omitted_versions:
+        return "depth", f"Maven: omitted {jk_v} for conflict with the nearer {mv['version']} (depth {mv['depth']}); jk: highest declared"
+    if compare_versions(jk_v, mv["version"]) > 0:
+        return "depth", f"jk {jk_v} above Maven's {mv['version']} (depth {mv['depth']}); versions Maven omitted for conflict: " + (", ".join(sorted(omitted_versions)) or "none")
+    return "unknown", f"jk {jk_v} below Maven's {mv['version']} (depth {mv['depth']}) with no pin, BOM or management on either side"
+
+
+def diff_module(module: str, mtree: dict, jtree: dict, lock: Lock, pins: dict, facts: dict) -> dict:
+    out = {"module": module, "root": mtree["root_ga"], "maven_coords": 0, "compared": 0, "differ": [], "scope_only": 0,
+           "only_maven": Counter(), "only_jk": 0, "only_jk_optional": 0, "tree_vs_lock": 0,
+           "only_maven_names": [], "only_jk_names": [], "scope_only_names": [], "tree_vs_lock_names": [],
+           "test_side": 0, "test_side_names": []}
+    seen = set()
+    for key, mv in mtree["resolved"].items():
+        if mv["scope"] not in MAVEN_MAIN_SCOPES | {"test"}:
+            continue
+        if mv["group"] + ":" + mv["artifact"] in lock.modules.values():
+            continue                                    # a workspace sibling, not a locked artifact
+        out["maven_coords"] += 1
+        seen.add(key)
+        jk_v, jk_scopes = jk_version_for(jtree, key, mv["scope"])
+        if jk_v is None:
+            out["only_maven"][mv["scope"] + (" optional" if mv["optional"] else "")] += 1
+            out["only_maven_names"].append(f"{key}:{mv['version']} ({mv['scope']}, depth {mv['depth']})")
+            continue
+        out["compared"] += 1
+        row = lock.row(key, module, mv["scope"])
+        if row and row.get("version") != jk_v:
+            out["tree_vs_lock"] += 1
+            out["tree_vs_lock_names"].append(f"{key}: jk tree {jk_v}, lock row {row['version']} (maven {mv['version']})")
+            jk_v = row["version"]                      # the lock is what the build reads; the tree's rendering is a separate finding
+        if mv["scope"] in MAVEN_MAIN_SCOPES and row is not None:
+            trow = lock.row(key, module, "test")        # Maven's test classpath carries the compile version; jk's test row may not
+            if trow is not None and trow is not row and trow.get("version") != mv["version"]:
+                out["test_side"] += 1
+                out["test_side_names"].append(f"{key}: jk test row {trow['version']}, main row {row['version']}, maven {mv['version']} ({mv['scope']})")
+        if jk_v == mv["version"]:
+            maven_main = mv["scope"] in MAVEN_MAIN_SCOPES
+            if maven_main != bool(jk_scopes & JK_MAIN_SCOPES):
+                out["scope_only"] += 1
+                out["scope_only_names"].append(f"{key}:{jk_v} maven {mv['scope']} / jk {','.join(sorted(jk_scopes))}")
+            continue
+        rule, evidence = classify(key, module, jk_v, mv, mtree["omitted"].get(key, []), row, pins, facts)
+        out["differ"].append({"coord": key, "jk": jk_v, "maven": mv["version"], "maven_scope": mv["scope"],
+                              "rule": rule, "evidence": evidence, "parents": mv["parents"],
+                              "direction": "jk higher" if compare_versions(jk_v, mv["version"]) > 0 else "jk lower"})
+    differing = {x["coord"]: x for x in out["differ"]}
+    for x in out["differ"]:
+        if x["rule"] in ("unknown", "depth") and "omitted" not in x["evidence"].split(";")[0]:
+            up = [p for p in x["parents"] if p in differing]
+            if up:
+                p = differing[up[-1]]
+                x["rule"] = "cascade"
+                x["evidence"] = f"under {p['coord']} (jk {p['jk']}, Maven {p['maven']}, {p['rule']}); " + x["evidence"]
+    for x in out["differ"]:
+        del x["parents"]
+    jk_keys: dict[str, tuple[str, str]] = {}
+    for scope, m in jtree["scopes"].items():
+        for key, v in m.items():
+            jk_keys.setdefault(key, (v, scope))
+    for key, (v, scope) in jk_keys.items():
+        if key not in seen and key not in lock.modules.values():
+            out["only_jk"] += 1
+            if key in facts["optional"]:
+                out["only_jk_optional"] += 1
+            out["only_jk_names"].append(f"{key}:{v} ({scope}{', optional in a POM' if key in facts['optional'] else ''})")
+    out["only_maven"] = dict(out["only_maven"])
+    return out
+
+
+def failing_test_modules(repo: str, root: Path, lock: Lock) -> list[str]:
+    """Modules whose jk test step reported failures, from the jk-results.md copied with the clone."""
+    for p in (root / "jk-results.corpus.md", harness.RESULTS / repo / "jk-results.md"):
+        if p.is_file():
+            gas = set(re.findall(r"^#### \S+ — (\S+:\S+)$", p.read_text(encoding="utf-8", errors="replace"), re.M))
+            by_ga = {v: k for k, v in lock.modules.items()}
+            return sorted({by_ga[g] for g in gas if g in by_ga})
+    return []
+
+
+def measure(repo: dict, args, date: str) -> dict:
+    name = repo["name"]
+    src = harness.SCRATCH / name
+    root = SCRATCH / name
+    corpus_row = harness.load_rows().get(name, {})
+    row = {"repo": name, "full": repo["full"], "sha": repo["sha"], "date": dt.datetime.now().isoformat(timespec="seconds"),
+           "corpus_run": f"{corpus_row.get('run', '')} {corpus_row.get('date', '')}".strip(),
+           "corpus_jk": corpus_row.get("jk_commit", ""),
+           "lock_generated_by": "", "maven": {}, "modules_maven": 0, "modules_jk": 0, "modules_compared": 0,
+           "modules_differ": 0, "pairs_differ": 0, "coords_differ": 0, "by_rule": {r: 0 for r in RULES},
+           "by_rule_coords": {r: 0 for r in RULES}, "direction": {"jk higher": 0, "jk lower": 0}, "scope_only": 0,
+           "only_maven": {}, "only_jk": 0, "only_jk_optional": 0, "tree_vs_lock": 0, "maven_coords": 0, "compared": 0,
+           "failing_test_modules": [], "failing_modules_with_diff": [], "examples": [], "modules": []}
+    print(f"== {name}", flush=True)
+    deadline = time.time() + REPO_CAP
+    SCRATCH.mkdir(parents=True, exist_ok=True)
+    log = SCRATCH / f"{name}.log"
+    if not args.reuse:
+        if log.exists():
+            log.unlink()
+        subprocess.run(["rsync", "-a", "--delete", "--exclude", ".git", "--exclude", "target", "--exclude", "node_modules",
+                        f"{src}/", f"{root}/"], check=True)
+        if (src / "target" / "jk-results.md").is_file():
+            shutil.copy(src / "target" / "jk-results.md", root / "jk-results.corpus.md")   # the clone's latest jk test results
+    if not (root / "jk-lock.toml").is_file():
+        row["maven"] = {"status": "skipped", "reason": "no jk-lock.toml in the corpus clone"}
+        return row
+    lock = Lock(root / "jk-lock.toml")
+    row["lock_generated_by"] = lock.generated_by
+    if args.reuse and any(root.rglob(TREE_FILE.split("/")[-1])):
+        row["maven"] = {"status": "ok", "mode": "reused", "wall": 0.0, "reason": ""}
+    else:
+        row["maven"] = maven_trees(root, repo, log, deadline)
+    mtrees = maven_modules(root)
+    row["modules_maven"] = len(mtrees)
+    print(f"  {name}: maven {row['maven']['status']} ({row['maven'].get('mode')}, {row['maven'].get('wall')}s), {len(mtrees)} module trees", flush=True)
+    jmods = jk_modules(root)
+    row["modules_jk"] = len(jmods)
+    if not mtrees:
+        row["maven"]["reason"] = row["maven"].get("reason") or "no module tree written"
+        return row
+    pins = declared_pins(root, jmods)
+    facts = pom_facts(root)
+    row["inline_managed_gas"] = len(facts["managed"])
+    failing = failing_test_modules(name, root, lock)
+    row["failing_test_modules"] = failing
+    pair_rule = Counter()
+    coord_rule: dict[str, set] = defaultdict(set)
+    examples: dict[str, dict] = {}
+    for mod in jmods:
+        if mod not in mtrees:
+            continue
+        if time.time() > deadline + 300:
+            row["modules"].append({"module": mod, "status": "capped"})
+            continue
+        jt = jk_tree(root, mod, log)
+        if jt is None:
+            row["modules"].append({"module": mod, "status": "jk tree failed"})
+            continue
+        d = diff_module(mod, mtrees[mod], jt, lock, pins, facts)
+        row["modules_compared"] += 1
+        row["maven_coords"] += d["maven_coords"]
+        row["compared"] += d["compared"]
+        row["scope_only"] += d["scope_only"]
+        row["only_jk"] += d["only_jk"]
+        row["only_jk_optional"] = row.get("only_jk_optional", 0) + d["only_jk_optional"]
+        row["tree_vs_lock"] += d["tree_vs_lock"]
+        row["test_side"] = row.get("test_side", 0) + d["test_side"]
+        for k, v in d["only_maven"].items():
+            row["only_maven"][k] = row["only_maven"].get(k, 0) + v
+        if d["differ"]:
+            row["modules_differ"] += 1
+            if mod in failing:
+                row["failing_modules_with_diff"].append(mod)
+        for x in d["differ"]:
+            pair_rule[x["rule"]] += 1
+            coord_rule[x["rule"]].add(x["coord"])
+            row["direction"][x["direction"]] += 1
+            ex = examples.setdefault(x["coord"], {**x, "modules": []})
+            ex["modules"].append(mod)
+        row["modules"].append({"module": mod, "status": "ok", "maven_coords": d["maven_coords"], "compared": d["compared"],
+                               "differ": len(d["differ"]), "scope_only": d["scope_only"],
+                               "only_maven": sum(d["only_maven"].values()), "only_jk": d["only_jk"],
+                               "rules": dict(Counter(x["rule"] for x in d["differ"])),
+                               "only_maven_names": d["only_maven_names"][:12], "only_jk_names": d["only_jk_names"][:12],
+                               "only_jk_optional": d["only_jk_optional"], "scope_only_names": d["scope_only_names"][:8],
+                               "tree_vs_lock_names": d["tree_vs_lock_names"][:8],
+                               "test_side": d["test_side"], "test_side_names": d["test_side_names"][:8]})
+        print(f"  {name}: {mod:50s} maven={d['maven_coords']:4d} compared={d['compared']:4d} differ={len(d['differ']):3d} "
+              f"only-maven={sum(d['only_maven'].values()):3d} only-jk={d['only_jk']:3d}", flush=True)
+    row["pairs_differ"] = sum(pair_rule.values())
+    row["by_rule"] = {r: pair_rule.get(r, 0) for r in RULES}
+    row["by_rule_coords"] = {r: len(coord_rule.get(r, ())) for r in RULES}
+    row["coords_differ"] = len(examples)
+    row["examples"] = sorted(examples.values(), key=lambda e: (-len(e["modules"]), e["coord"]))[:40]
+    for e in row["examples"]:
+        e["module_count"] = len(e["modules"])
+        e["modules"] = e["modules"][:4]
+    return row
+
+
+# --------------------------------------------------------------------------- rendering
+
+def load_latest(date: str | None = None) -> tuple[str, dict[str, dict]]:
+    files = sorted(OUT_JSONL.glob("*.jsonl"))
+    if date:
+        files = [f for f in files if f.stem == date]
+    if not files:
+        return "", {}
+    rows: dict[str, dict] = {}
+    for line in files[-1].read_text().splitlines():
+        if line.strip():
+            r = json.loads(line)
+            rows[r["repo"]] = r
+    return files[-1].stem, rows
+
+
+def fmt_rules(r: dict, key: str = "by_rule") -> str:
+    return ", ".join(f"{k} {v}" for k, v in r.get(key, {}).items() if v) or "—"
+
+
+def render(date: str, rows: dict[str, dict], repos: list[dict]) -> None:
+    OUT_MD.mkdir(exist_ok=True)
+    total = Counter()
+    lines = [f"# jk lock vs Maven resolution — {date}", "",
+             "Per module, every coordinate Maven's verbose `dependency:tree` resolves is looked up in jk's per-module closure "
+             "(`jk tree <module> -t -f -s all`, reading the harness's `jk-lock.toml`, member rows first). A row of the table is one repo; "
+             "`pairs` = (module, coordinate) pairs whose version differs, `coords` = distinct coordinates behind them. Rules: "
+             "**bom** = jk's version is a `[platform-dependencies]` BOM's (`pinned-by`) and Maven's differs; "
+             "**managed** = Maven applied an inline `<dependencyManagement>` version to a transitive that no BOM manages in jk; "
+             "**pin** = jk's version is another workspace member's direct pin (a pin any member declares is the whole lock's version under `pins = \"nearest\"`); "
+             "**depth** = neither side managed it, Maven took the nearest declaration and jk the highest; **cascade** = the parent POM already differs; **unknown** = none of those. "
+             "`test row differs` = compile-scope coordinates whose jk test-scope lock row is not the version Maven's test classpath carries (a pin or managed version that governs jk's main solve but not its test solve). "
+             "`only jk` = coordinates on jk's closure Maven's tree lacks (a sibling's `<optional>` edge, or a `<dependencyManagement>` exclusion import did not carry); `tree vs lock` = `jk tree` lines whose version is not the lock row the module reads.", "",
+             "| repo | maven | modules mvn / jk / compared | modules that differ | pairs / coords differ | by rule (pairs) | jk higher / lower | test row differs | same version, scope differs | only Maven | only jk (optional in a POM) | tree vs lock | failing-test modules with a diff |",
+             "|------|-------|----------------------------:|--------------------:|----------------------:|-----------------|------------------:|-----------------:|----------------------------:|-----------:|----------------------------:|-------------:|----------------------------------|"]
+    for repo in repos:
+        r = rows.get(repo["name"])
+        if not r:
+            continue
+        mv = r["maven"]
+        mstat = mv.get("status", "")
+        mcell = f"{mstat} ({mv.get('mode')}, {mv.get('wall', 0):.0f}s)" if mstat == "ok" else f"maven unavailable: {mv.get('reason', mstat)}".replace("|", "\\|")[:160]
+        only_m = sum(r.get("only_maven", {}).values())
+        fail = r.get("failing_test_modules", [])
+        fcell = (f"{len(r.get('failing_modules_with_diff', []))} of {len(fail)}" if fail else "no failing tests")
+        lines.append(f"| {r['full']} | {mcell} | {r['modules_maven']} / {r['modules_jk']} / {r['modules_compared']} | {r['modules_differ']} "
+                     f"| {r['pairs_differ']} / {r['coords_differ']} | {fmt_rules(r)} | {r['direction'].get('jk higher', 0)} / {r['direction'].get('jk lower', 0)} "
+                     f"| {r.get('test_side', 0)} | {r['scope_only']} | {only_m} | {r['only_jk']} ({r.get('only_jk_optional', 0)}) | {r['tree_vs_lock']} | {fcell} |")
+        if r["modules_compared"]:
+            total["repos"] += 1
+            total["modules_compared"] += r["modules_compared"]
+            total["modules_differ"] += r["modules_differ"]
+            total["pairs"] += r["pairs_differ"]
+            total["coords"] += r["coords_differ"]
+            for k, v in r["by_rule"].items():
+                total["rule " + k] += v
+            for k, v in r["by_rule_coords"].items():
+                total["rulec " + k] += v
+    lines += ["",
+              f"**Totals over the {total['repos']} repos Maven could answer for:** {total['modules_compared']} modules compared, "
+              f"{total['modules_differ']} differ on at least one version; {total['pairs']} (module, coordinate) pairs and {total['coords']} distinct coordinates differ. "
+              "By rule (pairs / coords): " + "; ".join(f"{r} {total['rule ' + r]} / {total['rulec ' + r]}" for r in RULES) + ".", ""]
+    for repo in repos:
+        r = rows.get(repo["name"])
+        if not r or not r.get("examples"):
+            continue
+        lines += [f"## {r['full']}", "",
+                  f"Lock from corpus row {r.get('corpus_run', '?')} (`{r['lock_generated_by']}`, {r.get('corpus_jk', '')}); {r['compared']} of {r['maven_coords']} Maven coordinates found in jk's closure; "
+                  f"jk tree vs lock row disagreements: {r['tree_vs_lock']}. Failing-test modules: {', '.join(r['failing_test_modules']) or 'none'}"
+                  + (f"; with a version diff: {', '.join(r['failing_modules_with_diff'])}" if r["failing_modules_with_diff"] else "") + ".", "",
+                  "| coordinate | jk | Maven | modules | rule | evidence |", "|------------|----|-------|--------:|------|----------|"]
+        for e in r["examples"][:25]:
+            ev = e["evidence"].replace("|", "\\|")
+            lines.append(f"| {e['coord']} | {e['jk']} | {e['maven']} ({e['maven_scope']}) | {e['module_count']} | {e['rule']} | {ev} |")
+        lines.append("")
+    (OUT_MD / f"{date}.md").write_text("\n".join(lines))
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--only", action="append", help="one repo name (repeatable)")
+    ap.add_argument("--reuse", action="store_true", help="keep the scratch copy and its Maven trees; redo the jk side and the diff")
+    ap.add_argument("--render", action="store_true", help="only rewrite lock-diff/<date>.md from the latest rows")
+    ap.add_argument("--date", default=f"{dt.date.today():%Y-%m-%d}", help="row file / report date (default today)")
+    args = ap.parse_args()
+    cfg = tomllib.load(open(HERE / "repos.toml", "rb"))
+    repos = cfg["repo"]
+    if args.render:
+        date, rows = load_latest(args.date)
+        render(date, rows, repos)
+        return 0
+    latest = harness.load_rows()
+    todo = []
+    for repo in repos:
+        if args.only and repo["name"] not in args.only:
+            continue
+        r = latest.get(repo["name"])
+        if not r or r["steps"].get("jk_lock", {}).get("status") != "ok":
+            continue
+        todo.append(repo)
+    OUT_JSONL.mkdir(parents=True, exist_ok=True)
+    out = OUT_JSONL / f"{args.date}.jsonl"
+    for repo in todo:
+        row = measure(repo, args, args.date)
+        with open(out, "a") as f:
+            f.write(json.dumps(row, sort_keys=True) + "\n")
+        _, rows = load_latest(args.date)
+        render(args.date, rows, repos)
+        print(f"  {repo['name']}: modules differ {row['modules_differ']}/{row['modules_compared']}, pairs {row['pairs_differ']}, {fmt_rules(row)}", flush=True)
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

@@ -1,6 +1,6 @@
 # Maven top-20 corpus — results
 
-Generated 2026-09-16 20:31 by `run.py`. Host: AMD Ryzen 9 7900X 12-Core Processor (24 threads, 30 GB RAM), Linux-7.1.12-200.fc44.x86_64-x86_64-with-glibc2.43.
+Generated 2026-09-16 20:43 by `run.py`. Host: AMD Ryzen 9 7900X 12-Core Processor (24 threads, 30 GB RAM), Linux-7.1.12-200.fc44.x86_64-x86_64-with-glibc2.43.
 
 Maven ran through the launcher `jk mvn` provisions (or the repo's `mvnw`) with `MAVEN_OPTS=-Xmx3g`, `JAVA_HOME` = the Temurin matching the declared level (or `maven_jdk`), and a corpus-private local repo (`/home/bsant/src/scratch/maven-corpus/.m2`); jk ran with defaults. Wall = seconds. `pass/total` from surefire XML (Maven) and the `Tests:` line of `target/jk-results.md` (jk). Per-step logs and each import report live under `results/<repo>/` (latest run).
 
@@ -316,6 +316,29 @@ Measured 20 of 20 selected repos.
 `no tests ran` = the step exited 0 but no test result was produced (e.g. an aggregator root imported with no sources, or a pom that sets `maven.test.skip`); it never counts as a pass.
 
 `capped` = killed by the 45-minute repo cap; `timeout` = the step's own 20-minute test timeout.
+
+## Lock vs Maven resolution
+
+From `lockdiff.py` on 2026-09-16 ([lock-diff/2026-09-16.md](lock-diff/2026-09-16.md) has the per-repo examples): for every repo whose `jk lock` is green, each module Maven and jk both build, coordinate by coordinate. `pairs` = (module, coordinate) pairs whose version differs; rules: bom = a `[platform-dependencies]` BOM's version where Maven's differs, managed = an inline `<dependencyManagement>` version Maven applied to a transitive and jk did not, pin = another member's direct pin, depth = nearest-by-depth (Maven) against highest-declared (jk), unknown = unexplained.
+
+| repo | maven | modules compared | modules that differ | pairs / coords | by rule (pairs) |
+|------|-------|-----------------:|--------------------:|---------------:|-----------------|
+| macrozheng/mall | ok (reused) | 7 | 7 | 15 / 5 | depth 2, managed 13 |
+| TheAlgorithms/Java | ok (reused) | 1 | 0 | 0 / 0 | — |
+| eugenp/tutorials | ok (reused) | 1 | 0 | 0 / 0 | — |
+| alibaba/nacos | ok (reused) | 55 | 52 | 185 / 12 | bom 35, depth 49, managed 97, pin 4 |
+| xuxueli/xxl-job | ok (reused) | 5 | 1 | 1 / 1 | bom-reach 1 |
+| apolloconfig/apollo | ok (reused) | 12 | 6 | 25 / 5 | cascade 12, depth 7, managed 6 |
+| alibaba/spring-cloud-alibaba | ok (reused) | 59 | 17 | 18 / 3 | bom 17, pin 1 |
+| jenkinsci/jenkins | ok (reused) | 8 | 4 | 29 / 27 | cascade 12, depth 4, managed 13 |
+| dataease/dataease | ok (reused) | 8 | 8 | 139 / 27 | bom 13, cascade 10, depth 15, managed 98, pin 3 |
+| floci-io/floci | ok (reused) | 1 | 1 | 9 / 9 | cascade 1, depth 1, managed 7 |
+| infinilabs/analysis-ik | ok (reused) | 3 | 2 | 16 / 14 | depth 11, pin 5 |
+| openzipkin/zipkin | ok (reused) | 15 | 15 | 193 / 49 | bom-reach 171, cascade 15, depth 6, pin 1 |
+| neo4j/neo4j | ok (reused) | 165 | 56 | 73 / 9 | bom 13, depth 14, managed 44, pin 2 |
+| cryptomator/cryptomator | ok (reused) | 1 | 1 | 2 / 2 | depth 2 |
+
+14 repos answered by Maven: 170 of 341 modules differ on at least one version, 705 pairs.
 
 ## Skipped (in the same star range, root pom.xml present)
 

@@ -14,6 +14,8 @@ states the counts a later run must not lower.
 | `results/<date>.jsonl` | one row per repo per run, every number and status |
 | `results/<repo>/` | per-step logs, `import-report.md` (the `jk import` fidelity report), `jk-results.md` |
 | `results/tier3-reasons.md` | every distinct import ERROR / jk failure reason with the repos it affects — ticket fodder |
+| `lockdiff.py` | the lock-vs-Maven diff: per module, the coordinates jk's lock and Maven's `dependency:tree` resolve to different versions, each named by the rule behind jk's answer |
+| `lock-diff/<date>.md`, `results/lock-diff/<date>.jsonl` | its report (summary table + per-repo examples) and one JSON row per repo |
 | `RESULTS.md` | the summary table + Ratchet section |
 
 Clones live **outside** this repo under `/home/bsant/src/scratch/maven-corpus/<name>/`
@@ -114,6 +116,33 @@ declared level. Run #1 found three such repos (analysis-ik, jenkins, zipkin: all
   of a repo after a jk install is a true cold build; a re-measured `jk cold` is cache-warm (TheAlgorithms:
   12.8 s first, 2.5 s re-measured). Maven has the same property through the corpus `.m2` for downloads but
   not for compilation. A `--cache-dir` sweep per run is the follow-up if cold-vs-cold matters.
+
+## Diffing the lock against Maven's resolution
+
+`./lockdiff.py` runs after a corpus run, on every repo whose latest `jk lock` is green. It copies the
+clone (with the harness's `jk.toml` / `jk-lock.toml`) to `/home/bsant/src/scratch/lock-diff/<name>`
+(`LOCKDIFF_SCRATCH`), writes Maven's verbose tree per module
+(`maven-dependency-plugin:3.8.1:tree -Dverbose -DoutputFile=target/jk-lockdiff-tree.txt`, offline
+against the corpus `.m2` first, online when offline fails, `-fae` so one module's failure keeps the
+others, 15 minutes per repo via `LOCKDIFF_REPO_CAP`), and reads jk's per-module closure with
+`jk tree <module> -t -f -s all`. Modules both builds know are compared coordinate by coordinate
+(`group:artifact[:classifier]`, Maven `compile|runtime|provided|system` against jk's main-side
+scopes, Maven `test` against jk's `test`); workspace siblings are skipped. Every version difference
+is classified by the rule that produced jk's answer:
+
+| rule | meaning |
+|------|---------|
+| `bom` | jk's version is a `[platform-dependencies]` BOM's (the lock row carries `pinned-by`); Maven managed the coordinate from a different BOM set or order, or did not manage it at all |
+| `managed` | Maven's tree says `version managed from X` for a transitive no BOM manages in jk: an inline `<dependencyManagement>` entry jk did not apply to the transitive |
+| `pin` | jk's version is a version another workspace member declares directly; under `pins = "nearest"` a pin any member declares is the whole lock's version |
+| `depth` | neither side managed it; Maven omitted jk's version "for conflict" with a nearer declaration (nearest-by-depth) where jk kept the highest declared version |
+| `unknown` | none of the above explains it |
+
+Same-version scope disagreements and coordinates only one side resolves are counted apart from
+version differences. A Maven side that cannot answer is a `maven unavailable: <reason>` cell, not a
+failed run. `--only <name>` limits the repos, `--reuse` keeps the scratch copy and its Maven trees and
+redoes only the jk side and the diff, `--render` rewrites the report from the rows on disk. The
+corpus clones are never touched. `RESULTS.md` carries the latest report's summary table.
 
 ## Reading the ratchet
 
