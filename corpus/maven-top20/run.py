@@ -211,12 +211,24 @@ def jk_results_tests_line(root: Path) -> dict | None:
     return None
 
 
+def without_delta_section(lines: list[str]) -> list[str]:
+    """Drop the `## Since the previous run` section: its bullets describe the diff, not a failure."""
+    out: list[str] = []
+    skipping = False
+    for line in lines:
+        if line.startswith("## "):
+            skipping = line.strip() == "## Since the previous run"
+        if not skipping:
+            out.append(line)
+    return out
+
+
 def jk_results_headline(root: Path) -> str:
     """The first cause in target/jk-results.md: the `## Failures` block's headline plus its first detail line."""
     p = root / "target" / "jk-results.md"
     if not p.is_file():
         return ""
-    lines = p.read_text(encoding="utf-8", errors="replace").splitlines()
+    lines = without_delta_section(p.read_text(encoding="utf-8", errors="replace").splitlines())
     if "### Failed tests" in lines:
         i = lines.index("### Failed tests")
         cls = meth = exc = ""
