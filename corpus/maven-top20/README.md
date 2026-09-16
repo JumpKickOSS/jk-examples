@@ -119,6 +119,9 @@ declared level. Run #1 found three such repos (analysis-ik, jenkins, zipkin: all
 
 `RESULTS.md` ends with four counts: repos importing with zero Tier-3 errors, repos whose `jk lock`
 succeeds, repos whose `jk build --skip-tests` succeeds, repos whose jk test total equals Maven's.
-A run that lowers any of them is a regression. `results/tier3-reasons.md` groups every distinct cause
-(module prefixes, coordinates, versions and paths normalized) with the repos it hits — each line is a
-ticket candidate.
+A run that lowers the lock, build or test count is a regression. The import count is read with its
+reasons: it falls legitimately when import starts naming a mismatch it had been silent about (a parent
+it cannot fetch where it wrote `=unresolved`, a `war` module it would have built as a jar), and that
+kind of fall must show up in `results/tier3-reasons.md` as a new reason, not as a repo that stopped
+importing. `results/tier3-reasons.md` groups every distinct cause (module prefixes, coordinates,
+versions and paths normalized) with the repos it hits — each line is a ticket candidate.
