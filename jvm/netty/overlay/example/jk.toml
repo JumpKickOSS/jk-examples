@@ -22,9 +22,9 @@ codec-stomp = { workspace = true }
 codec-mqtt = { workspace = true }
 codec-haproxy = { workspace = true }
 codec-dns = { workspace = true }
-bcpkix-jdk15on = { group = "org.bouncycastle", name = "bcpkix-jdk15on", version = "=1.69" }
-bctls-jdk15on = { group = "org.bouncycastle", name = "bctls-jdk15on", version = "=1.69" }
-javax-activation = { group = "com.sun.activation", name = "javax.activation", version = "=1.2.0" }
+bcpkix-jdk15on = "=1.69"
+bctls-jdk15on = "=1.69"
+javax-activation = "=1.2.0"
 
 [test-dependencies]
 junit-jupiter-api = "=6.1.0"
@@ -42,4 +42,4 @@ logback-classic = "=1.1.7"
 # Align with junit-jupiter 5.9.x — override jk's putIfAbsent "latest" launcher (was Platform 6.x)
 junit-platform-launcher = "=6.1.0"
 junit-platform-engine = "=6.1.0"
-junit-platform-commons = { group = "org.junit.platform", name = "junit-platform-commons", version = "=6.1.0" }
+junit-platform-commons = "=6.1.0"

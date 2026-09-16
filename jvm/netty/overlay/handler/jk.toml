@@ -12,12 +12,12 @@ transport-native-unix-common = { workspace = true }
 codec = { workspace = true }
 
 [provided-dependencies]
-bcpkix-jdk15on = { group = "org.bouncycastle", name = "bcpkix-jdk15on", version = "=1.69" }
-bctls-jdk15on = { group = "org.bouncycastle", name = "bctls-jdk15on", version = "=1.69" }
-conscrypt-openjdk-uber = { group = "org.conscrypt", name = "conscrypt-openjdk-uber", version = "=2.5.2" }
-netty-tcnative-classes = { group = "io.netty", name = "netty-tcnative-classes", version = "=2.0.65.Final" }
-alpn-api = { group = "org.eclipse.jetty.alpn", name = "alpn-api", version = "=1.1.2.v20150522" }
-npn-api = { group = "org.eclipse.jetty.npn", name = "npn-api", version = "=1.1.1.v20141010" }
+bcpkix-jdk15on = "=1.69"
+bctls-jdk15on = "=1.69"
+conscrypt-openjdk-uber = "=2.5.2"
+netty-tcnative-classes = "=2.0.65.Final"
+alpn-api = "org.eclipse.jetty.alpn:alpn-api:=1.1.2.v20150522"
+npn-api = "org.eclipse.jetty.npn:npn-api:=1.1.1.v20141010"
 
 [test-dependencies]
 # Mill testModuleDeps = transport.test / Maven test-jar
@@ -32,12 +32,12 @@ reflections = "=0.10.2"
 gson = "=2.8.9"
 guava = "=28.2-jre"
 jctools-core = "=4.0.5"
-bcpkix-jdk15on = { group = "org.bouncycastle", name = "bcpkix-jdk15on", version = "=1.69" }
-bctls-jdk15on = { group = "org.bouncycastle", name = "bctls-jdk15on", version = "=1.69" }
-conscrypt-openjdk-uber = { group = "org.conscrypt", name = "conscrypt-openjdk-uber", version = "=2.5.2" }
+bcpkix-jdk15on = "=1.69"
+bctls-jdk15on = "=1.69"
+conscrypt-openjdk-uber = "=2.5.2"
 logback-classic = "=1.1.7"
 
 # Align with junit-jupiter 5.9.x — override jk's putIfAbsent "latest" launcher (was Platform 6.x)
 junit-platform-launcher = "=6.1.0"
 junit-platform-engine = "=6.1.0"
-junit-platform-commons = { group = "org.junit.platform", name = "junit-platform-commons", version = "=6.1.0" }
+junit-platform-commons = "=6.1.0"

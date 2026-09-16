@@ -17,4 +17,4 @@ lite    = true
 kotlin  = true
 
 [dependencies]
-protobuf-kotlin-lite = { group = "com.google.protobuf", name = "protobuf-kotlin-lite", version = "latest" }
+protobuf-kotlin-lite = "latest"

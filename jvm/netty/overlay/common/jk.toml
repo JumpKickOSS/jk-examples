@@ -10,13 +10,13 @@ jctools-core = "=4.0.5"
 # Graal SVM annotations for *Substitution.java (Maven provided / Mill compileMvnDeps)
 native-image-svm = "=19.3.6"
 jctools-core = "=4.0.5"
-annotations-java5 = { group = "org.jetbrains", name = "annotations-java5", version = "=23.0.0" }
+annotations-java5 = "org.jetbrains:annotations-java5:=23.0.0"
 commons-logging = "=1.2"
 log4j-api = "=2.17.2"
 log4j12-api = "=2.17.2"
 slf4j-api = "=1.7.36"
 # Optional BlockHound hooks (compile-only in Netty)
-blockhound = { group = "io.projectreactor.tools", name = "blockhound", version = "=1.0.6.RELEASE" }
+blockhound = "=1.0.6.RELEASE"
 
 [test-dependencies]
 junit-jupiter-api = "=6.1.0"
@@ -33,10 +33,10 @@ log4j-core = "=2.17.2"
 log4j-api = "=2.17.2"
 log4j12-api = "=2.17.2"
 commons-logging = "=1.2"
-annotations-java5 = { group = "org.jetbrains", name = "annotations-java5", version = "=23.0.0" }
+annotations-java5 = "org.jetbrains:annotations-java5:=23.0.0"
 logback-classic = "=1.1.7"
 
 # Align with junit-jupiter 5.9.x — override jk's putIfAbsent "latest" launcher (was Platform 6.x)
 junit-platform-launcher = "=6.1.0"
 junit-platform-engine = "=6.1.0"
-junit-platform-commons = { group = "org.junit.platform", name = "junit-platform-commons", version = "=6.1.0" }
+junit-platform-commons = "=6.1.0"

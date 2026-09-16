@@ -3,7 +3,7 @@ generated-by = "jk 0.13.7"
 resolution-algorithm = "pubgrub-v1"
 kotlin = "2.4.20"
 jk-min = "0.12.0"
-manifests-sha256 = "c923f664c89b6c712e30a5c5fc0a9e9da30d4c6873d83194092710683ddc3f82"
+manifests-sha256 = "ffab91b0560ac37ed1027e628793ffcaf8adcd2dcfcd15e3f4fbb5a905359746"
 project-id = "dc2b41fc081a4f0b671c6ad43d4dbcdc"
 
 [jdk]

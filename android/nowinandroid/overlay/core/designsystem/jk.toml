@@ -12,19 +12,19 @@ library     = true
 compose     = true
 
 [platform-dependencies]
-compose = { group = "androidx.compose", name = "compose-bom-alpha", version = "=2026.07.01" }
+compose = "androidx.compose:compose-bom-alpha:=2026.07.01"
 
 [dependencies]
-compose-foundation        = { group = "androidx.compose.foundation", name = "foundation" }
-compose-foundation-layout = { group = "androidx.compose.foundation", name = "foundation-layout" }
-compose-icons-extended    = { group = "androidx.compose.material", name = "material-icons-extended" }
-compose-material3         = { group = "androidx.compose.material3", name = "material3" }
-material3-adaptive        = { group = "androidx.compose.material3.adaptive", name = "adaptive" }
-material3-nav-suite       = { group = "androidx.compose.material3", name = "material3-adaptive-navigation-suite" }
-compose-runtime           = { group = "androidx.compose.runtime", name = "runtime" }
-compose-ui-util           = { group = "androidx.compose.ui", name = "ui-util" }
-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
-coil-compose              = { group = "io.coil-kt", name = "coil-compose", version = "=2.7.0" }
+compose-foundation        = "androidx.compose.foundation:foundation"
+compose-foundation-layout = "androidx.compose.foundation:foundation-layout"
+compose-icons-extended    = "androidx.compose.material:material-icons-extended"
+compose-material3         = "androidx.compose.material3:material3"
+material3-adaptive        = "androidx.compose.material3.adaptive:adaptive"
+material3-nav-suite       = "androidx.compose.material3:material3-adaptive-navigation-suite"
+compose-runtime           = "androidx.compose.runtime:runtime"
+compose-ui-util           = "androidx.compose.ui:ui-util"
+compose-ui-tooling-preview = "androidx.compose.ui:ui-tooling-preview"
+coil-compose              = "=2.7.0"
 
 [test-dependencies]
 junit-platform-launcher = "=6.1.1"

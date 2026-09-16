@@ -11,7 +11,7 @@ java    = 25
 main = "com.example.echo.EchoServer"
 
 [dependencies]
-netty-all = { group = "io.netty", name = "netty-all", version = "latest" }
+netty-all = "latest"
 
 [test-dependencies]
 junit-jupiter = "latest"

@@ -21,16 +21,16 @@ base      = "docker.io/bellsoft/liberica-runtime-container:jre-25-slim-glibc"
 aot-cache = true
 
 [dependencies]
-starter-web        = { group = "org.springframework.boot", name = "spring-boot-starter-web" }
-starter-data-jpa   = { group = "org.springframework.boot", name = "spring-boot-starter-data-jpa" }
-starter-validation = { group = "org.springframework.boot", name = "spring-boot-starter-validation" }
-starter-actuator   = { group = "org.springframework.boot", name = "spring-boot-starter-actuator" }
+starter-web        = "org.springframework.boot:spring-boot-starter-web"
+starter-data-jpa   = "org.springframework.boot:spring-boot-starter-data-jpa"
+starter-validation = "org.springframework.boot:spring-boot-starter-validation"
+starter-actuator   = "org.springframework.boot:spring-boot-starter-actuator"
 
 [runtime-dependencies]
-h2 = { group = "com.h2database", name = "h2" }
+h2 = "com.h2database:h2"
 
 [dev-dependencies]
-devtools = { group = "org.springframework.boot", name = "spring-boot-devtools" }
+devtools = "org.springframework.boot:spring-boot-devtools"
 
 [test-dependencies]
-starter-test = { group = "org.springframework.boot", name = "spring-boot-starter-test" }
+starter-test = "org.springframework.boot:spring-boot-starter-test"

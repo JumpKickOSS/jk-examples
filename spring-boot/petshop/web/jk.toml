@@ -13,10 +13,10 @@ aot-cache = true
 
 [dependencies]
 petshop-service = { workspace = true }
-starter-webmvc = { group = "org.springframework.boot", name = "spring-boot-starter-webmvc" }
-starter-actuator = { group = "org.springframework.boot", name = "spring-boot-starter-actuator" }
-starter-validation = { group = "org.springframework.boot", name = "spring-boot-starter-validation" }
+starter-webmvc = "org.springframework.boot:spring-boot-starter-webmvc"
+starter-actuator = "org.springframework.boot:spring-boot-starter-actuator"
+starter-validation = "org.springframework.boot:spring-boot-starter-validation"
 
 [test-dependencies]
-starter-test = { group = "org.springframework.boot", name = "spring-boot-starter-test" }
-starter-webmvc-test = { group = "org.springframework.boot", name = "spring-boot-starter-webmvc-test" }
+starter-test = "org.springframework.boot:spring-boot-starter-test"
+starter-webmvc-test = "org.springframework.boot:spring-boot-starter-webmvc-test"

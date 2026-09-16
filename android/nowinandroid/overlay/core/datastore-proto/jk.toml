@@ -11,7 +11,7 @@ lite    = true
 kotlin  = true
 
 [dependencies]
-protobuf-kotlin-lite = { group = "com.google.protobuf", name = "protobuf-kotlin-lite", version = "=4.29.2" }
+protobuf-kotlin-lite = "=4.29.2"
 
 [test-dependencies]
 junit-platform-launcher = "=6.1.1"

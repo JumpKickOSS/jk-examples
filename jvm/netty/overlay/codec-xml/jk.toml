@@ -7,7 +7,7 @@ name    = "codec-xml"
 buffer = { workspace = true }
 transport = { workspace = true }
 codec = { workspace = true }
-aalto-xml = { group = "com.fasterxml", name = "aalto-xml", version = "=1.0.0" }
+aalto-xml = "=1.0.0"
 
 [test-dependencies]
 # Mill testModuleDeps = transport.test / Maven test-jar
@@ -27,4 +27,4 @@ logback-classic = "=1.1.7"
 # Align with junit-jupiter 5.9.x — override jk's putIfAbsent "latest" launcher (was Platform 6.x)
 junit-platform-launcher = "=6.1.0"
 junit-platform-engine = "=6.1.0"
-junit-platform-commons = { group = "org.junit.platform", name = "junit-platform-commons", version = "=6.1.0" }
+junit-platform-commons = "=6.1.0"

@@ -21,17 +21,17 @@ base      = "docker.io/bellsoft/liberica-runtime-container:jre-25-slim-glibc"
 aot-cache = true
 
 [dependencies]
-micronaut-http-server-netty = { group = "io.micronaut", name = "micronaut-http-server-netty" }
-micronaut-jackson-databind  = { group = "io.micronaut", name = "micronaut-jackson-databind" }
-logback                     = { group = "ch.qos.logback", name = "logback-classic" }
+micronaut-http-server-netty = "io.micronaut:micronaut-http-server-netty"
+micronaut-jackson-databind  = "io.micronaut:micronaut-jackson-databind"
+logback                     = "ch.qos.logback:logback-classic"
 
 [processor-dependencies]
-micronaut-inject-java = { group = "io.micronaut", name = "micronaut-inject-java" }
+micronaut-inject-java = "io.micronaut:micronaut-inject-java"
 
 [test-dependencies]
-micronaut-test-junit5 = { group = "io.micronaut.test", name = "micronaut-test-junit5" }
-micronaut-http-client = { group = "io.micronaut", name = "micronaut-http-client" }
-junit-jupiter         = { group = "org.junit.jupiter", name = "junit-jupiter" }
+micronaut-test-junit5 = "io.micronaut.test:micronaut-test-junit5"
+micronaut-http-client = "io.micronaut:micronaut-http-client"
+junit-jupiter         = "org.junit.jupiter:junit-jupiter"
 
 # Test tiers. Bare `jk test` is the unit tier; each profile owns exactly one of the excluded
 # tags, so every tagged test runs in one tier and none is silently skipped.

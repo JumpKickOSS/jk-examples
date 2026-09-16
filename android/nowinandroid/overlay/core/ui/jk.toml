@@ -12,18 +12,18 @@ library     = true
 compose     = true
 
 [platform-dependencies]
-compose = { group = "androidx.compose", name = "compose-bom-alpha", version = "=2026.07.01" }
+compose = "androidx.compose:compose-bom-alpha:=2026.07.01"
 
 [dependencies]
-metrics              = { group = "androidx.metrics", name = "metrics-performance", version = "=1.0.0-beta01" }
+metrics              = "androidx.metrics:metrics-performance:=1.0.0-beta01"
 kotlinx-datetime     = "=0.6.1"
 nia-core-analytics   = { workspace = true }
 nia-core-designsystem = { workspace = true }
 nia-core-model       = { workspace = true }
-browser              = { group = "androidx.browser", name = "browser", version = "=1.8.0" }
-coil                 = { group = "io.coil-kt", name = "coil", version = "=2.7.0" }
-coil-compose         = { group = "io.coil-kt", name = "coil-compose", version = "=2.7.0" }
-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+browser              = "=1.8.0"
+coil                 = "=2.7.0"
+coil-compose         = "=2.7.0"
+compose-ui-tooling-preview = "androidx.compose.ui:ui-tooling-preview"
 
 [test-dependencies]
 junit-platform-launcher = "=6.1.1"

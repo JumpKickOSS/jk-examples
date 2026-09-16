@@ -12,15 +12,15 @@ aot-cache = true
 ktor-petshop-domain = { workspace = true }
 
 # Ktor — every coordinate floats; jk-lock.toml pins the one version they all share
-ktor-server-core = { group = "io.ktor", name = "ktor-server-core-jvm", version = "latest" }
-ktor-server-netty = { group = "io.ktor", name = "ktor-server-netty-jvm", version = "latest" }
-ktor-server-content-negotiation = { group = "io.ktor", name = "ktor-server-content-negotiation-jvm", version = "latest" }
-ktor-serialization-jackson = { group = "io.ktor", name = "ktor-serialization-jackson-jvm", version = "latest" }
+ktor-server-core = "io.ktor:ktor-server-core-jvm:latest"
+ktor-server-netty = "io.ktor:ktor-server-netty-jvm:latest"
+ktor-server-content-negotiation = "io.ktor:ktor-server-content-negotiation-jvm:latest"
+ktor-serialization-jackson = "io.ktor:ktor-serialization-jackson-jvm:latest"
 
 # Koin
 koin-core = "latest"
 koin-ktor = "latest"
-koin-logger-slf4j = { group = "io.insert-koin", name = "koin-logger-slf4j", version = "latest" }
+koin-logger-slf4j = "latest"
 
 # Exposed + H2
 exposed-core = "latest"
@@ -33,5 +33,5 @@ logback-classic = "latest"
 [test-dependencies]
 junit-jupiter = "latest"
 junit-platform-launcher = "latest"
-ktor-server-test-host = { group = "io.ktor", name = "ktor-server-test-host-jvm", version = "latest" }
-koin-test = { group = "io.insert-koin", name = "koin-test", version = "latest" }
+ktor-server-test-host = "io.ktor:ktor-server-test-host-jvm:latest"
+koin-test = "latest"

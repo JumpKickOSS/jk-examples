@@ -7,10 +7,10 @@ name    = "transport-udt"
 common = { workspace = true }
 buffer = { workspace = true }
 transport = { workspace = true }
-barchart-udt-bundle = { group = "com.barchart.udt", name = "barchart-udt-bundle", version = "=2.3.0" }
+barchart-udt-bundle = "=2.3.0"
 # Maven/Mill main deps used by test benches under src/test
-caliper = { group = "com.google.caliper", name = "caliper", version = "=0.5-rc1" }
-metrics-core = { group = "com.yammer.metrics", name = "metrics-core", version = "=2.2.0" }
+caliper = "=0.5-rc1"
+metrics-core = "com.yammer.metrics:metrics-core:=2.2.0"
 
 [test-dependencies]
 junit-jupiter-api = "=6.1.0"
@@ -28,4 +28,4 @@ logback-classic = "=1.1.7"
 # Align with junit-jupiter 5.9.x — override jk's putIfAbsent "latest" launcher (was Platform 6.x)
 junit-platform-launcher = "=6.1.0"
 junit-platform-engine = "=6.1.0"
-junit-platform-commons = { group = "org.junit.platform", name = "junit-platform-commons", version = "=6.1.0" }
+junit-platform-commons = "=6.1.0"

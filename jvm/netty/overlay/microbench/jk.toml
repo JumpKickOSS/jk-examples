@@ -14,9 +14,9 @@ transport-classes-epoll = { workspace = true }
 transport-classes-kqueue = { workspace = true }
 junit-jupiter-api = "=6.1.0"
 jctools-core = "=4.0.5"
-jmh-core = { group = "org.openjdk.jmh", name = "jmh-core", version = "=1.36" }
-jmh-generator-annprocess = { group = "org.openjdk.jmh", name = "jmh-generator-annprocess", version = "=1.36" }
-agrona = { group = "org.agrona", name = "Agrona", version = "=0.5.1" }
+jmh-core = "org.openjdk.jmh:jmh-core:=1.36"
+jmh-generator-annprocess = "org.openjdk.jmh:jmh-generator-annprocess:=1.36"
+agrona = "org.agrona:Agrona:=0.5.1"
 
 [test-dependencies]
 junit-jupiter-api = "=6.1.0"
@@ -34,4 +34,4 @@ logback-classic = "=1.1.7"
 # Align with junit-jupiter 5.9.x — override jk's putIfAbsent "latest" launcher (was Platform 6.x)
 junit-platform-launcher = "=6.1.0"
 junit-platform-engine = "=6.1.0"
-junit-platform-commons = { group = "org.junit.platform", name = "junit-platform-commons", version = "=6.1.0" }
+junit-platform-commons = "=6.1.0"

@@ -7,8 +7,8 @@ name    = "handler-ssl-ocsp"
 codec-http = { workspace = true }
 transport = { workspace = true }
 resolver-dns = { workspace = true }
-bcpkix-jdk15on = { group = "org.bouncycastle", name = "bcpkix-jdk15on", version = "=1.69" }
-bctls-jdk15on = { group = "org.bouncycastle", name = "bctls-jdk15on", version = "=1.69" }
+bcpkix-jdk15on = "=1.69"
+bctls-jdk15on = "=1.69"
 
 [test-dependencies]
 junit-jupiter-api = "=6.1.0"
@@ -26,4 +26,4 @@ logback-classic = "=1.1.7"
 # Align with junit-jupiter 5.9.x — override jk's putIfAbsent "latest" launcher (was Platform 6.x)
 junit-platform-launcher = "=6.1.0"
 junit-platform-engine = "=6.1.0"
-junit-platform-commons = { group = "org.junit.platform", name = "junit-platform-commons", version = "=6.1.0" }
+junit-platform-commons = "=6.1.0"

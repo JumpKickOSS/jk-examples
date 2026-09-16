@@ -1,8 +1,8 @@
 version = 1
-generated-by = "jk 0.13.2"
+generated-by = "jk 0.13.7"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.10"
-manifests-sha256 = "8f084a9b4cf61f63bdb3274cd69cb176c653856ad8652effd8da3bb8c392037c"
+manifests-sha256 = "a8014165116e1b0765015beadc63b70ce7ef5342d400bf90e6ff779d79df1293"
 project-id = "122e33b50cbd20fd612c847929e000e6"
 
 [jdk]
@@ -14,11 +14,11 @@ name     = "ch.qos.logback:logback-classic:jar:"
 version  = "1.5.37"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:fd68ff5aa2760857ac5b7ad301e98bc6c18a74d60d7e016da1a608307c9eead7"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main"]
 deps = [
-  "ch.qos.logback:logback-core:jar:@1.5.37",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "ch.qos.logback:logback-core:jar:@1.5.37 <- 1.5.37",
+  "org.slf4j:slf4j-api:jar:@2.0.18 <- 2.0.17",
 ]
 
 [[artifact]]
@@ -26,15 +26,15 @@ name     = "ch.qos.logback:logback-core:jar:"
 version  = "1.5.37"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:c142955d757d923c6c626296bd97be2e0db1cfd33adeadbf2e2927403391e0a1"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main"]
 
 [[artifact]]
 name     = "com.fasterxml.jackson.core:jackson-annotations:jar:"
-version  = "2.21"
+version  = "2.22"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:53ca085f4a150f703f49e1aabd935bd03b43e1ea3d55d135438292af22cef56b"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:21ddb598807d3a51a876704eb979d9296e1c6a6f47ab1826ff88c6d6a127a2d0"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main"]
 
 [[artifact]]
@@ -49,11 +49,11 @@ name     = "com.github.javaparser:javaparser-symbol-solver-core:jar:"
 version  = "3.28.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:f7bd9d75c66977d8888851f75dc031397274e73f96e5352472edd4cd3a56a790"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["processor"]
 deps = [
-  "com.github.javaparser:javaparser-core:jar:@3.28.2",
-  "org.checkerframework:checker-qual:jar:@4.2.1",
+  "com.github.javaparser:javaparser-core:jar:@3.28.2 <- 3.28.0",
+  "org.checkerframework:checker-qual:jar:@4.2.1 <- 3.53.0",
 ]
 
 [[artifact]]
@@ -61,14 +61,14 @@ name     = "io.micronaut.sourcegen:micronaut-sourcegen-bytecode-writer:jar:"
 version  = "2.1.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:bf691a3e6bf6c56fe9ae9ab3fbd3a9f5c8da06a60253cf198a6249dcbd066b4a"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["processor"]
 deps = [
-  "io.micronaut.sourcegen:micronaut-sourcegen-model:jar:@2.1.0",
-  "io.micronaut:micronaut-inject:jar:@5.1.14",
-  "org.ow2.asm:asm-commons:jar:@9.10.1",
-  "org.ow2.asm:asm-util:jar:@9.10.1",
-  "org.ow2.asm:asm:jar:@9.10.1",
+  "io.micronaut.sourcegen:micronaut-sourcegen-model:jar:@2.1.0 <- 2.1.0",
+  "io.micronaut:micronaut-inject:jar:@5.1.15 <- 5.1.1",
+  "org.ow2.asm:asm-commons:jar:@9.9.1 <- 9.10.1",
+  "org.ow2.asm:asm-util:jar:@9.9.1 <- 9.10.1",
+  "org.ow2.asm:asm:jar:@9.9.1 <- 9.10.1",
 ]
 
 [[artifact]]
@@ -76,10 +76,10 @@ name     = "io.micronaut.sourcegen:micronaut-sourcegen-model:jar:"
 version  = "2.1.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:00c7bd1fece8676a64872a6d45b837e37519a2bd2e5b5734c9de7c0333bd0984"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["processor"]
 deps = [
-  "io.micronaut:micronaut-inject:jar:@5.1.14",
+  "io.micronaut:micronaut-inject:jar:@5.1.15 <- 5.1.1",
 ]
 
 [[artifact]]
@@ -87,11 +87,11 @@ name     = "io.micronaut.test:micronaut-test-core:jar:"
 version  = "5.1.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:1ff1646f6bad43274cad4acfa579cd56db60f9e4cd6e5753b21498e943da41d6"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["test"]
 deps = [
-  "io.micronaut:micronaut-context:jar:@5.1.14",
-  "io.micronaut:micronaut-inject:jar:@5.1.14",
+  "io.micronaut:micronaut-context:jar:@5.1.15 <- 5.1.11",
+  "io.micronaut:micronaut-inject:jar:@5.1.15 <- 5.1.11",
 ]
 
 [[artifact]]
@@ -99,327 +99,327 @@ name     = "io.micronaut.test:micronaut-test-junit5:jar:"
 version  = "5.1.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:7f921ee57999c543d8cfa41a78ff45757a5582a75e4d07a1b84486eccabf6bea"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["test"]
 deps = [
-  "io.micronaut.test:micronaut-test-core:jar:@5.1.1",
-  "io.micronaut:micronaut-context:jar:@5.1.14",
-  "io.micronaut:micronaut-inject:jar:@5.1.14",
-  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3",
+  "io.micronaut.test:micronaut-test-core:jar:@5.1.1 <- 5.1.1",
+  "io.micronaut:micronaut-context:jar:@5.1.15 <- 5.1.11",
+  "io.micronaut:micronaut-inject:jar:@5.1.15 <- 5.1.11",
+  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3 <- 6.1.3",
 ]
 
 [[artifact]]
 name     = "io.micronaut:micronaut-aop:jar:"
-version  = "5.1.14"
+version  = "5.1.15"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:5cff24b961419c83a14887baa0dcebf6ade2e263de6516e9b77bf6ab6c29c171"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:c0f077116e0b679bbb925ded3a17068495dbf2d802a21fec2a4e9e17eba4eb00"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main", "test", "processor"]
 deps = [
-  "io.micronaut:micronaut-core:jar:@5.1.14",
-  "io.micronaut:micronaut-inject:jar:@5.1.14",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "io.micronaut:micronaut-core:jar:@5.1.15 <- 5.1.15",
+  "io.micronaut:micronaut-inject:jar:@5.1.15 <- 5.1.15",
+  "org.slf4j:slf4j-api:jar:@2.0.18 <- 2.0.17",
 ]
 
 [[artifact]]
 name     = "io.micronaut:micronaut-buffer-netty:jar:"
-version  = "5.1.14"
+version  = "5.1.15"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:e1363f38c970ffd928af96ff335fa0294064461468deea34a40877202fd7de82"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:f2a0a6e1750fa6771f5c7d012197f59c370ea52194c75d6d2bf5f12baf5cb878"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main", "test"]
 deps = [
-  "io.micronaut:micronaut-core:jar:@5.1.14",
-  "io.micronaut:micronaut-inject:jar:@5.1.14",
-  "io.netty:netty-buffer:jar:@4.2.17.Final",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "io.micronaut:micronaut-core:jar:@5.1.15 <- 5.1.15",
+  "io.micronaut:micronaut-inject:jar:@5.1.15 <- 5.1.15",
+  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
+  "org.slf4j:slf4j-api:jar:@2.0.18 <- 2.0.17",
 ]
 
 [[artifact]]
 name     = "io.micronaut:micronaut-context-propagation:jar:"
-version  = "5.1.14"
+version  = "5.1.15"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:9cb9eeecb3d01cd9d8d0b43ca83b43caae31a235f5e0d3df61c96bab791ebeef"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:bc8c1b39c362e7a805a1c7347306a6b8bb6a9fa667f7402ae43e70dbcb3ecfe8"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main", "test"]
 deps = [
-  "io.micronaut:micronaut-aop:jar:@5.1.14",
-  "io.micronaut:micronaut-context:jar:@5.1.14",
-  "io.micronaut:micronaut-inject:jar:@5.1.14",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "io.micronaut:micronaut-aop:jar:@5.1.15 <- 5.1.15",
+  "io.micronaut:micronaut-context:jar:@5.1.15 <- 5.1.15",
+  "io.micronaut:micronaut-inject:jar:@5.1.15 <- 5.1.15",
+  "org.slf4j:slf4j-api:jar:@2.0.18 <- 2.0.17",
 ]
 
 [[artifact]]
 name     = "io.micronaut:micronaut-context:jar:"
-version  = "5.1.14"
+version  = "5.1.15"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:7477a2919474e14a3b67683a651cf575b1c2823312a1cd4b535812a9869aba9b"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:b162c24157ef50ac7bf26aebf252182bfa6052e49953c21eb5cfa2396b3ff361"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main", "test"]
 deps = [
-  "io.micronaut:micronaut-aop:jar:@5.1.14",
-  "io.micronaut:micronaut-inject:jar:@5.1.14",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "io.micronaut:micronaut-aop:jar:@5.1.15 <- 5.1.15",
+  "io.micronaut:micronaut-inject:jar:@5.1.15 <- 5.1.15",
+  "org.slf4j:slf4j-api:jar:@2.0.18 <- 2.0.17",
 ]
 
 [[artifact]]
 name     = "io.micronaut:micronaut-core-processor:jar:"
-version  = "5.1.14"
+version  = "5.1.15"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:6c23c7716dd852e50c06b083bb3bc4763fc54db5a7fd808d03c8c73ce0022d85"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:7832d7679318ea2af0a823087c122bd60d71782f1babfccb8ea0edc87a1b498f"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["processor"]
 deps = [
-  "com.github.javaparser:javaparser-symbol-solver-core:jar:@3.28.0",
-  "io.micronaut.sourcegen:micronaut-sourcegen-bytecode-writer:jar:@2.1.0",
-  "io.micronaut:micronaut-aop:jar:@5.1.14",
-  "io.micronaut:micronaut-core-reactive:jar:@5.1.14",
-  "io.micronaut:micronaut-inject:jar:@5.1.14",
-  "org.ow2.asm:asm:jar:@9.10.1",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "com.github.javaparser:javaparser-symbol-solver-core:jar:@3.28.0 <- 3.28.0",
+  "io.micronaut.sourcegen:micronaut-sourcegen-bytecode-writer:jar:@2.1.0 <- 2.0.0",
+  "io.micronaut:micronaut-aop:jar:@5.1.15 <- 5.1.15",
+  "io.micronaut:micronaut-core-reactive:jar:@5.1.15 <- 5.1.15",
+  "io.micronaut:micronaut-inject:jar:@5.1.15 <- 5.1.15",
+  "org.ow2.asm:asm:jar:@9.9.1 <- 9.9.1",
+  "org.slf4j:slf4j-api:jar:@2.0.18 <- 2.0.17",
 ]
 
 [[artifact]]
 name     = "io.micronaut:micronaut-core-reactive:jar:"
-version  = "5.1.14"
+version  = "5.1.15"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:0f7131d962adb5e219705a3a661be4f689d11a2c85c6078a8374bbadb6bb616b"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:15347858ed1cea3c24d5848eaec1008907ee3b6d8e587a68cfceafa19d1cbc24"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main", "test", "processor"]
 deps = [
-  "io.micronaut:micronaut-core:jar:@5.1.14",
-  "org.reactivestreams:reactive-streams:jar:@1.0.4",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "io.micronaut:micronaut-core:jar:@5.1.15 <- 5.1.15",
+  "org.reactivestreams:reactive-streams:jar:@1.0.4 <- 1.0.4",
+  "org.slf4j:slf4j-api:jar:@2.0.18 <- 2.0.17",
 ]
 
 [[artifact]]
 name     = "io.micronaut:micronaut-core:jar:"
-version  = "5.1.14"
+version  = "5.1.15"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:5fea093b8674c37eb3d65d94b2179204ed5feffe3a7bccb3cba2f42de8a61ed8"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:db10c1aec1a7938db6f77b88b647e9d300b56cb82bc39c374b0dc7537e97d543"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main", "test", "processor"]
 deps = [
-  "org.jspecify:jspecify:jar:@1.0.0",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "org.jspecify:jspecify:jar:@1.0.0 <- 1.0.0",
+  "org.slf4j:slf4j-api:jar:@2.0.18 <- 2.0.17",
 ]
 
 [[artifact]]
 name     = "io.micronaut:micronaut-discovery-core:jar:"
-version  = "5.1.14"
+version  = "5.1.15"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:76ff375f26a81088baa64b94f08c6b02838dcc60bd2c4320ae255075015ae0d1"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:0c66b05bc3954f6247ee1f0950df1cd46bc2106f959d7dfbe765c7d9dd7dc47f"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["test"]
 deps = [
-  "io.micronaut:micronaut-context:jar:@5.1.14",
-  "io.micronaut:micronaut-retry:jar:@5.1.14",
-  "io.projectreactor:reactor-core:jar:@3.8.7",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "io.micronaut:micronaut-context:jar:@5.1.15 <- 5.1.15",
+  "io.micronaut:micronaut-retry:jar:@5.1.15 <- 5.1.15",
+  "io.projectreactor:reactor-core:jar:@3.8.7 <- 3.8.7",
+  "org.slf4j:slf4j-api:jar:@2.0.18 <- 2.0.17",
 ]
 
 [[artifact]]
 name     = "io.micronaut:micronaut-http-client-core:jar:"
-version  = "5.1.14"
+version  = "5.1.15"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:031685a0779b40e94dd862fb12618c9164348ab25274ba3b9f307e079177d049"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:1c41208e5adcc3fb04f812782e6e07259e2ea73926bdb7576c41c3f7ab468ad6"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["test"]
 deps = [
-  "io.micronaut:micronaut-discovery-core:jar:@5.1.14",
-  "io.micronaut:micronaut-http:jar:@5.1.14",
-  "io.micronaut:micronaut-json-core:jar:@5.1.14",
-  "io.projectreactor:reactor-core:jar:@3.8.7",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "io.micronaut:micronaut-discovery-core:jar:@5.1.15 <- 5.1.15",
+  "io.micronaut:micronaut-http:jar:@5.1.15 <- 5.1.15",
+  "io.micronaut:micronaut-json-core:jar:@5.1.15 <- 5.1.15",
+  "io.projectreactor:reactor-core:jar:@3.8.7 <- 3.8.7",
+  "org.slf4j:slf4j-api:jar:@2.0.18 <- 2.0.17",
 ]
 
 [[artifact]]
 name     = "io.micronaut:micronaut-http-client:jar:"
-version  = "5.1.14"
+version  = "5.1.15"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:b2bb4a5ffb37a63f0c28ec02cedd7acd2a43e7a501a03574146933d205eec1f6"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:2b691044400986dad87202419ce44685d92a63df2910651508604ced67231d2c"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["test"]
 deps = [
-  "io.micronaut:micronaut-context:jar:@5.1.14",
-  "io.micronaut:micronaut-http-client-core:jar:@5.1.14",
-  "io.micronaut:micronaut-http-netty:jar:@5.1.14",
-  "io.micronaut:micronaut-websocket:jar:@5.1.14",
-  "io.netty:netty-handler-proxy:jar:@4.2.17.Final",
-  "io.projectreactor:reactor-core:jar:@3.8.7",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "io.micronaut:micronaut-context:jar:@5.1.15 <- 5.1.15",
+  "io.micronaut:micronaut-http-client-core:jar:@5.1.15 <- 5.1.15",
+  "io.micronaut:micronaut-http-netty:jar:@5.1.15 <- 5.1.15",
+  "io.micronaut:micronaut-websocket:jar:@5.1.15 <- 5.1.15",
+  "io.netty:netty-handler-proxy:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.projectreactor:reactor-core:jar:@3.8.7 <- 3.8.7",
+  "org.slf4j:slf4j-api:jar:@2.0.18 <- 2.0.17",
 ]
 
 [[artifact]]
 name     = "io.micronaut:micronaut-http-netty:jar:"
-version  = "5.1.14"
+version  = "5.1.15"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:869b8bd85762198d1ad811bd82ac37c075877e61f159590ab30f816ad84012a4"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:c0ea163d67df836ef5e73b085a5f64b7c7e3f0ae45cb725598c091ff7d63f4aa"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main", "test"]
 deps = [
-  "io.micronaut:micronaut-buffer-netty:jar:@5.1.14",
-  "io.micronaut:micronaut-http:jar:@5.1.14",
-  "io.netty:netty-codec-http2:jar:@4.2.17.Final",
-  "io.netty:netty-codec-http:jar:@4.2.17.Final",
-  "io.netty:netty-handler:jar:@4.2.17.Final",
-  "io.projectreactor:reactor-core:jar:@3.8.7",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "io.micronaut:micronaut-buffer-netty:jar:@5.1.15 <- 5.1.15",
+  "io.micronaut:micronaut-http:jar:@5.1.15 <- 5.1.15",
+  "io.netty:netty-codec-http2:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-codec-http:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-handler:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.projectreactor:reactor-core:jar:@3.8.7 <- 3.8.7",
+  "org.slf4j:slf4j-api:jar:@2.0.18 <- 2.0.17",
 ]
 
 [[artifact]]
 name     = "io.micronaut:micronaut-http-server-netty:jar:"
-version  = "5.1.14"
+version  = "5.1.15"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:bba17b8f87391b0eb81d7efab05c163972e1ced780f7810a69f55f7416c0299d"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:639278987ba014c5c6eb1b3335e77b7777afd945098a74c54d6849fd23c09161"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main"]
 deps = [
-  "io.micronaut:micronaut-core:jar:@5.1.14",
-  "io.micronaut:micronaut-http-netty:jar:@5.1.14",
-  "io.micronaut:micronaut-http-server:jar:@5.1.14",
-  "io.netty.contrib:netty-codec-multipart-core:jar:@1.0.0.Final",
-  "io.netty:netty-codec-http:jar:@4.2.17.Final",
-  "io.projectreactor:reactor-core:jar:@3.8.7",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "io.micronaut:micronaut-core:jar:@5.1.15 <- 5.1.15",
+  "io.micronaut:micronaut-http-netty:jar:@5.1.15 <- 5.1.15",
+  "io.micronaut:micronaut-http-server:jar:@5.1.15 <- 5.1.15",
+  "io.netty.contrib:netty-codec-multipart-core:jar:@1.0.0.Final <- 1.0.0.Final",
+  "io.netty:netty-codec-http:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.projectreactor:reactor-core:jar:@3.8.7 <- 3.8.7",
+  "org.slf4j:slf4j-api:jar:@2.0.18 <- 2.0.17",
 ]
 
 [[artifact]]
 name     = "io.micronaut:micronaut-http-server:jar:"
-version  = "5.1.14"
+version  = "5.1.15"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:df23edf1fcced87b729ffbd7c81d37004fcb42093e958b5a262184466032c04c"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:1c1c06d70985f4877159521530339c95f0bcd0e4dee0db369b7c04473f02d4b3"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main"]
 deps = [
-  "io.micronaut:micronaut-http:jar:@5.1.14",
-  "io.micronaut:micronaut-router:jar:@5.1.14",
-  "io.projectreactor:reactor-core:jar:@3.8.7",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "io.micronaut:micronaut-http:jar:@5.1.15 <- 5.1.15",
+  "io.micronaut:micronaut-router:jar:@5.1.15 <- 5.1.15",
+  "io.projectreactor:reactor-core:jar:@3.8.7 <- 3.8.7",
+  "org.slf4j:slf4j-api:jar:@2.0.18 <- 2.0.17",
 ]
 
 [[artifact]]
 name     = "io.micronaut:micronaut-http:jar:"
-version  = "5.1.14"
+version  = "5.1.15"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:ee6bfb425675b9fdf070ec21c58472a32da3c78a30ab51cdb2c2b6cfc93151bb"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:bfccf945bfd9dd1e0e4a95c27196e125b5a434ed0cf1e88cf5c3040544a4c946"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main", "test"]
 deps = [
-  "io.micronaut:micronaut-context-propagation:jar:@5.1.14",
-  "io.micronaut:micronaut-context:jar:@5.1.14",
-  "io.micronaut:micronaut-core-reactive:jar:@5.1.14",
-  "io.projectreactor:reactor-core:jar:@3.8.7",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "io.micronaut:micronaut-context-propagation:jar:@5.1.15 <- 5.1.15",
+  "io.micronaut:micronaut-context:jar:@5.1.15 <- 5.1.15",
+  "io.micronaut:micronaut-core-reactive:jar:@5.1.15 <- 5.1.15",
+  "io.projectreactor:reactor-core:jar:@3.8.7 <- 3.8.7",
+  "org.slf4j:slf4j-api:jar:@2.0.18 <- 2.0.17",
 ]
 
 [[artifact]]
 name     = "io.micronaut:micronaut-inject-java:jar:"
-version  = "5.1.14"
+version  = "5.1.15"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:f5e2b8850e84147032e8a8b3c62bfe9c6e539317a68f9c7fd3ae3a36b01a989e"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:f8d9b43af192779d0bfdb9207a510c10ed79e7716e5b6cbf190c5d023b48ea8a"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["processor"]
 deps = [
-  "io.micronaut:micronaut-core-processor:jar:@5.1.14",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "io.micronaut:micronaut-core-processor:jar:@5.1.15 <- 5.1.15",
+  "org.slf4j:slf4j-api:jar:@2.0.18 <- 2.0.17",
 ]
 
 [[artifact]]
 name     = "io.micronaut:micronaut-inject:jar:"
-version  = "5.1.14"
+version  = "5.1.15"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:ef841fdd2d1b8eed6ed6d629b73f911c2ddeb224dcd0d05f63f3d121840875ec"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:c7b001eb829936791a7fefc88958e659054382d4066a5bd0e96f9b568048f77e"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main", "test", "processor"]
 deps = [
-  "io.micronaut:micronaut-core:jar:@5.1.14",
-  "jakarta.annotation:jakarta.annotation-api:jar:@2.1.1",
-  "jakarta.inject:jakarta.inject-api:jar:@2.0.1.MR",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "io.micronaut:micronaut-core:jar:@5.1.15 <- 5.1.15",
+  "jakarta.annotation:jakarta.annotation-api:jar:@2.1.1 <- 2.1.1",
+  "jakarta.inject:jakarta.inject-api:jar:@2.0.1.MR <- 2.0.1",
+  "org.slf4j:slf4j-api:jar:@2.0.18 <- 2.0.17",
 ]
 
 [[artifact]]
 name     = "io.micronaut:micronaut-jackson-core:jar:"
-version  = "5.1.14"
+version  = "5.1.15"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:59575dd7bace197c54b03fe79eddf978e91d978c62cc045ab38afb6210ab2dc1"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:a6f1919b4c6589c9d2293b2fbbdeefe8ac8f80b3f687dac4c2a38e9dc4f08ce3"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main"]
 deps = [
-  "com.fasterxml.jackson.core:jackson-annotations:jar:@2.21",
-  "io.micronaut:micronaut-json-core:jar:@5.1.14",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
-  "tools.jackson.core:jackson-core:jar:@3.1.6",
+  "com.fasterxml.jackson.core:jackson-annotations:jar:@2.22 <- 2.22",
+  "io.micronaut:micronaut-json-core:jar:@5.1.15 <- 5.1.15",
+  "org.slf4j:slf4j-api:jar:@2.0.18 <- 2.0.17",
+  "tools.jackson.core:jackson-core:jar:@3.1.6 <- 3.1.6",
 ]
 
 [[artifact]]
 name     = "io.micronaut:micronaut-jackson-databind:jar:"
-version  = "5.1.14"
+version  = "5.1.15"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:74bf9678913972102f928355ca667f120c36aa51c7990186da3d4bfb891ccdfc"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:ab9a4d055c7746e09789de6929fcb0993371bd18730202aec76aa3df6e1dfdac"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main"]
 deps = [
-  "io.micronaut:micronaut-jackson-core:jar:@5.1.14",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
-  "tools.jackson.core:jackson-databind:jar:@3.1.6",
+  "io.micronaut:micronaut-jackson-core:jar:@5.1.15 <- 5.1.15",
+  "org.slf4j:slf4j-api:jar:@2.0.18 <- 2.0.17",
+  "tools.jackson.core:jackson-databind:jar:@3.1.6 <- 3.1.6",
 ]
 
 [[artifact]]
 name     = "io.micronaut:micronaut-json-core:jar:"
-version  = "5.1.14"
+version  = "5.1.15"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:82eeaf8159b1aa74b66044cc7b219b26705d37f4957c31588ff38f546873000e"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:f49d5ccde2f156a44e17c35bdab5da2696c342f09f20028435e80bd705a0172d"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main", "test"]
 deps = [
-  "io.micronaut:micronaut-context:jar:@5.1.14",
-  "io.micronaut:micronaut-http:jar:@5.1.14",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "io.micronaut:micronaut-context:jar:@5.1.15 <- 5.1.15",
+  "io.micronaut:micronaut-http:jar:@5.1.15 <- 5.1.15",
+  "org.slf4j:slf4j-api:jar:@2.0.18 <- 2.0.17",
 ]
 
 [[artifact]]
 name     = "io.micronaut:micronaut-retry:jar:"
-version  = "5.1.14"
+version  = "5.1.15"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:54867b939b8085435fdb622b9772802f1d24f37359de0cd5a84c63de8d916696"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:2898eaaf18a8a842c1c16365dd10a8ddf7600b4e1a201263b379c7d6923e8fc5"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["test"]
 deps = [
-  "io.micronaut:micronaut-context:jar:@5.1.14",
-  "io.micronaut:micronaut-core-reactive:jar:@5.1.14",
-  "io.projectreactor:reactor-core:jar:@3.8.7",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "io.micronaut:micronaut-context:jar:@5.1.15 <- 5.1.15",
+  "io.micronaut:micronaut-core-reactive:jar:@5.1.15 <- 5.1.15",
+  "io.projectreactor:reactor-core:jar:@3.8.7 <- 3.8.7",
+  "org.slf4j:slf4j-api:jar:@2.0.18 <- 2.0.17",
 ]
 
 [[artifact]]
 name     = "io.micronaut:micronaut-router:jar:"
-version  = "5.1.14"
+version  = "5.1.15"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:399e4aa094d5721ebb2c4a48a36fd45c0e1c9ecd6a873ed76278fcb5b311cee1"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:e112a09e55e548ab90dbfef492aee83096dac850bd8b9defccdd7e3353da696d"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main"]
 deps = [
-  "io.micronaut:micronaut-http:jar:@5.1.14",
-  "io.micronaut:micronaut-inject:jar:@5.1.14",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "io.micronaut:micronaut-http:jar:@5.1.15 <- 5.1.15",
+  "io.micronaut:micronaut-inject:jar:@5.1.15 <- 5.1.15",
+  "org.slf4j:slf4j-api:jar:@2.0.18 <- 2.0.17",
 ]
 
 [[artifact]]
 name     = "io.micronaut:micronaut-websocket:jar:"
-version  = "5.1.14"
+version  = "5.1.15"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:290e26e1ba936232a97169848b8d493aa9a2365ed73557197652fb5d3734264c"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:b9e788f268133efe67fc7ec0ee757c8fd5d155558739764be668e079902519dd"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["test"]
 deps = [
-  "io.micronaut:micronaut-aop:jar:@5.1.14",
-  "io.micronaut:micronaut-http-client-core:jar:@5.1.14",
-  "io.micronaut:micronaut-http:jar:@5.1.14",
-  "io.micronaut:micronaut-inject:jar:@5.1.14",
-  "io.projectreactor:reactor-core:jar:@3.8.7",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "io.micronaut:micronaut-aop:jar:@5.1.15 <- 5.1.15",
+  "io.micronaut:micronaut-http-client-core:jar:@5.1.15 <- 5.1.15",
+  "io.micronaut:micronaut-http:jar:@5.1.15 <- 5.1.15",
+  "io.micronaut:micronaut-inject:jar:@5.1.15 <- 5.1.15",
+  "io.projectreactor:reactor-core:jar:@3.8.7 <- 3.8.7",
+  "org.slf4j:slf4j-api:jar:@2.0.18 <- 2.0.17",
 ]
 
 [[artifact]]
@@ -427,221 +427,221 @@ name     = "io.netty.contrib:netty-codec-multipart-core:jar:"
 version  = "1.0.0.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:74b2428a2b510766a2cee9a0ef7e7a99cf4b619cc960e0815731772e7c41f330"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.17.Final",
-  "io.netty:netty-codec-http:jar:@4.2.17.Final",
-  "io.netty:netty-codec:jar:@4.2.17.Final",
-  "io.netty:netty-common:jar:@4.2.17.Final",
-  "io.netty:netty-transport:jar:@4.2.17.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.7.Final",
+  "io.netty:netty-codec-http:jar:@4.2.18.Final <- 4.2.7.Final",
+  "io.netty:netty-codec:jar:@4.2.18.Final <- 4.2.7.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.7.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.7.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-buffer:jar:"
-version  = "4.2.17.Final"
+version  = "4.2.18.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:0d249178ec0204b35a6ad3e5ac8a6c2ecb3eb496c6cdae40b8eca4fa3cb6a0c7"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:fdf236d2b76aa9710684401fdad7dff9dec56e43da5d39172c9a55ba5f14b360"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main", "test"]
 deps = [
-  "io.netty:netty-common:jar:@4.2.17.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-codec-base:jar:"
-version  = "4.2.17.Final"
+version  = "4.2.18.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:3b92bc3b7d231fa6f4889b2b9281cae6b634428b8121fb1b9b5fccba1543d352"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:7e4612bead7ba88ac6f7908fa722f90ad6835ea96505c9e40b2f93686c1f61f3"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main", "test"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.17.Final",
-  "io.netty:netty-common:jar:@4.2.17.Final",
-  "io.netty:netty-transport:jar:@4.2.17.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-codec-compression:jar:"
-version  = "4.2.17.Final"
+version  = "4.2.18.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:425b287a1f36986a5c8edd76379a49decdf99d284f3454f3fa607a073bfb2c18"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:9d8a4b9a6a2a166ec5a4bbe51a78b4f6a726457c51d81495743c7e7ccb9f4765"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main", "test"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.17.Final",
-  "io.netty:netty-codec-base:jar:@4.2.17.Final",
-  "io.netty:netty-common:jar:@4.2.17.Final",
-  "io.netty:netty-transport:jar:@4.2.17.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-codec-base:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-codec-http2:jar:"
-version  = "4.2.17.Final"
+version  = "4.2.18.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:450af97424cf58d2d72ad4d476d9e290f2fdf69fa181c289a6e6dd176bb86a7b"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:a45a2b06c377b9c87c21ae2b37f04c8d808192590a73d977e7a60fd59921f283"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main", "test"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.17.Final",
-  "io.netty:netty-codec-base:jar:@4.2.17.Final",
-  "io.netty:netty-codec-http:jar:@4.2.17.Final",
-  "io.netty:netty-common:jar:@4.2.17.Final",
-  "io.netty:netty-handler:jar:@4.2.17.Final",
-  "io.netty:netty-transport:jar:@4.2.17.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-codec-base:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-codec-http:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-handler:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-codec-http:jar:"
-version  = "4.2.17.Final"
+version  = "4.2.18.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:a5bde91ac82ab90579df6559c0bd7ea6ae37460e3f18116ab4122194283b3669"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:2d50765eb58591ce35146c54ca032a257808d2165d8985a8522c70ea1470e8d7"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main", "test"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.17.Final",
-  "io.netty:netty-codec-base:jar:@4.2.17.Final",
-  "io.netty:netty-codec-compression:jar:@4.2.17.Final",
-  "io.netty:netty-common:jar:@4.2.17.Final",
-  "io.netty:netty-handler:jar:@4.2.17.Final",
-  "io.netty:netty-transport:jar:@4.2.17.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-codec-base:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-codec-compression:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-handler:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-codec-marshalling:jar:"
-version  = "4.2.17.Final"
+version  = "4.2.18.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:ee5ffed638da6b7e2b4567559bd5f78b18f635cdaa4f3b6d23aa27ccf6cb57c2"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:eccf83cbbd1319db879424c4559d465dc43251fe1a8ff759c4320b5adbcf26b7"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.17.Final",
-  "io.netty:netty-codec-base:jar:@4.2.17.Final",
-  "io.netty:netty-common:jar:@4.2.17.Final",
-  "io.netty:netty-transport:jar:@4.2.17.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-codec-base:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-codec-protobuf:jar:"
-version  = "4.2.17.Final"
+version  = "4.2.18.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:44b2fcc4bc1d6c01edafe6ae6c8a7de7c3c5bad59697a93b6b879a45a78a5387"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:1bcaedd0da94f8579477f0848e910c24aced8b1ed7c3e1bff16d56fd0229b516"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.17.Final",
-  "io.netty:netty-codec-base:jar:@4.2.17.Final",
-  "io.netty:netty-common:jar:@4.2.17.Final",
-  "io.netty:netty-transport:jar:@4.2.17.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-codec-base:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-codec-socks:jar:"
-version  = "4.2.17.Final"
+version  = "4.2.18.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:6b5760cc512cee1f7515e25010892471f3995045f84cd6c1d1b6e6cee534733c"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:25dea7bc1ad990ab8959065f0690b63574d8db4f51033cd98458fc84c59367f3"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["test"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.17.Final",
-  "io.netty:netty-codec-base:jar:@4.2.17.Final",
-  "io.netty:netty-common:jar:@4.2.17.Final",
-  "io.netty:netty-transport:jar:@4.2.17.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-codec-base:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-codec:jar:"
-version  = "4.2.17.Final"
+version  = "4.2.18.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:ac76f972446a2f72818441f746d0e73c58519a4687bf680d2b687d7dc5e28e2e"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:439645eb5061f8f50fbf27afacce394e4cecc4d373e1f7a384837e4661d5f430"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.17.Final",
-  "io.netty:netty-codec-base:jar:@4.2.17.Final",
-  "io.netty:netty-codec-compression:jar:@4.2.17.Final",
-  "io.netty:netty-codec-marshalling:jar:@4.2.17.Final",
-  "io.netty:netty-codec-protobuf:jar:@4.2.17.Final",
-  "io.netty:netty-common:jar:@4.2.17.Final",
-  "io.netty:netty-transport:jar:@4.2.17.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-codec-base:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-codec-compression:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-codec-marshalling:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-codec-protobuf:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-common:jar:"
-version  = "4.2.17.Final"
+version  = "4.2.18.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:502aae2a6680e9bca3558a3fa098f06dc4d87340b8b714e925a6d690871c092a"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:5d97cae5669685872339698efe13f74fe3cdb2dccdb36963b2352bd95acf7070"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main", "test"]
 
 [[artifact]]
 name     = "io.netty:netty-handler-proxy:jar:"
-version  = "4.2.17.Final"
+version  = "4.2.18.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:94089bea6ba6f3248725f2bf233aa2bc70ac1547c21b9bdfc7548f710a845aa0"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:d7786de71c0d405b80b4262e0c585618e6f20e7fd3188cb4f599ffc4029ee9ea"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["test"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.17.Final",
-  "io.netty:netty-codec-base:jar:@4.2.17.Final",
-  "io.netty:netty-codec-http:jar:@4.2.17.Final",
-  "io.netty:netty-codec-socks:jar:@4.2.17.Final",
-  "io.netty:netty-common:jar:@4.2.17.Final",
-  "io.netty:netty-handler:jar:@4.2.17.Final",
-  "io.netty:netty-transport:jar:@4.2.17.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-codec-base:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-codec-http:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-codec-socks:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-handler:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-handler:jar:"
-version  = "4.2.17.Final"
+version  = "4.2.18.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:4df11c7520b556c5e2c84b939182699d48fcbb09e97a6bb5e1c0b6835227d126"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:6d5a08d9dd6d7d0211202e22dbb1629b23a62550335c7e80892da1d4cb115540"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main", "test"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.17.Final",
-  "io.netty:netty-codec-base:jar:@4.2.17.Final",
-  "io.netty:netty-common:jar:@4.2.17.Final",
-  "io.netty:netty-resolver:jar:@4.2.17.Final",
-  "io.netty:netty-transport-native-unix-common:jar:@4.2.17.Final",
-  "io.netty:netty-transport:jar:@4.2.17.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-codec-base:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-resolver:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-resolver:jar:"
-version  = "4.2.17.Final"
+version  = "4.2.18.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:7a4b599b9c0c29a505d3b7311f142df883fb27d0f67495a7cbaf533b0e456623"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:68373ec544cf769ba17bf2ef455166d98f2c260dff536edf35ef57067a9c155f"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main", "test"]
 deps = [
-  "io.netty:netty-common:jar:@4.2.17.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-transport-native-unix-common:jar:"
-version  = "4.2.17.Final"
+version  = "4.2.18.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:e01aa467b9104de54a57c08c290f70b22e53ec97cf5583c87c112170ef5832cc"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:cada7023d09136af128511ca94421d69dc84d0f1f64c9e1f127a1271bb62932a"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main", "test"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.17.Final",
-  "io.netty:netty-common:jar:@4.2.17.Final",
-  "io.netty:netty-transport:jar:@4.2.17.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-transport:jar:"
-version  = "4.2.17.Final"
+version  = "4.2.18.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:d2409ce3a735cbab4188d0ea5d82abed823a6a07a8389f49af4a9e1243a562bc"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:eac4f12068db4489e60c6520fad663e5d872f0436a7c641aa9e08db649947863"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main", "test"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.17.Final",
-  "io.netty:netty-common:jar:@4.2.17.Final",
-  "io.netty:netty-resolver:jar:@4.2.17.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-resolver:jar:@4.2.18.Final <- 4.2.18.Final",
 ]
 
 [[artifact]]
@@ -649,11 +649,11 @@ name     = "io.projectreactor:reactor-core:jar:"
 version  = "3.8.7"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:9a5f1bfc5ad0416a410ff63beaa279cc30c2da3ae9b111a678c83c99298a1551"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main", "test"]
 deps = [
-  "org.jspecify:jspecify:jar:@1.0.0",
-  "org.reactivestreams:reactive-streams:jar:@1.0.4",
+  "org.jspecify:jspecify:jar:@1.0.0 <- 1.0.0",
+  "org.reactivestreams:reactive-streams:jar:@1.0.4 <- 1.0.4",
 ]
 
 [[artifact]]
@@ -661,7 +661,7 @@ name     = "jakarta.annotation:jakarta.annotation-api:jar:"
 version  = "2.1.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:5f65fdaf424eee2b55e1d882ba9bb376be93fb09b37b808be6e22e8851c909fe"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main", "test", "processor"]
 
 [[artifact]]
@@ -683,7 +683,7 @@ name     = "org.checkerframework:checker-qual:jar:"
 version  = "4.2.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:d0831f48bf587787bd29a0574692a4e2c494acc15112a4396c71b45f553d73c6"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["processor"]
 
 [[artifact]]
@@ -691,7 +691,7 @@ name     = "org.jspecify:jspecify:jar:"
 version  = "1.0.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:1fad6e6be7557781e4d33729d49ae1cdc8fdda6fe477bb0cc68ce351eafdfbab"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main", "test", "processor"]
 
 [[artifact]]
@@ -699,13 +699,13 @@ name     = "org.junit.jupiter:junit-jupiter-api:jar:"
 version  = "6.1.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:555d6cf20fa1710884dd01b86cc5785397ba73e21ada2d4b784f5f1a14dcafc4"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["test"]
 deps = [
-  "org.apiguardian:apiguardian-api:jar:@1.1.2",
-  "org.jspecify:jspecify:jar:@1.0.0",
-  "org.junit.platform:junit-platform-commons:jar:@6.1.3",
-  "org.opentest4j:opentest4j:jar:@1.3.0",
+  "org.apiguardian:apiguardian-api:jar:@1.1.2 <- 1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0 <- 1.0.0",
+  "org.junit.platform:junit-platform-commons:jar:@6.1.2 <- 6.1.3",
+  "org.opentest4j:opentest4j:jar:@1.3.0 <- 1.3.0",
 ]
 
 [[artifact]]
@@ -713,13 +713,13 @@ name     = "org.junit.jupiter:junit-jupiter-engine:jar:"
 version  = "6.1.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:414559e78bbfa3bdb2eab009ac3ab1e22369ac31117c270a0bd666da115c5c6c"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["test"]
 deps = [
-  "org.apiguardian:apiguardian-api:jar:@1.1.2",
-  "org.jspecify:jspecify:jar:@1.0.0",
-  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3",
-  "org.junit.platform:junit-platform-engine:jar:@6.1.3",
+  "org.apiguardian:apiguardian-api:jar:@1.1.2 <- 1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0 <- 1.0.0",
+  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3 <- 6.1.3",
+  "org.junit.platform:junit-platform-engine:jar:@6.1.3 <- 6.1.3",
 ]
 
 [[artifact]]
@@ -727,37 +727,37 @@ name     = "org.junit.jupiter:junit-jupiter-params:jar:"
 version  = "6.1.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:05c51cedba2c06a9770707391e006cee825876937dea580b94a265ce145d4939"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["test"]
 deps = [
-  "org.apiguardian:apiguardian-api:jar:@1.1.2",
-  "org.jspecify:jspecify:jar:@1.0.0",
-  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3",
+  "org.apiguardian:apiguardian-api:jar:@1.1.2 <- 1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0 <- 1.0.0",
+  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3 <- 6.1.3",
 ]
 
 [[artifact]]
 name     = "org.junit.jupiter:junit-jupiter:jar:"
-version  = "6.1.3"
+version  = "6.1.2"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:6b0a14075c74221de53047e363860b7d19fce802bebc152df2c35c4089c6c379"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:2a7877196573a1d32fa726313deffdde2e90cca764647e605093020b08973616"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["test"]
 deps = [
-  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3",
-  "org.junit.jupiter:junit-jupiter-engine:jar:@6.1.3",
-  "org.junit.jupiter:junit-jupiter-params:jar:@6.1.3",
+  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3 <- 6.1.2",
+  "org.junit.jupiter:junit-jupiter-engine:jar:@6.1.3 <- 6.1.2",
+  "org.junit.jupiter:junit-jupiter-params:jar:@6.1.3 <- 6.1.2",
 ]
 
 [[artifact]]
 name     = "org.junit.platform:junit-platform-commons:jar:"
-version  = "6.1.3"
+version  = "6.1.2"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:a4774ae923c109544034aeae7c762cf017fbcdd1342403ba90e0921984b608c3"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:204894c039d321743ee11e7d1dc8360170d7c64391fbea1211178a645c33a92a"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["test"]
 deps = [
-  "org.apiguardian:apiguardian-api:jar:@1.1.2",
-  "org.jspecify:jspecify:jar:@1.0.0",
+  "org.apiguardian:apiguardian-api:jar:@1.1.2 <- 1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0 <- 1.0.0",
 ]
 
 [[artifact]]
@@ -765,13 +765,13 @@ name     = "org.junit.platform:junit-platform-engine:jar:"
 version  = "6.1.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:21ad7ad3a35beda16387979317be1833a72a71d812f9a66ee4b9a7bafb56334c"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["test"]
 deps = [
-  "org.apiguardian:apiguardian-api:jar:@1.1.2",
-  "org.jspecify:jspecify:jar:@1.0.0",
-  "org.junit.platform:junit-platform-commons:jar:@6.1.3",
-  "org.opentest4j:opentest4j:jar:@1.3.0",
+  "org.apiguardian:apiguardian-api:jar:@1.1.2 <- 1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0 <- 1.0.0",
+  "org.junit.platform:junit-platform-commons:jar:@6.1.2 <- 6.1.3",
+  "org.opentest4j:opentest4j:jar:@1.3.0 <- 1.3.0",
 ]
 
 [[artifact]]
@@ -779,12 +779,12 @@ name     = "org.junit.platform:junit-platform-launcher:jar:"
 version  = "6.1.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:1dec64b1fc0b7c47a11302aa5b4d37d8160c041b396e27067709ce775601a7b6"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["test"]
 deps = [
-  "org.apiguardian:apiguardian-api:jar:@1.1.2",
-  "org.jspecify:jspecify:jar:@1.0.0",
-  "org.junit.platform:junit-platform-engine:jar:@6.1.3",
+  "org.apiguardian:apiguardian-api:jar:@1.1.2 <- 1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0 <- 1.0.0",
+  "org.junit.platform:junit-platform-engine:jar:@6.1.3 <- 6.1.3",
 ]
 
 [[artifact]]
@@ -801,19 +801,19 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:dede75a21306b65974ecd8f87114ff6970f09fb794157a4ca09ab25c888c2bfc"
 scopes   = ["processor"]
 deps = [
-  "org.ow2.asm:asm-tree:jar:@9.10.1",
+  "org.ow2.asm:asm-tree:jar:@9.10.1 <- 9.10.1",
 ]
 
 [[artifact]]
 name     = "org.ow2.asm:asm-commons:jar:"
-version  = "9.10.1"
+version  = "9.9.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:6d0abefb7cbf972ea16edb37ec14835372505063a45f976ab7ea889ed9497895"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:c2319e014ce7199f2b7f7d56d6bb991863168c3f4b6cd6c9f542a4937ef7ef88"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["processor"]
 deps = [
-  "org.ow2.asm:asm-tree:jar:@9.10.1",
-  "org.ow2.asm:asm:jar:@9.10.1",
+  "org.ow2.asm:asm-tree:jar:@9.10.1 <- 9.9.1",
+  "org.ow2.asm:asm:jar:@9.9.1 <- 9.9.1",
 ]
 
 [[artifact]]
@@ -823,28 +823,28 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:3dfb0d5b6a106cd40b5b250e39935fbf2f927f4477546a5369a3ac609cf0506b"
 scopes   = ["processor"]
 deps = [
-  "org.ow2.asm:asm:jar:@9.10.1",
+  "org.ow2.asm:asm:jar:@9.9.1 <- 9.10.1",
 ]
 
 [[artifact]]
 name     = "org.ow2.asm:asm-util:jar:"
-version  = "9.10.1"
+version  = "9.9.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:1bb99d091fba2597dc6d51193e9bbcf0d8447e7ed96bd8f0198b18152f09655c"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:c5ebbbeaf68126af094b42fa4800f59bc4413abd02d95b9aefad722cd257e207"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["processor"]
 deps = [
-  "org.ow2.asm:asm-analysis:jar:@9.10.1",
-  "org.ow2.asm:asm-tree:jar:@9.10.1",
-  "org.ow2.asm:asm:jar:@9.10.1",
+  "org.ow2.asm:asm-analysis:jar:@9.10.1 <- 9.9.1",
+  "org.ow2.asm:asm-tree:jar:@9.10.1 <- 9.9.1",
+  "org.ow2.asm:asm:jar:@9.9.1 <- 9.9.1",
 ]
 
 [[artifact]]
 name     = "org.ow2.asm:asm:jar:"
-version  = "9.10.1"
+version  = "9.9.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:ed825d10ab1399c8c0cb669e688cf0c8c82629b4c8399b58352b68e92ca10fcb"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+checksum = "sha256:6f3828a215c920059a5efa2fb55c233d6c54ec5cadca99ce1b1bdd10077c7ddd"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["processor"]
 
 [[artifact]]
@@ -852,7 +852,7 @@ name     = "org.reactivestreams:reactive-streams:jar:"
 version  = "1.0.4"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:f75ca597789b3dac58f61857b9ac2e1034a68fa672db35055a8fb4509e325f28"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main", "test", "processor"]
 
 [[artifact]]
@@ -860,7 +860,7 @@ name     = "org.slf4j:slf4j-api:jar:"
 version  = "2.0.18"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:44508fd1576500688c790b190acdd16fec4f8c79a3e0b900afd70503cf055f55"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main", "test", "processor"]
 
 [[artifact]]
@@ -868,7 +868,7 @@ name     = "tools.jackson.core:jackson-core:jar:"
 version  = "3.1.6"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:d4938937b819b48f273a25929dc4fbc72ac03b0753c9c6398f54c3905caf7d0e"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main"]
 
 [[artifact]]
@@ -876,17 +876,16 @@ name     = "tools.jackson.core:jackson-databind:jar:"
 version  = "3.1.6"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:f0ff64eaa9f1c4bca9d720cd70c542297b0b19fc8ad08531bc55e36c8eab8e4b"
-pinned-by = "io.micronaut.platform:micronaut-platform:5.1.4"
+pinned-by = "io.micronaut.platform:micronaut-platform:5.1.5"
 scopes   = ["main"]
 deps = [
-  "com.fasterxml.jackson.core:jackson-annotations:jar:@2.21",
-  "tools.jackson.core:jackson-core:jar:@3.1.6",
+  "com.fasterxml.jackson.core:jackson-annotations:jar:@2.22 <- 2.21",
+  "tools.jackson.core:jackson-core:jar:@3.1.6 <- 3.1.6",
 ]
 
 [[plugin]]
 coordinate = "cc.jumpkick:jk-micronaut"
-version    = "0.13.2"
-checksum   = "sha256:ba22325cf132c0267942135d8b64f9f581dd61f38b47422e64f714cd9854b3fe"
+version    = "0.13.7"
 
 [[module]]
 path    = "."

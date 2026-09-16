@@ -4,7 +4,7 @@ name    = "codec-http2"
 # group/version/java inherit from workspace root
 
 [dependencies]
-brotli4j = { group = "com.aayushatharva.brotli4j", name = "brotli4j", version = "=1.16.0" }
+brotli4j = "=1.16.0"
 common = { workspace = true }
 buffer = { workspace = true }
 transport = { workspace = true }
@@ -13,7 +13,7 @@ handler = { workspace = true }
 codec-http = { workspace = true }
 
 [provided-dependencies]
-brotli4j = { group = "com.aayushatharva.brotli4j", name = "brotli4j", version = "=1.16.0" }
+brotli4j = "=1.16.0"
 
 [test-dependencies]
 # Mill testModuleDeps = transport.test / Maven test-jar
@@ -33,4 +33,4 @@ logback-classic = "=1.1.7"
 # Align with junit-jupiter 5.9.x — override jk's putIfAbsent "latest" launcher (was Platform 6.x)
 junit-platform-launcher = "=6.1.0"
 junit-platform-engine = "=6.1.0"
-junit-platform-commons = { group = "org.junit.platform", name = "junit-platform-commons", version = "=6.1.0" }
+junit-platform-commons = "=6.1.0"
