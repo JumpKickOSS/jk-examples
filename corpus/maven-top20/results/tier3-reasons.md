@@ -1,11 +1,13 @@
-# Tier-3 reasons (import ERRORs and jk failures), grouped — run2
+# Tier-3 reasons (import ERRORs and jk failures), grouped — run3
 
-Generated 2026-09-16 02:19. Module prefixes, coordinates, versions and paths are normalized so one line = one distinct cause = one ticket candidate.
+Generated 2026-09-16 05:54. Module prefixes, coordinates, versions and paths are normalized so one line = one distinct cause = one ticket candidate.
 
 ## import Tier 3 (not imported)
 
 - (5) `<build><extensions>` is not supported. Move build extensions to a custom jk task once tasks land.  
   repos: hadoop, nacos, quarkus, thingsboard, tutorials
+- (4) packaging `war` (`maven-war-plugin`) is not supported: jk builds jars, Boot jars and native images. Keep building this module with `jk mvn package`.  
+  repos: apollo, java-design-patterns, jenkins, tutorials
 - (3) `<parent>` G:A could not be resolved (…); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.  
   repos: hadoop, quarkus, spring-cloud-alibaba
 - (1) `<parent>` G:A:${revision} could not be resolved (…); nothing was inherited, and a dependency whose version the parent managed is written as `=unresolved`.  
@@ -19,20 +21,20 @@ Generated 2026-09-16 02:19. Module prefixes, coordinates, versions and paths are
 
 - (4) Cannot resolve dependencies: · G:A N depends on G:A [N,+∞) · The project depends on G:A N  
   repos: analysis-ik, cryptomator, java-design-patterns, nacos
-- (2) Cannot resolve dependencies: · No versions of G:A match N-SNAPSHOT · The project depends on G:A N-SNAPSHOT  
-  repos: questdb, zipkin
 - (2) POM not found in any declared repo: G:A  
   repos: quarkus, thingsboard
 - (2) environment references are not allowed here: version (${revision}) … — CI-friendly ${revision}/${changelist} versions copied verbatim from the pom  
   repos: jenkins, spring-cloud-alibaba
+- (2) platform BOM conflict on G:A: G:A constrains to N, but G:A constrains to N. Pick one BOM or pin the coord explicitly.  
+  repos: keycloak, zipkin
+- (1) Cannot resolve dependencies: · No versions of G:A match N-SNAPSHOT · The project depends on G:A N-SNAPSHOT  
+  repos: questdb
 - (1) Cannot resolve dependencies: · No versions of G:A match unresolved · The project depends on G:A unresolved  
   repos: hadoop
 - (1) Cannot resolve dependencies: · Package G:A was not found in any repository · The project depends on G:A N-SNAPSHOT  
   repos: apollo
 - (1) java.util.NoSuchElementException  
   repos: floci
-- (1) platform BOM conflict on G:A: G:A constrains to N, but G:A constrains to N. Pick one BOM or pin the coord explicitly.  
-  repos: keycloak
 
 ## jk build failure
 
@@ -43,9 +45,9 @@ Generated 2026-09-16 02:19. Module prefixes, coordinates, versions and paths are
 
 ## jk test failure
 
-- (1) 1 test failure  
+- (1) test discovery exited 70 before any test ran — test discovery failed under <path> PreconditionViolationException: Cannot create Launcher without at least one TestEngine; consider adding an en  
   repos: neo4j
-- (1) test failure: com.thealgorithms.sorts.SelectionSortRecursiveTest#shouldAcceptWhenRandomListIsPassed() — java.lang.StackOverflowError  
+- (1) test failure: com.thealgorithms.sorts.BubbleSortRecursiveTest#shouldAcceptWhenRandomArrayIsPassed() — java.lang.StackOverflowError  
   repos: TheAlgorithms-Java
 
 ## Maven-side failure (for context)
