@@ -1,0 +1,533 @@
+# Pinned corpus: the 20 most-starred GitHub Java repositories (gh search, 2026-09-15) whose
+# default-branch root has a pom.xml, are not docs/tutorial/Android/Tycho projects, and declare Java >= 17.
+# `modules` = count of pom.xml files in the clone. `sha` = default-branch head at pin time.
+# Ranking source: gh search repos --language=java --sort=stars (top 100, then stars:9000..19040).
+
+[[repo]]
+name = "java-design-patterns"
+full = "iluwatar/java-design-patterns"
+url = "https://github.com/iluwatar/java-design-patterns.git"
+branch = "master"
+sha = "4cabb204f240240bea319605a5ffa46ded728001"
+stars = 94693
+java = "21"
+modules = 211
+
+[[repo]]
+name = "mall"
+full = "macrozheng/mall"
+url = "https://github.com/macrozheng/mall.git"
+branch = "master"
+sha = "dcaa93b3150352e5044708d7211b5bed0af4509f"
+stars = 84774
+java = "17"
+modules = 8
+
+[[repo]]
+name = "TheAlgorithms-Java"
+full = "TheAlgorithms/Java"
+url = "https://github.com/TheAlgorithms/Java.git"
+branch = "master"
+sha = "b6fb8ad0fac794f16e8de4f8bb4a37360034606a"
+stars = 66254
+java = "21"
+modules = 1
+note = "educational collection, but a real single-module Maven build with a large JUnit suite"
+
+[[repo]]
+name = "tutorials"
+full = "eugenp/tutorials"
+url = "https://github.com/eugenp/tutorials.git"
+branch = "master"
+sha = "d955ecde581caa68978f1d26586cbaaa3b0d1475"
+stars = 37322
+java = "17"
+modules = 1727
+note = "very large aggregator; expected to hit the 45-minute cap"
+
+[[repo]]
+name = "keycloak"
+full = "keycloak/keycloak"
+url = "https://github.com/keycloak/keycloak.git"
+branch = "main"
+sha = "f9e4f7587dde73476999a541d780f1f172d1b9b8"
+stars = 36795
+java = "17"
+modules = 191
+note = "needs node/pnpm via frontend-maven-plugin for the admin UI"
+
+[[repo]]
+name = "nacos"
+full = "alibaba/nacos"
+url = "https://github.com/alibaba/nacos.git"
+branch = "develop"
+sha = "946138fb955b2c7d9d960126aaa21117201d5cfb"
+stars = 33372
+java = "17"
+modules = 62
+
+[[repo]]
+name = "xxl-job"
+full = "xuxueli/xxl-job"
+url = "https://github.com/xuxueli/xxl-job.git"
+branch = "master"
+sha = "e74c784f68f81fa89cb350913ef15794865d7b12"
+stars = 30557
+java = "17"
+modules = 7
+
+[[repo]]
+name = "apollo"
+full = "apolloconfig/apollo"
+url = "https://github.com/apolloconfig/apollo.git"
+branch = "master"
+sha = "39b8d491bdf4a3f2e8a9c3ebf689d693777b3923"
+stars = 29807
+java = "17"
+modules = 14
+
+[[repo]]
+name = "spring-cloud-alibaba"
+full = "alibaba/spring-cloud-alibaba"
+url = "https://github.com/alibaba/spring-cloud-alibaba.git"
+branch = "2025.1.x"
+sha = "344a49dfaf5c34fdd953c284597f26f7c45e2f0d"
+stars = 29171
+java = "17"
+modules = 70
+
+[[repo]]
+name = "jenkins"
+full = "jenkinsci/jenkins"
+url = "https://github.com/jenkinsci/jenkins.git"
+branch = "master"
+sha = "81dc9a3e13a3ec4c4f74bedb772e3382b8de0760"
+stars = 26546
+java = "17"
+modules = 9
+note = "level comes from the org.jenkins-ci:jenkins parent; frontend-maven-plugin downloads node"
+
+[[repo]]
+name = "dataease"
+full = "dataease/dataease"
+url = "https://github.com/dataease/dataease.git"
+branch = "dev-v2"
+sha = "324eb1b72a9ee094d55e9970644b53662357f299"
+stars = 24435
+java = "21"
+modules = 15
+
+[[repo]]
+name = "floci"
+full = "floci-io/floci"
+url = "https://github.com/floci-io/floci.git"
+branch = "main"
+sha = "c30df837815263f2e26353ee8b66aa1b017a97dc"
+stars = 24322
+java = "25"
+modules = 3
+
+[[repo]]
+name = "thingsboard"
+full = "thingsboard/thingsboard"
+url = "https://github.com/thingsboard/thingsboard.git"
+branch = "master"
+sha = "687d808ec1307b3c67f9621abc2789b2c004b652"
+stars = 22423
+java = "25"
+modules = 60
+note = "very large; needs node + protoc via plugins"
+
+[[repo]]
+name = "analysis-ik"
+full = "infinilabs/analysis-ik"
+url = "https://github.com/infinilabs/analysis-ik.git"
+branch = "master"
+sha = "6d2d70fd1a237cbf75cde254e8e4d6319b81266c"
+stars = 17521
+java = "17"
+modules = 4
+note = "Elasticsearch plugin"
+
+[[repo]]
+name = "zipkin"
+full = "openzipkin/zipkin"
+url = "https://github.com/openzipkin/zipkin.git"
+branch = "master"
+sha = "878ce2a1fad54ca941d17fdcf2e1d924b148eb1f"
+stars = 17460
+java = "17"
+modules = 19
+note = "UI module needs node via frontend-maven-plugin"
+
+[[repo]]
+name = "questdb"
+full = "questdb/questdb"
+url = "https://github.com/questdb/questdb.git"
+branch = "master"
+sha = "f9d4f51388be84828f8d6905a311052c49bb32b9"
+stars = 17323
+java = "25"
+modules = 5
+note = "javac.target=25; native libs are prebuilt in-tree"
+
+[[repo]]
+name = "neo4j"
+full = "neo4j/neo4j"
+url = "https://github.com/neo4j/neo4j.git"
+branch = "2026.08"
+sha = "bbf3b91f46a761809c19dfca0c3a09a6a8ea09e8"
+stars = 17228
+java = "21"
+modules = 181
+note = "vm.target.version=21; very large"
+
+[[repo]]
+name = "cryptomator"
+full = "cryptomator/cryptomator"
+url = "https://github.com/cryptomator/cryptomator.git"
+branch = "develop"
+sha = "1712d31a5c7e9718831cdc212c43a236e822aebd"
+stars = 16142
+java = "26"
+modules = 1
+note = "project.jdk.version=26; JavaFX desktop app"
+
+[[repo]]
+name = "quarkus"
+full = "quarkusio/quarkus"
+url = "https://github.com/quarkusio/quarkus.git"
+branch = "main"
+sha = "9475f4b6fd31241e28fcc146055730b3aed5dc9c"
+stars = 15888
+java = "21"
+modules = 1906
+note = "very large; expected to hit the 45-minute cap"
+
+[[repo]]
+name = "hadoop"
+full = "apache/hadoop"
+url = "https://github.com/apache/hadoop.git"
+branch = "trunk"
+sha = "90b043bd820a840e1393f73c0dfdc2b521f7680c"
+stars = 15661
+java = "17"
+modules = 121
+note = "javac.version=17; build needs protoc + cmake we may lack"
+
+# Root-pom repos in the same star range that were NOT selected, and why.
+
+[[skipped]]
+full = "google/guava"
+stars = 51904
+reason = "needs-jdk-below-17"
+detail = "source 1.8"
+
+[[skipped]]
+full = "dbeaver/dbeaver"
+stars = 51769
+reason = "not-plain-maven"
+detail = "Tycho/Eclipse RCP p2 build"
+
+[[skipped]]
+full = "apache/dubbo"
+stars = 41569
+reason = "needs-jdk-below-17"
+detail = "release 8"
+
+[[skipped]]
+full = "YunaiV/ruoyi-vue-pro"
+stars = 39297
+reason = "needs-jdk-below-17"
+detail = "java.version 1.8"
+
+[[skipped]]
+full = "alibaba/arthas"
+stars = 37540
+reason = "needs-jdk-below-17"
+detail = "1.8"
+
+[[skipped]]
+full = "netty/netty"
+stars = 35058
+reason = "needs-jdk-below-17"
+detail = "maven.compiler.release 8"
+
+[[skipped]]
+full = "zxing/zxing"
+stars = 34093
+reason = "needs-jdk-below-17"
+detail = "java.version 1.8"
+
+[[skipped]]
+full = "xkcoding/spring-boot-demo"
+stars = 34074
+reason = "needs-jdk-below-17"
+detail = "1.8; demo collection"
+
+[[skipped]]
+full = "alibaba/easyexcel"
+stars = 33637
+reason = "needs-jdk-below-17"
+detail = "jdk.version 1.8"
+
+[[skipped]]
+full = "binarywang/WxJava"
+stars = 33092
+reason = "needs-jdk-below-17"
+detail = "1.8"
+
+[[skipped]]
+full = "chinabugotech/hutool"
+stars = 30271
+reason = "needs-jdk-below-17"
+detail = "compile.version 8"
+
+[[skipped]]
+full = "alibaba/canal"
+stars = 29731
+reason = "needs-jdk-below-17"
+detail = "java_source_version 1.8"
+
+[[skipped]]
+full = "alibaba/druid"
+stars = 28175
+reason = "needs-jdk-below-17"
+detail = "maven.compiler.source 8"
+
+[[skipped]]
+full = "crossoverJie/JCSprout"
+stars = 26837
+reason = "needs-jdk-below-17"
+detail = "java.version 11; notes collection"
+
+[[skipped]]
+full = "OpenAPITools/openapi-generator"
+stars = 26739
+reason = "needs-jdk-below-17"
+detail = "11"
+
+[[skipped]]
+full = "qiurunze123/miaosha"
+stars = 26588
+reason = "needs-jdk-below-17"
+detail = "1.8"
+
+[[skipped]]
+full = "apache/flink"
+stars = 26335
+reason = "needs-jdk-below-17"
+detail = "target.java.version 11 by default"
+
+[[skipped]]
+full = "apache/incubator-seata"
+stars = 26001
+reason = "needs-jdk-below-17"
+detail = "base release 8 with JDK17+/21+/25+ profiles"
+
+[[skipped]]
+full = "alibaba/fastjson"
+stars = 25590
+reason = "needs-jdk-below-17"
+detail = "jdk.version 1.5"
+
+[[skipped]]
+full = "apache/skywalking"
+stars = 24953
+reason = "needs-jdk-below-17"
+detail = "maven.compiler.release 11"
+
+[[skipped]]
+full = "proxyee-down-org/proxyee-down"
+stars = 24658
+reason = "needs-jdk-below-17"
+detail = "1.8"
+
+[[skipped]]
+full = "redisson/redisson"
+stars = 24395
+reason = "needs-jdk-below-17"
+detail = "maven.compiler.release 8"
+
+[[skipped]]
+full = "google/gson"
+stars = 24236
+reason = "needs-jdk-below-17"
+detail = "maven.compiler.release 8"
+
+[[skipped]]
+full = "EnterpriseQualityCoding/FizzBuzzEnterpriseEdition"
+stars = 23855
+reason = "needs-jdk-below-17"
+detail = "source 1.7; parody project"
+
+[[skipped]]
+full = "alibaba/Sentinel"
+stars = 23144
+reason = "needs-jdk-below-17"
+detail = "plugin-level release 8 (default-compile 17 for module-info only)"
+
+[[skipped]]
+full = "apache/rocketmq"
+stars = 22600
+reason = "needs-jdk-below-17"
+detail = "1.8"
+
+[[skipped]]
+full = "elunez/eladmin"
+stars = 21911
+reason = "needs-jdk-below-17"
+detail = "java.version 1.8"
+
+[[skipped]]
+full = "brettwooldridge/HikariCP"
+stars = 21216
+reason = "needs-jdk-below-17"
+detail = "compiler source 11"
+
+[[skipped]]
+full = "apache/shardingsphere"
+stars = 20797
+reason = "needs-jdk-below-17"
+detail = "maven.compiler.release=java.version=8 (compiles with JDK 21)"
+
+[[skipped]]
+full = "mybatis/mybatis-3"
+stars = 20443
+reason = "needs-jdk-below-17"
+detail = "java.version 11"
+
+[[skipped]]
+full = "linlinjava/litemall"
+stars = 20358
+reason = "needs-jdk-below-17"
+detail = "java.version 1.8"
+
+[[skipped]]
+full = "yudaocode/SpringBoot-Labs"
+stars = 20128
+reason = "tutorial-collection"
+detail = "no declared level; tutorial repo"
+
+[[skipped]]
+full = "YunaiV/yudao-cloud"
+stars = 19534
+reason = "needs-jdk-below-17"
+detail = "java.version 1.8"
+
+[[skipped]]
+full = "dromara/Sa-Token"
+stars = 19044
+reason = "needs-jdk-below-17"
+detail = "maven.compiler.release 8"
+
+[[skipped]]
+full = "antlr/antlr4"
+stars = 19003
+reason = "needs-jdk-below-17"
+detail = "11"
+
+[[skipped]]
+full = "dianping/cat"
+stars = 18936
+reason = "needs-jdk-below-17"
+detail = "1.8"
+
+[[skipped]]
+full = "justauth/JustAuth"
+stars = 17519
+reason = "needs-jdk-below-17"
+detail = "1.8"
+
+[[skipped]]
+full = "alibaba/DataX"
+stars = 17356
+reason = "needs-jdk-below-17"
+detail = "jdk-version 1.8"
+
+[[skipped]]
+full = "shuzheng/zheng"
+stars = 16644
+reason = "needs-jdk-below-17"
+detail = "1.7"
+
+[[skipped]]
+full = "JeffLi1993/springboot-learning-example"
+stars = 16559
+reason = "tutorial-collection"
+detail = "no declared level; tutorial repo"
+
+[[skipped]]
+full = "dyc87112/SpringBoot-Learning"
+stars = 15699
+reason = "tutorial-collection"
+detail = "tutorial repo"
+
+[[skipped]]
+full = "Konloch/bytecode-viewer"
+stars = 15644
+reason = "needs-jdk-below-17"
+detail = "java.version 1.8"
+
+[[skipped]]
+full = "zhisheng17/flink-learning"
+stars = 15097
+reason = "tutorial-collection"
+detail = "tutorial repo"
+
+# Next in line (all rank below hadoop at 15661 stars).
+
+[[alternate]]
+full = "theonedev/onedev"
+stars = 15246
+java = "level not declared at root (unchecked)"
+
+[[alternate]]
+full = "languagetool-org/languagetool"
+stars = 15042
+java = "17"
+
+[[alternate]]
+full = "kekingcn/kkFileView"
+stars = 14693
+java = "21"
+
+[[alternate]]
+full = "eclipse-vertx/vert.x"
+stars = 14685
+java = "level not declared at root (unchecked)"
+
+[[alternate]]
+full = "apache/druid"
+stars = 14054
+java = "25"
+
+[[alternate]]
+full = "metersphere/metersphere"
+stars = 13525
+java = "21"
+
+[[alternate]]
+full = "macrozheng/mall-swarm"
+stars = 13144
+java = "17"
+
+[[alternate]]
+full = "langchain4j/langchain4j"
+stars = 13103
+java = "not declared at root"
+
+[[alternate]]
+full = "codecentric/spring-boot-admin"
+stars = 12853
+java = "17"
+
+[[alternate]]
+full = "apache/zookeeper"
+stars = 12805
+java = "17"
+
+[[alternate]]
+full = "provectus/kafka-ui"
+stars = 12282
+java = "17"
