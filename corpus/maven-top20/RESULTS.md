@@ -1,6 +1,6 @@
 # Maven top-20 corpus — results
 
-Generated 2026-09-16 08:56 by `run.py`. Host: AMD Ryzen 9 7900X 12-Core Processor (24 threads, 30 GB RAM), Linux-7.1.12-200.fc44.x86_64-x86_64-with-glibc2.43.
+Generated 2026-09-16 10:36 by `run.py`. Host: AMD Ryzen 9 7900X 12-Core Processor (24 threads, 30 GB RAM), Linux-7.1.12-200.fc44.x86_64-x86_64-with-glibc2.43.
 
 Maven ran through the launcher `jk mvn` provisions (or the repo's `mvnw`) with `MAVEN_OPTS=-Xmx3g`, `JAVA_HOME` = the Temurin matching the declared level (or `maven_jdk`), and a corpus-private local repo (`/home/bsant/src/scratch/maven-corpus/.m2`); jk ran with defaults. Wall = seconds. `pass/total` from surefire XML (Maven) and the `Tests:` line of `target/jk-results.md` (jk). Per-step logs and each import report live under `results/<repo>/` (latest run).
 
@@ -8,42 +8,43 @@ Maven ran through the launcher `jk mvn` provisions (or the repo's `mvnw`) with `
 - **run2**: `jk 0.13.7` commit `main 528e12916` — /home/bsant/.jk/bin/jk sha256:0f8725c06c9004ba; jk-engine-0.13.7.jar sha256:62366867cbcc55ee; `jk 0.13.7` commit `main 528e12916` — /home/bsant/.jk/bin/jk sha256:98f2558c2e5a3e72; jk-engine-0.13.7.1789538521832.jar sha256:55655016143b5433; `jk 0.13.7` commit `main c190940e0` — /home/bsant/.jk/bin/jk sha256:0f8725c06c9004ba; jk-engine-0.13.7.jar sha256:62366867cbcc55ee
 - **run3**: `jk 0.13.7` commit `3192eb8fd` — /home/bsant/.jk/bin/jk sha256:82da87bceb3d3366; jk-engine-0.13.7.1789552009776.jar sha256:05f5c1c67aabdf8d
 - **run4**: `jk 0.13.7` commit `12de60df5` — /home/bsant/.jk/bin/jk sha256:a6e268bd81a5881b; jk-engine-0.13.7.jar sha256:8ba51f1540ddf2e1
+- **run5**: `jk 0.13.7` commit `c3011aae3` — /home/bsant/.jk/bin/jk sha256:f9a482ab4287e552; jk-engine-0.13.7.1789568221976.jar sha256:80bd5fde925cafe1
 
 ## Side by side (the ratchet delta)
 
 Maven column = warm-clean wall / tests pass·total as the reference; each run column = jk import E/W · lock · build · tests jk · jk cold/no-op/touch/test walls.
 
-| # | repo | mvn build / tests | run1: import E/W · lock · build · tests jk · jk cold/no-op/touch/test | run2: import E/W · lock · build · tests jk · jk cold/no-op/touch/test | run3: import E/W · lock · build · tests jk · jk cold/no-op/touch/test | run4: import E/W · lock · build · tests jk · jk cold/no-op/touch/test |
-|--:|------|-------------------|----|----|----|----|
-| 1 | iluwatar/java-design-patterns | 116s / 79/82 (fail) | 0/825 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/1324 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 1/1151 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 1/1219 · FAIL · skipped · — · skipped/skipped/skipped/skipped |
-| 2 | macrozheng/mall | skipped / — | 0/45 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/58 · ok · FAIL · — · fail (5s)/skipped/skipped/skipped | 0/54 · ok · FAIL · — · fail (9s)/skipped/skipped/skipped | 0/54 · ok · ok (7/8 modules) · 0/2 (fail) · 20s/0s/4s/fail (4s) |
-| 3 | TheAlgorithms/Java | 6s / 9742/9742 | 0/6 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/6 · ok · ok · 9744/9745 (fail) · 2s/0s/2s/fail (13s) | 0/5 · ok · ok · 9744/9745 (fail) · 5s/0s/6s/fail (21s) | 0/5 · ok · ok · 9745/9745 · 5s/0s/3s/13s |
-| 4 | eugenp/tutorials | 1s / no tests ran | 1/29 · ok · built nothing (0 modules) · no tests ran · 0s/0s/0s/0s | 1/49 · ok · built nothing (0 modules) · no tests ran · 0s/0s/0s/0s | 2/49 · ok · built nothing (0 modules) · no tests ran · 0s/0s/0s/0s | 2/5 · ok · built nothing (0 modules) · no tests ran · 0s/0s/0s/0s |
-| 5 | keycloak/keycloak | 218s / 2619/2694 (fail) | 0/176 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/138 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/140 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/849 · FAIL · skipped · — · skipped/skipped/skipped/skipped |
-| 6 | alibaba/nacos | skipped / — | 2/328 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 2/645 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 2/611 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 2/1014 · FAIL · skipped · — · skipped/skipped/skipped/skipped |
-| 7 | xuxueli/xxl-job | 16s / no tests ran | 0/20 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/16 · ok · FAIL · — · fail (2s)/skipped/skipped/skipped | 0/15 · ok · FAIL · — · fail (5s)/skipped/skipped/skipped | 0/25 · ok · FAIL · — · fail (7s)/skipped/skipped/skipped |
-| 8 | apolloconfig/apollo | 33s / 463/465 (fail) | 0/114 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/181 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 9/156 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/199 · FAIL · skipped · — · skipped/skipped/skipped/skipped |
-| 9 | alibaba/spring-cloud-alibaba | skipped / — | 0/74 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 5/28 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 5/26 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/736 · FAIL · skipped · — · skipped/skipped/skipped/skipped |
-| 10 | jenkinsci/jenkins | 35s / 21480/21503 (fail) | 0/226 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 6/214 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 9/210 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 1/194 · FAIL · skipped · — · skipped/skipped/skipped/skipped |
-| 11 | dataease/dataease | 9s / no tests ran | 0/4 · ok · ok (1/15 modules) · no tests ran · 0s/0s/0s/0s | 0/7 · ok · ok (1/15 modules) · no tests ran · 0s/0s/0s/0s | 0/7 · ok · ok (1/15 modules) · no tests ran · 0s/0s/0s/0s | 0/61 · FAIL · skipped · — · skipped/skipped/skipped/skipped |
-| 12 | floci-io/floci | 37s / fail, no results | 0/39 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/13 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/14 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/12 · FAIL · skipped · — · skipped/skipped/skipped/skipped |
-| 13 | thingsboard/thingsboard | skipped / — | 2/253 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 13/113 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 13/118 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 52/405 · FAIL · skipped · — · skipped/skipped/skipped/skipped |
-| 14 | infinilabs/analysis-ik | 3s / 22/22 | 0/7 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/10 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/9 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/9 · FAIL · skipped · — · skipped/skipped/skipped/skipped |
-| 15 | openzipkin/zipkin | 64s / 1108/1111 | 0/52 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/89 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/91 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/168 · FAIL · skipped · — · skipped/skipped/skipped/skipped |
-| 16 | questdb/questdb | skipped / — | 0/32 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/32 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/33 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/32 · FAIL · skipped · — · skipped/skipped/skipped/skipped |
-| 17 | neo4j/neo4j | skipped / — | 0/26 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/48 · ok · ok (3/181 modules) · 0/1 (fail) · 1s/0s/0s/fail (1s) | 0/53 · ok · ok (3/181 modules) · fail, no results · 1s/0s/0s/fail (1s) | 1/2767 · FAIL · skipped · — · skipped/skipped/skipped/skipped |
-| 18 | cryptomator/cryptomator | 6s / 188/193 (timeout) | 0/16 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/16 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/16 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/15 · FAIL · skipped · — · skipped/skipped/skipped/skipped |
-| 19 | quarkusio/quarkus | skipped / — | 1/1730 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 13/781 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 13/779 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 710/7361 · FAIL · skipped · — · skipped/skipped/skipped/skipped |
-| 20 | apache/hadoop | 511s / capped | 0/0 · skipped · skipped · — · skipped/skipped/skipped/skipped | 16/138 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 16/139 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 105/2114 · FAIL · skipped · — · skipped/skipped/skipped/skipped |
+| # | repo | mvn build / tests | run1: import E/W · lock · build · tests jk · jk cold/no-op/touch/test | run2: import E/W · lock · build · tests jk · jk cold/no-op/touch/test | run3: import E/W · lock · build · tests jk · jk cold/no-op/touch/test | run4: import E/W · lock · build · tests jk · jk cold/no-op/touch/test | run5: import E/W · lock · build · tests jk · jk cold/no-op/touch/test |
+|--:|------|-------------------|----|----|----|----|----|
+| 1 | iluwatar/java-design-patterns | 116s / 79/82 (fail) | 0/825 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/1324 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 1/1151 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 1/1219 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 1/1219 · FAIL · skipped · — · skipped/skipped/skipped/skipped |
+| 2 | macrozheng/mall | skipped / — | 0/45 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/58 · ok · FAIL · — · fail (5s)/skipped/skipped/skipped | 0/54 · ok · FAIL · — · fail (9s)/skipped/skipped/skipped | 0/54 · ok · ok (7/8 modules) · 0/2 (fail) · 20s/0s/4s/fail (4s) | 0/54 · ok · ok (7/8 modules) · 0/5 (fail) · 7s/0s/3s/fail (3s) |
+| 3 | TheAlgorithms/Java | 6s / 9742/9742 | 0/6 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/6 · ok · ok · 9744/9745 (fail) · 2s/0s/2s/fail (13s) | 0/5 · ok · ok · 9744/9745 (fail) · 5s/0s/6s/fail (21s) | 0/5 · ok · ok · 9745/9745 · 5s/0s/3s/13s | 0/5 · ok · ok · 9745/9745 · 3s/0s/3s/0s |
+| 4 | eugenp/tutorials | 1s / no tests ran | 1/29 · ok · built nothing (0 modules) · no tests ran · 0s/0s/0s/0s | 1/49 · ok · built nothing (0 modules) · no tests ran · 0s/0s/0s/0s | 2/49 · ok · built nothing (0 modules) · no tests ran · 0s/0s/0s/0s | 2/5 · ok · built nothing (0 modules) · no tests ran · 0s/0s/0s/0s | 2/5 · ok · built nothing (0 modules) · no tests ran · 1s/1s/1s/1s |
+| 5 | keycloak/keycloak | 218s / 2619/2694 (fail) | 0/176 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/138 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/140 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/849 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/849 · FAIL · skipped · — · skipped/skipped/skipped/skipped |
+| 6 | alibaba/nacos | skipped / — | 2/328 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 2/645 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 2/611 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 2/1014 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 2/1014 · FAIL · skipped · — · skipped/skipped/skipped/skipped |
+| 7 | xuxueli/xxl-job | 16s / no tests ran | 0/20 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/16 · ok · FAIL · — · fail (2s)/skipped/skipped/skipped | 0/15 · ok · FAIL · — · fail (5s)/skipped/skipped/skipped | 0/25 · ok · FAIL · — · fail (7s)/skipped/skipped/skipped | 0/25 · ok · FAIL · — · fail (3s)/skipped/skipped/skipped |
+| 8 | apolloconfig/apollo | 33s / 463/465 (fail) | 0/114 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/181 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 9/156 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/199 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/199 · ok · FAIL · — · fail (6s)/skipped/skipped/skipped |
+| 9 | alibaba/spring-cloud-alibaba | skipped / — | 0/74 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 5/28 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 5/26 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/736 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/736 · ok · FAIL · — · fail (10s)/skipped/skipped/skipped |
+| 10 | jenkinsci/jenkins | 35s / 21480/21503 (fail) | 0/226 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 6/214 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 9/210 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 1/194 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 1/194 · FAIL · skipped · — · skipped/skipped/skipped/skipped |
+| 11 | dataease/dataease | 9s / no tests ran | 0/4 · ok · ok (1/15 modules) · no tests ran · 0s/0s/0s/0s | 0/7 · ok · ok (1/15 modules) · no tests ran · 0s/0s/0s/0s | 0/7 · ok · ok (1/15 modules) · no tests ran · 0s/0s/0s/0s | 0/61 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/61 · FAIL · skipped · — · skipped/skipped/skipped/skipped |
+| 12 | floci-io/floci | 37s / fail, no results | 0/39 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/13 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/14 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/12 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/12 · ok · ok (1/3 modules) · fail, no results · 27s/1s/1s/fail (181s) |
+| 13 | thingsboard/thingsboard | skipped / — | 2/253 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 13/113 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 13/118 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 52/405 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 52/405 · FAIL · skipped · — · skipped/skipped/skipped/skipped |
+| 14 | infinilabs/analysis-ik | 3s / 22/22 | 0/7 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/10 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/9 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/9 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/9 · ok · ok (3/4 modules) · 27/27 · 4s/0s/2s/2s |
+| 15 | openzipkin/zipkin | 64s / 1108/1111 | 0/52 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/89 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/91 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/168 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/168 · FAIL · skipped · — · skipped/skipped/skipped/skipped |
+| 16 | questdb/questdb | skipped / — | 0/32 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/32 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/33 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/32 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/32 · FAIL · skipped · — · skipped/skipped/skipped/skipped |
+| 17 | neo4j/neo4j | skipped / — | 0/26 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/48 · ok · ok (3/181 modules) · 0/1 (fail) · 1s/0s/0s/fail (1s) | 0/53 · ok · ok (3/181 modules) · fail, no results · 1s/0s/0s/fail (1s) | 1/2767 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 1/2767 · ok · FAIL · — · fail (49s)/skipped/skipped/skipped |
+| 18 | cryptomator/cryptomator | 6s / 188/193 (timeout) | 0/16 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/16 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/16 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/15 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/15 · ok · FAIL · — · fail (2s)/skipped/skipped/skipped |
+| 19 | quarkusio/quarkus | skipped / — | 1/1730 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 13/781 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 13/779 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 710/7361 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 710/7361 · FAIL · skipped · — · skipped/skipped/skipped/skipped |
+| 20 | apache/hadoop | 511s / capped | 0/0 · skipped · skipped · — · skipped/skipped/skipped/skipped | 16/138 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 16/139 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 105/2114 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 105/2114 · FAIL · skipped · — · skipped/skipped/skipped/skipped |
 
-| count | run1 | run2 | run3 | run4 |
-|-------|--:|--:|--:|--:|
-| repos measured | 20 | 20 | 20 | 20 |
-| import with zero Tier-3 errors | 15 | 13 | 11 | 12 |
-| `jk lock` ok | 2 | 6 | 6 | 4 |
-| `jk build --skip-tests` ok (compiled something) | 1 | 3 | 3 | 2 |
-| `jk test` ran and passed | 0 | 0 | 0 | 1 |
-| jk test total == Maven total | 0 | 0 | 0 | 0 |
+| count | run1 | run2 | run3 | run4 | run5 |
+|-------|--:|--:|--:|--:|--:|
+| repos measured | 20 | 20 | 20 | 20 | 20 |
+| import with zero Tier-3 errors | 15 | 13 | 11 | 12 | 12 |
+| `jk lock` ok | 2 | 6 | 6 | 4 | 10 |
+| `jk build --skip-tests` ok (compiled something) | 1 | 3 | 3 | 2 | 4 |
+| `jk test` ran and passed | 0 | 0 | 0 | 1 | 2 |
+| jk test total == Maven total | 0 | 0 | 0 | 0 | 0 |
 
 ## run1
 
@@ -161,6 +162,35 @@ Measured 20 of 20 selected repos.
 
 \* Maven numbers reused from an earlier row (jk-only re-measurement): TheAlgorithms-Java, analysis-ik, apollo, cryptomator, dataease, floci, hadoop, java-design-patterns, jenkins, keycloak, mall, nacos, neo4j, quarkus, questdb, spring-cloud-alibaba, thingsboard, tutorials, xxl-job, zipkin
 
+## run5
+
+| # | repo | stars | modules | java | import E/W | lock | build | tests jk | tests mvn | mvn cold | mvn warm-clean | mvn no-op | mvn touch | mvn test | jk cold | jk no-op | jk touch | jk test | first failure |
+|--:|------|------:|--------:|:----:|:---------:|:----:|:-----:|:--------:|:---------:|--------:|---------------:|----------:|----------:|---------:|--------:|---------:|---------:|--------:|---------------|
+| 1 | [iluwatar/java-design-patterns](https://github.com/iluwatar/java-design-patterns) | 94693 | 211 | 21 | 1/1219 | FAIL | skipped | — | 79/82 (fail)* | 163s | 116s | 81s | 94s | fail (52s) | skipped | skipped | skipped | skipped | [resolve-deps — java-design-patterns] Cannot resolve dependencies: · No versions of net.java.dev.swing-layout:swing-layout match 1.0.2 · The project depends on net.java.dev.swing-layout:swing-layout 1.0.2 |
+| 2 | [macrozheng/mall](https://github.com/macrozheng/mall) | 84774 | 8 | 17 | 0/54 | ok | ok (7/8 modules) | 0/5 (fail) | —* | fail (274s) | skipped | skipped | skipped | skipped | 7s | 0s | 3s | fail (3s) | test failure: com.macro.mall.search.MallSearchApplicationTests — com.macro.mall:mall-search#testGetAllEsProductList() — java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@3b6c740b testClass = com.macro.mall.se |
+| 3 | [TheAlgorithms/Java](https://github.com/TheAlgorithms/Java) | 66254 | 1 | 21 | 0/5 | ok | ok | 9745/9745 | 9742/9742* | 8s | 6s | 7s | 6s | 37s | 3s | 0s | 3s | 0s |  |
+| 4 | [eugenp/tutorials](https://github.com/eugenp/tutorials) | 37322 | 1727 | 17 | 2/5 | ok | built nothing (0 modules) | no tests ran | no tests ran* | 4s | 1s | 1s | 1s | 1s | 1s | 1s | 1s | 1s | pom skips tests under Maven |
+| 5 | [keycloak/keycloak](https://github.com/keycloak/keycloak) | 36795 | 191 | 17 | 0/849 | FAIL | skipped | — | 2619/2694 (fail)* | 459s | 218s | 136s | 134s | fail (142s) | skipped | skipped | skipped | skipped | [resolve-deps — keycloak] dependency resolution failed while reading the dependencies of org.hibernate.orm:hibernate-core:jar:@7.4.5.Final: java.lang.IllegalArgumentException: malformed Maven range: [2.17.1, 3[ |
+| 6 | [alibaba/nacos](https://github.com/alibaba/nacos) | 33372 | 62 | 17 | 2/1014 | FAIL | skipped | — | —* | fail (56s) | skipped | skipped | skipped | skipped | skipped | skipped | skipped | skipped | [resolve-deps — nacos] Cannot resolve dependencies: · No versions of com.google.api.grpc:proto-google-common-protos match 2.17.0 · The project depends on com.google.api.grpc:proto-google-common-protos 2.17.0 |
+| 7 | [xuxueli/xxl-job](https://github.com/xuxueli/xxl-job) | 30557 | 7 | 17 | 0/25 | ok | FAIL | — | no tests ran* | 21s | 16s | 21s | 29s | 11s | fail (3s) | skipped | skipped | skipped | [package-javadoc — xxl-job-admin] /home/bsant/src/scratch/maven-corpus/xxl-job/xxl-job-admin/src/main/java/com/xxl/job/admin/business/scheduler/trigger/JobTrigger.java:52: error: malformed HTML; pom skips tests under Maven |
+| 8 | [apolloconfig/apollo](https://github.com/apolloconfig/apollo) | 29807 | 14 | 17 | 0/199 | ok | FAIL | — | 463/465 (fail)* | 58s | 33s | 35s | 35s | fail (96s) | fail (6s) | skipped | skipped | skipped | [compile-java — apollo-portal] /home/bsant/src/scratch/maven-corpus/apollo/apollo-portal/src/main/java/com/ctrip/framework/apollo/openapi/server/service/AccessKeyOpenApiService.java:19: error: package com.ctrip.framework.apollo.openapi.model does not exist |
+| 9 | [alibaba/spring-cloud-alibaba](https://github.com/alibaba/spring-cloud-alibaba) | 29171 | 70 | 17 | 0/736 | ok | FAIL | — | —* | fail (8s) | skipped | skipped | skipped | skipped | fail (10s) | skipped | skipped | skipped | [compile-java — spring-cloud-alibaba-test-support] java.util.ConcurrentModificationException |
+| 10 | [jenkinsci/jenkins](https://github.com/jenkinsci/jenkins) | 26546 | 9 | 17 | 1/194 | FAIL | skipped | — | 21480/21503 (fail)* | 76s | 35s | 22s | 22s | fail (271s) | skipped | skipped | skipped | skipped | [resolve-deps — jenkins] POM not found in any declared repo: org.jenkins-ci:jenkins:2.1397.v033314c396ee; pom skips tests under Maven |
+| 11 | [dataease/dataease](https://github.com/dataease/dataease) | 24435 | 15 | 21 | 0/61 | FAIL | skipped | — | no tests ran* | 111s | 9s | 3s | 4s | 3s | skipped | skipped | skipped | skipped | [resolve-deps — dataease] Cannot resolve dependencies: · No versions of io.dataease:dataease-license-sdk match 2.10.26 · The project depends on io.dataease:dataease-license-sdk 2.10.26 |
+| 12 | [floci-io/floci](https://github.com/floci-io/floci) | 24322 | 3 | 25 | 0/12 | ok | ok (1/3 modules) | fail, no results | fail, no results* | 95s | 37s | 6s | 6s | fail (720s) | 27s | 1s | 1s | fail (181s) | [run-tests — io.github.hectorvent:floci] test discovery exited 3 before any test ran · Fix: the runner's full output is above; rerun with --verbose for the live stream. |
+| 13 | [thingsboard/thingsboard](https://github.com/thingsboard/thingsboard) | 22423 | 60 | 25 | 52/405 | FAIL | skipped | — | —* | fail (428s) | skipped | skipped | skipped | skipped | skipped | skipped | skipped | skipped | workspace artifact collision: `edqs-4.4.0-SNAPSHOT.jar` would be produced by both `common/edqs` and `edqs`. Final artifacts share <workspaceRoot>/target/, so two modules can't emit the same `<artifact>-<version>.jar`. Di |
+| 14 | [infinilabs/analysis-ik](https://github.com/infinilabs/analysis-ik) | 17521 | 4 | 17 | 0/9 | ok | ok (3/4 modules) | 27/27 | 22/22* | 12s | 3s | 2s | 3s | 2s | 4s | 0s | 2s | 2s |  |
+| 15 | [openzipkin/zipkin](https://github.com/openzipkin/zipkin) | 17460 | 19 | 17 | 0/168 | FAIL | skipped | — | 1108/1111* | 83s | 64s | 53s | 60s | 126s | skipped | skipped | skipped | skipped | [resolve-deps — zipkin] Cannot resolve dependencies: · Org.apache.pulsar:bouncy-castle-bc:pkg 4.0.9 depends on org.bouncycastle:bcprov-ext-jdk18on [1.78.1,+∞) · Org.bouncycastle:bcprov-ext-jdk18on 1.78.1 depends on org.bouncycastle:bcprov-jdk18on 1.78.1 |
+| 16 | [questdb/questdb](https://github.com/questdb/questdb) | 17323 | 5 | 25 | 0/32 | FAIL | skipped | — | —* | fail (2s) | skipped | skipped | skipped | skipped | skipped | skipped | skipped | skipped | [resolve-deps — questdb] Cannot resolve dependencies: · No versions of org.questdb:questdb-client match 1.3.10-SNAPSHOT · The project depends on org.questdb:questdb-client 1.3.10-SNAPSHOT |
+| 17 | [neo4j/neo4j](https://github.com/neo4j/neo4j) | 17228 | 181 | 21 | 1/2767 | ok | FAIL | — | —* | fail (7s) | skipped | skipped | skipped | skipped | fail (49s) | skipped | skipped | skipped | [compile-java — logging] java.lang.RuntimeException: java.lang.NoClassDefFoundError: org/apache/logging/log4j/util/Strings |
+| 18 | [cryptomator/cryptomator](https://github.com/cryptomator/cryptomator) | 16142 | 1 | 26 | 0/15 | ok | FAIL | — | 188/193 (timeout)* | 18s | 6s | 2s | 6s | timeout (1200s) | fail (2s) | skipped | skipped | skipped | [compile-java] /home/bsant/src/scratch/maven-corpus/cryptomator/src/main/java/module-info.java:29: error: module not found: org.jetbrains.annotations |
+| 19 | [quarkusio/quarkus](https://github.com/quarkusio/quarkus) | 15888 | 1906 | 21 | 710/7361 | FAIL | skipped | — | —* | fail (1055s) | skipped | skipped | skipped | skipped | skipped | skipped | skipped | skipped | Invalid key: Unexpected '+', expected end-of-input |
+| 20 | [apache/hadoop](https://github.com/apache/hadoop) | 15661 | 121 | 17 | 105/2114 | FAIL | skipped | — | capped* | 826s | 511s | 903s | capped | capped | skipped | skipped | skipped | skipped | [resolve-deps — hadoop] Cannot resolve dependencies: · No versions of commons-io:commons-io match unresolved · The project depends on commons-io:commons-io unresolved; pom skips tests under Maven |
+
+Measured 20 of 20 selected repos.
+
+\* Maven numbers reused from an earlier row (jk-only re-measurement): TheAlgorithms-Java, analysis-ik, apollo, cryptomator, dataease, floci, hadoop, java-design-patterns, jenkins, keycloak, mall, nacos, neo4j, quarkus, questdb, spring-cloud-alibaba, thingsboard, tutorials, xxl-job, zipkin
+
 `built nothing` / `ok (n/m modules)` = `jk build` exited 0 but the imported workspace covers none / only n of the m poms; a build of nothing does not count in the ratchet.
 
 `no tests ran` = the step exited 0 but no test result was produced (e.g. an aggregator root imported with no sources, or a pom that sets `maven.test.skip`); it never counts as a pass.
@@ -217,14 +247,14 @@ Measured 20 of 20 selected repos.
 
 ## Ratchet
 
-Current bar (run4):
+Current bar (run5):
 
 - repos importing with zero Tier-3 errors: **12** / 20
-- repos whose `jk lock` succeeds: **4** / 20
-- repos whose `jk build --skip-tests` compiles something: **2** / 20
-- repos whose `jk test` runs and passes: **1** / 20
+- repos whose `jk lock` succeeds: **10** / 20
+- repos whose `jk build --skip-tests` compiles something: **4** / 20
+- repos whose `jk test` runs and passes: **2** / 20
 - repos whose jk test total equals Maven's: **0** / 20
 
-Delta vs run3: import_clean 11→12, lock 6→4, build 3→2, tests_ran 0→1, tests_equal 0→0
+Delta vs run4: import_clean 12→12, lock 4→10, build 2→4, tests_ran 1→2, tests_equal 0→0
 
 Rule: a run that lowers any of these counts is a regression; a run that raises one moves the bar.

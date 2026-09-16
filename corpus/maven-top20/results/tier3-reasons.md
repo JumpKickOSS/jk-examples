@@ -1,6 +1,6 @@
-# Tier-3 reasons (import ERRORs and jk failures), grouped — run4
+# Tier-3 reasons (import ERRORs and jk failures), grouped — run5
 
-Generated 2026-09-16 08:56. Module prefixes, coordinates, versions and paths are normalized so one line = one distinct cause = one ticket candidate.
+Generated 2026-09-16 10:36. Module prefixes, coordinates, versions and paths are normalized so one line = one distinct cause = one ticket candidate.
 
 ## import Tier 3 (not imported)
 
@@ -17,26 +17,20 @@ Generated 2026-09-16 08:56. Module prefixes, coordinates, versions and paths are
 
 ## jk lock failure
 
-- (5) platform BOM conflict on G:A: G:A constrains to N, but G:A constrains to N. Pick one BOM or pin the coord explicitly.  
-  repos: dataease, keycloak, nacos, spring-cloud-alibaba, zipkin
-- (2) Cannot resolve dependencies: · G:A N depends on G:A [N,+∞) · The project depends on G:A N  
-  repos: analysis-ik, neo4j
-- (1) Cannot resolve dependencies: · G:A N is named by a POM but no declared repository has it — skipped · G:A N.Final depends on com.github.everit-org.json-sch  
-  repos: floci
+- (3) Cannot resolve dependencies: · No versions of G:A match N · The project depends on G:A N  
+  repos: dataease, java-design-patterns, nacos
+- (1) Cannot resolve dependencies: · G:A N depends on G:A [N,+∞) · G:A N depends on G:A N  
+  repos: zipkin
 - (1) Cannot resolve dependencies: · No versions of G:A match N-SNAPSHOT · The project depends on G:A N-SNAPSHOT  
   repos: questdb
 - (1) Cannot resolve dependencies: · No versions of G:A match unresolved · The project depends on G:A unresolved  
   repos: hadoop
-- (1) Illegal character in path at index 51: org/openjfx/javafx-base/N/javafx-base-N-${javafx.platform}.jar  
-  repos: cryptomator
 - (1) Invalid key: Unexpected '+', expected end-of-input  
   repos: quarkus
 - (1) POM not found in any declared repo: G:A  
   repos: jenkins
-- (1) platform BOM conflict on G:A: G:A constrains to N, but G:A constrains to N. Pick one BOM or pin the co  
-  repos: java-design-patterns
-- (1) platform BOM conflict on G:A: G:A constrains to N, but G:A constrains to N. Pick one BOM or pin the coord  
-  repos: apollo
+- (1) dependency resolution failed while reading the dependencies of G:A:@N.Final: java.lang.IllegalArgumentException: malformed Maven range: [N, 3[  
+  repos: keycloak
 - (1) workspace artifact collision: `edqs-N-SNAPSHOT.jar` would be produced by both `common/edqs` and `edqs`. Final artifacts share <workspaceRoot>/target/, so two modules can't emit the same `<artifact>-<version>.jar`. Di  
   repos: thingsboard
 
@@ -44,10 +38,20 @@ Generated 2026-09-16 08:56. Module prefixes, coordinates, versions and paths are
 
 - (1) <path> error: malformed HTML  
   repos: xxl-job
+- (1) <path> error: module not found: org.jetbrains.annotations  
+  repos: cryptomator
+- (1) <path> error: package com.ctrip.framework.apollo.openapi.model does not exist  
+  repos: apollo
+- (1) java.lang.RuntimeException: java.lang.NoClassDefFoundError: org/apache/logging/log4j/util/Strings  
+  repos: neo4j
+- (1) java.util.ConcurrentModificationException  
+  repos: spring-cloud-alibaba
 
 ## jk test failure
 
-- (1) test failure: com.macro.mall.portal.MallPortalApplicationTests#contextLoads() — java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@6e612122 testClass = com.macro.mall.portal.MallPortalApplicationTests, locatio  
+- (1) test discovery exited 3 before any test ran · Fix: the runner's full output is above; rerun with --verbose for the live stream.  
+  repos: floci
+- (1) test failure: com.macro.mall.search.MallSearchApplicationTests — G:A#testGetAllEsProductList() — java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@3b6c740b testClass = com.macro.mall.se  
   repos: mall
 
 ## Maven-side failure (for context)
