@@ -43,10 +43,11 @@ One scenario per directory; keep each self-contained and its README honest about
 - **`java = 25`** (bytecode target; the host JDK is already 25+). Prefer `java =`, never
   `jdk = 17/21` — those force obsolete runtime downloads. Android keeps `java = 21` for that
   platform.
-- **Versions float to `"latest"`** and `jk-lock.toml` pins them. A README quotes either `latest`
-  or the lock, never a third number. The exceptions pin on purpose and say why: the Netty port
-  (Mill parity at one tag), Now in Android (its documented deviations), and the two scenarios
-  whose README lists jar contents (`jvm/variants-cli`, `jvm/shrink-cli`).
+- **Versions are exact pins**, the current stable when the scenario was written
+  (`h2 = "2.5.250"`, a catalog short name with its version, or a `group:artifact:version` string;
+  a BOM-managed artifact is a versionless coordinate), and `jk update` moves them — the rule the
+  template catalog follows. A README quotes the manifest's pin or the lock, never a third number.
+  The Netty port and Now in Android pin at the upstream tag they mirror and say so.
 - **`jk-lock.toml` is committed** — one per scenario, at the workspace root. A clean clone builds
   the graph the lock describes, and `jk build` never rewrites it. For the two overlay scenarios
   the lock lives under `overlay/` and `setup.sh` copies it into the checkout.
