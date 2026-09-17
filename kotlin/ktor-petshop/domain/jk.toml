@@ -1,1 +1,4 @@
 name = "ktor-petshop-domain"
+
+# `git.properties` in the library jar: the commit, branch and dirty flag the build came from.
+[build-info]

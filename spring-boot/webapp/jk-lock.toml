@@ -2,7 +2,7 @@ version = 1
 generated-by = "jk 0.13.7"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.12.0"
-manifests-sha256 = "fe69aafc5a88196be679939534bf28f23d29754bcb71f3ce49001b3bfb6b53d6"
+manifests-sha256 = "bd36c694e6207b09d2dfc29a5db2dbceda2a02532d1aa8d7153f172e902d94ec"
 project-id = "91ea0864c8e14ba8fd0b8aa846aed77c"
 
 [jdk]
@@ -178,6 +178,9 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:e7b966dcaac8c5ffa4f10e44031ebf5b71f2123560c08ac8b7120028615aea08"
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
 scopes   = ["main", "test"]
+excluded-by = [
+  "org.apache.tomcat:tomcat-annotations-api <- org.springframework.boot:spring-boot-starter-tomcat-runtime@4.1.1, org.springframework.boot:spring-boot-tomcat@4.1.1",
+]
 
 [[artifact]]
 name     = "org.apache.tomcat.embed:tomcat-embed-el:jar:"
@@ -237,6 +240,14 @@ scopes   = ["test"]
 
 [[artifact]]
 name     = "org.jspecify:jspecify:jar:"
+version  = "1.0.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:1fad6e6be7557781e4d33729d49ae1cdc8fdda6fe477bb0cc68ce351eafdfbab"
+scopes   = ["test"]
+members  = ["web"]
+
+[[artifact]]
+name     = "org.jspecify:jspecify:jar:"
 version  = "1.0.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:070d75f261fe4c5b8202508366715f7f2d4660f88c8ef7e6d3575e48c9683b66"
@@ -258,6 +269,20 @@ deps = [
 ]
 
 [[artifact]]
+name     = "org.junit.jupiter:junit-jupiter-api:jar:"
+version  = "6.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:555d6cf20fa1710884dd01b86cc5785397ba73e21ada2d4b784f5f1a14dcafc4"
+scopes   = ["test"]
+members  = ["web"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2 <- 1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0 <- 1.0.0",
+  "org.junit.platform:junit-platform-commons:jar:@6.1.3 <- 6.1.3",
+  "org.opentest4j:opentest4j:jar:@1.3.0 <- 1.3.0",
+]
+
+[[artifact]]
 name     = "org.junit.jupiter:junit-jupiter-engine:jar:"
 version  = "6.0.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
@@ -269,6 +294,20 @@ deps = [
   "org.jspecify:jspecify:jar:@1.0.1 <- 1.0.0",
   "org.junit.jupiter:junit-jupiter-api:jar:@6.0.3 <- 6.0.3",
   "org.junit.platform:junit-platform-engine:jar:@6.0.3 <- 6.0.3",
+]
+
+[[artifact]]
+name     = "org.junit.jupiter:junit-jupiter-engine:jar:"
+version  = "6.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:414559e78bbfa3bdb2eab009ac3ab1e22369ac31117c270a0bd666da115c5c6c"
+scopes   = ["test"]
+members  = ["web"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2 <- 1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0 <- 1.0.0",
+  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3 <- 6.1.3",
+  "org.junit.platform:junit-platform-engine:jar:@6.1.3 <- 6.1.3",
 ]
 
 [[artifact]]
@@ -285,6 +324,19 @@ deps = [
 ]
 
 [[artifact]]
+name     = "org.junit.jupiter:junit-jupiter-params:jar:"
+version  = "6.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:05c51cedba2c06a9770707391e006cee825876937dea580b94a265ce145d4939"
+scopes   = ["test"]
+members  = ["web"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2 <- 1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0 <- 1.0.0",
+  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3 <- 6.1.3",
+]
+
+[[artifact]]
 name     = "org.junit.jupiter:junit-jupiter:jar:"
 version  = "6.0.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
@@ -298,6 +350,19 @@ deps = [
 ]
 
 [[artifact]]
+name     = "org.junit.jupiter:junit-jupiter:jar:"
+version  = "6.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:6b0a14075c74221de53047e363860b7d19fce802bebc152df2c35c4089c6c379"
+scopes   = ["test"]
+members  = ["web"]
+deps = [
+  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3 <- 6.1.3",
+  "org.junit.jupiter:junit-jupiter-engine:jar:@6.1.3 <- 6.1.3",
+  "org.junit.jupiter:junit-jupiter-params:jar:@6.1.3 <- 6.1.3",
+]
+
+[[artifact]]
 name     = "org.junit.platform:junit-platform-commons:jar:"
 version  = "6.0.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
@@ -307,6 +372,18 @@ scopes   = ["test"]
 deps = [
   "org.apiguardian:apiguardian-api:jar:@1.1.2 <- 1.1.2",
   "org.jspecify:jspecify:jar:@1.0.1 <- 1.0.0",
+]
+
+[[artifact]]
+name     = "org.junit.platform:junit-platform-commons:jar:"
+version  = "6.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:a4774ae923c109544034aeae7c762cf017fbcdd1342403ba90e0921984b608c3"
+scopes   = ["test"]
+members  = ["web"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2 <- 1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0 <- 1.0.0",
 ]
 
 [[artifact]]
@@ -324,6 +401,20 @@ deps = [
 ]
 
 [[artifact]]
+name     = "org.junit.platform:junit-platform-engine:jar:"
+version  = "6.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:21ad7ad3a35beda16387979317be1833a72a71d812f9a66ee4b9a7bafb56334c"
+scopes   = ["test"]
+members  = ["web"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2 <- 1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0 <- 1.0.0",
+  "org.junit.platform:junit-platform-commons:jar:@6.1.3 <- 6.1.3",
+  "org.opentest4j:opentest4j:jar:@1.3.0 <- 1.3.0",
+]
+
+[[artifact]]
 name     = "org.junit.platform:junit-platform-launcher:jar:"
 version  = "6.0.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
@@ -334,6 +425,19 @@ deps = [
   "org.apiguardian:apiguardian-api:jar:@1.1.2 <- 1.1.2",
   "org.jspecify:jspecify:jar:@1.0.1 <- 1.0.0",
   "org.junit.platform:junit-platform-engine:jar:@6.0.3 <- 6.0.3",
+]
+
+[[artifact]]
+name     = "org.junit.platform:junit-platform-launcher:jar:"
+version  = "6.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:1dec64b1fc0b7c47a11302aa5b4d37d8160c041b396e27067709ce775601a7b6"
+scopes   = ["test"]
+members  = ["web"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2 <- 1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0 <- 1.0.0",
+  "org.junit.platform:junit-platform-engine:jar:@6.1.3 <- 6.1.3",
 ]
 
 [[artifact]]

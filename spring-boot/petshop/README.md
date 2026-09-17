@@ -19,6 +19,8 @@ Spring Boot is `[spring-boot] version = "latest"` on `web`; `spring-context` on 
 - Workspace edges: `{ workspace = true }` plus `@Import` / component scan across sibling jars.
 - Root-level test tiers (`[test] exclude-tags` and one profile per tag) apply to every member.
 - Guards: the `spring` pack for the framework and the `monorepo` pack for the workspace.
+- `[build-info]` on `web`: the Boot jar carries `git.properties` and `META-INF/build-info.properties`,
+  so `/actuator/info` reports the commit the build came from.
 - **Known gap:** JPA repositories living only in a library jar scan as *0 interfaces* under this
   layout; the in-memory service keeps the multi-module DI path green.
 

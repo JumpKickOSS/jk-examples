@@ -70,4 +70,6 @@ development the browser talks to Vite and the classpath seam is not involved at 
 - `[spring-boot] version = "latest"` — `jk-lock.toml` pins Boot for the whole workspace.
 - Root-level test tiers: `[test] exclude-tags` plus one profile per tag.
 - Guards: the `spring` pack for the framework and the `monorepo` pack for the workspace.
+- `[build-info]` on `app`: the Boot jar carries `git.properties` and `META-INF/build-info.properties`
+  with the commit the build came from.
 - The front end is the minimum that shows the seam — no router, state or CSS library.

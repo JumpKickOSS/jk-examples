@@ -6,6 +6,9 @@ main = "com.example.petshop.PetshopApplication"
 [spring-boot]
 version = "latest"
 
+# `git.properties` and `META-INF/build-info.properties` in the Boot jar, for the actuator's /info.
+[build-info]
+
 # A shippable container: a JRE 25 base and a JEP 514 AOT cache trained with the image's own JVM.
 [image]
 base      = "docker.io/bellsoft/liberica-runtime-container:jre-25-slim-glibc"

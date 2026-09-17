@@ -19,12 +19,12 @@ repo's `main` closely; build them with a current `jk`.
 |---|---|
 | `android/nowinandroid/` | **The Android north star**: Google's reference app, all 27 modules — Compose, Hilt (unmodified sources), Room auto-migrations, protobuf/datastore, kotlinx-serialization, navigation3, a contentType variant dimension, non-transitive R, demo-debug APK + signed R8 release AAB. No Gradle, no AGP. |
 | `micronaut/hello-http/` | Micronaut HTTP service — `[micronaut]` plugin at `latest`, assembly fat jar, `@MicronautTest` client smoke, `[image]`. |
-| `spring-boot/kitchen-sink/` | Spring Boot at `latest` — web + data-jpa + validation + actuator, BOM auto-import, boot-jar layout, Spring AOT step, build-info, dev-scope devtools, `[image]`. |
+| `spring-boot/kitchen-sink/` | Spring Boot at `latest` — web + data-jpa + validation + actuator, BOM auto-import, boot-jar layout, Spring AOT step, `[build-info]`, dev-scope devtools, `[image]`. |
 | `spring-boot/petshop/` | Multi-module Spring Boot pet shop (domain / service / web) — workspace DI + MockMvc tests, the spring and monorepo guard packs. |
 | `spring-boot/webapp/` | **A JVM backend serving a single-page front end**: a resource-only `web` module fed by Vite's `build.outDir`, the app serving `classpath:/static/` with an SPA fallback, and `[dev.sidecars]` running the Vite dev server beside `jk dev`. |
 | `aot/vanilla-cli/` | Core JVM AOT (`jk build --aot-cache`) with no framework and no plugin — the everyone-gets-this path. |
 | `kotlin/serialization-cli/` | Project-declared Kotlin compiler plugins (`[[kotlin-plugins]]`) via kotlinx-serialization. |
-| `kotlin/ktor-petshop/` | Multi-module Ktor + **Koin** + **Exposed** + H2 pet shop — Kotlin workspace dogfood. |
+| `kotlin/ktor-petshop/` | Multi-module Ktor + **Koin** + **Exposed** + H2 pet shop — Kotlin workspace dogfood; the `domain` library's Dokka javadoc jar and `[build-info]`. |
 | `protobuf/messages/` | The protobuf plugin: provisioned per-OS protoc, Java + Kotlin DSL (lite) codegen. |
 | `jvm/netty/` | **Full Netty Maven→jk port** (~40 modules, Mill graph parity) — black-box + benchmarks. |
 | `jvm/netty-echo/` | Small Netty echo server on the published `netty-all` — lightweight harness seed. |

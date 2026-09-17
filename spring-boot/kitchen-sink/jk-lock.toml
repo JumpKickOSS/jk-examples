@@ -2,7 +2,7 @@ version = 1
 generated-by = "jk 0.13.7"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.10"
-manifests-sha256 = "01b259c76ed4d06866e55bb68183d40096514dc15bf16e5fa508f65977fe7b70"
+manifests-sha256 = "9d64f1d20800e8ffe539783791e9165558a7e4d9ad37da737759441a2e3b59d1"
 project-id = "be967e345bf23c5cd4de336575feacc2"
 
 [jdk]
@@ -279,6 +279,9 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:e7b966dcaac8c5ffa4f10e44031ebf5b71f2123560c08ac8b7120028615aea08"
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
 scopes   = ["main"]
+excluded-by = [
+  "org.apache.tomcat:tomcat-annotations-api <- org.springframework.boot:spring-boot-starter-tomcat-runtime@4.1.1, org.springframework.boot:spring-boot-tomcat@4.1.1",
+]
 
 [[artifact]]
 name     = "org.apache.tomcat.embed:tomcat-embed-el:jar:"

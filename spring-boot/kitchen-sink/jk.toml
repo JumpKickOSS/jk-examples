@@ -1,6 +1,7 @@
 # Spring Boot kitchen sink: web + data-jpa + validation + actuator, layered boot
 # jar, Spring AOT on — exercises the spring-boot plugin's whole surface (BOM
-# auto-import, boot-jar packager, AOT step, build-info, dev-scope devtools).
+# auto-import, boot-jar packager, AOT step, dev-scope devtools) and the core
+# [build-info] table behind the actuator's /info.
 
 name    = "kitchen-sink"
 group   = "dev.jkharness"
@@ -11,9 +12,12 @@ java    = 25
 main = "dev.jkharness.kitchensink.KitchenSinkApplication"
 
 [spring-boot]
-version    = "latest"
-aot        = true
-build-info = true
+version = "latest"
+aot     = true
+
+# `git.properties` and `META-INF/build-info.properties` in the Boot jar: the commit, branch and
+# version the build came from, which the actuator's /info reports.
+[build-info]
 
 # A shippable container: a JRE 25 base and a JEP 514 AOT cache trained with the image's own JVM.
 [image]

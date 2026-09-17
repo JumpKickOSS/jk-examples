@@ -3,7 +3,7 @@ generated-by = "jk 0.13.7"
 resolution-algorithm = "pubgrub-v1"
 kotlin = "2.4.20"
 jk-min = "0.12.0"
-manifests-sha256 = "ffab91b0560ac37ed1027e628793ffcaf8adcd2dcfcd15e3f4fbb5a905359746"
+manifests-sha256 = "79a3f03a430fb52dab20343acd189dfcbc75bbb4809929e829ede6cb14fa65dc"
 project-id = "dc2b41fc081a4f0b671c6ad43d4dbcdc"
 
 [jdk]
@@ -804,6 +804,9 @@ deps = [
   "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
   "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
 ]
+excluded-by = [
+  "org.jboss.marshalling:jboss-marshalling <- io.netty:netty-codec@4.2.18.Final",
+]
 
 [[artifact]]
 name     = "io.netty:netty-codec-protobuf:jar:"
@@ -816,6 +819,10 @@ deps = [
   "io.netty:netty-codec-base:jar:@4.2.18.Final <- 4.2.18.Final",
   "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
   "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+]
+excluded-by = [
+  "com.google.protobuf.nano:protobuf-javanano <- io.netty:netty-codec@4.2.18.Final",
+  "com.google.protobuf:protobuf-java <- io.netty:netty-codec@4.2.18.Final",
 ]
 
 [[artifact]]

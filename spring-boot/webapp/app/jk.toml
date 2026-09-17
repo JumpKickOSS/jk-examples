@@ -7,6 +7,10 @@ main = "com.example.webapp.WebappApplication"
 [spring-boot]
 version = "latest"
 
+# `git.properties` and `META-INF/build-info.properties` in the Boot jar: the commit, branch and
+# version the build came from.
+[build-info]
+
 [image]
 base      = "docker.io/bellsoft/liberica-runtime-container:jre-25-slim-glibc"
 aot-cache = true
