@@ -121,11 +121,22 @@ declared level. Run #1 found three such repos (analysis-ik, jenkins, zipkin: all
 
 `./lockdiff.py` runs after a corpus run, on every repo whose latest `jk lock` is green. It copies the
 clone (with the harness's `jk.toml` / `jk-lock.toml`) to `/home/bsant/src/scratch/lock-diff/<name>`
-(`LOCKDIFF_SCRATCH`), writes Maven's verbose tree per module
-(`maven-dependency-plugin:3.8.1:tree -Dverbose -DoutputFile=target/jk-lockdiff-tree.txt`, offline
-against the corpus `.m2` first, online when offline fails, `-fae` so one module's failure keeps the
-others, 15 minutes per repo via `LOCKDIFF_REPO_CAP`), and reads jk's per-module closure with
-`jk tree <module> -t -f -s all`. Modules both builds know are compared coordinate by coordinate
+(`LOCKDIFF_SCRATCH`); with `--relock` it rewrites that copy's lock with the jk under test first, and
+with `--reimport` it drops the corpus run's manifests and runs `jk import pom.xml` with that jk before
+the lock (`--jk-home <dir>` names a private install, `<dir>/bin/jk` run with `JK_HOME=<dir>`; the
+default is the `jk` on PATH), so the diff measures the importer and resolver as they are. Maven runs against the harness's own
+local repo (`LOCKDIFF_SCRATCH/.m2`, a hardlink copy of the corpus `.m2` made on first use, so the
+corpus repo stays as cold as the runner left it): `dependency:go-offline -U` first, then the verbose
+tree per module (`maven-dependency-plugin:3.8.1:tree -Dverbose -DoutputFile=target/jk-lockdiff-tree.txt`,
+offline, `-fae` so one module's failure keeps the others, 15 minutes per repo via
+`LOCKDIFF_REPO_CAP`). A POM the local repo lacks makes Maven render that artifact as a leaf (`The POM
+for X is missing`) and its whole subtree lands in `only jk`, so every POM a tree run reports missing,
+absent or present-but-unavailable is fetched with curl from Central or a repository the POMs declare
+(with its parents and imported BOMs), and the run repeats until none is missing; Central refuses the
+JVM's TLS stack when it throttles a host, which is why Maven cannot fill them itself and why
+`go-offline` may show `fail`. An online tree run is the last resort for a POM no repository served.
+The report's `maven` cell carries the POMs filled and the ones still missing. jk's per-module closure
+is read with `jk tree <module> -t -f -s all`. Modules both builds know are compared coordinate by coordinate
 (`group:artifact[:classifier]`, Maven `compile|runtime|provided|system` against jk's main-side
 scopes, Maven `test` against jk's `test`); workspace siblings are skipped. Every version difference
 is classified by the rule that produced jk's answer:
@@ -133,7 +144,7 @@ is classified by the rule that produced jk's answer:
 | rule | meaning |
 |------|---------|
 | `bom` | jk's version is a `[platform-dependencies]` BOM's (the lock row carries `pinned-by`); Maven managed the coordinate from a different BOM set or order, or did not manage it at all |
-| `managed` | Maven's tree says `version managed from X` for a transitive no BOM manages in jk: an inline `<dependencyManagement>` entry jk did not apply to the transitive |
+| `managed` | Maven's tree says `version managed from X` and the version is an inline `<dependencyManagement>` entry of the repo's own POMs that jk's row does not carry: the entry reached no `[managed-dependencies]` table (a property the import could not read, a profile, a parent outside the repo) or a BOM or pin of jk's own outranked it |
 | `pin` | jk's version is a version another workspace member declares directly; under `pins = "nearest"` a pin any member declares is the whole lock's version |
 | `depth` | neither side managed it; Maven omitted jk's version "for conflict" with a nearer declaration (nearest-by-depth) where jk kept the highest declared version |
 | `unknown` | none of the above explains it |

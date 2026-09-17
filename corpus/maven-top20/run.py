@@ -770,7 +770,8 @@ def lock_diff_section(repos: list[dict]) -> list[str]:
              "`jk lock` is green, each module Maven and jk both build, coordinate by coordinate. `pairs` = (module, coordinate) pairs whose "
              "version differs; rules: bom = a `[platform-dependencies]` BOM's version where Maven's differs, managed = an inline "
              "`<dependencyManagement>` version Maven applied to a transitive and jk did not, pin = another member's direct pin, depth = "
-             "nearest-by-depth (Maven) against highest-declared (jk), unknown = unexplained.", "",
+             "nearest-by-depth (Maven) against highest-declared (jk), unknown = unexplained. `relocked` = the lock was rewritten by the jk under test "
+             "before the diff, `reimported` = its manifests were imported from the POMs by that jk as well; `partial` = a reactor module failed Maven's tree goal and the other modules' trees stand.", "",
              "| repo | maven | modules compared | modules that differ | pairs / coords | by rule (pairs) |",
              "|------|-------|-----------------:|--------------------:|---------------:|-----------------|"]
     tot = {"repos": 0, "compared": 0, "differ": 0, "pairs": 0}
@@ -779,7 +780,14 @@ def lock_diff_section(repos: list[dict]) -> list[str]:
         if not r:
             continue
         mv = r.get("maven", {})
-        mcell = f"ok ({mv.get('mode')})" if mv.get("status") == "ok" else f"maven unavailable: {mv.get('reason', mv.get('status', ''))}".replace("|", "\\|")[:120]
+        relocked = (", reimported + relocked" if r.get("reimport", {}).get("status") == "ok"
+                    else ", relocked" if r.get("relock", {}).get("status") == "ok" else "")
+        if mv.get("status") == "ok":
+            mcell = f"ok ({mv.get('mode')}{relocked})"
+        elif r.get("modules_maven"):
+            mcell = f"partial ({mv.get('mode')}{relocked}; {r['modules_maven']} module trees)"
+        else:
+            mcell = f"maven unavailable: {mv.get('reason', mv.get('status', ''))}".replace("|", "\\|")[:120]
         rules = ", ".join(f"{k} {v}" for k, v in r.get("by_rule", {}).items() if v) or "—"
         lines.append(f"| {r['full']} | {mcell} | {r['modules_compared']} | {r['modules_differ']} | {r['pairs_differ']} / {r['coords_differ']} | {rules} |")
         if r["modules_compared"]:

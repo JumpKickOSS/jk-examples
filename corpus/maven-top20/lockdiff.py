@@ -3,14 +3,26 @@
 
 For every repo whose latest `jk lock` is green, the clone (with the jk.toml / jk-lock.toml the
 harness wrote) is copied to $LOCKDIFF_SCRATCH/<name> (default /home/bsant/src/scratch/lock-diff),
-Maven's verbose dependency tree is written per module (`dependency:tree -Dverbose`, offline first
-against the corpus .m2, online when offline fails, 15 minutes per repo), and jk's per-module
-closure is read with `jk tree <module> -t -f -s all`.  For each module both builds know, every
-coordinate whose resolved version differs is classified by the rule that produced jk's answer:
+`dependency:go-offline` fills the harness's own Maven repo ($LOCKDIFF_SCRATCH/.m2, a hardlink copy
+of the corpus .m2 made on first use, so the corpus repo stays as cold as the corpus runner left it)
+with every POM the reactor's graphs name, Maven's verbose dependency tree is written per module
+(`dependency:tree -Dverbose`, offline against that repo, 15 minutes per repo), and jk's per-module
+closure is read with `jk tree <module> -t -f -s all`.  A POM the local repo lacks makes Maven render
+the artifact as a leaf (`The POM for X is missing`), and its whole subtree then counts as "only jk":
+every POM a tree run reports missing is fetched from Central or a repository the POMs declare
+(with its parents and imports), and the run is repeated until none is missing; an online tree run is
+the last resort when offline still fails.  The report carries the POMs filled and the ones still
+missing so an "only jk" column is read against them.  With `--relock` the scratch copy's lock is
+rewritten by the jk under test before the diff, and with `--reimport` its manifests are imported
+from the POMs by that jk first (`--jk-home <dir>` names a private install; the default is the `jk`
+on PATH), so the diff measures the importer and resolver as they are rather than what the corpus
+run left.  For each module both builds know, every coordinate whose resolved version differs
+is classified by the rule that produced jk's answer:
 
   managed    Maven's version is one an inline <dependencyManagement> entry in the repo's own POMs
-             sets (`version managed from X` in the tree); jk applies managed versions to declared
-             dependencies only, so the transitive kept its declared / highest / BOM version
+             sets (`version managed from X` in the tree) and jk's row is not it: the entry did not
+             reach the module's [managed-dependencies] (a property the import could not read, a
+             profile, a parent outside the repo) or a BOM or pin of jk's own outranked it
   bom        Maven managed the coordinate too, from a BOM; jk's answer is another BOM's (`pinned-by`)
              or unmanaged, so the two BOM sets or their order differ
   bom-reach  jk's version is a [platform-dependencies] BOM's (`pinned-by`) where Maven's module
@@ -50,11 +62,21 @@ import run as harness  # noqa: E402  (the corpus harness: scratch paths, launche
 
 HERE = harness.HERE
 SCRATCH = Path(os.environ.get("LOCKDIFF_SCRATCH", "/home/bsant/src/scratch/lock-diff"))
+M2 = Path(os.environ.get("LOCKDIFF_M2", str(SCRATCH / ".m2")))
 OUT_MD = HERE / "lock-diff"
 OUT_JSONL = harness.RESULTS / "lock-diff"
 REPO_CAP = int(os.environ.get("LOCKDIFF_REPO_CAP", 15 * 60))
 TREE_FILE = "target/jk-lockdiff-tree.txt"
 DEP_PLUGIN = "org.apache.maven.plugins:maven-dependency-plugin:3.8.1:tree"
+GO_OFFLINE = "org.apache.maven.plugins:maven-dependency-plugin:3.8.1:go-offline"
+MISSING_POM = re.compile(r"The POM for (\S+) is (?:missing, no dependency information available|invalid, transitive dependencies)")
+ABSENT_POM = re.compile(r"(?:Could not find artifact|could not be resolved: |artifact ) ?(\S+?):(\S+?):pom:(\S+?)(?: \(absent\)|[ ,)\]]|$)")
+UNAVAILABLE_POM = re.compile(r"(\S+?):(\S+?):pom:(\S+?) \(present, but unavailable\)")
+CENTRAL = "https://repo.maven.apache.org/maven2"
+FILL_ROUNDS = 8
+GO_OFFLINE_CAP = int(os.environ.get("LOCKDIFF_GO_OFFLINE_CAP", 180))   # seconds; a throttled Central stalls rather than refuses
+NET_TIMEOUTS = ["-Daether.connector.connectTimeout=10000", "-Daether.connector.requestTimeout=60000"]
+JK_ENV: dict[str, str] = {}      # JK_HOME for a private install, empty for the jk on PATH
 PACKAGINGS = {"jar", "pom", "war", "ear", "aar", "test-jar", "maven-plugin", "bundle", "ejb", "zip", "so", "dll", "dylib"}
 MAVEN_MAIN_SCOPES = {"compile", "runtime", "provided", "system"}
 JK_MAIN_SCOPES = {"main", "runtime", "provided", "processor"}
@@ -172,19 +194,161 @@ def parse_maven_tree(text: str) -> dict:
     return module
 
 
+def local_repo() -> Path:
+    """The harness's Maven repo: a hardlink copy of the corpus .m2, made once, that go-offline may fill."""
+    if not M2.exists():
+        M2.parent.mkdir(parents=True, exist_ok=True)
+        subprocess.run(["cp", "-al", str(harness.M2), str(M2)], check=True)
+    return M2
+
+
+def missing_poms(log: Path, start: int) -> set[tuple[str, str, str]]:
+    """The (group, artifact, version) of every POM Maven could not read, from byte offset `start` of the log.
+
+    `The POM for G:A:ext[:classifier]:V is missing` names an artifact Maven then rendered as a leaf;
+    `... is invalid` one whose parent or import it could not read; `Could not find artifact G:A:pom:V`,
+    `G:A:pom:V (absent)` and `G:A:pom:V (present, but unavailable)` name the POM itself (a parent,
+    or a BOM a dependency's POM imports; the last one is on disk under another repository's id).
+    """
+    with open(log, "rb") as f:
+        f.seek(start)
+        text = f.read().decode("utf-8", errors="replace")
+    out: set[tuple[str, str, str]] = set()
+    for gav in MISSING_POM.findall(text):
+        parts = gav.split(":")
+        if len(parts) >= 4:
+            out.add((parts[0], parts[1], parts[-1]))
+    for g, a, v in ABSENT_POM.findall(text):
+        out.add((g, a, v))
+    for g, a, v in UNAVAILABLE_POM.findall(text):
+        out.add((g, a, v))
+    return out
+
+
+def declared_repositories(root: Path) -> list[str]:
+    """Central, then every <repository><url> the repo's own POMs declare (http(s) only, in file order)."""
+    urls = [CENTRAL]
+    for pom in harness.poms(root):
+        el = _pom(pom)
+        if el is None:
+            continue
+        for rep in el.findall("repositories/repository/url") + el.findall("profiles/profile/repositories/repository/url"):
+            u = (rep.text or "").strip().rstrip("/")
+            if u.startswith("http") and "${" not in u and u not in urls:
+                urls.append(u)
+    return urls
+
+
+def pom_path(repo: Path, g: str, a: str, v: str) -> Path:
+    return repo / g.replace(".", "/") / a / v / f"{a}-{v}.pom"
+
+
+def fetch_pom(repo: Path, g: str, a: str, v: str, urls: list[str], log: Path) -> bool:
+    """Download one POM into the local repo from the first repository that serves it (curl; the JVM's
+    TLS stack is what Central refuses when it throttles a host, so Maven itself cannot fill these)."""
+    dest = pom_path(repo, g, a, v)
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    # A POM another repository id fetched is "present, but unavailable" to a build that only knows
+    # Central, and a cached transfer failure is not retried: dropping the resolver's bookkeeping
+    # beside the file makes it a locally installed POM, which every build reads.
+    stale = [p for p in dest.parent.iterdir() if p.name == "_remote.repositories" or p.name.endswith(".lastUpdated")]
+    for p in stale:
+        p.unlink()
+    if dest.is_file():
+        if stale:
+            with open(log, "a", encoding="utf-8") as f:
+                f.write(f"# made {g}:{a}:{v} available (dropped {', '.join(p.name for p in stale)})\n")
+        return bool(stale)
+    rel = f"{g.replace('.', '/')}/{a}/{v}/{a}-{v}.pom"
+    for base in urls:
+        r = subprocess.run(["curl", "-fsSL", "--max-time", "60", "-o", str(dest), f"{base}/{rel}"], capture_output=True)
+        if r.returncode == 0 and dest.is_file() and dest.stat().st_size > 0:
+            with open(log, "a", encoding="utf-8") as f:
+                f.write(f"# filled {g}:{a}:{v} from {base}\n")
+            return True
+        dest.unlink(missing_ok=True)
+    with open(log, "a", encoding="utf-8") as f:
+        f.write(f"# no repository serves {g}:{a}:{v}\n")
+    return False
+
+
+def ensure_pom(repo: Path, g: str, a: str, v: str, urls: list[str], log: Path, seen: set) -> int:
+    """Fetch a POM when the local repo lacks it, then its parent and its imported BOMs the same way.
+
+    `${...}` in a parent or import coordinate is read from the POM's own properties and project.version;
+    what stays unresolved is skipped.  Returns how many POMs were fetched.
+    """
+    key = (g, a, v)
+    if key in seen or "${" in g + a + v:
+        return 0
+    seen.add(key)
+    fetched = 1 if fetch_pom(repo, g, a, v, urls, log) else 0
+    path = pom_path(repo, g, a, v)
+    el = _pom(path) if path.is_file() else None
+    if el is None:
+        return fetched
+    props = {"project.version": v, "project.groupId": g, "version": v, "groupId": g}
+    for prop in el.findall("properties/*"):
+        if prop.text:
+            props[prop.tag] = prop.text.strip()
+
+    def interp(x: str) -> str:
+        return re.sub(r"\$\{([^}]+)\}", lambda m: props.get(m.group(1), m.group(0)), x)
+
+    par = el.find("parent")
+    if par is not None:
+        pg, pa, pv = (interp((par.findtext(t) or "").strip()) for t in ("groupId", "artifactId", "version"))
+        if pg and pa and pv:
+            fetched += ensure_pom(repo, pg, pa, pv, urls, log, seen)
+    for dep in el.findall("dependencyManagement/dependencies/dependency"):
+        if (dep.findtext("scope") or "").strip() == "import":
+            dg, da, dv = (interp((dep.findtext(t) or "").strip()) for t in ("groupId", "artifactId", "version"))
+            if dg and da and dv:
+                fetched += ensure_pom(repo, dg, da, dv, urls, log, seen)
+    return fetched
+
+
 def maven_trees(root: Path, repo: dict, log: Path, deadline: float) -> dict:
-    """Run the verbose tree goal across the reactor, offline first; return {status, mode, wall, reason}."""
+    """go-offline, then the verbose tree goal across the reactor, offline against the harness's repo;
+    every POM the run reports missing is fetched into that repo and the run repeated until none is,
+    then online as the last resort for a POM no repository served.
+
+    Returns {status, mode, wall, reason, go_offline, missing_poms, poms_filled, rounds}: `go_offline`
+    is that goal's status (`-U` so a cached "absent" marker is re-asked; a module failing there does
+    not stop the tree; capped at $LOCKDIFF_GO_OFFLINE_CAP seconds, since a Central that throttles the
+    host stalls the connection rather than refusing it), `poms_filled` how many POMs the fill fetched, `missing_poms` how many POMs the
+    run that produced the trees still could not read.
+    """
     launcher = harness.maven_launcher(root)
     env = harness.maven_env(repo.get("maven_jdk", repo["java"]))
-    base = launcher + ["-B", "-fae", f"-Dmaven.repo.local={harness.M2}", DEP_PLUGIN,
-                       "-Dverbose=true", "-DoutputType=text", f"-DoutputFile={TREE_FILE}"]
+    local = local_repo()
+    common = launcher + ["-B", "-fae", f"-Dmaven.repo.local={local}"] + NET_TIMEOUTS
+    base = common + [DEP_PLUGIN, "-Dverbose=true", "-DoutputType=text", f"-DoutputFile={TREE_FILE}"]
     t0 = time.time()
-    r = harness.run(base + ["-o"], root, log, deadline - time.time(), env)
-    mode = "offline"
-    if r["status"] != "ok" and deadline - time.time() > 60:
+    warm = harness.run(common + ["-U", GO_OFFLINE], root, log, max(min(deadline - time.time(), GO_OFFLINE_CAP), 1), env)
+    urls = declared_repositories(root)
+    filled, rounds, seen = 0, 0, set()
+    while True:
+        rounds += 1
+        tree_start = log.stat().st_size if log.exists() else 0
+        r = harness.run(base + ["-o"], root, log, max(deadline - time.time(), 1), env)
+        mode = "offline"
+        missing = missing_poms(log, tree_start)
+        if not missing or rounds >= FILL_ROUNDS or deadline - time.time() < 60:
+            break
+        got = sum(ensure_pom(local, g, a, v, urls, log, seen) for g, a, v in sorted(missing))
+        filled += got
+        print(f"  fill round {rounds}: {len(missing)} POMs missing, {got} fetched", flush=True)
+        if not got:
+            break
+    if missing and deadline - time.time() > 60:          # POMs no repository served: let Maven ask itself
+        tree_start = log.stat().st_size
         r = harness.run(base, root, log, deadline - time.time(), env)
         mode = "online"
-    out = {"status": r["status"], "mode": mode, "wall": round(time.time() - t0, 1), "reason": ""}
+        missing = missing_poms(log, tree_start)
+    out = {"status": r["status"], "mode": mode, "wall": round(time.time() - t0, 1), "reason": "",
+           "go_offline": {"status": warm["status"], "wall": round(warm["wall"], 1)},
+           "missing_poms": len(missing), "poms_filled": filled, "rounds": rounds}
     if r["status"] != "ok":
         out["reason"] = harness.first_mvn_error(log) or f"mvn dependency:tree {r['status']}"
     return out
@@ -216,7 +380,7 @@ def jk_modules(root: Path) -> list[str]:
 def jk_tree(root: Path, module: str, log: Path) -> dict | None:
     """`jk tree <module> -t -f -s all` → {scope: {key: version}} plus the platform BOMs it lists."""
     cmd = harness.JK + ["--no-timeline", "tree"] + ([] if module == "." else [module]) + ["-t", "-f", "-s", "all"]
-    p = subprocess.run(cmd, cwd=root, capture_output=True, text=True, timeout=600)
+    p = subprocess.run(cmd, cwd=root, capture_output=True, text=True, timeout=600, env={**os.environ, **JK_ENV})
     with open(log, "a", encoding="utf-8") as f:
         f.write(f"\n$ (cd {root} && {' '.join(cmd)})   # exit {p.returncode}\n{p.stdout}{p.stderr}")
     if p.returncode != 0:
@@ -505,6 +669,37 @@ def failing_test_modules(repo: str, root: Path, lock: Lock) -> list[str]:
     return []
 
 
+def jk_step(root: Path, log: Path, deadline: float, args: list[str]) -> dict:
+    """One jk command in the scratch copy with the jk under test; {status, wall}."""
+    cmd = harness.JK + ["--no-timeline"] + args
+    t0 = time.time()
+    with open(log, "a", encoding="utf-8") as f:
+        f.write(f"\n$ (cd {root} && {' '.join(cmd)})\n")
+    try:
+        p = subprocess.run(cmd, cwd=root, capture_output=True, text=True, timeout=max(deadline - time.time(), 60),
+                           env={**os.environ, **JK_ENV})
+        status = "ok" if p.returncode == 0 else "fail"
+        tail = p.stdout + p.stderr
+    except subprocess.TimeoutExpired as e:
+        status, tail = "timeout", str(e.stdout or "") + str(e.stderr or "")
+    with open(log, "a", encoding="utf-8") as f:
+        f.write(f"{tail}\n# jk {args[0]} {status}\n")
+    return {"status": status, "wall": round(time.time() - t0, 1)}
+
+
+def reimport(root: Path, log: Path, deadline: float) -> dict:
+    """Drop every manifest and lock the corpus run wrote and import the POMs again with the jk under test."""
+    for f in list(root.rglob("jk.toml")) + list(root.rglob("jk-lock.toml")):
+        if "target" not in f.parts:
+            f.unlink()
+    return jk_step(root, log, deadline, ["import", "pom.xml", "--report", "target/jk-lockdiff-import.md"])
+
+
+def relock(root: Path, log: Path, deadline: float) -> dict:
+    """`jk lock -r` in the scratch copy with the jk under test; {status, wall}."""
+    return jk_step(root, log, deadline, ["lock", "-r"])
+
+
 def measure(repo: dict, args, date: str) -> dict:
     name = repo["name"]
     src = harness.SCRATCH / name
@@ -513,7 +708,7 @@ def measure(repo: dict, args, date: str) -> dict:
     row = {"repo": name, "full": repo["full"], "sha": repo["sha"], "date": dt.datetime.now().isoformat(timespec="seconds"),
            "corpus_run": f"{corpus_row.get('run', '')} {corpus_row.get('date', '')}".strip(),
            "corpus_jk": corpus_row.get("jk_commit", ""),
-           "lock_generated_by": "", "maven": {}, "modules_maven": 0, "modules_jk": 0, "modules_compared": 0,
+           "lock_generated_by": "", "reimport": {}, "relock": {}, "maven": {}, "modules_maven": 0, "modules_jk": 0, "modules_compared": 0,
            "modules_differ": 0, "pairs_differ": 0, "coords_differ": 0, "by_rule": {r: 0 for r in RULES},
            "by_rule_coords": {r: 0 for r in RULES}, "direction": {"jk higher": 0, "jk lower": 0}, "scope_only": 0,
            "only_maven": {}, "only_jk": 0, "only_jk_optional": 0, "tree_vs_lock": 0, "maven_coords": 0, "compared": 0,
@@ -525,13 +720,28 @@ def measure(repo: dict, args, date: str) -> dict:
     if not args.reuse:
         if log.exists():
             log.unlink()
+        if not (src / "pom.xml").is_file():
+            row["maven"] = {"status": "skipped", "reason": f"no corpus clone at {src}"}
+            return row
         subprocess.run(["rsync", "-a", "--delete", "--exclude", ".git", "--exclude", "target", "--exclude", "node_modules",
                         f"{src}/", f"{root}/"], check=True)
         if (src / "target" / "jk-results.md").is_file():
             shutil.copy(src / "target" / "jk-results.md", root / "jk-results.corpus.md")   # the clone's latest jk test results
-    if not (root / "jk-lock.toml").is_file():
+    if args.reimport and not args.reuse:
+        row["reimport"] = reimport(root, log, deadline)
+        print(f"  {name}: jk import {row['reimport']['status']} ({row['reimport']['wall']}s)", flush=True)
+        if row["reimport"]["status"] != "ok":
+            row["maven"] = {"status": "skipped", "reason": f"jk import {row['reimport']['status']} with the jk under test"}
+            return row
+    if not (root / "jk-lock.toml").is_file() and not args.relock:
         row["maven"] = {"status": "skipped", "reason": "no jk-lock.toml in the corpus clone"}
         return row
+    if args.relock and not args.reuse:
+        row["relock"] = relock(root, log, deadline)
+        print(f"  {name}: jk lock {row['relock']['status']} ({row['relock']['wall']}s)", flush=True)
+        if row["relock"]["status"] != "ok":
+            row["maven"] = {"status": "skipped", "reason": f"jk lock {row['relock']['status']} with the jk under test"}
+            return row
     lock = Lock(root / "jk-lock.toml")
     row["lock_generated_by"] = lock.generated_by
     if args.reuse and any(root.rglob(TREE_FILE.split("/")[-1])):
@@ -540,7 +750,10 @@ def measure(repo: dict, args, date: str) -> dict:
         row["maven"] = maven_trees(root, repo, log, deadline)
     mtrees = maven_modules(root)
     row["modules_maven"] = len(mtrees)
-    print(f"  {name}: maven {row['maven']['status']} ({row['maven'].get('mode')}, {row['maven'].get('wall')}s), {len(mtrees)} module trees", flush=True)
+    print(f"  {name}: maven {row['maven']['status']} ({row['maven'].get('mode')}, {row['maven'].get('wall')}s, "
+          f"go-offline {row['maven'].get('go_offline', {}).get('status', '-')}, {row['maven'].get('poms_filled', 0)} POMs filled, "
+          f"{row['maven'].get('missing_poms', '?')} missing), "
+          f"{len(mtrees)} module trees", flush=True)
     jmods = jk_modules(root)
     row["modules_jk"] = len(jmods)
     if not mtrees:
@@ -638,7 +851,8 @@ def render(date: str, rows: dict[str, dict], repos: list[dict]) -> None:
              "**pin** = jk's version is another workspace member's direct pin (a pin any member declares is the whole lock's version under `pins = \"nearest\"`); "
              "**depth** = neither side managed it, Maven took the nearest declaration and jk the highest; **cascade** = the parent POM already differs; **unknown** = none of those. "
              "`test row differs` = compile-scope coordinates whose jk test-scope lock row is not the version Maven's test classpath carries (a pin or managed version that governs jk's main solve but not its test solve). "
-             "`only jk` = coordinates on jk's closure Maven's tree lacks (a sibling's `<optional>` edge, or a `<dependencyManagement>` exclusion import did not carry); `tree vs lock` = `jk tree` lines whose version is not the lock row the module reads.", "",
+             "`only jk` = coordinates on jk's closure Maven's tree lacks (a sibling's `<optional>` edge, or a `<dependencyManagement>` exclusion import did not carry); `tree vs lock` = `jk tree` lines whose version is not the lock row the module reads. "
+             "The `maven` cell names the tree run's status (`partial` = a reactor module failed under `-fae` and the others' trees stand), its mode, its wall, `dependency:go-offline`'s status, the POMs the harness fetched into Maven's local repo because a tree run reported them missing, and the POMs the final run still could not read (each one is an artifact Maven rendered as a leaf, so its transitives can only be `only jk`); the lock is the corpus clone's unless the cell says `relocked` (rewritten by the jk under test) or `reimported + relocked` (the manifests imported from the POMs by that jk as well).", "",
              "| repo | maven | modules mvn / jk / compared | modules that differ | pairs / coords differ | by rule (pairs) | jk higher / lower | test row differs | same version, scope differs | only Maven | only jk (optional in a POM) | tree vs lock | failing-test modules with a diff |",
              "|------|-------|----------------------------:|--------------------:|----------------------:|-----------------|------------------:|-----------------:|----------------------------:|-----------:|----------------------------:|-------------:|----------------------------------|"]
     for repo in repos:
@@ -647,7 +861,17 @@ def render(date: str, rows: dict[str, dict], repos: list[dict]) -> None:
             continue
         mv = r["maven"]
         mstat = mv.get("status", "")
-        mcell = f"{mstat} ({mv.get('mode')}, {mv.get('wall', 0):.0f}s)" if mstat == "ok" else f"maven unavailable: {mv.get('reason', mstat)}".replace("|", "\\|")[:160]
+        relocked = (", reimported + relocked" if r.get("reimport", {}).get("status") == "ok"
+                    else ", relocked" if r.get("relock", {}).get("status") == "ok" else "")
+        detail = (f", go-offline {mv['go_offline']['status']}, {mv.get('poms_filled', 0)} POMs filled, {mv.get('missing_poms', 0)} missing"
+                  if mv.get("go_offline") else "")
+        if mstat == "ok":
+            mcell = f"ok ({mv.get('mode')}, {mv.get('wall', 0):.0f}s{detail}{relocked})"
+        elif r["modules_maven"]:
+            mcell = (f"partial ({mv.get('mode')}, {mv.get('wall', 0):.0f}s{detail}{relocked}; {r['modules_maven']} module trees, "
+                     f"{mv.get('reason', mstat)})").replace("|", "\\|")[:220]
+        else:
+            mcell = f"maven unavailable: {mv.get('reason', mstat)}".replace("|", "\\|")[:160]
         only_m = sum(r.get("only_maven", {}).values())
         fail = r.get("failing_test_modules", [])
         fcell = (f"{len(r.get('failing_modules_with_diff', []))} of {len(fail)}" if fail else "no failing tests")
@@ -673,7 +897,12 @@ def render(date: str, rows: dict[str, dict], repos: list[dict]) -> None:
         if not r or not r.get("examples"):
             continue
         lines += [f"## {r['full']}", "",
-                  f"Lock from corpus row {r.get('corpus_run', '?')} (`{r['lock_generated_by']}`, {r.get('corpus_jk', '')}); {r['compared']} of {r['maven_coords']} Maven coordinates found in jk's closure; "
+                  (f"Manifests imported from the POMs and the lock written by `{r['lock_generated_by']}` over the corpus clone from row {r.get('corpus_run', '?')}; "
+                   if r.get("reimport", {}).get("status") == "ok" else
+                   f"Lock rewritten by `{r['lock_generated_by']}` over the corpus clone from row {r.get('corpus_run', '?')}; "
+                   if r.get("relock", {}).get("status") == "ok" else
+                   f"Lock from corpus row {r.get('corpus_run', '?')} (`{r['lock_generated_by']}`, {r.get('corpus_jk', '')}); ")
+                  + f"{r['compared']} of {r['maven_coords']} Maven coordinates found in jk's closure; "
                   f"jk tree vs lock row disagreements: {r['tree_vs_lock']}. Failing-test modules: {', '.join(r['failing_test_modules']) or 'none'}"
                   + (f"; with a version diff: {', '.join(r['failing_modules_with_diff'])}" if r["failing_modules_with_diff"] else "") + ".", "",
                   "| coordinate | jk | Maven | modules | rule | evidence |", "|------------|----|-------|--------:|------|----------|"]
@@ -689,8 +918,17 @@ def main() -> int:
     ap.add_argument("--only", action="append", help="one repo name (repeatable)")
     ap.add_argument("--reuse", action="store_true", help="keep the scratch copy and its Maven trees; redo the jk side and the diff")
     ap.add_argument("--render", action="store_true", help="only rewrite lock-diff/<date>.md from the latest rows")
+    ap.add_argument("--relock", action="store_true", help="rewrite the scratch copy's jk-lock.toml with the jk under test before the diff")
+    ap.add_argument("--reimport", action="store_true", help="drop the corpus run's manifests and `jk import pom.xml` again with the jk under test (implies --relock)")
+    ap.add_argument("--jk-home", help="a private jk install: <dir>/bin/jk runs with JK_HOME=<dir> (default: the jk on PATH)")
     ap.add_argument("--date", default=f"{dt.date.today():%Y-%m-%d}", help="row file / report date (default today)")
     args = ap.parse_args()
+    if args.reimport:
+        args.relock = True
+    if args.jk_home:
+        home = Path(args.jk_home).expanduser().resolve()
+        harness.JK = [str(home / "bin" / "jk")] + harness.JK[1:]
+        JK_ENV["JK_HOME"] = str(home)
     cfg = tomllib.load(open(HERE / "repos.toml", "rb"))
     repos = cfg["repo"]
     if args.render:
