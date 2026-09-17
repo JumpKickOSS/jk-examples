@@ -3,7 +3,7 @@ generated-by = "jk 0.13.7"
 resolution-algorithm = "pubgrub-v1"
 kotlin = "2.4.20"
 jk-min = "0.12.0"
-manifests-sha256 = "2b643112749a7d142beda6f3a8f9ec42eae0567ea884826ff2c1200f81ceea81"
+manifests-sha256 = "22d67088e84af93c65cefffada0817e2c1bc267baf26c77d0c386f8f27a408e4"
 project-id = "2d22aa92728d217c54eba54e6bc7ebdf"
 
 [jdk]
@@ -233,7 +233,6 @@ name     = "androidx.compose.animation:animation-android:aar:"
 version  = "1.12.0-rc01"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:08f82ed6bab4ad99eec2e97c105a205644815ac8994c585b95dff21d1f20e20b"
-pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 path     = "animation-android-1.12.0-rc01.aar"
 scopes   = ["main"]
 deps = [
@@ -255,7 +254,6 @@ name     = "androidx.compose.animation:animation-core-android:aar:"
 version  = "1.12.0-rc01"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:132eb2d7550c9fdc6d6c989379916f6f02110de34dcb8606c5dae363756ec6f6"
-pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 path     = "animation-core-android-1.12.0-rc01.aar"
 scopes   = ["main"]
 deps = [
@@ -274,7 +272,6 @@ deps = [
 name     = "androidx.compose.animation:animation-core:jar:"
 version  = "1.12.0-rc01"
 source   = "jumpkick+https://jumpkick.build/repo/"
-pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 scopes   = ["main"]
 deps = [
   "androidx.compose.animation:animation-core-android:jar:@1.12.0-rc01",
@@ -286,7 +283,6 @@ deps = [
 name     = "androidx.compose.animation:animation:jar:"
 version  = "1.12.0-rc01"
 source   = "jumpkick+https://jumpkick.build/repo/"
-pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 scopes   = ["main"]
 deps = [
   "androidx.compose.animation:animation-android:jar:@1.12.0-rc01",
@@ -302,7 +298,6 @@ name     = "androidx.compose.foundation:foundation-android:aar:"
 version  = "1.12.0-rc01"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:c0074a157713ccee585104b7440ea6b504d5d26ae3ba9bcdee8d26d32005af22"
-pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 path     = "foundation-android-1.12.0-rc01.aar"
 scopes   = ["main"]
 deps = [
@@ -325,7 +320,6 @@ name     = "androidx.compose.foundation:foundation-layout-android:aar:"
 version  = "1.12.0-rc01"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:a2df3b99984961d2953d3021a46abcb3b0bf95a7f159b458293776685594b08b"
-pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 path     = "foundation-layout-android-1.12.0-rc01.aar"
 scopes   = ["main"]
 deps = [
@@ -373,7 +367,6 @@ name     = "androidx.compose.material3.adaptive:adaptive-android:aar:"
 version  = "1.3.0-rc01"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:443a073a54dac27a095b554e9c8bb341f2bc8ec299a39030d47a2e832dde9a55"
-pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 path     = "adaptive-android-1.3.0-rc01.aar"
 scopes   = ["main"]
 deps = [
@@ -391,7 +384,6 @@ name     = "androidx.compose.material3.adaptive:adaptive-layout-android:aar:"
 version  = "1.3.0-rc01"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:e0ad174c81be9cdd2168e089e31e34ac4f1ec57567516ab2131d6b016bb3dc91"
-pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 path     = "adaptive-layout-android-1.3.0-rc01.aar"
 scopes   = ["main"]
 deps = [
@@ -429,7 +421,6 @@ name     = "androidx.compose.material3.adaptive:adaptive-navigation-android:aar:
 version  = "1.3.0-rc01"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:52bda6ef330e16f1b786ac89539b79ca09a6663bc3444d68143d7211bfa9ab67"
-pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 path     = "adaptive-navigation-android-1.3.0-rc01.aar"
 scopes   = ["main"]
 deps = [
@@ -447,7 +438,6 @@ name     = "androidx.compose.material3.adaptive:adaptive-navigation3-android:aar
 version  = "1.3.0-rc01"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:f292ea2e837f6b84ac7ac1da4d7986bac27f6f0a9f319f91a11de012cabe53fc"
-pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 path     = "adaptive-navigation3-android-1.3.0-rc01.aar"
 scopes   = ["main"]
 deps = [
@@ -502,7 +492,6 @@ name     = "androidx.compose.material3:material3-adaptive-navigation-suite-andro
 version  = "1.5.0-alpha25"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:92ee18962723f2acc4f68bf00636a669090d80fc67c21409c37a543c712af2b2"
-pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 path     = "material3-adaptive-navigation-suite-android-1.5.0-alpha25.aar"
 scopes   = ["main"]
 deps = [
@@ -532,7 +521,6 @@ name     = "androidx.compose.material3:material3-android:aar:"
 version  = "1.5.0-alpha25"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:bf09d0c5bd06d33d828c44dd04a537e76528ef2476bb4d802a329a83cb0a618b"
-pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 path     = "material3-android-1.5.0-alpha25.aar"
 scopes   = ["main"]
 deps = [
@@ -559,7 +547,6 @@ name     = "androidx.compose.material3:material3-ripple-android:aar:"
 version  = "1.5.0-alpha25"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:11774f26246f933ec39413c13dc6de5de2f09beaa397d38658c78cef00dc9aa5"
-pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 path     = "material3-ripple-android-1.5.0-alpha25.aar"
 scopes   = ["main"]
 deps = [
@@ -576,7 +563,6 @@ name     = "androidx.compose.material3:material3-window-size-class-android:aar:"
 version  = "1.5.0-alpha25"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:b99fac7d14685350524384111b68bc9f664df3767ecea3c5af5ad4c9b8ed7983"
-pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 path     = "material3-window-size-class-android-1.5.0-alpha25.aar"
 scopes   = ["main"]
 deps = [
@@ -626,7 +612,6 @@ name     = "androidx.compose.material:material-icons-core-android:aar:"
 version  = "1.7.8"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:332c06b25e662cc417fb087e76b8faa5cb249f4992ffa3360084a3d4ab882284"
-pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 path     = "material-icons-core-android-1.7.8.aar"
 scopes   = ["main"]
 deps = [
@@ -639,7 +624,6 @@ deps = [
 name     = "androidx.compose.material:material-icons-core:jar:"
 version  = "1.7.8"
 source   = "jumpkick+https://jumpkick.build/repo/"
-pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 scopes   = ["main"]
 deps = [
   "androidx.compose.material:material-icons-core-android:jar:@1.7.8",
@@ -651,7 +635,6 @@ name     = "androidx.compose.material:material-icons-extended-android:aar:"
 version  = "1.7.8"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:64e86269f1106848981dd76f0046f81b46f3bd92efb22645de8fd044c0402b61"
-pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 path     = "material-icons-extended-android-1.7.8.aar"
 scopes   = ["main"]
 deps = [
@@ -675,7 +658,6 @@ name     = "androidx.compose.material:material-ripple-android:aar:"
 version  = "1.12.0-rc01"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:7aa82fac53f316ec7f7587b9a5a96300483bc93d4af45d934801c559f62ebf05"
-pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 path     = "material-ripple-android-1.12.0-rc01.aar"
 scopes   = ["main"]
 deps = [
@@ -691,7 +673,6 @@ deps = [
 name     = "androidx.compose.material:material-ripple:jar:"
 version  = "1.12.0-rc01"
 source   = "jumpkick+https://jumpkick.build/repo/"
-pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 scopes   = ["main"]
 deps = [
   "androidx.compose.foundation:foundation:jar:@1.12.0-rc01 <- 1.7.1",
@@ -705,7 +686,6 @@ name     = "androidx.compose.runtime:runtime-android:aar:"
 version  = "1.12.0-rc01"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:68858a1d64ab5cd95cc7d3312283e59e24fd19b143560b9be75a29260623103b"
-pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 path     = "runtime-android-1.12.0-rc01.aar"
 scopes   = ["main"]
 deps = [
@@ -722,7 +702,6 @@ name     = "androidx.compose.runtime:runtime-annotation-android:aar:"
 version  = "1.12.0-rc01"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:addfb6e133efa3ebc8eed773ea8f590a1a341ba045ed9ed0f6d5a57717ae7099"
-pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 path     = "runtime-annotation-android-1.12.0-rc01.aar"
 scopes   = ["main"]
 deps = [
@@ -733,7 +712,6 @@ deps = [
 name     = "androidx.compose.runtime:runtime-annotation:jar:"
 version  = "1.12.0-rc01"
 source   = "jumpkick+https://jumpkick.build/repo/"
-pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 scopes   = ["main"]
 deps = [
   "androidx.compose.runtime:runtime-annotation-android:jar:@1.12.0-rc01",
@@ -745,7 +723,6 @@ name     = "androidx.compose.runtime:runtime-retain-android:aar:"
 version  = "1.12.0-rc01"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:bac74dfd2a8bdd3d76c554677d6b2145864804b342db1aa7b5913d39c86670f5"
-pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 path     = "runtime-retain-android-1.12.0-rc01.aar"
 scopes   = ["main"]
 deps = [
@@ -759,7 +736,6 @@ deps = [
 name     = "androidx.compose.runtime:runtime-retain:jar:"
 version  = "1.12.0-rc01"
 source   = "jumpkick+https://jumpkick.build/repo/"
-pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 scopes   = ["main"]
 deps = [
   "androidx.collection:collection:jar:@1.6.0 <- 1.5.0",
@@ -774,7 +750,6 @@ name     = "androidx.compose.runtime:runtime-saveable-android:aar:"
 version  = "1.12.0-rc01"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:f382edf7470fe96bacad5e79725e5ff6dcd0c7397f8994e865b6d433a9ca22f9"
-pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 path     = "runtime-saveable-android-1.12.0-rc01.aar"
 scopes   = ["main"]
 deps = [
@@ -790,7 +765,6 @@ deps = [
 name     = "androidx.compose.runtime:runtime-saveable:jar:"
 version  = "1.12.0-rc01"
 source   = "jumpkick+https://jumpkick.build/repo/"
-pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 scopes   = ["main"]
 deps = [
   "androidx.collection:collection:jar:@1.6.0 <- 1.5.0",
@@ -820,7 +794,6 @@ name     = "androidx.compose.ui:ui-android:aar:"
 version  = "1.12.0-rc01"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:99cfa4aba67d40b85af610f773142ef4567221c726741fa680822c3be0daff7c"
-pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 path     = "ui-android-1.12.0-rc01.aar"
 scopes   = ["main"]
 deps = [
@@ -858,7 +831,6 @@ name     = "androidx.compose.ui:ui-geometry-android:aar:"
 version  = "1.12.0-rc01"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:35a42aaf8c0186d739ccf91a5f57d6aaf87ea5dd0ea87845ad9a804edd1a0482"
-pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 path     = "ui-geometry-android-1.12.0-rc01.aar"
 scopes   = ["main"]
 deps = [
@@ -872,7 +844,6 @@ deps = [
 name     = "androidx.compose.ui:ui-geometry:jar:"
 version  = "1.12.0-rc01"
 source   = "jumpkick+https://jumpkick.build/repo/"
-pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 scopes   = ["main"]
 deps = [
   "androidx.compose.ui:ui-geometry-android:jar:@1.12.0-rc01",
@@ -884,7 +855,6 @@ name     = "androidx.compose.ui:ui-graphics-android:aar:"
 version  = "1.12.0-rc01"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:98884015fff941bcd8fe6903576d381f395835df0e02f8f8460f8e2cffe69b51"
-pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 path     = "ui-graphics-android-1.12.0-rc01.aar"
 scopes   = ["main"]
 deps = [
@@ -903,7 +873,6 @@ deps = [
 name     = "androidx.compose.ui:ui-graphics:jar:"
 version  = "1.12.0-rc01"
 source   = "jumpkick+https://jumpkick.build/repo/"
-pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation:jar:@1.10.0 <- 1.7.0",
@@ -917,7 +886,6 @@ name     = "androidx.compose.ui:ui-text-android:aar:"
 version  = "1.12.0-rc01"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:cea7b1acb65017792f312173ba490117d1c974b5f033bbeb9f85f4c86c0b16aa"
-pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 path     = "ui-text-android-1.12.0-rc01.aar"
 scopes   = ["main"]
 deps = [
@@ -939,7 +907,6 @@ deps = [
 name     = "androidx.compose.ui:ui-text:jar:"
 version  = "1.12.0-rc01"
 source   = "jumpkick+https://jumpkick.build/repo/"
-pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 scopes   = ["main"]
 deps = [
   "androidx.compose.ui:ui-graphics:jar:@1.12.0-rc01 <- [1.12.0-rc01]",
@@ -953,7 +920,6 @@ name     = "androidx.compose.ui:ui-tooling-preview-android:aar:"
 version  = "1.12.0-rc01"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:8a723d4fd6d9fb1428ce7ad783ca0997ade74240e6fa5b8a7918d888680b01fd"
-pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 path     = "ui-tooling-preview-android-1.12.0-rc01.aar"
 scopes   = ["main"]
 deps = [
@@ -980,7 +946,6 @@ name     = "androidx.compose.ui:ui-unit-android:aar:"
 version  = "1.12.0-rc01"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:27a087fd4db55ad5ca0b1f98ccf2e1ba226a04a485edff64e7d74146d969c97e"
-pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 path     = "ui-unit-android-1.12.0-rc01.aar"
 scopes   = ["main"]
 deps = [
@@ -998,7 +963,6 @@ deps = [
 name     = "androidx.compose.ui:ui-unit:jar:"
 version  = "1.12.0-rc01"
 source   = "jumpkick+https://jumpkick.build/repo/"
-pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation:jar:@1.10.0 <- 1.8.1",
@@ -1012,7 +976,6 @@ name     = "androidx.compose.ui:ui-util-android:aar:"
 version  = "1.12.0-rc01"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:06b13f29875b0cccca3ba24bc60a5df0fe3cc87d416af3bf2c8cb35fde3b1d28"
-pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 path     = "ui-util-android-1.12.0-rc01.aar"
 scopes   = ["main"]
 deps = [
@@ -1037,7 +1000,6 @@ deps = [
 name     = "androidx.compose.ui:ui:jar:"
 version  = "1.12.0-rc01"
 source   = "jumpkick+https://jumpkick.build/repo/"
-pinned-by = "androidx.compose:compose-bom-alpha:2026.07.01"
 scopes   = ["main"]
 deps = [
   "androidx.annotation:annotation:jar:@1.10.0 <- 1.8.1",
@@ -3271,7 +3233,7 @@ group   = "com.google.samples.apps.nowinandroid"
 name    = "nia"
 version = "0.1.0"
 java    = 21
-kotlin  = "^2.4.0"
+kotlin  = "2.4.20"
 
 [[module]]
 path    = "app"
@@ -3279,7 +3241,7 @@ group   = "com.google.samples.apps.nowinandroid"
 name    = "nia-app"
 version = "0.1.0"
 java    = 21
-kotlin  = "^2.4.0"
+kotlin  = "2.4.20"
 
 [[module]]
 path    = "core/analytics"
@@ -3287,7 +3249,7 @@ group   = "com.google.samples.apps.nowinandroid"
 name    = "nia-core-analytics"
 version = "0.1.0"
 java    = 21
-kotlin  = "^2.4.0"
+kotlin  = "2.4.20"
 
 [[module]]
 path    = "core/common"
@@ -3295,7 +3257,7 @@ group   = "com.google.samples.apps.nowinandroid"
 name    = "nia-core-common"
 version = "0.1.0"
 java    = 21
-kotlin  = "^2.4.0"
+kotlin  = "2.4.20"
 
 [[module]]
 path    = "core/data"
@@ -3303,7 +3265,7 @@ group   = "com.google.samples.apps.nowinandroid"
 name    = "nia-core-data"
 version = "0.1.0"
 java    = 21
-kotlin  = "^2.4.0"
+kotlin  = "2.4.20"
 
 [[module]]
 path    = "core/database"
@@ -3311,7 +3273,7 @@ group   = "com.google.samples.apps.nowinandroid"
 name    = "nia-core-database"
 version = "0.1.0"
 java    = 21
-kotlin  = "^2.4.0"
+kotlin  = "2.4.20"
 
 [[module]]
 path    = "core/datastore"
@@ -3319,7 +3281,7 @@ group   = "com.google.samples.apps.nowinandroid"
 name    = "nia-core-datastore"
 version = "0.1.0"
 java    = 21
-kotlin  = "^2.4.0"
+kotlin  = "2.4.20"
 
 [[module]]
 path    = "core/datastore-proto"
@@ -3327,7 +3289,7 @@ group   = "com.google.samples.apps.nowinandroid"
 name    = "nia-core-datastore-proto"
 version = "0.1.0"
 java    = 21
-kotlin  = "^2.4.0"
+kotlin  = "2.4.20"
 
 [[module]]
 path    = "core/designsystem"
@@ -3335,7 +3297,7 @@ group   = "com.google.samples.apps.nowinandroid"
 name    = "nia-core-designsystem"
 version = "0.1.0"
 java    = 21
-kotlin  = "^2.4.0"
+kotlin  = "2.4.20"
 
 [[module]]
 path    = "core/domain"
@@ -3343,7 +3305,7 @@ group   = "com.google.samples.apps.nowinandroid"
 name    = "nia-core-domain"
 version = "0.1.0"
 java    = 21
-kotlin  = "^2.4.0"
+kotlin  = "2.4.20"
 
 [[module]]
 path    = "core/model"
@@ -3351,7 +3313,7 @@ group   = "com.google.samples.apps.nowinandroid"
 name    = "nia-core-model"
 version = "0.1.0"
 java    = 21
-kotlin  = "^2.4.0"
+kotlin  = "2.4.20"
 
 [[module]]
 path    = "core/navigation"
@@ -3359,7 +3321,7 @@ group   = "com.google.samples.apps.nowinandroid"
 name    = "nia-core-navigation"
 version = "0.1.0"
 java    = 21
-kotlin  = "^2.4.0"
+kotlin  = "2.4.20"
 
 [[module]]
 path    = "core/network"
@@ -3367,7 +3329,7 @@ group   = "com.google.samples.apps.nowinandroid"
 name    = "nia-core-network"
 version = "0.1.0"
 java    = 21
-kotlin  = "^2.4.0"
+kotlin  = "2.4.20"
 
 [[module]]
 path    = "core/notifications"
@@ -3375,7 +3337,7 @@ group   = "com.google.samples.apps.nowinandroid"
 name    = "nia-core-notifications"
 version = "0.1.0"
 java    = 21
-kotlin  = "^2.4.0"
+kotlin  = "2.4.20"
 
 [[module]]
 path    = "core/ui"
@@ -3383,7 +3345,7 @@ group   = "com.google.samples.apps.nowinandroid"
 name    = "nia-core-ui"
 version = "0.1.0"
 java    = 21
-kotlin  = "^2.4.0"
+kotlin  = "2.4.20"
 
 [[module]]
 path    = "feature/bookmarks/api"
@@ -3391,7 +3353,7 @@ group   = "com.google.samples.apps.nowinandroid"
 name    = "nia-feature-bookmarks-api"
 version = "0.1.0"
 java    = 21
-kotlin  = "^2.4.0"
+kotlin  = "2.4.20"
 
 [[module]]
 path    = "feature/bookmarks/impl"
@@ -3399,7 +3361,7 @@ group   = "com.google.samples.apps.nowinandroid"
 name    = "nia-feature-bookmarks-impl"
 version = "0.1.0"
 java    = 21
-kotlin  = "^2.4.0"
+kotlin  = "2.4.20"
 
 [[module]]
 path    = "feature/foryou/api"
@@ -3407,7 +3369,7 @@ group   = "com.google.samples.apps.nowinandroid"
 name    = "nia-feature-foryou-api"
 version = "0.1.0"
 java    = 21
-kotlin  = "^2.4.0"
+kotlin  = "2.4.20"
 
 [[module]]
 path    = "feature/foryou/impl"
@@ -3415,7 +3377,7 @@ group   = "com.google.samples.apps.nowinandroid"
 name    = "nia-feature-foryou-impl"
 version = "0.1.0"
 java    = 21
-kotlin  = "^2.4.0"
+kotlin  = "2.4.20"
 
 [[module]]
 path    = "feature/interests/api"
@@ -3423,7 +3385,7 @@ group   = "com.google.samples.apps.nowinandroid"
 name    = "nia-feature-interests-api"
 version = "0.1.0"
 java    = 21
-kotlin  = "^2.4.0"
+kotlin  = "2.4.20"
 
 [[module]]
 path    = "feature/interests/impl"
@@ -3431,7 +3393,7 @@ group   = "com.google.samples.apps.nowinandroid"
 name    = "nia-feature-interests-impl"
 version = "0.1.0"
 java    = 21
-kotlin  = "^2.4.0"
+kotlin  = "2.4.20"
 
 [[module]]
 path    = "feature/search/api"
@@ -3439,7 +3401,7 @@ group   = "com.google.samples.apps.nowinandroid"
 name    = "nia-feature-search-api"
 version = "0.1.0"
 java    = 21
-kotlin  = "^2.4.0"
+kotlin  = "2.4.20"
 
 [[module]]
 path    = "feature/search/impl"
@@ -3447,7 +3409,7 @@ group   = "com.google.samples.apps.nowinandroid"
 name    = "nia-feature-search-impl"
 version = "0.1.0"
 java    = 21
-kotlin  = "^2.4.0"
+kotlin  = "2.4.20"
 
 [[module]]
 path    = "feature/settings/api"
@@ -3455,7 +3417,7 @@ group   = "com.google.samples.apps.nowinandroid"
 name    = "nia-feature-settings-api"
 version = "0.1.0"
 java    = 21
-kotlin  = "^2.4.0"
+kotlin  = "2.4.20"
 
 [[module]]
 path    = "feature/settings/impl"
@@ -3463,7 +3425,7 @@ group   = "com.google.samples.apps.nowinandroid"
 name    = "nia-feature-settings-impl"
 version = "0.1.0"
 java    = 21
-kotlin  = "^2.4.0"
+kotlin  = "2.4.20"
 
 [[module]]
 path    = "feature/topic/api"
@@ -3471,7 +3433,7 @@ group   = "com.google.samples.apps.nowinandroid"
 name    = "nia-feature-topic-api"
 version = "0.1.0"
 java    = 21
-kotlin  = "^2.4.0"
+kotlin  = "2.4.20"
 
 [[module]]
 path    = "feature/topic/impl"
@@ -3479,7 +3441,7 @@ group   = "com.google.samples.apps.nowinandroid"
 name    = "nia-feature-topic-impl"
 version = "0.1.0"
 java    = 21
-kotlin  = "^2.4.0"
+kotlin  = "2.4.20"
 
 [[module]]
 path    = "sync/work"
@@ -3487,4 +3449,4 @@ group   = "com.google.samples.apps.nowinandroid"
 name    = "nia-sync-work"
 version = "0.1.0"
 java    = 21
-kotlin  = "^2.4.0"
+kotlin  = "2.4.20"

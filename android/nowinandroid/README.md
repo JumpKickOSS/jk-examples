@@ -43,7 +43,7 @@ jk build --skip-tests --variant contentType=demo
 
 Every version below is either what the lock pins or a deliberate call, each traced to a jk gap:
 
-- **Kotlin `^2.4.0`** (NiA pins 2.3.0): jk's Build-Tools-API worker floor is 2.4.
+- **Kotlin `2.4.20`** (NiA pins 2.3.0): jk's Build-Tools-API worker floor is 2.4.
 - **compile-sdk 36** (matches current NiA): platform is provisioned from the managed SDK.
 - **`compose-bom-alpha = 2026.07.01`** (NiA uses `2025.09.01`): the alpha BOM aligns Material3
   adaptive 1.3 + navigation-suite + Compose runtime for Navigation3. A pure *stable* compose-bom

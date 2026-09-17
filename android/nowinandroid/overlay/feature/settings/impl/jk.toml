@@ -2,7 +2,7 @@ name    = "nia-feature-settings-impl"
 group   = "com.google.samples.apps.nowinandroid"
 version = "0.1.0"
 java    = 21
-kotlin  = "^2.4.0"
+kotlin  = "2.4.20"
 
 [android]
 namespace   = "com.google.samples.apps.nowinandroid.feature.settings.impl"

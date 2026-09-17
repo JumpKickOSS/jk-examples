@@ -2,7 +2,7 @@ name    = "nia-core-common"
 group   = "com.google.samples.apps.nowinandroid"
 version = "0.1.0"
 java    = 21
-kotlin  = "^2.4.0"
+kotlin  = "2.4.20"
 
 [dependencies]
 kotlinx-coroutines-core = "=1.10.1"

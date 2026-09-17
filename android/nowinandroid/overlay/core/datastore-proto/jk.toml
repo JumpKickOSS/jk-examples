@@ -2,7 +2,7 @@ name    = "nia-core-datastore-proto"
 group   = "com.google.samples.apps.nowinandroid"
 version = "0.1.0"
 java    = 21
-kotlin  = "^2.4.0"
+kotlin  = "2.4.20"
 
 [protobuf]
 version = "4.29.2"
