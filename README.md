@@ -26,6 +26,7 @@ repo's `main` closely; build them with a current `jk`.
 | `kotlin/serialization-cli/` | Project-declared Kotlin compiler plugins (`[[kotlin-plugins]]`) via kotlinx-serialization. |
 | `kotlin/ktor-petshop/` | Multi-module Ktor + **Koin** + **Exposed** + H2 pet shop — Kotlin workspace dogfood; the `domain` library's Dokka javadoc jar and `[build-info]`. |
 | `protobuf/messages/` | The protobuf plugin: provisioned per-OS protoc, Java + Kotlin DSL (lite) codegen. |
+| `graphql/dgs-codegen/` | GraphQL codegen as a `[generate]` recipe: DGS codegen's command line over the schema, typed types + client joining the compile, the tool closure fetched and cached. |
 | `jvm/netty/` | **Full Netty Maven→jk port** (~40 modules, Mill graph parity) — black-box + benchmarks. |
 | `jvm/netty-echo/` | Small Netty echo server on the published `netty-all` — lightweight harness seed. |
 | `jvm/shrink-cli/` | The minified jar: R8 `--classfile` full mode collapsing a fat jar. |
