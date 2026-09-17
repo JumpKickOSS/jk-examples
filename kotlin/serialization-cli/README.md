@@ -4,14 +4,14 @@ kotlinx-serialization's generated serializers only exist when its compiler plugi
 loaded into `kotlinc`, so compiling a reference to `Message.serializer()` **is** the validation.
 
 ```toml
-kotlin = "latest"
+kotlin = "2.4.20"
 
 [[kotlin-plugins]]
 coordinate = "org.jetbrains.kotlin:kotlin-serialization-compiler-plugin-embeddable"
 ```
 
-The plugin declares no version: it rides the resolved Kotlin compiler version, which
-`jk-lock.toml` pins together with `kotlinx-serialization-json` (`latest`).
+The plugin declares no version: it rides the pinned Kotlin compiler version;
+`kotlinx-serialization-json` is pinned to `1.11.0` beside it.
 
 ```sh
 jk build

@@ -6,13 +6,13 @@ the packaged jar.
 
 ```toml
 [protobuf]
-version = "latest"
+version = "4.36.1"
 lite    = true
 kotlin  = true
 ```
 
-`protoc` and `protobuf-kotlin-lite` both float to `latest`; `jk-lock.toml` pins one protobuf
-release for the two, so generated code and runtime always agree.
+`protoc` and `protobuf-kotlin-lite` are pinned to the same protobuf release, `4.36.1`, so
+generated code and runtime agree; `jk update` moves the pair together.
 
 ```sh
 jk build

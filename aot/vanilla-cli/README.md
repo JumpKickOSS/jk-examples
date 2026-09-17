@@ -7,7 +7,7 @@ JVM project gets for free:
   fallback on older JDKs), entirely core jk.
 - `jk run` — classpath execution of a plain application.
 
-`gson` floats to `latest`; `jk-lock.toml` pins it.
+`gson` is pinned to `2.14.0`; `jk update` moves it.
 
 ```sh
 jk build --aot-cache

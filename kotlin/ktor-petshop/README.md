@@ -7,9 +7,9 @@ An idiomatic multi-module Kotlin pet shop:
 | `domain` | `Pet` data class + `PetRepository` interface, package `com.example.petshop.domain`; a library, so `jk build` also writes its sources and javadoc jars, `[build-info]` puts `git.properties` in the jar |
 | `app` | Ktor Netty, **Koin** DI, **Exposed** + **H2**, REST `/api/pets`, `testApplication` tests, `[image]` |
 
-Everything floats: `kotlin = "latest"` at the root, and every Ktor, Koin, Exposed, H2 and
-Logback coordinate is `latest`. `jk-lock.toml` pins them (Exposed is on its 1.x API,
-`org.jetbrains.exposed.v1.*`).
+Every version is an exact pin: `kotlin = "2.4.20"` at the root, Ktor `3.5.2`, Koin `4.2.2`,
+Exposed `1.5.0` (its 1.x API, `org.jetbrains.exposed.v1.*`), H2 `2.5.250` and Logback `1.6.3`
+in `app`; `jk update` moves them.
 
 It exercises:
 

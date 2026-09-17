@@ -12,7 +12,7 @@ java    = 25
 main = "dev.jkharness.kitchensink.KitchenSinkApplication"
 
 [spring-boot]
-version = "latest"
+version = "4.1.1"
 aot     = true
 
 # `git.properties` and `META-INF/build-info.properties` in the Boot jar: the commit, branch and

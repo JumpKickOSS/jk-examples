@@ -3,7 +3,7 @@ generated-by = "jk 0.13.7"
 resolution-algorithm = "pubgrub-v1"
 kotlin = "2.4.20"
 jk-min = "0.12.0"
-manifests-sha256 = "79a3f03a430fb52dab20343acd189dfcbc75bbb4809929e829ede6cb14fa65dc"
+manifests-sha256 = "000c4b3410587521f6cfb2a23ca6e319604b9db9119e0976486c005ea5e206b2"
 project-id = "dc2b41fc081a4f0b671c6ad43d4dbcdc"
 
 [jdk]
@@ -1353,7 +1353,7 @@ group   = "com.example"
 name    = "ktor-petshop"
 version = "0.1.0"
 java    = 25
-kotlin  = "latest"
+kotlin  = "2.4.20"
 
 [[module]]
 path    = "app"
@@ -1361,7 +1361,7 @@ group   = "com.example"
 name    = "ktor-petshop-app"
 version = "0.1.0"
 java    = 25
-kotlin  = "latest"
+kotlin  = "2.4.20"
 
 [[module]]
 path    = "domain"
@@ -1369,4 +1369,4 @@ group   = "com.example"
 name    = "ktor-petshop-domain"
 version = "0.1.0"
 java    = 25
-kotlin  = "latest"
+kotlin  = "2.4.20"

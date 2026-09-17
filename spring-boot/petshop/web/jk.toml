@@ -4,7 +4,7 @@ name = "petshop-web"
 main = "com.example.petshop.PetshopApplication"
 
 [spring-boot]
-version = "latest"
+version = "4.1.1"
 
 # `git.properties` and `META-INF/build-info.properties` in the Boot jar, for the actuator's /info.
 [build-info]

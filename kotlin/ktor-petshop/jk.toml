@@ -1,7 +1,7 @@
 name    = "ktor-petshop"
 group   = "com.example"
 version = "0.1.0"
-kotlin  = "latest"
+kotlin  = "2.4.20"
 java    = 25
 
 [workspace]

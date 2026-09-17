@@ -8,8 +8,9 @@ Workspace dogfood: **domain** → **service** → **web**, with real Boot tests.
 | `service` | `@Service` `PetService` (in-memory store; DI-friendly) |
 | `web` | `@SpringBootApplication`, REST `/api/pets`, actuator, **MockMvc** tests, `[image]` |
 
-Spring Boot is `[spring-boot] version = "latest"` on `web`; `spring-context` on `service` is
-`latest` too. `jk-lock.toml` at the root pins both for the whole workspace.
+Spring Boot is `[spring-boot] version = "4.1.1"` on `web`; `spring-context` on `service` is
+pinned to `7.0.9`, the version that Boot release manages. `jk-lock.toml` at the root holds the
+whole workspace.
 
 ## What it exercises
 

@@ -11,11 +11,11 @@ java    = 25
 main = "com.example.echo.EchoServer"
 
 [dependencies]
-netty-all = "latest"
+netty-all = "4.2.18.Final"
 
 [test-dependencies]
-junit-jupiter = "latest"
-junit-platform-launcher = "latest"
+junit-jupiter = "6.1.3"
+junit-platform-launcher = "6.1.3"
 
 # Test tiers. Bare `jk test` is the unit tier; each profile owns exactly one of the excluded
 # tags, so every tagged test runs in one tier and none is silently skipped.

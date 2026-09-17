@@ -2,8 +2,8 @@
 
 One module, every knob the `[spring-boot]` plugin has, plus the core `[build-info]` table:
 
-- `version = "latest"` — BOM auto-import; every starter is versionless and `jk-lock.toml`
-  pins the Boot release.
+- `version = "4.1.1"` — the Boot release, an exact pin; the BOM auto-imports and every
+  starter is a versionless coordinate it manages.
 - `aot = true` — the Spring AOT step runs in the build.
 - `[build-info]` — `git.properties` and `META-INF/build-info.properties` in the jar, so the
   actuator's `/info` reports the commit and version the build came from.

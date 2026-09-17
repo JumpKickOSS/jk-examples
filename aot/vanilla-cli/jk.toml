@@ -10,4 +10,4 @@ java    = 25
 main = "dev.jkharness.aot.Main"
 
 [dependencies]
-gson = "latest"
+gson = "2.14.0"

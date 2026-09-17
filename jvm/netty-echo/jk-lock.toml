@@ -2,7 +2,7 @@ version = 1
 generated-by = "jk 0.13.7"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.12.0"
-manifests-sha256 = "2f3c9c9c069b1ec71946599c1cc9d7d56d2eb001a8c2a8ed26d774c462b4e532"
+manifests-sha256 = "5cdf53c883f29a5e76a95bfb82d998480955a526995ee1b3c759a69311c64a8e"
 project-id = "669fa9c44c0f506dcca7ea4a09957cea"
 
 [jdk]
@@ -115,6 +115,12 @@ deps = [
   "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
   "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
 ]
+excluded-by = [
+  "io.netty:netty-buffer <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-common <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.18.Final",
+]
 
 [[artifact]]
 name     = "io.netty:netty-codec-dns:jar:"
@@ -140,6 +146,11 @@ deps = [
   "io.netty:netty-codec-base:jar:@4.2.18.Final <- 4.2.18.Final",
   "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
 ]
+excluded-by = [
+  "io.netty:netty-buffer <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.18.Final",
+]
 
 [[artifact]]
 name     = "io.netty:netty-codec-http2:jar:"
@@ -154,6 +165,14 @@ deps = [
   "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
   "io.netty:netty-handler:jar:@4.2.18.Final <- 4.2.18.Final",
   "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+]
+excluded-by = [
+  "io.netty:netty-buffer <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-codec-http <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-common <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-handler <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.18.Final",
 ]
 
 [[artifact]]
@@ -175,6 +194,19 @@ deps = [
   "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
   "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
 ]
+excluded-by = [
+  "io.netty:netty-buffer <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-codec-classes-quic <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-codec-http <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-codec-native-quic <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-codec-native-quic <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-codec-native-quic <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-codec-native-quic <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-codec-native-quic <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-common <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.18.Final",
+]
 
 [[artifact]]
 name     = "io.netty:netty-codec-http:jar:"
@@ -190,6 +222,14 @@ deps = [
   "io.netty:netty-handler:jar:@4.2.18.Final <- 4.2.18.Final",
   "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
 ]
+excluded-by = [
+  "io.netty:netty-buffer <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-codec-compression <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-common <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-handler <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.18.Final",
+]
 
 [[artifact]]
 name     = "io.netty:netty-codec-marshalling:jar:"
@@ -202,6 +242,13 @@ deps = [
   "io.netty:netty-codec-base:jar:@4.2.18.Final <- 4.2.18.Final",
   "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
   "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+]
+excluded-by = [
+  "io.netty:netty-buffer <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-common <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.18.Final",
+  "org.jboss.marshalling:jboss-marshalling <- io.netty:netty-all@4.2.18.Final",
 ]
 
 [[artifact]]
@@ -216,6 +263,12 @@ deps = [
   "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
   "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
 ]
+excluded-by = [
+  "io.netty:netty-buffer <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-common <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.18.Final",
+]
 
 [[artifact]]
 name     = "io.netty:netty-codec-mqtt:jar:"
@@ -228,6 +281,12 @@ deps = [
   "io.netty:netty-codec-base:jar:@4.2.18.Final <- 4.2.18.Final",
   "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
   "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+]
+excluded-by = [
+  "io.netty:netty-buffer <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-common <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.18.Final",
 ]
 
 [[artifact]]
@@ -292,6 +351,14 @@ deps = [
   "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
   "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
 ]
+excluded-by = [
+  "com.google.protobuf.nano:protobuf-javanano <- io.netty:netty-all@4.2.18.Final",
+  "com.google.protobuf:protobuf-java <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-buffer <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-common <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.18.Final",
+]
 
 [[artifact]]
 name     = "io.netty:netty-codec-redis:jar:"
@@ -304,6 +371,12 @@ deps = [
   "io.netty:netty-codec-base:jar:@4.2.18.Final <- 4.2.18.Final",
   "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
   "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+]
+excluded-by = [
+  "io.netty:netty-buffer <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-common <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.18.Final",
 ]
 
 [[artifact]]
@@ -318,6 +391,12 @@ deps = [
   "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
   "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
 ]
+excluded-by = [
+  "io.netty:netty-buffer <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-common <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.18.Final",
+]
 
 [[artifact]]
 name     = "io.netty:netty-codec-socks:jar:"
@@ -330,6 +409,12 @@ deps = [
   "io.netty:netty-codec-base:jar:@4.2.18.Final <- 4.2.18.Final",
   "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
   "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+]
+excluded-by = [
+  "io.netty:netty-buffer <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-common <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.18.Final",
 ]
 
 [[artifact]]
@@ -344,6 +429,12 @@ deps = [
   "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
   "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
 ]
+excluded-by = [
+  "io.netty:netty-buffer <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-common <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.18.Final",
+]
 
 [[artifact]]
 name     = "io.netty:netty-codec-xml:jar:"
@@ -355,6 +446,12 @@ deps = [
   "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
   "io.netty:netty-codec-base:jar:@4.2.18.Final <- 4.2.18.Final",
   "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+]
+excluded-by = [
+  "com.fasterxml:aalto-xml <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-buffer <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.18.Final",
 ]
 
 [[artifact]]
@@ -371,6 +468,15 @@ deps = [
   "io.netty:netty-codec-protobuf:jar:@4.2.18.Final <- 4.2.18.Final",
   "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
   "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+]
+excluded-by = [
+  "io.netty:netty-buffer <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-codec-compression <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-codec-marshalling <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-codec-protobuf <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-common <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.18.Final",
 ]
 
 [[artifact]]
@@ -395,6 +501,15 @@ deps = [
   "io.netty:netty-handler:jar:@4.2.18.Final <- 4.2.18.Final",
   "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
 ]
+excluded-by = [
+  "io.netty:netty-buffer <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-codec-http <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-codec-socks <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-common <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-handler <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.18.Final",
+]
 
 [[artifact]]
 name     = "io.netty:netty-handler-ssl-ocsp:jar:"
@@ -407,6 +522,12 @@ deps = [
   "io.netty:netty-handler:jar:@4.2.18.Final <- 4.2.18.Final",
   "io.netty:netty-resolver-dns:jar:@4.2.18.Final <- 4.2.18.Final",
   "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+]
+excluded-by = [
+  "io.netty:netty-codec-http <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-handler <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-resolver-dns <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.18.Final",
 ]
 
 [[artifact]]
@@ -655,6 +776,11 @@ deps = [
   "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
   "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
 ]
+excluded-by = [
+  "io.netty:netty-buffer <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.18.Final",
+  "org.rxtx:rxtx <- io.netty:netty-all@4.2.18.Final",
+]
 
 [[artifact]]
 name     = "io.netty:netty-transport-sctp:jar:"
@@ -668,6 +794,12 @@ deps = [
   "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
   "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
 ]
+excluded-by = [
+  "io.netty:netty-buffer <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-codec <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-common <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.18.Final",
+]
 
 [[artifact]]
 name     = "io.netty:netty-transport-udt:jar:"
@@ -679,6 +811,12 @@ deps = [
   "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
   "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
   "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+]
+excluded-by = [
+  "com.barchart.udt:barchart-udt-bundle <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-buffer <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-common <- io.netty:netty-all@4.2.18.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.18.Final",
 ]
 
 [[artifact]]
