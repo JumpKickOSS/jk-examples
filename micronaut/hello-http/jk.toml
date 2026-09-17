@@ -10,7 +10,7 @@ assembly = true
 
 # Newest stable Micronaut platform; jk-lock.toml pins the exact version.
 [micronaut]
-version = "latest"
+version = "5.1.5"
 # Optional deploy optimization:
 # aot = true
 # aot-runtime = "jit"   # or "native" with [native]

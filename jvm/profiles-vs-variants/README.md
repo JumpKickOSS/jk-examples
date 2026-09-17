@@ -18,5 +18,5 @@ jk build --release && java -jar target/profiles-vs-variants-1.0.0-all.jar
 jk guard
 ```
 
-`gson` floats to `latest`; `jk-lock.toml` pins it. The fat jar (`assembly = true`) is what
+`gson` is an exact pin (`2.14.0`) that `jk update` moves. The fat jar (`assembly = true`) is what
 makes `java -jar` work with the feature dependency on the classpath.

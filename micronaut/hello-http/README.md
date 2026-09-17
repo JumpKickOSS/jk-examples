@@ -2,8 +2,8 @@
 
 Minimal Micronaut service on the built-in `[micronaut]` plugin. It demonstrates:
 
-- `[micronaut] version = "latest"` — the platform BOM floats, starters are versionless, and
-  `jk-lock.toml` pins the exact platform.
+- `[micronaut] version = "5.1.5"` — the platform BOM is an exact pin, starters are versionless,
+  and `jk update` moves the pin.
 - `assembly = true` — one runnable fat jar (Maven shade parity).
 - `[image]` with a JRE 25 base and `aot-cache = true` — `jk image` writes a shippable container.
 - `@MicronautTest` with `@Client("/")` as the smoke test, in the unit tier of the
