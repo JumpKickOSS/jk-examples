@@ -37,6 +37,12 @@ RESULTS = HERE / "results"
 REPO_CAP = int(os.environ.get("CORPUS_REPO_CAP", 45 * 60))   # hard cap per repo, seconds
 TEST_CAP = int(os.environ.get("CORPUS_TEST_CAP", 1200))      # per test run, seconds
 TOUCH_LINE = "\n// jk-corpus touch: one-line comment appended by run.py, reverted after the measurement\n"
+# The jk side in protocol order; `--steps` names a prefix of it, and the steps of every later stage
+# are recorded as `not-run` (never `skipped`, which means a prerequisite failed).
+JK_STAGES = ["import", "lock", "build", "test"]
+JK_STAGE_STEPS = {"import": ["jk_import"], "lock": ["jk_lock"],
+                  "build": ["jk_build_cold", "jk_build_noop", "jk_build_touch"], "test": ["jk_test"]}
+NOT_RUN = {"status": "not-run", "exit": None, "wall": 0.0}
 
 JK = ["jk", "--no-progress", "--no-ansi", "--no-notify"]
 JK_MAVEN = Path.home() / ".jk" / "store" / "tools" / "maven" / "3.9.9" / "bin" / "mvn"   # what `jk mvn` provisions
@@ -437,6 +443,13 @@ def measure(repo: dict, args) -> dict:
         reset_tree(root)   # jk starts from the same pristine checkout Maven did
 
     # ---- jk side -----------------------------------------------------------
+    stages = args.jk_stages
+    if stages != JK_STAGES:
+        row["notes"].append("jk steps filtered to " + ",".join(stages) + "; later steps not run")
+        for stage in JK_STAGES:
+            if stage not in stages:
+                for k in JK_STAGE_STEPS[stage]:
+                    row["steps"][k] = dict(NOT_RUN)
     jk_first_error = ""
     report = rdir / "import-report.md"
     cache = JK_CACHE / name
@@ -454,7 +467,9 @@ def measure(repo: dict, args) -> dict:
     if r["status"] != "ok":
         jk_first_error = first_jk_error(rdir / "jk-import.log", root) or "jk import failed"
     lock_ok = False
-    if (root / "jk.toml").is_file():
+    if "lock" not in stages:
+        pass
+    elif (root / "jk.toml").is_file():
         r = step("jk_lock", JK + ["lock"], "jk-lock.log", cap=900, env=jenv)
         lock_ok = r["status"] == "ok"
         if not lock_ok and not jk_first_error:
@@ -462,7 +477,9 @@ def measure(repo: dict, args) -> dict:
     else:
         row["steps"]["jk_lock"] = {"status": "skipped", "exit": None, "wall": 0.0}
         jk_first_error = jk_first_error or "jk import wrote no jk.toml"
-    if lock_ok:
+    if "build" not in stages:
+        pass
+    elif lock_ok:
         r = step("jk_build_cold", JK + ["build", "--skip-tests"], "jk-build-cold.log", env=jenv)
         if r["status"] == "ok":
             step("jk_build_noop", JK + ["build", "--skip-tests"], "jk-build-noop.log", env=jenv)
@@ -470,17 +487,21 @@ def measure(repo: dict, args) -> dict:
                 touch(root, tf)
                 step("jk_build_touch", JK + ["build", "--skip-tests"], "jk-build-touch.log", env=jenv)
                 untouch(root, tf)
-            step("jk_test", JK + ["test"], "jk-test.log", cap=TEST_CAP, env=jenv)
-            row["jk_tests_line"] = jk_results_tests_line(root)
-            row["jk_tests"] = jk_junit_totals(root)
-            if row["steps"]["jk_test"]["status"] != "ok" and not jk_first_error:
-                jk_first_error = first_jk_error(rdir / "jk-test.log", root)
+            if "test" in stages:
+                step("jk_test", JK + ["test"], "jk-test.log", cap=TEST_CAP, env=jenv)
+                row["jk_tests_line"] = jk_results_tests_line(root)
+                row["jk_tests"] = jk_junit_totals(root)
+                if row["steps"]["jk_test"]["status"] != "ok" and not jk_first_error:
+                    jk_first_error = first_jk_error(rdir / "jk-test.log", root)
         else:
             jk_first_error = jk_first_error or first_jk_error(rdir / "jk-build-cold.log", root) or f"jk build {r['status']}"
             for k in ("jk_build_noop", "jk_build_touch", "jk_test"):
-                row["steps"][k] = {"status": "skipped", "exit": None, "wall": 0.0}
+                if "test" in stages or k != "jk_test":
+                    row["steps"][k] = {"status": "skipped", "exit": None, "wall": 0.0}
     else:
         for k in ("jk_build_cold", "jk_build_noop", "jk_build_touch", "jk_test"):
+            if k == "jk_test" and "test" not in stages:
+                continue
             row["steps"][k] = {"status": "skipped", "exit": None, "wall": 0.0}
     if (root / "target" / "jk-results.md").is_file():
         shutil.copy(root / "target" / "jk-results.md", rdir / "jk-results.md")
@@ -589,6 +610,8 @@ def fmt_step(s: dict | None, key: str = "") -> str:
         st = "capped"                      # rows from before the capped/timeout split
     if st == "ok":
         return f"{s['wall']:.0f}s"
+    if st == "not-run":
+        return "—"
     if st in ("skipped", "capped"):
         return st
     return f"{st} ({s['wall']:.0f}s)"
@@ -597,7 +620,8 @@ def fmt_step(s: dict | None, key: str = "") -> str:
 def fmt_status(s: dict | None) -> str:
     if not s:
         return "—"
-    return {"ok": "ok", "fail": "FAIL", "timeout": "timeout", "skipped": "skipped", "capped": "capped"}.get(s["status"], s["status"])
+    return {"ok": "ok", "fail": "FAIL", "timeout": "timeout", "skipped": "skipped", "capped": "capped",
+            "not-run": "—"}.get(s["status"], s["status"])
 
 
 def build_cell(row: dict) -> str:
@@ -619,7 +643,7 @@ def tests_cell(step: dict | None, t: dict | None, line: dict | None = None) -> s
     total = (line or {}).get("total") or (t or {}).get("tests") or 0
     passed = (line or {}).get("passed") if (line or {}).get("total") else (t or {}).get("passed", 0)
     st = (step or {}).get("status")
-    if st in (None, "skipped", "capped"):
+    if st in (None, "skipped", "capped", "not-run"):
         return "—" if st != "capped" else "capped"
     if total == 0:
         # jk answers a run that found no test with exit 2 and `no tests ran`; Maven answers exit 0.
@@ -869,6 +893,19 @@ def render_tier3(repos: list[dict], rows: dict[str, dict], label: str = "run1") 
 
 # --------------------------------------------------------------------------- main
 
+def parse_stages(steps: str, no_tests: bool, ap: argparse.ArgumentParser) -> list[str]:
+    """`--steps` as the protocol prefix it names; `--no-tests` is the prefix without the test stage."""
+    chosen = [s.strip() for s in steps.split(",") if s.strip()]
+    if no_tests:
+        chosen = [s for s in chosen if s != "test"]
+    unknown = [s for s in chosen if s not in JK_STAGES]
+    if unknown:
+        ap.error(f"--steps: unknown stage(s) {', '.join(unknown)}; the stages are {','.join(JK_STAGES)}")
+    if not chosen or chosen != JK_STAGES[:len(chosen)]:
+        ap.error(f"--steps runs in protocol order and names a prefix of it: {', '.join(','.join(JK_STAGES[:i]) for i in range(1, len(JK_STAGES) + 1))}")
+    return chosen
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--only", action="append", help="run only this repo name (repeatable)")
@@ -881,7 +918,12 @@ def main() -> int:
     ap.add_argument("--render", action="store_true", help="only rewrite RESULTS.md from rows on disk")
     ap.add_argument("--fresh-m2", action="store_true", help="wipe the corpus-private Maven local repo first")
     ap.add_argument("--run", default="run1", help="run label stored in every row (default run1); rows of one label form one column set")
+    ap.add_argument("--steps", default=",".join(JK_STAGES),
+                    help="the jk stages to run, a comma-separated prefix of import,lock,build,test (default all);"
+                         " a cold-wall probe is --steps import,lock,build, and the stages left out are recorded as not-run")
+    ap.add_argument("--no-tests", action="store_true", help="same as --steps import,lock,build: measure the walls, skip jk test")
     args = ap.parse_args()
+    args.jk_stages = parse_stages(args.steps, args.no_tests, ap)
 
     cfg = tomllib.load(open(HERE / "repos.toml", "rb"))
     repos = cfg["repo"]

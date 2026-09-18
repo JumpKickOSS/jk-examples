@@ -86,7 +86,16 @@ jk itself writes (`jk.toml`, `jk-lock.toml`, `target/`), which the next run's re
 ./run.sh --fresh-m2            # wipe the corpus .m2 first so Maven cold is cold again
 JK_COMMIT=<sha> ./run.sh       # record the commit of a main-built jk in every row (the binary embeds none)
 ./run.sh --run run2              # label the rows; every label gets its own table and a side-by-side column
+./run.sh --steps import,lock,build --only nacos   # a cold-wall probe: the jk stages named, in protocol order, and no jk test
+./run.sh --no-tests            # the same prefix spelled short: import, lock and the three builds, no jk test
 ```
+
+`--steps` names a prefix of the jk protocol — `import`, `import,lock`, `import,lock,build` or all four
+stages — so a probe after the cold, no-op and touch walls pays no test run (about 40 s for a small
+repo instead of 60 s). The stages left out are recorded as `not-run` and render as `—`, never as
+`skipped`, which stays the word for a step whose prerequisite failed; the row carries the note
+`jk steps filtered to …`. The Maven side is untouched by the filter: it is reused from the last row as
+usual, or measured when none exists (`--skip-mvn` to never run it).
 
 Run labels are how the ratchet compares two jk builds: rows carry `run` (default `run1`, file
 `results/<date>.jsonl`; any other label goes to `results/<date>-<label>.jsonl`). `RESULTS.md` renders a
