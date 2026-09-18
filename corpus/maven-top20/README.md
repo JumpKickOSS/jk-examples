@@ -102,6 +102,11 @@ table.
 declares (an enforcer rule, or dependencies compiled for a newer class-file level); jk still imports the
 declared level. Run #1 found three such repos (analysis-ik, jenkins, zipkin: all need 21).
 
+`repos.toml` may also give a repo an `import_args` list, which `run.py` appends to `jk import pom.xml`.
+tutorials declares its modules only inside profiles that nothing activates on their own (its README
+says `mvn -Pdefault,default-heavy`), so it is imported with `-P default,default-heavy` and the row
+measures the reactor rather than an empty workspace.
+
 ## What counts, what does not
 
 - A `jk test` or `mvn test` step that exits 0 with zero parsed tests is rendered `no tests ran` and never

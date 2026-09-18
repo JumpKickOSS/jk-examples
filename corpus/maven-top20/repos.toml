@@ -3,6 +3,9 @@
 # `modules` = count of pom.xml files in the clone. `sha` = default-branch head at pin time.
 # `java` = the level the root pom declares (jk imports this). `maven_jdk` = the JDK the Maven build actually
 # demands when its enforcer / dependencies need more than the declared level (found on run #1).
+# `import_args` = extra arguments run.py hands `jk import pom.xml` for the repo: a reactor whose root
+# declares its modules only inside profiles (tutorials' README says `mvn -Pdefault,default-heavy`) is
+# imported with `-P <ids>`, so the reactor is what gets measured rather than an empty workspace.
 # Ranking source: gh search repos --language=java --sort=stars (top 100, then stars:9000..19040).
 
 [[repo]]
@@ -45,6 +48,7 @@ sha = "d955ecde581caa68978f1d26586cbaaa3b0d1475"
 stars = 37322
 java = "17"
 modules = 1727
+import_args = ["-P", "default,default-heavy"]   # the root lists its modules only in these profiles
 note = "very large aggregator; expected to hit the 45-minute cap"
 
 [[repo]]

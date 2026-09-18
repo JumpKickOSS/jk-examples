@@ -434,7 +434,8 @@ def measure(repo: dict, args) -> dict:
     # ---- jk side -----------------------------------------------------------
     jk_first_error = ""
     report = rdir / "import-report.md"
-    r = step("jk_import", JK + ["import", "pom.xml", "--report", str(report)], "jk-import.log", cap=600)
+    import_args = list(repo.get("import_args", []))   # e.g. ["-P", "default,default-heavy"]; see repos.toml
+    r = step("jk_import", JK + ["import", "pom.xml", *import_args, "--report", str(report)], "jk-import.log", cap=600)
     row["import"] = parse_import_report(report)
     row["jk_modules"] = jk_workspace_modules(root)
     if r["status"] != "ok":
