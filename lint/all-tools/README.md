@@ -44,15 +44,3 @@ jk guard
   high-priority pattern and fails the build.
 - Replace `SUCCESS_FLOOR` with `200` in `Band.kt`: detekt's `MagicNumber` is a warning — reported
   as a diagnostic, and the build passes under the default `fail-on`; `fail-on = "warning"` fails it.
-
-## Known gaps
-
-With jk 0.13.7 two of the four steps fail before writing their reports, so `jk build` is red
-here until the lint plugin's next release; Checkstyle and detekt run and report as described.
-
-- `lint-pmd` exits with `NoClassDefFoundError: org/xmlresolver/Resolver`: the tool's materialized
-  closure names both `org.xmlresolver:xmlresolver:5.3.3` and its `data`-classifier jar
-  `xmlresolver-5.3.3.jar`, and the data jar (no classes) wins the name in PMD's directory. With
-  the classes jar on the classpath PMD 7.27.0 runs `pmd.xml` clean over `Sample.java`.
-- `lint-spotbugs` exits with `Unknown option: -textui`: `edu.umd.cs.findbugs.FindBugs2` does not
-  take that flag (`LaunchAppropriateUI` does). Without it SpotBugs 4.10.4 runs the module clean.
