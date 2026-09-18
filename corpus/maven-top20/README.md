@@ -163,7 +163,17 @@ is classified by the rule that produced jk's answer:
 | `unknown` | none of the above explains it |
 
 Same-version scope disagreements and coordinates only one side resolves are counted apart from
-version differences. A Maven side that cannot answer is a `maven unavailable: <reason>` cell, not a
+version differences. Among the coordinates only jk resolves, those it reaches only through a module's
+**inactive-feature rows** — `optional = true` rows a `[features.<name>]` table names (a test-jar as
+`<artifact>-tests`, the handle the import gives it) and no default feature activates, which the build
+and Maven's profile-off tree never see but `jk tree` renders like any declared root — are counted in
+their own column, `via inactive features`, read from a second `jk tree` over a copy of the module's
+manifest with those rows and the `[features]` tables removed (the copy is restored afterwards; a copy
+that does not parse skips the split for that module). hadoop's `hadoop-client-integration-tests` has
+four such rows, and 13 of its 206 test coordinates come only through them: the rest arrive through
+the shaded client siblings (`hadoop-client-api`, `hadoop-client-minicluster`, `hadoop-client-runtime`),
+whose Maven trees are leaves because their dependency-reduced POMs declare nothing while jk exports
+each sibling's declared graph. A Maven side that cannot answer is a `maven unavailable: <reason>` cell, not a
 failed run. `--only <name>` limits the repos, `--reuse` keeps the scratch copy and its Maven trees and
 redoes only the jk side and the diff, `--render` rewrites the report from the rows on disk. The
 corpus clones are never touched. `RESULTS.md` carries the latest report's summary table.

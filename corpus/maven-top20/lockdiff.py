@@ -39,7 +39,12 @@ is classified by the rule that produced jk's answer:
 
 jk's version is the lock row the module reads (member row, else the plain row of the matching scope);
 a `jk tree` line that disagrees with that row is counted apart as `tree_vs_lock`.  Same-version scope
-disagreements and coordinates only one side resolves are counted separately.
+disagreements and coordinates only one side resolves are counted separately.  A coordinate jk reaches
+only through a module's inactive-feature rows — `optional = true` rows a `[features.<name>]` table names
+and no default feature activates, which `jk tree` renders like any declared root while the build and
+Maven's profile-off tree never see them — is counted as `only jk via inactive features`, apart from
+`only jk`; it is found by reading `jk tree` a second time over a copy of the module's manifest with those
+rows and the `[features]` tables removed.
 Writes lock-diff/<date>.md (one section per repo, a summary table) and one JSON line per repo to
 results/lock-diff/<date>.jsonl.  Never touches the corpus clones themselves.
 """
@@ -82,6 +87,8 @@ PACKAGINGS = {"jar", "pom", "war", "ear", "aar", "test-jar", "maven-plugin", "bu
 MAVEN_MAIN_SCOPES = {"compile", "runtime", "provided", "system"}
 JK_MAIN_SCOPES = {"main", "runtime", "provided", "processor"}
 RULES = ("managed", "bom", "bom-reach", "pin", "depth", "cascade", "unknown")
+DEP_TABLES = {"dependencies", "test-dependencies", "runtime-dependencies", "provided-dependencies",
+              "processor-dependencies", "export-dependencies"}   # closure roots; managed/platform are pins
 
 
 # --------------------------------------------------------------------------- Maven version order
@@ -419,6 +426,98 @@ def jk_tree(root: Path, module: str, log: Path) -> dict | None:
     return {"scopes": dict(scopes), "platforms": platforms}
 
 
+def inactive_feature_rows(manifest: Path) -> dict[str, list[str]]:
+    """{handle: [feature names]} for the module's optional rows that only inactive features name.
+
+    A row is inactive when some `[features.<name>]` lists its handle under `deps` and no feature the
+    `default` list activates (transitively, through `features`) does.  These rows are off in the build
+    and in Maven's profile-off tree, yet `jk tree` renders them as roots.  The import names a test-jar
+    dependency `<artifact>-tests` in the feature table while a workspace sibling's test-jar row is keyed by
+    the module name with `kind = "tests"`, so `<key>-tests` names a `kind = "tests"` row `<key>` too.
+    """
+    try:
+        d = tomllib.load(open(manifest, "rb"))
+    except Exception:
+        return {}
+    feats = d.get("features", {})
+    if not isinstance(feats, dict):
+        return {}
+    defs = {k: v for k, v in feats.items() if isinstance(v, dict)}
+    active: set[str] = set()
+    queue = [n for n in feats.get("default", []) if isinstance(n, str)]
+    while queue:
+        n = queue.pop()
+        if n in active or n not in defs:
+            continue
+        active.add(n)
+        queue += [x for x in defs[n].get("features", []) if isinstance(x, str)]
+    active_deps = {h for n in active for h in defs[n].get("deps", [])}
+    named: dict[str, list[str]] = {}
+    for n, f in defs.items():
+        for h in f.get("deps", []):
+            named.setdefault(h, []).append(n)
+    out: dict[str, list[str]] = {}
+    for table, rows in d.items():
+        if table not in DEP_TABLES or not isinstance(rows, dict):
+            continue
+        for h, v in rows.items():
+            if not isinstance(v, dict) or v.get("optional") is not True:
+                continue
+            handles = [h] + ([h + "-tests"] if v.get("kind") == "tests" else [])
+            naming = sorted({f for x in handles if x in named for f in named[x]})
+            if naming and not any(x in active_deps for x in handles):
+                out[h] = naming
+    return out
+
+
+def without_inactive_features(text: str, handles: set[str]) -> str:
+    """The manifest text minus the rows of `handles` in the dependency tables and every `[features…]` table."""
+    out: list[str] = []
+    table = None
+    skip_table = False
+    for line in text.splitlines(keepends=True):
+        m = re.match(r'^\s*\[\[?([^\]]+)\]\]?\s*(#.*)?$', line)
+        if m:
+            table = m.group(1).strip()
+            head, _, rest = table.partition(".")
+            skip_table = (table == "features" or table.startswith("features.")
+                          or (head in DEP_TABLES and rest.strip('"') in handles))
+            if not skip_table:
+                out.append(line)
+            continue
+        if skip_table:
+            continue
+        if table in DEP_TABLES:
+            km = re.match(r'^\s*(?:"([^"]+)"|([A-Za-z0-9_.-]+))\s*=', line)
+            if km:
+                key = km.group(1) if km.group(1) is not None else km.group(2)
+                if key in handles or (km.group(1) is None and key.split(".")[0] in handles):
+                    continue
+        out.append(line)
+    return "".join(out)
+
+
+def jk_tree_without(root: Path, module: str, log: Path, handles: set[str]) -> dict | None:
+    """`jk_tree` over the module with its inactive-feature rows removed; the manifest is restored afterwards.
+
+    None when the trimmed manifest does not parse (the split is then skipped for the module) or the tree fails.
+    """
+    manifest = (root if module == "." else root / module) / "jk.toml"
+    original = manifest.read_text(encoding="utf-8")
+    trimmed = without_inactive_features(original, handles)
+    try:
+        tomllib.loads(trimmed)
+    except Exception as e:
+        with open(log, "a", encoding="utf-8") as f:
+            f.write(f"\n# {module}: trimmed manifest does not parse ({e}); inactive-feature split skipped\n")
+        return None
+    try:
+        manifest.write_text(trimmed, encoding="utf-8")
+        return jk_tree(root, module, log)
+    finally:
+        manifest.write_text(original, encoding="utf-8")
+
+
 def jk_version_for(tree: dict, key: str, maven_scope: str) -> tuple[str | None, set[str]]:
     """The version jk resolved for key on the side Maven's scope maps to, and every jk scope naming it."""
     scopes_with = {s for s, m in tree["scopes"].items() if key in m}
@@ -599,11 +698,18 @@ def classify(key: str, module: str, jk_v: str, mv: dict, omitted: list[dict], lo
     return "unknown", f"jk {jk_v} below Maven's {mv['version']} (depth {mv['depth']}) with no pin, BOM or management on either side"
 
 
-def diff_module(module: str, mtree: dict, jtree: dict, lock: Lock, pins: dict, facts: dict) -> dict:
+def diff_module(module: str, mtree: dict, jtree: dict, lock: Lock, pins: dict, facts: dict,
+                jtree_active: dict | None = None, inactive_rows: dict[str, list[str]] | None = None) -> dict:
+    """`jtree_active` is jk's closure with the module's inactive-feature rows removed (None = no such rows or
+    unreadable): a coordinate in `jtree` Maven lacks and `jtree_active` lacks too is only jk's through those rows."""
     out = {"module": module, "root": mtree["root_ga"], "maven_coords": 0, "compared": 0, "differ": [], "scope_only": 0,
-           "only_maven": Counter(), "only_jk": 0, "only_jk_optional": 0, "tree_vs_lock": 0,
-           "only_maven_names": [], "only_jk_names": [], "scope_only_names": [], "tree_vs_lock_names": [],
+           "only_maven": Counter(), "only_jk": 0, "only_jk_optional": 0, "only_jk_inactive": 0, "tree_vs_lock": 0,
+           "only_maven_names": [], "only_jk_names": [], "only_jk_inactive_names": [], "scope_only_names": [],
+           "tree_vs_lock_names": [], "inactive_rows": inactive_rows or {},
            "test_side": 0, "test_side_names": []}
+    active_keys = None
+    if jtree_active is not None:
+        active_keys = {k for m in jtree_active["scopes"].values() for k in m}
     seen = set()
     for key, mv in mtree["resolved"].items():
         if mv["scope"] not in MAVEN_MAIN_SCOPES | {"test"}:
@@ -654,6 +760,10 @@ def diff_module(module: str, mtree: dict, jtree: dict, lock: Lock, pins: dict, f
             jk_keys.setdefault(key, (v, scope))
     for key, (v, scope) in jk_keys.items():
         if key not in seen and key not in lock.modules.values():
+            if active_keys is not None and key not in active_keys:
+                out["only_jk_inactive"] += 1
+                out["only_jk_inactive_names"].append(f"{key}:{v} ({scope})")
+                continue
             out["only_jk"] += 1
             if key in facts["optional"]:
                 out["only_jk_optional"] += 1
@@ -714,7 +824,8 @@ def measure(repo: dict, args, date: str) -> dict:
            "lock_generated_by": "", "reimport": {}, "relock": {}, "maven": {}, "modules_maven": 0, "modules_jk": 0, "modules_compared": 0,
            "modules_differ": 0, "pairs_differ": 0, "coords_differ": 0, "by_rule": {r: 0 for r in RULES},
            "by_rule_coords": {r: 0 for r in RULES}, "direction": {"jk higher": 0, "jk lower": 0}, "scope_only": 0,
-           "only_maven": {}, "only_jk": 0, "only_jk_optional": 0, "tree_vs_lock": 0, "maven_coords": 0, "compared": 0,
+           "only_maven": {}, "only_jk": 0, "only_jk_optional": 0, "only_jk_inactive": 0, "modules_with_inactive_rows": 0,
+           "tree_vs_lock": 0, "maven_coords": 0, "compared": 0,
            "failing_test_modules": [], "failing_modules_with_diff": [], "examples": [], "modules": []}
     print(f"== {name}", flush=True)
     deadline = time.time() + REPO_CAP
@@ -780,13 +891,18 @@ def measure(repo: dict, args, date: str) -> dict:
         if jt is None:
             row["modules"].append({"module": mod, "status": "jk tree failed"})
             continue
-        d = diff_module(mod, mtrees[mod], jt, lock, pins, facts)
+        inactive = inactive_feature_rows((root if mod == "." else root / mod) / "jk.toml")
+        jt_active = jk_tree_without(root, mod, log, set(inactive)) if inactive else None
+        if inactive:
+            row["modules_with_inactive_rows"] += 1
+        d = diff_module(mod, mtrees[mod], jt, lock, pins, facts, jt_active, inactive)
         row["modules_compared"] += 1
         row["maven_coords"] += d["maven_coords"]
         row["compared"] += d["compared"]
         row["scope_only"] += d["scope_only"]
         row["only_jk"] += d["only_jk"]
         row["only_jk_optional"] = row.get("only_jk_optional", 0) + d["only_jk_optional"]
+        row["only_jk_inactive"] += d["only_jk_inactive"]
         row["tree_vs_lock"] += d["tree_vs_lock"]
         row["test_side"] = row.get("test_side", 0) + d["test_side"]
         for k, v in d["only_maven"].items():
@@ -807,10 +923,12 @@ def measure(repo: dict, args, date: str) -> dict:
                                "rules": dict(Counter(x["rule"] for x in d["differ"])),
                                "only_maven_names": d["only_maven_names"][:12], "only_jk_names": d["only_jk_names"][:12],
                                "only_jk_optional": d["only_jk_optional"], "scope_only_names": d["scope_only_names"][:8],
+                               "only_jk_inactive": d["only_jk_inactive"], "only_jk_inactive_names": d["only_jk_inactive_names"][:12],
+                               "inactive_rows": d["inactive_rows"],
                                "tree_vs_lock_names": d["tree_vs_lock_names"][:8],
                                "test_side": d["test_side"], "test_side_names": d["test_side_names"][:8]})
         print(f"  {name}: {mod:50s} maven={d['maven_coords']:4d} compared={d['compared']:4d} differ={len(d['differ']):3d} "
-              f"only-maven={sum(d['only_maven'].values()):3d} only-jk={d['only_jk']:3d}", flush=True)
+              f"only-maven={sum(d['only_maven'].values()):3d} only-jk={d['only_jk']:3d} via-inactive={d['only_jk_inactive']:3d}", flush=True)
     row["pairs_differ"] = sum(pair_rule.values())
     row["by_rule"] = {r: pair_rule.get(r, 0) for r in RULES}
     row["by_rule_coords"] = {r: len(coord_rule.get(r, ())) for r in RULES}
@@ -854,10 +972,11 @@ def render(date: str, rows: dict[str, dict], repos: list[dict]) -> None:
              "**pin** = jk's version is another workspace member's direct pin (a pin any member declares is the whole lock's version under `pins = \"nearest\"`); "
              "**depth** = neither side managed it, Maven took the nearest declaration and jk the highest; **cascade** = the parent POM already differs; **unknown** = none of those. "
              "`test row differs` = compile-scope coordinates whose jk test-scope lock row is not the version Maven's test classpath carries (a pin or managed version that governs jk's main solve but not its test solve). "
-             "`only jk` = coordinates on jk's closure Maven's tree lacks (a sibling's `<optional>` edge, or a `<dependencyManagement>` exclusion import did not carry); `tree vs lock` = `jk tree` lines whose version is not the lock row the module reads. "
+             "`only jk` = coordinates on jk's closure Maven's tree lacks (a sibling's `<optional>` edge, or a `<dependencyManagement>` exclusion import did not carry); "
+             "`via inactive features` = coordinates jk reaches only through the module's inactive-feature rows (`optional = true` rows a `[features.<name>]` table names and no default feature activates — a profile's dependencies as the import writes them), read from a second `jk tree` over the manifest with those rows removed and counted apart from `only jk`; `tree vs lock` = `jk tree` lines whose version is not the lock row the module reads. "
              "The `maven` cell names the tree run's status (`partial` = a reactor module failed under `-fae` and the others' trees stand), its mode, its wall, `dependency:go-offline`'s status, the POMs the harness fetched into Maven's local repo because a tree run reported them missing, and the POMs the final run still could not read (each one is an artifact Maven rendered as a leaf, so its transitives can only be `only jk`); the lock is the corpus clone's unless the cell says `relocked` (rewritten by the jk under test) or `reimported + relocked` (the manifests imported from the POMs by that jk as well).", "",
-             "| repo | maven | modules mvn / jk / compared | modules that differ | pairs / coords differ | by rule (pairs) | jk higher / lower | test row differs | same version, scope differs | only Maven | only jk (optional in a POM) | tree vs lock | failing-test modules with a diff |",
-             "|------|-------|----------------------------:|--------------------:|----------------------:|-----------------|------------------:|-----------------:|----------------------------:|-----------:|----------------------------:|-------------:|----------------------------------|"]
+             "| repo | maven | modules mvn / jk / compared | modules that differ | pairs / coords differ | by rule (pairs) | jk higher / lower | test row differs | same version, scope differs | only Maven | only jk (optional in a POM) | via inactive features (modules) | tree vs lock | failing-test modules with a diff |",
+             "|------|-------|----------------------------:|--------------------:|----------------------:|-----------------|------------------:|-----------------:|----------------------------:|-----------:|----------------------------:|--------------------------------:|-------------:|----------------------------------|"]
     for repo in repos:
         r = rows.get(repo["name"])
         if not r:
@@ -880,7 +999,8 @@ def render(date: str, rows: dict[str, dict], repos: list[dict]) -> None:
         fcell = (f"{len(r.get('failing_modules_with_diff', []))} of {len(fail)}" if fail else "no failing tests")
         lines.append(f"| {r['full']} | {mcell} | {r['modules_maven']} / {r['modules_jk']} / {r['modules_compared']} | {r['modules_differ']} "
                      f"| {r['pairs_differ']} / {r['coords_differ']} | {fmt_rules(r)} | {r['direction'].get('jk higher', 0)} / {r['direction'].get('jk lower', 0)} "
-                     f"| {r.get('test_side', 0)} | {r['scope_only']} | {only_m} | {r['only_jk']} ({r.get('only_jk_optional', 0)}) | {r['tree_vs_lock']} | {fcell} |")
+                     f"| {r.get('test_side', 0)} | {r['scope_only']} | {only_m} | {r['only_jk']} ({r.get('only_jk_optional', 0)}) "
+                     f"| {r.get('only_jk_inactive', 0)} ({r.get('modules_with_inactive_rows', 0)}) | {r['tree_vs_lock']} | {fcell} |")
         if r["modules_compared"]:
             total["repos"] += 1
             total["modules_compared"] += r["modules_compared"]
