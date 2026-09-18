@@ -1,8 +1,10 @@
 # Maven top-20 corpus — results
 
-Generated 2026-09-18 15:36 by `run.py`. Host: AMD Ryzen 9 7900X 12-Core Processor (24 threads, 30 GB RAM), Linux-7.1.12-200.fc44.x86_64-x86_64-with-glibc2.43.
+Generated 2026-09-18 15:38 by `run.py`. Host: AMD Ryzen 9 7900X 12-Core Processor (24 threads, 30 GB RAM), Linux-7.1.12-200.fc44.x86_64-x86_64-with-glibc2.43.
 
-Maven ran through the launcher `jk mvn` provisions (or the repo's `mvnw`) with `MAVEN_OPTS=-Xmx3g`, `JAVA_HOME` = the Temurin matching the declared level (or `maven_jdk`), and a corpus-private local repo (`/home/bsant/src/scratch/maven-corpus/.m2`); jk ran with defaults. Wall = seconds. `pass/total` from surefire XML (Maven) and the `Tests:` line of `target/jk-results.md` (jk). Per-step logs and each import report live under `results/<repo>/` (latest run).
+Maven ran through the launcher `jk mvn` provisions (or the repo's `mvnw`) with `MAVEN_OPTS=-Xmx3g`, `JAVA_HOME` = the Temurin matching the declared level (or `maven_jdk`), and a corpus-private local repo (`/home/bsant/src/scratch/maven-corpus/.m2`); jk ran with defaults and a per-repo action cache under `/home/bsant/src/scratch/maven-corpus/.jk-cache` wiped before its first step (`JK_CACHE_DIR`), so `jk cold` compiles everything on every run while the artifact store stays warm. Wall = seconds. `pass/total` from surefire XML (Maven) and the `Tests:` line of `target/jk-results.md` (jk). Per-step logs and each import report live under `results/<repo>/` (latest run).
+
+Per-repo argument lists from `repos.toml`, so both sides measure the same reactor: tutorials: `mvn -P default,default-heavy` / `jk import -P default,default-heavy`.
 
 - **run1**: `jk 0.13.7` commit `1ff15e0913162010190280e652f99d4826986efd (tag v0.13.7 in /home/bsant/src/oss/jk)` — /home/bsant/.jk/bin/jk sha256:553c5ef2bd4f1c32; jk-engine-0.13.7.jar sha256:d3265c6c678f93a4
 - **run2**: `jk 0.13.7` commit `main 528e12916` — /home/bsant/.jk/bin/jk sha256:0f8725c06c9004ba; jk-engine-0.13.7.jar sha256:62366867cbcc55ee; `jk 0.13.7` commit `main 528e12916` — /home/bsant/.jk/bin/jk sha256:98f2558c2e5a3e72; jk-engine-0.13.7.1789538521832.jar sha256:55655016143b5433; `jk 0.13.7` commit `main c190940e0` — /home/bsant/.jk/bin/jk sha256:0f8725c06c9004ba; jk-engine-0.13.7.jar sha256:62366867cbcc55ee
