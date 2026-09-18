@@ -31,7 +31,7 @@ micronaut-inject-java = "io.micronaut:micronaut-inject-java"
 [test-dependencies]
 micronaut-test-junit5 = "io.micronaut.test:micronaut-test-junit5"
 micronaut-http-client = "io.micronaut:micronaut-http-client"
-junit-jupiter         = "org.junit.jupiter:junit-jupiter"
+junit-jupiter         = "managed"
 
 # Test tiers. Bare `jk test` is the unit tier; each profile owns exactly one of the excluded
 # tags, so every tagged test runs in one tier and none is silently skipped.
