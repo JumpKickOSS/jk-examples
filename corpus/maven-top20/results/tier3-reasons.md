@@ -1,6 +1,6 @@
-# Tier-3 reasons (import ERRORs and jk failures), grouped — run14
+# Tier-3 reasons (import ERRORs and jk failures), grouped — run15
 
-Generated 2026-09-18 07:46. Module prefixes, coordinates, versions and paths are normalized so one line = one distinct cause = one ticket candidate.
+Generated 2026-09-18 11:55. Module prefixes, coordinates, versions and paths are normalized so one line = one distinct cause = one ticket candidate.
 
 ## import Tier 3 (not imported)
 
@@ -44,7 +44,7 @@ Generated 2026-09-18 07:46. Module prefixes, coordinates, versions and paths are
   repos: keycloak
 - (1) `<build><extensions>` G:A is the `maven-archetype` packaging, a project template jk does not build; nothing is written for it. Drop it from the POM when the jk build does not need it, or keep running that step with `jk mvn`. (4 modules: extensions/amazon-lambda/maven-archetype, extensions/amazon-lambda-http/maven-archetype, extensions/amazon-lambda-rest/maven-archetype, …)  
   repos: quarkus
-- (1) `<modules>` are declared only in profiles that are not active on this machine (default-jdk8, default-heavy, integration-jdk8, integration-heavy, default-jdk17, default, default-jdk22, default-jdk23, default-jdk24, default-jdk25, default-jdk26, integration-jdk17, integration, integration-jdk22, integration-jdk23, integration-jdk24, integration-jdk25, integration-jdk26, live-all, parents, default-disabled, integration-disabled); no module was imported, so the workspace builds nothing. Activate one with Maven's `-P` and re-import, or list the modules at the top level.  
+- (1) `<modules>` are declared only in profiles that are not active on this machine (default-jdk8, default-heavy, integration-jdk8, integration-heavy, default-jdk17, default, default-jdk22, default-jdk23, default-jdk24, default-jdk25, default-jdk26, integration-jdk17, integration, integration-jdk22, integration-jdk23, integration-jdk24, integration-jdk25, integration-jdk26, live-all, parents, default-disabled, integration-disabled); no module was imported, so the workspace builds nothing. Activate one as Maven's `-P` does — `jk import pom.xml -P default-jdk8` — or list the modules at the top level.  
   repos: tutorials
 - (1) `<plugin>` G:A is the `bundle` packaging: an OSGi manifest bnd computes, which jk's jar step does not write; nothing is written for it. Drop it from the POM when the jk build does not need it, or keep running that step with `jk mvn`. Declared by the root pom.xml, inherited by 1 module.  
   repos: zipkin
@@ -71,46 +71,44 @@ Generated 2026-09-18 07:46. Module prefixes, coordinates, versions and paths are
 
 - (1) Cannot resolve dependencies: · No versions of G:A match N-SNAPSHOT · N-SNAPSHOT is a snapshot, and no repository G:A may resolve from serves snapshots: central (releases only), jumpkick (releases only), g  
   repos: questdb
-- (1) [test-dependencies] G:A platform-managed cannot run under jk: its suites run through G:A, which needs G:A N or later — raise the pin to N  
-  repos: spring-cloud-alibaba
 
 ## jk build failure
 
-- (1) <path> Return an empty collection rather than null. [ReturnEmptyCollectionRatherThanNull]  
-  repos: TheAlgorithms-Java
-- (1) <path> error: duplicate class: org.neo4j.cypher.internal.parser.v5.Cypher5Lex  
-  repos: neo4j
-- (1) <path> error: package org.jboss.security does not exist  
+- (1) <path> error: cannot access java.security.acl.Group · class file for java.security.acl.Group not found  
   repos: keycloak
-- (1) Error during the transformation of 'com.iluwatar.prototype.Prototype'; post-compiler 'lombok.bytecode.SneakyThrowsRemover' caused an exception: java.lang.IllegalArgumentException: Unsupported class file major version 69 · at org.lombokweb.asm.ClassReader.<init  
-  repos: java-design-patterns
-- (1) [generate.avro] inputs [src/main/avro/**/*.avsc, src/main/avro/**/*.avpr, src/main/avro/**/*.avdl] match no file under <path>  
+- (1) <path> error: duplicate class: org.neo4j.cypher.internal.parser.v25.Cypher  
+  repos: neo4j
+- (1) javac returned non-zero exit code  
+  repos: spring-cloud-alibaba
+- (1) protoc failed (exit 1): · Security.proto: File not found. · G:A: Import "Security.proto" was not found or had errors.  
   repos: hadoop
-- (1) checkstyle failed (exit 255) before writing its report: · Could not find config XML file '<path>  
-  repos: jenkins
-- (1) checkstyle failed (exit 255) before writing its report: · Files to process must be specified, found 0.  
-  repos: nacos
 - (1) repository `apache.snapshots` at http://repository.apache.org/snapshots, declared by the POM of G:A, was not used: it is plaintext http, and a repository  
   repos: quarkus
+- (1) repository `apache.snapshots` at http://repository.apache.org/snapshots, declared by the POM of G:A, was not used: it is plaintext http, and a repository a POM declares has no table to  
+  repos: floci
+- (1) the compiler worker failed: java.lang.IllegalArgumentException: error: invalid flag: -J--add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED · at jdk.compiler/com.sun.tools.javac.main.Arguments.reportDiag(G:A) · at jdk.compiler/com.sun.  
+  repos: zipkin
 
 ## jk test failure
 
-- (1) + [1 of 8] G:A - took 21ms  
+- (1) + [1 of 8] G:A - took 33ms  
   repos: dataease
 - (1) 1 test failure  
   repos: thingsboard
 - (1) Unable to open DISPLAY  
   repos: cryptomator
-- (1) test discovery exited 3 before any test ran — java.lang.OutOfMemoryError: Metaspace · Fix: the test discovery JVM ran out of memory (Metaspace) before it ran a test; the frames above name the framework that filled it — a test framework that starts the applicat  
-  repos: floci
+- (1) `parse-build` src holds .groovy sources this module does not compile: jk.toml declares java and not groovy — add groovy = "<version>" to compile them  
+  repos: jenkins
+- (1) test failure: com.alibaba.nacos.logger.adapter.log4j2.Log4J2NacosLoggingAdapterTest — G:A#testIsNeedReloadConfiguration() — java.lang.ClassCastException: class org.apache.logging.slf4j.SLF4JLoggerContext cannot be cast to cla  
+  repos: nacos
 - (1) test failure: com.ctrip.framework.apollo.build.sql.converter.ApolloSqlConverterH2Test — G:A#checkH2() — java.lang.IllegalStateException: illegal class path: <path>  
   repos: apollo
-- (1) test failure: com.macro.mall.search.MallSearchApplicationTests — G:A#testGetAllEsProductList() — java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@446dacf9 testClass = com.macro.mall.se  
+- (1) test failure: com.iluwatar.corruption.system.AntiCorruptionLayerTest — G:A#antiCorruptionLayerWithExTest() — java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@15a8cebd testClass  
+  repos: java-design-patterns
+- (1) test failure: com.macro.mall.portal.MallPortalApplicationTests — G:A#contextLoads() — java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@337fb1a5 testClass = com.macro.mall.portal.MallPo  
   repos: mall
-- (1) test failure: com.xxl.job.executor.test.openclaw.OpenClawTest — G:A#test() — java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@4a00d591 testClass = com.xxl.job.ex  
+- (1) test failure: com.xxl.job.executor.test.BaseTests — G:A#test() — java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@5f32de90 testClass = com.xxl.job.executor.test.  
   repos: xxl-job
-- (1) test failure: zipkin2.collector.CollectorTest — G:A#accept_storageError() — java.lang.AssertionError:  
-  repos: zipkin
 
 ## Maven-side failure (for context)
 
