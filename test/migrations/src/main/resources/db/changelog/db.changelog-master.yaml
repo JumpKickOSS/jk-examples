@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: audit-log
+      author: acme
+      changes:
+        - createTable:
+            tableName: audit_log
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: entity
+                  type: varchar(64)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: recorded_at
+                  type: timestamp
+                  defaultValueComputed: CURRENT_TIMESTAMP

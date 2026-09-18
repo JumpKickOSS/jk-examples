@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<ruleset name="house"
+         xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.io/ruleset_2_0_0.xsd">
+  <description>
+    PMD's best-practices category. SystemPrintln is left out: this is a command-line program and
+    stdout is its output. Everything else in the category applies.
+  </description>
+  <rule ref="category/java/bestpractices.xml">
+    <exclude name="SystemPrintln"/>
+  </rule>
+</ruleset>

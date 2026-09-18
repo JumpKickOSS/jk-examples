@@ -1,0 +1,46 @@
+# Flyway and Liquibase over one module's scripts: the Flyway migrations under db/migration and the
+# Liquibase change log under db/changelog are resources, the application applies both at startup,
+# the unit tier proves them on an in-memory H2, and the integration tier on a PostgreSQL
+# Testcontainer. Nothing about migrations is in this manifest beyond the libraries: outside the
+# application the tools are commands against a database (README).
+
+name    = "migrations"
+group   = "com.acme"
+version = "1.0.0"
+java    = 25
+
+[application]
+main = "com.acme.db.Main"
+
+[dependencies]
+flyway-core       = "13.7.0"
+flyway-postgresql = "13.7.0"     # Flyway's PostgreSQL support ships as its own module
+liquibase-core    = "5.0.4"
+postgresql        = "42.7.13"    # the driver the Postgres URL needs
+h2                = "2.5.250"    # the driver `jk run` and the unit tier use
+
+[test-dependencies]
+junit-jupiter             = "6.1.3"
+testcontainers-postgresql = "1.21.4"
+slf4j-simple              = "2.0.17"   # Testcontainers, Flyway and Liquibase log through SLF4J
+
+# Test tiers: `jk test` is the unit tier; each profile owns one of the excluded tags, so every
+# tagged test runs in exactly one tier.
+[test]
+exclude-tags = ["integration", "slow", "network", "bench"]
+
+[profiles.integration]
+include-tags = ["integration"]
+exclude-tags = []
+
+[profiles.network]
+include-tags = ["network"]
+exclude-tags = ["integration"]
+
+[profiles.slow]
+include-tags = ["slow"]
+exclude-tags = ["integration", "network"]
+
+[profiles.bench]
+include-tags = ["bench"]
+exclude-tags = ["integration", "network", "slow"]

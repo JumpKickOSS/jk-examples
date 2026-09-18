@@ -1,0 +1,37 @@
+# A TestNG suite under `jk test` with nothing but org.testng:testng declared: `jk lock` puts the
+# JUnit team's TestNG engine (org.junit.support:testng-engine) beside the Platform launcher, the
+# engine's class scan finds every @org.testng.annotations.Test class under the test root, and a
+# TestNG group is a Platform tag, so the tier table below applies to TestNG tests as it does to
+# Jupiter's.
+
+name    = "testng-adder"
+group   = "com.example"
+version = "1.0.0"
+java    = 25
+
+[application]
+main = "com.example.Adder"
+
+[test-dependencies]
+testng = "7.12.0"
+
+# Test tiers: `jk test` is the unit tier; each profile owns one of the excluded tags, so every
+# tagged test runs in exactly one tier.
+[test]
+exclude-tags = ["integration", "slow", "network", "bench"]
+
+[profiles.integration]
+include-tags = ["integration"]
+exclude-tags = []
+
+[profiles.network]
+include-tags = ["network"]
+exclude-tags = ["integration"]
+
+[profiles.slow]
+include-tags = ["slow"]
+exclude-tags = ["integration", "network"]
+
+[profiles.bench]
+include-tags = ["bench"]
+exclude-tags = ["integration", "network", "slow"]
