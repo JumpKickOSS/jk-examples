@@ -48,7 +48,8 @@ Hard cap 45 minutes per repo (`CORPUS_REPO_CAP`); a step that would start after 
 
 1. **Clone** `--depth 1` at the pinned SHA (reused if present; the tree is reset to the SHA and
    `git clean -fdx`ed before each side).
-2. **Maven**, `MAVEN_OPTS=-Xmx3g`, `JAVA_HOME` = the jk-installed Temurin matching the declared level:
+2. **Maven**, `MAVEN_OPTS=-Xmx3g`, `JAVA_HOME` = the jk-installed Temurin matching the declared level,
+   plus the repo's `mvn_args` from `repos.toml` when it has any:
    `package -DskipTests` cold → `clean package -DskipTests` (warm clean) → `package -DskipTests` again
    (no-op) → append one comment line to one main `.java` file in the leaf module with the most sources,
    `package -DskipTests` (touch), revert → `test` once with a 20-minute timeout
@@ -102,10 +103,12 @@ table.
 declares (an enforcer rule, or dependencies compiled for a newer class-file level); jk still imports the
 declared level. Run #1 found three such repos (analysis-ik, jenkins, zipkin: all need 21).
 
-`repos.toml` may also give a repo an `import_args` list, which `run.py` appends to `jk import pom.xml`.
-tutorials declares its modules only inside profiles that nothing activates on their own (its README
-says `mvn -Pdefault,default-heavy`), so it is imported with `-P default,default-heavy` and the row
-measures the reactor rather than an empty workspace.
+`repos.toml` may also give a repo an `import_args` list, which `run.py` appends to `jk import pom.xml`,
+and an `mvn_args` list, appended to every `mvn` step of that repo. tutorials declares its modules only
+inside profiles that nothing activates on their own (its README says `mvn -Pdefault,default-heavy`), so
+it is imported with `-P default,default-heavy` and its Maven side runs with the same `-P`, and the row
+measures the reactor on both sides rather than an empty workspace against a build of zero modules. Both
+lists are recorded in the row (`import_args`, `mvn_args`) and named above the tables.
 
 ## What counts, what does not
 

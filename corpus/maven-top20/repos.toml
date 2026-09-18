@@ -6,6 +6,8 @@
 # `import_args` = extra arguments run.py hands `jk import pom.xml` for the repo: a reactor whose root
 # declares its modules only inside profiles (tutorials' README says `mvn -Pdefault,default-heavy`) is
 # imported with `-P <ids>`, so the reactor is what gets measured rather than an empty workspace.
+# `mvn_args` = the Maven side of the same choice: extra arguments for every `mvn` step of the repo, so
+# tutorials' Maven build activates the profiles its jk import was given and the two sides stay comparable.
 # Ranking source: gh search repos --language=java --sort=stars (top 100, then stars:9000..19040).
 
 [[repo]]
@@ -49,6 +51,7 @@ stars = 37322
 java = "17"
 modules = 1727
 import_args = ["-P", "default,default-heavy"]   # the root lists its modules only in these profiles
+mvn_args = ["-P", "default,default-heavy"]      # and Maven builds nothing without them either
 note = "very large aggregator; expected to hit the 45-minute cap"
 
 [[repo]]

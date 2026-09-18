@@ -392,17 +392,19 @@ def measure(repo: dict, args) -> dict:
     # ---- Maven side --------------------------------------------------------
     M2.mkdir(exist_ok=True)
     mvn_first_error = ""
-    MVN = maven_launcher(root) + MVN_ARGS
+    mvn_args = list(repo.get("mvn_args", []))         # e.g. ["-P", "default,default-heavy"]; see repos.toml
+    MVN = maven_launcher(root) + MVN_ARGS + mvn_args
     menv = maven_env(repo.get("maven_jdk", repo["java"]))
     row["maven_launcher"] = MVN[0] if MVN[0] != "sh" else "./mvnw"
     row["maven_java_home"] = menv.get("JAVA_HOME", "host")
+    row["mvn_args"] = mvn_args
     prev = None if args.both else load_rows().get(name)
     if prev and prev.get("steps", {}).get("mvn_cold"):
         # --jk-only (the default): carry the last measured Maven side forward untouched
         for k in ("mvn_cold", "mvn_warm_clean", "mvn_noop", "mvn_touch", "mvn_test"):
             if k in prev["steps"]:
                 row["steps"][k] = prev["steps"][k]
-        for k in ("mvn_tests", "mvn_first_error", "maven_launcher", "maven_java_home"):
+        for k in ("mvn_tests", "mvn_first_error", "maven_launcher", "maven_java_home", "mvn_args"):
             if k in prev:
                 row[k] = prev[k]
         row["notes"] += [n for n in prev.get("notes", []) if "Maven" in n or "mvn" in n]
@@ -435,6 +437,7 @@ def measure(repo: dict, args) -> dict:
     jk_first_error = ""
     report = rdir / "import-report.md"
     import_args = list(repo.get("import_args", []))   # e.g. ["-P", "default,default-heavy"]; see repos.toml
+    row["import_args"] = import_args
     r = step("jk_import", JK + ["import", "pom.xml", *import_args, "--report", str(report)], "jk-import.log", cap=600)
     row["import"] = parse_import_report(report)
     row["jk_modules"] = jk_workspace_modules(root)
@@ -710,6 +713,10 @@ def render(repos: list[dict], rows: dict[str, dict] | None = None) -> None:
              f"`JAVA_HOME` = the Temurin matching the declared level (or `maven_jdk`), and a corpus-private local repo (`{M2}`); jk ran with defaults. "
              "Wall = seconds. `pass/total` from surefire XML (Maven) and the `Tests:` line of `target/jk-results.md` (jk). "
              "Per-step logs and each import report live under `results/<repo>/` (latest run).", ""]
+    per_repo = [f"{r['name']}: `mvn {' '.join(r['mvn_args'])}` / `jk import {' '.join(r.get('import_args', []))}`"
+                for r in cfg["repo"] if r.get("mvn_args") or r.get("import_args")]
+    if per_repo:
+        lines += ["Per-repo argument lists from `repos.toml`, so both sides measure the same reactor: " + "; ".join(per_repo) + ".", ""]
     for l in labels:
         ids = sorted({(r.get("jk_version", ""), r.get("jk_commit", ""), r.get("jk_binary", ""), r.get("jk_engine_jar", "")) for r in runs[l].values() if r.get("jk_version")})
         lines.append(f"- **{l}**: " + ("; ".join(f"`{v}` commit `{c}` — {b}; {e}" for v, c, b, e in ids) or "jk identity not recorded (rows predate the identity fields)"))
