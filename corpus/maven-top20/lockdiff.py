@@ -7,7 +7,8 @@ harness wrote) is copied to $LOCKDIFF_SCRATCH/<name> (default /home/bsant/src/sc
 of the corpus .m2 made on first use, so the corpus repo stays as cold as the corpus runner left it)
 with every POM the reactor's graphs name, Maven's verbose dependency tree is written per module
 (`dependency:tree -Dverbose`, offline against that repo, 15 minutes per repo), and jk's per-module
-closure is read with `jk tree <module> -t -f -s all`.  A POM the local repo lacks makes Maven render
+closure is read with `jk tree <module> -t -f -s all` (its `[platform]` and `[managed]` sections are
+pins and BOMs, not closure members, and are left out).  A POM the local repo lacks makes Maven render
 the artifact as a leaf (`The POM for X is missing`), and its whole subtree then counts as "only jk":
 every POM a tree run reports missing is fetched from Central or a repository the POMs declare
 (with its parents and imports), and the run is repeated until none is missing; an online tree run is
@@ -409,6 +410,8 @@ def jk_tree(root: Path, module: str, log: Path) -> dict | None:
         if scope == "platform" or me.group(2):
             platforms.append(f"{group}:{artifact}:{version}")
             continue
+        if scope == "managed":
+            continue                # a [managed-dependencies] pin governs versions; it is not a closure member
         key = coord_key(group, artifact, classifier)
         prev = scopes[scope].get(key)
         if prev is None or compare_versions(version, prev) > 0:
