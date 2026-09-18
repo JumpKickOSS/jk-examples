@@ -30,6 +30,9 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 SCRATCH = Path(os.environ.get("CORPUS_SCRATCH", "/home/bsant/src/scratch/maven-corpus"))
 M2 = SCRATCH / ".m2"                 # dedicated Maven local repo so the first run is really cold
+# jk's action cache, one directory per repo, wiped before the repo's first jk step: `jk cold` compiles
+# everything on every run while the artifact store (downloads) stays warm, as Maven's .m2 does for it.
+JK_CACHE = Path(os.environ.get("CORPUS_JK_CACHE", SCRATCH / ".jk-cache"))
 RESULTS = HERE / "results"
 REPO_CAP = int(os.environ.get("CORPUS_REPO_CAP", 45 * 60))   # hard cap per repo, seconds
 TEST_CAP = int(os.environ.get("CORPUS_TEST_CAP", 1200))      # per test run, seconds
@@ -436,16 +439,23 @@ def measure(repo: dict, args) -> dict:
     # ---- jk side -----------------------------------------------------------
     jk_first_error = ""
     report = rdir / "import-report.md"
+    cache = JK_CACHE / name
+    if cache.exists():
+        shutil.rmtree(cache)
+    cache.mkdir(parents=True)
+    jenv = {"JK_CACHE_DIR": str(cache)}   # every jk step of this repo; the cold build finds it empty
+    row["jk_cache_dir"] = str(cache)
     import_args = list(repo.get("import_args", []))   # e.g. ["-P", "default,default-heavy"]; see repos.toml
     row["import_args"] = import_args
-    r = step("jk_import", JK + ["import", "pom.xml", *import_args, "--report", str(report)], "jk-import.log", cap=600)
+    r = step("jk_import", JK + ["import", "pom.xml", *import_args, "--report", str(report)], "jk-import.log", cap=600,
+             env=jenv)
     row["import"] = parse_import_report(report)
     row["jk_modules"] = jk_workspace_modules(root)
     if r["status"] != "ok":
         jk_first_error = first_jk_error(rdir / "jk-import.log", root) or "jk import failed"
     lock_ok = False
     if (root / "jk.toml").is_file():
-        r = step("jk_lock", JK + ["lock"], "jk-lock.log", cap=900)
+        r = step("jk_lock", JK + ["lock"], "jk-lock.log", cap=900, env=jenv)
         lock_ok = r["status"] == "ok"
         if not lock_ok and not jk_first_error:
             jk_first_error = first_jk_error(rdir / "jk-lock.log", root) or f"jk lock {r['status']}"
@@ -453,14 +463,14 @@ def measure(repo: dict, args) -> dict:
         row["steps"]["jk_lock"] = {"status": "skipped", "exit": None, "wall": 0.0}
         jk_first_error = jk_first_error or "jk import wrote no jk.toml"
     if lock_ok:
-        r = step("jk_build_cold", JK + ["build", "--skip-tests"], "jk-build-cold.log")
+        r = step("jk_build_cold", JK + ["build", "--skip-tests"], "jk-build-cold.log", env=jenv)
         if r["status"] == "ok":
-            step("jk_build_noop", JK + ["build", "--skip-tests"], "jk-build-noop.log")
+            step("jk_build_noop", JK + ["build", "--skip-tests"], "jk-build-noop.log", env=jenv)
             if tf:
                 touch(root, tf)
-                step("jk_build_touch", JK + ["build", "--skip-tests"], "jk-build-touch.log")
+                step("jk_build_touch", JK + ["build", "--skip-tests"], "jk-build-touch.log", env=jenv)
                 untouch(root, tf)
-            step("jk_test", JK + ["test"], "jk-test.log", cap=TEST_CAP)
+            step("jk_test", JK + ["test"], "jk-test.log", cap=TEST_CAP, env=jenv)
             row["jk_tests_line"] = jk_results_tests_line(root)
             row["jk_tests"] = jk_junit_totals(root)
             if row["steps"]["jk_test"]["status"] != "ok" and not jk_first_error:
@@ -510,7 +520,8 @@ def jk_identity() -> dict:
             if r.returncode == 0:
                 commit = r.stdout.strip() + f" (tag v{ver} in {src})"
     binary = shutil.which("jk")
-    engine = sorted((Path.home() / ".jk" / "lib" / "jk-engine").glob("jk-engine-*.jar"))
+    home = Path(os.environ.get("JK_HOME", Path.home() / ".jk"))   # a private install names its home
+    engine = sorted((home / "lib" / "jk-engine").glob("jk-engine-*.jar"))
     return {"jk_version": version, "jk_commit": commit or "unknown (binary embeds none; set JK_COMMIT)",
             "jk_binary": f"{binary} sha256:{sha256_of(Path(binary))}" if binary else "",
             "jk_engine_jar": f"{engine[-1].name} sha256:{sha256_of(engine[-1])}" if engine else ""}
@@ -710,7 +721,8 @@ def render(repos: list[dict], rows: dict[str, dict] | None = None) -> None:
     lines = ["# Maven top-20 corpus — results", "",
              f"Generated {dt.datetime.now():%Y-%m-%d %H:%M} by `run.py`. Host: {h['cpu']} ({h['cores']} threads, {h['ram_gb']} GB RAM), {h['os']}.", "",
              "Maven ran through the launcher `jk mvn` provisions (or the repo's `mvnw`) with `MAVEN_OPTS=-Xmx3g`, "
-             f"`JAVA_HOME` = the Temurin matching the declared level (or `maven_jdk`), and a corpus-private local repo (`{M2}`); jk ran with defaults. "
+             f"`JAVA_HOME` = the Temurin matching the declared level (or `maven_jdk`), and a corpus-private local repo (`{M2}`); jk ran with defaults "
+             f"and a per-repo action cache under `{JK_CACHE}` wiped before its first step (`JK_CACHE_DIR`), so `jk cold` compiles everything on every run while the artifact store stays warm. "
              "Wall = seconds. `pass/total` from surefire XML (Maven) and the `Tests:` line of `target/jk-results.md` (jk). "
              "Per-step logs and each import report live under `results/<repo>/` (latest run).", ""]
     per_repo = [f"{r['name']}: `mvn {' '.join(r['mvn_args'])}` / `jk import {' '.join(r.get('import_args', []))}`"

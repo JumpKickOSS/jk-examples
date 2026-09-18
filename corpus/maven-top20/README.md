@@ -58,7 +58,8 @@ Hard cap 45 minutes per repo (`CORPUS_REPO_CAP`); a step that would start after 
    provisions (`~/.jk/store/tools/maven/3.9.9/bin/mvn`). We call that launcher directly rather than
    through `jk mvn` because `jk mvn` strips `MAVEN_OPTS` / `JAVA_TOOL_OPTIONS` on purpose
    (`PassthroughEnv`), and there is no other way to cap the heap without writing into the clone.
-3. **jk**: `jk import pom.xml --report results/<repo>/import-report.md` (Tier 3 = ERROR, Tier 2 =
+3. **jk**, with `JK_CACHE_DIR` = a per-repo action cache wiped first (see below): `jk import pom.xml
+   --report results/<repo>/import-report.md` (Tier 3 = ERROR, Tier 2 =
    WARNING, counted from the report) → `jk lock` → `jk build --skip-tests` cold → again (no-op) → the
    same touch + `jk build --skip-tests` → revert → `jk test` once with the 20-minute timeout; totals
    from the `Tests:` line of `target/jk-results.md` (and the JUnit XML under
@@ -95,7 +96,9 @@ is always the latest label's.
 
 Never `jk update` mid-run. Every row records `jk --version`, the jk commit (from `JK_COMMIT`, else the
 `v<version>` tag resolved in the jk checkout at `JK_SRC`, default `~/src/oss/jk`), and the sha256 of the
-`jk` binary and the engine jar, so two runs' rows are attributable to the exact jk that produced them.
+`jk` binary and the engine jar (read under `JK_HOME` when a private install sets it), so two runs' rows are
+attributable to the exact jk that produced them. A private install drives a run as
+`JK_HOME=<home> PATH=<home>/bin:$PATH ./run.sh …`.
 Rows whose Maven side was reused carry `mvn_reused_from = <date of the measured row>` and a `*` in the
 table.
 
@@ -120,10 +123,12 @@ lists are recorded in the row (`import_args`, `mvn_args`) and named above the ta
   count in the ratchet.
 - A step killed by the 45-minute repo cap is `capped`, distinct from a step that hit its own 20-minute
   test timeout (`timeout`).
-- jk's action cache lives under `~/.jk` and survives the clone reset, so only the *first* jk measurement
-  of a repo after a jk install is a true cold build; a re-measured `jk cold` is cache-warm (TheAlgorithms:
-  12.8 s first, 2.5 s re-measured). Maven has the same property through the corpus `.m2` for downloads but
-  not for compilation. A `--cache-dir` sweep per run is the follow-up if cold-vs-cold matters.
+- `jk cold` is cold on every run: each repo's jk steps run with `JK_CACHE_DIR` pointing at
+  `$CORPUS_SCRATCH/.jk-cache/<name>` (override the parent with `CORPUS_JK_CACHE`), wiped before the
+  repo's first jk step, so the action cache holds nothing and the cold build compiles everything; the
+  no-op and touch builds then read the cache that cold build filled. The artifact store stays the
+  install's, so nothing re-downloads — the same warm-downloads, cold-compilation shape Maven gets from the
+  corpus `.m2`. The row records the directory (`jk_cache_dir`).
 
 ## Diffing the lock against Maven's resolution
 
