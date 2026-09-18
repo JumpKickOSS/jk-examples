@@ -1,6 +1,6 @@
-# Tier-3 reasons (import ERRORs and jk failures), grouped — run13
+# Tier-3 reasons (import ERRORs and jk failures), grouped — run14
 
-Generated 2026-09-18 02:01. Module prefixes, coordinates, versions and paths are normalized so one line = one distinct cause = one ticket candidate.
+Generated 2026-09-18 07:46. Module prefixes, coordinates, versions and paths are normalized so one line = one distinct cause = one ticket candidate.
 
 ## import Tier 3 (not imported)
 
@@ -62,46 +62,50 @@ Generated 2026-09-18 02:01. Module prefixes, coordinates, versions and paths are
   repos: keycloak
 - (1) `<type>zip</type>` on G:A names an artifact jk has no manifest spelling for; the dependency was not written. A jar of the same module is `{ group, name, version }`, a classified jar adds `classifier`. (3 modules: test-framework/core, quarkus/tests/junit5, testsuite/integration-arquillian/servers/auth-server/quarkus)  
   repos: keycloak
-- (1) `maven-shade-plugin` relocates org.apache.lucene → org.neo4j.shaded.lucene9; jk has no package relocation, so no jar this workspace builds carries the shaded packages, and `community/lucene-index` (31 files), `community/neo4j` (1 file), `community/dbms` (1 file), `community/community-it/index-it` (1 file) import them. Keep building this module with Maven — `jk mvn -pl community/lucene9-shaded install` publishes G:A into `~/.m2/repository` — and depend on that artifact from a `file://` repository over `~/.m2/repository` in place of the workspace edge.  
+- (1) `maven-shade-plugin` relocates org.apache.lucene → org.neo4j.shaded.lucene9; jk relocates packages only in the fat jar of an `[application]`, and a workspace sibling compiles against this module's classes tree, which carries no shaded package, yet `community/lucene-index` (31 files), `community/neo4j` (1 file), `community/dbms` (1 file), `community/community-it/index-it` (1 file) import them. Keep building this module with Maven — `jk mvn -pl community/lucene9-shaded install` publishes G:A into `~/.m2/repository` — and depend on that artifact from a `file://` repository over `~/.m2/repository` in place of the workspace edge.  
   repos: neo4j
 - (1) packaging `war` (`maven-war-plugin`) is not supported: jk builds jars, Boot jars and native images. Keep building this module with `jk mvn package`. (2 modules: hadoop-common-project/hadoop-auth-examples, hadoop-yarn-project/hadoop-yarn/hadoop-yarn-applications/hadoop-yarn-applications-catalog/hadoop-yarn-applications-catalog-webapp)  
   repos: hadoop
 
 ## jk lock failure
 
-- (3) G:A is declared without a version, but no [platform-dependencies] BOM manages it — add a `version`, or import the BOM that pins it.  
-  repos: jenkins, keycloak, quarkus
-- (1) Cannot resolve dependencies: · No versions of G:A match N · The project depends on G:A N  
-  repos: java-design-patterns
 - (1) Cannot resolve dependencies: · No versions of G:A match N-SNAPSHOT · N-SNAPSHOT is a snapshot, and no repository G:A may resolve from serves snapshots: central (releases only), jumpkick (releases only), g  
   repos: questdb
+- (1) [test-dependencies] G:A platform-managed cannot run under jk: its suites run through G:A, which needs G:A N or later — raise the pin to N  
+  repos: spring-cloud-alibaba
 
 ## jk build failure
 
-- (1) <path>  
-  repos: hadoop
+- (1) <path> Return an empty collection rather than null. [ReturnEmptyCollectionRatherThanNull]  
+  repos: TheAlgorithms-Java
 - (1) <path> error: duplicate class: org.neo4j.cypher.internal.parser.v5.Cypher5Lex  
   repos: neo4j
+- (1) <path> error: package org.jboss.security does not exist  
+  repos: keycloak
+- (1) Error during the transformation of 'com.iluwatar.prototype.Prototype'; post-compiler 'lombok.bytecode.SneakyThrowsRemover' caused an exception: java.lang.IllegalArgumentException: Unsupported class file major version 69 · at org.lombokweb.asm.ClassReader.<init  
+  repos: java-design-patterns
+- (1) [generate.avro] inputs [src/main/avro/**/*.avsc, src/main/avro/**/*.avpr, src/main/avro/**/*.avdl] match no file under <path>  
+  repos: hadoop
 - (1) checkstyle failed (exit 255) before writing its report: · Could not find config XML file '<path>  
+  repos: jenkins
+- (1) checkstyle failed (exit 255) before writing its report: · Files to process must be specified, found 0.  
   repos: nacos
-- (1) spotbugs failed (exit 1) before writing its report: · SLF4J(W): No SLF4J providers were found. · SLF4J(W): Defaulting to no-operation (NOP) logger implementation  
-  repos: TheAlgorithms-Java
-- (1) the runtime closure of G:A did not materialize under <path> FileSystemException: <path>  
-  repos: spring-cloud-alibaba
+- (1) repository `apache.snapshots` at http://repository.apache.org/snapshots, declared by the POM of G:A, was not used: it is plaintext http, and a repository  
+  repos: quarkus
 
 ## jk test failure
 
-- (1) + [1 of 8] G:A - took 29ms  
+- (1) + [1 of 8] G:A - took 21ms  
   repos: dataease
 - (1) 1 test failure  
   repos: thingsboard
 - (1) Unable to open DISPLAY  
   repos: cryptomator
-- (1) `run-tests` was in flight for 23m 25s when the run was cancelled; its fork printed nothing  
+- (1) test discovery exited 3 before any test ran — java.lang.OutOfMemoryError: Metaspace · Fix: the test discovery JVM ran out of memory (Metaspace) before it ran a test; the frames above name the framework that filled it — a test framework that starts the applicat  
   repos: floci
-- (1) test failure: com.ctrip.framework.apollo.build.sql.converter.ApolloSqlConverterAutoGeneratedTest — G:A#checkAutoGenerated() — java.lang.IllegalStateException: illegal class path: <path>  
+- (1) test failure: com.ctrip.framework.apollo.build.sql.converter.ApolloSqlConverterH2Test — G:A#checkH2() — java.lang.IllegalStateException: illegal class path: <path>  
   repos: apollo
-- (1) test failure: com.macro.mall.search.MallSearchApplicationTests — G:A#testGetAllEsProductList() — java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@35b58254 testClass = com.macro.mall.se  
+- (1) test failure: com.macro.mall.search.MallSearchApplicationTests — G:A#testGetAllEsProductList() — java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@446dacf9 testClass = com.macro.mall.se  
   repos: mall
 - (1) test failure: com.xxl.job.executor.test.openclaw.OpenClawTest — G:A#test() — java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@4a00d591 testClass = com.xxl.job.ex  
   repos: xxl-job
