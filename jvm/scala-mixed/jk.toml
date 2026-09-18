@@ -1,0 +1,40 @@
+# One module compiling Java and Scala together in a single Zinc session — the shape Metals imports
+# through jk's BSP: a build target whose languageIds name both languages and whose data carries the
+# Scala compiler version and jars, answering buildTarget/scalacOptions and buildTarget/javacOptions.
+
+name    = "scala-mixed"
+group   = "com.example"
+version = "0.1.0"
+java    = 25
+scala   = "3.9.0"
+
+[application]
+main = "com.example.mixed.Main"
+
+[test-dependencies]
+junit-jupiter = "6.1.3"
+junit-platform-launcher = "6.1.3"
+
+# Test tiers. Bare `jk test` is the unit tier; each profile owns exactly one of the excluded
+# tags, so every tagged test runs in one tier and none is silently skipped.
+[test]
+exclude-tags = ["integration", "slow", "network", "bench"]
+
+[profiles.integration]
+include-tags = ["integration"]
+exclude-tags = []
+
+[profiles.network]
+include-tags = ["network"]
+exclude-tags = ["integration"]
+
+[profiles.slow]
+include-tags = ["slow"]
+exclude-tags = ["integration", "network"]
+
+[profiles.bench]
+include-tags = ["bench"]
+exclude-tags = ["integration", "network", "slow"]
+
+[profiles.ci]
+exclude-tags = ["integration", "slow", "network", "bench"]
