@@ -5,3 +5,9 @@ android/nowinandroid/release.jks
 # local run artifacts
 *.pid
 run*.log
+
+# per-repo logs the corpus harness writes beside each run (the jsonl rows and RESULTS.md are the record)
+corpus/maven-top20/results/*/
+!corpus/maven-top20/results/run1/
+!corpus/maven-top20/results/run2/
+!corpus/maven-top20/results/lock-diff/

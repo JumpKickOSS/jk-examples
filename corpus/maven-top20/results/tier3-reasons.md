@@ -1,6 +1,6 @@
-# Tier-3 reasons (import ERRORs and jk failures), grouped — run11
+# Tier-3 reasons (import ERRORs and jk failures), grouped — run12
 
-Generated 2026-09-17 14:17. Module prefixes, coordinates, versions and paths are normalized so one line = one distinct cause = one ticket candidate.
+Generated 2026-09-17 20:26. Module prefixes, coordinates, versions and paths are normalized so one line = one distinct cause = one ticket candidate.
 
 ## import Tier 3 (not imported)
 
@@ -77,10 +77,8 @@ Generated 2026-09-17 14:17. Module prefixes, coordinates, versions and paths are
 
 ## jk lock failure
 
-- (2) Resolving dependency graph...  
-  repos: keycloak, quarkus
-- (1) Cannot resolve dependencies: · No versions of G:A match N · The project depends on G:A N  
-  repos: java-design-patterns
+- (2) Cannot resolve dependencies: · No versions of G:A match N · The project depends on G:A N  
+  repos: java-design-patterns, keycloak
 - (1) Cannot resolve dependencies: · No versions of G:A match N-SNAPSHOT · N-SNAPSHOT is a snapshot, and no repository G:A may resolve from serves snapshots: central (releases only), jumpkick (releases only), g  
   repos: questdb
 
@@ -88,24 +86,26 @@ Generated 2026-09-17 14:17. Module prefixes, coordinates, versions and paths are
 
 - (1) <path> error: duplicate class: org.neo4j.cypher.internal.parser.v5.Cypher5Lex  
   repos: neo4j
-- (1) protoc failed (exit 1): · G:A: "hadoop.common.RequestHeaderProto.methodName" is already defined in file "ProtobufRpcEngine.proto". · G:A: "hadoop.common.RequestHeaderProto.declaringClassProtocolName" is alr  
+- (1) Cannot resolve dependencies: · Resolution budget exceeded: no decision, version catalog read or POM read advanced for 120 s while reading the dependencies of G:A:@N (after 1 decisions and reads); set JK_RESOLVE_TIM  
+  repos: jenkins
+- (1) repository `Codehaus Snapshots` at http://snapshots.repository.codehaus.org/, declared by the POM of G:A, was not used: it is plaintext http, and a repositor  
   repos: hadoop
-- (1) quarkus-augment failed (exit 1): · at org.eclipse.aether.transport.http.HttpTransporter.handleStatus(G:A) · at org.eclipse.aether.transport.http.HttpTransporter.execute(G:A)  
-  repos: floci
 - (1) repository `apache.snapshots` at http://repository.apache.org/snapshots, declared by the POM of G:A, was not used: it is plaintext http, and a repository  
-  repos: thingsboard
+  repos: quarkus
 
 ## jk test failure
 
-- (1) + [1 of 8] G:A - took 56ms  
-  repos: dataease
+- (1) 1 test failure  
+  repos: thingsboard
 - (1) Unable to open DISPLAY  
   repos: cryptomator
-- (1) `compile-java` unknown enum constant javax.annotation.meta.When.MAYBE  
-  repos: jenkins
-- (1) test failure: com.alibaba.cloud.nacos.SmartConfigurationPropertiesRebinderIntegrationTest — G:A#testUsingConfigurationPropertiesRebinder_whenBehaviorIsDefault() — java.lang.IllegalArgumentException: Unabl  
+- (1) test discovery exited 2 before any test ran — incompatible JUnit Platform on the test classpath — NoClassDefFoundError: org/junit/platform/engine/OutputDirectoryCreator · Two versions of the org.junit.jupiter line on the test classpath: · N: org.junit.jup  
+  repos: zipkin
+- (1) test failed  
+  repos: floci
+- (1) test failure: com.alibaba.cloud.circuitbreaker.sentinel.ReactiveSentinelCircuitBreakerIntegrationTest — G:A#test() — java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConf  
   repos: spring-cloud-alibaba
-- (1) test failure: com.alibaba.nacos.logger.adapter.log4j2.NacosClientPropertiesLookupTest — G:A#testLookUp() — java.lang.NoClassDefFoundError: org/apache/logging/log4j/core/lookup/AbstractLookup  
+- (1) test failure: com.alibaba.nacos.logger.adapter.log4j2.Log4J2NacosLoggingAdapterTest — G:A#testIsNeedReloadConfiguration() — java.lang.ClassCastException: class org.apache.logging.slf4j.SLF4JLoggerContext cannot be cast to cla  
   repos: nacos
 - (1) test failure: com.ctrip.framework.apollo.build.sql.converter.ApolloSqlConverterH2Test#checkH2() — java.lang.IllegalStateException: illegal class path: <path>  
   repos: apollo
@@ -113,8 +113,6 @@ Generated 2026-09-17 14:17. Module prefixes, coordinates, versions and paths are
   repos: mall
 - (1) test failure: com.xxl.job.openapi.ExecutorBizTest — G:A#trigger() — java.lang.RuntimeException: Http Request Error (Connection refused (connect failed)). for url : http://G:A/trigger  
   repos: xxl-job
-- (1) test failure: zipkin2.collector.CollectorTest — G:A#accept_storageError() — java.lang.AssertionError:  
-  repos: zipkin
 
 ## Maven-side failure (for context)
 
