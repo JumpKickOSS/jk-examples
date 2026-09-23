@@ -16,55 +16,55 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:e27d429527d65e6eff0c3f3ed8badbf8af25ec47db682b748bab256feda8fb65"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-base:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-classes-quic:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-compression:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-dns:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-haproxy:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-http2:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-http3:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-http:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-marshalling:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-memcache:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-mqtt:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-native-quic:jar:linux-aarch_64@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-native-quic:jar:linux-x86_64@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-native-quic:jar:osx-aarch_64@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-native-quic:jar:osx-x86_64@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-native-quic:jar:windows-x86_64@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-protobuf:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-redis:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-smtp:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-socks:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-stomp:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-xml:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-handler-proxy:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-handler-ssl-ocsp:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-handler:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-resolver-dns-classes-macos:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-resolver-dns-native-macos:jar:osx-aarch_64@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-resolver-dns-native-macos:jar:osx-x86_64@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-resolver-dns:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-resolver:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport-classes-epoll:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport-classes-io_uring:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport-classes-kqueue:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport-native-epoll:jar:linux-aarch_64@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport-native-epoll:jar:linux-riscv64@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport-native-epoll:jar:linux-x86_64@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport-native-io_uring:jar:linux-aarch_64@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport-native-io_uring:jar:linux-riscv64@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport-native-io_uring:jar:linux-x86_64@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport-native-kqueue:jar:osx-aarch_64@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport-native-kqueue:jar:osx-x86_64@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport-native-unix-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport-rxtx:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport-sctp:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport-udt:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-codec-base:jar:@4.2.18.Final",
+  "io.netty:netty-codec-classes-quic:jar:@4.2.18.Final",
+  "io.netty:netty-codec-compression:jar:@4.2.18.Final",
+  "io.netty:netty-codec-dns:jar:@4.2.18.Final",
+  "io.netty:netty-codec-haproxy:jar:@4.2.18.Final",
+  "io.netty:netty-codec-http2:jar:@4.2.18.Final",
+  "io.netty:netty-codec-http3:jar:@4.2.18.Final",
+  "io.netty:netty-codec-http:jar:@4.2.18.Final",
+  "io.netty:netty-codec-marshalling:jar:@4.2.18.Final",
+  "io.netty:netty-codec-memcache:jar:@4.2.18.Final",
+  "io.netty:netty-codec-mqtt:jar:@4.2.18.Final",
+  "io.netty:netty-codec-native-quic:jar:linux-aarch_64@4.2.18.Final",
+  "io.netty:netty-codec-native-quic:jar:linux-x86_64@4.2.18.Final",
+  "io.netty:netty-codec-native-quic:jar:osx-aarch_64@4.2.18.Final",
+  "io.netty:netty-codec-native-quic:jar:osx-x86_64@4.2.18.Final",
+  "io.netty:netty-codec-native-quic:jar:windows-x86_64@4.2.18.Final",
+  "io.netty:netty-codec-protobuf:jar:@4.2.18.Final",
+  "io.netty:netty-codec-redis:jar:@4.2.18.Final",
+  "io.netty:netty-codec-smtp:jar:@4.2.18.Final",
+  "io.netty:netty-codec-socks:jar:@4.2.18.Final",
+  "io.netty:netty-codec-stomp:jar:@4.2.18.Final",
+  "io.netty:netty-codec-xml:jar:@4.2.18.Final",
+  "io.netty:netty-codec:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-handler-proxy:jar:@4.2.18.Final",
+  "io.netty:netty-handler-ssl-ocsp:jar:@4.2.18.Final",
+  "io.netty:netty-handler:jar:@4.2.18.Final",
+  "io.netty:netty-resolver-dns-classes-macos:jar:@4.2.18.Final",
+  "io.netty:netty-resolver-dns-native-macos:jar:osx-aarch_64@4.2.18.Final",
+  "io.netty:netty-resolver-dns-native-macos:jar:osx-x86_64@4.2.18.Final",
+  "io.netty:netty-resolver-dns:jar:@4.2.18.Final",
+  "io.netty:netty-resolver:jar:@4.2.18.Final",
+  "io.netty:netty-transport-classes-epoll:jar:@4.2.18.Final",
+  "io.netty:netty-transport-classes-io_uring:jar:@4.2.18.Final",
+  "io.netty:netty-transport-classes-kqueue:jar:@4.2.18.Final",
+  "io.netty:netty-transport-native-epoll:jar:linux-aarch_64@4.2.18.Final",
+  "io.netty:netty-transport-native-epoll:jar:linux-riscv64@4.2.18.Final",
+  "io.netty:netty-transport-native-epoll:jar:linux-x86_64@4.2.18.Final",
+  "io.netty:netty-transport-native-io_uring:jar:linux-aarch_64@4.2.18.Final",
+  "io.netty:netty-transport-native-io_uring:jar:linux-riscv64@4.2.18.Final",
+  "io.netty:netty-transport-native-io_uring:jar:linux-x86_64@4.2.18.Final",
+  "io.netty:netty-transport-native-kqueue:jar:osx-aarch_64@4.2.18.Final",
+  "io.netty:netty-transport-native-kqueue:jar:osx-x86_64@4.2.18.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport-rxtx:jar:@4.2.18.Final",
+  "io.netty:netty-transport-sctp:jar:@4.2.18.Final",
+  "io.netty:netty-transport-udt:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
@@ -74,7 +74,7 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:fdf236d2b76aa9710684401fdad7dff9dec56e43da5d39172c9a55ba5f14b360"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
@@ -84,9 +84,9 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:7e4612bead7ba88ac6f7908fa722f90ad6835ea96505c9e40b2f93686c1f61f3"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
@@ -96,11 +96,11 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:d1c4c4327fde2bf6ec773b070344907a7a4844f1843528ae917905e2c3547478"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-base:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-handler:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-codec-base:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-handler:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
@@ -110,10 +110,10 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:9d8a4b9a6a2a166ec5a4bbe51a78b4f6a726457c51d81495743c7e7ccb9f4765"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-base:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-codec-base:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 excluded-by = [
   "io.netty:netty-buffer <- io.netty:netty-all@4.2.18.Final",
@@ -129,10 +129,10 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:6f4b6da1483a82a637804740c2fb61385c9337a5e7ae5e357720cc03ba60b728"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-base:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-codec-base:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
@@ -142,9 +142,9 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:bf00d403810a77f372f4e1916af81cb1d5f3d4b13682716f821d471d1d2df077"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-base:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-codec-base:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 excluded-by = [
   "io.netty:netty-buffer <- io.netty:netty-all@4.2.18.Final",
@@ -159,12 +159,12 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:a45a2b06c377b9c87c21ae2b37f04c8d808192590a73d977e7a60fd59921f283"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-base:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-http:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-handler:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-codec-base:jar:@4.2.18.Final",
+  "io.netty:netty-codec-http:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-handler:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 excluded-by = [
   "io.netty:netty-buffer <- io.netty:netty-all@4.2.18.Final",
@@ -182,17 +182,17 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:cc1652ece111e35a7677c8260499cc6709950061998f9d1a36496b352f456273"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-base:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-classes-quic:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-http:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-native-quic:jar:linux-aarch_64@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-native-quic:jar:linux-x86_64@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-native-quic:jar:osx-aarch_64@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-native-quic:jar:osx-x86_64@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-native-quic:jar:windows-x86_64@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-codec-base:jar:@4.2.18.Final",
+  "io.netty:netty-codec-classes-quic:jar:@4.2.18.Final",
+  "io.netty:netty-codec-http:jar:@4.2.18.Final",
+  "io.netty:netty-codec-native-quic:jar:linux-aarch_64@4.2.18.Final",
+  "io.netty:netty-codec-native-quic:jar:linux-x86_64@4.2.18.Final",
+  "io.netty:netty-codec-native-quic:jar:osx-aarch_64@4.2.18.Final",
+  "io.netty:netty-codec-native-quic:jar:osx-x86_64@4.2.18.Final",
+  "io.netty:netty-codec-native-quic:jar:windows-x86_64@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 excluded-by = [
   "io.netty:netty-buffer <- io.netty:netty-all@4.2.18.Final",
@@ -215,12 +215,12 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:2d50765eb58591ce35146c54ca032a257808d2165d8985a8522c70ea1470e8d7"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-base:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-compression:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-handler:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-codec-base:jar:@4.2.18.Final",
+  "io.netty:netty-codec-compression:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-handler:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 excluded-by = [
   "io.netty:netty-buffer <- io.netty:netty-all@4.2.18.Final",
@@ -238,10 +238,10 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:eccf83cbbd1319db879424c4559d465dc43251fe1a8ff759c4320b5adbcf26b7"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-base:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-codec-base:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 excluded-by = [
   "io.netty:netty-buffer <- io.netty:netty-all@4.2.18.Final",
@@ -258,10 +258,10 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:7e8bf4c9b74c0e6ae3ddadb8bbf2508e6851f876380543c4fd21331257f70098"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-base:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-codec-base:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 excluded-by = [
   "io.netty:netty-buffer <- io.netty:netty-all@4.2.18.Final",
@@ -277,10 +277,10 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:2c43f4e75beb6efba94ee6dd63a877d21cc611888e2a49f04e9dce28b874bfe4"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-base:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-codec-base:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 excluded-by = [
   "io.netty:netty-buffer <- io.netty:netty-all@4.2.18.Final",
@@ -296,7 +296,7 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:df4d14edc1f6e03b27ba63ed8a72687b23c021cae2979c5ab76ef46e9af9fa38"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-codec-classes-quic:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-codec-classes-quic:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
@@ -306,7 +306,7 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:45952dcfa200317add275fbbedf32967cb3e5528fc84a5d2b7ccc4439e8d3f88"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-codec-classes-quic:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-codec-classes-quic:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
@@ -316,7 +316,7 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:f99bd674139c0e70d82aee64911047a7bd69e5a8fb7c28fc828e1076490a9471"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-codec-classes-quic:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-codec-classes-quic:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
@@ -326,7 +326,7 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:827c871846eab219e222d24af19c3b713549a51ecbc6769c70ec118eea03eefc"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-codec-classes-quic:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-codec-classes-quic:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
@@ -336,7 +336,7 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:149bdc03262c145ab509a6464d27be4f32fa5a02723d178e1f2c445766f5102f"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-codec-classes-quic:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-codec-classes-quic:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
@@ -346,10 +346,10 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:1bcaedd0da94f8579477f0848e910c24aced8b1ed7c3e1bff16d56fd0229b516"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-base:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-codec-base:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 excluded-by = [
   "com.google.protobuf.nano:protobuf-javanano <- io.netty:netty-all@4.2.18.Final",
@@ -367,10 +367,10 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:ac0e1c19fe557fa41daa47595e6aee58a70eb71c0cea23447584db65444c20a8"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-base:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-codec-base:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 excluded-by = [
   "io.netty:netty-buffer <- io.netty:netty-all@4.2.18.Final",
@@ -386,10 +386,10 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:7aa734e78618fdceedea03e454575f49f01eb3abd7066389a9358f39aada2999"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-base:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-codec-base:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 excluded-by = [
   "io.netty:netty-buffer <- io.netty:netty-all@4.2.18.Final",
@@ -405,10 +405,10 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:25dea7bc1ad990ab8959065f0690b63574d8db4f51033cd98458fc84c59367f3"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-base:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-codec-base:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 excluded-by = [
   "io.netty:netty-buffer <- io.netty:netty-all@4.2.18.Final",
@@ -424,10 +424,10 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:02aa4c10c182523aa615a6c3b8d21cc790f77e12d9a3a269919200cfa89b32d3"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-base:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-codec-base:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 excluded-by = [
   "io.netty:netty-buffer <- io.netty:netty-all@4.2.18.Final",
@@ -443,9 +443,9 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:f0c35fe4a9ad4c646c429959a078752e1e75ea4b067055e523eb0a2622c7ea57"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-base:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-codec-base:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 excluded-by = [
   "com.fasterxml:aalto-xml <- io.netty:netty-all@4.2.18.Final",
@@ -461,13 +461,13 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:439645eb5061f8f50fbf27afacce394e4cecc4d373e1f7a384837e4661d5f430"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-base:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-compression:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-marshalling:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-protobuf:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-codec-base:jar:@4.2.18.Final",
+  "io.netty:netty-codec-compression:jar:@4.2.18.Final",
+  "io.netty:netty-codec-marshalling:jar:@4.2.18.Final",
+  "io.netty:netty-codec-protobuf:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 excluded-by = [
   "io.netty:netty-buffer <- io.netty:netty-all@4.2.18.Final",
@@ -493,13 +493,13 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:d7786de71c0d405b80b4262e0c585618e6f20e7fd3188cb4f599ffc4029ee9ea"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-base:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-http:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-socks:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-handler:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-codec-base:jar:@4.2.18.Final",
+  "io.netty:netty-codec-http:jar:@4.2.18.Final",
+  "io.netty:netty-codec-socks:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-handler:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 excluded-by = [
   "io.netty:netty-buffer <- io.netty:netty-all@4.2.18.Final",
@@ -518,10 +518,10 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:df5b317e5333390a897945e6489f8662b3c47eec43631a84cd809348e1c1898c"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-codec-http:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-handler:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-resolver-dns:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-codec-http:jar:@4.2.18.Final",
+  "io.netty:netty-handler:jar:@4.2.18.Final",
+  "io.netty:netty-resolver-dns:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 excluded-by = [
   "io.netty:netty-codec-http <- io.netty:netty-all@4.2.18.Final",
@@ -537,12 +537,12 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:6d5a08d9dd6d7d0211202e22dbb1629b23a62550335c7e80892da1d4cb115540"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-base:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-resolver:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport-native-unix-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-codec-base:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-resolver:jar:@4.2.18.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
@@ -552,9 +552,9 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:377abd8b198bde174d18b74ef9bac84251b56c8e5ce373d7099bde0d297055c7"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-resolver-dns:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport-native-unix-common:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-resolver-dns:jar:@4.2.18.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
@@ -564,7 +564,7 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:9030827a258287b843f0c5381c22e65300770f7460d7378e7cd83073cafbd857"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-resolver-dns-classes-macos:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-resolver-dns-classes-macos:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
@@ -574,7 +574,7 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:144823796e9b8222cce8ee8ab3f632f263564bdb4231c8569615506530df83f4"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-resolver-dns-classes-macos:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-resolver-dns-classes-macos:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
@@ -584,13 +584,13 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:7dd3ec96bef04abc91a0f461f8acc19ebc0738c257ea653aea9dd0ad67b3b1ce"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-base:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec-dns:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-handler:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-resolver:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-codec-base:jar:@4.2.18.Final",
+  "io.netty:netty-codec-dns:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-handler:jar:@4.2.18.Final",
+  "io.netty:netty-resolver:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
@@ -600,7 +600,7 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:68373ec544cf769ba17bf2ef455166d98f2c260dff536edf35ef57067a9c155f"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
@@ -610,10 +610,10 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:3677ca998f3db749d3fdb0fb1b1674f9809f4fbe8f819a346f4858dfb16c4d95"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport-native-unix-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
@@ -623,10 +623,10 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:e27820fe669e6b5f19c4e9d0acd0142afbe2719c7f6380e6bee357d0db9c5a26"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport-native-unix-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
@@ -636,10 +636,10 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:be48ee5b8a2328a1f4f2160270344175612dd9567787727de0dbaecb694beb51"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport-native-unix-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
@@ -649,11 +649,11 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:542ec436b3bc5ed6eed946573ce0ad2c8776517badb949817d06c7294b9d023e"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport-classes-epoll:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport-native-unix-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport-classes-epoll:jar:@4.2.18.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
@@ -663,11 +663,11 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:cecb20bc4a4429a9787903914f91c3719b6b6e209b2a366d39fba04ee41fae91"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport-classes-epoll:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport-native-unix-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport-classes-epoll:jar:@4.2.18.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
@@ -677,11 +677,11 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:32a340971182d901cea513588549cfadc392bb7342f930379a6e34d853a331f0"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport-classes-epoll:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport-native-unix-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport-classes-epoll:jar:@4.2.18.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
@@ -691,11 +691,11 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:2f2cbf3a6dc996b4b955da42b0c692abca4dfc93c7bd5b09feee54c94e48b391"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport-classes-io_uring:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport-native-unix-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport-classes-io_uring:jar:@4.2.18.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
@@ -705,11 +705,11 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:4f6cbfef22526fb21847024a319a66fc95b57d3d47c6fe09afb0542f5bb8f717"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport-classes-io_uring:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport-native-unix-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport-classes-io_uring:jar:@4.2.18.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
@@ -719,11 +719,11 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:d3a8f1de18c910b6292dbf2187db6093b261e8a76086da0ecfcf1ded7e9a80a3"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport-classes-io_uring:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport-native-unix-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport-classes-io_uring:jar:@4.2.18.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
@@ -733,11 +733,11 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:7e0ab76f3935ca036a7fb19d34821b8d22c69fbd75a22d4b344fd65668d23131"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport-classes-kqueue:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport-native-unix-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport-classes-kqueue:jar:@4.2.18.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
@@ -747,11 +747,11 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:ad0a842bc9f8064dec6ee3c264e0f24131ebe690e9757616c4700490956d7f1f"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport-classes-kqueue:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport-native-unix-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport-classes-kqueue:jar:@4.2.18.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
@@ -761,9 +761,9 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:cada7023d09136af128511ca94421d69dc84d0f1f64c9e1f127a1271bb62932a"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
@@ -773,8 +773,8 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:5e21cbbaafe350a75c1b6b502fa94b090fc8c2c88ba66d3f05a68d60f4e598c6"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 excluded-by = [
   "io.netty:netty-buffer <- io.netty:netty-all@4.2.18.Final",
@@ -789,10 +789,10 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:8a53aa9b5499f65802c690e1e80f42c87ac57410f6817346f9be29c4ec154bdb"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-codec:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-codec:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 excluded-by = [
   "io.netty:netty-buffer <- io.netty:netty-all@4.2.18.Final",
@@ -808,9 +808,9 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:e11b9ac44ebc4450df81727df917d55eedcdfd99cea8b112506a25f9f03ddb2b"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-transport:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-transport:jar:@4.2.18.Final",
 ]
 excluded-by = [
   "com.barchart.udt:barchart-udt-bundle <- io.netty:netty-all@4.2.18.Final",
@@ -826,9 +826,9 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:eac4f12068db4489e60c6520fad663e5d872f0436a7c641aa9e08db649947863"
 scopes   = ["main"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-common:jar:@4.2.18.Final <- 4.2.18.Final",
-  "io.netty:netty-resolver:jar:@4.2.18.Final <- 4.2.18.Final",
+  "io.netty:netty-buffer:jar:@4.2.18.Final",
+  "io.netty:netty-common:jar:@4.2.18.Final",
+  "io.netty:netty-resolver:jar:@4.2.18.Final",
 ]
 
 [[artifact]]
@@ -852,10 +852,10 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:555d6cf20fa1710884dd01b86cc5785397ba73e21ada2d4b784f5f1a14dcafc4"
 scopes   = ["test"]
 deps = [
-  "org.apiguardian:apiguardian-api:jar:@1.1.2 <- 1.1.2",
-  "org.jspecify:jspecify:jar:@1.0.0 <- 1.0.0",
-  "org.junit.platform:junit-platform-commons:jar:@6.1.3 <- 6.1.3",
-  "org.opentest4j:opentest4j:jar:@1.3.0 <- 1.3.0",
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
+  "org.junit.platform:junit-platform-commons:jar:@6.1.3",
+  "org.opentest4j:opentest4j:jar:@1.3.0",
 ]
 
 [[artifact]]
@@ -865,10 +865,10 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:414559e78bbfa3bdb2eab009ac3ab1e22369ac31117c270a0bd666da115c5c6c"
 scopes   = ["test"]
 deps = [
-  "org.apiguardian:apiguardian-api:jar:@1.1.2 <- 1.1.2",
-  "org.jspecify:jspecify:jar:@1.0.0 <- 1.0.0",
-  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3 <- 6.1.3",
-  "org.junit.platform:junit-platform-engine:jar:@6.1.3 <- 6.1.3",
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
+  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3",
+  "org.junit.platform:junit-platform-engine:jar:@6.1.3",
 ]
 
 [[artifact]]
@@ -878,9 +878,9 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:05c51cedba2c06a9770707391e006cee825876937dea580b94a265ce145d4939"
 scopes   = ["test"]
 deps = [
-  "org.apiguardian:apiguardian-api:jar:@1.1.2 <- 1.1.2",
-  "org.jspecify:jspecify:jar:@1.0.0 <- 1.0.0",
-  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3 <- 6.1.3",
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
+  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3",
 ]
 
 [[artifact]]
@@ -890,9 +890,9 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:6b0a14075c74221de53047e363860b7d19fce802bebc152df2c35c4089c6c379"
 scopes   = ["test"]
 deps = [
-  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3 <- 6.1.3",
-  "org.junit.jupiter:junit-jupiter-engine:jar:@6.1.3 <- 6.1.3",
-  "org.junit.jupiter:junit-jupiter-params:jar:@6.1.3 <- 6.1.3",
+  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3",
+  "org.junit.jupiter:junit-jupiter-engine:jar:@6.1.3",
+  "org.junit.jupiter:junit-jupiter-params:jar:@6.1.3",
 ]
 
 [[artifact]]
@@ -902,8 +902,8 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:a4774ae923c109544034aeae7c762cf017fbcdd1342403ba90e0921984b608c3"
 scopes   = ["test"]
 deps = [
-  "org.apiguardian:apiguardian-api:jar:@1.1.2 <- 1.1.2",
-  "org.jspecify:jspecify:jar:@1.0.0 <- 1.0.0",
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
 ]
 
 [[artifact]]
@@ -913,10 +913,10 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:21ad7ad3a35beda16387979317be1833a72a71d812f9a66ee4b9a7bafb56334c"
 scopes   = ["test"]
 deps = [
-  "org.apiguardian:apiguardian-api:jar:@1.1.2 <- 1.1.2",
-  "org.jspecify:jspecify:jar:@1.0.0 <- 1.0.0",
-  "org.junit.platform:junit-platform-commons:jar:@6.1.3 <- 6.1.3",
-  "org.opentest4j:opentest4j:jar:@1.3.0 <- 1.3.0",
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
+  "org.junit.platform:junit-platform-commons:jar:@6.1.3",
+  "org.opentest4j:opentest4j:jar:@1.3.0",
 ]
 
 [[artifact]]
@@ -926,9 +926,9 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:1dec64b1fc0b7c47a11302aa5b4d37d8160c041b396e27067709ce775601a7b6"
 scopes   = ["test"]
 deps = [
-  "org.apiguardian:apiguardian-api:jar:@1.1.2 <- 1.1.2",
-  "org.jspecify:jspecify:jar:@1.0.0 <- 1.0.0",
-  "org.junit.platform:junit-platform-engine:jar:@6.1.3 <- 6.1.3",
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
+  "org.junit.platform:junit-platform-engine:jar:@6.1.3",
 ]
 
 [[artifact]]

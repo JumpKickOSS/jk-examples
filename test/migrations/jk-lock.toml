@@ -25,8 +25,8 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:6789d68f95904cf274a6410fdfcc5530976bc94197c856909459bb8c64db557b"
 scopes   = ["test"]
 deps = [
-  "com.fasterxml.jackson.core:jackson-annotations:jar:@2.22 <- 2.10.3",
-  "org.slf4j:slf4j-api:jar:@2.0.17 <- 1.7.30",
+  "com.fasterxml.jackson.core:jackson-annotations:jar:@2.22",
+  "org.slf4j:slf4j-api:jar:@2.0.17",
 ]
 
 [[artifact]]
@@ -36,9 +36,9 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:582b772e0c52fa9d24710617ef610655465edd9a2930b0db75fc8667d6a8d02b"
 scopes   = ["test"]
 deps = [
-  "com.github.docker-java:docker-java-transport:jar:@3.4.2 <- 3.4.2",
-  "net.java.dev.jna:jna:jar:@5.13.0 <- 5.13.0",
-  "org.slf4j:slf4j-api:jar:@2.0.17 <- 1.7.25",
+  "com.github.docker-java:docker-java-transport:jar:@3.4.2",
+  "net.java.dev.jna:jna:jar:@5.13.0",
+  "org.slf4j:slf4j-api:jar:@2.0.17",
 ]
 
 [[artifact]]
@@ -62,9 +62,9 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:f1c55d80a92c8ecfe3f15fb71785d5b156f3674cb5b9ad55dcfd378ffeed2960"
 scopes   = ["main"]
 deps = [
-  "org.apache.commons:commons-collections4:jar:@4.6.0 <- 4.5.0",
-  "org.apache.commons:commons-lang3:jar:@3.20.0 <- 3.18.0",
-  "org.apache.commons:commons-text:jar:@1.15.0 <- 1.13.1",
+  "org.apache.commons:commons-collections4:jar:@4.6.0",
+  "org.apache.commons:commons-lang3:jar:@3.20.0",
+  "org.apache.commons:commons-text:jar:@1.15.0",
 ]
 excluded-by = [
   "commons-beanutils:commons-beanutils <- org.liquibase:liquibase-core@5.0.4",
@@ -94,7 +94,7 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:8e495b634469d64fb8acfa3495a065cbacc8a0fff55ce1e31007be4c16dc57d3"
 scopes   = ["test"]
 deps = [
-  "org.hamcrest:hamcrest-core:jar:@1.3 <- 1.3",
+  "org.hamcrest:hamcrest-core:jar:@1.3",
 ]
 
 [[artifact]]
@@ -132,7 +132,7 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:58d2da30f058512a1e7f914e39241deca4dff5c27a085b4ed2faa9e7208067f6"
 scopes   = ["main"]
 deps = [
-  "org.apache.commons:commons-lang3:jar:@3.20.0 <- 3.20.0",
+  "org.apache.commons:commons-lang3:jar:@3.20.0",
 ]
 
 [[artifact]]
@@ -156,7 +156,7 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:d651e7640ddb761ad6ecd584d91cbbe5f5fdd4d43a26684bccb79d78c71dd9c7"
 scopes   = ["main"]
 deps = [
-  "com.fasterxml.jackson.core:jackson-annotations:jar:@2.22 <- 2.22",
+  "com.fasterxml.jackson.core:jackson-annotations:jar:@2.22",
 ]
 
 [[artifact]]
@@ -166,7 +166,7 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:1d8b203d4afd06235845162dd79dc6f260c18c7b2aa153554f1712b39e4a6716"
 scopes   = ["main"]
 deps = [
-  "org.flywaydb:flyway-core:jar:@13.7.0 <- 13.7.0",
+  "org.flywaydb:flyway-core:jar:@13.7.0",
 ]
 
 [[artifact]]
@@ -176,8 +176,8 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:9bff50752b1d336d48a92ea30b4efb52b1b2e2703d230753fed083adf633534f"
 scopes   = ["main"]
 deps = [
-  "org.flywaydb:flyway-core:jar:@13.7.0 <- 13.7.0",
-  "org.flywaydb:flyway-database-cockroachdb:jar:@13.7.0 <- 13.7.0",
+  "org.flywaydb:flyway-core:jar:@13.7.0",
+  "org.flywaydb:flyway-database-cockroachdb:jar:@13.7.0",
 ]
 
 [[artifact]]
@@ -208,10 +208,10 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:555d6cf20fa1710884dd01b86cc5785397ba73e21ada2d4b784f5f1a14dcafc4"
 scopes   = ["test"]
 deps = [
-  "org.apiguardian:apiguardian-api:jar:@1.1.2 <- 1.1.2",
-  "org.jspecify:jspecify:jar:@1.0.0 <- 1.0.0",
-  "org.junit.platform:junit-platform-commons:jar:@6.1.3 <- 6.1.3",
-  "org.opentest4j:opentest4j:jar:@1.3.0 <- 1.3.0",
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
+  "org.junit.platform:junit-platform-commons:jar:@6.1.3",
+  "org.opentest4j:opentest4j:jar:@1.3.0",
 ]
 
 [[artifact]]
@@ -221,10 +221,10 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:414559e78bbfa3bdb2eab009ac3ab1e22369ac31117c270a0bd666da115c5c6c"
 scopes   = ["test"]
 deps = [
-  "org.apiguardian:apiguardian-api:jar:@1.1.2 <- 1.1.2",
-  "org.jspecify:jspecify:jar:@1.0.0 <- 1.0.0",
-  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3 <- 6.1.3",
-  "org.junit.platform:junit-platform-engine:jar:@6.1.3 <- 6.1.3",
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
+  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3",
+  "org.junit.platform:junit-platform-engine:jar:@6.1.3",
 ]
 
 [[artifact]]
@@ -234,9 +234,9 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:05c51cedba2c06a9770707391e006cee825876937dea580b94a265ce145d4939"
 scopes   = ["test"]
 deps = [
-  "org.apiguardian:apiguardian-api:jar:@1.1.2 <- 1.1.2",
-  "org.jspecify:jspecify:jar:@1.0.0 <- 1.0.0",
-  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3 <- 6.1.3",
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
+  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3",
 ]
 
 [[artifact]]
@@ -246,9 +246,9 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:6b0a14075c74221de53047e363860b7d19fce802bebc152df2c35c4089c6c379"
 scopes   = ["test"]
 deps = [
-  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3 <- 6.1.3",
-  "org.junit.jupiter:junit-jupiter-engine:jar:@6.1.3 <- 6.1.3",
-  "org.junit.jupiter:junit-jupiter-params:jar:@6.1.3 <- 6.1.3",
+  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3",
+  "org.junit.jupiter:junit-jupiter-engine:jar:@6.1.3",
+  "org.junit.jupiter:junit-jupiter-params:jar:@6.1.3",
 ]
 
 [[artifact]]
@@ -258,8 +258,8 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:a4774ae923c109544034aeae7c762cf017fbcdd1342403ba90e0921984b608c3"
 scopes   = ["test"]
 deps = [
-  "org.apiguardian:apiguardian-api:jar:@1.1.2 <- 1.1.2",
-  "org.jspecify:jspecify:jar:@1.0.0 <- 1.0.0",
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
 ]
 
 [[artifact]]
@@ -269,10 +269,10 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:21ad7ad3a35beda16387979317be1833a72a71d812f9a66ee4b9a7bafb56334c"
 scopes   = ["test"]
 deps = [
-  "org.apiguardian:apiguardian-api:jar:@1.1.2 <- 1.1.2",
-  "org.jspecify:jspecify:jar:@1.0.0 <- 1.0.0",
-  "org.junit.platform:junit-platform-commons:jar:@6.1.3 <- 6.1.3",
-  "org.opentest4j:opentest4j:jar:@1.3.0 <- 1.3.0",
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
+  "org.junit.platform:junit-platform-commons:jar:@6.1.3",
+  "org.opentest4j:opentest4j:jar:@1.3.0",
 ]
 
 [[artifact]]
@@ -282,9 +282,9 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:1dec64b1fc0b7c47a11302aa5b4d37d8160c041b396e27067709ce775601a7b6"
 scopes   = ["test"]
 deps = [
-  "org.apiguardian:apiguardian-api:jar:@1.1.2 <- 1.1.2",
-  "org.jspecify:jspecify:jar:@1.0.0 <- 1.0.0",
-  "org.junit.platform:junit-platform-engine:jar:@6.1.3 <- 6.1.3",
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
+  "org.junit.platform:junit-platform-engine:jar:@6.1.3",
 ]
 
 [[artifact]]
@@ -294,13 +294,13 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:00d0a18af81a12583d03524b6e685b26e3734183d965a6d79c1e9479d5e1c115"
 scopes   = ["main"]
 deps = [
-  "com.opencsv:opencsv:jar:@5.12.0 <- 5.12.0",
-  "commons-io:commons-io:jar:@2.22.0 <- 2.22.0",
-  "javax.xml.bind:jaxb-api:jar:@2.3.1 <- 2.3.1",
-  "org.apache.commons:commons-collections4:jar:@4.6.0 <- 4.6.0",
-  "org.apache.commons:commons-lang3:jar:@3.20.0 <- 3.20.0",
-  "org.apache.commons:commons-text:jar:@1.15.0 <- 1.15.0",
-  "org.yaml:snakeyaml:jar:@2.6 <- 2.6",
+  "com.opencsv:opencsv:jar:@5.12.0",
+  "commons-io:commons-io:jar:@2.22.0",
+  "javax.xml.bind:jaxb-api:jar:@2.3.1",
+  "org.apache.commons:commons-collections4:jar:@4.6.0",
+  "org.apache.commons:commons-lang3:jar:@3.20.0",
+  "org.apache.commons:commons-text:jar:@1.15.0",
+  "org.yaml:snakeyaml:jar:@2.6",
 ]
 
 [[artifact]]
@@ -317,7 +317,7 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:6e0e4cc2d8cae902084f8a2b18728b073a6fd9d1f87c9d8bff8f298c18185b93"
 scopes   = ["main"]
 deps = [
-  "org.checkerframework:checker-qual:jar:@3.55.1 <- 3.55.1",
+  "org.checkerframework:checker-qual:jar:@3.55.1",
 ]
 
 [[artifact]]
@@ -327,7 +327,7 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:31cef12ddec979d1f86d7cf708c41a17da523d05c685fd6642e9d0b2addb7240"
 scopes   = ["test"]
 deps = [
-  "org.jetbrains:annotations:jar:@17.0.0 <- 17.0.0",
+  "org.jetbrains:annotations:jar:@17.0.0",
 ]
 
 [[artifact]]
@@ -344,7 +344,7 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:ddfea59ac074c6d3e24ac2c38622d2d963895e17f70b38ed4bdae4d780be6964"
 scopes   = ["test"]
 deps = [
-  "org.slf4j:slf4j-api:jar:@2.0.17 <- 2.0.17",
+  "org.slf4j:slf4j-api:jar:@2.0.17",
 ]
 
 [[artifact]]
@@ -354,7 +354,7 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:539167f41549b597efa04a40912f58a2d56f422040d014993951ec6f0e14c691"
 scopes   = ["test"]
 deps = [
-  "org.testcontainers:testcontainers:jar:@1.21.4 <- 1.21.4",
+  "org.testcontainers:testcontainers:jar:@1.21.4",
 ]
 
 [[artifact]]
@@ -364,7 +364,7 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:15ce7d24f4a869fcf225875fcfeea8fd1f86991c8f00286e435c8602ea426470"
 scopes   = ["test"]
 deps = [
-  "org.testcontainers:database-commons:jar:@1.21.4 <- 1.21.4",
+  "org.testcontainers:database-commons:jar:@1.21.4",
 ]
 
 [[artifact]]
@@ -374,7 +374,7 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:38fc4c42580c96d9f8cdc2286612dd9e1f589b3ed2f57b3fb5e690f7b1505c03"
 scopes   = ["test"]
 deps = [
-  "org.testcontainers:jdbc:jar:@1.21.4 <- 1.21.4",
+  "org.testcontainers:jdbc:jar:@1.21.4",
 ]
 
 [[artifact]]
@@ -384,12 +384,12 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:ea81a9ca337bbae7ee83f372b92d55140c7ab976bce73ff1b79f2dd151ca9610"
 scopes   = ["test"]
 deps = [
-  "com.github.docker-java:docker-java-api:jar:@3.4.2 <- 3.4.2",
-  "com.github.docker-java:docker-java-transport-zerodep:jar:@3.4.2 <- 3.4.2",
-  "junit:junit:jar:@4.13.2 <- 4.13.2",
-  "org.apache.commons:commons-compress:jar:@1.24.0 <- 1.24.0",
-  "org.rnorth.duct-tape:duct-tape:jar:@1.0.8 <- 1.0.8",
-  "org.slf4j:slf4j-api:jar:@2.0.17 <- 1.7.36",
+  "com.github.docker-java:docker-java-api:jar:@3.4.2",
+  "com.github.docker-java:docker-java-transport-zerodep:jar:@3.4.2",
+  "junit:junit:jar:@4.13.2",
+  "org.apache.commons:commons-compress:jar:@1.24.0",
+  "org.rnorth.duct-tape:duct-tape:jar:@1.0.8",
+  "org.slf4j:slf4j-api:jar:@2.0.17",
 ]
 
 [[artifact]]
