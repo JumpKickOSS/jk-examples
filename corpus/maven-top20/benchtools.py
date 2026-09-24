@@ -577,9 +577,8 @@ _IDENTITY: dict | None = None
 
 
 def jk_identity() -> dict:
-    """Version from `jk --version`, commit from the engine Source checkout or `$JK_SRC`.
-
-    Refuses when either is missing. `JK_COMMIT` is not read.
+    """Version from `jk --version`; commit from the engine's Source checkout, or for a release
+    install the release tag in `$JK_SRC`. Refuses when a source install's commit is unreadable.
     """
     global _IDENTITY
     if _IDENTITY is not None:
@@ -590,10 +589,17 @@ def jk_identity() -> dict:
         detail = (version.stderr or "").strip()
         raise SystemExit("refusing to run: `jk --version` did not report a version" + (f"\n{detail}" if detail else ""))
     source = _engine_source()
-    commit = _git_head(Path(source)) if source else ""
-    if not commit and os.environ.get("JK_SRC"):
-        source = str(Path(os.environ["JK_SRC"]).expanduser())
+    if source:
         commit = _git_head(Path(source))
+    else:
+        # A release install has no source checkout: the published version is the identity, and
+        # its tag in $JK_SRC names the commit when the release was tagged.
+        tag = "v" + reported.split()[-1]
+        src = Path(os.environ.get("JK_SRC", Path.home() / "src" / "oss" / "jk")).expanduser()
+        proc = subprocess.run(["git", "-C", str(src), "rev-parse", "--verify", "-q", tag + "^{commit}"],
+                              capture_output=True, text=True)
+        commit = proc.stdout.strip() if proc.returncode == 0 else f"release {tag} (untagged)"
+        source = "release"
     if not commit:
         raise SystemExit(
             "refusing to run: cannot derive the jk commit from `jk engine status` "
