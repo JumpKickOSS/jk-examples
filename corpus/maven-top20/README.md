@@ -11,15 +11,17 @@ states the counts a later run must not lower.
 |------|------|
 | `repos.toml` | the pinned list: `[[repo]]` (selected), `[[skipped]]` (root pom present but excluded, with reason), `[[alternate]]` (next in line) |
 | `run.sh` / `run.py` | the harness (Python 3.11+, stdlib only) |
+| `tools.toml` | pinned Maven and Gradle GA versions; a stale pin refuses the run |
 | `results/<date>.jsonl` | one row per repo per run, every number and status |
-| `results/<repo>/` | per-step logs, `import-report.md` (the `jk import` fidelity report), `jk-results.md` |
+| `results/runN/<repo>/` | per-step logs, `import-report.md` (the `jk import` fidelity report), `jk-results.md` for that run label |
 | `results/tier3-reasons.md` | every distinct import ERROR / jk failure reason with the repos it affects — ticket fodder |
 | `lockdiff.py` | the lock-vs-Maven diff: per module, the coordinates jk's lock and Maven's `dependency:tree` resolve to different versions, each named by the rule behind jk's answer |
 | `lock-diff/<date>.md`, `results/lock-diff/<date>.jsonl` | its report (summary table + per-repo examples) and one JSON row per repo |
 | `RESULTS.md` | the summary table + Ratchet section |
 
-Clones live **outside** this repo under `/home/bsant/src/scratch/maven-corpus/<name>/`
-(override with `CORPUS_SCRATCH`). The corpus-private Maven local repository is
+Clones live **outside** this repo under `$JK_BENCH_HOME/maven-corpus/<name>/`
+(`JK_BENCH_HOME` defaults to `${XDG_CACHE_HOME:-~/.cache}/jk-bench`; override the corpus
+directory with `CORPUS_SCRATCH`). The corpus-private Maven local repository is
 `$CORPUS_SCRATCH/.m2`, so the first Maven run on a fresh machine really is cold.
 
 ## How the 20 were chosen
@@ -48,19 +50,24 @@ Hard cap 45 minutes per repo (`CORPUS_REPO_CAP`); a step that would start after 
 
 1. **Clone** `--depth 1` at the pinned SHA (reused if present; the tree is reset to the SHA and
    `git clean -fdx`ed before each side).
-2. **Maven**, `MAVEN_OPTS=-Xmx3g`, `JAVA_HOME` = the jk-installed Temurin matching the declared level,
-   plus the repo's `mvn_args` from `repos.toml` when it has any:
+2. **Maven**, `MAVEN_OPTS=-Xmx3g` (override with `CORPUS_MAVEN_XMX`), `JAVA_HOME` = the Temurin
+   `jk jdk ensure temurin-<N>` installs for the declared level (or `maven_jdk`). If that ensure
+   fails, the row is `jdk-unavailable: temurin-<N>` and the Maven side is not run — the host JDK
+   is not a substitute. The row records `JAVA_HOME` and the first line of `java -version`.
+   Plus the repo's `mvn_args` from `repos.toml` when it has any:
    `package -DskipTests` cold → `clean package -DskipTests` (warm clean) → `package -DskipTests` again
    (no-op) → append one comment line to one main `.java` file in the leaf module with the most sources,
    `package -DskipTests` (touch), revert → `test` once with a 20-minute timeout
    (`CORPUS_TEST_CAP`); totals summed from `**/target/surefire-reports/TEST-*.xml`.
-   The launcher is the repo's `mvnw` when it ships one, else the Maven distribution `jk mvn`
-   provisions (`~/.jk/store/tools/maven/3.9.9/bin/mvn`). We call that launcher directly rather than
-   through `jk mvn` because `jk mvn` strips `MAVEN_OPTS` / `JAVA_TOOL_OPTIONS` on purpose
-   (`PassthroughEnv`), and there is no other way to cap the heap without writing into the clone.
+   The launcher is the Maven binary pinned in `tools.toml` (latest GA; the harness refuses a stale
+   pin unless `--allow-stale-tools`, and refuses a failed latest-GA check unless `--offline-tools`).
+   The repo's `mvnw` is not used, and neither is `jk mvn` inside the clone (that would follow the
+   wrapper). The binary is called directly so `MAVEN_OPTS` can cap the heap; `JAVA_TOOL_OPTIONS`,
+   `_JAVA_OPTIONS` and `JDK_HOME` are stripped so they cannot point the JVM somewhere else.
 3. **jk**, with `JK_CACHE_DIR` = a per-repo action cache wiped first (see below): `jk import pom.xml
-   --report results/<repo>/import-report.md` (Tier 3 = ERROR, Tier 2 =
-   WARNING, counted from the report) → `jk lock` → `jk build --skip-tests` cold → again (no-op) → the
+   --report results/<run>/<repo>/import-report.md` (Tier 3 = ERROR, Tier 2 =
+   WARNING, counted from the report) → `jk lock` (its own 15-minute cap, `cap=900`; hitting it is
+   `timeout`, distinct from the 45-minute repo cap) → `jk build --skip-tests` cold → again (no-op) → the
    same touch + `jk build --skip-tests` → revert → `jk test` once with the 20-minute timeout; totals
    from the `Tests:` line of `target/jk-results.md` (and the JUnit XML under
    `target/reports/test-results/` as a cross-check). When a jk step fails, the reason is taken from
@@ -84,7 +91,8 @@ jk itself writes (`jk.toml`, `jk-lock.toml`, `target/`), which the next run's re
 ./run.sh --render              # only rewrite RESULTS.md / tier3-reasons.md from rows on disk
 ./run.sh --skip-mvn            # never run Maven, even when no earlier row exists
 ./run.sh --fresh-m2            # wipe the corpus .m2 first so Maven cold is cold again
-JK_COMMIT=<sha> ./run.sh       # record the commit of a main-built jk in every row (the binary embeds none)
+./run.sh --allow-stale-tools   # run a pin older than the latest GA; every row records stale_tools
+./run.sh --offline-tools       # run when the latest-GA check cannot reach the network; rows record offline_tools
 ./run.sh --run run2              # label the rows; every label gets its own table and a side-by-side column
 ./run.sh --steps import,lock,build --only nacos   # a cold-wall probe: the jk stages named, in protocol order, and no jk test
 ./run.sh --no-tests            # the same prefix spelled short: import, lock and the three builds, no jk test
@@ -94,8 +102,8 @@ JK_COMMIT=<sha> ./run.sh       # record the commit of a main-built jk in every r
 stages — so a probe after the cold, no-op and touch walls pays no test run (about 40 s for a small
 repo instead of 60 s). The stages left out are recorded as `not-run` and render as `—`, never as
 `skipped`, which stays the word for a step whose prerequisite failed; the row carries the note
-`jk steps filtered to …`. The Maven side is untouched by the filter: it is reused from the last row as
-usual, or measured when none exists (`--skip-mvn` to never run it).
+`jk steps filtered to …`. The Maven side is untouched by the filter: it is reused from the last row
+on this host with the same Maven pin, or measured when none exists (`--skip-mvn` to never run it).
 
 Run labels are how the ratchet compares two jk builds: rows carry `run` (default `run1`, file
 `results/<date>.jsonl`; any other label goes to `results/<date>-<label>.jsonl`). `RESULTS.md` renders a
@@ -103,11 +111,21 @@ side-by-side table (one column per label, Maven as the fixed reference), a per-l
 Ratchet counts of the latest label with the delta against the previous one. `results/tier3-reasons.md`
 is always the latest label's.
 
-Never `jk update` mid-run. Every row records `jk --version`, the jk commit (from `JK_COMMIT`, else the
-`v<version>` tag resolved in the jk checkout at `JK_SRC`, default `~/src/oss/jk`), and the sha256 of the
-`jk` binary and the engine jar (read under `JK_HOME` when a private install sets it), so two runs' rows are
-attributable to the exact jk that produced them. A private install drives a run as
+Never `jk update` mid-run. Every row records `jk --version` and the commit `git rev-parse HEAD`
+resolves in the checkout `jk engine status` names as `Source` (`installSource` in
+`--output json`), or in `$JK_SRC` when that line is absent. The run refuses if it cannot derive
+either the version or the commit. The sha256 of the `jk` binary and the engine jar are recorded
+when those files are present (read under `JK_HOME` when a private install sets it), so two runs'
+rows are attributable to the exact jk that produced them. A private install drives a run as
 `JK_HOME=<home> PATH=<home>/bin:$PATH ./run.sh …`.
+Every row also records `maven_version`, `gradle_version`, the binary paths used, `maven_xmx`,
+`java_home`, `java_version`, and a host block. The host id is the first 12 hex digits of sha256
+over cpu model, logical CPUs, RAM GiB rounded, and the OS id (`/etc/os-release` `ID` and
+`VERSION_ID`), unless `JK_BENCH_HOST` is set. Rows written with no host id are host `bocabox`.
+The side-by-side, the ratchet and `Delta vs runN` compare only rows with the current host id;
+other hosts are a separate section and do not move the bar. The Gradle pin is recorded on the
+row; this harness does not run Gradle. Maven numbers are reused only from a previous row on this
+host measured with the same `maven_version`.
 Rows whose Maven side was reused carry `mvn_reused_from = <date of the measured row>` and a `*` in the
 table.
 
@@ -141,9 +159,9 @@ lists are recorded in the row (`import_args`, `mvn_args`) and named above the ta
 
 ## Diffing the lock against Maven's resolution
 
-`./lockdiff.py` runs after a corpus run, on every repo whose latest `jk lock` is green. It copies the
-clone (with the harness's `jk.toml` / `jk-lock.toml`) to `/home/bsant/src/scratch/lock-diff/<name>`
-(`LOCKDIFF_SCRATCH`); with `--relock` it rewrites that copy's lock with the jk under test first, and
+`./lockdiff.py` runs after a corpus run, on every repo whose latest `jk lock` on this host is green. It copies the
+clone (with the harness's `jk.toml` / `jk-lock.toml`) to `$JK_BENCH_HOME/lock-diff/<name>`
+(`LOCKDIFF_SCRATCH`; `$JK_BENCH_HOME` defaults to `${XDG_CACHE_HOME:-~/.cache}/jk-bench`); with `--relock` it rewrites that copy's lock with the jk under test first, and
 with `--reimport` it drops the corpus run's manifests and runs `jk import pom.xml` with that jk before
 the lock (`--jk-home <dir>` names a private install, `<dir>/bin/jk` run with `JK_HOME=<dir>`; the
 default is the `jk` on PATH), so the diff measures the importer and resolver as they are. Maven runs against the harness's own

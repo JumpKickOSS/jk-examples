@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Maven-top-20 corpus runner: Maven (via `jk mvn`) vs jk, one repo at a time.
+"""Maven-top-20 corpus runner: pinned Maven vs jk, one repo at a time.
 
 Reads repos.toml, clones each pinned SHA under $CORPUS_SCRATCH (default
-/home/bsant/src/scratch/maven-corpus/<name>), runs the protocol described in
+$JK_BENCH_HOME/maven-corpus/<name>; $JK_BENCH_HOME defaults to
+${XDG_CACHE_HOME:-~/.cache}/jk-bench), runs the protocol described in
 README.md, appends one JSONL row per repo to results/<date>.jsonl and rewrites
 RESULTS.md + results/tier3-reasons.md from the latest row of every repo.
 
@@ -16,7 +17,6 @@ import argparse
 import datetime as dt
 import json
 import os
-import platform
 import re
 import shutil
 import signal
@@ -28,7 +28,10 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-SCRATCH = Path(os.environ.get("CORPUS_SCRATCH", "/home/bsant/src/scratch/maven-corpus"))
+sys.path.insert(0, str(HERE))
+import benchtools  # noqa: E402
+
+SCRATCH = benchtools.scratch("CORPUS_SCRATCH", "maven-corpus")
 M2 = SCRATCH / ".m2"                 # dedicated Maven local repo so the first run is really cold
 # jk's action cache, one directory per repo, wiped before the repo's first jk step: `jk cold` compiles
 # everything on every run while the artifact store (downloads) stays warm, as Maven's .m2 does for it.
@@ -45,32 +48,41 @@ JK_STAGE_STEPS = {"import": ["jk_import"], "lock": ["jk_lock"],
 NOT_RUN = {"status": "not-run", "exit": None, "wall": 0.0}
 
 JK = ["jk", "--no-progress", "--no-ansi", "--no-notify"]
-JK_MAVEN = Path.home() / ".jk" / "store" / "tools" / "maven" / "3.9.9" / "bin" / "mvn"   # what `jk mvn` provisions
 MVN_ARGS = ["-B", "-q", f"-Dmaven.repo.local={M2}"]
-JDKS = Path.home() / ".jdks"
+TOOLS: benchtools.Tools | None = None
+LAST_JAVA: dict[str, str] = {}
 
 
-def maven_launcher(root: Path) -> list[str]:
-    """The repo's own wrapper when it ships one (like `jk mvn`), else the Maven jk provisioned.
+def maven_xmx_opt() -> str:
+    raw = os.environ.get("CORPUS_MAVEN_XMX", "3g").strip() or "3g"
+    return raw if raw.startswith("-Xmx") else f"-Xmx{raw}"
 
-    We do not go through `jk mvn` itself: its PassthroughEnv deliberately strips MAVEN_OPTS and
-    JAVA_TOOL_OPTIONS, and there is no other heap knob short of writing .mvn/jvm.config into the clone.
-    """
-    if (root / "mvnw").is_file():
-        return ["sh", "./mvnw"]
-    if not JK_MAVEN.is_file():
-        subprocess.run(["jk", "mvn", "-version"], cwd=root, capture_output=True)
-    return [str(JK_MAVEN)]
+
+def maven_launcher(root: Path | None = None) -> list[str]:
+    """The pinned Maven binary. The repo's `mvnw` is not consulted."""
+    del root
+    if TOOLS is None or TOOLS.maven_bin is None:
+        raise SystemExit("refusing to run: Maven has not been provisioned")
+    return [str(TOOLS.maven_bin)]
 
 
 def maven_env(level: str) -> dict:
-    """MAVEN_OPTS heap cap plus JAVA_HOME = the jk-installed Temurin matching the declared level."""
-    env = {"MAVEN_OPTS": "-Xmx3g"}
-    home = JDKS / f"temurin-{level.split('.')[0]}"
-    if home.is_dir():
-        env["JAVA_HOME"] = str(home)
-        env["PATH"] = f"{home}/bin:" + os.environ.get("PATH", "")
-    return env
+    """Heap cap plus JAVA_HOME for `temurin-<level>`. Missing JDK raises; the host JDK is not used."""
+    spec = f"temurin-{str(level).split('.')[0]}"
+    home = benchtools.ensure_jdk(spec)
+    line = benchtools.java_version_line(home)
+    LAST_JAVA.clear()
+    LAST_JAVA.update(java_home=str(home), java_version=line, jdk_spec=spec)
+    return {
+        "MAVEN_OPTS": maven_xmx_opt(),
+        "JAVA_HOME": str(home),
+        "PATH": f"{home / 'bin'}{os.pathsep}{os.environ.get('PATH', '')}",
+        # A shell agent or JDK_HOME must not retarget the JVM the row names.
+        "JAVA_TOOL_OPTIONS": None,
+        "_JAVA_OPTIONS": None,
+        "JDK_HOME": None,
+    }
+
 
 MVN_BOILERPLATE = re.compile(
     r"^\[ERROR\]\s*$|-> \[Help \d\]|To see the full stack trace|Re-run Maven using|"
@@ -92,7 +104,11 @@ def run(cmd: list[str], cwd: Path, log: Path, timeout: float | None, env: dict |
     log.parent.mkdir(parents=True, exist_ok=True)
     full_env = dict(os.environ)
     if env:
-        full_env.update(env)
+        for key, value in env.items():
+            if value is None:
+                full_env.pop(key, None)
+            else:
+                full_env[key] = value
     t0 = time.time()
     with open(log, "ab") as f:
         f.write(f"\n$ (cd {cwd} && {' '.join(cmd)})   # {dt.datetime.now():%H:%M:%S}\n".encode())
@@ -363,7 +379,7 @@ def parse_import_report(path: Path) -> dict:
 def measure(repo: dict, args) -> dict:
     name = repo["name"]
     root = SCRATCH / name
-    rdir = RESULTS / name
+    rdir = RESULTS / args.run / name
     rdir.mkdir(parents=True, exist_ok=True)
     for old in rdir.glob("*.log"):
         old.unlink()
@@ -371,7 +387,8 @@ def measure(repo: dict, args) -> dict:
     deadline = started + REPO_CAP
     row: dict = {"repo": name, "full": repo["full"], "stars": repo["stars"], "sha": repo["sha"],
                  "java": repo["java"], "date": dt.datetime.now().isoformat(timespec="seconds"),
-                 "steps": {}, "capped_at": None, "notes": []}
+                 "steps": {}, "capped_at": None, "notes": [], "maven_xmx": maven_xmx_opt()}
+    row.update(benchtools.stamp(TOOLS))
     row.update(jk_identity())
 
     def left() -> float:
@@ -402,18 +419,16 @@ def measure(repo: dict, args) -> dict:
     M2.mkdir(exist_ok=True)
     mvn_first_error = ""
     mvn_args = list(repo.get("mvn_args", []))         # e.g. ["-P", "default,default-heavy"]; see repos.toml
-    MVN = maven_launcher(root) + MVN_ARGS + mvn_args
-    menv = maven_env(repo.get("maven_jdk", repo["java"]))
-    row["maven_launcher"] = MVN[0] if MVN[0] != "sh" else "./mvnw"
-    row["maven_java_home"] = menv.get("JAVA_HOME", "host")
     row["mvn_args"] = mvn_args
-    prev = None if args.both else load_rows().get(name)
+    prev = None if args.both else load_rows(host=benchtools.host_id()).get(name)
+    if prev and prev.get("maven_version") != (TOOLS.maven_version if TOOLS else None):
+        prev = None
     if prev and prev.get("steps", {}).get("mvn_cold"):
-        # --jk-only (the default): carry the last measured Maven side forward untouched
+        # --jk-only (the default): carry the last Maven side measured on this host with this pin.
         for k in ("mvn_cold", "mvn_warm_clean", "mvn_noop", "mvn_touch", "mvn_test"):
             if k in prev["steps"]:
                 row["steps"][k] = prev["steps"][k]
-        for k in ("mvn_tests", "mvn_first_error", "maven_launcher", "maven_java_home", "mvn_args"):
+        for k in ("mvn_tests", "mvn_first_error", "mvn_args", "java_home", "java_version", "maven_xmx", "maven_binary"):
             if k in prev:
                 row[k] = prev[k]
         row["notes"] += [n for n in prev.get("notes", []) if "Maven" in n or "mvn" in n]
@@ -421,26 +436,42 @@ def measure(repo: dict, args) -> dict:
         mvn_first_error = prev.get("mvn_first_error", "")
         print(f"  {name}: maven side reused from {prev['date']}", flush=True)
     elif not args.skip_mvn:
-        r = step("mvn_cold", MVN + ["-DskipTests", "package"], "mvn-cold.log", env=menv)
-        if r["status"] == "ok":
-            step("mvn_warm_clean", MVN + ["-DskipTests", "clean", "package"], "mvn-warm-clean.log", env=menv)
-            step("mvn_noop", MVN + ["-DskipTests", "package"], "mvn-noop.log", env=menv)
-            if tf:
-                touch(root, tf)
-                step("mvn_touch", MVN + ["-DskipTests", "package"], "mvn-touch.log", env=menv)
-                untouch(root, tf)
-            step("mvn_test", MVN + ["test"], "mvn-test.log", cap=TEST_CAP, env=menv)
-            row["mvn_tests"] = surefire_totals(root)
-            if pom_skips_tests(root):
-                row["notes"].append("the project's own pom sets skipTests/maven.test.skip=true, so `mvn test` runs nothing")
-            if row["steps"]["mvn_test"]["status"] != "ok":
-                mvn_first_error = first_mvn_error(rdir / "mvn-test.log")
-        else:
-            mvn_first_error = first_mvn_error(rdir / "mvn-cold.log") or f"mvn package {r['status']}"
-            for k in ("mvn_warm_clean", "mvn_noop", "mvn_touch", "mvn_test"):
-                row["steps"][k] = {"status": "skipped", "exit": None, "wall": 0.0}
+        try:
+            menv = maven_env(repo.get("maven_jdk", repo["java"]))
+        except benchtools.JdkUnavailable as exc:
+            row["jdk"] = str(exc)
+            if exc.detail:
+                row["notes"].append(exc.detail.splitlines()[0][:300])
+            mvn_first_error = str(exc)
+            for k in ("mvn_cold", "mvn_warm_clean", "mvn_noop", "mvn_touch", "mvn_test"):
+                row["steps"][k] = {"status": "jdk-unavailable", "exit": None, "wall": 0.0}
+            print(f"  {name}: {exc}", flush=True)
+            menv = None
+        if menv is not None:
+            row.update(LAST_JAVA)
+            row["env_stripped"] = ["JAVA_TOOL_OPTIONS", "_JAVA_OPTIONS", "JDK_HOME"]
+            MVN = maven_launcher(root) + MVN_ARGS + mvn_args
+            row["maven_binary"] = MVN[0]
+            r = step("mvn_cold", MVN + ["-DskipTests", "package"], "mvn-cold.log", env=menv)
+            if r["status"] == "ok":
+                step("mvn_warm_clean", MVN + ["-DskipTests", "clean", "package"], "mvn-warm-clean.log", env=menv)
+                step("mvn_noop", MVN + ["-DskipTests", "package"], "mvn-noop.log", env=menv)
+                if tf:
+                    touch(root, tf)
+                    step("mvn_touch", MVN + ["-DskipTests", "package"], "mvn-touch.log", env=menv)
+                    untouch(root, tf)
+                step("mvn_test", MVN + ["test"], "mvn-test.log", cap=TEST_CAP, env=menv)
+                row["mvn_tests"] = surefire_totals(root)
+                if pom_skips_tests(root):
+                    row["notes"].append("the project's own pom sets skipTests/maven.test.skip=true, so `mvn test` runs nothing")
+                if row["steps"]["mvn_test"]["status"] != "ok":
+                    mvn_first_error = first_mvn_error(rdir / "mvn-test.log")
+            else:
+                mvn_first_error = first_mvn_error(rdir / "mvn-cold.log") or f"mvn package {r['status']}"
+                for k in ("mvn_warm_clean", "mvn_noop", "mvn_touch", "mvn_test"):
+                    row["steps"][k] = {"status": "skipped", "exit": None, "wall": 0.0}
+            reset_tree(root)   # jk starts from the same pristine checkout Maven did
         row["mvn_first_error"] = mvn_first_error
-        reset_tree(root)   # jk starts from the same pristine checkout Maven did
 
     # ---- jk side -----------------------------------------------------------
     stages = args.jk_stages
@@ -515,59 +546,15 @@ def measure(repo: dict, args) -> dict:
 
 # --------------------------------------------------------------------------- jk identity
 
-def sha256_of(path: Path) -> str:
-    import hashlib
-    h = hashlib.sha256()
-    with open(path, "rb") as f:
-        for chunk in iter(lambda: f.read(1 << 20), b""):
-            h.update(chunk)
-    return h.hexdigest()[:16]
-
-
 def jk_identity() -> dict:
-    """Version + the commit that built it (when knowable) + content hashes of binary and engine jar.
-
-    The binary embeds no commit. `JK_COMMIT` (set by whoever installed a main-built jk) wins;
-    otherwise the `v<version>` tag is resolved in the jk checkout at `JK_SRC` (default ~/src/oss/jk).
-    """
-    version = subprocess.run(["jk", "--version"], capture_output=True, text=True).stdout.strip()
-    commit = os.environ.get("JK_COMMIT", "")
-    if not commit:
-        src = Path(os.environ.get("JK_SRC", Path.home() / "src" / "oss" / "jk"))
-        ver = version.split()[-1] if version else ""
-        if (src / ".git").exists() and ver:
-            r = subprocess.run(["git", "-C", str(src), "rev-parse", "--verify", "-q", f"v{ver}^{{commit}}"],
-                               capture_output=True, text=True)
-            if r.returncode == 0:
-                commit = r.stdout.strip() + f" (tag v{ver} in {src})"
-    binary = shutil.which("jk")
-    home = Path(os.environ.get("JK_HOME", Path.home() / ".jk"))   # a private install names its home
-    engine = sorted((home / "lib" / "jk-engine").glob("jk-engine-*.jar"))
-    return {"jk_version": version, "jk_commit": commit or "unknown (binary embeds none; set JK_COMMIT)",
-            "jk_binary": f"{binary} sha256:{sha256_of(Path(binary))}" if binary else "",
-            "jk_engine_jar": f"{engine[-1].name} sha256:{sha256_of(engine[-1])}" if engine else ""}
+    """Version and commit of the jk under test. Refuses rather than recording `unknown`."""
+    return benchtools.jk_identity()
 
 
 # --------------------------------------------------------------------------- rendering
 
 def host_info() -> dict:
-    cpu = ""
-    try:
-        for line in Path("/proc/cpuinfo").read_text().splitlines():
-            if line.startswith("model name"):
-                cpu = line.split(":", 1)[1].strip()
-                break
-    except OSError:
-        pass
-    ram_gb = 0
-    try:
-        for line in Path("/proc/meminfo").read_text().splitlines():
-            if line.startswith("MemTotal"):
-                ram_gb = round(int(line.split()[1]) / 1024 / 1024)
-    except OSError:
-        pass
-    jkv = subprocess.run(["jk", "--version"], capture_output=True, text=True).stdout.strip()
-    return {"cpu": cpu, "cores": os.cpu_count(), "ram_gb": ram_gb, "os": platform.platform(), "jk": jkv}
+    return benchtools.host_info()
 
 
 def all_rows() -> list[dict]:
@@ -581,15 +568,24 @@ def all_rows() -> list[dict]:
     return rows
 
 
-def load_rows(run: str | None = None) -> dict[str, dict]:
-    """Latest row per repo; restricted to one run label when given (Maven reuse wants any run)."""
+def load_rows(run: str | None = None, host: str | None = None) -> dict[str, dict]:
+    """Latest row per repo; restricted to one run label and one host when given."""
     latest: dict[str, dict] = {}
     for row in all_rows():
         if run and row["run"] != run:
             continue
+        if host and benchtools.row_host(row) != host:
+            continue
         if row["repo"] not in latest or row["date"] >= latest[row["repo"]]["date"]:
             latest[row["repo"]] = row
     return latest
+
+
+def next_run_label() -> str:
+    """`run<N+1>` over every numeric label in the rows and under results/, so a new run never reuses an old one."""
+    labels = set(run_labels()) | {p.name for p in RESULTS.glob("run*") if p.is_dir()}
+    nums = [int(m.group(1)) for label in labels if (m := re.fullmatch(r"run(\d+)", label))]
+    return f"run{max(nums, default=0) + 1}"
 
 
 def run_labels() -> list[str]:
@@ -612,7 +608,7 @@ def fmt_step(s: dict | None, key: str = "") -> str:
         return f"{s['wall']:.0f}s"
     if st == "not-run":
         return "—"
-    if st in ("skipped", "capped"):
+    if st in ("skipped", "capped", "jdk-unavailable"):
         return st
     return f"{st} ({s['wall']:.0f}s)"
 
@@ -621,7 +617,7 @@ def fmt_status(s: dict | None) -> str:
     if not s:
         return "—"
     return {"ok": "ok", "fail": "FAIL", "timeout": "timeout", "skipped": "skipped", "capped": "capped",
-            "not-run": "—"}.get(s["status"], s["status"])
+            "not-run": "—", "jdk-unavailable": "jdk-unavailable"}.get(s["status"], s["status"])
 
 
 def build_cell(row: dict) -> str:
@@ -643,8 +639,8 @@ def tests_cell(step: dict | None, t: dict | None, line: dict | None = None) -> s
     total = (line or {}).get("total") or (t or {}).get("tests") or 0
     passed = (line or {}).get("passed") if (line or {}).get("total") else (t or {}).get("passed", 0)
     st = (step or {}).get("status")
-    if st in (None, "skipped", "capped", "not-run"):
-        return "—" if st != "capped" else "capped"
+    if st in (None, "skipped", "capped", "not-run", "jdk-unavailable"):
+        return "jdk-unavailable" if st == "jdk-unavailable" else ("—" if st != "capped" else "capped")
     if total == 0:
         # jk answers a run that found no test with exit 2 and `no tests ran`; Maven answers exit 0.
         if st == "ok" or (step or {}).get("exit") == 2:
@@ -736,19 +732,36 @@ def side_by_side(repos: list[dict], runs: dict[str, dict[str, dict]]) -> list[st
     return lines
 
 
+def _labels(rows: list[dict]) -> list[str]:
+    seen: dict[str, str] = {}
+    for row in rows:
+        seen[row["run"]] = min(row["date"], seen.get(row["run"], row["date"]))
+    return sorted(seen, key=lambda key: seen[key])
+
+
 def render(repos: list[dict], rows: dict[str, dict] | None = None) -> None:
-    h = host_info()
+    info = host_info()
+    hid = benchtools.host_id(info)
+    pin = benchtools.read_pin()
     cfg = tomllib.load(open(HERE / "repos.toml", "rb"))
-    labels = run_labels()
-    runs = {l: load_rows(l) for l in labels}
-    latest_label = labels[-1] if labels else "run1"
+    here = [row for row in all_rows() if benchtools.row_host(row) == hid]
+    labels = _labels(here)
+    runs = {label: load_rows(label, hid) for label in labels}
+    latest_label = labels[-1] if labels else None
+    maven_path = next((row["maven_binary"] for row in reversed(here) if row.get("maven_binary")), "")
     lines = ["# Maven top-20 corpus — results", "",
-             f"Generated {dt.datetime.now():%Y-%m-%d %H:%M} by `run.py`. Host: {h['cpu']} ({h['cores']} threads, {h['ram_gb']} GB RAM), {h['os']}.", "",
-             "Maven ran through the launcher `jk mvn` provisions (or the repo's `mvnw`) with `MAVEN_OPTS=-Xmx3g`, "
-             f"`JAVA_HOME` = the Temurin matching the declared level (or `maven_jdk`), and a corpus-private local repo (`{M2}`); jk ran with defaults "
-             f"and a per-repo action cache under `{JK_CACHE}` wiped before its first step (`JK_CACHE_DIR`), so `jk cold` compiles everything on every run while the artifact store stays warm. "
+             f"Generated {dt.datetime.now():%Y-%m-%d %H:%M} by `run.py`. Host: {benchtools.host_summary(info)}. Host id `{hid}`.", "",
+             f"Maven {pin['maven']}" + (f" at `{maven_path}`" if maven_path else "")
+             + f" (pinned in tools.toml; the repo wrapper is not used) with `MAVEN_OPTS={maven_xmx_opt()}` "
+             f"(`CORPUS_MAVEN_XMX`, default `3g`). `JAVA_HOME` is the Temurin `jk jdk ensure` installs for the declared level "
+             f"(or `maven_jdk`); if that fails the row is `jdk-unavailable: temurin-<N>` and Maven is not run. "
+             f"Gradle pin {pin['gradle']} is recorded on every row; this harness does not run Gradle. "
+             f"Corpus-private local repo `{M2}`; jk ran with defaults and a per-repo action cache under `{JK_CACHE}` "
+             "wiped before its first step (`JK_CACHE_DIR`), so `jk cold` compiles everything on every run while the artifact store stays warm. "
              "Wall = seconds. `pass/total` from surefire XML (Maven) and the `Tests:` line of `target/jk-results.md` (jk). "
-             "Per-step logs and each import report live under `results/<repo>/` (latest run).", ""]
+             "Per-step logs and each import report live under `results/<run>/<repo>/`.", "",
+             "The tables, side-by-side and ratchet below use only rows from this host. "
+             "Rows from another host follow under their own heading and do not enter the ratchet or the delta.", ""]
     per_repo = [f"{r['name']}: `mvn {' '.join(r['mvn_args'])}` / `jk import {' '.join(r.get('import_args', []))}`"
                 for r in cfg["repo"] if r.get("mvn_args") or r.get("import_args")]
     if per_repo:
@@ -777,37 +790,53 @@ def render(repos: list[dict], rows: dict[str, dict] | None = None) -> None:
     lines += ["`built nothing` / `ok (n/m modules)` = `jk build` exited 0 but the imported workspace covers none / only n of the m poms; a build of nothing does not count in the ratchet.", "",
               "`no tests ran` = the step exited 0 but no test result was produced (e.g. an aggregator root imported with no sources, or a pom that sets `maven.test.skip`); it never counts as a pass.", "",
               "`capped` = killed by the 45-minute repo cap; `timeout` = the step's own 20-minute test timeout.", ""]
-    lines += lock_diff_section(repos)
+    lines += lock_diff_section(repos, hid)
     sk = cfg.get("skipped", [])
     lines += ["## Skipped (in the same star range, root pom.xml present)", "",
               "| repo | stars | reason | detail |", "|------|------:|--------|--------|"]
     for r in sk:
         lines.append(f"| {r['full']} | {r['stars']} | {r['reason']} | {r['detail']} |")
-    c = counts(repos, runs.get(latest_label, {}))
-    lines += ["", "## Ratchet", "", f"Current bar ({latest_label}):", "",
-              f"- repos importing with zero Tier-3 errors: **{c['import_clean']}** / {c['measured']}",
-              f"- repos whose `jk lock` succeeds: **{c['lock']}** / {c['measured']}",
-              f"- repos whose `jk build --skip-tests` compiles something: **{c['build']}** / {c['measured']}",
-              f"- repos whose `jk test` runs and passes: **{c['tests_ran']}** / {c['measured']}",
-              f"- repos whose jk test total equals Maven's: **{c['tests_equal']}** / {c['measured']}", ""]
-    if len(labels) > 1:
-        prev = counts(repos, runs[labels[-2]])
-        lines += [f"Delta vs {labels[-2]}: " + ", ".join(f"{k} {prev[k]}→{c[k]}" for k in ("import_clean", "lock", "build", "tests_ran", "tests_equal")), ""]
-    lines += ["Rule: a run that lowers any of these counts is a regression; a run that raises one moves the bar.", ""]
+    if latest_label is None:
+        lines += ["", "## Ratchet", "", f"No rows for this host (`{hid}`).", ""]
+    else:
+        c = counts(repos, runs.get(latest_label, {}))
+        lines += ["", "## Ratchet", "", f"Current bar ({latest_label}), host `{hid}`:", "",
+                  f"- repos importing with zero Tier-3 errors: **{c['import_clean']}** / {c['measured']}",
+                  f"- repos whose `jk lock` succeeds: **{c['lock']}** / {c['measured']}",
+                  f"- repos whose `jk build --skip-tests` compiles something: **{c['build']}** / {c['measured']}",
+                  f"- repos whose `jk test` runs and passes: **{c['tests_ran']}** / {c['measured']}",
+                  f"- repos whose jk test total equals Maven's: **{c['tests_equal']}** / {c['measured']}", ""]
+        if len(labels) > 1:
+            prev = counts(repos, runs[labels[-2]])
+            lines += [f"Delta vs {labels[-2]}: " + ", ".join(f"{k} {prev[k]}→{c[k]}" for k in ("import_clean", "lock", "build", "tests_ran", "tests_equal")), ""]
+        lines += ["Rule: a run that lowers any of these counts is a regression; a run that raises one moves the bar.", ""]
+    for other in sorted({benchtools.row_host(row) for row in all_rows()} - {hid}):
+        olabels = _labels([row for row in all_rows() if benchtools.row_host(row) == other])
+        oruns = {label: load_rows(label, other) for label in olabels}
+        lines += ["", f"## Other host `{other}`", "",
+                  "Not compared with this host. These rows do not enter the ratchet or the delta.", ""]
+        for label in olabels:
+            lines += [f"### {other} · {label}", ""] + run_table(repos, oruns[label]) + [""]
+        lines += lock_diff_section(repos, other)
     (HERE / "RESULTS.md").write_text("\n".join(lines))
-    render_tier3(repos, runs.get(latest_label, {}), latest_label)
+    render_tier3(repos, runs.get(latest_label, {}) if latest_label else {}, latest_label or "none")
 
 
-def lock_diff_section(repos: list[dict]) -> list[str]:
+def lock_diff_section(repos: list[dict], host: str | None = None) -> list[str]:
     """The latest lockdiff.py report's summary table, when one exists (results/lock-diff/<date>.jsonl)."""
     files = sorted((RESULTS / "lock-diff").glob("*.jsonl"))
     if not files:
         return []
     rows: dict[str, dict] = {}
     for line in files[-1].read_text().splitlines():
-        if line.strip():
-            r = json.loads(line)
-            rows[r["repo"]] = r
+        if not line.strip():
+            continue
+        parsed = json.loads(line)
+        if host and benchtools.row_host(parsed) != host:
+            continue
+        rows[parsed["repo"]] = parsed
+    if not rows:
+        return []
     date = files[-1].stem
     lines = ["## Lock vs Maven resolution", "",
              f"From `lockdiff.py` on {date} ([lock-diff/{date}.md](lock-diff/{date}.md) has the per-repo examples): for every repo whose "
@@ -917,13 +946,16 @@ def main() -> int:
     ap.add_argument("--skip-mvn", action="store_true", help="never run Maven, even when no earlier row exists")
     ap.add_argument("--render", action="store_true", help="only rewrite RESULTS.md from rows on disk")
     ap.add_argument("--fresh-m2", action="store_true", help="wipe the corpus-private Maven local repo first")
-    ap.add_argument("--run", default="run1", help="run label stored in every row (default run1); rows of one label form one column set")
+    ap.add_argument("--run", help="run label stored in every row; rows of one label form one column set. Default: the next runN after every label already in results/ — pass the same label again to add repos to a run")
     ap.add_argument("--steps", default=",".join(JK_STAGES),
                     help="the jk stages to run, a comma-separated prefix of import,lock,build,test (default all);"
                          " a cold-wall probe is --steps import,lock,build, and the stages left out are recorded as not-run")
     ap.add_argument("--no-tests", action="store_true", help="same as --steps import,lock,build: measure the walls, skip jk test")
+    benchtools.add_arguments(ap)
     args = ap.parse_args()
+    benchtools.use_flags(args)
     args.jk_stages = parse_stages(args.steps, args.no_tests, ap)
+    args.run = args.run or next_run_label()
 
     cfg = tomllib.load(open(HERE / "repos.toml", "rb"))
     repos = cfg["repo"]
@@ -931,6 +963,9 @@ def main() -> int:
     if args.render:
         render(repos)
         return 0
+    global TOOLS
+    jk_identity()
+    TOOLS = benchtools.resolve(allow_stale=args.allow_stale_tools, offline=args.offline_tools)
     if args.fresh_m2 and M2.exists():
         shutil.rmtree(M2)
     todo = [r for r in repos if not args.only or r["name"] in args.only]

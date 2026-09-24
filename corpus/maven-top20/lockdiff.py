@@ -2,7 +2,8 @@
 """Diff each corpus repo's jk lock against Maven's resolved versions, module by module.
 
 For every repo whose latest `jk lock` is green, the clone (with the jk.toml / jk-lock.toml the
-harness wrote) is copied to $LOCKDIFF_SCRATCH/<name> (default /home/bsant/src/scratch/lock-diff),
+harness wrote) is copied to $LOCKDIFF_SCRATCH/<name> (default $JK_BENCH_HOME/lock-diff;
+$JK_BENCH_HOME defaults to ${XDG_CACHE_HOME:-~/.cache}/jk-bench),
 `dependency:go-offline` fills the harness's own Maven repo ($LOCKDIFF_SCRATCH/.m2, a hardlink copy
 of the corpus .m2 made on first use, so the corpus repo stays as cold as the corpus runner left it)
 with every POM the reactor's graphs name, Maven's verbose dependency tree is written per module
@@ -64,10 +65,11 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import benchtools  # noqa: E402
 import run as harness  # noqa: E402  (the corpus harness: scratch paths, launchers, rows)
 
 HERE = harness.HERE
-SCRATCH = Path(os.environ.get("LOCKDIFF_SCRATCH", "/home/bsant/src/scratch/lock-diff"))
+SCRATCH = benchtools.scratch("LOCKDIFF_SCRATCH", "lock-diff")
 M2 = Path(os.environ.get("LOCKDIFF_M2", str(SCRATCH / ".m2")))
 OUT_MD = HERE / "lock-diff"
 OUT_JSONL = harness.RESULTS / "lock-diff"
@@ -327,8 +329,12 @@ def maven_trees(root: Path, repo: dict, log: Path, deadline: float) -> dict:
     host stalls the connection rather than refusing it), `poms_filled` how many POMs the fill fetched, `missing_poms` how many POMs the
     run that produced the trees still could not read.
     """
+    try:
+        env = harness.maven_env(repo.get("maven_jdk", repo["java"]))
+    except benchtools.JdkUnavailable as exc:
+        return {"status": "jdk-unavailable", "reason": str(exc), "mode": "", "wall": 0.0,
+                "go_offline": {}, "missing_poms": 0, "poms_filled": 0, "rounds": 0}
     launcher = harness.maven_launcher(root)
-    env = harness.maven_env(repo.get("maven_jdk", repo["java"]))
     local = local_repo()
     common = launcher + ["-B", "-fae", f"-Dmaven.repo.local={local}"] + NET_TIMEOUTS
     base = common + [DEP_PLUGIN, "-Dverbose=true", "-DoutputType=text", f"-DoutputFile={TREE_FILE}"]
@@ -774,7 +780,12 @@ def diff_module(module: str, mtree: dict, jtree: dict, lock: Lock, pins: dict, f
 
 def failing_test_modules(repo: str, root: Path, lock: Lock) -> list[str]:
     """Modules whose jk test step reported failures, from the jk-results.md copied with the clone."""
-    for p in (root / "jk-results.corpus.md", harness.RESULTS / repo / "jk-results.md"):
+    candidates = [root / "jk-results.corpus.md"]
+    candidates += sorted(harness.RESULTS.glob(f"*/{repo}/jk-results.md"), key=lambda path: path.stat().st_mtime)
+    flat = harness.RESULTS / repo / "jk-results.md"
+    if flat.is_file():
+        candidates.append(flat)
+    for p in candidates:
         if p.is_file():
             gas = set(re.findall(r"^#### \S+ — (\S+:\S+)$", p.read_text(encoding="utf-8", errors="replace"), re.M))
             by_ga = {v: k for k, v in lock.modules.items()}
@@ -817,8 +828,9 @@ def measure(repo: dict, args, date: str) -> dict:
     name = repo["name"]
     src = harness.SCRATCH / name
     root = SCRATCH / name
-    corpus_row = harness.load_rows().get(name, {})
+    corpus_row = harness.load_rows(host=benchtools.host_id()).get(name, {})
     row = {"repo": name, "full": repo["full"], "sha": repo["sha"], "date": dt.datetime.now().isoformat(timespec="seconds"),
+           **benchtools.stamp(harness.TOOLS), **harness.jk_identity(),
            "corpus_run": f"{corpus_row.get('run', '')} {corpus_row.get('date', '')}".strip(),
            "corpus_jk": corpus_row.get("jk_commit", ""),
            "lock_generated_by": "", "reimport": {}, "relock": {}, "maven": {}, "modules_maven": 0, "modules_jk": 0, "modules_compared": 0,
@@ -963,7 +975,18 @@ def fmt_rules(r: dict, key: str = "by_rule") -> str:
 def render(date: str, rows: dict[str, dict], repos: list[dict]) -> None:
     OUT_MD.mkdir(exist_ok=True)
     total = Counter()
+    hid = benchtools.host_id()
+    file_hosts = {benchtools.row_host(row) for row in rows.values()}
+    other_banner = bool(file_hosts) and hid not in file_hosts
+    dropped = sorted(file_hosts - {hid}) if hid in file_hosts else []
+    if dropped:
+        rows = {name: row for name, row in rows.items() if benchtools.row_host(row) == hid}
+    pin = benchtools.read_pin()
     lines = [f"# jk lock vs Maven resolution — {date}", "",
+             (f"## Other host {', '.join(f'`{host}`' for host in sorted(file_hosts))}\n\n"
+              f"This report is not from the current host (`{hid}`) and is not compared with it.\n"
+              if other_banner else f"Host `{hid}` · {benchtools.host_summary()}.\n"),
+             f"Maven {pin['maven']} · Gradle pin {pin['gradle']} (this report runs Maven only).", "",
              "Per module, every coordinate Maven's verbose `dependency:tree` resolves is looked up in jk's per-module closure "
              "(`jk tree <module> -t -f -s all`, reading the harness's `jk-lock.toml`, member rows first). A row of the table is one repo; "
              "`pairs` = (module, coordinate) pairs whose version differs, `coords` = distinct coordinates behind them. Rules: "
@@ -977,6 +1000,8 @@ def render(date: str, rows: dict[str, dict], repos: list[dict]) -> None:
              "The `maven` cell names the tree run's status (`partial` = a reactor module failed under `-fae` and the others' trees stand), its mode, its wall, `dependency:go-offline`'s status, the POMs the harness fetched into Maven's local repo because a tree run reported them missing, and the POMs the final run still could not read (each one is an artifact Maven rendered as a leaf, so its transitives can only be `only jk`); the lock is the corpus clone's unless the cell says `relocked` (rewritten by the jk under test) or `reimported + relocked` (the manifests imported from the POMs by that jk as well).", "",
              "| repo | maven | modules mvn / jk / compared | modules that differ | pairs / coords differ | by rule (pairs) | jk higher / lower | test row differs | same version, scope differs | only Maven | only jk (optional in a POM) | via inactive features (modules) | tree vs lock | failing-test modules with a diff |",
              "|------|-------|----------------------------:|--------------------:|----------------------:|-----------------|------------------:|-----------------:|----------------------------:|-----------:|----------------------------:|--------------------------------:|-------------:|----------------------------------|"]
+    if dropped:
+        lines += ["", f"Rows from other host(s) {', '.join(f'`{host}`' for host in dropped)} are omitted from this table and are not compared.", ""]
     for repo in repos:
         r = rows.get(repo["name"])
         if not r:
@@ -1045,7 +1070,9 @@ def main() -> int:
     ap.add_argument("--reimport", action="store_true", help="drop the corpus run's manifests and `jk import pom.xml` again with the jk under test (implies --relock)")
     ap.add_argument("--jk-home", help="a private jk install: <dir>/bin/jk runs with JK_HOME=<dir> (default: the jk on PATH)")
     ap.add_argument("--date", default=f"{dt.date.today():%Y-%m-%d}", help="row file / report date (default today)")
+    benchtools.add_arguments(ap)
     args = ap.parse_args()
+    benchtools.use_flags(args)
     if args.reimport:
         args.relock = True
     if args.jk_home:
@@ -1058,7 +1085,9 @@ def main() -> int:
         date, rows = load_latest(args.date)
         render(date, rows, repos)
         return 0
-    latest = harness.load_rows()
+    harness.jk_identity()
+    harness.TOOLS = benchtools.resolve(allow_stale=args.allow_stale_tools, offline=args.offline_tools)
+    latest = harness.load_rows(host=benchtools.host_id())
     todo = []
     for repo in repos:
         if args.only and repo["name"] not in args.only:
