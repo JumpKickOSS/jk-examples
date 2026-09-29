@@ -1,6 +1,6 @@
-# Tier-3 reasons (import ERRORs and jk failures), grouped — run16
+# Tier-3 reasons (import ERRORs and jk failures), grouped — run17
 
-Generated 2026-09-18 15:36. Module prefixes, coordinates, versions and paths are normalized so one line = one distinct cause = one ticket candidate.
+Generated 2026-09-28 20:15. Module prefixes, coordinates, versions and paths are normalized so one line = one distinct cause = one ticket candidate.
 
 ## import Tier 3 (not imported)
 
@@ -16,6 +16,8 @@ Generated 2026-09-18 15:36. Module prefixes, coordinates, versions and paths are
   repos: keycloak
 - (1) G:A N.v20250814` is pinned by the POM, and no repository the lock reads lists that version (central lists N.M2, N.M1, N.M0); `jk lock` refuses it. Pin a version a repository lists, or declare the repository that publishes N.v20250814 in `[repositories]`.  
   repos: hadoop
+- (1) G:A N` is pinned by the POM, and no repository the lock reads (jboss-public-repository, central, jumpkick, google) lists G:A at all; `jk lock` refuses it. Pin a version a repository lists, or declare the repository that publishes N in `[repositories]`.  
+  repos: keycloak
 - (1) G:A N` is pinned by the POM, and no repository the lock reads (repository.jboss.org, central, jumpkick, google) lists G:A at all; `jk lock` refuses it. Pin a version a repository lists, or declare the repository that publishes N in `[repositories]`. (2 modules: hadoop-project, hadoop-client-modules/hadoop-client-minicluster)  
   repos: hadoop
 - (1) G:A N` is pinned by the POM, and no repository the lock reads lists that version (central lists N, N); `jk lock` refuses it. Pin a version a repository lists, or declare the repository that publishes N in `[repositories]`.  
@@ -28,12 +30,16 @@ Generated 2026-09-18 15:36. Module prefixes, coordinates, versions and paths are
   repos: keycloak
 - (1) G:A N` is pinned by the POM, and no repository the lock reads lists that version (central lists N, N, N, N, N, N-rc-3, N-rc-2, N-rc-1 and 56 older); `jk lock` refuses it. Pin a version a repository lists, or declare the repository that publishes N in `[repositories]`.  
   repos: keycloak
+- (1) G:A N` is pinned by the POM, and no repository the lock reads lists that version (central lists N, N, N, N, N-M1, N, N, N-M3 and 4 older); `jk lock` refuses it. Pin a version a repository lists, or declare the repository that publishes N in `[repositories]`.  
+  repos: keycloak
 - (1) G:A N` is pinned by the POM, and no repository the lock reads lists that version (central lists N, Nrc1, N, N, 20030911, N, N); `jk lock` refuses it. Pin a version a repository lists, or declare the repository that publishes N in `[repositories]`.  
   repos: thingsboard
 - (1) G:A N` is pinned by the POM, and no repository the lock reads lists that version (central lists N-alpha-2, N-alpha-1, N, N, N, N, N, N and 101 older); `jk lock` refuses it. Pin a version a repository lists, or declare the repository that publishes N in `[repositories]`.  
   repos: keycloak
 - (1) G:A N` is pinned by the POM, and no repository the lock reads lists that version (central lists N-beta-3, N-beta-2, N-beta-1, N, N, N, N, N and 23 older); `jk lock` refuses it. Pin a version a repository lists, or declare the repository that publishes N in `[repositories]`.  
   repos: quarkus
+- (1) G:A N` is pinned by the POM, and no repository the lock reads lists that version (jboss-public-repository lists N-brew; central lists N, N, N-rc1, N); `jk lock` refuses it. Pin a version a repository lists, or declare the repository that publishes N in `[repositories]`.  
+  repos: keycloak
 - (1) G:A N` is pinned by the POM, and no repository the lock reads lists that version (repository.jboss.org lists N.v_883_R34x, N.v_686_R32x; central lists N-v_677_R32x, N-v_771, N, N); `jk lock` refuses it. Pin a version a repository lists, or declare the repository that publishes N in `[repositories]`.  
   repos: hadoop
 - (1) G:A Nc` is pinned by the POM, and no repository the lock reads lists that version (central lists N.O, N-RC8, N-RC3, N_min, N, Na_min, Na); `jk lock` refuses it. Pin a version a repository lists, or declare the repository that publishes Nc in `[repositories]`.  
@@ -66,8 +72,6 @@ Generated 2026-09-18 15:36. Module prefixes, coordinates, versions and paths are
   repos: keycloak
 - (1) `<type>zip</type>` on G:A names an artifact jk has no manifest spelling for; the dependency was not written. A jar of the same module is `{ group, name, version }`, a classified jar adds `classifier`. (3 modules: test-framework/core, quarkus/tests/junit5, testsuite/integration-arquillian/servers/auth-server/quarkus)  
   repos: keycloak
-- (1) `maven-shade-plugin` relocates org.apache.lucene → org.neo4j.shaded.lucene9; jk relocates packages only in the fat jar of an `[application]`, and a workspace sibling compiles against this module's classes tree, which carries no shaded package, yet `community/lucene-index` (31 files), `community/neo4j` (1 file), `community/dbms` (1 file), `community/community-it/index-it` (1 file) import them. Keep building this module with Maven — `jk mvn -pl community/lucene9-shaded install` publishes G:A into `~/.m2/repository` — and depend on that artifact from a `file://` repository over `~/.m2/repository` in place of the workspace edge.  
-  repos: neo4j
 - (1) packaging `war` (`maven-war-plugin`) is not supported: jk builds jars, Boot jars and native images. Keep building this module with `jk mvn package`. (136 modules: microservices-modules/microprofile, web-modules/restx, apache-cxf-modules/cxf-spring, …)  
   repos: tutorials
 - (1) packaging `war` (`maven-war-plugin`) is not supported: jk builds jars, Boot jars and native images. Keep building this module with `jk mvn package`. (2 modules: hadoop-common-project/hadoop-auth-examples, hadoop-yarn-project/hadoop-yarn/hadoop-yarn-applications/hadoop-yarn-applications-catalog/hadoop-yarn-applications-catalog-webapp)  
@@ -77,68 +81,64 @@ Generated 2026-09-18 15:36. Module prefixes, coordinates, versions and paths are
 
 - (1) Cannot resolve dependencies: · No versions of G:A match N-SNAPSHOT · N-SNAPSHOT is a snapshot, and no repository G:A may resolve from serves snapshots: central (releases only), jumpkick (releases only), g  
   repos: questdb
-- (1) repositories.nm-repo uses plaintext http:// (http://repo.numericalmethod.com/maven/): anyone on the network path can replace the bytes jk pins into jk-lock.toml. Use https, or set allow-insecure = true on [repositories.n  
+- (1) repository nexus at http://G:A/repository/maven-releases/ is unreachable (ConnectException: the connection was not accepted); the resolve stops rather than lock without a configured repository — fix its url, start it, or remove it from [repositories  
   repos: tutorials
 
 ## jk build failure
 
 - (1) <path> error: cannot access java.security.acl.Group · class file for java.security.acl.Group not found  
   repos: keycloak
-- (1) <path> error: duplicate class: org.neo4j.cypher.internal.parser.v5.Cypher5Lex  
+- (1) <path> error: duplicate class: org.neo4j.cypher.internal.parser.v5.Cyph  
   repos: neo4j
+- (1) repository `Codehaus Snapshots` at http://snapshots.repository.codehaus.org/, declared by the POM of G:A, was not used: it is plaintext http, and a repositor  
+  repos: hadoop
 - (1) repository `apache.snapshots` at http://repository.apache.org/snapshots, declared by the POM of G:A, was not used: it is plaintext http, and a repository  
   repos: quarkus
-- (1) spotbugs: 21 findings at or above `spotbugs-fail-on = "warning"` (21 in all)  
-  repos: jenkins
-- (1) spotbugs: 5 findings at or above `fail-on = "warning"` (5 in all)  
-  repos: hadoop
 
 ## jk test failure
 
-- (1) + [1 of 8] G:A - took 52ms  
-  repos: dataease
-- (1) 1 test failure  
+- (1) <path> error: reference to markAllNotificationsAsRead is ambiguous · both method markAllNotificationsAsRead(org.thingsb  
   repos: thingsboard
-- (1) TestEngine with ID 'junit-jupiter' encountered a critical issue during test discovery: · (1) [ERROR] ClassSelector [className = 'io.github.hectorvent.floci.core.common.ServiceEnablementIntegrationTest', classLoader = null] resolution failed · Source: ClassSour  
-  repos: floci
-- (1) Unable to open DISPLAY  
-  repos: cryptomator
-- (1) test failure: com.alibaba.cloud.sentinel.SentinelAutoConfigurationTests — G:A#testSentinelSystemProperties — java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfigurati  
+- (1) CANCELLED test dataease · 273ms  
+  repos: dataease
+- (1) `jenkins-core` `compile-java` unknown enum constant javax.annotation.meta.When.MAYBE  
+  repos: jenkins
+- (1) test failure: com.alibaba.cloud.nacos.endpoint.NacosConfigEndpointTests — G:A#contextLoads() — java.lang.IllegalStateException: Failed to load ApplicationContext for [MergedContextConfiguration@75dc1c1c testClass = com  
   repos: spring-cloud-alibaba
 - (1) test failure: com.alibaba.nacos.logger.adapter.log4j2.Log4J2NacosLoggingAdapterTest — G:A#testIsNeedReloadConfiguration() — java.lang.ClassCastException: class org.apache.logging.slf4j.SLF4JLoggerContext cannot be cast to cla  
   repos: nacos
-- (1) test failure: com.ctrip.framework.apollo.build.sql.converter.ApolloSqlConverterAutoGeneratedTest — G:A#checkAutoGenerated() — java.lang.IllegalStateException: illegal class path: <path>  
+- (1) test failure: com.ctrip.framework.apollo.audit.controller.ApolloAuditControllerTest — G:A#testFindAllAuditLogsByOpNameAndTime() — java.lang.AssertionError: Status expected:<200> but was:<401>  
   repos: apollo
-- (1) test failure: com.iluwatar.corruption.system.AntiCorruptionLayerTest — G:A#antiCorruptionLayerWithExTest() — java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@15a8cebd testClass  
+- (1) test failure: com.iluwatar.corruption.system.AntiCorruptionLayerTest — G:A#antiCorruptionLayerWithExTest() — java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@5546e754 testClass  
   repos: java-design-patterns
-- (1) test failure: com.macro.mall.portal.MallPortalApplicationTests — G:A#contextLoads() — java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@73eae5f testClass = com.macro.mall.portal.MallPor  
+- (1) test failure: com.macro.mall.portal.PortalProductDaoTests — G:A#testGetPromotionProductList() — java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@57bfca3a testClass = com.macro.mall.por  
   repos: mall
-- (1) test failure: com.xxl.job.openapi.ExecutorBizTest — G:A#trigger() — java.lang.RuntimeException: Http Request Error (Connection refused (connect failed)). for url : http://G:A/trigger  
+- (1) test failure: com.xxl.job.admin.business.mapper.XxlJobLogReportMapperTest — G:A#test() — java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@4acb2510 testClass = com.xxl.job.admin.business  
   repos: xxl-job
-- (1) test failure: zipkin2.collector.CollectorTest#accept_storageError() — java.lang.AssertionError:  
+- (1) test failure: io.github.hectorvent.floci.core.common.dns.EmbeddedDnsServerTest#forwardToUpstreams_returnsResponseLargerThan512BytesIntact() — java.net.SocketTimeoutException: Receive timed out  
+  repos: floci
+- (1) test failure: zipkin2.collector.CollectorTest — G:A#accept_storageError() — java.lang.AssertionError:  
   repos: zipkin
 
 ## Maven-side failure (for context)
 
-- (2) COMPILATION ERROR :  
-  repos: spring-cloud-alibaba, thingsboard
-- (1) Command execution failed.  
-  repos: quarkus
+- (3) Plugin G:A or one of its dependencies could not be resolved:  
+  repos: analysis-ik, questdb, zipkin
+- (2) Error executing Maven.  
+  repos: neo4j, quarkus
+- (2) Some problems were encountered while processing the POMs:  
+  repos: hadoop, thingsboard
+- (2) mvn package fail  
+  repos: keycloak, tutorials
+- (1) COMPILATION ERROR :  
+  repos: spring-cloud-alibaba
 - (1) DOCKER> Cannot create docker access object  [Connect to G:A [/N] failed: Connection timed out]  
   repos: mall
-- (1) Failed to execute goal G:A:enforce (default) on project parent:  
-  repos: neo4j
-- (1) Failed to execute goal G:A:test (default-test) on project floci:  
-  repos: floci
-- (1) Failed to execute goal on project keycloak-quarkus-dist: Could not resolve dependencies for project G:A:N-SNAPSHOT  
-  repos: keycloak
 - (1) Failed to execute goal on project nacos-istio: Could not resolve dependencies for project G:A:N-SNAPSHOT  
   repos: nacos
-- (1) Failed to execute goal on project questdb: Could not resolve dependencies for project G:A:N-SNAPSHOT  
-  repos: questdb
-- (1) Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: N s <<< FAILURE! -- in org.cryptomator.common.keychain.KeychainManagerTest  
-  repos: cryptomator
-- (1) Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: N s <<< FAILURE! -- in com.iluwatar.bloc.BlocUiTest  
+- (1) Surefire is going to kill self fork JVM. The exit has elapsed 30 seconds after System.exit(0).  
   repos: java-design-patterns
-- (1) com.ctrip.framework.apollo.biz.registry.DatabaseDiscoveryClientMemoryCacheDecoratorImpl - fail to read service instances from database  
-  repos: apollo
+- (1) TestEngine with ID 'junit-jupiter' encountered a critical issue during test discovery:  
+  repos: floci
+- (1) jdk-unavailable: temurin-26  
+  repos: cryptomator
