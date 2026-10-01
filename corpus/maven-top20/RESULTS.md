@@ -1,6 +1,6 @@
 # Maven top-20 corpus — results
 
-Generated 2026-09-30 20:34 by `run.py`. Host: 12th Gen Intel(R) Core(TM) i9-12900KF (24 logical CPUs, 16 GiB RAM), ubuntu-26.04, kernel 6.6.87.2-microsoft-standard-WSL2, WSL. Host id `1a8c211a203d`.
+Generated 2026-10-01 13:56 by `run.py`. Host: 12th Gen Intel(R) Core(TM) i9-12900KF (24 logical CPUs, 16 GiB RAM), ubuntu-26.04, kernel 6.6.87.2-microsoft-standard-WSL2, WSL. Host id `1a8c211a203d`.
 
 Maven 3.9.16 at `/home/bsant/.jk/store/tools/maven/3.9.16/bin/mvn` (pinned in tools.toml; the repo wrapper is not used) with `MAVEN_OPTS=-Xmx3g` (`CORPUS_MAVEN_XMX`, default `3g`). `JAVA_HOME` is the Temurin `jk jdk ensure` installs for the declared level (or `maven_jdk`); if that fails the row is `jdk-unavailable: temurin-<N>` and Maven is not run. Gradle pin 9.8.0 is recorded on every row; this harness does not run Gradle. Corpus-private local repo `/home/bsant/.cache/jk-bench/maven-corpus/.m2`; jk ran with defaults and a per-repo action cache under `/home/bsant/.cache/jk-bench/maven-corpus/.jk-cache` wiped before its first step (`JK_CACHE_DIR`), so `jk cold` compiles everything on every run while the artifact store stays warm. Wall = seconds. `pass/total` from surefire XML (Maven) and the `Tests:` line of `target/jk-results.md` (jk). Per-step logs and each import report live under `results/<run>/<repo>/`.
 
@@ -10,42 +10,44 @@ Per-repo argument lists from `repos.toml`, so both sides measure the same reacto
 
 - **run17**: `jk 0.14.0` commit `release v0.14.0 (untagged)` — /home/bsant/.jk/bin/jk sha256:fbf6e16093b77ce5; jk-engine-0.14.0.1790635178965.jar sha256:82f32adf61de0610
 - **run18**: `jk 0.14.0` commit `2e9bda7e344d27feab6ed5ca909fb520da65dbd1` — /home/bsant/.jk/bin/jk sha256:2b6da68263e17a69; jk-engine-0.14.0.1790813408039.jar sha256:027c2ee99292188b
+- **run19**: `jk 0.14.0` commit `abd2835da784af0d5435f6683dde57833b52f4b0` — /home/bsant/.jk/bin/jk sha256:78b134ead00bf604; jk-engine-0.14.0.1790864459764.jar sha256:b080625a828e2a25; `jk 0.14.0` commit `release v0.14.0 (untagged)` — /home/bsant/.jk/bin/jk sha256:04b825655e711b86; jk-engine-0.14.0.1790861123299.jar sha256:3ea54ed4690276f7
+- **run20**: `jk 0.14.0` commit `release v0.14.0 (untagged)` — /home/bsant/.jk/bin/jk sha256:ef630965a17a0487; jk-engine-0.14.0.jar sha256:c48747a9ba674ca1
 
 ## Side by side (the ratchet delta)
 
 Maven column = warm-clean wall / tests pass·total as the reference; each run column = jk import E/W · lock · build · tests jk · jk cold/no-op/touch/test walls.
 
-| # | repo | mvn build / tests | run17: import E/W · lock · build · tests jk · jk cold/no-op/touch/test | run18: import E/W · lock · build · tests jk · jk cold/no-op/touch/test |
-|--:|------|-------------------|----|----|
-| 1 | iluwatar/java-design-patterns | 111s / 5089/5094 (timeout) | 2/60 · ok · ok (203/211 modules) · 217/219 (fail) · 31s/1s/4s/fail (27s) | 1/60 · ok · ok (203/211 modules) · 4390/4397 (fail) · 32s/1s/3s/fail (41s) |
-| 2 | macrozheng/mall | skipped / — | 0/19 · ok · ok (7/8 modules) · 2/7 (fail) · 16s/0s/5s/fail (140s) | 0/19 · ok · ok (7/8 modules) · 2/7 (fail) · 16s/1s/6s/fail (140s) |
-| 3 | TheAlgorithms/Java | 7s / 9742/9742 | 0/3 · ok · ok · 9745/9745 · 26s/0s/18s/29s | 0/3 · ok · ok · 9745/9745 · 25s/1s/19s/31s |
-| 4 | eugenp/tutorials | skipped / — | 4/970 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 4/965 · FAIL · skipped · — · skipped/skipped/skipped/skipped |
-| 5 | keycloak/keycloak | skipped / — | 15/300 · ok · FAIL · — · fail (19s)/skipped/skipped/skipped | 11/301 · ok · FAIL · — · fail (40s)/skipped/skipped/skipped |
-| 6 | alibaba/nacos | skipped / — | 0/164 · ok · ok (55/62 modules) · 2155/2178 (fail) · 115s/1s/10s/fail (30s) | 0/164 · ok · ok (55/62 modules) · 2960/2978 (fail) · 117s/1s/12s/fail (34s) |
-| 7 | xuxueli/xxl-job | 10s / no tests ran | 0/10 · ok · ok (5/7 modules) · 4/20 (fail) · 8s/0s/3s/fail (10s) | 0/10 · ok · ok (5/7 modules) · 4/14 (fail) · 14s/1s/5s/fail (14s) |
-| 8 | apolloconfig/apollo | 19s / 1267/1268 | 0/37 · ok · ok (12/14 modules) · 113/119 (fail) · 18s/0s/8s/fail (11s) | 0/37 · ok · ok (12/14 modules) · 205/207 (fail) · 25s/1s/12s/fail (16s) |
-| 9 | alibaba/spring-cloud-alibaba | skipped / — | 0/64 · ok · ok (59/70 modules) · 127/156 (fail) · 92s/0s/13s/fail (18s) | 0/63 · ok · FAIL · — · fail (51s)/skipped/skipped/skipped |
-| 10 | jenkinsci/jenkins | 40s / 21479/21503 (fail) | 3/57 · ok · ok (8/9 modules) · fail, no results · 71s/0s/44s/fail (28s) | 2/57 · ok · ok (8/9 modules) · fail, no results · 83s/1s/45s/fail (28s) |
-| 11 | dataease/dataease | 10s / no tests ran | 0/16 · ok · ok (8/15 modules) · no tests ran · 17s/0s/0s/fail (0s) | 0/16 · ok · ok (8/15 modules) · no tests ran · 17s/1s/0s/fail (0s) |
-| 12 | floci-io/floci | 27s / fail, no results | 0/4 · ok · ok (1/3 modules) · 4125/4127 (fail) · 50s/1s/1s/fail (1178s) | 0/4 · ok · ok (1/3 modules) · timeout, no results · 46s/1s/1s/timeout (1200s) |
-| 13 | thingsboard/thingsboard | skipped / — | 3/113 · ok · ok (51/60 modules) · 1722/1723 (fail) · 117s/0s/6s/fail (48s) | 3/112 · ok · ok (51/60 modules) · 786/787 (fail) · 101s/1s/7s/fail (37s) |
-| 14 | infinilabs/analysis-ik | skipped / — | 0/5 · ok · ok (3/4 modules) · 27/27 · 4s/0s/2s/2s | 0/5 · ok · ok (3/4 modules) · 27/27 · 5s/1s/2s/3s |
-| 15 | openzipkin/zipkin | skipped / — | 1/38 · ok · ok (15/19 modules) · 789/803 (fail) · 36s/0s/4s/fail (16s) | 1/38 · ok · FAIL · — · fail (34s)/skipped/skipped/skipped |
-| 16 | questdb/questdb | skipped / — | 0/28 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/28 · FAIL · skipped · — · skipped/skipped/skipped/skipped |
-| 17 | neo4j/neo4j | skipped / — | 0/252 · ok · FAIL · — · fail (23s)/skipped/skipped/skipped | 0/251 · ok · FAIL · — · fail (18s)/skipped/skipped/skipped |
-| 18 | cryptomator/cryptomator | jdk-unavailable / jdk-unavailable | 0/14 · ok · ok · 309/313 · 9s/0s/2s/7s | 0/14 · ok · ok · 309/313 · 9s/1s/4s/8s |
-| 19 | quarkusio/quarkus | skipped / — | 5/2528 · ok · FAIL · — · fail (546s)/skipped/skipped/skipped | 4/2524 · ok · FAIL · — · fail (496s)/skipped/skipped/skipped |
-| 20 | apache/hadoop | skipped / — | 6/272 · ok · FAIL · — · fail (24s)/skipped/skipped/skipped | 4/268 · ok · FAIL · — · fail (58s)/skipped/skipped/skipped |
+| # | repo | mvn build / tests | run17: import E/W · lock · build · tests jk · jk cold/no-op/touch/test | run18: import E/W · lock · build · tests jk · jk cold/no-op/touch/test | run19: import E/W · lock · build · tests jk · jk cold/no-op/touch/test | run20: import E/W · lock · build · tests jk · jk cold/no-op/touch/test |
+|--:|------|-------------------|----|----|----|----|
+| 1 | iluwatar/java-design-patterns | 111s / 5089/5094 (timeout) | 2/60 · ok · ok (203/211 modules) · 217/219 (fail) · 31s/1s/4s/fail (27s) | 1/60 · ok · ok (203/211 modules) · 4390/4397 (fail) · 32s/1s/3s/fail (41s) | 1/60 · ok · ok (203/211 modules) · 4502/4514 (fail) · 111s/37s/3s/fail (36s) | 1/60 · ok · ok (203/211 modules) · 4565/4577 (fail) · 30s/2s/5s/fail (54s) |
+| 2 | macrozheng/mall | skipped / — | 0/19 · ok · ok (7/8 modules) · 2/7 (fail) · 16s/0s/5s/fail (140s) | 0/19 · ok · ok (7/8 modules) · 2/7 (fail) · 16s/1s/6s/fail (140s) | not run | 0/19 · ok · ok (7/8 modules) · 2/7 (fail) · 18s/0s/8s/fail (141s) |
+| 3 | TheAlgorithms/Java | 7s / 9742/9742 | 0/3 · ok · ok · 9745/9745 · 26s/0s/18s/29s | 0/3 · ok · ok · 9745/9745 · 25s/1s/19s/31s | not run | 0/3 · ok · ok · 9745/9745 · 24s/1s/20s/41s |
+| 4 | eugenp/tutorials | skipped / — | 4/970 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 4/965 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 4/968 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 4/961 · FAIL · skipped · — · skipped/skipped/skipped/skipped |
+| 5 | keycloak/keycloak | skipped / — | 15/300 · ok · FAIL · — · fail (19s)/skipped/skipped/skipped | 11/301 · ok · FAIL · — · fail (40s)/skipped/skipped/skipped | not run | 11/300 · ok · FAIL · — · fail (25s)/skipped/skipped/skipped |
+| 6 | alibaba/nacos | skipped / — | 0/164 · ok · ok (55/62 modules) · 2155/2178 (fail) · 115s/1s/10s/fail (30s) | 0/164 · ok · ok (55/62 modules) · 2960/2978 (fail) · 117s/1s/12s/fail (34s) | not run | 0/164 · ok · ok (55/62 modules) · 1086/1102 (fail) · 118s/1s/9s/fail (24s) |
+| 7 | xuxueli/xxl-job | 10s / no tests ran | 0/10 · ok · ok (5/7 modules) · 4/20 (fail) · 8s/0s/3s/fail (10s) | 0/10 · ok · ok (5/7 modules) · 4/14 (fail) · 14s/1s/5s/fail (14s) | not run | 0/10 · ok · ok (5/7 modules) · 4/21 (fail) · 21s/1s/4s/fail (10s) |
+| 8 | apolloconfig/apollo | 19s / 1267/1268 | 0/37 · ok · ok (12/14 modules) · 113/119 (fail) · 18s/0s/8s/fail (11s) | 0/37 · ok · ok (12/14 modules) · 205/207 (fail) · 25s/1s/12s/fail (16s) | not run | 0/37 · ok · ok (12/14 modules) · 117/119 (fail) · 18s/1s/9s/fail (11s) |
+| 9 | alibaba/spring-cloud-alibaba | skipped / — | 0/64 · ok · ok (59/70 modules) · 127/156 (fail) · 92s/0s/13s/fail (18s) | 0/63 · ok · FAIL · — · fail (51s)/skipped/skipped/skipped | 0/63 · ok · ok (59/70 modules) · 225/225 · 125s/4s/16s/201s | 0/63 · ok · ok (59/70 modules) · 225/225 · 109s/1s/15s/216s |
+| 10 | jenkinsci/jenkins | 40s / 21479/21503 (fail) | 3/57 · ok · ok (8/9 modules) · fail, no results · 71s/0s/44s/fail (28s) | 2/57 · ok · ok (8/9 modules) · fail, no results · 83s/1s/45s/fail (28s) | not run | 2/57 · ok · ok (8/9 modules) · fail, no results · 117s/0s/50s/fail (71s) |
+| 11 | dataease/dataease | 10s / no tests ran | 0/16 · ok · ok (8/15 modules) · no tests ran · 17s/0s/0s/fail (0s) | 0/16 · ok · ok (8/15 modules) · no tests ran · 17s/1s/0s/fail (0s) | not run | 0/16 · ok · ok (8/15 modules) · no tests ran · 18s/1s/1s/fail (0s) |
+| 12 | floci-io/floci | 27s / fail, no results | 0/4 · ok · ok (1/3 modules) · 4125/4127 (fail) · 50s/1s/1s/fail (1178s) | 0/4 · ok · ok (1/3 modules) · timeout, no results · 46s/1s/1s/timeout (1200s) | not run | 0/4 · ok · ok (1/3 modules) · 1418/1420 (fail) · 44s/1s/2s/fail (375s) |
+| 13 | thingsboard/thingsboard | skipped / — | 3/113 · ok · ok (51/60 modules) · 1722/1723 (fail) · 117s/0s/6s/fail (48s) | 3/112 · ok · ok (51/60 modules) · 786/787 (fail) · 101s/1s/7s/fail (37s) | not run | 3/112 · ok · ok (51/60 modules) · 996/997 (fail) · 110s/0s/8s/fail (44s) |
+| 14 | infinilabs/analysis-ik | skipped / — | 0/5 · ok · ok (3/4 modules) · 27/27 · 4s/0s/2s/2s | 0/5 · ok · ok (3/4 modules) · 27/27 · 5s/1s/2s/3s | not run | 0/5 · ok · ok (3/4 modules) · 27/27 · 5s/0s/3s/3s |
+| 15 | openzipkin/zipkin | skipped / — | 1/38 · ok · ok (15/19 modules) · 789/803 (fail) · 36s/0s/4s/fail (16s) | 1/38 · ok · FAIL · — · fail (34s)/skipped/skipped/skipped | 1/38 · ok · ok (15/19 modules) · 1187/1219 (fail) · 23s/2s/3s/fail (102s) | 1/37 · ok · ok (15/19 modules) · 1107/1111 (fail) · 22s/1s/3s/fail (78s) |
+| 16 | questdb/questdb | skipped / — | 0/28 · FAIL · skipped · — · skipped/skipped/skipped/skipped | 0/28 · FAIL · skipped · — · skipped/skipped/skipped/skipped | not run | 0/28 · FAIL · skipped · — · skipped/skipped/skipped/skipped |
+| 17 | neo4j/neo4j | skipped / — | 0/252 · ok · FAIL · — · fail (23s)/skipped/skipped/skipped | 0/251 · ok · FAIL · — · fail (18s)/skipped/skipped/skipped | not run | 0/250 · ok · FAIL · — · fail (20s)/skipped/skipped/skipped |
+| 18 | cryptomator/cryptomator | jdk-unavailable / jdk-unavailable | 0/14 · ok · ok · 309/313 · 9s/0s/2s/7s | 0/14 · ok · ok · 309/313 · 9s/1s/4s/8s | not run | 0/14 · ok · ok · 309/313 · 10s/1s/3s/9s |
+| 19 | quarkusio/quarkus | skipped / — | 5/2528 · ok · FAIL · — · fail (546s)/skipped/skipped/skipped | 4/2524 · ok · FAIL · — · fail (496s)/skipped/skipped/skipped | not run | 4/2523 · ok · FAIL · — · fail (791s)/skipped/skipped/skipped |
+| 20 | apache/hadoop | skipped / — | 6/272 · ok · FAIL · — · fail (24s)/skipped/skipped/skipped | 4/268 · ok · FAIL · — · fail (58s)/skipped/skipped/skipped | not run | 4/267 · ok · FAIL · — · fail (58s)/skipped/skipped/skipped |
 
-| count | run17 | run18 |
-|-------|--:|--:|
-| repos measured | 20 | 20 |
-| import with zero Tier-3 errors | 12 | 12 |
-| `jk lock` ok | 18 | 18 |
-| `jk build --skip-tests` ok (compiled something) | 14 | 12 |
-| `jk test` ran and passed | 3 | 3 |
-| jk test total == Maven total | 0 | 0 |
+| count | run17 | run18 | run19 | run20 |
+|-------|--:|--:|--:|--:|
+| repos measured | 20 | 20 | 4 | 20 |
+| import with zero Tier-3 errors | 12 | 12 | 1 | 12 |
+| `jk lock` ok | 18 | 18 | 3 | 18 |
+| `jk build --skip-tests` ok (compiled something) | 14 | 12 | 3 | 14 |
+| `jk test` ran and passed | 3 | 3 | 1 | 4 |
+| jk test total == Maven total | 0 | 0 | 0 | 0 |
 
 ## run17
 
@@ -98,6 +100,64 @@ Measured 20 of 20 selected repos.
 | 18 | [cryptomator/cryptomator](https://github.com/cryptomator/cryptomator) | 16142 | 1 | 26 | 0/14 | ok | ok | 309/313 | jdk-unavailable* | jdk-unavailable | jdk-unavailable | jdk-unavailable | jdk-unavailable | jdk-unavailable | 9s | 1s | 4s | 8s | jdk-unavailable: temurin-26 |
 | 19 | [quarkusio/quarkus](https://github.com/quarkusio/quarkus) | 15888 | 1906 | 21 | 4/2524 | ok | FAIL | — | —* | fail (31s) | skipped | skipped | skipped | skipped | fail (496s) | skipped | skipped | skipped | repository `apache.snapshots` at http://repository.apache.org/snapshots, declared by the POM of org.apache.httpcomponents:httpcomponents-parent:11, was not used: it is plaintext http, and a repository |
 | 20 | [apache/hadoop](https://github.com/apache/hadoop) | 15661 | 121 | 17 | 4/268 | ok | FAIL | — | —* | fail (33s) | skipped | skipped | skipped | skipped | fail (58s) | skipped | skipped | skipped | [plugin-protoc — hadoop-yarn-api] zip END header not found |
+
+Measured 20 of 20 selected repos.
+
+\* Maven numbers reused from an earlier row (jk-only re-measurement): TheAlgorithms-Java, analysis-ik, apollo, cryptomator, dataease, floci, hadoop, java-design-patterns, jenkins, keycloak, mall, nacos, neo4j, quarkus, questdb, spring-cloud-alibaba, thingsboard, tutorials, xxl-job, zipkin
+
+## run19
+
+| # | repo | stars | modules | java | import E/W | lock | build | tests jk | tests mvn | mvn cold | mvn warm-clean | mvn no-op | mvn touch | mvn test | jk cold | jk no-op | jk touch | jk test | first failure |
+|--:|------|------:|--------:|:----:|:---------:|:----:|:-----:|:--------:|:---------:|--------:|---------------:|----------:|----------:|---------:|--------:|---------:|---------:|--------:|---------------|
+| 1 | [iluwatar/java-design-patterns](https://github.com/iluwatar/java-design-patterns) | 94693 | 211 | 21 | 1/60 | ok | ok (203/211 modules) | 4502/4514 (fail) | 5089/5094 (timeout)* | 212s | 111s | 69s | 70s | timeout (1200s) | 111s | 37s | 3s | fail (36s) | test failure: AppTest — com.iluwatar:health-check#shouldExecuteApplicationWithoutException() — org.opentest4j.AssertionFailedError: Unexpected exception thrown: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManag |
+| 2 | [macrozheng/mall](https://github.com/macrozheng/mall) | 84774 | | 17 | not run | | | | | | | | | | | | | | |
+| 3 | [TheAlgorithms/Java](https://github.com/TheAlgorithms/Java) | 66254 | | 21 | not run | | | | | | | | | | | | | | |
+| 4 | [eugenp/tutorials](https://github.com/eugenp/tutorials) | 37322 | 1727 | 17 | 4/968 | FAIL | skipped | — | —* | fail (413s) | skipped | skipped | skipped | skipped | skipped | skipped | skipped | skipped | [resolve-deps — tutorials] platform BOM io.quarkus.platform:quarkus-bom:1.0.0.Final is in no declared repository (POM not found in any declared repo: io.quarkus.platform:quarkus-bom:1.0.0.Final). The `[quarkus]` table implies it: `version = "1.0.0.Final"` names the release of the plugin |
+| 5 | [keycloak/keycloak](https://github.com/keycloak/keycloak) | 36795 | | 17 | not run | | | | | | | | | | | | | | |
+| 6 | [alibaba/nacos](https://github.com/alibaba/nacos) | 33372 | | 17 | not run | | | | | | | | | | | | | | |
+| 7 | [xuxueli/xxl-job](https://github.com/xuxueli/xxl-job) | 30557 | | 17 | not run | | | | | | | | | | | | | | |
+| 8 | [apolloconfig/apollo](https://github.com/apolloconfig/apollo) | 29807 | | 17 | not run | | | | | | | | | | | | | | |
+| 9 | [alibaba/spring-cloud-alibaba](https://github.com/alibaba/spring-cloud-alibaba) | 29171 | 70 | 17 | 0/63 | ok | ok (59/70 modules) | 225/225 | —* | fail (9s) | skipped | skipped | skipped | skipped | 125s | 4s | 16s | 201s | COMPILATION ERROR : |
+| 10 | [jenkinsci/jenkins](https://github.com/jenkinsci/jenkins) | 26546 | | 17 | not run | | | | | | | | | | | | | | |
+| 11 | [dataease/dataease](https://github.com/dataease/dataease) | 24435 | | 21 | not run | | | | | | | | | | | | | | |
+| 12 | [floci-io/floci](https://github.com/floci-io/floci) | 24322 | | 25 | not run | | | | | | | | | | | | | | |
+| 13 | [thingsboard/thingsboard](https://github.com/thingsboard/thingsboard) | 22423 | | 25 | not run | | | | | | | | | | | | | | |
+| 14 | [infinilabs/analysis-ik](https://github.com/infinilabs/analysis-ik) | 17521 | | 17 | not run | | | | | | | | | | | | | | |
+| 15 | [openzipkin/zipkin](https://github.com/openzipkin/zipkin) | 17460 | 19 | 17 | 1/38 | ok | ok (15/19 modules) | 1187/1219 (fail) | —* | fail (32s) | skipped | skipped | skipped | skipped | 23s | 2s | 3s | fail (102s) | test failure: zipkin2.collector.activemq.ITActiveMQCollector — io.zipkin.zipkin2:zipkin-collector-activemq#startFailsWithInvalidActiveMqServer() — java.lang.AssertionError: |
+| 16 | [questdb/questdb](https://github.com/questdb/questdb) | 17323 | | 25 | not run | | | | | | | | | | | | | | |
+| 17 | [neo4j/neo4j](https://github.com/neo4j/neo4j) | 17228 | | 21 | not run | | | | | | | | | | | | | | |
+| 18 | [cryptomator/cryptomator](https://github.com/cryptomator/cryptomator) | 16142 | | 26 | not run | | | | | | | | | | | | | | |
+| 19 | [quarkusio/quarkus](https://github.com/quarkusio/quarkus) | 15888 | | 21 | not run | | | | | | | | | | | | | | |
+| 20 | [apache/hadoop](https://github.com/apache/hadoop) | 15661 | | 17 | not run | | | | | | | | | | | | | | |
+
+Measured 4 of 20 selected repos (**partial run**).
+
+\* Maven numbers reused from an earlier row (jk-only re-measurement): java-design-patterns, spring-cloud-alibaba, tutorials, zipkin
+
+## run20
+
+| # | repo | stars | modules | java | import E/W | lock | build | tests jk | tests mvn | mvn cold | mvn warm-clean | mvn no-op | mvn touch | mvn test | jk cold | jk no-op | jk touch | jk test | first failure |
+|--:|------|------:|--------:|:----:|:---------:|:----:|:-----:|:--------:|:---------:|--------:|---------------:|----------:|----------:|---------:|--------:|---------:|---------:|--------:|---------------|
+| 1 | [iluwatar/java-design-patterns](https://github.com/iluwatar/java-design-patterns) | 94693 | 211 | 21 | 1/60 | ok | ok (203/211 modules) | 4565/4577 (fail) | 5089/5094 (timeout)* | 212s | 111s | 69s | 70s | timeout (1200s) | 30s | 2s | 5s | fail (54s) | test failure: AppTest — com.iluwatar:health-check#shouldExecuteApplicationWithoutException() — org.opentest4j.AssertionFailedError: Unexpected exception thrown: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManag |
+| 2 | [macrozheng/mall](https://github.com/macrozheng/mall) | 84774 | 8 | 17 | 0/19 | ok | ok (7/8 modules) | 2/7 (fail) | —* | fail (252s) | skipped | skipped | skipped | skipped | 18s | 0s | 8s | fail (141s) | test failure: com.macro.mall.portal.MallPortalApplicationTests — com.macro.mall:mall-portal#contextLoads() — java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@51fa09c7 testClass = com.macro.mall.portal.MallPo |
+| 3 | [TheAlgorithms/Java](https://github.com/TheAlgorithms/Java) | 66254 | 1 | 21 | 0/3 | ok | ok | 9745/9745 | 9742/9742* | 16s | 7s | 6s | 6s | 61s | 24s | 1s | 20s | 41s |  |
+| 4 | [eugenp/tutorials](https://github.com/eugenp/tutorials) | 37322 | 1727 | 17 | 4/961 | FAIL | skipped | — | —* | fail (413s) | skipped | skipped | skipped | skipped | skipped | skipped | skipped | skipped | [resolve-deps — tutorials] platform BOM io.quarkus.platform:quarkus-bom:1.0.0.Final is in no declared repository (POM not found in any declared repo: io.quarkus.platform:quarkus-bom:1.0.0.Final). The `[quarkus]` table implies it: `version = "1.0.0.Final"` names the release of the plugin |
+| 5 | [keycloak/keycloak](https://github.com/keycloak/keycloak) | 36795 | 191 | 17 | 11/300 | ok | FAIL | — | —* | fail (121s) | skipped | skipped | skipped | skipped | fail (25s) | skipped | skipped | skipped | [compile-java — jboss-adapter-core] /home/bsant/.cache/jk-bench/maven-corpus/keycloak/adapters/spi/jboss-adapter-core/src/main/java/org/keycloak/adapters/jboss/KeycloakLoginModule.java:40:8: error: cannot access java.security.acl.Group · class file for java.security.acl.Group not found |
+| 6 | [alibaba/nacos](https://github.com/alibaba/nacos) | 33372 | 62 | 17 | 0/164 | ok | ok (55/62 modules) | 1086/1102 (fail) | —* | fail (71s) | skipped | skipped | skipped | skipped | 118s | 1s | 9s | fail (24s) | test failure: com.alibaba.nacos.logger.adapter.logback12.LogbackNacosLoggingAdapterTest — com.alibaba.nacos:nacos-logback-adapter-12#testIsNeedReloadConfiguration() — java.lang.NoSuchFieldException: loggerFactory |
+| 7 | [xuxueli/xxl-job](https://github.com/xuxueli/xxl-job) | 30557 | 7 | 17 | 0/10 | ok | ok (5/7 modules) | 4/21 (fail) | no tests ran* | 35s | 10s | 10s | 10s | 4s | 21s | 1s | 4s | fail (10s) | test failure: com.xxl.job.admin.business.mapper.XxlJobGroupMapperTest — com.xuxueli:xxl-job-admin#test() — java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@23382f76 testClass = com.xxl.job.admin.business.map; pom skips tests under Maven |
+| 8 | [apolloconfig/apollo](https://github.com/apolloconfig/apollo) | 29807 | 14 | 17 | 0/37 | ok | ok (12/14 modules) | 117/119 (fail) | 1267/1268* | 40s | 19s | 19s | 19s | 161s | 18s | 1s | 9s | fail (11s) | test failure: com.ctrip.framework.apollo.build.sql.converter.ApolloSqlConverterH2Test — com.ctrip.framework.apollo:apollo-build-sql-converter#checkH2() — java.lang.IllegalStateException: illegal class path: /home/bsant/.cache/jk-bench/maven-corpus/apollo/targe |
+| 9 | [alibaba/spring-cloud-alibaba](https://github.com/alibaba/spring-cloud-alibaba) | 29171 | 70 | 17 | 0/63 | ok | ok (59/70 modules) | 225/225 | —* | fail (9s) | skipped | skipped | skipped | skipped | 109s | 1s | 15s | 216s | COMPILATION ERROR : |
+| 10 | [jenkinsci/jenkins](https://github.com/jenkinsci/jenkins) | 26546 | 9 | 17 | 2/57 | ok | ok (8/9 modules) | fail, no results | 21479/21503 (fail)* | 209s | 40s | 26s | 26s | fail (289s) | 117s | 0s | 50s | fail (71s) | + [1 of 8] org.jenkins-ci.main:jenkins-bom - took 12ms; pom skips tests under Maven |
+| 11 | [dataease/dataease](https://github.com/dataease/dataease) | 24435 | 15 | 21 | 0/16 | ok | ok (8/15 modules) | no tests ran | no tests ran* | 70s | 10s | 3s | 3s | 3s | 18s | 1s | 1s | fail (0s) | [error] no tests ran: none of the 8 modules has a test suite (io.dataease:extensions-datasource, io.dataease:extensions-view, io.dataease:extensions-datafilling, io.dataease:common, io.dataease:api-permissions, …) |
+| 12 | [floci-io/floci](https://github.com/floci-io/floci) | 24322 | 3 | 25 | 0/4 | ok | ok (1/3 modules) | 1418/1420 (fail) | fail, no results* | 40s | 27s | 7s | 7s | fail (379s) | 44s | 1s | 2s | fail (375s) | test failure: io.github.hectorvent.floci.core.common.dns.EmbeddedDnsServerTest#forwardToUpstreams_returnsResponseLargerThan512BytesIntact() — java.net.SocketTimeoutException: Receive timed out |
+| 13 | [thingsboard/thingsboard](https://github.com/thingsboard/thingsboard) | 22423 | 60 | 25 | 3/112 | ok | ok (51/60 modules) | 996/997 (fail) | —* | fail (63s) | skipped | skipped | skipped | skipped | 110s | 0s | 8s | fail (44s) | [compile-test — application] /home/bsant/.cache/jk-bench/maven-corpus/thingsboard/application/src/test/java/org/thingsboard/server/client/NotificationApiClientTest.java:158:15: error: reference to markAllNotificationsAsRead is ambiguous · both method markAllNotificationsAsRead(org.thingsb |
+| 14 | [infinilabs/analysis-ik](https://github.com/infinilabs/analysis-ik) | 17521 | 4 | 17 | 0/5 | ok | ok (3/4 modules) | 27/27 | —* | fail (39s) | skipped | skipped | skipped | skipped | 5s | 0s | 3s | 3s | Plugin org.apache.maven.plugins:maven-enforcer-plugin:1.2 or one of its dependencies could not be resolved: |
+| 15 | [openzipkin/zipkin](https://github.com/openzipkin/zipkin) | 17460 | 19 | 17 | 1/37 | ok | ok (15/19 modules) | 1107/1111 (fail) | —* | fail (32s) | skipped | skipped | skipped | skipped | 22s | 1s | 3s | fail (78s) | test failure: zipkin2.server.internal.rabbitmq.ZipkinRabbitMQCollectorConfigurationTest — io.zipkin:zipkin-server#providesCollectorComponent_whenAddressesSet() — java.lang.AssertionError: |
+| 16 | [questdb/questdb](https://github.com/questdb/questdb) | 17323 | 5 | 25 | 0/28 | FAIL | skipped | — | —* | fail (31s) | skipped | skipped | skipped | skipped | skipped | skipped | skipped | skipped | [resolve-deps — questdb] Cannot resolve dependencies: · No versions of org.questdb:questdb-client match 1.3.10-SNAPSHOT · 1.3.10-SNAPSHOT is a snapshot, and no repository org.questdb:questdb-client may resolve from serves snapshots: central (releases only), jumpkick (releases only), g |
+| 17 | [neo4j/neo4j](https://github.com/neo4j/neo4j) | 17228 | 181 | 21 | 0/250 | ok | FAIL | — | —* | fail (31s) | skipped | skipped | skipped | skipped | fail (20s) | skipped | skipped | skipped | [compile-java — parser] /home/bsant/.cache/jk-bench/maven-corpus/neo4j/target/community/cypher/front-end/parser/v5/parser/plugin/generate-antlr/generated/antlr/org/neo4j/cypher/internal/parser/v5/Cypher5Lexer.java:13:8: error: duplicate class: org.neo4j.cypher.internal.parser.v5.Cyph |
+| 18 | [cryptomator/cryptomator](https://github.com/cryptomator/cryptomator) | 16142 | 1 | 26 | 0/14 | ok | ok | 309/313 | jdk-unavailable* | jdk-unavailable | jdk-unavailable | jdk-unavailable | jdk-unavailable | jdk-unavailable | 10s | 1s | 3s | 9s | jdk-unavailable: temurin-26 |
+| 19 | [quarkusio/quarkus](https://github.com/quarkusio/quarkus) | 15888 | 1906 | 21 | 4/2523 | ok | FAIL | — | —* | fail (31s) | skipped | skipped | skipped | skipped | fail (791s) | skipped | skipped | skipped | `io.quarkus:quarkus-core-deployment` `compile-java` failed |
+| 20 | [apache/hadoop](https://github.com/apache/hadoop) | 15661 | 121 | 17 | 4/267 | ok | FAIL | — | —* | fail (33s) | skipped | skipped | skipped | skipped | fail (58s) | skipped | skipped | skipped | [plugin-protoc — hadoop-yarn-api] zip END header not found |
 
 Measured 20 of 20 selected repos.
 
@@ -159,15 +219,15 @@ Measured 20 of 20 selected repos.
 
 ## Ratchet
 
-Current bar (run18), host `1a8c211a203d`:
+Current bar (run20), host `1a8c211a203d`:
 
 - repos importing with zero Tier-3 errors: **12** / 20
 - repos whose `jk lock` succeeds: **18** / 20
-- repos whose `jk build --skip-tests` compiles something: **12** / 20
-- repos whose `jk test` runs and passes: **3** / 20
+- repos whose `jk build --skip-tests` compiles something: **14** / 20
+- repos whose `jk test` runs and passes: **4** / 20
 - repos whose jk test total equals Maven's: **0** / 20
 
-Delta vs run17: import_clean 12→12, lock 18→18, build 14→12, tests_ran 3→3, tests_equal 0→0
+Delta vs run19: import_clean 1→12, lock 3→18, build 3→14, tests_ran 1→4, tests_equal 0→0
 
 Rule: a run that lowers any of these counts is a regression; a run that raises one moves the bar.
 
