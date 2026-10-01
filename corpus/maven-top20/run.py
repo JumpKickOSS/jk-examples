@@ -323,10 +323,13 @@ def first_mvn_error(log: Path) -> str:
     return ""
 
 
-def first_jk_error(log: Path, root: Path) -> str:
-    reason = jk_results_headline(root)
-    if reason:
-        return reason
+def first_jk_error(log: Path, root: Path, since: float = 0.0) -> str:
+    """The first cause a failed jk step reports; target/jk-results.md counts only when that step wrote it."""
+    results = root / "target" / "jk-results.md"
+    if results.is_file() and results.stat().st_mtime >= since:
+        reason = jk_results_headline(root)
+        if reason:
+            return reason
     reason = first_log_line(log)
     if reason:
         return reason
@@ -394,8 +397,11 @@ def measure(repo: dict, args) -> dict:
     def left() -> float:
         return deadline - time.time()
 
+    step_start: dict[str, float] = {}
+
     def step(key: str, cmd: list[str], log: str, cap: float | None = None, cwd: Path = root, env: dict | None = None) -> dict:
         t = left() if cap is None else min(cap, left())
+        step_start[log] = time.time()
         r = run(cmd, cwd, rdir / log, t, env)
         if r["status"] == "timeout" and (cap is None or t < cap):
             r["status"] = "capped"          # killed by the 45-minute repo cap, not by its own timeout
@@ -496,7 +502,7 @@ def measure(repo: dict, args) -> dict:
     row["import"] = parse_import_report(report)
     row["jk_modules"] = jk_workspace_modules(root)
     if r["status"] != "ok":
-        jk_first_error = first_jk_error(rdir / "jk-import.log", root) or "jk import failed"
+        jk_first_error = first_jk_error(rdir / "jk-import.log", root, step_start.get("jk-import.log", 0.0)) or "jk import failed"
     lock_ok = False
     if "lock" not in stages:
         pass
@@ -504,7 +510,7 @@ def measure(repo: dict, args) -> dict:
         r = step("jk_lock", JK + ["lock"], "jk-lock.log", cap=900, env=jenv)
         lock_ok = r["status"] == "ok"
         if not lock_ok and not jk_first_error:
-            jk_first_error = first_jk_error(rdir / "jk-lock.log", root) or f"jk lock {r['status']}"
+            jk_first_error = first_jk_error(rdir / "jk-lock.log", root, step_start.get("jk-lock.log", 0.0)) or f"jk lock {r['status']}"
     else:
         row["steps"]["jk_lock"] = {"status": "skipped", "exit": None, "wall": 0.0}
         jk_first_error = jk_first_error or "jk import wrote no jk.toml"
@@ -523,9 +529,9 @@ def measure(repo: dict, args) -> dict:
                 row["jk_tests_line"] = jk_results_tests_line(root)
                 row["jk_tests"] = jk_junit_totals(root)
                 if row["steps"]["jk_test"]["status"] != "ok" and not jk_first_error:
-                    jk_first_error = first_jk_error(rdir / "jk-test.log", root)
+                    jk_first_error = first_jk_error(rdir / "jk-test.log", root, step_start.get("jk-test.log", 0.0))
         else:
-            jk_first_error = jk_first_error or first_jk_error(rdir / "jk-build-cold.log", root) or f"jk build {r['status']}"
+            jk_first_error = jk_first_error or first_jk_error(rdir / "jk-build-cold.log", root, step_start.get("jk-build-cold.log", 0.0)) or f"jk build {r['status']}"
             for k in ("jk_build_noop", "jk_build_touch", "jk_test"):
                 if "test" in stages or k != "jk_test":
                     row["steps"][k] = {"status": "skipped", "exit": None, "wall": 0.0}
