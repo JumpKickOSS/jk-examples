@@ -1,11 +1,11 @@
 version = 1
-generated-by = "jk 0.13.8"
-generated-by-build = "4e9db48c9cbf"
-generated-by-build-time = "2026-09-20T16:33:23Z"
+generated-by = "jk 0.14.0"
+generated-by-build = "0f34764db72a"
+generated-by-build-time = "2026-10-01T19:29:49Z"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.12.0"
 manifests-sha256 = "c58af664c39ccd34d0cb49b3bb81887ba8b9ef2452a979c987ff379949bf747e"
-project-id = "11387e44711a2e1b65b4d329501b171e"
+project-id = "00b92b95721309f7df485b4b6f770eb0"
 
 [jdk]
 suggested-vendor = "temurin"
@@ -92,6 +92,17 @@ members  = ["web"]
 
 [[artifact]]
 name     = "io.micrometer:micrometer-commons:jar:"
+version  = "1.16.7"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:cd1ad64a94650a2ed3988a4ab48c9a7fad40c4986a81e328194dd757b5170273"
+scopes   = ["main"]
+members  = ["service"]
+deps = [
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "io.micrometer:micrometer-commons:jar:"
 version  = "1.17.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:f2cee6ef046e72eec8128474c7f58c6217173b45ae373c30de0289f2a56ab0fd"
@@ -126,6 +137,18 @@ deps = [
   "io.micrometer:micrometer-commons:jar:@1.17.1",
   "io.micrometer:micrometer-core:jar:@1.17.1",
   "io.micrometer:micrometer-observation:jar:@1.17.1",
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "io.micrometer:micrometer-observation:jar:"
+version  = "1.16.7"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:74f9e4d51ef30c141de8a2409879282e572eef98665e033e8922c2fbee16862d"
+scopes   = ["main"]
+members  = ["service"]
+deps = [
+  "io.micrometer:micrometer-commons:jar:@1.16.7",
   "org.jspecify:jspecify:jar:@1.0.1",
 ]
 
@@ -343,6 +366,14 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:7c12ee575508f81e22b1db9334b969d0ec54ef0fd1dcba24eeab1a44235fc366"
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
 scopes   = ["main"]
+
+[[artifact]]
+name     = "org.jspecify:jspecify:jar:"
+version  = "1.0.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:1fad6e6be7557781e4d33729d49ae1cdc8fdda6fe477bb0cc68ce351eafdfbab"
+scopes   = ["test"]
+members  = ["domain"]
 
 [[artifact]]
 name     = "org.jspecify:jspecify:jar:"
