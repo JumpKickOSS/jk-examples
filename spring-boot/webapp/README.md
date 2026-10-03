@@ -5,22 +5,21 @@ The most common shape of application people actually ship, as a two-module works
 | Module | Role |
 |--------|------|
 | `app` | Spring Boot: `/api/hello`, the static SPA from `classpath:/static/`, and the SPA fallback. `[image]`, `[dev.sidecars]`. |
-| `web` | A tiny Vite + React app. **Resource-only jk module** — no JVM sources; its resource root is where Vite writes the bundle. |
+| `web` | A tiny Vite + React app. A **node module**: `node = 24` and no JVM sources. |
 
 ## The classpath seam
 
-The front end and the back end have two build tools and one artifact. The seam between them is
+The front end and the back end have two toolchains and one artifact. The seam between them is
 a **resource jar**:
 
-1. `web/jk.toml` declares no sources, so the module uses jk's simple layout and `web/resources/`
-   is its resource root.
-2. `web/vite.config.ts` sets `build.outDir = "resources/static"` (with `emptyOutDir`), so
-   `npm run build` writes `index.html` and the hashed `assets/` straight into that root.
-   `web/resources/` is gitignored — it is build output, not source.
-3. `jk build` packages the directory as `web-0.1.0.jar` with `static/` at its root.
-4. `app/jk.toml` depends on it with `web.workspace = true`, so the jar rides into the Boot jar's
+1. `web/jk.toml` declares `node = 24`. jk provisions that Node.js, installs from
+   `package-lock.json` (`npm ci`) and runs the `build` script, so Vite writes `web/dist/`. Every
+   step is cached: a second `jk build` installs and bundles nothing.
+2. Because `app` depends on `web`, jk packages `dist/` as `web-0.1.0.jar` with `static/` at its
+   root.
+3. `app/jk.toml` depends on it with `web.workspace = true`, so the jar rides into the Boot jar's
    `BOOT-INF/lib/` like any other dependency. Nothing is copied between module trees.
-5. Spring Boot's default static locations already include `classpath:/static/`, so `GET /` and
+4. Spring Boot's default static locations already include `classpath:/static/`, so `GET /` and
    `GET /assets/<hash>.js` are served with no configuration. `spa/StaticAssets` adds a one-year
    `Cache-Control` for `/assets/**` only — the file names carry a content hash, `index.html`
    does not and stays uncached.
@@ -35,13 +34,10 @@ own assets never reach it.
 
 ## Build
 
-Node is a prerequisite jk does not manage; the bundle has to exist before `jk build` packages it.
-
 ```sh
-cd web && npm ci && npm run build && cd ..   # → web/resources/static/
-jk build                                      # web jar, app Boot jar, the /api/hello test
-unzip -l target/web/lib/web-0.1.0.jar | grep static/index.html
-java -jar target/app-0.1.0.jar                # http://localhost:8080/ and /about and /api/hello
+jk build                                      # Node.js, the web jar, app's Boot jar, the /api/hello test
+unzip -l web/target/web-0.1.0.jar | grep static/index.html
+java -jar app/target/app-0.1.0.jar            # http://localhost:8080/ and /about and /api/hello
 jk guard                                      # spring + monorepo packs
 jk image -m app                               # optional: JRE 25 image with a trained AOT cache
 ```

@@ -1,6 +1,6 @@
 target/
 
-# Front end. `web/resources/` is Vite's build.outDir — build output that jk packages, not source.
+# Front end: jk installs node_modules and Vite writes dist/; neither is source.
 web/node_modules/
-web/resources/
+web/dist/
 web/.vite/

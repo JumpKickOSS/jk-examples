@@ -1,15 +1,25 @@
 version = 1
 generated-by = "jk 0.14.0"
-generated-by-build = "0f34764db72a"
-generated-by-build-time = "2026-10-01T19:29:49Z"
+generated-by-build = "2a03b4660576"
+generated-by-build-time = "2026-10-03T20:25:14Z"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.12.0"
-manifests-sha256 = "330e268cf4f7c830d2ad906f015aa34465a77d38227c45edb9261d3c46161371"
+manifests-sha256 = "2fd871c33b3156339e5f23df04ff9aa80b30d9dffdc0b019e6df3622a2a09a79"
 project-id = "b6361c012bb75700c6bb697a81f9542b"
 
 [jdk]
 suggested-vendor = "temurin"
 suggested-version = "25.0.4.1"
+
+[node]
+version = "24.21.0"
+npm = "11.19.0"
+sha256.darwin-arm64 = "bed7eea5325e1108f32ce5228ddd6a5f0f08a499ee42aa7442aea583702f6057"
+sha256.darwin-x64 = "1462cb3b3046b815cf8ea436d3da450ec1a9f11dac7e5a46b0ada5305d7e8097"
+sha256.linux-arm64 = "724282c3b43aec998aa9527380465b45d229e021b58035f5f4f63095eabfe5d5"
+sha256.linux-x64 = "6e1db87ef58b8819e5d5402eff1536491b18edd8eb7bee5ef7897876e88dc5ff"
+sha256.win-arm64 = "8779b1bde1d39f8d420e3b57aa657b39891af434d3de44a919044cec06785921"
+sha256.win-x64 = "158f7685b44de51f6c0df1d153526cbcd3e1bc739a8dfc607721cef75de9e541"
 
 [[artifact]]
 name     = "ch.qos.logback:logback-classic:jar:"
