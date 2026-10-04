@@ -12,3 +12,6 @@ jk image --tarball target/sveltekit-node.tar
 
 `[node] framework = "sveltekit"` is written out: current SvelteKit keeps its config in
 `vite.config.ts`, and jk otherwise takes the project for plain Vite (output `dist/`).
+
+Known gap: `jk image` fails here with `[jk-image-builder].mainClass missing`; the command does
+not yet hand a node module to the node image plan.
