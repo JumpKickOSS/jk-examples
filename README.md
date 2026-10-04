@@ -22,6 +22,11 @@ repo's `main` closely; build them with a current `jk`.
 | `spring-boot/kitchen-sink/` | Spring Boot at an exact pin — web + data-jpa + validation + actuator, BOM auto-import, boot-jar layout, Spring AOT step, `[build-info]`, dev-scope devtools, `[image]`. |
 | `spring-boot/petshop/` | Multi-module Spring Boot pet shop (domain / service / web) — workspace DI + MockMvc tests, the spring and monorepo guard packs. |
 | `spring-boot/webapp/` | **A JVM backend serving a single-page front end**: a resource-only `web` module fed by Vite's `build.outDir`, the app serving `classpath:/static/` with an SPA fallback, and `[dev.sidecars]` running the Vite dev server beside `jk dev`. |
+| `web/vite-react/` | A Boot app serving a Vite + React SPA from its image: `jk new -t …/webapp --frontend vite-react`, the SPA a node module packaged as a resource jar. |
+| `web/next-standalone/` | A Next.js standalone server as a node module: `jk build`, `jk run`, a distroless Node.js image. |
+| `web/angular/` | An Angular SPA as a node module: `ng build` and `ng test` (Vitest) as jk steps, inferred from `angular.json`. |
+| `web/sveltekit-node/` | SvelteKit on adapter-node: a Node.js server `jk run` starts and `jk image` ships. |
+| `web/two-frontends/` | One Boot API, a Vite admin SPA and a Next storefront; root `jk dev` runs all three with no `[dev.sidecars]`. |
 | `aot/vanilla-cli/` | Core JVM AOT (`jk build --aot-cache`) with no framework and no plugin — the everyone-gets-this path. |
 | `kotlin/serialization-cli/` | Project-declared Kotlin compiler plugins (`[[kotlin-plugins]]`) via kotlinx-serialization. |
 | `kotlin/ktor-petshop/` | Multi-module Ktor + **Koin** + **Exposed** + H2 pet shop — Kotlin workspace dogfood; the `domain` library's Dokka javadoc jar and `[build-info]`. |

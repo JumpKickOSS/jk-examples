@@ -1,0 +1,10 @@
+# House rules for a node front-end example. No framework pack applies here, so the file carries the
+# one ratchet every pack ships: a file-size cap that tolerates today's sites (jk-guards-baseline.toml)
+# and only tightens. It measures the front end's own sources, never lockfiles or build output. `jk guard explain --schema metric` lists the keys.
+[guards.file-size]
+kind     = "metric"
+measure  = "lines"
+files    = ["src/**/*.ts", "src/**/*.html", "src/**/*.css"]
+cap      = 800
+baseline = true
+why      = "a file that no longer fits a review no longer fits a reviewer"

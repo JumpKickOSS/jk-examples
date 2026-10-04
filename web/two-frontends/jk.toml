@@ -1,0 +1,33 @@
+group = "com.example"
+name = "two-frontends"
+version = "0.1.0"
+java = 25
+
+# `admin` is a Vite SPA served by `app` from its classpath; `storefront` is a Next.js server of its
+# own; `app` is the Spring Boot API. `jk dev` here runs all three.
+[workspace]
+modules = ["admin", "storefront", "app"]
+
+# Test tiers: `jk test` is the fast tier; each profile owns one cost tag, so every tagged
+# test runs in exactly one tier (`jk test --profile integration`).
+[test]
+exclude-tags = ["integration", "network", "slow", "bench"]
+
+[profiles.integration]
+include-tags = ["integration"]
+exclude-tags = []
+
+[profiles.network]
+include-tags = ["network"]
+exclude-tags = ["integration"]
+
+[profiles.slow]
+include-tags = ["slow"]
+exclude-tags = ["integration", "network"]
+
+[profiles.bench]
+include-tags = ["bench"]
+exclude-tags = ["integration", "network", "slow"]
+
+[format]
+style = "standard"
