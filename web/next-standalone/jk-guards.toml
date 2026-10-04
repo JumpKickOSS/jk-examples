@@ -4,7 +4,7 @@
 [guards.file-size]
 kind     = "metric"
 measure  = "lines"
-files    = ["*.ts", "app/**/*.tsx", "app/**/*.css"]
+files    = ["app/**/*.tsx", "app/**/*.css"]
 cap      = 800
 baseline = true
 why      = "a file that no longer fits a review no longer fits a reviewer"

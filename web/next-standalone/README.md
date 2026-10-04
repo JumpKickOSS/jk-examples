@@ -10,6 +10,3 @@ jk image --tarball target/next-standalone.tar   # a distroless Node.js server im
 ```
 
 `jk-guards.toml` measures the front end's sources (not lockfiles or build output).
-
-Known gap: `jk image` fails here with `[jk-image-builder].mainClass missing`; the command does
-not yet hand a node module to the node image plan.

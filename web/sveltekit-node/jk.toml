@@ -2,9 +2,5 @@ name = "sveltekit-node"
 group = "com.example"
 version = "0.1.0"
 
-# adapter-node writes a Node.js server to build/, which `jk run` starts and `jk image` ships. The
-# framework is named because SvelteKit's config now lives in vite.config.ts, where jk does not
-# look for it; its output dir and start command follow from it.
-[node]
-version = 24
-framework = "sveltekit"
+# adapter-node writes a Node.js server to build/, which `jk run` starts and `jk image` ships.
+node = 24
