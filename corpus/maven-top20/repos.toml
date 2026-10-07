@@ -8,6 +8,9 @@
 # imported with `-P <ids>`, so the reactor is what gets measured rather than an empty workspace.
 # `mvn_args` = the Maven side of the same choice: extra arguments for every `mvn` step of the repo, so
 # tutorials' Maven build activates the profiles its jk import was given and the two sides stay comparable.
+# `test_classes` = the test classes both sides run for a repo whose whole suite outlasts the test cap
+# (`jk test --class C` for each, `mvn test -Dtest=C,...`), so the row records what ran instead of a
+# timeout; a repo without it runs its whole suite.
 # Ranking source: gh search repos --language=java --sort=stars (top 100, then stars:9000..19040).
 
 [[repo]]
@@ -136,6 +139,22 @@ sha = "c30df837815263f2e26353ee8b66aa1b017a97dc"
 stars = 24322
 java = "25"
 modules = 3
+# The suite runs for hours in one JVM by design (fixed ports, TLS proxies); these are plain unit tests
+# of the core package, with no Quarkus application, container or network listener.
+test_classes = [
+  "io.github.hectorvent.floci.core.common.AwsArnOwnershipTest",
+  "io.github.hectorvent.floci.core.common.AwsArnUtilsTest",
+  "io.github.hectorvent.floci.core.common.AwsJsonCborSerializerTest",
+  "io.github.hectorvent.floci.core.common.AwsRegionsTest",
+  "io.github.hectorvent.floci.core.common.CidrCanonicalizerTest",
+  "io.github.hectorvent.floci.core.common.RegionResolverTest",
+  "io.github.hectorvent.floci.core.common.ReservedTagsTest",
+  "io.github.hectorvent.floci.core.common.SigV4CredentialScopeTest",
+  "io.github.hectorvent.floci.core.common.SqlParameterParserTest",
+  "io.github.hectorvent.floci.core.common.XmlParserTest",
+  "io.github.hectorvent.floci.core.common.auth.SigV4RequestValidatorTest",
+  "io.github.hectorvent.floci.core.common.port.PortAllocatorTest",
+]
 
 [[repo]]
 name = "thingsboard"

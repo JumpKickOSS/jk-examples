@@ -140,6 +140,13 @@ it is imported with `-P default,default-heavy` and its Maven side runs with the 
 measures the reactor on both sides rather than an empty workspace against a build of zero modules. Both
 lists are recorded in the row (`import_args`, `mvn_args`) and named above the tables.
 
+A repo whose whole suite outlasts the test cap names a `test_classes` list in `repos.toml`, and both
+sides run only those classes (`jk test --class C` for each, `mvn test -Dtest=C,...` with
+`-Dsurefire.failIfNoSpecifiedTests=false`), so the row records what ran instead of `timeout`. floci's
+suite runs for hours in one JVM by design (fixed ports, TLS proxies); its row runs twelve plain unit
+tests of the core package. The list is recorded in the row (`test_classes`), counted above the
+tables, and a Maven side measured over another list is never reused for the row.
+
 ## What counts, what does not
 
 - A `jk test` or `mvn test` step that exits 0 with zero parsed tests is rendered `no tests ran` and never

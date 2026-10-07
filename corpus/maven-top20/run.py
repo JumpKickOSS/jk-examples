@@ -48,6 +48,18 @@ JK_STAGE_STEPS = {"import": ["jk_import"], "lock": ["jk_lock"],
 NOT_RUN = {"status": "not-run", "exit": None, "wall": 0.0}
 
 JK = ["jk", "--no-progress", "--no-ansi", "--no-notify"]
+
+
+def jk_test_args(classes: list[str]) -> list[str]:
+    """`jk test` arguments that run only `classes` (a repo's `test_classes`); none runs the whole suite."""
+    return [arg for c in classes for arg in ("--class", c)]
+
+
+def mvn_test_args(classes: list[str]) -> list[str]:
+    """The Maven side of the same subset: surefire's `-Dtest`, not failing a module that has none of them."""
+    if not classes:
+        return []
+    return [f"-Dtest={','.join(classes)}", "-Dsurefire.failIfNoSpecifiedTests=false"]
 MVN_ARGS = ["-B", "-q", f"-Dmaven.repo.local={M2}"]
 TOOLS: benchtools.Tools | None = None
 LAST_JAVA: dict[str, str] = {}
@@ -426,9 +438,13 @@ def measure(repo: dict, args) -> dict:
     mvn_first_error = ""
     mvn_args = list(repo.get("mvn_args", []))         # e.g. ["-P", "default,default-heavy"]; see repos.toml
     row["mvn_args"] = mvn_args
+    test_classes = list(repo.get("test_classes", []))  # a suite too long for the test cap; see repos.toml
+    row["test_classes"] = test_classes
     prev = None if args.both else load_rows(host=benchtools.host_id()).get(name)
     if prev and prev.get("maven_version") != (TOOLS.maven_version if TOOLS else None):
         prev = None
+    if prev and prev.get("test_classes", []) != test_classes:
+        prev = None                                   # a Maven test run over another subset is not comparable
     if prev and prev.get("steps", {}).get("mvn_cold"):
         # --jk-only (the default): carry the last Maven side measured on this host with this pin.
         for k in ("mvn_cold", "mvn_warm_clean", "mvn_noop", "mvn_touch", "mvn_test"):
@@ -466,7 +482,7 @@ def measure(repo: dict, args) -> dict:
                     touch(root, tf)
                     step("mvn_touch", MVN + ["-DskipTests", "package"], "mvn-touch.log", env=menv)
                     untouch(root, tf)
-                step("mvn_test", MVN + ["test"], "mvn-test.log", cap=TEST_CAP, env=menv)
+                step("mvn_test", MVN + ["test", *mvn_test_args(test_classes)], "mvn-test.log", cap=TEST_CAP, env=menv)
                 row["mvn_tests"] = surefire_totals(root)
                 if pom_skips_tests(root):
                     row["notes"].append("the project's own pom sets skipTests/maven.test.skip=true, so `mvn test` runs nothing")
@@ -525,7 +541,7 @@ def measure(repo: dict, args) -> dict:
                 step("jk_build_touch", JK + ["build", "--skip-tests"], "jk-build-touch.log", env=jenv)
                 untouch(root, tf)
             if "test" in stages:
-                step("jk_test", JK + ["test"], "jk-test.log", cap=TEST_CAP, env=jenv)
+                step("jk_test", JK + ["test", *jk_test_args(test_classes)], "jk-test.log", cap=TEST_CAP, env=jenv)
                 row["jk_tests_line"] = jk_results_tests_line(root)
                 row["jk_tests"] = jk_junit_totals(root)
                 if row["steps"]["jk_test"]["status"] != "ok" and not jk_first_error:
@@ -772,6 +788,10 @@ def render(repos: list[dict], rows: dict[str, dict] | None = None) -> None:
                 for r in cfg["repo"] if r.get("mvn_args") or r.get("import_args")]
     if per_repo:
         lines += ["Per-repo argument lists from `repos.toml`, so both sides measure the same reactor: " + "; ".join(per_repo) + ".", ""]
+    subsets = [f"{r['name']}: {len(r['test_classes'])} classes" for r in cfg["repo"] if r.get("test_classes")]
+    if subsets:
+        lines += ["Test subsets from `repos.toml` (`test_classes`), run on both sides because the whole suite "
+                  "outlasts the test cap: " + "; ".join(subsets) + ".", ""]
     for l in labels:
         ids = sorted({(r.get("jk_version", ""), r.get("jk_commit", ""), r.get("jk_binary", ""), r.get("jk_engine_jar", "")) for r in runs[l].values() if r.get("jk_version")})
         lines.append(f"- **{l}**: " + ("; ".join(f"`{v}` commit `{c}` — {b}; {e}" for v, c, b, e in ids) or "jk identity not recorded (rows predate the identity fields)"))
