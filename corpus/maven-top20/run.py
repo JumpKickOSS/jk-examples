@@ -228,9 +228,10 @@ def surefire_totals(root: Path) -> dict:
     return sum_junit_xml([p for p in root.rglob("target/surefire-reports/TEST-*.xml")])
 
 
-def jk_junit_totals(root: Path) -> dict:
-    return sum_junit_xml([p for p in root.rglob("target/reports/test-results/**/*.xml")
-                          if p.is_file() and "surefire-reports" not in p.parts])
+def jk_junit_totals(root: Path, since: float) -> dict:
+    """jk writes Maven's layout, target/surefire-reports/TEST-*.xml; only files the jk run wrote count."""
+    return sum_junit_xml([p for p in root.rglob("target/surefire-reports/TEST-*.xml")
+                          if p.is_file() and p.stat().st_mtime >= since])
 
 
 def jk_results_tests_line(root: Path) -> dict | None:
@@ -541,9 +542,10 @@ def measure(repo: dict, args) -> dict:
                 step("jk_build_touch", JK + ["build", "--skip-tests"], "jk-build-touch.log", env=jenv)
                 untouch(root, tf)
             if "test" in stages:
+                jk_test_started = time.time()
                 step("jk_test", JK + ["test", *jk_test_args(test_classes)], "jk-test.log", cap=TEST_CAP, env=jenv)
                 row["jk_tests_line"] = jk_results_tests_line(root)
-                row["jk_tests"] = jk_junit_totals(root)
+                row["jk_tests"] = jk_junit_totals(root, jk_test_started)
                 if row["steps"]["jk_test"]["status"] != "ok" and not jk_first_error:
                     jk_first_error = first_jk_error(rdir / "jk-test.log", root, step_start.get("jk-test.log", 0.0))
         else:
