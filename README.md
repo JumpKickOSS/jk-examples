@@ -70,6 +70,7 @@ need. `ports/` and `bench/` are validation and measurement, not teaching materia
 
 | Dir | Shows |
 |---|---|
+| `04-android/hello-compose/` | **The small-app path**: the `android/compose` template grown to one screen with a `ViewModel`, JUnit 5 on the logic, a Robolectric Compose UI test on the JVM, and a debug APK in about a minute. |
 | `04-android/nowinandroid/` | **The Android north star**: Google's reference app, all 27 modules — Compose, Hilt (unmodified sources), Room auto-migrations, protobuf/datastore, kotlinx-serialization, navigation3, a contentType variant dimension, non-transitive R, demo-debug APK + signed R8 release AAB. No Gradle, no AGP. A pinned checkout plus `overlay/`. |
 
 ### 05-recipes — one feature each
