@@ -1,53 +1,97 @@
 # jk-examples
 
-**Black-box fitness suite and adopter examples for [JumpKick](https://github.com/JumpKickOSS/jk) (`jk`).**
+**Examples of how to use [JumpKick](https://github.com/JumpKickOSS/jk) (`jk`) well, and the black-box
+suite that holds the tool to them.**
 
 Each directory is a self-contained JumpKick project (or an orchestrated third-party checkout) that
-exercises a real slice of the tool against real repositories and toolchains. These are not
-monorepo unit tests — they exist to:
+exercises a real slice of the tool against real repositories and toolchains. They exist to:
 
-1. **Validate** ongoing product changes end-to-end (lock, resolve, compile, test, package, run)
-2. **Benchmark** cold / warm / incremental builds as the engine evolves
-3. **Teach** early adopters idiomatic `jk.toml`, workspaces, plugins, guards, and layout conventions
+1. **Teach** idiomatic `jk.toml`, workspaces, plugins, guards, test tiers and layout conventions
+2. **Validate** ongoing product changes end-to-end (lock, resolve, compile, test, package, run)
+3. **Benchmark** cold / warm / incremental builds as the engine evolves
 
 Sibling product repo: [JumpKickOSS/jk](https://github.com/JumpKickOSS/jk). Scenarios track that
 repo's `main` closely; build them with a current `jk`.
 
+## Layout
+
+The numbered directories are a learning path: start at `01-start/` and stop when you have what you
+need. `ports/` and `bench/` are validation and measurement, not teaching material.
+
+| Dir | What's there |
+|---|---|
+| `01-start/` | One small project per language: the first thing to read. |
+| `02-services/` | Backend services on a framework (Spring Boot, Micronaut, Ktor, Netty). |
+| `03-fullstack/` | A JVM backend beside a front end jk builds as a node module, or the front end alone. |
+| `04-android/` | Android apps. |
+| `05-recipes/` | One jk feature per project, framework-free: codegen, lint, test tiers, packaging. |
+| `ports/` | Third-party builds ported to jk via a pinned checkout plus an `overlay/` (`setup.sh`). |
+| `bench/` | Benchmark harnesses that run jk against real repositories outside this tree. |
+
 ## Scenarios
 
-| Dir | Validates |
-|---|---|
-| `android/nowinandroid/` | **The Android north star**: Google's reference app, all 27 modules — Compose, Hilt (unmodified sources), Room auto-migrations, protobuf/datastore, kotlinx-serialization, navigation3, a contentType variant dimension, non-transitive R, demo-debug APK + signed R8 release AAB. No Gradle, no AGP. |
-| `micronaut/hello-http/` | Micronaut HTTP service — the `[micronaut]` plugin at an exact platform pin, assembly fat jar, `@MicronautTest` client smoke, `[native]` through `jk native`, `[image]`. |
-| `spring-boot/kitchen-sink/` | Spring Boot at an exact pin — web + data-jpa + validation + actuator, BOM auto-import, boot-jar layout, Spring AOT step, `[build-info]`, the actuator `sbom` endpoint over jk's SBOM, dev-scope devtools, `[image]`. |
-| `spring-boot/petshop/` | Multi-module Spring Boot pet shop (domain / service / web) — Boot's BOM as the workspace platform, workspace DI + MockMvc tests, the spring and monorepo guard packs. |
-| `spring-boot/webapp/` | **A JVM backend serving a single-page front end**: a `web` node module jk builds on the locked Node.js and packages as a resource jar, the app serving `classpath:/static/` with an SPA fallback, and root `jk dev` running the Vite dev server beside the app, inferred from the dependency. |
-| `web/vite-react/` | A Boot app serving a Vite + React SPA from its image: `jk new -t …/webapp --frontend vite-react`, the SPA a node module packaged as a resource jar. |
-| `web/next-standalone/` | A Next.js standalone server as a node module: `jk build`, `jk run`, a distroless Node.js image. |
-| `web/angular/` | An Angular SPA as a node module: `ng build` and `ng test` (Vitest) as jk steps, inferred from `angular.json`; `[image] kind = "static"` ships it on nginx. |
-| `web/sveltekit-node/` | SvelteKit on adapter-node: a Node.js server `jk run` starts and `jk image` ships. |
-| `web/two-frontends/` | One Boot API, a Vite admin SPA and a Next storefront that both call it (Vite's proxy, a Next `rewrites()`); root `jk dev` runs all three with no `[dev.sidecars]`. |
-| `aot/vanilla-cli/` | Core JVM AOT (`jk build --aot-cache`) with no framework and no plugin — the everyone-gets-this path. |
-| `kotlin/serialization-cli/` | Project-declared Kotlin compiler plugins (`[[kotlin-plugins]]`) via kotlinx-serialization. |
-| `kotlin/ktor-petshop/` | Multi-module Ktor + **Koin** + **Exposed** + H2 pet shop — Kotlin workspace dogfood; the `domain` library's Dokka javadoc jar and `[build-info]`. |
-| `kotlin/library/` | The `library` template for Kotlin as `jk new` writes it: sources and **Dokka** javadoc jars beside the jar, `git.properties` from `[build-info]`, the `library` guard pack, exact pins. |
-| `protobuf/messages/` | The protobuf plugin: provisioned per-OS protoc, Java + Kotlin DSL (lite) codegen. |
-| `graphql/dgs-codegen/` | GraphQL codegen as a `[generate]` recipe: DGS codegen's command line over the schema, typed types + client joining the compile, the tool closure fetched and cached. |
-| `jvm/netty/` | **Full Netty Maven→jk port** (~40 modules, Mill graph parity) — black-box + benchmarks. |
-| `jvm/netty-echo/` | Small Netty echo server on the published `netty-all` (4.2 `MultiThreadIoEventLoopGroup`), an `EmbeddedChannel` handler test and `[image]` — lightweight harness seed. |
-| `jvm/scala-mixed/` | **A mixed Java/Scala module through jk's BSP**: one Zinc session for both halves referencing each other, one `scala` build target Metals imports (compiler version and jars, `scalacOptions` / `javacOptions`), `buildTarget/compile` with a Scala diagnostic — the wire recorded by `bsp-session.py`. |
-| `jvm/shrink-cli/` | The minified jar: R8 `--classfile` full mode collapsing a fat jar. |
-| `jvm/variants-cli/` | Core `[variants]`: a custom dimension on a plain JVM app — per-value `extra-src` + deps, union lockfile, mandatory selection. |
-| `jvm/profiles-vs-variants/` | The decision matrix as running code: a profile (how), a feature (what capability), and the build-type variant (which product) side by side. |
-| `codegen/avro-events/` | The `[avro]` preset: Avro schemas compiled in the generate stage, the classes joining the compile, `string-type`, `[avro] version` written beside the runtime pin so `jk update` moves both. |
-| `codegen/jaxb-orders/` | The `[jaxb]` preset: xjc over `src/main/xsd` into one package, the `jakarta.xml.bind` API and the JAXB runtime as the only dependencies, `[jaxb] version` on the runtime's line. |
-| `codegen/jooq-shop/` | The `[jooq]` preset over DDL scripts: the Flyway migrations applied in memory through `DDLDatabase`, typed tables and references generated, no database for the build. |
-| `lint/checkstyle/` | `[lint] checkstyle` as a cached step after compile: findings as diagnostics with the rule id, `fail-on`, a rule set that repeats nothing `jk format` owns. |
-| `lint/all-tools/` | The four-tool `[lint]` table — Checkstyle, a project PMD ruleset, SpotBugs over the classes, detekt over Kotlin — each its own cached step; runs the real tools so their report parsers see real output. |
-| `test/testng/` | TestNG through the JUnit team's engine: `org.testng:testng` declared, the engine injected by `jk lock`, a `@DataProvider` fanned out, a TestNG group as a Platform tag in the tier table. |
-| `test/migrations/` | Flyway and Liquibase over one module's scripts: the unit tier on H2, the integration tier on a PostgreSQL Testcontainer, `jk run` migrating an H2 file, and both tools as pinned `jk tool install` / `jk tool run` commands. |
+### 01-start — one per language
 
-One scenario per directory; keep each self-contained and its README honest about deviations.
+| Dir | Language | Shows |
+|---|---|---|
+| `01-start/java-cli/` | Java | A plain CLI with no framework or plugin, plus core JVM AOT (`jk build --aot-cache`). |
+| `01-start/kotlin-cli/` | Kotlin | Project-declared Kotlin compiler plugins (`[[kotlin-plugins]]`) via kotlinx-serialization. |
+| `01-start/kotlin-library/` | Kotlin | The `library` template as `jk new` writes it: sources and **Dokka** javadoc jars beside the jar, `git.properties` from `[build-info]`, the `library` guard pack, exact pins. |
+| `01-start/java-scala-mixed/` | Java + Scala | **A mixed Java/Scala module through jk's BSP**: one Zinc session for both halves referencing each other, one `scala` build target Metals imports (compiler version and jars, `scalacOptions` / `javacOptions`), `buildTarget/compile` with a Scala diagnostic — the wire recorded by `bsp-session.py`. |
+
+### 02-services — backends on a framework
+
+| Dir | Language | Shows |
+|---|---|---|
+| `02-services/spring-boot-kitchen-sink/` | Java | Spring Boot at an exact pin — web + data-jpa + validation + actuator, BOM auto-import, boot-jar layout, Spring AOT step, `[build-info]`, the actuator `sbom` endpoint over jk's SBOM, dev-scope devtools, `[image]`. |
+| `02-services/spring-boot-petshop/` | Java | Multi-module Spring Boot pet shop (domain / service / web) — Boot's BOM as the workspace platform, workspace DI + MockMvc tests, the spring and monorepo guard packs. |
+| `02-services/micronaut-http/` | Java | Micronaut HTTP service — the `[micronaut]` plugin at an exact platform pin, assembly fat jar, `@MicronautTest` client smoke, `[native]` through `jk native`, `[image]`. |
+| `02-services/ktor-petshop/` | Kotlin | Multi-module Ktor + **Koin** + **Exposed** + H2 pet shop — Kotlin workspace dogfood; the `domain` library's Dokka javadoc jar and `[build-info]`. |
+| `02-services/netty-echo/` | Java | Small Netty echo server on the published `netty-all` (4.2 `MultiThreadIoEventLoopGroup`), an `EmbeddedChannel` handler test and `[image]` — lightweight harness seed. |
+
+### 03-fullstack — a JVM backend and a front end
+
+| Dir | Shows |
+|---|---|
+| `03-fullstack/spring-boot-spa/` | **A JVM backend serving a single-page front end**: a `web` node module jk builds on the locked Node.js and packages as a resource jar, the app serving `classpath:/static/` with an SPA fallback, and root `jk dev` running the Vite dev server beside the app, inferred from the dependency. |
+| `03-fullstack/vite-react/` | A Boot app serving a Vite + React SPA from its image: `jk new -t …/webapp --frontend vite-react`, the SPA a node module packaged as a resource jar. |
+| `03-fullstack/two-frontends/` | One Boot API, a Vite admin SPA and a Next storefront that both call it (Vite's proxy, a Next `rewrites()`); root `jk dev` runs all three with no `[dev.sidecars]`. |
+| `03-fullstack/angular/` | An Angular SPA as a node module: `ng build` and `ng test` (Vitest) as jk steps, inferred from `angular.json`; `[image] kind = "static"` ships it on nginx. |
+| `03-fullstack/next-standalone/` | A Next.js standalone server as a node module: `jk build`, `jk run`, a distroless Node.js image. |
+| `03-fullstack/sveltekit-node/` | SvelteKit on adapter-node: a Node.js server `jk run` starts and `jk image` ships. |
+
+### 04-android
+
+| Dir | Shows |
+|---|---|
+| `04-android/nowinandroid/` | **The Android north star**: Google's reference app, all 27 modules — Compose, Hilt (unmodified sources), Room auto-migrations, protobuf/datastore, kotlinx-serialization, navigation3, a contentType variant dimension, non-transitive R, demo-debug APK + signed R8 release AAB. No Gradle, no AGP. A pinned checkout plus `overlay/`. |
+
+### 05-recipes — one feature each
+
+| Dir | Shows |
+|---|---|
+| `05-recipes/codegen/avro/` | The `[avro]` preset: Avro schemas compiled in the generate stage, the classes joining the compile, `string-type`, `[avro] version` written beside the runtime pin so `jk update` moves both. |
+| `05-recipes/codegen/jaxb/` | The `[jaxb]` preset: xjc over `src/main/xsd` into one package, the `jakarta.xml.bind` API and the JAXB runtime as the only dependencies, `[jaxb] version` on the runtime's line. |
+| `05-recipes/codegen/jooq/` | The `[jooq]` preset over DDL scripts: the Flyway migrations applied in memory through `DDLDatabase`, typed tables and references generated, no database for the build. |
+| `05-recipes/codegen/protobuf/` | The protobuf plugin: provisioned per-OS protoc, Java + Kotlin DSL (lite) codegen. |
+| `05-recipes/codegen/graphql/` | GraphQL codegen as a `[generate]` recipe: DGS codegen's command line over the schema, typed types + client joining the compile, the tool closure fetched and cached. |
+| `05-recipes/lint/checkstyle/` | `[lint] checkstyle` as a cached step after compile: findings as diagnostics with the rule id, `fail-on`, a rule set that repeats nothing `jk format` owns. |
+| `05-recipes/lint/all-tools/` | The four-tool `[lint]` table — Checkstyle, a project PMD ruleset, SpotBugs over the classes, detekt over Kotlin — each its own cached step; runs the real tools so their report parsers see real output. |
+| `05-recipes/test/testng/` | TestNG through the JUnit team's engine: `org.testng:testng` declared, the engine injected by `jk lock`, a `@DataProvider` fanned out, a TestNG group as a Platform tag in the tier table. |
+| `05-recipes/test/migrations/` | Flyway and Liquibase over one module's scripts: the unit tier on H2, the integration tier on a PostgreSQL Testcontainer, `jk run` migrating an H2 file, and both tools as pinned `jk tool install` / `jk tool run` commands. |
+| `05-recipes/packaging/shrink/` | The minified jar: R8 `--classfile` full mode collapsing a fat jar. |
+| `05-recipes/packaging/variants/` | Core `[variants]`: a custom dimension on a plain JVM app — per-value `extra-src` + deps, union lockfile, mandatory selection. |
+| `05-recipes/packaging/profiles-vs-variants/` | The decision matrix as running code: a profile (how), a feature (what capability), and the build-type variant (which product) side by side. |
+
+### ports and bench
+
+| Dir | Shows |
+|---|---|
+| `ports/netty/` | **Full Netty Maven→jk port** (~40 modules, Mill graph parity) — black-box + benchmarks. A pinned checkout plus `overlay/`. |
+| `bench/maven-top20/` | The 20 most-starred Maven-built repositories, each pinned to a SHA and driven through its own Maven build and `jk import` → `lock` → `build` → `test`; `RESULTS.md` is a ratchet. |
+
+One scenario per directory; keep each self-contained and its README honest about deviations. A
+new scenario goes in the first directory whose description fits it.
 
 ## Conventions every scenario follows
 
@@ -85,15 +129,16 @@ curl -fsSL https://jumpkick.build/install.sh | bash
 jk build --skip-tests && jk install --skip-tests
 
 # then, in this repo:
-cd spring-boot/petshop && jk build && jk guard
+cd 01-start/java-cli && jk build && jk run
+cd ../../02-services/spring-boot-petshop && jk build && jk guard
 ```
 
 Per-scenario detail lives in each directory's README. The two third-party checkouts have a
 `setup.sh` that clones the pinned upstream and applies the `overlay/`:
 
 ```sh
-cd android/nowinandroid && ./setup.sh && ./run.sh
-cd jvm/netty && ./setup.sh && ./run.sh
+cd 04-android/nowinandroid && ./setup.sh && ./run.sh
+cd ports/netty && ./setup.sh && ./run.sh
 ```
 
 Network required throughout: Maven Central, Google Maven, and (for Android) the SDK
