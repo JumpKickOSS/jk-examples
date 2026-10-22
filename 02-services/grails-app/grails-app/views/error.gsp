@@ -1,0 +1,3 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Error</title></head>
+<body><h1>Something went wrong</h1></body></html>

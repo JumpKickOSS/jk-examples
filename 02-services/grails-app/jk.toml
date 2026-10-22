@@ -1,0 +1,38 @@
+name = "guestbook"
+group = "dev.jkexamples"
+version = "0.1.0"
+java = 25
+groovy = "5.1.3"
+
+[application]
+main = "dev.jkexamples.guestbook.Application"
+
+[grails]
+version = "8.0.0"
+
+# grails-bom manages every version below. url-mappings/databinding carry plugin
+# descriptors the web chain depends on (absent ⇒ every route 404s); Grails apps
+# declare their own servlet container, logging provider, and connection pool.
+[dependencies]
+grails-core = { group = "org.apache.grails", name = "grails-core" }
+grails-web-boot = { group = "org.apache.grails", name = "grails-web-boot" }
+grails-url-mappings = { group = "org.apache.grails", name = "grails-url-mappings" }
+grails-databinding = { group = "org.apache.grails", name = "grails-databinding" }
+grails-rest-transforms = { group = "org.apache.grails", name = "grails-rest-transforms" }
+grails-data-hibernate7 = { group = "org.apache.grails", name = "grails-data-hibernate7" }
+grails-logging = { group = "org.apache.grails", name = "grails-logging" }
+starter-tomcat = { group = "org.springframework.boot", name = "spring-boot-starter-tomcat" }
+logback-classic = { group = "ch.qos.logback", name = "logback-classic" }
+h2 = { group = "com.h2database", name = "h2" }
+hikaricp = { group = "com.zaxxer", name = "HikariCP" }
+# Server-rendered pages: GSP and its tag libraries.
+grails-gsp = { group = "org.apache.grails", name = "grails-gsp" }
+
+# Grails' unit-test traits (ControllerUnitTest, DomainUnitTest) on Spock.
+[test-dependencies]
+grails-testing-support-web         = { group = "org.apache.grails", name = "grails-testing-support-web" }
+grails-testing-support-datamapping = { group = "org.apache.grails", name = "grails-testing-support-datamapping" }
+spock-core                         = { group = "org.spockframework", name = "spock-core" }
+# ControllerUnitTest needs grails-web-common's test fixtures (GrailsWebMockUtil). Grails publishes
+# that edge only in Gradle module metadata, not in the POM, so it is declared here.
+grails-web-common-fixtures         = { group = "org.apache.grails.web", name = "grails-web-common", classifier = "test-fixtures" }

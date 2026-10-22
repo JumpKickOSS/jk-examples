@@ -52,6 +52,7 @@ need. `ports/` and `bench/` are validation and measurement, not teaching materia
 | `02-services/micronaut-http/` | Java | Micronaut HTTP service — the `[micronaut]` plugin at an exact platform pin, assembly fat jar, `@MicronautTest` client smoke, `[native]` through `jk native`, `[image]`. |
 | `02-services/quarkus-rest/` | Java | Quarkus REST + Hibernate ORM Panache + Flyway on PostgreSQL 18 — `[quarkus] version` and versionless extensions, the augment and `@QuarkusTest` models from the lock, plain JUnit in `src/test` and Dev Services Postgres in `src/integration`, the fast-jar `[image]`, `jk native`. |
 | `02-services/spring-boot-jpa-enhanced/` | Java | `[hibernate] enhance`: build-time bytecode enhancement from the project's own Hibernate — a lazily loaded `@Lob`, self-tracking dirtiness, association management — each proved by a `@DataJpaTest`. |
+| `02-services/grails-app/` | Groovy | A Grails 8 guestbook (Spring Boot 4): GORM domain and validation, a controller and a GSP page, Spock `DomainUnitTest` / `ControllerUnitTest`, all from one `jk.toml` with `[grails] version`. |
 | `02-services/ktor-petshop/` | Kotlin | Multi-module Ktor + **Koin** + **Exposed** + H2 pet shop — Kotlin workspace dogfood; the `domain` library's Dokka javadoc jar and `[build-info]`. |
 | `02-services/netty-echo/` | Java | Small Netty echo server on the published `netty-all` (4.2 `MultiThreadIoEventLoopGroup`), an `EmbeddedChannel` handler test and `[image]` — lightweight harness seed. |
 
