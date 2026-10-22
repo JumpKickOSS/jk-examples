@@ -4,7 +4,7 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 
-NIA_SHA=7d45eae4f8720a0c77f507712ba2437ff974b6ed
+NIA_SHA=2982e63cb691ad49cd009aab43dc206fee6699c2
 NIA_REPO=https://github.com/android/nowinandroid.git
 
 if [ ! -d checkout/.git ]; then

@@ -1,0 +1,62 @@
+# Engine-owned. Tightened on every jk build; grown only by `jk guard freeze <id> -W`.
+# Never edit by hand: an entry without a reason is a suppression, and there is no suppression syntax.
+
+[converge-versions]
+population = { artifacts = 488, declared = 256 }
+[[converge-versions.entries]]
+at     = "convergence androidx.annotation:annotation-jvm"
+reason = "NiA's version-catalog pins and per-module classpaths, resolved as Gradle resolves them; the port does not converge upstream's graph"
+[[converge-versions.entries]]
+at     = "convergence androidx.lifecycle:lifecycle-runtime"
+reason = "NiA's version-catalog pins and per-module classpaths, resolved as Gradle resolves them; the port does not converge upstream's graph"
+[[converge-versions.entries]]
+at     = "convergence androidx.lifecycle:lifecycle-viewmodel"
+reason = "NiA's version-catalog pins and per-module classpaths, resolved as Gradle resolves them; the port does not converge upstream's graph"
+[[converge-versions.entries]]
+at     = "convergence androidx.lifecycle:lifecycle-viewmodel-savedstate"
+reason = "NiA's version-catalog pins and per-module classpaths, resolved as Gradle resolves them; the port does not converge upstream's graph"
+[[converge-versions.entries]]
+at     = "convergence androidx.savedstate:savedstate"
+reason = "NiA's version-catalog pins and per-module classpaths, resolved as Gradle resolves them; the port does not converge upstream's graph"
+[[converge-versions.entries]]
+at     = "convergence androidx.tracing:tracing"
+reason = "NiA's version-catalog pins and per-module classpaths, resolved as Gradle resolves them; the port does not converge upstream's graph"
+[[converge-versions.entries]]
+at     = "convergence com.google.errorprone:error_prone_annotations"
+reason = "NiA's version-catalog pins and per-module classpaths, resolved as Gradle resolves them; the port does not converge upstream's graph"
+[[converge-versions.entries]]
+at     = "convergence com.google.guava:guava"
+reason = "NiA's version-catalog pins and per-module classpaths, resolved as Gradle resolves them; the port does not converge upstream's graph"
+[[converge-versions.entries]]
+at     = "convergence com.google.guava:listenablefuture"
+reason = "NiA's version-catalog pins and per-module classpaths, resolved as Gradle resolves them; the port does not converge upstream's graph"
+[[converge-versions.entries]]
+at     = "convergence jakarta.inject:jakarta.inject-api"
+reason = "NiA's version-catalog pins and per-module classpaths, resolved as Gradle resolves them; the port does not converge upstream's graph"
+[[converge-versions.entries]]
+at     = "convergence org.jetbrains.kotlinx:kotlinx-serialization-core-jvm"
+reason = "NiA's version-catalog pins and per-module classpaths, resolved as Gradle resolves them; the port does not converge upstream's graph"
+[[converge-versions.entries]]
+at     = "convergence org.jetbrains.kotlinx:kotlinx-serialization-json-jvm"
+reason = "NiA's version-catalog pins and per-module classpaths, resolved as Gradle resolves them; the port does not converge upstream's graph"
+[[converge-versions.entries]]
+at     = "convergence org.jetbrains:annotations"
+reason = "NiA's version-catalog pins and per-module classpaths, resolved as Gradle resolves them; the port does not converge upstream's graph"
+[[converge-versions.entries]]
+at     = "convergence org.jspecify:jspecify"
+reason = "NiA's version-catalog pins and per-module classpaths, resolved as Gradle resolves them; the port does not converge upstream's graph"
+
+[one-module-per-package]
+population = { packages = 174 }
+[[one-module-per-package.entries]]
+at     = "androidx.core.ktx | core/database + core/network"
+reason = "upstream Now in Android layout and Hilt's generated hilt_aggregated_deps package; sources are unmodified"
+[[one-module-per-package.entries]]
+at     = "com.google.samples.apps.nowinandroid.core.datastore | core/datastore + core/datastore-proto"
+reason = "upstream Now in Android layout and Hilt's generated hilt_aggregated_deps package; sources are unmodified"
+[[one-module-per-package.entries]]
+at     = "com.google.samples.apps.nowinandroid.core.domain | app + core/domain"
+reason = "upstream Now in Android layout and Hilt's generated hilt_aggregated_deps package; sources are unmodified"
+[[one-module-per-package.entries]]
+at     = "hilt_aggregated_deps | app + core/analytics + core/common + core/data + core/database + core/datastore + core/network + core/notifications + feature/bookmarks/impl + feature/foryou/impl + feature/interests/impl + feature/search/impl + feature/settings/impl + feature/topic/impl + sync/work"
+reason = "upstream Now in Android layout and Hilt's generated hilt_aggregated_deps package; sources are unmodified"

@@ -1,7 +1,8 @@
 # House rules from the Android starter pack: one logging owner, no blocking sleeps, java.time,
-# test libraries in the test scope, a file-size ratchet. Applied to checkout/ by setup.sh.
+# test libraries in the test scope, a file-size ratchet; the monorepo pack for the workspace shape.
+# Applied to checkout/ by setup.sh.
 [guards]
-extends = ["cc.jumpkick.guards:android:0.13.2"]
+extends = ["cc.jumpkick.guards:android:0.15.3", "cc.jumpkick.guards:monorepo:0.15.3"]
 
 # NiA's sources are upstream and unmodified — the overlay adds build files only — so where the
 # pack's logging ban meets upstream code the site is exempted by class, with the reason, rather
@@ -31,3 +32,16 @@ reason = "upstream Now in Android source, unmodified by this port; NiA logs with
 [[guards.no-android-log.allow]]
 in     = "com.google.samples.apps.nowinandroid.util.ProfileVerifierLogger$invoke$1"
 reason = "upstream Now in Android source, unmodified by this port; NiA logs with android.util.Log in a handful of places on purpose"
+
+# The pins follow NiA's version catalog, and each member's classpath resolves the way Gradle's
+# per-module classpaths do: a module that never meets Lifecycle 2.11 keeps the older floor its
+# libraries ask for, and an exact pin (kotlinx-serialization-json) stays beside a newer transitive.
+# Today's divergences are a baseline; new ones are refused.
+[guards.converge-versions]
+baseline = true
+
+# Upstream NiA shares a few packages across modules (core.domain in app, androidx.core.ktx helpers
+# in two modules, the datastore proto package), and Hilt generates hilt_aggregated_deps in every
+# module that declares a Hilt module. Those sites are a baseline; new ones are refused.
+[guards.one-module-per-package]
+baseline = true

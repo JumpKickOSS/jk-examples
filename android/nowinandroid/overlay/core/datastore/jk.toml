@@ -7,22 +7,15 @@ kotlin  = "2.4.20"
 [android]
 namespace   = "com.google.samples.apps.nowinandroid.core.datastore"
 compile-sdk = 36
-min-sdk     = 23
+min-sdk     = 24
 library     = true
 
 [dependencies]
-datastore               = "=1.2.0"
+datastore               = "1.2.0"
 nia-core-datastore-proto = { workspace = true }
 nia-core-model          = { workspace = true }
 nia-core-common         = { workspace = true }
-hilt-android            = "=2.60.1"
+hilt-android            = "2.60.1"
 
 [processor-dependencies]
-hilt-compiler = "com.google.dagger:hilt-android-compiler:=2.60.1"
-
-[test-dependencies]
-junit-platform-launcher = "=6.1.1"
-
-[repositories]
-central = "https://repo.maven.apache.org/maven2/"
-google  = "https://dl.google.com/dl/android/maven2/"
+hilt-compiler = "com.google.dagger:hilt-android-compiler:2.60.1"

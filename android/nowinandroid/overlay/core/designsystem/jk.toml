@@ -7,12 +7,12 @@ kotlin  = "2.4.20"
 [android]
 namespace   = "com.google.samples.apps.nowinandroid.core.designsystem"
 compile-sdk = 36
-min-sdk     = 23
+min-sdk     = 24
 library     = true
 compose     = true
 
 [platform-dependencies]
-compose = "androidx.compose:compose-bom-alpha:=2026.07.01"
+compose = "androidx.compose:compose-bom-alpha:2026.07.01"
 
 [dependencies]
 compose-foundation        = "androidx.compose.foundation:foundation"
@@ -24,11 +24,4 @@ material3-nav-suite       = "androidx.compose.material3:material3-adaptive-navig
 compose-runtime           = "androidx.compose.runtime:runtime"
 compose-ui-util           = "androidx.compose.ui:ui-util"
 compose-ui-tooling-preview = "androidx.compose.ui:ui-tooling-preview"
-coil-compose              = "=2.7.0"
-
-[test-dependencies]
-junit-platform-launcher = "=6.1.1"
-
-[repositories]
-central = "https://repo.maven.apache.org/maven2/"
-google  = "https://dl.google.com/dl/android/maven2/"
+coil-compose              = "2.7.0"

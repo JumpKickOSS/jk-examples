@@ -7,27 +7,20 @@ kotlin  = "2.4.20"
 [android]
 namespace   = "com.google.samples.apps.nowinandroid.core.ui"
 compile-sdk = 36
-min-sdk     = 23
+min-sdk     = 24
 library     = true
 compose     = true
 
 [platform-dependencies]
-compose = "androidx.compose:compose-bom-alpha:=2026.07.01"
+compose = "androidx.compose:compose-bom-alpha:2026.07.01"
 
 [dependencies]
-metrics              = "androidx.metrics:metrics-performance:=1.0.0-beta01"
-kotlinx-datetime     = "=0.6.1"
+metrics              = "androidx.metrics:metrics-performance:1.0.0-beta01"
+kotlinx-datetime     = "0.6.1"
 nia-core-analytics   = { workspace = true }
 nia-core-designsystem = { workspace = true }
 nia-core-model       = { workspace = true }
-browser              = "=1.8.0"
-coil                 = "=2.7.0"
-coil-compose         = "=2.7.0"
+browser              = "1.8.0"
+coil                 = "2.7.0"
+coil-compose         = "2.7.0"
 compose-ui-tooling-preview = "androidx.compose.ui:ui-tooling-preview"
-
-[test-dependencies]
-junit-platform-launcher = "=6.1.1"
-
-[repositories]
-central = "https://repo.maven.apache.org/maven2/"
-google  = "https://dl.google.com/dl/android/maven2/"

@@ -11,11 +11,4 @@ lite    = true
 kotlin  = true
 
 [dependencies]
-protobuf-kotlin-lite = "=4.29.2"
-
-[test-dependencies]
-junit-platform-launcher = "=6.1.1"
-
-[repositories]
-central = "https://repo.maven.apache.org/maven2/"
-google  = "https://dl.google.com/dl/android/maven2/"
+protobuf-kotlin-lite = "4.29.2"

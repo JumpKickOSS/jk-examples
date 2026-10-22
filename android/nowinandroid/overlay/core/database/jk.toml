@@ -7,7 +7,7 @@ kotlin  = "2.4.20"
 [android]
 namespace   = "com.google.samples.apps.nowinandroid.core.database"
 compile-sdk = 36
-min-sdk     = 23
+min-sdk     = 24
 library     = true
 
 [build]
@@ -15,19 +15,12 @@ library     = true
 ksp-options = ["room.schemaLocation=schemas"]
 
 [dependencies]
-kotlinx-datetime = "=0.6.1"
+kotlinx-datetime = "0.6.1"
 nia-core-model   = { workspace = true }
-room-runtime     = "=2.8.4"
-room-ktx         = "=2.8.4"
-hilt-android     = "=2.60.1"
+room-runtime     = "2.8.4"
+room-ktx         = "2.8.4"
+hilt-android     = "2.60.1"
 
 [processor-dependencies]
-room-compiler = "=2.8.4"
-hilt-compiler = "com.google.dagger:hilt-android-compiler:=2.60.1"
-
-[test-dependencies]
-junit-platform-launcher = "=6.1.1"
-
-[repositories]
-central = "https://repo.maven.apache.org/maven2/"
-google  = "https://dl.google.com/dl/android/maven2/"
+room-compiler = "2.8.4"
+hilt-compiler = "com.google.dagger:hilt-android-compiler:2.60.1"

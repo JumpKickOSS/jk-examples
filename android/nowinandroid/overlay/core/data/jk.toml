@@ -7,7 +7,7 @@ kotlin  = "2.4.20"
 [android]
 namespace   = "com.google.samples.apps.nowinandroid.core.data"
 compile-sdk = 36
-min-sdk     = 23
+min-sdk     = 24
 library     = true
 
 [dependencies]
@@ -18,15 +18,8 @@ nia-core-network       = { workspace = true }
 nia-core-analytics     = { workspace = true }
 nia-core-notifications = { workspace = true }
 nia-core-model         = { workspace = true }
-tracing-ktx = "=1.3.0"
-hilt-android           = "=2.60.1"
+tracing-ktx = "1.3.0"
+hilt-android           = "2.60.1"
 
 [processor-dependencies]
-hilt-compiler = "com.google.dagger:hilt-android-compiler:=2.60.1"
-
-[test-dependencies]
-junit-platform-launcher = "=6.1.1"
-
-[repositories]
-central = "https://repo.maven.apache.org/maven2/"
-google  = "https://dl.google.com/dl/android/maven2/"
+hilt-compiler = "com.google.dagger:hilt-android-compiler:2.60.1"

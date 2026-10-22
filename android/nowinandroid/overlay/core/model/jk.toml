@@ -5,11 +5,4 @@ java    = 21
 kotlin  = "2.4.20"
 
 [dependencies]
-kotlinx-datetime = "=0.6.1"
-
-[test-dependencies]
-junit-platform-launcher = "=6.1.1"
-
-[repositories]
-central = "https://repo.maven.apache.org/maven2/"
-google  = "https://dl.google.com/dl/android/maven2/"
+kotlinx-datetime = "0.6.1"

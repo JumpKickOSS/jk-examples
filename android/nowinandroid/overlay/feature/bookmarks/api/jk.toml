@@ -7,7 +7,7 @@ kotlin  = "2.4.20"
 [android]
 namespace   = "com.google.samples.apps.nowinandroid.feature.bookmarks.api"
 compile-sdk = 36
-min-sdk     = 23
+min-sdk     = 24
 library     = true
 compose     = true
 
@@ -15,16 +15,10 @@ compose     = true
 coordinate = "org.jetbrains.kotlin:kotlin-serialization-compiler-plugin-embeddable"
 
 [platform-dependencies]
-compose = "androidx.compose:compose-bom-alpha:=2026.07.01"
+compose = "androidx.compose:compose-bom-alpha:2026.07.01"
 
 [dependencies]
 nia-core-navigation = { workspace = true }
 nia-core-model = { workspace = true }
-kotlinx-serialization-json   = "=1.8.0"
-navigation3-runtime  = "=1.0.1"
-[test-dependencies]
-junit-platform-launcher = "=6.1.1"
-
-[repositories]
-central = "https://repo.maven.apache.org/maven2/"
-google  = "https://dl.google.com/dl/android/maven2/"
+kotlinx-serialization-json   = "1.8.0"
+navigation3-runtime  = "1.2.0"

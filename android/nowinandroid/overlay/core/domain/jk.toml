@@ -7,17 +7,10 @@ kotlin  = "2.4.20"
 [android]
 namespace   = "com.google.samples.apps.nowinandroid.core.domain"
 compile-sdk = 36
-min-sdk     = 23
+min-sdk     = 24
 library     = true
 
 [dependencies]
 nia-core-data  = { workspace = true }
 nia-core-model = { workspace = true }
-javax-inject   = "=1"
-
-[test-dependencies]
-junit-platform-launcher = "=6.1.1"
-
-[repositories]
-central = "https://repo.maven.apache.org/maven2/"
-google  = "https://dl.google.com/dl/android/maven2/"
+javax-inject   = "1"

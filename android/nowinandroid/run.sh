@@ -5,8 +5,8 @@
 # (R8 full mode, signed AAB). Requires a current jk install (see the repo README) and
 # network; the first run downloads the Android SDK components and every dependency.
 #
-# Tests are skipped: NiA's unit suites need Robolectric binary resources (a recorded
-# jk gap) and its instrumented suites need a device.
+# Tests are skipped: NiA's Robolectric suites need the test-only AAR manifests merged
+# (see README) and its instrumented suites need a device.
 set -euo pipefail
 cd "$(dirname "$0")/checkout"
 
@@ -28,4 +28,4 @@ fi
 
 echo
 echo "artifacts:"
-ls -la app/target/lib/*.apk app/target/lib/*.aab 2>/dev/null || true
+ls -la app/target/*.apk app/target/*.aab 2>/dev/null || true
