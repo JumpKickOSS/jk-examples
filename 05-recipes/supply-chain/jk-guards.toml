@@ -13,6 +13,12 @@ only-in     = ["test-dependencies"]
 instead     = "java.nio.file.Files"
 why         = "the accepted advisory is acceptable only while the library never ships"
 
+[guards.no-copyleft-in-what-ships]
+kind     = "depend"
+licenses = { forbid = ["GPL-*", "AGPL-*", "LGPL-*"] }
+scopes   = ["main", "runtime"]
+why      = "a copyleft licence on a shipped dependency is a legal review, not a build"
+
 [guards.file-size]
 kind     = "metric"
 measure  = "lines"

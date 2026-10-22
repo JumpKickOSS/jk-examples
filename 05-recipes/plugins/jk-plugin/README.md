@@ -8,7 +8,7 @@ the plugin's build step wrote.
 ```sh
 (cd hello-plugin && jk build)                 # target/hello-plugin-0.1.0.jar is the plugin
 cd consumer
-jk trust plugin sha256:f05f81c6d46becb207631e4c217092ca04f5cedc946314d1c276e4283b3bcef8
+jk trust plugin sha256:fab614f97477e86680f5d79a95b576abac06ab60bf6b8b6d07ce77e454bc2380
 jk build && jk run                            # Hello from a jk plugin
 ```
 
@@ -28,7 +28,7 @@ its code. The step is cached like any of jk's own: same `[hello]` config, same o
 
 ```toml
 [plugins]
-hello = { path = "../hello-plugin/target/hello-plugin-0.1.0.jar", sha256 = "f05f81c6…" }
+hello = { path = "../hello-plugin/target/hello-plugin-0.1.0.jar", sha256 = "fab614f9…" }
 
 [hello]
 greeting = "Hello from a jk plugin"
@@ -37,7 +37,8 @@ greeting = "Hello from a jk plugin"
 The pin is by content: a different jar at that path is refused. `jk lock` validates `[hello]`
 against the plugin's schema and locks the plugin's SDK floor as `plugin`-scoped rows. jk will not
 run third-party build code until you trust it; the refusal names the exact `jk trust plugin`
-command. The jar builds reproducibly, so the committed hash matches a fresh build.
+command. The jar builds reproducibly, so the committed hash matches a fresh build of the same
+sources; change the plugin and the pin changes with it (the refusal names the new digest).
 
 ## Teaches
 

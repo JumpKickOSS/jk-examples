@@ -6,9 +6,11 @@ jk itself, with no plugins and no extra CI tools:
 
 | Control | Where | What it does |
 |---|---|---|
-| Lockfile | `jk-lock.toml` | Every artifact, its exact version and its SHA-256. `jk build` never re-resolves; a changed byte fails the fetch. |
+| Lockfile | `jk-lock.toml` | Every artifact, its exact version, its SHA-256 and the licences its POM declares. `jk build` never re-resolves; a changed byte fails the fetch. |
 | Exact pins | `[guards.no-floating-versions]` | No ranges, no `latest`, no snapshots in `jk.toml`. |
-| Repository deny list | `[deny.sources]` | Resolution refuses the named hosts; `jk deny` re-checks the lock. |
+| Repository deny list | `[deny.sources]` | `jk deny` refuses any locked artifact served from a named host. |
+| Licence allow list | `[deny.licenses]` | `jk deny` refuses an artifact none of whose licences is allowed. |
+| No copyleft shipped | `[guards.no-copyleft-in-what-ships]` | The build fails if a main or runtime dependency is only GPL/AGPL/LGPL. Test libraries are not judged. |
 | Advisory audit | `jk audit` | Every locked artifact checked against OSV; non-zero exit on a finding, so CI fails on it. |
 | Reviewed exception | `[audit] ignore` | One advisory accepted with a reason and an expiry. On `until` it counts again. |
 | Test-only quarantine | `[guards.test-libraries-stay-in-test]` | The excepted library may only ever be a test dependency. |
@@ -18,7 +20,7 @@ jk itself, with no plugins and no extra CI tools:
 jk build                     # lock-checked fetch, compile, tests, guards
 jk run -- src/test/resources/guests.csv
 jk audit                     # OSV advisories for the locked closure; reports the accepted one
-jk deny                      # the deny policy against the lock
+jk deny                      # the repository and licence policy against the lock
 jk publish -S -U             # dry run: writes target/sbom/csvjson-0.1.0.{cdx,spdx}.json
 unzip -p target/csvjson-0.1.0.jar META-INF/sbom/application.cdx.json
 ```
@@ -49,6 +51,7 @@ the advisory again and CI fails until someone looks at it. The real fix is `jk u
 ## Validates
 
 - `jk audit` against OSV with an `[audit] ignore` entry that has an expiry, and its exit code.
-- `[deny.sources]` at resolve time and through `jk deny`.
+- `[deny.sources]` and `[deny.licenses]` through `jk deny`, over the licences the lock records.
+- `depend` guards: `licenses = { forbid = [...] }` over main and runtime rows.
 - `depend` guards: `no-dynamic`/`no-snapshot`, and `only-in` with `instead`.
 - SBOM: embedded in the jar, and written by `jk publish -S -U`.

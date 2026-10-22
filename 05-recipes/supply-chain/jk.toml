@@ -1,6 +1,7 @@
-# Supply-chain hygiene as part of the build: every byte pinned by the lock (with its checksum), a
-# deny list of repositories, an advisory audit that gates CI, one reviewed advisory accepted with
-# a reason and an expiry, and an SBOM of what ships.
+# Supply-chain hygiene as part of the build: every byte pinned by the lock (with its checksum and
+# the licences its POM declares), a deny list of repositories and an allow list of licences, an
+# advisory audit that gates CI, one reviewed advisory accepted with a reason and an expiry, and an
+# SBOM of what ships.
 
 name    = "csvjson"
 group   = "dev.jkexamples"
@@ -18,9 +19,13 @@ junit-jupiter = "6.1.3"
 # Pinned below the fix on purpose, to show an accepted advisory; see [audit] and the README.
 commons-io = "commons-io:commons-io:2.13.0"
 
-# Repositories this project must never fetch from, enforced when the lock resolves.
+# What `jk deny` holds the lock to: repositories this project must never fetch from, and the
+# licences an artifact may carry (one of them is enough for a dual-licensed artifact).
 [deny.sources]
 deny = ["jcenter.bintray.com", "repo.spring.io"]
+
+[deny.licenses]
+allow = ["Apache-2.0", "MIT", "BSD-*", "EPL-2.0"]
 
 # A reviewed advisory: reported, never counted, until the date says to look again.
 [audit]
