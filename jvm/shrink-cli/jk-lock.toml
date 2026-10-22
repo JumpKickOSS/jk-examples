@@ -1,21 +1,21 @@
 version = 1
-generated-by = "jk 0.13.9"
-generated-by-build = "4d38975467c1"
-generated-by-build-time = "2026-09-23T17:33:13Z"
+generated-by = "jk 0.15.3"
+generated-by-build = "eafb500388d9"
+generated-by-build-time = "2026-10-22T00:19:05Z"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.10"
-manifests-sha256 = "ad110bd8c8d222409c8df503417e813b5c5e6dd2f6d2cc19e3a89a910314db50"
+manifests-sha256 = "3ce82fe633f8dd8900e289d8cd7de0c233bdc5b57147027350441ded511b2181"
 project-id = "2b5cf6f4fcfa05a37e1a82419a735ebd"
 
 [jdk]
 suggested-vendor = "temurin"
-suggested-version = "25.0.4.1"
+suggested-version = "25.0.2"
 
 [[artifact]]
 name     = "org.apache.commons:commons-lang3:jar:"
-version  = "3.18.0"
+version  = "3.21.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:4eeeae8d20c078abb64b015ec158add383ac581571cddc45c68f0c9ae0230720"
+checksum = "sha256:a2af247ec4db6eb8947e18e23e0433e4871a7c5d0a40e1f92e46ede54ae1defe"
 scopes   = ["main"]
 
 [[artifact]]
@@ -127,7 +127,7 @@ scopes   = ["test"]
 
 [[plugin]]
 coordinate = "cc.jumpkick:jk-minified"
-version    = "0.13.9"
+version    = "0.15.3"
 
 [[module]]
 path    = "."
