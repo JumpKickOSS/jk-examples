@@ -1,7 +1,7 @@
 version = 1
-generated-by = "jk 0.15.3"
-generated-by-build = "eafb500388d9"
-generated-by-build-time = "2026-10-22T00:19:05Z"
+generated-by = "jk 0.20.0"
+generated-by-build = "351af4376a6d"
+generated-by-build-time = "2026-10-22T05:59:57Z"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.10"
 manifests-sha256 = "3ce82fe633f8dd8900e289d8cd7de0c233bdc5b57147027350441ded511b2181"
@@ -127,7 +127,12 @@ scopes   = ["test"]
 
 [[plugin]]
 coordinate = "cc.jumpkick:jk-minified"
-version    = "0.15.3"
+version    = "0.20.0"
+
+[[tool]]
+coordinate = "com.android.tools:r8"
+version    = "9.5.28"
+checksum   = "sha256:38a9ffaaebbd17d1514e3ecbff5a85b989bb13c551b9e224c7409514eea84ff5"
 
 [[module]]
 path    = "."
