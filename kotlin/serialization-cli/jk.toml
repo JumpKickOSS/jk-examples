@@ -6,7 +6,7 @@ name    = "serialization-cli"
 group   = "dev.jkharness"
 version = "1.0.0"
 java    = 25
-kotlin  = "2.4.20"
+kotlin  = "2.4.21"
 
 [application]
 main = "dev.jkharness.ser.MainKt"
@@ -16,4 +16,4 @@ main = "dev.jkharness.ser.MainKt"
 coordinate = "org.jetbrains.kotlin:kotlin-serialization-compiler-plugin-embeddable"
 
 [dependencies]
-kotlinx-serialization-json = "1.11.0"
+kotlinx-serialization-json = "1.12.0"
