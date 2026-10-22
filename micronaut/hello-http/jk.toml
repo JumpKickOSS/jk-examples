@@ -8,12 +8,16 @@ main = "com.example.hello.Application"
 # Micronaut apps ship as a single runnable fat jar (Maven shade parity).
 assembly = true
 
-# Newest stable Micronaut platform; jk-lock.toml pins the exact version.
+# The Micronaut platform BOM at an exact release; starters below are versionless under it.
 [micronaut]
-version = "5.1.5"
+version = "5.2.3"
 # Optional deploy optimization:
 # aot = true
-# aot-runtime = "jit"   # or "native" with [native]
+# aot-runtime = "jit"   # [native] switches it to "native" for `jk native`
+
+# A GraalVM native executable on `jk native` (not on `jk build`); the plugin supplies Micronaut's
+# native-image arguments.
+[native]
 
 # A shippable container: a JRE 25 base and a JEP 514 AOT cache trained with the image's own JVM.
 [image]
@@ -53,6 +57,3 @@ exclude-tags = ["integration", "network"]
 [profiles.bench]
 include-tags = ["bench"]
 exclude-tags = ["integration", "network", "slow"]
-
-[profiles.ci]
-exclude-tags = ["integration", "slow", "network", "bench"]
