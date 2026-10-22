@@ -1,0 +1,150 @@
+version = 1
+generated-by = "jk 0.20.0"
+generated-by-build = "932e0f2fe447"
+generated-by-build-time = "2026-10-22T20:55:09Z"
+resolution-algorithm = "pubgrub-v1"
+jk-min = "0.15"
+manifests-sha256 = "d609366b76d0a40a9d9db3b72ac9b6790aa8146f9fb0bb23c83656947181aeee"
+project-id = "fcd7830ee424b2489749a2acea6c8d38"
+
+[jdk]
+suggested-vendor = "graalvm"
+suggested-version = "25.0.4.1.1"
+
+[graal]
+suggested-vendor = "graalvm"
+suggested-version = "25.0.4.1.1"
+
+[[artifact]]
+name     = "junit:junit:jar:"
+version  = "4.13.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:8e495b634469d64fb8acfa3495a065cbacc8a0fff55ce1e31007be4c16dc57d3"
+scopes   = ["test"]
+deps = [
+  "org.hamcrest:hamcrest-core:jar:@1.3",
+]
+
+[[artifact]]
+name     = "org.apiguardian:apiguardian-api:jar:"
+version  = "1.1.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b509448ac506d607319f182537f0b35d71007582ec741832a1f111e5b5b70b38"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "org.hamcrest:hamcrest-core:jar:"
+version  = "1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:66fdef91e9739348df7a096aa384a5685f4e875584cce89386a7a47251c4d8e9"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "org.jspecify:jspecify:jar:"
+version  = "1.0.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:1fad6e6be7557781e4d33729d49ae1cdc8fdda6fe477bb0cc68ce351eafdfbab"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "org.junit.platform:junit-platform-commons:jar:"
+version  = "6.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:a4774ae923c109544034aeae7c762cf017fbcdd1342403ba90e0921984b608c3"
+scopes   = ["test"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
+]
+
+[[artifact]]
+name     = "org.junit.platform:junit-platform-engine:jar:"
+version  = "6.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:21ad7ad3a35beda16387979317be1833a72a71d812f9a66ee4b9a7bafb56334c"
+scopes   = ["test"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
+  "org.junit.platform:junit-platform-commons:jar:@6.1.3",
+  "org.opentest4j:opentest4j:jar:@1.3.0",
+]
+
+[[artifact]]
+name     = "org.junit.platform:junit-platform-launcher:jar:"
+version  = "6.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:1dec64b1fc0b7c47a11302aa5b4d37d8160c041b396e27067709ce775601a7b6"
+scopes   = ["test"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
+  "org.junit.platform:junit-platform-engine:jar:@6.1.3",
+]
+
+[[artifact]]
+name     = "org.junit.vintage:junit-vintage-engine:jar:"
+version  = "6.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:37a1e6ade75c09c5385c2830b7cda21c4b1f24a5f36ed7cd7397bc40f7dc71bc"
+scopes   = ["test"]
+deps = [
+  "junit:junit:jar:@4.13.2",
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
+  "org.junit.platform:junit-platform-engine:jar:@6.1.3",
+]
+
+[[artifact]]
+name     = "org.opentest4j:opentest4j:jar:"
+version  = "1.3.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:48e2df636cab6563ced64dcdff8abb2355627cb236ef0bf37598682ddf742f1b"
+scopes   = ["test"]
+
+[[plugin]]
+coordinate = "cc.jumpkick:jk-intellij"
+version    = "0.20.0"
+
+[[tool]]
+coordinate = "com.jetbrains.intellij.idea:ideaIC"
+version    = "262.10968.63"
+type       = "zip"
+checksum   = "sha256:4d25ba9308dffc84903e805833aa6a2652effc17e54b126189610c140c2f30b1"
+
+[[tool]]
+coordinate = "com.jetbrains.intellij.platform:test-framework"
+version    = "262.10968.63"
+checksum   = "sha256:9fba2e627ca532d2d1b37930493e6012c02e24f85ab51baae5584f10027becc5"
+
+[[tool]]
+coordinate = "com.jetbrains.intellij.platform:test-framework-common"
+version    = "262.10968.63"
+checksum   = "sha256:86678b858cddad792791f1f80d6308b07e342b9ee3cd584d298a545d100e5787"
+
+[[tool]]
+coordinate = "com.jetbrains.intellij.platform:test-framework-core"
+version    = "262.10968.63"
+checksum   = "sha256:2680da5da14830adf79fece75a66881e5e3e62ae414cd70b2f84b8a81e73dbcc"
+
+[[tool]]
+coordinate = "junit:junit"
+version    = "4.13.2"
+checksum   = "sha256:8e495b634469d64fb8acfa3495a065cbacc8a0fff55ce1e31007be4c16dc57d3"
+
+[[tool]]
+coordinate = "org.hamcrest:hamcrest-core"
+version    = "1.3"
+checksum   = "sha256:66fdef91e9739348df7a096aa384a5685f4e875584cce89386a7a47251c4d8e9"
+
+[[tool]]
+coordinate = "org.opentest4j:opentest4j"
+version    = "1.3.0"
+checksum   = "sha256:48e2df636cab6563ced64dcdff8abb2355627cb236ef0bf37598682ddf742f1b"
+
+[[module]]
+path    = "."
+group   = "dev.jkexamples"
+name    = "sort-lines"
+version = "1.0.0"
+java    = 25

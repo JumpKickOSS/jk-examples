@@ -1,0 +1,19 @@
+# An IntelliJ Platform plugin: compiled against the IDE distribution, tested in a headless IDE,
+# packaged as the zip an IDE installs from disk (target/sort-lines-1.0.0.zip).
+
+name    = "sort-lines"
+group   = "dev.jkexamples"
+version = "1.0.0"
+java    = 25
+
+[intellij]
+version = "262.10968.63"   # IntelliJ IDEA 2026.2, Community; its About dialog shows IC-262.10968.63
+
+[repositories.jetbrains]
+url    = "https://www.jetbrains.com/intellij-repository/releases"
+groups = ["com.jetbrains.intellij.*"]
+
+# The platform's test bases (BasePlatformTestCase) are JUnit 3 TestCase classes. Declaring JUnit 4
+# makes jk add the JUnit Vintage engine, which runs them as they are written.
+[test-dependencies]
+junit = "junit:junit:4.13.2"

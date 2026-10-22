@@ -1,0 +1,2 @@
+cadence = "nightly"
+check   = ["jk build", "jk guard", "unzip -l target/sort-lines-1.0.0.zip | grep -q sort-lines/lib/sort-lines-1.0.0.jar"]
