@@ -1,0 +1,15 @@
+# The application: `links add <url>` / `links open <code>` / `links list`, over the file store.
+name = "cli"
+
+[application]
+main = "dev.jkexamples.links.cli.Main"
+
+[dependencies]
+api.workspace   = true
+store.workspace = true
+
+[test-dependencies]
+junit-jupiter.workspace = true
+
+[test]
+exclude-tags = ["integration"]

@@ -1,0 +1,12 @@
+# Two LinkStore implementations. Their tests reuse api's contract test through api's test classes.
+name = "store"
+
+[dependencies]
+api.workspace = true
+
+[test-dependencies]
+junit-jupiter.workspace = true
+api = { workspace = true, kind = "tests" }
+
+[test]
+exclude-tags = ["integration"]

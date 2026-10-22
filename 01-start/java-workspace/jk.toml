@@ -1,0 +1,23 @@
+# A framework-free workspace: three modules, one lockfile, identity and test tiers declared once.
+
+group   = "dev.jkexamples"
+name    = "links"
+version = "0.1.0"
+java    = 25
+
+[workspace]
+modules = ["api", "store", "cli"]
+
+# One version of each shared library for every module; members opt in with `<name>.workspace = true`.
+[workspace.dependencies]
+jspecify      = "1.0.1"
+junit-jupiter = "6.1.3"
+
+# The root's own tier table. [test] is each module's own; [profiles] are workspace facts, so every
+# member gets the integration tier declared here once.
+[test]
+exclude-tags = ["integration"]
+
+[profiles.integration]
+include-tags = ["integration"]
+exclude-tags = []

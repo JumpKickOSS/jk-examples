@@ -1,0 +1,14 @@
+# The API: types and the LinkStore contract. No implementation, no dependencies beyond JSpecify.
+name = "api"
+
+# Exported: every module that depends on api compiles against JSpecify's annotations too, as a
+# Maven `compile`-scope (Gradle `api`) dependency would. A plain [dependencies] entry reaches a
+# consumer's runtime classpath only.
+[export-dependencies]
+jspecify.workspace = true
+
+[test-dependencies]
+junit-jupiter.workspace = true
+
+[test]
+exclude-tags = ["integration"]
