@@ -1,15 +1,15 @@
 version = 1
-generated-by = "jk 0.13.7"
-generated-by-build = "9c70d41ea8fb"
-generated-by-build-time = "2026-09-17T22:04:10Z"
+generated-by = "jk 0.15.3"
+generated-by-build = "eafb500388d9"
+generated-by-build-time = "2026-10-22T00:19:05Z"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.12.0"
-manifests-sha256 = "846ddf7ca52b6b351afa823bb16bd8be93ac5e07acd6dce43ca56bb6acf94e3d"
+manifests-sha256 = "641aeba970df7802852c05fd8f792512defd0af457ae374f6418e40a0e8067b0"
 project-id = "8dceb29cf3773ace8f3f35ff82a1e5e6"
 
 [jdk]
 suggested-vendor = "temurin"
-suggested-version = "25.0.4.1"
+suggested-version = "25.0.2"
 
 [[artifact]]
 name     = "com.google.code.gson:gson:jar:"
