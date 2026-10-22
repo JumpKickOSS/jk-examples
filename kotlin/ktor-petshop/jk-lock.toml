@@ -1,7 +1,7 @@
 version = 1
-generated-by = "jk 0.15.3"
-generated-by-build = "eafb500388d9"
-generated-by-build-time = "2026-10-22T00:19:05Z"
+generated-by = "jk 0.20.0"
+generated-by-build = "351af4376a6d"
+generated-by-build-time = "2026-10-22T05:59:57Z"
 resolution-algorithm = "pubgrub-v1"
 kotlin = "2.4.21"
 jk-min = "0.12.0"
@@ -1620,7 +1620,7 @@ scopes   = ["main", "test"]
 
 [[plugin]]
 coordinate = "cc.jumpkick.guards:monorepo"
-version    = "0.15.3"
+version    = "0.20.0"
 
 [[module]]
 path    = "."

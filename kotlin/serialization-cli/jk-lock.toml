@@ -1,7 +1,7 @@
 version = 1
-generated-by = "jk 0.15.3"
-generated-by-build = "eafb500388d9"
-generated-by-build-time = "2026-10-22T00:19:05Z"
+generated-by = "jk 0.20.0"
+generated-by-build = "351af4376a6d"
+generated-by-build-time = "2026-10-22T05:59:57Z"
 resolution-algorithm = "pubgrub-v1"
 kotlin = "2.4.21"
 jk-min = "0.12.0"
@@ -166,6 +166,11 @@ version  = "1.3.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:48e2df636cab6563ced64dcdff8abb2355627cb236ef0bf37598682ddf742f1b"
 scopes   = ["test"]
+
+[[plugin]]
+coordinate = "org.jetbrains.kotlin:kotlin-serialization-compiler-plugin-embeddable"
+version    = "2.4.21"
+checksum   = "sha256:63b381018a7d45221795d18301150fb80a1d00f30aae7be0550ab86f9ddd0ce8"
 
 [[module]]
 path    = "."
