@@ -1,16 +1,16 @@
 version = 1
-generated-by = "jk 0.13.7"
-generated-by-build = "2533e6bdc107"
-generated-by-build-time = "2026-09-18T16:25:49Z"
+generated-by = "jk 0.15.3"
+generated-by-build = "eafb500388d9"
+generated-by-build-time = "2026-10-22T00:19:05Z"
 resolution-algorithm = "pubgrub-v1"
-scala = "3.9.0"
+scala = "3.10.0"
 jk-min = "0.12.0"
-manifests-sha256 = "03ee21fc2e5ed05b324463949e67857d036ae4c3dbdae634cc840333ee0e4613"
+manifests-sha256 = "28b077b3fd274a27dd563ecebd55497d0ec0b028c6c980fc1db9fc84c33fcf0b"
 project-id = "879901c11c760e4e02a2b544d9b88866"
 
 [jdk]
 suggested-vendor = "temurin"
-suggested-version = "25.0.4.1"
+suggested-version = "25.0.2"
 
 [[artifact]]
 name     = "org.apiguardian:apiguardian-api:jar:"
@@ -121,19 +121,19 @@ scopes   = ["test"]
 
 [[artifact]]
 name     = "org.scala-lang:scala-library:jar:"
-version  = "3.9.0"
+version  = "3.10.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:b844bf6fb3080c73df6b9c523b7a69b9ef4a980bb15e5c37c35443d1d0b0e0cd"
+checksum = "sha256:b47befb29e02bbc08a10bbd387b35cf80ff9bf04fda8fdf3dda6c8ad6895f325"
 scopes   = ["main"]
 
 [[artifact]]
 name     = "org.scala-lang:scala3-library_3:jar:"
-version  = "3.9.0"
+version  = "3.10.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:9343f9651453945fc6a9b75bb4fd230418ee28a1f88ea28ee429f3ebe0511aba"
+checksum = "sha256:4daaede24ddfeea082bbed096ba0c492d99e8428632e9fd3c38f82cf7aad4b63"
 scopes   = ["main"]
 deps = [
-  "org.scala-lang:scala-library:jar:@3.9.0",
+  "org.scala-lang:scala-library:jar:@3.10.0",
 ]
 
 [[module]]
@@ -142,4 +142,4 @@ group   = "com.example"
 name    = "scala-mixed"
 version = "0.1.0"
 java    = 25
-scala   = "3.9.0"
+scala   = "3.10.0"

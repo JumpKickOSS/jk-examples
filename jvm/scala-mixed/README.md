@@ -2,7 +2,7 @@
 
 A single JumpKick module whose `src/main/java` and `src/main/scala` compile in one Zinc session and
 reference each other both ways: `Greeting.java` calls the Scala `Greeter`, `Main.scala` reads its
-default from `Greeting`. Scala `3.9.0` is the manifest's exact pin (`scala = "3.9.0"`); JUnit 6 runs
+default from `Greeting`. Scala `3.10.0` is the manifest's exact pin (`scala = "3.10.0"`); JUnit 6 runs
 a Java test and a Scala test in the same unit tier.
 
 It demonstrates:
@@ -31,7 +31,7 @@ jk bsp install           # .bsp/jk.json — what Metals and IntelliJ's BSP disco
 ```json
 {
   "name": "jk",
-  "version": "0.13.7",
+  "version": "0.15.3",
   "bspVersion": "2.1.0",
   "languages": ["java", "scala"],
   "argv": ["jk", "bsp", "serve"]
@@ -45,25 +45,26 @@ Metals reads `.bsp/jk.json` when the folder opens and offers **Import build**; c
 `build/initialize` — the server names `scala` among the languages it compiles, tests and runs:
 
 ```json
-{"displayName": "jk", "version": "0.13.7", "bspVersion": "2.1.0",
+{"displayName": "jk", "version": "0.15.3", "bspVersion": "2.1.0",
  "capabilities": {"compileProvider": {"languageIds": ["java", "scala"]},
                   "testProvider": {"languageIds": ["java", "scala"]},
                   "runProvider": {"languageIds": ["java", "scala"]}, "canReload": true}}
 ```
 
-`workspace/buildTargets` — one target for the module, a Scala target to Metals:
+`workspace/buildTargets` — one target for the module, a Scala target to Metals, tagged `application`
+because `[application] main` names a main class (Metals offers a run lens on it):
 
 ```json
 {"id": {"uri": "file:///…/jvm/scala-mixed/#scala-mixed"},
  "displayName": "scala-mixed", "baseDirectory": "file:///…/jvm/scala-mixed/",
- "tags": ["library"], "languageIds": ["java", "scala"], "dependencies": [],
+ "tags": ["application"], "languageIds": ["java", "scala"], "dependencies": [],
  "capabilities": {"canCompile": true, "canTest": true, "canRun": true},
  "dataKind": "scala",
- "data": {"scalaOrganization": "org.scala-lang", "scalaVersion": "3.9.0", "scalaBinaryVersion": "3",
+ "data": {"scalaOrganization": "org.scala-lang", "scalaVersion": "3.10.0", "scalaBinaryVersion": "3",
           "platform": 1,
-          "jars": ["file:///…/store/tools/scala/3.9.0/lib/compiler-interface-1.12.0.jar",
-                   "file:///…/store/tools/scala/3.9.0/lib/interface-1.0.29-M4.jar", "… 15 more"],
-          "jvmBuildTarget": {"javaHome": "file:///home/…/.jdks/temurin-25/", "javaVersion": "25.0.4.1"}}}
+          "jars": ["file:///…/store/tools/scala/3.10.0/lib/asm-9.10.1.jar",
+                   "file:///…/store/tools/scala/3.10.0/lib/asm-analysis-9.10.1.jar", "… 19 more"],
+          "jvmBuildTarget": {"javaHome": "file:///…/temurin-25/", "javaVersion": "25.0.2"}}}
 ```
 
 `buildTarget/scalacOptions` and `buildTarget/javacOptions` — the flags jk's Zinc session passes for
@@ -73,33 +74,34 @@ one class directory both halves compile into:
 ```json
 {"target": {"uri": "file:///…/jvm/scala-mixed/#scala-mixed"},
  "options": ["-java-output-version", "25"],
- "classpath": ["file:///…/store/tools/scala/3.9.0/lib/scala-library-3.9.0.jar",
-               "file:///…/store/tools/scala/3.9.0/lib/scala3-library_3-3.9.0.jar", "… 12 more"],
- "classDirectory": "file:///…/jvm/scala-mixed/target/classes/main/"}
+ "classpath": ["file:///…/store/tools/scala/3.10.0/lib/scala-library-3.10.0.jar",
+               "file:///…/store/tools/scala/3.10.0/lib/scala3-library_3-3.10.0.jar", "… 12 more"],
+ "classDirectory": "file:///…/jvm/scala-mixed/target/classes/"}
 ```
 
 ```json
 {"target": {"uri": "file:///…/jvm/scala-mixed/#scala-mixed"},
  "options": ["--release", "25"],
  "classpath": ["… the same 14 entries …"],
- "classDirectory": "file:///…/jvm/scala-mixed/target/classes/main/"}
+ "classDirectory": "file:///…/jvm/scala-mixed/target/classes/"}
 ```
 
 `buildTarget/compile` answers `{"statusCode": 1}` (OK) on the committed sources. With
 `--diagnostic`, `bsp-session.py` writes `Broken.scala` (`val n: Int = "not a number"`) before the
-compile and deletes it afterwards; the server publishes the error before the result:
+compile and deletes it afterwards; the server publishes the error against the file, at its line and column (zero-based in `range`), before
+the result:
 
 ```json
 {"method": "build/publishDiagnostics",
- "params": {"textDocument": {"uri": "file:///…/jvm/scala-mixed/"},
+ "params": {"textDocument": {"uri": "file:///…/src/main/scala/com/example/mixed/Broken.scala"},
             "buildTarget": {"uri": "file:///…/jvm/scala-mixed/#scala-mixed"},
-            "diagnostics": [{"range": {"start": {"line": 0, "character": 0}, "end": {"line": 0, "character": 0}},
+            "diagnostics": [{"range": {"start": {"line": 3, "character": 15}, "end": {"line": 3, "character": 15}},
                              "severity": 1,
-                             "message": "/…/src/main/scala/com/example/mixed/Broken.scala:4: error: Found:    (\"not a number\" : String)\nRequired: Int"}]}}
+                             "message": "/…/Broken.scala:4:16: error: Found:    (\"not a number\" : String)\nRequired: Int"}]}}
 ```
 
 ```json
-{"id": 5, "result": {"statusCode": 2, "message": "/…/Broken.scala:4: error: Found: …"}}
+{"id": 5, "result": {"statusCode": 2, "message": "/…/Broken.scala:4:16: error: Found: …"}}
 ```
 
 With that import in place Metals treats the folder as one Scala target: `Greeting.java` and
@@ -107,11 +109,3 @@ With that import in place Metals treats the folder as one Scala target: `Greetin
 opens the Scala class, and a save recompiles through `buildTarget/compile` with the diagnostics
 above rendered in the editor. The transcript is what the server sends; it was recorded with
 `bsp-session.py`, not from a Metals session.
-
-## Gaps
-
-- A scalac diagnostic lands at the project root with `range` 0:0 — the file and line ride inside the
-  message, and the message keeps scalac's colour escapes. javac diagnostics arrive with file, line
-  and column ([IDE and BSP](https://github.com/JumpKickOSS/jk/blob/main/docs/user/ide.md#bsp)).
-- The target is tagged `library` although `[application] main` names a main class; Metals uses the
-  tag to offer a run lens, so the run goes through `jk run` or `buildTarget/run`.
