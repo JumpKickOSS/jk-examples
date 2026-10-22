@@ -1,10 +1,10 @@
 version = 1
 generated-by = "jk 0.20.0"
-generated-by-build = "1e2f5ab573d2"
-generated-by-build-time = "2026-10-22T16:25:37Z"
+generated-by-build = "704ad4b6601e"
+generated-by-build-time = "2026-10-22T16:43:34Z"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.12.0"
-manifests-sha256 = "dbcb321490a52d7cb63c111214cb565643f6b6eb28aa79b7410090c8016ce196"
+manifests-sha256 = "d9bd1a0197a4c42355fadc84aeb1d95455b0c0542a9904eb2639fdafef4383d7"
 project-id = "33a90a3f443ef3ba6c2b4e41b2da9888"
 
 [jdk]
@@ -27,7 +27,7 @@ name     = "commons-io:commons-io:jar:"
 version  = "2.13.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:671eaa39688dac2ffaa4645b3c9980ae2d0ea2471e4ae6a5da199cd15ae23666"
-scopes   = ["main"]
+scopes   = ["test"]
 
 [[artifact]]
 name     = "org.apiguardian:apiguardian-api:jar:"
