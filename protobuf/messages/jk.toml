@@ -5,16 +5,16 @@ name    = "messages"
 group   = "dev.jkharness"
 version = "1.0.0"
 java    = 25
-kotlin  = "2.4.20"
+kotlin  = "2.4.21"
 
 [application]
 main = "dev.jkharness.pb.MainKt"
 
 # protoc and the runtime library are one protobuf release.
 [protobuf]
-version = "4.36.1"
+version = "4.36.2"
 lite    = true
 kotlin  = true
 
 [dependencies]
-protobuf-kotlin-lite = "4.36.1"
+protobuf-kotlin-lite = "4.36.2"

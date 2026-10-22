@@ -1,31 +1,33 @@
 version = 1
-generated-by = "jk 0.13.7"
+generated-by = "jk 0.15.3"
+generated-by-build = "eafb500388d9"
+generated-by-build-time = "2026-10-22T00:19:05Z"
 resolution-algorithm = "pubgrub-v1"
-kotlin = "2.4.20"
+kotlin = "2.4.21"
 jk-min = "0.10"
-manifests-sha256 = "8a79d7c059743d50f36a6b05e2c6d6653039401bf3e63a8651d19467d7a03b04"
+manifests-sha256 = "eb7e5b2420f71cc7b67b9db40ec35da947f9bac7fca55e9793ebc600197d97ca"
 project-id = "11aa43510a295288b58ccb5a453cf85e"
 
 [jdk]
 suggested-vendor = "temurin"
-suggested-version = "25.0.4.1"
+suggested-version = "25.0.2"
 
 [[artifact]]
 name     = "com.google.protobuf:protobuf-javalite:jar:"
-version  = "4.36.1"
+version  = "4.36.2"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:91d3dba2521322103230c509d41a017da3a5e6766610adcb10c5bb127cbb26c5"
+checksum = "sha256:8f4f93d08cb37130ecb0bc69d376d7d27c36ff04ddb1bb27430b06caa9fa062e"
 scopes   = ["main"]
 
 [[artifact]]
 name     = "com.google.protobuf:protobuf-kotlin-lite:jar:"
-version  = "4.36.1"
+version  = "4.36.2"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:536d1f64e07a779834cfcd34158ac649976209173cf99182a84ade49dd4796a6"
+checksum = "sha256:4265195265ac47e76f0e5eef3085975a5db17b4c9ae575fd9ab5705a8091fed9"
 scopes   = ["main"]
 deps = [
-  "com.google.protobuf:protobuf-javalite:jar:@4.36.1",
-  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.20",
+  "com.google.protobuf:protobuf-javalite:jar:@4.36.2",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.21",
 ]
 
 [[artifact]]
@@ -37,9 +39,9 @@ scopes   = ["test"]
 
 [[artifact]]
 name     = "org.jetbrains.kotlin:kotlin-stdlib:jar:"
-version  = "2.4.20"
+version  = "2.4.21"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:2226de463d309d4a5500a481320b3dea515a6981dcae1def531fbc158884e25f"
+checksum = "sha256:bd8250210584cb659847dce9cda660f8e9906e5def7fbebcea93dc6dcb6a88a3"
 scopes   = ["main"]
 deps = [
   "org.jetbrains:annotations:jar:@26.1.0",
@@ -154,7 +156,7 @@ scopes   = ["test"]
 
 [[plugin]]
 coordinate = "cc.jumpkick:jk-protobuf"
-version    = "0.13.7"
+version    = "0.15.3"
 
 [[module]]
 path    = "."
@@ -162,4 +164,4 @@ group   = "dev.jkharness"
 name    = "messages"
 version = "1.0.0"
 java    = 25
-kotlin  = "2.4.20"
+kotlin  = "2.4.21"
