@@ -1,5 +1,5 @@
-# Vanilla JVM AOT: no framework, no plugin — exercises jk's core `jk build --aot-cache`
-# (self-assembled AOT layout on JDK 25; AppCDS fallback below) and `jk run` startup.
+# Vanilla JVM AOT: no framework, no plugin — exercises jk's core `jk build --aot-cache`, a JEP 514
+# AOT cache trained from one run and started by target/aot-cache/run.sh.
 
 name    = "vanilla-cli"
 group   = "dev.jkharness"
