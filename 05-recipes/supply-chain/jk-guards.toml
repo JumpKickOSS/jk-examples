@@ -1,0 +1,21 @@
+# House rules: the supply-chain rules beside the usual size ratchet. They run inside `jk build`.
+
+[guards.no-floating-versions]
+kind        = "depend"
+no-dynamic  = true
+no-snapshot = true
+why         = "a version the lock does not name exactly is a supply-chain hole"
+
+[guards.test-libraries-stay-in-test]
+kind        = "depend"
+coordinate  = "commons-io:commons-io"
+only-in     = ["test-dependencies"]
+instead     = "java.nio.file.Files"
+why         = "the accepted advisory is acceptable only while the library never ships"
+
+[guards.file-size]
+kind     = "metric"
+measure  = "lines"
+cap      = 400
+baseline = true
+why      = "a file that no longer fits a review no longer fits a reviewer"

@@ -1,0 +1,29 @@
+# Supply-chain hygiene as part of the build: every byte pinned by the lock (with its checksum), a
+# deny list of repositories, an advisory audit that gates CI, one reviewed advisory accepted with
+# a reason and an expiry, and an SBOM of what ships.
+
+name    = "csvjson"
+group   = "dev.jkexamples"
+version = "0.1.0"
+java    = 25
+
+[application]
+main = "dev.jkexamples.csvjson.Main"
+
+[dependencies]
+jackson-databind = "tools.jackson.core:jackson-databind:3.2.4"
+
+[test-dependencies]
+junit-jupiter = "6.1.3"
+# Pinned below the fix on purpose, to show an accepted advisory; see [audit] and the README.
+commons-io = "commons-io:commons-io:2.13.0"
+
+# Repositories this project must never fetch from, enforced when the lock resolves.
+[deny.sources]
+deny = ["jcenter.bintray.com", "repo.spring.io"]
+
+# A reviewed advisory: reported, never counted, until the date says to look again.
+[audit]
+ignore = [
+  { id = "GHSA-78wr-2p64-hpwj", reason = "commons-io is test-only here; XmlStreamReader never sees untrusted input", until = "2027-03-31" },
+]

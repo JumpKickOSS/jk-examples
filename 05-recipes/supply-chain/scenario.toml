@@ -1,0 +1,2 @@
+cadence = "nightly"
+check   = ["jk build", "jk guard", "jk audit", "jk deny", "jk publish -S -U"]

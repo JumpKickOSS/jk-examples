@@ -84,6 +84,7 @@ need. `ports/` and `bench/` are validation and measurement, not teaching materia
 | `05-recipes/lint/all-tools/` | The four-tool `[lint]` table — Checkstyle, a project PMD ruleset, SpotBugs over the classes, detekt over Kotlin — each its own cached step; runs the real tools so their report parsers see real output. |
 | `05-recipes/test/testng/` | TestNG through the JUnit team's engine: `org.testng:testng` declared, the engine injected by `jk lock`, a `@DataProvider` fanned out, a TestNG group as a Platform tag in the tier table. |
 | `05-recipes/test/migrations/` | Flyway and Liquibase over one module's scripts: the unit tier on H2, the integration tier on a PostgreSQL Testcontainer, `jk run` migrating an H2 file, and both tools as pinned `jk tool install` / `jk tool run` commands. |
+| `05-recipes/supply-chain/` | Supply-chain controls as build steps: exact pins and a checksummed lock, `[deny.sources]`, `jk audit` against OSV with a reviewed `[audit] ignore` that expires, a guard keeping the excepted library test-only, SBOMs in the jar and from `jk publish -S`. |
 | `05-recipes/packaging/shrink/` | The minified jar: R8 `--classfile` full mode collapsing a fat jar. |
 | `05-recipes/packaging/variants/` | Core `[variants]`: a custom dimension on a plain JVM app — per-value `extra-src` + deps, union lockfile, mandatory selection. |
 | `05-recipes/packaging/profiles-vs-variants/` | The decision matrix as running code: a profile (how), a feature (what capability), and the build-type variant (which product) side by side. |
