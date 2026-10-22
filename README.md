@@ -149,6 +149,27 @@ Network required throughout: Maven Central, Google Maven, and (for Android) the 
 `repository2` feed. First runs download toolchains and dependencies; JumpKick's CAS makes repeat
 runs warm.
 
+## Scenario manifests
+
+Every scenario has a `scenario.toml` saying how CI runs it:
+
+```toml
+cadence = "nightly"                  # pr | nightly | weekly | manual
+needs   = ["docker"]                 # docker, android-sdk, graalvm, idle-host
+check   = ["jk build", "jk test -p integration", "jk guard"]
+dev     = true                       # also run under `jk dev` until its front doors answer
+dev-checks = ["/api/hello=hello"]    # fetched through the first front door
+```
+
+```sh
+scripts/scenarios.py list --cadence nightly --have docker   # what a nightly with Docker runs
+scripts/scenarios.py check 01-start/java-workspace          # run one scenario's checks
+scripts/scenarios.py lint                                   # every scenario has a manifest and a README row
+```
+
+jk's nightly examples job runs `list` and `check` from a clean checkout, so a new scenario needs
+no change in jk.
+
 ## Role in CI / black-box testing
 
 Treat this repository as the **out-of-tree acceptance surface**:

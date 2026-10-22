@@ -1,0 +1,3 @@
+cadence = "weekly"
+needs   = ["android-sdk"]
+check   = ["./setup.sh", "./run.sh"]

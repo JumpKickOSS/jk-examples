@@ -1,0 +1,3 @@
+cadence = "manual"
+needs   = ["idle-host"]
+check   = ["./run.sh"]

@@ -1,0 +1,4 @@
+cadence = "nightly"
+check   = ["jk build", "jk guard"]
+dev     = true
+dev-checks = ["/api/hello=Hello, world!"]
