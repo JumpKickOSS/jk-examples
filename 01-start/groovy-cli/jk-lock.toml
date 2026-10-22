@@ -1,0 +1,143 @@
+version = 1
+generated-by = "jk 0.20.0"
+generated-by-build = "351af4376a6d"
+generated-by-build-time = "2026-10-22T05:59:57Z"
+resolution-algorithm = "pubgrub-v1"
+jk-min = "0.12.0"
+manifests-sha256 = "a94322362dca14e7b32ef7ea5beca86e9a62e7075cdb62244178f4a3a80428b1"
+project-id = "de7c603bc95aa19e9bbd5acec439a53b"
+
+[jdk]
+suggested-vendor = "graalvm"
+suggested-version = "25.0.4.1.1"
+
+[graal]
+suggested-vendor = "graalvm"
+suggested-version = "25.0.4.1.1"
+
+[[artifact]]
+name     = "info.picocli:picocli:jar:"
+version  = "4.7.7"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:f86e30fffd10d2b13b8caa8d4b237a7ee61f2ffccf5b1941de718b765d235bf8"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "io.leangen.geantyref:geantyref:jar:"
+version  = "1.3.16"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:7f1d591092d5142b6aaa7cf59f94c4c74d57dbeef03b2f8262949f8f36bac6e3"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "org.apache.groovy:groovy-cli-picocli:jar:"
+version  = "6.0.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:f0815fe0505644a7bf3b53b010818ad6a8cfbe7fee1690a30e00a774a9c24545"
+scopes   = ["main"]
+deps = [
+  "info.picocli:picocli:jar:@4.7.7",
+  "org.apache.groovy:groovy:jar:@6.0.0",
+]
+
+[[artifact]]
+name     = "org.apache.groovy:groovy-json:jar:"
+version  = "6.0.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:86eb1e7767136369f92680ef4956b6c02f1f6db7d13aeca7b7174d1986a8c25a"
+scopes   = ["main"]
+deps = [
+  "org.apache.groovy:groovy:jar:@6.0.0",
+]
+
+[[artifact]]
+name     = "org.apache.groovy:groovy:jar:"
+version  = "6.0.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:6bcbec490ac1ade0dca6566dca9d02897cbb8fc31ee4008e950451aa83b1ac76"
+scopes   = ["main", "test"]
+
+[[artifact]]
+name     = "org.apiguardian:apiguardian-api:jar:"
+version  = "1.1.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b509448ac506d607319f182537f0b35d71007582ec741832a1f111e5b5b70b38"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "org.hamcrest:hamcrest:jar:"
+version  = "3.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:5d66b6a4a680755cb6ed7cb104fa7835ef644667586ff0737adeb977c39ecdbc"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "org.jspecify:jspecify:jar:"
+version  = "1.0.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:1fad6e6be7557781e4d33729d49ae1cdc8fdda6fe477bb0cc68ce351eafdfbab"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "org.junit.platform:junit-platform-commons:jar:"
+version  = "6.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:a4774ae923c109544034aeae7c762cf017fbcdd1342403ba90e0921984b608c3"
+scopes   = ["test"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
+]
+
+[[artifact]]
+name     = "org.junit.platform:junit-platform-engine:jar:"
+version  = "6.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:21ad7ad3a35beda16387979317be1833a72a71d812f9a66ee4b9a7bafb56334c"
+scopes   = ["test"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
+  "org.junit.platform:junit-platform-commons:jar:@6.1.3",
+  "org.opentest4j:opentest4j:jar:@1.3.0",
+]
+
+[[artifact]]
+name     = "org.junit.platform:junit-platform-launcher:jar:"
+version  = "6.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:1dec64b1fc0b7c47a11302aa5b4d37d8160c041b396e27067709ce775601a7b6"
+scopes   = ["test"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
+  "org.junit.platform:junit-platform-engine:jar:@6.1.3",
+]
+
+[[artifact]]
+name     = "org.opentest4j:opentest4j:jar:"
+version  = "1.3.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:48e2df636cab6563ced64dcdff8abb2355627cb236ef0bf37598682ddf742f1b"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "org.spockframework:spock-core:jar:"
+version  = "2.5-groovy-6.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:0a0549390a12930eef653c32acb9ca3fc38c0755a8c988bed953e8bbf71439df"
+scopes   = ["test"]
+deps = [
+  "io.leangen.geantyref:geantyref:jar:@1.3.16",
+  "org.apache.groovy:groovy:jar:@6.0.0",
+  "org.hamcrest:hamcrest:jar:@3.0",
+  "org.junit.platform:junit-platform-engine:jar:@6.1.3",
+]
+
+[[module]]
+path    = "."
+group   = "dev.jkexamples"
+name    = "groovy-cli"
+version = "0.1.0"
+java    = 25
+groovy  = "6.0.0"

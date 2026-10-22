@@ -37,6 +37,7 @@ need. `ports/` and `bench/` are validation and measurement, not teaching materia
 | `01-start/java-cli/` | Java | A plain CLI with no framework or plugin, plus core JVM AOT (`jk build --aot-cache`). |
 | `01-start/kotlin-cli/` | Kotlin | Project-declared Kotlin compiler plugins (`[[kotlin-plugins]]`) via kotlinx-serialization. |
 | `01-start/kotlin-library/` | Kotlin | The `library` template as `jk new` writes it: sources and **Dokka** javadoc jars beside the jar, `git.properties` from `[build-info]`, the `library` guard pack, exact pins. |
+| `01-start/groovy-cli/` | Groovy + Java | Groovy and Java compiled jointly in one module (each calls the other), `CliBuilder`, Spock specs with a data table. |
 | `01-start/java-scala-mixed/` | Java + Scala | **A mixed Java/Scala module through jk's BSP**: one Zinc session for both halves referencing each other, one `scala` build target Metals imports (compiler version and jars, `scalacOptions` / `javacOptions`), `buildTarget/compile` with a Scala diagnostic — the wire recorded by `bsp-session.py`. |
 
 ### 02-services — backends on a framework

@@ -1,0 +1,31 @@
+# A Groovy CLI with a Java half: Groovy and Java sources share one module and compile jointly, so
+# Groovy calls the Java record and Java calls the Groovy class. Spock specs run on the JUnit Platform.
+
+name    = "groovy-cli"
+group   = "dev.jkexamples"
+version = "0.1.0"
+java    = 25
+groovy  = "6.0.0"
+
+[application]
+main = "dev.jkexamples.tally.Main"
+
+[dependencies]
+groovy-cli-picocli = "org.apache.groovy:groovy-cli-picocli:6.0.0"
+groovy-json        = "org.apache.groovy:groovy-json:6.0.0"
+
+[test-dependencies]
+spock-core = "org.spockframework:spock-core:2.5-groovy-6.0"
+
+# Test tiers: `jk test` is the unit tier; each profile owns one of the excluded tags, so every
+# tagged test runs in exactly one tier.
+[test]
+exclude-tags = ["integration", "slow"]
+
+[profiles.integration]
+include-tags = ["integration"]
+exclude-tags = []
+
+[profiles.slow]
+include-tags = ["slow"]
+exclude-tags = ["integration"]

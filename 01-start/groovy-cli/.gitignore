@@ -1,0 +1,23 @@
+# jk build outputs (`jk/` / `.jk/` stem scripts are source — ignore generated plan only)
+target/
+.jk/selective-plan.json
+
+# IntelliJ IDEA
+.idea/
+* .iml
+* .ipr
+* .iws
+out/
+
+# VS Code
+.vscode/
+* .code-workspace
+.history/
+
+# Eclipse compiler (used by VS Code Java plugins)
+.classpath
+.project
+.settings/
+.factorypath
+**/src/**/bin/
+**/test/**/bin/
