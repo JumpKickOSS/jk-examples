@@ -7,7 +7,9 @@ over `src/main/java`, `lint-spotbugs` over the compiled classes against the comp
 XML, PMD's XML, SpotBugs's `BugCollection`), so a finding is a diagnostic with its rule id in
 `target/jk-results.md` and the MCP `jk_diagnostics`, and severity follows the tool: PMD
 priorities 1–2 and SpotBugs priority 1 are errors, the rest and detekt's findings warnings.
-`fail-on = "error"` (the default) fails the build on the errors and lets warnings through.
+`fail-on = "error"` (the default) fails the build on the errors and lets warnings through; a
+`<tool>-fail-on` such as `pmd-fail-on = "warning"` (commented in `jk.toml`) sets one tool's own
+threshold beside it.
 
 ```toml
 [lint]

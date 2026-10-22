@@ -3,12 +3,13 @@
 The `[jaxb]` preset runs the JAXB schema compiler, xjc, over `src/main/xsd` in the generate stage
 — every `.xsd` in one invocation, `-no-header` so an unchanged schema is a byte-identical output —
 and the generated `com.acme.order.Order` and `ObjectFactory` join the compile. xjc is not in
-`[dependencies]`: the preset fetches `org.glassfish.jaxb:jaxb-xjc` at its pinned release into the
+`[dependencies]`: the preset fetches `org.glassfish.jaxb:jaxb-xjc` at `[jaxb] version` into the
 store and hashes it into the step's key. The two dependencies are what the generated classes need
 at run time: the `jakarta.xml.bind` annotations and the JAXB implementation on xjc's line.
 
 ```toml
 [jaxb]
+version = "4.0.9"              # the jaxb-xjc release; moves with jaxb-runtime below
 package = "com.acme.order"     # one package for every class (-p), in place of the namespace's
 
 [dependencies]

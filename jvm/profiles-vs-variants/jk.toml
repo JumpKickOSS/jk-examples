@@ -3,9 +3,10 @@
 #   PROFILE  — how to build:   [profiles.strict] turns javac lint into errors. Optional;
 #              same artifact either way.            jk build --profile strict
 #   FEATURE  — what capability: [features.json] gates the gson dep. Optional, additive.
-#                                                   jk build (defaults) / feature flags
-#   VARIANT  — which product:  the built-in build-type dimension; release gets a
-#              BUILD_STAMP resource difference via extra-src.   jk build --release
+#                                                   jk build (on by default)
+#                                                   jk tree --no-default-features (the graph without it)
+#   VARIANT  — which product:  the built-in build-type dimension; release compiles the
+#              extra ReleaseStamp class from src-release.   jk build --release
 #
 # Environments (dev/test/prod config) are NONE of these — that's runtime configuration
 # (env vars, config files, Spring profiles): build once, promote the same artifact.

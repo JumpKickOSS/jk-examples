@@ -1,6 +1,6 @@
 # Avro schemas as generated classes: [avro] runs Avro's SpecificCompiler over src/main/avro in the
 # generate stage, the classes join the compile, and a schema edit regenerates. No compiler jar is in
-# [dependencies]; the preset fetches it at the pinned release.
+# [dependencies]; the preset fetches it at the [avro] version.
 
 name    = "avro-events"
 group   = "com.acme"
@@ -11,13 +11,13 @@ java    = 25
 main = "com.acme.Main"
 
 # An Avro string is a java.lang.String on the generated getters (CharSequence is the compiler's
-# default). The compiler release follows `version`, 1.12.2 unless you say otherwise; the runtime
-# below stays on the same number.
+# default). `version` is the compiler release, written out so it moves with the runtime below.
 [avro]
+version     = "1.12.2"
 string-type = "String"
 
 [dependencies]
-avro = "1.12.2"
+avro = "1.12.2"     # the generated classes read it at run time; on the compiler's number
 
 [test-dependencies]
 junit-jupiter = "6.1.3"
@@ -27,7 +27,8 @@ junit-jupiter = "6.1.3"
 [test]
 exclude-tags = ["integration", "slow", "network", "bench"]
 # Avro 1.12 decodes a specific record only into a class it is told to trust; the generated package
-# is named here for the forked test JVM (and to the application's JVM the same way, in [jvm] args).
+# is named here for the forked test JVM, where the round-trip test decodes one. The application only
+# builds an event, so its JVM needs no such flag.
 system-properties = { "org.apache.avro.SERIALIZABLE_PACKAGES" = "com.acme.events" }
 
 [profiles.integration]

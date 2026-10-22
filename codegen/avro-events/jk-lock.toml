@@ -1,15 +1,15 @@
 version = 1
-generated-by = "jk 0.13.7"
-generated-by-build = "ee200446bb46"
-generated-by-build-time = "2026-09-18T04:20:35Z"
+generated-by = "jk 0.15.3"
+generated-by-build = "eafb500388d9"
+generated-by-build-time = "2026-10-22T00:19:05Z"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.10"
-manifests-sha256 = "d4dbc9f507f78c21e714a9da43feb9d70363ecd313ca91b2e45c0ac176c0464c"
+manifests-sha256 = "68a3a39e08ebb65f21048a27a0a4e5a5559f97e58f967cac8addb61686552d76"
 project-id = "635704774cb6a1323a8feac85624f724"
 
 [jdk]
 suggested-vendor = "temurin"
-suggested-version = "25.0.4.1"
+suggested-version = "25.0.2"
 
 [[artifact]]
 name     = "com.fasterxml.jackson.core:jackson-annotations:jar:"
@@ -198,7 +198,7 @@ scopes   = ["main"]
 
 [[plugin]]
 coordinate = "cc.jumpkick:jk-avro"
-version    = "0.13.7"
+version    = "0.15.3"
 
 [[module]]
 path    = "."

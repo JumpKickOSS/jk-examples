@@ -1,19 +1,21 @@
 version = 1
-generated-by = "jk 0.13.7"
+generated-by = "jk 0.15.3"
+generated-by-build = "eafb500388d9"
+generated-by-build-time = "2026-10-22T00:19:05Z"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.12.0"
-manifests-sha256 = "4bd29c626d1e9c610c7252bbe3a0d4a75423b859069d0a82bab181736c22687b"
+manifests-sha256 = "4ee08aa0448e719396388e8908882373f170da2fcd3071cd62a9217902b45be5"
 project-id = "2e67c70e1e25f4d75d46bb7441163c1b"
 
 [jdk]
 suggested-vendor = "temurin"
-suggested-version = "25.0.4.1"
+suggested-version = "25.0.2"
 
 [[artifact]]
 name     = "org.apache.commons:commons-lang3:jar:"
-version  = "3.18.0"
+version  = "3.21.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:4eeeae8d20c078abb64b015ec158add383ac581571cddc45c68f0c9ae0230720"
+checksum = "sha256:a2af247ec4db6eb8947e18e23e0433e4871a7c5d0a40e1f92e46ede54ae1defe"
 scopes   = ["main"]
 
 [[artifact]]

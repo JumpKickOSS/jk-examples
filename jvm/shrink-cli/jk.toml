@@ -1,7 +1,7 @@
 # The minified jar: R8 --classfile full mode over the app + runtime closure, packaged
 # as one slim executable jar. Validation is behavioral (the jar runs) and structural
-# (unreferenced library code is absent) — which is why commons-lang3 is pinned exactly:
-# the README's size numbers describe one specific library build.
+# (unreferenced library code is absent); the README's size numbers describe the pinned
+# commons-lang3 build.
 
 name    = "shrink-cli"
 group   = "dev.jkharness"
@@ -17,8 +17,4 @@ minified = true
 # obfuscate = false
 
 [dependencies]
-commons-lang3 = "=3.18.0"
-
-[repositories]
-central = "https://repo.maven.apache.org/maven2/"
-google  = "https://dl.google.com/dl/android/maven2/"   # r8 publishes to Google Maven
+commons-lang3 = "3.21.0"

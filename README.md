@@ -34,13 +34,13 @@ repo's `main` closely; build them with a current `jk`.
 | `protobuf/messages/` | The protobuf plugin: provisioned per-OS protoc, Java + Kotlin DSL (lite) codegen. |
 | `graphql/dgs-codegen/` | GraphQL codegen as a `[generate]` recipe: DGS codegen's command line over the schema, typed types + client joining the compile, the tool closure fetched and cached. |
 | `jvm/netty/` | **Full Netty Maven→jk port** (~40 modules, Mill graph parity) — black-box + benchmarks. |
-| `jvm/netty-echo/` | Small Netty echo server on the published `netty-all` — lightweight harness seed. |
+| `jvm/netty-echo/` | Small Netty echo server on the published `netty-all` (4.2 `MultiThreadIoEventLoopGroup`), an `EmbeddedChannel` handler test and `[image]` — lightweight harness seed. |
 | `jvm/scala-mixed/` | **A mixed Java/Scala module through jk's BSP**: one Zinc session for both halves referencing each other, one `scala` build target Metals imports (compiler version and jars, `scalacOptions` / `javacOptions`), `buildTarget/compile` with a Scala diagnostic — the wire recorded by `bsp-session.py`. |
 | `jvm/shrink-cli/` | The minified jar: R8 `--classfile` full mode collapsing a fat jar. |
 | `jvm/variants-cli/` | Core `[variants]`: a custom dimension on a plain JVM app — per-value `extra-src` + deps, union lockfile, mandatory selection. |
 | `jvm/profiles-vs-variants/` | The decision matrix as running code: a profile (how), a feature (what capability), and the build-type variant (which product) side by side. |
-| `codegen/avro-events/` | The `[avro]` preset: Avro schemas compiled in the generate stage, the classes joining the compile, `string-type`, an exact runtime pin on the compiler's number. |
-| `codegen/jaxb-orders/` | The `[jaxb]` preset: xjc over `src/main/xsd` into one package, the `jakarta.xml.bind` API and the JAXB runtime as the only dependencies. |
+| `codegen/avro-events/` | The `[avro]` preset: Avro schemas compiled in the generate stage, the classes joining the compile, `string-type`, `[avro] version` written beside the runtime pin so `jk update` moves both. |
+| `codegen/jaxb-orders/` | The `[jaxb]` preset: xjc over `src/main/xsd` into one package, the `jakarta.xml.bind` API and the JAXB runtime as the only dependencies, `[jaxb] version` on the runtime's line. |
 | `codegen/jooq-shop/` | The `[jooq]` preset over DDL scripts: the Flyway migrations applied in memory through `DDLDatabase`, typed tables and references generated, no database for the build. |
 | `lint/checkstyle/` | `[lint] checkstyle` as a cached step after compile: findings as diagnostics with the rule id, `fail-on`, a rule set that repeats nothing `jk format` owns. |
 | `lint/all-tools/` | The four-tool `[lint]` table — Checkstyle, a project PMD ruleset, SpotBugs over the classes, detekt over Kotlin — each its own cached step; runs the real tools so their report parsers see real output. |

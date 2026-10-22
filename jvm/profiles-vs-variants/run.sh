@@ -12,8 +12,13 @@ echo "=== strict profile (same artifact, -Werror compile)"
 jk build --skip-tests --profile strict
 java -jar "$JAR"
 
+echo "=== json feature off (the graph without the default features)"
+jk tree --no-default-features
+
 echo "=== release variant (src-release joins the compile)"
-# Variant switches share target/ — a class the previous selection added would survive
-# until `jk clean` (recorded gap), so the additive release build runs last here.
 jk build --skip-tests --release
+java -jar "$JAR"
+
+echo "=== back to debug (the release-only class is gone again)"
+jk build --skip-tests
 java -jar "$JAR"

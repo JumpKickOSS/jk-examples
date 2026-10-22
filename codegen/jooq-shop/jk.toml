@@ -1,7 +1,7 @@
 # jOOQ classes from the migrations: [jooq] applies the Flyway scripts under db/migration to an
 # in-memory database in the generate stage and generates the tables' classes, which join the
 # compile; a migration edit regenerates and no database runs for the build. The generator is not
-# in [dependencies]; the preset fetches it at the pinned release.
+# in [dependencies]; the preset fetches it at the [jooq] version.
 
 name    = "jooq-shop"
 group   = "com.acme"
@@ -13,12 +13,13 @@ main = "com.acme.Main"
 
 # The scripts default to src/main/resources/db/migration/**/*.sql and the package to <group>.jooq.
 # Flyway's own history table is a table like any other to DDLDatabase, so it is left out here.
-# The generator release follows `version`, 3.21.8 unless you say otherwise.
+# `version` is the generator release, written out so it moves with the runtime below.
 [jooq]
+version  = "3.21.9"
 excludes = "flyway_schema_history"
 
 [dependencies]
-jooq = "3.21.8"     # the generated classes read it at run time; on the generator's number
+jooq = "3.21.9"     # the generated classes read it at run time; on the generator's number
 
 [test-dependencies]
 junit-jupiter = "6.1.3"

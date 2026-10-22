@@ -1,15 +1,15 @@
 version = 1
-generated-by = "jk 0.13.7"
-generated-by-build = "ee200446bb46"
-generated-by-build-time = "2026-09-18T04:20:35Z"
+generated-by = "jk 0.15.3"
+generated-by-build = "eafb500388d9"
+generated-by-build-time = "2026-10-22T00:19:05Z"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.10"
-manifests-sha256 = "6fbedc5bdc47bea3cd924f3c7fa500ab0ff0a4da8d8a7012975350a0ae3020dc"
+manifests-sha256 = "1ca32d5cb564706cf3674a7fac3c77b37531249c405b3855bad6a12fdddbe51b"
 project-id = "aff21305bf56aa6b892161a6526b2d68"
 
 [jdk]
 suggested-vendor = "temurin"
-suggested-version = "25.0.4.1"
+suggested-version = "25.0.2"
 
 [[artifact]]
 name     = "com.sun.istack:istack-commons-runtime:jar:"
@@ -185,7 +185,7 @@ scopes   = ["test"]
 
 [[plugin]]
 coordinate = "cc.jumpkick:jk-jaxb"
-version    = "0.13.7"
+version    = "0.15.3"
 
 [[module]]
 path    = "."

@@ -8,13 +8,15 @@ closure and writes one slim executable jar beside the fat jar. Validation is beh
 jk build
 java -jar target/shrink-cli-1.0.0-min.jar
 ls -la target/shrink-cli-1.0.0-all.jar target/shrink-cli-1.0.0-min.jar
-unzip -l target/shrink-cli-1.0.0-min.jar | grep -c 'org/apache/commons/lang3'   # a handful, not hundreds
+unzip -l target/shrink-cli-1.0.0-min.jar | grep -c 'org/apache/commons/lang3'   # 2, against 457 in the -all.jar
 jk guard
 ```
 
-**Why `commons-lang3` is pinned exactly.** The point of the scenario is a before/after size
-comparison, and that only means something against one specific library build. Everywhere else
-in this repo versions float to `latest`; here `=3.18.0` is deliberate.
+Against the pinned `commons-lang3` `3.21.0`, a build writes a 740,655-byte
+`shrink-cli-1.0.0-all.jar` (457 `org/apache/commons/lang3` entries) and a 15,798-byte
+`shrink-cli-1.0.0-min.jar` (2 of them); `java -jar` on the slim jar prints
+`Hello from a shrunk jar`. The numbers move with the pin, which `jk update` moves.
 
-The Google Maven repository is declared because R8 is published there. The effective keep rules
-jk derived are written next to the artifact as `target/shrink-cli-1.0.0-keep.pro`.
+R8 is a tool jk provisions itself, so the manifest declares no extra repository for it. The
+effective keep rules jk derived are written next to the artifact as
+`target/shrink-cli-1.0.0-min-keep.pro`.
