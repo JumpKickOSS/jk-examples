@@ -3,6 +3,11 @@
 name    = "handler"
 # group/version/java inherit from workspace root
 
+# OpenJdkSelfSignedCertGenerator reaches sun.security.x509, as Maven's compilerArgs and Mill's
+# javacOptions export it.
+[javac]
+args = ["--add-exports=java.base/sun.security.x509=ALL-UNNAMED"]
+
 [dependencies]
 common = { workspace = true }
 resolver = { workspace = true }
@@ -12,32 +17,27 @@ transport-native-unix-common = { workspace = true }
 codec = { workspace = true }
 
 [provided-dependencies]
-bcpkix-jdk15on = "=1.69"
-bctls-jdk15on = "=1.69"
-conscrypt-openjdk-uber = "=2.5.2"
-netty-tcnative-classes = "=2.0.65.Final"
-alpn-api = "org.eclipse.jetty.alpn:alpn-api:=1.1.2.v20150522"
-npn-api = "org.eclipse.jetty.npn:npn-api:=1.1.1.v20141010"
+bcpkix-jdk15on = "1.70"
+bctls-jdk15on = "1.70"
+conscrypt-openjdk-uber = "2.5.2"
+netty-tcnative-classes = "2.0.84.Final"
+alpn-api = "org.eclipse.jetty.alpn:alpn-api:1.1.2.v20150522"
+npn-api = "org.eclipse.jetty.npn:npn-api:1.1.1.v20141010"
 
 [test-dependencies]
 # Mill testModuleDeps = transport.test / Maven test-jar
 transport = { workspace = true, kind = "tests" }
-junit-jupiter-api = "=6.1.0"
-junit-jupiter-params = "=6.1.0"
-junit-jupiter-engine = "=6.1.0"
-hamcrest-library = "=1.3"
-assertj-core = "=3.18.0"
-mockito-core = "=2.18.3"
-reflections = "=0.10.2"
-gson = "=2.8.9"
-guava = "=28.2-jre"
-jctools-core = "=4.0.5"
-bcpkix-jdk15on = "=1.69"
-bctls-jdk15on = "=1.69"
-conscrypt-openjdk-uber = "=2.5.2"
-logback-classic = "=1.1.7"
-
-# Align with junit-jupiter 5.9.x — override jk's putIfAbsent "latest" launcher (was Platform 6.x)
-junit-platform-launcher = "=6.1.0"
-junit-platform-engine = "=6.1.0"
-junit-platform-commons = "=6.1.0"
+junit-jupiter-api = "5.14.3"
+junit-jupiter-params = "5.14.3"
+junit-jupiter-engine = "5.14.3"
+hamcrest-library = "1.3"
+assertj-core = "3.27.7"
+mockito-core = "4.11.0"
+reflections = "0.10.2"
+gson = "2.8.9"
+guava = "28.2-jre"
+jctools-core = "4.0.5"
+bcpkix-jdk15on = "1.70"
+bctls-jdk15on = "1.70"
+conscrypt-openjdk-uber = "2.5.2"
+logback-classic = "1.2.13"

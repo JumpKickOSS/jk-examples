@@ -15,23 +15,16 @@ sedi() {
 }
 
 # Modules whose tests need OpenSSL/tcnative, JNI .so, blockhound agent, OS-specific
-# natives, network OCSP (hangs), or multi-hour suites.
+# natives or network OCSP (hangs). The testsuite* modules keep their suites under src/main and
+# have no test tier to curate.
 for mod in \
   handler \
   handler-ssl-ocsp \
   transport-native-epoll \
   transport-native-kqueue \
   transport-blockhound-tests \
-  transport-native-unix-common-tests \
   resolver-dns-native-macos \
-  microbench \
-  testsuite \
-  testsuite-http2 \
-  testsuite-autobahn \
-  testsuite-native \
-  testsuite-native-image \
-  testsuite-native-image-client \
-  testsuite-native-image-client-runtime-init
+  testsuite-native
 do
   if [ -d "$ROOT/$mod/src/test" ]; then
     rm -rf "$ROOT/$mod/src/test"
@@ -65,7 +58,10 @@ for f in \
   "$ROOT/handler/src/test/java/io/netty/handler/ssl/AmazonCorrettoSslEngineTest.java" \
   "$ROOT/resolver-dns/src/test/java/io/netty/resolver/dns/TestDnsServer.java" \
   "$ROOT/resolver-dns/src/test/java/io/netty/resolver/dns/DnsNameResolverTest.java" \
-  "$ROOT/resolver-dns/src/test/java/io/netty/resolver/dns/SearchDomainTest.java"
+  "$ROOT/resolver-dns/src/test/java/io/netty/resolver/dns/SearchDomainTest.java" \
+  "$ROOT/resolver-dns/src/test/java/io/netty/resolver/dns/DnsAddressResolverGroupTest.java" \
+  "$ROOT/resolver-dns/src/test/java/io/netty/resolver/dns/IsolatedDnsNameResolverTest.java" \
+  "$ROOT/codec-http2/src/test/java/io/netty/handler/codec/http2/HttpConversionUtilFuzzTest.java"
 do
   [ -f "$f" ] && rm -f "$f" && echo "curate: drop $(basename "$f")"
 done
@@ -77,14 +73,13 @@ find "$ROOT" -path '*/src/test/java/*' -name 'NativeImage*.java' -delete 2>/dev/
 find "$ROOT" -path '*/src/test/java/*' -name '*IntegrationTest.java' -delete 2>/dev/null || true
 echo "curate: drop NativeImage* / *IntegrationTest (optional; kind=tests supports them if re-enabled)"
 
-# ChannelHandlerMetadataUtil imported NativeImageHandlerMetadataTest for a javadoc @see only —
-# that import breaks test compile after we delete NativeImage*. Apply overlay patch that drops
-# the import so kind = "tests" consumers (codec TransportTestsKindSmokeTest) can compile.
-PATCH="$(cd "$(dirname "$0")/.." && pwd)/overlay/patches/ChannelHandlerMetadataUtil.java"
+# ChannelHandlerMetadataUtil imports NativeImageHandlerMetadataTest for a javadoc link only; that
+# import breaks the test compile once NativeImage* is gone, so drop it and unlink the reference.
 DEST="$ROOT/transport/src/test/java/io/netty/nativeimage/ChannelHandlerMetadataUtil.java"
-if [ -f "$PATCH" ] && [ -f "$DEST" ]; then
-  cp "$PATCH" "$DEST"
-  echo "curate: patch ChannelHandlerMetadataUtil (drop NativeImageHandlerMetadataTest import)"
+if [ -f "$DEST" ]; then
+  sedi -e '/^import io.netty.channel.NativeImageHandlerMetadataTest;$/d' \
+    -e 's|{@link NativeImageHandlerMetadataTest}|NativeImageHandlerMetadataTest|' "$DEST"
+  echo "curate: ChannelHandlerMetadataUtil drops its NativeImageHandlerMetadataTest import"
 fi
 
 echo "curate-tests done"

@@ -5,7 +5,7 @@ set -euo pipefail
 cd "$(dirname "$0")"
 
 # Align with Mill's Netty case study: large 4.1 multi-module tree (~47 Maven modules).
-NETTY_TAG="${NETTY_TAG:-netty-4.1.115.Final}"
+NETTY_TAG="${NETTY_TAG:-netty-4.1.139.Final}"
 NETTY_REPO="${NETTY_REPO:-https://github.com/netty/netty.git}"
 
 if [ ! -d checkout/.git ]; then
@@ -36,22 +36,6 @@ if [ -d checkout/transport-sctp/src/main/java/com ]; then
   echo "stripped transport-sctp com.sun.nio.sctp stubs (Maven compiler exclude; JDK module conflict)"
 fi
 
-# handler: OpenJdkSelfSignedCertGenerator uses sun.security.x509 which needs
-# --add-exports java.base/sun.security.x509=ALL-UNNAMED at compile (Maven argLine / Mill forkArgs).
-# jk has no project-level javac export flag yet — drop this optional JDK-internal helper
-# (BouncyCastleSelfSignedCertGenerator remains). Track as product gap: compiler-args in jk.toml.
-OJSSCG=checkout/handler/src/main/java/io/netty/handler/ssl/util/OpenJdkSelfSignedCertGenerator.java
-if [ -f "$OJSSCG" ]; then
-  rm -f "$OJSSCG"
-  echo "stripped OpenJdkSelfSignedCertGenerator (needs javac --add-exports; see PARITY.md)"
-fi
-
-# BC-only self-signed path (companion to OpenJdkSelfSignedCertGenerator removal)
-if [ -f overlay/patches/SelfSignedCertificate.java ]; then
-  cp overlay/patches/SelfSignedCertificate.java \
-    checkout/handler/src/main/java/io/netty/handler/ssl/util/SelfSignedCertificate.java
-  echo "applied SelfSignedCertificate BC-only patch"
-fi
 # Record pin for docs/CI
 printf '%s\n' "$NETTY_TAG" > checkout/.jk-netty-tag
 printf '%s\n' "$SHA" > checkout/.jk-netty-sha
@@ -74,16 +58,7 @@ for f in \
   fi
 done
 
-# AdaptivePoolingAllocator: JCTools MpmcArrayQueue requires capacity >= 2; 4.1.115 used
-# availableProcessors() raw (fails on 1-core hosts — Netty #14579). Backport Math.max(2, …)
-# from 4.1.116 so Adaptive* unit tests stay in the suite.
-if [ -f overlay/patches/AdaptivePoolingAllocator.java ]; then
-  cp overlay/patches/AdaptivePoolingAllocator.java \
-    checkout/buffer/src/main/java/io/netty/buffer/AdaptivePoolingAllocator.java
-  echo "applied AdaptivePoolingAllocator central-queue floor patch (Netty #14579)"
-fi
-
 ./scripts/curate-tests.sh checkout
 
 echo "netty ready at checkout/ (tag $NETTY_TAG, SHA $SHA, overlay + common codegen applied)"
-echo "Next: cd checkout && jk lock && jk build --skip-tests"
+echo "Next: ./run.sh   (or: cd checkout && jk build --skip-tests)"

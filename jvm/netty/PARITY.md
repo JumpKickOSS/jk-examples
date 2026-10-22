@@ -1,16 +1,18 @@
 # Parity matrix — Maven / Mill / JumpKick (Netty)
 
-Pinned: **netty-4.1.115.Final** (`04f9b4a827d992ad439823eeba85d65d3a89c265`).  
-Graph: Mill [`example/thirdparty/netty/build.mill`](https://github.com/com-lihaoyi/mill/blob/main/example/thirdparty/netty/build.mill).
+Pinned: **netty-4.1.139.Final** (`7bc0414acbb21f752dd615c386821f58e722c5f5`).  
+Graph: Mill [`example/thirdparty/netty/build.mill`](https://github.com/com-lihaoyi/mill/blob/main/example/thirdparty/netty/build.mill)
+(written against Netty commit `20a790ed`, a 4.1.113 snapshot; dependency versions here follow the
+4.1.139 POMs).
 
 ## Build status (this port)
 
 | Gate | Result |
 |------|--------|
-| `jk lock` (workspace) | **green** (~98 external coords) |
-| `jk build --skip-tests --redo` | **green — 41 modules** |
-| Test **compile** with Guava + JUnit **6.1** | **green** (aligned to jk test-runner) |
-| Full `jk build --redo` (curated unit tests) | **green — 41 modules (~3–4 min)** |
+| `jk lock` (workspace) | **green** (~138 external coords) |
+| `jk build --skip-tests` | **green — 41 modules** |
+| Tests on JUnit Jupiter **5.14.3** (the tag's pin) | **green** — jk's launcher follows it onto Platform 1.14.3 |
+| Full `jk build` (curated unit tests) | **green — 41 modules, 25,396 passed / 1,321 skipped** (macOS aarch64) |
 | **`kind = "tests"`** (transport → codec smoke) | **green** — `TransportTestsKindSmokeTest` (`@Tag("kind-smoke")`); fails compile without the edge |
 | **BEFORE_COMPILE codegen** (common collections) | **green** — `.jk/before-compile.groovy` runs upstream `codegen.groovy`; no shell required when `NETTY_SKIP_SHELL_CODEGEN=1` |
 | JNI native libs (epoll/kqueue/tcnative) | **deferred** |
@@ -23,8 +25,8 @@ Graph: Mill [`example/thirdparty/netty/build.mill`](https://github.com/com-lihao
 | Compile Java main sources | yes | yes | **yes** | |
 | Inter-module deps without `mvn install` | reactor jars | direct | **workspace jars** | `target/{module}/` |
 | common Groovy codegen | gmaven | GroovyShell | **`.jk/before-compile.groovy`** (+ optional shell) | same `codegen.groovy` |
-| Java 8 bytecode (`-source 1.8`) | yes | yes | **java = 17** | jk LTS floor is 17; sources are the same |
-| `javac --add-exports` for `sun.security.x509` | yes | forkArgs | **workaround** | drop `OpenJdkSelfSignedCertGenerator` + BC-only patch |
+| Java 8 bytecode (`-source 1.8`) | yes | yes | **java = 25** | same sources at a current release |
+| `javac --add-exports` for `sun.security.x509` | yes | forkArgs | **yes** | `handler/jk.toml` `[javac] args`; `OpenJdkSelfSignedCertGenerator` compiles |
 | SCTP `com.sun.nio.sctp` stubs | compiler exclude | as Maven | **setup strip** | matches Maven exclude |
 | JNI epoll/kqueue/macos DNS | yes | clang/make | **deferred** | Java class modules included |
 | OSGi / shading / Autobahn / H2Spec | yes | partial | **deferred** | same honesty class as Mill |
@@ -32,38 +34,26 @@ Graph: Mill [`example/thirdparty/netty/build.mill`](https://github.com/com-lihao
 
 ## Product gaps surfaced
 
-1. **No project-level `javac` `--add-exports` / compiler-args** in `jk.toml` (handler SSL util).  
-2. **Exact version pins** required for ancient artifacts (`protobuf-java:2.6.1`) — caret default rejects.  
-3. **Large workspace lock + parallel compile** works end-to-end.  
-4. **Codegen-before-compile** uses `.jk/before-compile.groovy` (`BEFORE_COMPILE` / stage
+1. **Large workspace lock + parallel compile** works end-to-end.  
+2. **Codegen-before-compile** uses `.jk/before-compile.groovy` (`BEFORE_COMPILE` / stage
    `generate`) plus optional `scripts/generate-common.sh` for setup-without-jk.  
-5. **JUnit version skew**: jk’s test-runner is **JUnit 6.1**; project pins must match Platform **6.x**.  
-6. **Workspace `kind = "tests"`** — Mill’s `testModuleDeps` / Maven `test-jar` (first-class in jk; used in overlay).  
-7. **Test workers use `-XX:ActiveProcessorCount=1`** — Netty Adaptive allocator must floor central-queue capacity at 2 (JCTools).  
-8. **`jk import pom.xml`** now rewrites sibling GAs → `workspace = true` and `test-jar` → `kind = "tests"`, but still does not: flatten parent dependencyManagement fully, map Maven compiler excludes / `--add-exports`, or run Groovy codegen — so Netty still needs a thin setup path after import.
+3. **Workspace `kind = "tests"`** — Mill’s `testModuleDeps` / Maven `test-jar` (first-class in jk; used in overlay).  
+4. **`jk import pom.xml`** now rewrites sibling GAs → `workspace = true` and `test-jar` → `kind = "tests"`, but still does not: flatten parent dependencyManagement fully, map Maven compiler excludes / `--add-exports`, or run Groovy codegen — so Netty still needs a thin setup path after import.
 
 ## setup / curate (honest Mill-class)
 
 | Action | Why |
 |--------|-----|
-| `OpenJdkSelfSignedCertGenerator` + SSL patch | needs `javac --add-exports` |
 | SCTP `com/**` stubs | Maven compiler exclude / `jdk.sctp` conflict |
-| Drop tests: `handler`, `handler-ssl-ocsp`, epoll/kqueue/blockhound/macos natives, testsuites | OpenSSL/JNI/OCSP network hang / multi-hour suites |
+| Drop tests: `handler`, `handler-ssl-ocsp`, epoll/kqueue/blockhound/macos natives, `testsuite-native` | OpenSSL/JNI/OCSP network hang / multi-hour suites |
 | Drop codec compression tests | optional natives without full classifiers |
-| Drop bootstrap / `NativeLibraryLoaderTest` / ApacheDS DNS tests | flaky / UnsatisfiedLinkError / broken POM |
+| Drop bootstrap / `NativeLibraryLoaderTest` / ApacheDS DNS tests (`TestDnsServer` and its users) | flaky / UnsatisfiedLinkError / broken POM |
+| Drop `HttpConversionUtilFuzzTest` | Jazzer fuzz harness |
+| `ChannelHandlerMetadataUtil` drops its `NativeImageHandlerMetadataTest` import | a javadoc-only import of a dropped test |
 | Drop `NativeImage*` / `*IntegrationTest` | optional suite cost; re-enable with `kind = "tests"` |
 | `transport = { workspace = true, kind = "tests" }` | Mill `testModuleDeps` / Maven test-jar (ChannelHandlerMetadataUtil) |
-| **Keep Adaptive\* buffer tests** | patch `CENTRAL_QUEUE_CAPACITY = Math.max(2, …)` (Netty #14579 / 4.1.116) |
-| `brotli4j` + `native-linux-x86_64` | platform native for codec-http brotli tests |
+| `brotli4j` + every platform native the POMs list | codec-http / codec-http2 Brotli tests load one on any host |
+| codec-http2 `[test] jvm-args = ["-Xmx2g"]` | HPACK tests allocate 4 GiB-capacity tables concurrently |
+| root `[managed-dependencies]` `slf4j-api` 1.7.30 | Netty parent POM's dependencyManagement |
 | `HttpContentDecoderTest.isNotSupported → !Brotli.isAvailable()` | safety net if native missing |
 | `git checkout -f` + `clean -fdq` on setup | soft re-checkout left prior curate deletions |
-
-## Adaptive capacity floor (root cause of prior buffer failures)
-
-jk test workers set **`-XX:ActiveProcessorCount=1`**. Netty 4.1.115 used
-`CENTRAL_QUEUE_CAPACITY = availableProcessors()` for the Adaptive central
-queue; JCTools `MpmcArrayQueue` requires capacity ≥ 2 →
-`IllegalArgumentException: capacity: 1 (expected: >= 2)`.
-
-Fix (overlay patch from 4.1.116): `Math.max(2, …)` + static validation.
-All Adaptive\* buffer tests green under the real test runner.

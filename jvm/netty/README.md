@@ -10,22 +10,25 @@ Here we build **Netty's own sources** as a JumpKick workspace: the module graph 
 
 | Pin | Value |
 |-----|--------|
-| **Tag** | `netty-4.1.115.Final` |
+| **Tag** | `netty-4.1.139.Final` (newest 4.1.x; 4.2 splits `codec` and leaves Mill's graph) |
 | **Scale** | ~2,900+ Java files / ~500k LOC / ~40 workspace modules (Java compile path) |
 | **Layout** | `overlay/` + `setup.sh` → `checkout/` (gitignored) |
 
-**Why this scenario pins.** Everywhere else in this repo versions float to `latest`. Here the
-manifests keep Netty's own per-module Maven pins (`=` versions) because the point is parity with
-one upstream tag and Mill's graph; the workspace root `java = 25` compiles the same sources
-Mill compiles at a current release.
+**Why these pins.** Every dependency is an exact pin at the version Netty's own POMs use at the
+tag — JUnit Jupiter `5.14.3`, Mockito `4.11.0`, Bouncy Castle `1.70`, log4j `2.25.3`, … — so do
+not `jk update` them; move them with the tag. The module graph and each module's dependency set
+follow Mill's `build.mill`. The workspace root's `[managed-dependencies]` pins `slf4j-api` to
+`1.7.30` as Netty's parent POM does, and `java = 25` compiles the same sources Mill compiles at a
+current release. jk's test launcher follows the declared Jupiter (Platform `1.14.3` here), so no
+module pins the platform.
 
 ## Layout
 
 ```text
 jvm/netty/
   README.md                 # this file
-  setup.sh                  # clone tag, apply overlay, common Groovy codegen
-  run.sh                    # jk build --skip-tests
+  setup.sh                  # clone tag, apply overlay, common Groovy codegen, curate tests
+  run.sh                    # jk build --skip-tests (REDO=1 adds --redo)
   scripts/generate-common.sh
   overlay/
     jk.toml                 # workspace root (group io.netty, java 25, 40 modules)
@@ -33,6 +36,7 @@ jvm/netty/
     jk-guards.toml          # monorepo pack + file-size ratchet, baselined against upstream
     jk-guards-baseline.toml # engine-written: the upstream sites the rules tolerate
     common/.jk/before-compile.groovy   # collection codegen (BEFORE_COMPILE)
+    handler/jk.toml         # [javac] args export sun.security.x509 for OpenJdkSelfSignedCertGenerator
     common/jk.toml, buffer/jk.toml, …
   checkout/                 # gitignored working tree (after setup)
   MODULE_MAP.md             # Maven module ↔ jk module
@@ -43,22 +47,29 @@ jvm/netty/
 
 ```bash
 ./setup.sh
-./run.sh
+./run.sh                      # jk build --skip-tests against the committed lock
 # or:
 cd checkout && jk build --skip-tests
 cd checkout && jk guard
 ```
 
 **Why `--skip-tests`?** Mill's published Netty tables disable tests and focus on **compile**. A
-full Netty `jk build` (with tests) compiles the test sources but still needs a **curated** test
-set — same as Mill's `codec-*.test` smoke, not a full multi-hour suite. Optional smoke:
+full Netty `jk build` (with tests) runs the **curated** test set `scripts/curate-tests.sh` leaves
+(no OpenSSL/JNI/OCSP/network suites) — the same idea as Mill's `codec-*.test` smoke, not the
+multi-hour Maven suite:
+
+```bash
+cd checkout && jk build       # every module plus the curated unit tests
+```
+
+One module's tests:
 
 ```bash
 cd checkout
 jk test -m common
 ```
 
-Optional: compile a single module after a full lock:
+Compile a single module:
 
 ```bash
 cd checkout
@@ -68,12 +79,12 @@ jk build --skip-tests -m codec-http
 
 ## Guards on an upstream tree
 
-`overlay/jk-guards.toml` extends the `monorepo` pack and adds the file-size ratchet. Upstream is
-what it is, so three rules are baselines: `converge-versions` (Netty pins two gson, two guava and
-two JUnit platform versions across modules), `one-module-per-package` (microbench and a few
+`overlay/jk-guards.toml` extends the `monorepo` pack (`0.15.3`) and adds the file-size ratchet.
+Upstream is what it is, so two rules are baselines: `one-module-per-package` (microbench and a few
 split-out modules share packages with the module that owns them) and `file-size`. The sites are
-in `overlay/jk-guards-baseline.toml`, written by `jk guard freeze <id> --reason …`, never by
-hand; the port refuses new ones.
+in `overlay/jk-guards-baseline.toml`, written by `jk guard freeze <id> -W "…"`, never by hand;
+the port refuses new ones. `converge-versions` holds without a baseline: one version per
+artifact across the workspace.
 
 ## Comparison methodology
 
@@ -82,7 +93,7 @@ Align with Mill's published Netty table (**main compile** focus; unit tests are 
 | Scenario | Maven | Mill | JumpKick |
 |----------|-------|------|----------|
 | Sequential clean compile all | `mvn -Pfast -DskipTests … install` + `-T 1` | `./mill -j1 _.compile` | `jk -j1 build --skip-tests --redo` |
-| Parallel clean compile all | `mvn -T 10 …` | `./mill _.compile` | `jk build --skip-tests --redo` |
+| Parallel clean compile all | `mvn -T 10 …` | `./mill _.compile` | `REDO=1 ./run.sh` |
 | Clean single module | `mvn -pl common …` | `./mill common.compile` | `jk build --skip-tests -m common` |
 | No-op / warm | second install | second `_.compile` | second `jk build --skip-tests` |
 | Dirty single file | touch + install | touch + `common.compile` | touch + `jk build --skip-tests -m common` |
@@ -101,7 +112,10 @@ RUNS=3 PARALLEL=1 ./scripts/bench-netty.sh both        # serial cold/warm/dirty
 ```
 
 - **Cold (fair recompile):** jk wipes `target/` + `--redo` (no CAS classfile restore); Mill wipes `out/`.
-- **Same pin:** both trees use `netty-4.1.115.Final` @ the same SHA.
+- **Same sources:** `prepare-mill-netty.sh` checks out the same tag (`netty-4.1.139.Final`) and
+  drops Mill's `build.mill` onto it. Mill's published `build.mill` was written against an older
+  Netty commit (`20a790ed`, a 4.1.113 snapshot), so its dependency list can lag the tag's POMs
+  (e.g. `lz4-java` moved to `at.yawk.lz4`); fix those in the Mill workspace before benchmarking.
 
 **Fairness:** leave dep caches warm (`~/.jk` / coursier) unless documenting a fully cold machine.
 Use the same JDK major when possible (Mill's launcher may pick its own JDK).
@@ -111,7 +125,7 @@ Use the same JDK major when possible (Mill's launcher may pick its own JDK).
 Same intent as Mill: **not** 100% release-pipeline parity with every Maven plugin. Covered:
 
 - Declarative multi-module workspace mirroring Mill's moduleDeps graph
-- External deps (main / provided / test) at versions Mill pins
+- External deps (main / provided / test) on Mill's per-module sets, at the tag's POM versions
 - **common** Groovy collection codegen (same `codegen.groovy` as Maven/Mill)
 - Traditional Maven source layout (`src/main/java`, …)
 
@@ -137,16 +151,16 @@ Deferred / partial (see [PARITY.md](PARITY.md)):
 ## Ideal long-term flow (clone → import → build)
 
 ```bash
-git clone --branch netty-4.1.115.Final https://github.com/netty/netty.git checkout
+git clone --branch netty-4.1.139.Final https://github.com/netty/netty.git checkout
 cd checkout
 jk import pom.xml --overwrite   # multi-module → workspace + kind=tests for test-jars
 # still needed today (not pure import):
-#   - overlay common/.jk (BEFORE_COMPILE codegen) + a few compiler/env patches
+#   - overlay common/.jk (BEFORE_COMPILE codegen) and the SCTP stub strip (a Maven compiler exclude)
 #   - optional test curation (JNI/OpenSSL/long suites)
 jk build --skip-tests           # codegen runs inside the plan
 ```
 
-`setup.sh` + `overlay/` remain the dogfood path until import coverage + compiler-args land fully.
+`setup.sh` + `overlay/` remain the dogfood path until import covers codegen and compiler excludes.
 
 ## Refs
 

@@ -13,19 +13,14 @@ transport-native-unix-common = { workspace = true }
 transport-classes-kqueue = { workspace = true }
 
 [test-dependencies]
-junit-jupiter-api = "=6.1.0"
-junit-jupiter-params = "=6.1.0"
-junit-jupiter-engine = "=6.1.0"
-hamcrest-library = "=1.3"
-assertj-core = "=3.18.0"
-mockito-core = "=2.18.3"
-reflections = "=0.10.2"
-gson = "=2.8.9"
-guava = "=28.2-jre"
-jctools-core = "=4.0.5"
-logback-classic = "=1.1.7"
-
-# Align with junit-jupiter 5.9.x — override jk's putIfAbsent "latest" launcher (was Platform 6.x)
-junit-platform-launcher = "=6.1.0"
-junit-platform-engine = "=6.1.0"
-junit-platform-commons = "=6.1.0"
+junit-jupiter-api = "5.14.3"
+junit-jupiter-params = "5.14.3"
+junit-jupiter-engine = "5.14.3"
+hamcrest-library = "1.3"
+assertj-core = "3.27.7"
+mockito-core = "4.11.0"
+reflections = "0.10.2"
+gson = "2.8.9"
+guava = "28.2-jre"
+jctools-core = "4.0.5"
+logback-classic = "1.2.13"

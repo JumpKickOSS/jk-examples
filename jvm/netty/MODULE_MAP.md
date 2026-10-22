@@ -1,6 +1,6 @@
 # Module map — Maven ↔ JumpKick
 
-Pinned: **netty-4.1.115.Final**. Graph aligned with Mill `example/thirdparty/netty/build.mill`.
+Pinned: **netty-4.1.139.Final**. Graph aligned with Mill `example/thirdparty/netty/build.mill`.
 
 | Maven `artifactId` | Directory | jk `name` | Notes |
 |--------------------|-----------|---------------------|-------|

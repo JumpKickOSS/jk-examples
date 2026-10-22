@@ -1,12 +1,12 @@
 # Netty → JumpKick workspace root
-# Loyal multi-module port of github.com/netty/netty @ netty-4.1.115.Final
+# Loyal multi-module port of github.com/netty/netty @ netty-4.1.139.Final
 # Module graph aligned with Mill example/thirdparty/netty/build.mill
 #
 # Applied by setup.sh over a clean Netty checkout. Sources stay upstream.
 
 name    = "netty-parent"
 group   = "io.netty"
-version = "4.1.115.Final"
+version = "4.1.139.Final"
 # Netty Maven/Mill use -source/-target 1.8; jk compiles the same sources at release 25
 java    = 25
 
@@ -53,6 +53,11 @@ modules = [
     "transport-native-kqueue",
     "resolver-dns-native-macos"
 ]
+
+# Netty's parent POM manages slf4j-api for every module; without it logback and metrics-core
+# would pull 1.7.32 / 1.7.36 beside the 1.7.30 common declares.
+[managed-dependencies]
+slf4j-api = "org.slf4j:slf4j-api:1.7.30"
 
 [repositories]
 central = "https://repo.maven.apache.org/maven2/"

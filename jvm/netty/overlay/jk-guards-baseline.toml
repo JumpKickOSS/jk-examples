@@ -1,27 +1,18 @@
-# Engine-owned. Tightened on every jk build; grown only by `jk guard freeze <id> --reason`.
+# Engine-owned. Tightened on every jk build; grown only by `jk guard freeze <id> -W`.
 # Never edit by hand: an entry without a reason is a suppression, and there is no suppression syntax.
 
 [converge-versions]
-population = { artifacts = 98, declared = 850 }
-[[converge-versions.entries]]
-at     = "convergence com.google.code.gson:gson"
-reason = "Netty's own per-module Maven pins (Mill parity); the port does not converge them"
-[[converge-versions.entries]]
-at     = "convergence com.google.guava:guava"
-reason = "Netty's own per-module Maven pins (Mill parity); the port does not converge them"
-[[converge-versions.entries]]
-at     = "convergence org.junit.platform:junit-platform-commons"
-reason = "Netty's own per-module Maven pins (Mill parity); the port does not converge them"
+population = { artifacts = 138, declared = 732 }
 
 [file-size]
-population = { units = 2636 }
+population = { units = 2687 }
 [[file-size.entries]]
 unit   = "buffer/src/main/java/io/netty/buffer/AbstractByteBuf.java"
 value  = 1189
 reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
 [[file-size.entries]]
 unit   = "buffer/src/main/java/io/netty/buffer/AdaptivePoolingAllocator.java"
-value  = 952
+value  = 1969
 reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
 [[file-size.entries]]
 unit   = "buffer/src/main/java/io/netty/buffer/AdvancedLeakAwareCompositeByteBuf.java"
@@ -29,11 +20,11 @@ value  = 850
 reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
 [[file-size.entries]]
 unit   = "buffer/src/main/java/io/netty/buffer/ByteBufUtil.java"
-value  = 1372
+value  = 1374
 reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
 [[file-size.entries]]
 unit   = "buffer/src/main/java/io/netty/buffer/CompositeByteBuf.java"
-value  = 1809
+value  = 1813
 reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
 [[file-size.entries]]
 unit   = "buffer/src/main/java/io/netty/buffer/EmptyByteBuf.java"
@@ -53,7 +44,7 @@ value  = 1018
 reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
 [[file-size.entries]]
 unit   = "buffer/src/test/java/io/netty/buffer/AbstractByteBufTest.java"
-value  = 5347
+value  = 5581
 reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
 [[file-size.entries]]
 unit   = "buffer/src/test/java/io/netty/buffer/AbstractCompositeByteBufTest.java"
@@ -61,39 +52,47 @@ value  = 1336
 reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
 [[file-size.entries]]
 unit   = "buffer/src/test/java/io/netty/buffer/ByteBufUtilTest.java"
-value  = 886
+value  = 934
 reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
 [[file-size.entries]]
 unit   = "codec-haproxy/src/test/java/io/netty/handler/codec/haproxy/HAProxyMessageDecoderTest.java"
-value  = 1052
+value  = 1290
 reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
 [[file-size.entries]]
 unit   = "codec-http/src/main/java/io/netty/handler/codec/http/HttpObjectDecoder.java"
-value  = 838
+value  = 953
 reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
 [[file-size.entries]]
 unit   = "codec-http/src/main/java/io/netty/handler/codec/http/multipart/HttpPostMultipartRequestDecoder.java"
-value  = 889
+value  = 901
 reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
 [[file-size.entries]]
 unit   = "codec-http/src/test/java/io/netty/handler/codec/http/HttpContentCompressorTest.java"
 value  = 828
 reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
 [[file-size.entries]]
+unit   = "codec-http/src/test/java/io/netty/handler/codec/http/HttpRequestDecoderTest.java"
+value  = 1185
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
 unit   = "codec-http/src/test/java/io/netty/handler/codec/http/HttpResponseDecoderTest.java"
-value  = 826
+value  = 1163
 reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
 [[file-size.entries]]
 unit   = "codec-http/src/test/java/io/netty/handler/codec/http/multipart/HttpPostRequestDecoderTest.java"
-value  = 889
+value  = 927
 reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
 [[file-size.entries]]
 unit   = "codec-http/src/test/java/io/netty/handler/codec/spdy/SpdyFrameDecoderTest.java"
-value  = 1092
+value  = 1043
 reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
 [[file-size.entries]]
 unit   = "codec-http2/src/main/java/io/netty/handler/codec/http2/AbstractHttp2StreamChannel.java"
-value  = 833
+value  = 947
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "codec-http2/src/main/java/io/netty/handler/codec/http2/DefaultHttp2Connection.java"
+value  = 830
 reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
 [[file-size.entries]]
 unit   = "codec-http2/src/main/java/io/netty/handler/codec/http2/HpackHuffmanDecoder.java"
@@ -101,23 +100,35 @@ value  = 4151
 reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
 [[file-size.entries]]
 unit   = "codec-http2/src/test/java/io/netty/handler/codec/http2/DefaultHttp2ConnectionDecoderTest.java"
-value  = 860
+value  = 1055
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "codec-http2/src/test/java/io/netty/handler/codec/http2/DefaultHttp2ConnectionEncoderTest.java"
+value  = 832
 reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
 [[file-size.entries]]
 unit   = "codec-http2/src/test/java/io/netty/handler/codec/http2/DefaultHttp2RemoteFlowControllerTest.java"
-value  = 898
+value  = 947
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "codec-http2/src/test/java/io/netty/handler/codec/http2/Http2ConnectionHandlerTest.java"
+value  = 887
 reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
 [[file-size.entries]]
 unit   = "codec-http2/src/test/java/io/netty/handler/codec/http2/Http2ConnectionRoundtripTest.java"
-value  = 997
+value  = 1080
 reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
 [[file-size.entries]]
 unit   = "codec-http2/src/test/java/io/netty/handler/codec/http2/Http2MultiplexTest.java"
-value  = 1198
+value  = 1385
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "codec-http2/src/test/java/io/netty/handler/codec/http2/Http2MultiplexTransportTest.java"
+value  = 1005
 reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
 [[file-size.entries]]
 unit   = "codec-mqtt/src/test/java/io/netty/handler/codec/mqtt/MqttCodecTest.java"
-value  = 826
+value  = 1415
 reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
 [[file-size.entries]]
 unit   = "codec/src/main/java/io/netty/handler/codec/DefaultHeaders.java"
@@ -133,15 +144,19 @@ value  = 1881
 reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
 [[file-size.entries]]
 unit   = "common/src/main/java/io/netty/util/AsciiString.java"
-value  = 1065
+value  = 1091
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "common/src/main/java/io/netty/util/concurrent/ConcurrentSkipListIntObjMultimap.java"
+value  = 803
 reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
 [[file-size.entries]]
 unit   = "common/src/main/java/io/netty/util/internal/PlatformDependent.java"
-value  = 1120
+value  = 1128
 reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
 [[file-size.entries]]
 unit   = "common/src/main/java/io/netty/util/internal/PlatformDependent0.java"
-value  = 868
+value  = 919
 reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
 [[file-size.entries]]
 unit   = "example/src/main/java/io/netty/example/worldclock/WorldClockProtocol.java"
@@ -149,23 +164,27 @@ value  = 2612
 reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
 [[file-size.entries]]
 unit   = "handler/src/main/java/io/netty/handler/ssl/ReferenceCountedOpenSslContext.java"
-value  = 831
+value  = 832
 reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
 [[file-size.entries]]
 unit   = "handler/src/main/java/io/netty/handler/ssl/ReferenceCountedOpenSslEngine.java"
-value  = 1946
+value  = 1959
 reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
 [[file-size.entries]]
 unit   = "handler/src/main/java/io/netty/handler/ssl/SslHandler.java"
-value  = 1518
+value  = 1528
 reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
 [[file-size.entries]]
 unit   = "resolver-dns/src/main/java/io/netty/resolver/dns/DnsNameResolver.java"
-value  = 1056
+value  = 1081
 reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
 [[file-size.entries]]
 unit   = "resolver-dns/src/main/java/io/netty/resolver/dns/DnsResolveContext.java"
-value  = 1042
+value  = 1054
+reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+[[file-size.entries]]
+unit   = "testsuite/src/main/java/io/netty/testsuite/transport/socket/SocketHalfClosedTest.java"
+value  = 893
 reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
 [[file-size.entries]]
 unit   = "transport/src/main/java/io/netty/channel/AbstractChannel.java"
@@ -177,16 +196,22 @@ value  = 1034
 reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
 [[file-size.entries]]
 unit   = "transport/src/main/java/io/netty/channel/DefaultChannelPipeline.java"
-value  = 1096
+value  = 1117
 reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
 [[file-size.entries]]
 unit   = "transport/src/test/java/io/netty/channel/DefaultChannelPipelineTest.java"
-value  = 1840
+value  = 2224
 reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
 [[file-size.entries]]
 unit   = "transport/src/test/java/io/netty/channel/local/LocalChannelTest.java"
-value  = 1051
+value  = 1332
 reason = "upstream Netty sources; the cap is a ratchet on the port's own additions"
+
+[java-floor]
+population = { artifacts = 0, manifests = 41, plugins = 0 }
+
+[no-snapshot-versions]
+population = { artifacts = 138, declared = 732 }
 
 [one-module-per-package]
 population = { packages = 155 }

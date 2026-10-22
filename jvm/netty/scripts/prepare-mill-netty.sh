@@ -4,12 +4,12 @@
 #
 # Usage:
 #   ./scripts/prepare-mill-netty.sh
-#   MILL_REPO=../../mill NETTY_TAG=netty-4.1.115.Final ./scripts/prepare-mill-netty.sh
+#   MILL_REPO=../../mill NETTY_TAG=netty-4.1.139.Final ./scripts/prepare-mill-netty.sh
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 
-NETTY_TAG="${NETTY_TAG:-netty-4.1.115.Final}"
+NETTY_TAG="${NETTY_TAG:-netty-4.1.139.Final}"
 NETTY_REPO="${NETTY_REPO:-https://github.com/netty/netty.git}"
 # Default: sibling of jk-examples → ../../mill when this tree is oss/jk-examples
 MILL_REPO="${MILL_REPO:-}"
@@ -65,26 +65,12 @@ else
   printf '%s\n' "1.2.0-RC1" > "$WS/.mill-version"
 fi
 
-# Same JDK/main-source workarounds Mill/Maven need on modern JDKs (compile-only fairness).
-# Mill's test forkArgs add --add-exports; javac for handler still needs the OpenJDK util gone
-# or exports — match jk setup for a fair main-compile surface.
+# Same main-source workaround as jk's setup.sh (compile-only fairness): the SCTP stubs Maven's
+# compiler excludes clash with the JDK's jdk.sctp module.
 if [ -d "$WS/transport-sctp/src/main/java/com" ]; then
   rm -rf "$WS/transport-sctp/src/main/java/com"
   echo "stripped transport-sctp com.sun.nio.sctp stubs (JDK module conflict)"
 fi
-OJSSCG="$WS/handler/src/main/java/io/netty/handler/ssl/util/OpenJdkSelfSignedCertGenerator.java"
-if [ -f "$OJSSCG" ]; then
-  rm -f "$OJSSCG"
-  echo "stripped OpenJdkSelfSignedCertGenerator (needs javac --add-exports)"
-fi
-# Companion BC-only SelfSignedCertificate (same as jk setup.sh) so handler compiles without OpenJDK util.
-SSC_PATCH="$ROOT/overlay/patches/SelfSignedCertificate.java"
-if [ -f "$SSC_PATCH" ]; then
-  cp "$SSC_PATCH" \
-    "$WS/handler/src/main/java/io/netty/handler/ssl/util/SelfSignedCertificate.java"
-  echo "applied SelfSignedCertificate BC-only patch"
-fi
-
 printf '%s\n' "$NETTY_TAG" > "$WS/.jk-netty-tag"
 printf '%s\n' "$SHA" > "$WS/.jk-netty-sha"
 printf '%s\n' "$MILL_REPO" > "$WS/.mill-repo-path"
