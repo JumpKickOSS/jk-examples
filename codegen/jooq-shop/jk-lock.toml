@@ -1,7 +1,7 @@
 version = 1
-generated-by = "jk 0.15.3"
-generated-by-build = "eafb500388d9"
-generated-by-build-time = "2026-10-22T00:19:05Z"
+generated-by = "jk 0.20.0"
+generated-by-build = "351af4376a6d"
+generated-by-build-time = "2026-10-22T05:59:57Z"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.10"
 manifests-sha256 = "aae6049da2209dddc140e710503b5fc82c970d67a4e6c1ec0c0ce437994bdc72"
@@ -147,7 +147,68 @@ scopes   = ["main"]
 
 [[plugin]]
 coordinate = "cc.jumpkick:jk-jooq"
-version    = "0.15.3"
+version    = "0.20.0"
+
+[[tool]]
+coordinate = "com.h2database:h2"
+version    = "2.5.250"
+checksum   = "sha256:82a80a2ac06901b03cdb233c663d21c4f49c884bf6d0cf85022729e8db9ab86f"
+
+[[tool]]
+coordinate = "io.r2dbc:r2dbc-spi"
+version    = "1.0.0.RELEASE"
+checksum   = "sha256:a5846c59fea336431a4ae72ca14edbf5299b78486fa308eafb383f4ae0ea74e5"
+
+[[tool]]
+coordinate = "jakarta.activation:jakarta.activation-api"
+version    = "2.1.3"
+checksum   = "sha256:01b176d718a169263e78290691fc479977186bcc6b333487325084d6586f4627"
+
+[[tool]]
+coordinate = "jakarta.xml.bind:jakarta.xml.bind-api"
+version    = "4.0.2"
+checksum   = "sha256:0d6bcfe47763e85047acf7c398336dc84ff85ebcad0a7cb6f3b9d3e981245406"
+
+[[tool]]
+coordinate = "org.jooq:jooq"
+version    = "3.21.9"
+checksum   = "sha256:e6cde9651d6795c8a6d3b10043c1edb1f3c2211fa28b15e6d537f078b1584583"
+
+[[tool]]
+coordinate = "org.jooq:jooq-codegen"
+version    = "3.21.9"
+checksum   = "sha256:363273aa2cb7fcc320170330dad8e84627c8b4edbffb26e17e6a1628b8f9abd3"
+
+[[tool]]
+coordinate = "org.jooq:jooq-codegen"
+version    = "3.21.9"
+with       = ["org.jooq:jooq-meta-extensions:3.21.9", "com.h2database:h2:2.5.250"]
+closure = [
+  "com.h2database:h2:2.5.250",
+  "io.r2dbc:r2dbc-spi:1.0.0.RELEASE",
+  "jakarta.activation:jakarta.activation-api:2.1.3",
+  "jakarta.xml.bind:jakarta.xml.bind-api:4.0.2",
+  "org.jooq:jooq-codegen:3.21.9",
+  "org.jooq:jooq-meta-extensions:3.21.9",
+  "org.jooq:jooq-meta:3.21.9",
+  "org.jooq:jooq:3.21.9",
+  "org.reactivestreams:reactive-streams:1.0.3",
+]
+
+[[tool]]
+coordinate = "org.jooq:jooq-meta"
+version    = "3.21.9"
+checksum   = "sha256:dc29003b1fade93315294546d589373b9c5a90110e2ba3f8440c59cd3643adf0"
+
+[[tool]]
+coordinate = "org.jooq:jooq-meta-extensions"
+version    = "3.21.9"
+checksum   = "sha256:19608a883d6084bbc77635b1dc1ef8007591db1d088c1d76b3162b6714ad6f8e"
+
+[[tool]]
+coordinate = "org.reactivestreams:reactive-streams"
+version    = "1.0.3"
+checksum   = "sha256:1dee0481072d19c929b623e155e14d2f6085dc011529a0a0dbefc84cf571d865"
 
 [[module]]
 path    = "."

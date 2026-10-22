@@ -1,7 +1,7 @@
 version = 1
-generated-by = "jk 0.15.3"
-generated-by-build = "eafb500388d9"
-generated-by-build-time = "2026-10-22T00:19:05Z"
+generated-by = "jk 0.20.0"
+generated-by-build = "351af4376a6d"
+generated-by-build-time = "2026-10-22T05:59:57Z"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.10"
 manifests-sha256 = "68a3a39e08ebb65f21048a27a0a4e5a5559f97e58f967cac8addb61686552d76"
@@ -198,7 +198,98 @@ scopes   = ["main"]
 
 [[plugin]]
 coordinate = "cc.jumpkick:jk-avro"
-version    = "0.15.3"
+version    = "0.20.0"
+
+[[tool]]
+coordinate = "com.fasterxml.jackson.core:jackson-annotations"
+version    = "2.22"
+checksum   = "sha256:21ddb598807d3a51a876704eb979d9296e1c6a6f47ab1826ff88c6d6a127a2d0"
+
+[[tool]]
+coordinate = "com.fasterxml.jackson.core:jackson-core"
+version    = "2.22.1"
+checksum   = "sha256:941ff029bcdb93e83d209ce516c1a7fb8bbac07d0a2fa122f5bf194b2cd7b4f4"
+
+[[tool]]
+coordinate = "com.fasterxml.jackson.core:jackson-databind"
+version    = "2.22.1"
+checksum   = "sha256:7dcd7e53bec1f56c7ad278bd1ca0840bebcc595d61ce44d6a8439abb75b965b2"
+
+[[tool]]
+coordinate = "commons-codec:commons-codec"
+version    = "1.19.0"
+checksum   = "sha256:5c3881e4f556855e9c532927ee0c9dfde94cc66760d5805c031a59887070af5f"
+
+[[tool]]
+coordinate = "commons-io:commons-io"
+version    = "2.20.0"
+checksum   = "sha256:df90bba0fe3cb586b7f164e78fe8f8f4da3f2dd5c27fa645f888100ccc25dd72"
+
+[[tool]]
+coordinate = "org.antlr:antlr4-runtime"
+version    = "4.13.2"
+checksum   = "sha256:dd3e8a13a2d669bf84fb8d834de35ce4875f27157698d206241ec8488aadcaf7"
+
+[[tool]]
+coordinate = "org.apache.avro:avro"
+version    = "1.12.2"
+checksum   = "sha256:6522e2a146b859ad158bb024dcc3b0bc826680794a2523b0881dafcbd59ce2df"
+
+[[tool]]
+coordinate = "org.apache.avro:avro-compiler"
+version    = "1.12.2"
+checksum   = "sha256:2fc749a84cb3b8c9124a29c8b1eb135d021521b12f6a29dd9b7b1e95be398325"
+
+[[tool]]
+coordinate = "org.apache.avro:avro-compiler"
+version    = "1.12.2"
+with       = ["org.apache.avro:avro-idl:1.12.2"]
+closure = [
+  "com.fasterxml.jackson.core:jackson-annotations:2.22",
+  "com.fasterxml.jackson.core:jackson-core:2.22.1",
+  "com.fasterxml.jackson.core:jackson-databind:2.22.1",
+  "commons-codec:commons-codec:1.19.0",
+  "commons-io:commons-io:2.20.0",
+  "org.antlr:antlr4-runtime:4.13.2",
+  "org.apache.avro:avro-compiler:1.12.2",
+  "org.apache.avro:avro-idl:1.12.2",
+  "org.apache.avro:avro:1.12.2",
+  "org.apache.commons:commons-compress:1.28.0",
+  "org.apache.commons:commons-lang3:3.20.0",
+  "org.apache.commons:commons-text:1.15.0",
+  "org.apache.velocity:velocity-engine-core:2.4.1",
+  "org.slf4j:slf4j-api:2.0.18",
+]
+
+[[tool]]
+coordinate = "org.apache.avro:avro-idl"
+version    = "1.12.2"
+checksum   = "sha256:b4b44005c8d7a5ff0f7a4602d9fca2517efb3c282b28c5ba03b44e8eebfff7ec"
+
+[[tool]]
+coordinate = "org.apache.commons:commons-compress"
+version    = "1.28.0"
+checksum   = "sha256:e1522945218456f3649a39bc4afd70ce4bd466221519dba7d378f2141a4642ca"
+
+[[tool]]
+coordinate = "org.apache.commons:commons-lang3"
+version    = "3.20.0"
+checksum   = "sha256:69e5c9fa35da7a51a5fd2099dfe56a2d8d32cf233e2f6d770e796146440263f4"
+
+[[tool]]
+coordinate = "org.apache.commons:commons-text"
+version    = "1.15.0"
+checksum   = "sha256:58d2da30f058512a1e7f914e39241deca4dff5c27a085b4ed2faa9e7208067f6"
+
+[[tool]]
+coordinate = "org.apache.velocity:velocity-engine-core"
+version    = "2.4.1"
+checksum   = "sha256:1c19157d1171d560088e485be97c93a7a2f7e9f56e517f0a30273c5c39df6231"
+
+[[tool]]
+coordinate = "org.slf4j:slf4j-api"
+version    = "2.0.18"
+checksum   = "sha256:44508fd1576500688c790b190acdd16fec4f8c79a3e0b900afd70503cf055f55"
 
 [[module]]
 path    = "."
