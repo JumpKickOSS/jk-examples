@@ -1,7 +1,7 @@
 version = 1
 generated-by = "jk 0.20.0"
-generated-by-build = "351af4376a6d"
-generated-by-build-time = "2026-10-22T05:59:57Z"
+generated-by-build = "8d791a6605a5"
+generated-by-build-time = "2026-10-22T21:20:28Z"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.10"
 manifests-sha256 = "1ca32d5cb564706cf3674a7fac3c77b37531249c405b3855bad6a12fdddbe51b"
@@ -17,6 +17,7 @@ version  = "4.1.2"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:7fd6792361f4dd00f8c56af4a20cecc0066deea4a8f3dec38348af23fc2296ee"
 scopes   = ["main"]
+licenses = ["BSD-3-Clause"]
 
 [[artifact]]
 name     = "jakarta.activation:jakarta.activation-api:jar:"
@@ -24,6 +25,7 @@ version  = "2.1.4"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:c9db52100ce6c8aac95cc39075f95720d2e561b11f8051b81c121ad4effd7004"
 scopes   = ["main"]
+licenses = ["BSD-3-Clause"]
 
 [[artifact]]
 name     = "jakarta.xml.bind:jakarta.xml.bind-api:jar:"
@@ -31,6 +33,7 @@ version  = "4.0.5"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:5e489b6c874c4119e003ff1403db523ee3a8959ec499f3de29e77245efccf216"
 scopes   = ["main"]
+licenses = ["BSD-3-Clause"]
 deps = [
   "jakarta.activation:jakarta.activation-api:jar:@2.1.4",
 ]
@@ -41,6 +44,7 @@ version  = "1.1.2"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:b509448ac506d607319f182537f0b35d71007582ec741832a1f111e5b5b70b38"
 scopes   = ["test"]
+licenses = ["Apache-2.0"]
 
 [[artifact]]
 name     = "org.eclipse.angus:angus-activation:jar:"
@@ -48,6 +52,7 @@ version  = "2.0.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:a6bd35c538cf90fff941ad6258c40c08fca0b5c9c3f536c657114f27ce0527a7"
 scopes   = ["main"]
+licenses = ["BSD-3-Clause"]
 deps = [
   "jakarta.activation:jakarta.activation-api:jar:@2.1.4",
 ]
@@ -58,6 +63,7 @@ version  = "4.0.9"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:6b014df25d22c8446cc2df0a378c5b2137747f197a731d99eb24c756b26f7e8d"
 scopes   = ["main"]
+licenses = ["BSD-3-Clause"]
 deps = [
   "com.sun.istack:istack-commons-runtime:jar:@4.1.2",
   "jakarta.activation:jakarta.activation-api:jar:@2.1.4",
@@ -72,6 +78,7 @@ version  = "4.0.9"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:93e09b7316b6af68d6e2083e4c297daf28e8957f45d725077af812c0b12c39ab"
 scopes   = ["main"]
+licenses = ["BSD-3-Clause"]
 deps = [
   "org.glassfish.jaxb:jaxb-core:jar:@4.0.9",
 ]
@@ -82,6 +89,7 @@ version  = "4.0.9"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:d6343e5945d87266ca4e8974a0a2a876e1bd147a00fb65ed3f2e1a3a00f3a82a"
 scopes   = ["main"]
+licenses = ["BSD-3-Clause"]
 
 [[artifact]]
 name     = "org.jspecify:jspecify:jar:"
@@ -89,6 +97,7 @@ version  = "1.0.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:1fad6e6be7557781e4d33729d49ae1cdc8fdda6fe477bb0cc68ce351eafdfbab"
 scopes   = ["test"]
+licenses = ["Apache-2.0"]
 
 [[artifact]]
 name     = "org.junit.jupiter:junit-jupiter-api:jar:"
@@ -96,6 +105,7 @@ version  = "6.1.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:555d6cf20fa1710884dd01b86cc5785397ba73e21ada2d4b784f5f1a14dcafc4"
 scopes   = ["test"]
+licenses = ["EPL-2.0"]
 deps = [
   "org.apiguardian:apiguardian-api:jar:@1.1.2",
   "org.jspecify:jspecify:jar:@1.0.0",
@@ -109,6 +119,7 @@ version  = "6.1.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:414559e78bbfa3bdb2eab009ac3ab1e22369ac31117c270a0bd666da115c5c6c"
 scopes   = ["test"]
+licenses = ["EPL-2.0"]
 deps = [
   "org.apiguardian:apiguardian-api:jar:@1.1.2",
   "org.jspecify:jspecify:jar:@1.0.0",
@@ -122,6 +133,7 @@ version  = "6.1.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:05c51cedba2c06a9770707391e006cee825876937dea580b94a265ce145d4939"
 scopes   = ["test"]
+licenses = ["EPL-2.0"]
 deps = [
   "org.apiguardian:apiguardian-api:jar:@1.1.2",
   "org.jspecify:jspecify:jar:@1.0.0",
@@ -134,6 +146,7 @@ version  = "6.1.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:6b0a14075c74221de53047e363860b7d19fce802bebc152df2c35c4089c6c379"
 scopes   = ["test"]
+licenses = ["EPL-2.0"]
 deps = [
   "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3",
   "org.junit.jupiter:junit-jupiter-engine:jar:@6.1.3",
@@ -146,6 +159,7 @@ version  = "6.1.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:a4774ae923c109544034aeae7c762cf017fbcdd1342403ba90e0921984b608c3"
 scopes   = ["test"]
+licenses = ["EPL-2.0"]
 deps = [
   "org.apiguardian:apiguardian-api:jar:@1.1.2",
   "org.jspecify:jspecify:jar:@1.0.0",
@@ -157,6 +171,7 @@ version  = "6.1.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:21ad7ad3a35beda16387979317be1833a72a71d812f9a66ee4b9a7bafb56334c"
 scopes   = ["test"]
+licenses = ["EPL-2.0"]
 deps = [
   "org.apiguardian:apiguardian-api:jar:@1.1.2",
   "org.jspecify:jspecify:jar:@1.0.0",
@@ -170,6 +185,7 @@ version  = "6.1.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:1dec64b1fc0b7c47a11302aa5b4d37d8160c041b396e27067709ce775601a7b6"
 scopes   = ["test"]
+licenses = ["EPL-2.0"]
 deps = [
   "org.apiguardian:apiguardian-api:jar:@1.1.2",
   "org.jspecify:jspecify:jar:@1.0.0",
@@ -182,6 +198,7 @@ version  = "1.3.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:48e2df636cab6563ced64dcdff8abb2355627cb236ef0bf37598682ddf742f1b"
 scopes   = ["test"]
+licenses = ["Apache-2.0"]
 
 [[plugin]]
 coordinate = "cc.jumpkick:jk-jaxb"

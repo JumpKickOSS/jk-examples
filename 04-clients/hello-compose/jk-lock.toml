@@ -1,7 +1,7 @@
 version = 1
 generated-by = "jk 0.20.0"
-generated-by-build = "932e0f2fe447"
-generated-by-build-time = "2026-10-22T20:55:09Z"
+generated-by-build = "8d791a6605a5"
+generated-by-build-time = "2026-10-22T21:20:28Z"
 resolution-algorithm = "pubgrub-v1"
 kotlin = "2.4.21"
 jk-min = "0.10"
@@ -23,6 +23,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:2b5da3033d4924e833868e140c3edfc0c03208710b6b9fb2c9d9a47560ba55fa"
 path     = "activity-compose-1.13.0.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.activity:activity:jar:@1.13.0",
   "androidx.compose.runtime:runtime-saveable:jar:@1.12.1",
@@ -46,6 +47,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:b5541dc5f74e35389f1e9fdca8b5770c49d2c1360de16f398ce5c1e07a003244"
 path     = "activity-ktx-1.13.0.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.activity:activity:jar:@1.13.0",
   "androidx.lifecycle:lifecycle-runtime-ktx:jar:@2.11.0",
@@ -61,6 +63,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:bd4f19a5f00effed0eecad0a310b1f2169b9fc66236a3ba743a222eb77747ee1"
 path     = "activity-1.13.0.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation:jar:@1.9.1",
   "androidx.core:core-ktx:jar:@1.18.0",
@@ -84,6 +87,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:6bd4c7c7476f8260cd3bdbb81183583e93fc9f790c27dea7dc314181cbf87aa0"
 path     = "annotation-experimental-1.4.1.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.21",
 ]
@@ -94,6 +98,7 @@ version  = "1.9.1"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:1e343917ebf27ba96fe4dc52b1cad7fd32b738fbc6355bb6cd5b3b305d7212d0"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.21",
 ]
@@ -104,6 +109,7 @@ version  = "1.9.1"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 path     = "annotation-1.9.1.module"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation-jvm:jar:@1.9.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.21",
@@ -115,6 +121,7 @@ version  = "2.2.0"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:65308a06b1c00ee186cb9e19321383f043b993813f1522c47f4a3e3303bdba41"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation:jar:@1.9.1",
 ]
@@ -126,6 +133,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:a1be5e0caa2b07623862af6ae21b3ab0718123245184d0e30dea81b53f990a47"
 path     = "core-runtime-2.2.0.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation:jar:@1.9.1",
   "androidx.arch.core:core-common:jar:@2.2.0",
@@ -138,6 +146,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:c9468f56e05006ea151a426c54957cd0799b8b83a579d2846dd22061f33e5ecd"
 path     = "autofill-1.0.0.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.core:core:jar:@1.18.0",
 ]
@@ -148,6 +157,7 @@ version  = "1.5.0"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:70b35924e4babcdffa37d0e575ee039c56a2d97123342624c48b603233704341"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation-jvm:jar:@1.9.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.21",
@@ -159,6 +169,7 @@ version  = "1.5.0"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:939b4a8697640e77d83e4e8b4c4a9d18f8130198c5961194af8dd9db9dc7c353"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.collection:collection-jvm:jar:@1.5.0",
 ]
@@ -169,6 +180,7 @@ version  = "1.5.0"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 path     = "collection-1.5.0.module"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation:jar:@1.9.1",
   "androidx.collection:collection-jvm:jar:@1.5.0",
@@ -183,6 +195,7 @@ checksum = "sha256:4a619ca869b9724e9cf6127ead53d8fb7dd8601a931c4006b15caf5bb3bf1
 pinned-by = "androidx.compose:compose-bom:2026.09.00"
 path     = "animation-android-1.12.1.aar"
 scopes   = ["main"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation-experimental:jar:@1.4.1",
   "androidx.annotation:annotation-jvm:jar:@1.9.1",
@@ -205,6 +218,7 @@ checksum = "sha256:29e26959b2c5645c53a42aa8302570bf8cc3644755d6ca97bf1028d08a665
 pinned-by = "androidx.compose:compose-bom:2026.09.00"
 path     = "animation-core-android-1.12.1.aar"
 scopes   = ["main"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation-jvm:jar:@1.9.1",
   "androidx.collection:collection-jvm:jar:@1.5.0",
@@ -224,6 +238,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 pinned-by = "androidx.compose:compose-bom:2026.09.00"
 path     = "animation-core-1.12.1.module"
 scopes   = ["main"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.compose.animation:animation-core-android:jar:@1.12.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.21",
@@ -237,6 +252,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 pinned-by = "androidx.compose:compose-bom:2026.09.00"
 path     = "animation-1.12.1.module"
 scopes   = ["main"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.compose.animation:animation-android:jar:@1.12.1",
   "androidx.compose.animation:animation-core:jar:@1.12.1",
@@ -254,6 +270,7 @@ checksum = "sha256:444749ea7b5a563e530504b9035c87e47ed0fb62b9f7ba00e90af8aa81e6b
 pinned-by = "androidx.compose:compose-bom:2026.09.00"
 path     = "foundation-android-1.12.1.aar"
 scopes   = ["main"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation-experimental:jar:@1.4.1",
   "androidx.annotation:annotation-jvm:jar:@1.9.1",
@@ -277,6 +294,7 @@ checksum = "sha256:274370a88621e001417e76c2d862ffad61ebc8ca2d9f151c7b60dd02d65eb
 pinned-by = "androidx.compose:compose-bom:2026.09.00"
 path     = "foundation-layout-android-1.12.1.aar"
 scopes   = ["main"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation-experimental:jar:@1.4.1",
   "androidx.annotation:annotation-jvm:jar:@1.9.1",
@@ -297,6 +315,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 pinned-by = "androidx.compose:compose-bom:2026.09.00"
 path     = "foundation-layout-1.12.1.module"
 scopes   = ["main"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.compose.foundation:foundation-layout-android:jar:@1.12.1",
   "androidx.compose.ui:ui:jar:@1.12.1",
@@ -310,6 +329,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 pinned-by = "androidx.compose:compose-bom:2026.09.00"
 path     = "foundation-1.12.1.module"
 scopes   = ["main"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.collection:collection:jar:@1.5.0",
   "androidx.compose.animation:animation:jar:@1.12.1",
@@ -327,6 +347,7 @@ checksum = "sha256:3a37e8b36df3822fe1e6059f0f9fafda8800388860477624ac1b9422c418a
 pinned-by = "androidx.compose:compose-bom:2026.09.00"
 path     = "material3-android-1.4.0.aar"
 scopes   = ["main"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.activity:activity-compose:jar:@1.13.0",
   "androidx.annotation:annotation-experimental:jar:@1.4.1",
@@ -351,6 +372,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 pinned-by = "androidx.compose:compose-bom:2026.09.00"
 path     = "material3-1.4.0.module"
 scopes   = ["main"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.compose.foundation:foundation-layout:jar:@1.12.1",
   "androidx.compose.foundation:foundation:jar:@1.12.1",
@@ -369,6 +391,7 @@ checksum = "sha256:795d8742165875ee96383ca64ff4cd8bc12b83efb0918f68472e7c2f9d582
 pinned-by = "androidx.compose:compose-bom:2026.09.00"
 path     = "material-ripple-android-1.12.1.aar"
 scopes   = ["main"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.collection:collection-jvm:jar:@1.5.0",
   "androidx.compose.animation:animation-android:jar:@1.12.1",
@@ -385,6 +408,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 pinned-by = "androidx.compose:compose-bom:2026.09.00"
 path     = "material-ripple-1.12.1.module"
 scopes   = ["main"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.compose.foundation:foundation:jar:@1.12.1",
   "androidx.compose.material:material-ripple-android:jar:@1.12.1",
@@ -400,6 +424,7 @@ checksum = "sha256:1701a61d06d2f6144f2cd8b015abbc5ad6952eacb70c24c208cdfd2bb188d
 pinned-by = "androidx.compose:compose-bom:2026.09.00"
 path     = "runtime-android-1.12.1.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation-experimental:jar:@1.4.1",
   "androidx.collection:collection-jvm:jar:@1.5.0",
@@ -417,6 +442,7 @@ checksum = "sha256:071d6200f5f34ffb5ce69cc19ee8db577c188832bb472779213d4633eca26
 pinned-by = "androidx.compose:compose-bom:2026.09.00"
 path     = "runtime-annotation-android-1.12.1.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.21",
 ]
@@ -428,6 +454,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 pinned-by = "androidx.compose:compose-bom:2026.09.00"
 path     = "runtime-annotation-1.12.1.module"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.compose.runtime:runtime-annotation-android:jar:@1.12.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.21",
@@ -441,6 +468,7 @@ checksum = "sha256:6e32111eed0f67ef2ae70c2d9c83cb6bfb54095fe2fb2fdc800febd14d0d7
 pinned-by = "androidx.compose:compose-bom:2026.09.00"
 path     = "runtime-retain-android-1.12.1.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.collection:collection-jvm:jar:@1.5.0",
   "androidx.compose.runtime:runtime-android:jar:@1.12.1",
@@ -455,6 +483,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 pinned-by = "androidx.compose:compose-bom:2026.09.00"
 path     = "runtime-retain-1.12.1.module"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.collection:collection:jar:@1.5.0",
   "androidx.compose.runtime:runtime-retain-android:jar:@1.12.1",
@@ -471,6 +500,7 @@ checksum = "sha256:0c83d47820fbc8ffb6e3e49311ccd4755676d6f94bb8c6d8564ab4c799df8
 pinned-by = "androidx.compose:compose-bom:2026.09.00"
 path     = "runtime-saveable-android-1.12.1.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation-jvm:jar:@1.9.1",
   "androidx.collection:collection-jvm:jar:@1.5.0",
@@ -487,6 +517,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 pinned-by = "androidx.compose:compose-bom:2026.09.00"
 path     = "runtime-saveable-1.12.1.module"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.collection:collection:jar:@1.5.0",
   "androidx.compose.runtime:runtime-saveable-android:jar:@1.12.1",
@@ -503,6 +534,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 pinned-by = "androidx.compose:compose-bom:2026.09.00"
 path     = "runtime-1.12.1.module"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.collection:collection:jar:@1.5.0",
   "androidx.compose.runtime:runtime-android:jar:@1.12.1",
@@ -519,6 +551,7 @@ checksum = "sha256:3f1ae17e237d9dc0a2a0f42cb04b85b8de6e12f67adc5f5c12173fe31e501
 pinned-by = "androidx.compose:compose-bom:2026.09.00"
 path     = "ui-android-1.12.1.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.activity:activity-ktx:jar:@1.13.0",
   "androidx.annotation:annotation-experimental:jar:@1.4.1",
@@ -557,6 +590,7 @@ checksum = "sha256:09a23c76f5d52ea5ec61d4a78d4876940f0f033c975e5c604246f89a63532
 pinned-by = "androidx.compose:compose-bom:2026.09.00"
 path     = "ui-geometry-android-1.12.1.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation-jvm:jar:@1.9.1",
   "androidx.compose.runtime:runtime-android:jar:@1.12.1",
@@ -571,6 +605,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 pinned-by = "androidx.compose:compose-bom:2026.09.00"
 path     = "ui-geometry-1.12.1.module"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.compose.ui:ui-geometry-android:jar:@1.12.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.21",
@@ -584,6 +619,7 @@ checksum = "sha256:1e6451f05ad569e306e7022b3c41d16aa75080bb2c99b59c4d67e7dbf6f42
 pinned-by = "androidx.compose:compose-bom:2026.09.00"
 path     = "ui-graphics-android-1.12.1.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation-experimental:jar:@1.4.1",
   "androidx.annotation:annotation-jvm:jar:@1.9.1",
@@ -603,6 +639,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 pinned-by = "androidx.compose:compose-bom:2026.09.00"
 path     = "ui-graphics-1.12.1.module"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation:jar:@1.9.1",
   "androidx.compose.ui:ui-graphics-android:jar:@1.12.1",
@@ -618,6 +655,7 @@ checksum = "sha256:2beafe8ba6c4ac2335159a7bdc08ac3eaac205f183d5d6b29b2eb87a2458b
 pinned-by = "androidx.compose:compose-bom:2026.09.00"
 path     = "ui-test-android-1.12.1.aar"
 scopes   = ["test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.activity:activity-compose:jar:@1.13.0",
   "androidx.annotation:annotation-jvm:jar:@1.9.1",
@@ -645,6 +683,7 @@ checksum = "sha256:bc01fda8b36dd259055e2768f7ba753f9ee9d95e9ce6feda284c913ad7bd8
 pinned-by = "androidx.compose:compose-bom:2026.09.00"
 path     = "ui-test-junit4-android-1.12.1.aar"
 scopes   = ["test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.activity:activity-compose:jar:@1.13.0",
   "androidx.activity:activity:jar:@1.13.0",
@@ -670,6 +709,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 pinned-by = "androidx.compose:compose-bom:2026.09.00"
 path     = "ui-test-junit4-1.12.1.module"
 scopes   = ["test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.compose.ui:ui-test-junit4-android:jar:@1.12.1",
   "androidx.compose.ui:ui-test:jar:@1.12.1",
@@ -685,6 +725,7 @@ checksum = "sha256:9566508e7d2c8d90ada9b9e2c37e84ce035affab77a0b7678851e0de9054e
 pinned-by = "androidx.compose:compose-bom:2026.09.00"
 path     = "ui-test-manifest-1.12.1.aar"
 scopes   = ["test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.activity:activity:jar:@1.13.0",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.21",
@@ -697,6 +738,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 pinned-by = "androidx.compose:compose-bom:2026.09.00"
 path     = "ui-test-1.12.1.module"
 scopes   = ["test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.compose.runtime:runtime:jar:@1.12.1",
   "androidx.compose.ui:ui-test-android:jar:@1.12.1",
@@ -716,6 +758,7 @@ checksum = "sha256:e710a5776966537df09a2e5c4ca1dacc14ca11d7b20a6af16c0e992ddd3ae
 pinned-by = "androidx.compose:compose-bom:2026.09.00"
 path     = "ui-text-android-1.12.1.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation-experimental:jar:@1.4.1",
   "androidx.annotation:annotation-jvm:jar:@1.9.1",
@@ -738,6 +781,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 pinned-by = "androidx.compose:compose-bom:2026.09.00"
 path     = "ui-text-1.12.1.module"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.compose.ui:ui-graphics:jar:@1.12.1",
   "androidx.compose.ui:ui-text-android:jar:@1.12.1",
@@ -753,6 +797,7 @@ checksum = "sha256:97d2bf062395d981435bc8d571b1d5d75587a7f26f3444671b2287f233e18
 pinned-by = "androidx.compose:compose-bom:2026.09.00"
 path     = "ui-unit-android-1.12.1.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation-experimental:jar:@1.4.1",
   "androidx.annotation:annotation-jvm:jar:@1.9.1",
@@ -771,6 +816,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 pinned-by = "androidx.compose:compose-bom:2026.09.00"
 path     = "ui-unit-1.12.1.module"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation:jar:@1.9.1",
   "androidx.compose.ui:ui-geometry:jar:@1.12.1",
@@ -786,6 +832,7 @@ checksum = "sha256:cd47f06626c19a06086e16823a32e49e0a0c7d903451668da2f777d063507
 pinned-by = "androidx.compose:compose-bom:2026.09.00"
 path     = "ui-util-android-1.12.1.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation-experimental:jar:@1.4.1",
   "androidx.collection:collection-jvm:jar:@1.5.0",
@@ -800,6 +847,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 pinned-by = "androidx.compose:compose-bom:2026.09.00"
 path     = "ui-util-1.12.1.module"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.compose.ui:ui-util-android:jar:@1.12.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.21",
@@ -812,6 +860,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 pinned-by = "androidx.compose:compose-bom:2026.09.00"
 path     = "ui-1.12.1.module"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation:jar:@1.9.1",
   "androidx.compose.runtime:runtime-retain:jar:@1.12.1",
@@ -834,6 +883,7 @@ version  = "1.1.0"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:0ce067c514a0d1049d1bebdf709e344ed3266fe9744275682937cdcb13334e9e"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation:jar:@1.9.1",
   "com.google.guava:listenablefuture:jar:@1.0",
@@ -846,6 +896,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:c7c511e3df838fcbcb61ace36944de6bb7c10eb597be546974f001119939c85d"
 path     = "core-ktx-1.18.0.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation:jar:@1.9.1",
   "androidx.core:core:jar:@1.18.0",
@@ -859,6 +910,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:dc1b678d58ebcf2bfa1587be68ff826694ce3d221251b9ef30d4d4b36297e6de"
 path     = "core-viewtree-1.0.0.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.21",
 ]
@@ -870,6 +922,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:311d83ac67d394076ec21d12ed2d10a44b59cb2929b7dce00e5a90a93842e37d"
 path     = "core-1.18.0.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation-experimental:jar:@1.4.1",
   "androidx.annotation:annotation:jar:@1.9.1",
@@ -894,6 +947,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:3584102fc49bf399c56e3b7be4bfe12000c46112320cd8cf85cc0a8f93f3e752"
 path     = "customview-poolingcontainer-1.0.0.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.core:core-ktx:jar:@1.18.0",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.21",
@@ -906,6 +960,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:433febd3434a45667176c76a64f3f205ca6335a6b544c5b5d57f25a38a375242"
 path     = "emoji2-1.4.0.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation:jar:@1.9.1",
   "androidx.collection:collection:jar:@1.5.0",
@@ -921,6 +976,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:8ca4032b6d79b351f0b59ad4b580eddbb9423e1652f7c958830687f1eee2ec03"
 path     = "graphics-path-1.0.1.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.core:core:jar:@1.18.0",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.21",
@@ -933,6 +989,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:33193135a64fe21fa2c35eec6688f1a76e512606c0fc83dc1b689e37add7732a"
 path     = "interpolator-1.0.0.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation:jar:@1.9.1",
 ]
@@ -943,6 +1000,7 @@ version  = "2.11.0"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:895e71679cd319db8140664d650af6695b0530f5896be9b8ecccd24cc4f6674f"
 scopes   = ["main"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation:jar:@1.9.1",
   "androidx.lifecycle:lifecycle-common:jar:@2.11.0",
@@ -954,6 +1012,7 @@ version  = "2.11.0"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:e6a66e67b9f63a0fb6344f165c1d872376e5fe6d235bffb138af45122cf452a9"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation-jvm:jar:@1.9.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.21",
@@ -967,6 +1026,7 @@ version  = "2.11.0"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 path     = "lifecycle-common-2.11.0.module"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation:jar:@1.9.1",
   "androidx.lifecycle:lifecycle-common-jvm:jar:@2.11.0",
@@ -981,6 +1041,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:39b26ef1e081fc88d7054ff1a63d0a5d71876373c33a711ab789c8228d025ad1"
 path     = "lifecycle-livedata-core-2.11.0.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.arch.core:core-common:jar:@2.2.0",
   "androidx.arch.core:core-runtime:jar:@2.2.0",
@@ -996,6 +1057,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:9743f0c7baf27d34497b7e9a1cd497d8260251b03124507963abfaad66c3f552"
 path     = "lifecycle-process-2.11.0.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation:jar:@1.9.1",
   "androidx.lifecycle:lifecycle-runtime:jar:@2.11.0",
@@ -1010,6 +1072,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:8711865f8d3603bc05decc03bb42aab2faa8d8bc55b3b12a0a8e516b562b60ca"
 path     = "lifecycle-runtime-android-2.11.0.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation-jvm:jar:@1.9.1",
   "androidx.arch.core:core-common:jar:@2.2.0",
@@ -1030,6 +1093,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:7b31489e6e162143c481f14e1ae5a4dc089f8ec58e65976a0502b910c641987f"
 path     = "lifecycle-runtime-compose-android-2.11.0.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation-jvm:jar:@1.9.1",
   "androidx.compose.runtime:runtime-android:jar:@1.12.1",
@@ -1044,6 +1108,7 @@ version  = "2.11.0"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 path     = "lifecycle-runtime-compose-2.11.0.module"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation:jar:@1.9.1",
   "androidx.compose.runtime:runtime:jar:@1.12.1",
@@ -1059,6 +1124,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:1fead96607f8b4ebd2bc5840c6fcf08b09fc47ceb1665e4b381dce80b19f32a0"
 path     = "lifecycle-runtime-ktx-android-2.11.0.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation-jvm:jar:@1.9.1",
   "androidx.lifecycle:lifecycle-runtime-android:jar:@2.11.0",
@@ -1072,6 +1138,7 @@ version  = "2.11.0"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 path     = "lifecycle-runtime-ktx-2.11.0.module"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation:jar:@1.9.1",
   "androidx.lifecycle:lifecycle-runtime-ktx-android:jar:@2.11.0",
@@ -1085,6 +1152,7 @@ version  = "2.11.0"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 path     = "lifecycle-runtime-2.11.0.module"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation:jar:@1.9.1",
   "androidx.arch.core:core-common:jar:@2.2.0",
@@ -1101,6 +1169,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:509aa5c0711e61a1571024b4f8431dc9aa20960d23cbadb01f21a33fd864352a"
 path     = "lifecycle-viewmodel-android-2.11.0.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation-jvm:jar:@1.9.1",
   "androidx.collection:collection-jvm:jar:@1.5.0",
@@ -1117,6 +1186,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:2bafd402807bd4af05c06cf58c48cbdad09521e2145273faae90908b7712f689"
 path     = "lifecycle-viewmodel-compose-android-2.11.0.aar"
 scopes   = ["main"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation-jvm:jar:@1.9.1",
   "androidx.compose.runtime:runtime-android:jar:@1.12.1",
@@ -1136,6 +1206,7 @@ version  = "2.11.0"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 path     = "lifecycle-viewmodel-compose-2.11.0.module"
 scopes   = ["main"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation:jar:@1.9.1",
   "androidx.compose.runtime:runtime-saveable:jar:@1.12.1",
@@ -1156,6 +1227,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:230af6c866076d320d92c22c7c44bb52afca97f6892ddf987e2906ef2919998f"
 path     = "lifecycle-viewmodel-ktx-2.11.0.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.lifecycle:lifecycle-viewmodel:jar:@2.11.0",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.21",
@@ -1169,6 +1241,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:1761707c1ddee002bd97e1a0889a5016f7cd6bd8e0b6b069bcba8b2523d63723"
 path     = "lifecycle-viewmodel-savedstate-android-2.11.0.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation-jvm:jar:@1.9.1",
   "androidx.collection:collection-jvm:jar:@1.5.0",
@@ -1189,6 +1262,7 @@ version  = "2.11.0"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 path     = "lifecycle-viewmodel-savedstate-2.11.0.module"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation:jar:@1.9.1",
   "androidx.collection:collection:jar:@1.5.0",
@@ -1207,6 +1281,7 @@ version  = "2.11.0"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 path     = "lifecycle-viewmodel-2.11.0.module"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation:jar:@1.9.1",
   "androidx.collection:collection:jar:@1.5.0",
@@ -1223,6 +1298,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:cda4bb83d1c892a208732e99c2d59e4f247ab5c23a1d2524fc004db2e4e9a780"
 path     = "navigationevent-android-1.0.0.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation-jvm:jar:@1.9.1",
   "androidx.compose.runtime:runtime-annotation-android:jar:@1.12.1",
@@ -1239,6 +1315,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:5cee018dbe130b538d2c43cc6f383a109a98f19ba9c8d7a6dda8ca90a2034671"
 path     = "navigationevent-compose-android-1.0.0.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.compose.runtime:runtime-android:jar:@1.12.1",
   "androidx.compose.ui:ui-android:jar:@1.12.1",
@@ -1253,6 +1330,7 @@ version  = "1.0.0"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 path     = "navigationevent-compose-1.0.0.module"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.compose.runtime:runtime:jar:@1.12.1",
   "androidx.navigationevent:navigationevent-compose-android:jar:@1.0.0",
@@ -1265,6 +1343,7 @@ version  = "1.0.0"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 path     = "navigationevent-1.0.0.module"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation:jar:@1.9.1",
   "androidx.compose.runtime:runtime-annotation:jar:@1.12.1",
@@ -1280,6 +1359,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:d502141fcce902430f62b674c32aecd0f75262e7ee2cd15c74adb617cd13130a"
 path     = "profileinstaller-1.4.0.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation:jar:@1.9.1",
   "androidx.concurrent:concurrent-futures:jar:@1.1.0",
@@ -1294,6 +1374,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:c191b2b0d3ed2f765743e634f213c0e8150825547810789fc13487332bfc9cd3"
 path     = "savedstate-android-1.5.0.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation-jvm:jar:@1.9.1",
   "androidx.collection:collection-jvm:jar:@1.5.0",
@@ -1312,6 +1393,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:01682c0de6796d31f9c7863bb18e65443e512e4dc95a13cc8c3d0d4931c2c10b"
 path     = "savedstate-compose-android-1.5.0.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation-jvm:jar:@1.9.1",
   "androidx.compose.runtime:runtime-android:jar:@1.12.1",
@@ -1326,6 +1408,7 @@ version  = "1.5.0"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 path     = "savedstate-compose-1.5.0.module"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.compose.runtime:runtime:jar:@1.12.1",
   "androidx.savedstate:savedstate-compose-android:jar:@1.5.0",
@@ -1340,6 +1423,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:1de99f31e90d55828e1f00f856274410e6e3e997605a40d478e7065c38b3252e"
 path     = "savedstate-ktx-1.5.0.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.savedstate:savedstate:jar:@1.5.0",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.21",
@@ -1351,6 +1435,7 @@ version  = "1.5.0"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 path     = "savedstate-1.5.0.module"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation:jar:@1.9.1",
   "androidx.collection:collection:jar:@1.5.0",
@@ -1369,6 +1454,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:e0a6329a371262fe4c450372b70fdaf33b769ef6917094723787cfce896b1dd3"
 path     = "startup-runtime-1.1.1.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation:jar:@1.9.1",
   "androidx.tracing:tracing:jar:@1.2.0",
@@ -1381,6 +1467,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:34b0493f4e002f205d961e562add0c0c31bb0acc657e89d89d4b188ac13f242c"
 path     = "espresso-core-3.5.0.aar"
 scopes   = ["test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation:jar:@1.9.1",
   "androidx.test.espresso:espresso-idling-resource:jar:@3.7.0",
@@ -1402,6 +1489,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:5ff62326b49c308c1d060466ae3cf4aa0e3deaf9295f077a6886048dda3e9b14"
 path     = "espresso-idling-resource-3.7.0.aar"
 scopes   = ["test"]
+licenses = ["Apache-2.0"]
 
 [[artifact]]
 name     = "androidx.test.ext:junit:aar:"
@@ -1410,6 +1498,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:4307c0e60f5d701db9c59bcd9115af705113c36a9132fa3dbad58db1294e9bfd"
 path     = "junit-1.1.5.aar"
 scopes   = ["test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation:jar:@1.9.1",
   "androidx.test:core:jar:@1.5.0",
@@ -1424,6 +1513,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:d59621845cff5ff5e8a6906445ef1b2d83624d796cbfad9a52e86a3ab42f8c48"
 path     = "storage-1.5.0.aar"
 scopes   = ["test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation:jar:@1.9.1",
   "androidx.test:monitor:jar:@1.8.0",
@@ -1436,6 +1526,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:c0754928effe1968c3a9a7b55d1dfc7ceb1e1e7c9f3f09f98afd42431f712492"
 path     = "annotation-1.0.1.aar"
 scopes   = ["test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation-experimental:jar:@1.4.1",
   "androidx.annotation:annotation:jar:@1.9.1",
@@ -1448,6 +1539,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:2c06715c0d0843cee2143ab8bb322bb3f34d5247630402fc8c1b6a0eafa15b9f"
 path     = "core-1.5.0.aar"
 scopes   = ["test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation:jar:@1.9.1",
   "androidx.concurrent:concurrent-futures:jar:@1.1.0",
@@ -1466,6 +1558,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:56cb7496a06d9f2dca7d3ff76c50a8a30bd18e00a24a3b267d5a31437b278e67"
 path     = "monitor-1.8.0.aar"
 scopes   = ["test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation:jar:@1.9.1",
   "androidx.tracing:tracing:jar:@1.2.0",
@@ -1479,6 +1572,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:537fad703b221bed31c7f5c8da05b4dbaa67572d0e0e8a73844b2d7062691450"
 path     = "runner-1.6.0.aar"
 scopes   = ["test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation:jar:@1.9.1",
   "androidx.test.services:storage:jar:@1.5.0",
@@ -1494,6 +1588,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:6faa90390d1fdbf0adb9a99bf99de67b94c6c6f35aea9510593a9d17973736a2"
 path     = "tracing-1.2.0.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation:jar:@1.9.1",
 ]
@@ -1505,6 +1600,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:57e8d93260d18d5b9007c9eed3c64ad159de90c8609ebfc74a347cbd514535a4"
 path     = "versionedparcelable-1.1.1.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation:jar:@1.9.1",
   "androidx.collection:collection:jar:@1.5.0",
@@ -1517,6 +1613,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:d0d50db0756194a6d49a66ad8dafd17b24b4c5fbd8379375056e2eb9bdfeaf22"
 path     = "window-core-android-1.5.0.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation-jvm:jar:@1.9.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.21",
@@ -1528,6 +1625,7 @@ version  = "1.5.0"
 source   = "google+https://dl.google.com/dl/android/maven2/"
 path     = "window-core-1.5.0.module"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation:jar:@1.9.1",
   "androidx.window:window-core-android:jar:@1.5.0",
@@ -1541,6 +1639,7 @@ source   = "google+https://dl.google.com/dl/android/maven2/"
 checksum = "sha256:5de2d48aa578402f46deb5294a955cee62f0c7d8c1840ef626fc7afb8abe22f9"
 path     = "window-1.5.0.aar"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "androidx.annotation:annotation:jar:@1.9.1",
   "androidx.collection:collection:jar:@1.5.0",
@@ -1557,6 +1656,7 @@ version  = "1.0.392"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:243a64470fda0e86a6fddeb0af4c7aa9426ce84e68cbfe18d75ee5da4b7e0b92"
 scopes   = ["test"]
+licenses = ["Apache-2.0"]
 
 [[artifact]]
 name     = "com.google.auto.value:auto-value-annotations:jar:"
@@ -1564,6 +1664,7 @@ version  = "1.11.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:6c61a11420a5cddf3313888e9d335d5eedfbeb9a8da26591470fbfe61f5bf859"
 scopes   = ["test"]
+licenses = ["Apache-2.0"]
 
 [[artifact]]
 name     = "com.google.code.findbugs:jsr305:jar:"
@@ -1571,6 +1672,7 @@ version  = "2.0.2"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:1e7f53fa5b8b5c807e986ba335665da03f18d660802d8bf061823089d1bee468"
 scopes   = ["test"]
+licenses = ["Apache-2.0"]
 
 [[artifact]]
 name     = "com.google.errorprone:error_prone_annotations:jar:"
@@ -1578,6 +1680,7 @@ version  = "2.47.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:5364bc6f22e72e98195e406a58d3ba1c09ffa11dea0729592cb870dc2de4056d"
 scopes   = ["test"]
+licenses = ["Apache-2.0"]
 
 [[artifact]]
 name     = "com.google.guava:failureaccess:jar:"
@@ -1585,6 +1688,7 @@ version  = "1.0.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:cbfc3906b19b8f55dd7cfd6dfe0aa4532e834250d7f080bd8d211a3e246b59cb"
 scopes   = ["test"]
+licenses = ["Apache-2.0"]
 
 [[artifact]]
 name     = "com.google.guava:guava:jar:"
@@ -1592,6 +1696,7 @@ version  = "33.6.0-jre"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:dc573e1fca4fd5454f4a5fd3d7da2df03002876a4175bafc14a95980dd7713b3"
 scopes   = ["test"]
+licenses = ["Apache-2.0"]
 deps = [
   "com.google.errorprone:error_prone_annotations:jar:@2.47.0",
   "com.google.guava:failureaccess:jar:@1.0.3",
@@ -1606,6 +1711,7 @@ version  = "1.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:e4ad7607e5c0477c6f890ef26a49cb8d1bb4dffb650bab4502afee64644e3069"
 scopes   = ["main"]
+licenses = ["Apache-2.0"]
 
 [[artifact]]
 name     = "com.google.guava:listenablefuture:jar:"
@@ -1613,6 +1719,7 @@ version  = "9999.0-empty-to-avoid-conflict-with-guava"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:b372a037d4230aa57fbeffdef30fd6123f9c0c2db85d0aced00c91b974f33f99"
 scopes   = ["test"]
+licenses = ["Apache-2.0"]
 
 [[artifact]]
 name     = "com.google.j2objc:j2objc-annotations:jar:"
@@ -1620,6 +1727,7 @@ version  = "3.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:84d3a150518485f8140ea99b8a985656749629f6433c92b80c75b36aba3b099b"
 scopes   = ["test"]
+licenses = ["Apache-2.0"]
 
 [[artifact]]
 name     = "com.google.testparameterinjector:test-parameter-injector:jar:"
@@ -1627,6 +1735,7 @@ version  = "1.22"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:ff534578f2e3dc6030d1f4a6896df3d20573644858c6ade878efb75d2a36504b"
 scopes   = ["test"]
+licenses = ["Apache-2.0"]
 deps = [
   "com.google.auto.value:auto-value-annotations:jar:@1.11.1",
   "com.google.code.findbugs:jsr305:jar:@2.0.2",
@@ -1651,6 +1760,7 @@ version  = "78.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:e962c1758d9659ea1e1fbab99c58683f654d304e1126ace19aaabfe39e0edb25"
 scopes   = ["test"]
+licenses = ["Unicode-3.0"]
 
 [[artifact]]
 name     = "com.squareup:javawriter:jar:"
@@ -1658,6 +1768,7 @@ version  = "2.1.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:f699823d0081f69cbb676c1845ea222e0ada79bc88a53e5d22d8bd02d328f57e"
 scopes   = ["test"]
+licenses = ["Apache-2.0"]
 
 [[artifact]]
 name     = "javax.annotation:javax.annotation-api:jar:"
@@ -1665,6 +1776,7 @@ version  = "1.3.2"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:e04ba5195bcd555dc95650f7cc614d151e4bcd52d29a10b8aa2197f3ab89ab9b"
 scopes   = ["test"]
+licenses = ["CDDL + GPLv2 with classpath exception"]
 
 [[artifact]]
 name     = "javax.inject:javax.inject:jar:"
@@ -1672,6 +1784,7 @@ version  = "1"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:91c77044a50c481636c32d916fd89c9118a72195390452c81065080f957de7ff"
 scopes   = ["test"]
+licenses = ["Apache-2.0"]
 
 [[artifact]]
 name     = "junit:junit:jar:"
@@ -1679,6 +1792,7 @@ version  = "4.13.2"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:8e495b634469d64fb8acfa3495a065cbacc8a0fff55ce1e31007be4c16dc57d3"
 scopes   = ["test"]
+licenses = ["EPL-1.0"]
 deps = [
   "org.hamcrest:hamcrest-core:jar:@1.3",
 ]
@@ -1689,6 +1803,7 @@ version  = "1.1.2"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:b509448ac506d607319f182537f0b35d71007582ec741832a1f111e5b5b70b38"
 scopes   = ["test"]
+licenses = ["Apache-2.0"]
 
 [[artifact]]
 name     = "org.bouncycastle:bcprov-jdk18on:jar:"
@@ -1696,6 +1811,7 @@ version  = "1.85"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:20af26bf6060bb8005cc2389916812c1e0e998dc48d2ced7131b89461b54cff7"
 scopes   = ["test"]
+licenses = ["MIT"]
 
 [[artifact]]
 name     = "org.conscrypt:conscrypt-openjdk-uber:jar:"
@@ -1703,6 +1819,7 @@ version  = "2.6.2"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:f8a8f5020c66abc53a3d33cbc855ef8fc06187fa652fb3c0eda6c94e4335b2e9"
 scopes   = ["test"]
+licenses = ["Apache-2.0"]
 
 [[artifact]]
 name     = "org.hamcrest:hamcrest-core:jar:"
@@ -1710,6 +1827,7 @@ version  = "1.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:66fdef91e9739348df7a096aa384a5685f4e875584cce89386a7a47251c4d8e9"
 scopes   = ["test"]
+licenses = ["BSD-3-Clause"]
 
 [[artifact]]
 name     = "org.hamcrest:hamcrest-integration:jar:"
@@ -1717,6 +1835,7 @@ version  = "1.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:70f418efbb506c5155da5f9a5a33262ea08a9e4d7fea186aa9015c41a7224ac2"
 scopes   = ["test"]
+licenses = ["BSD-3-Clause"]
 deps = [
   "org.hamcrest:hamcrest-library:jar:@1.3",
 ]
@@ -1727,6 +1846,7 @@ version  = "1.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:711d64522f9ec410983bd310934296da134be4254a125080a0416ec178dfad1c"
 scopes   = ["test"]
+licenses = ["BSD-3-Clause"]
 deps = [
   "org.hamcrest:hamcrest-core:jar:@1.3",
 ]
@@ -1737,6 +1857,7 @@ version  = "2.4.21"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:bd8250210584cb659847dce9cda660f8e9906e5def7fbebcea93dc6dcb6a88a3"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "org.jetbrains:annotations:jar:@23.0.0",
 ]
@@ -1747,6 +1868,7 @@ version  = "0.28.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:39576ec46b83412ff7a2909d24cccbba90400e91f9aa67b250309bc0872ecf52"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.21",
 ]
@@ -1757,6 +1879,7 @@ version  = "0.28.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
 path     = "atomicfu-0.28.0.module"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "org.jetbrains.kotlinx:atomicfu-jvm:jar:@0.28.0",
 ]
@@ -1767,6 +1890,7 @@ version  = "1.9.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:bd783acd2f9738845d58380f46f45b5cde95d0cb03027d56725338b26bfc4d72"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.9.0",
@@ -1778,6 +1902,7 @@ version  = "1.9.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:ad89c2892235e670f222d819cb3d81188143cb19a05b59df9889ae4269f5c70a"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.21",
   "org.jetbrains:annotations:jar:@23.0.0",
@@ -1789,6 +1914,7 @@ version  = "1.9.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
 path     = "kotlinx-coroutines-core-1.9.0.module"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.9.0",
 ]
@@ -1799,6 +1925,7 @@ version  = "1.9.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:68b87fa90db3dab1e794ff6078364087c07f87e5e4a4d0c8d3272a222ee8fe7e"
 scopes   = ["test"]
+licenses = ["Apache-2.0"]
 deps = [
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.9.0",
@@ -1811,6 +1938,7 @@ version  = "1.9.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
 path     = "kotlinx-coroutines-test-1.9.0.module"
 scopes   = ["test"]
+licenses = ["Apache-2.0"]
 deps = [
   "org.jetbrains.kotlinx:kotlinx-coroutines-test-jvm:jar:@1.9.0",
 ]
@@ -1821,6 +1949,7 @@ version  = "1.7.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:f0adde45864144475385cf4aa7e0b7feb27f61fcf9472665ed98cc971b06b1eb"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.4.21",
 ]
@@ -1831,6 +1960,7 @@ version  = "1.7.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
 path     = "kotlinx-serialization-core-1.7.3.module"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 deps = [
   "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:@1.7.3",
 ]
@@ -1841,6 +1971,7 @@ version  = "23.0.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:7b0f19724082cbfcbc66e5abea2b9bc92cf08a1ea11e191933ed43801eb3cd05"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 
 [[artifact]]
 name     = "org.jspecify:jspecify:jar:"
@@ -1848,6 +1979,7 @@ version  = "1.0.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:1fad6e6be7557781e4d33729d49ae1cdc8fdda6fe477bb0cc68ce351eafdfbab"
 scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
 
 [[artifact]]
 name     = "org.junit.jupiter:junit-jupiter-api:jar:"
@@ -1855,6 +1987,7 @@ version  = "6.1.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:555d6cf20fa1710884dd01b86cc5785397ba73e21ada2d4b784f5f1a14dcafc4"
 scopes   = ["test"]
+licenses = ["EPL-2.0"]
 deps = [
   "org.apiguardian:apiguardian-api:jar:@1.1.2",
   "org.jspecify:jspecify:jar:@1.0.0",
@@ -1868,6 +2001,7 @@ version  = "6.1.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:414559e78bbfa3bdb2eab009ac3ab1e22369ac31117c270a0bd666da115c5c6c"
 scopes   = ["test"]
+licenses = ["EPL-2.0"]
 deps = [
   "org.apiguardian:apiguardian-api:jar:@1.1.2",
   "org.jspecify:jspecify:jar:@1.0.0",
@@ -1881,6 +2015,7 @@ version  = "6.1.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:05c51cedba2c06a9770707391e006cee825876937dea580b94a265ce145d4939"
 scopes   = ["test"]
+licenses = ["EPL-2.0"]
 deps = [
   "org.apiguardian:apiguardian-api:jar:@1.1.2",
   "org.jspecify:jspecify:jar:@1.0.0",
@@ -1893,6 +2028,7 @@ version  = "6.1.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:6b0a14075c74221de53047e363860b7d19fce802bebc152df2c35c4089c6c379"
 scopes   = ["test"]
+licenses = ["EPL-2.0"]
 deps = [
   "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3",
   "org.junit.jupiter:junit-jupiter-engine:jar:@6.1.3",
@@ -1905,6 +2041,7 @@ version  = "6.1.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:a4774ae923c109544034aeae7c762cf017fbcdd1342403ba90e0921984b608c3"
 scopes   = ["test"]
+licenses = ["EPL-2.0"]
 deps = [
   "org.apiguardian:apiguardian-api:jar:@1.1.2",
   "org.jspecify:jspecify:jar:@1.0.0",
@@ -1916,6 +2053,7 @@ version  = "6.1.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:21ad7ad3a35beda16387979317be1833a72a71d812f9a66ee4b9a7bafb56334c"
 scopes   = ["test"]
+licenses = ["EPL-2.0"]
 deps = [
   "org.apiguardian:apiguardian-api:jar:@1.1.2",
   "org.jspecify:jspecify:jar:@1.0.0",
@@ -1929,6 +2067,7 @@ version  = "6.1.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:1dec64b1fc0b7c47a11302aa5b4d37d8160c041b396e27067709ce775601a7b6"
 scopes   = ["test"]
+licenses = ["EPL-2.0"]
 deps = [
   "org.apiguardian:apiguardian-api:jar:@1.1.2",
   "org.jspecify:jspecify:jar:@1.0.0",
@@ -1941,6 +2080,7 @@ version  = "6.1.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:37a1e6ade75c09c5385c2830b7cda21c4b1f24a5f36ed7cd7397bc40f7dc71bc"
 scopes   = ["test"]
+licenses = ["EPL-2.0"]
 deps = [
   "junit:junit:jar:@4.13.2",
   "org.apiguardian:apiguardian-api:jar:@1.1.2",
@@ -1954,6 +2094,7 @@ version  = "1.3.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:48e2df636cab6563ced64dcdff8abb2355627cb236ef0bf37598682ddf742f1b"
 scopes   = ["test"]
+licenses = ["Apache-2.0"]
 
 [[artifact]]
 name     = "org.ow2.asm:asm-commons:jar:"
@@ -1961,6 +2102,7 @@ version  = "9.10.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:6d0abefb7cbf972ea16edb37ec14835372505063a45f976ab7ea889ed9497895"
 scopes   = ["test"]
+licenses = ["BSD-3-Clause"]
 deps = [
   "org.ow2.asm:asm-tree:jar:@9.10.1",
   "org.ow2.asm:asm:jar:@9.10.1",
@@ -1972,6 +2114,7 @@ version  = "9.10.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:3dfb0d5b6a106cd40b5b250e39935fbf2f927f4477546a5369a3ac609cf0506b"
 scopes   = ["test"]
+licenses = ["BSD-3-Clause"]
 deps = [
   "org.ow2.asm:asm:jar:@9.10.1",
 ]
@@ -1982,6 +2125,7 @@ version  = "9.10.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:ed825d10ab1399c8c0cb669e688cf0c8c82629b4c8399b58352b68e92ca10fcb"
 scopes   = ["test"]
+licenses = ["BSD-3-Clause"]
 
 [[artifact]]
 name     = "org.robolectric:annotations:jar:"
@@ -1989,6 +2133,7 @@ version  = "4.17"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:9d9158ccaa34c8ea175fe95b4900eef743bea2eddb4528735aa81dac5310aeba"
 scopes   = ["test"]
+licenses = ["MIT"]
 deps = [
   "org.jspecify:jspecify:jar:@1.0.0",
 ]
@@ -1999,6 +2144,7 @@ version  = "4.17"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:33b836ebbfdf91ea24a6b074b859b97c8afbc6fe163751fc0cda9fa673d218e5"
 scopes   = ["test"]
+licenses = ["MIT"]
 deps = [
   "org.robolectric:pluginapi:jar:@4.17",
   "org.robolectric:sandbox:jar:@4.17",
@@ -2010,6 +2156,7 @@ version  = "1.0.19"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:33e0a0982b3ba599763af250b86eb8d67ab6c186c2fa2c5e823ee003bdcd4ed8"
 scopes   = ["test"]
+licenses = ["Apache-2.0"]
 
 [[artifact]]
 name     = "org.robolectric:nativeruntime:jar:"
@@ -2017,6 +2164,7 @@ version  = "4.17"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:d79187d1241f3b7cc7a3338678874329aa0d6de9fc7bc9f8a1d7b350d9d777fd"
 scopes   = ["test"]
+licenses = ["MIT"]
 deps = [
   "com.google.guava:guava:jar:@33.6.0-jre",
   "org.robolectric:nativeruntime-dist-compat:jar:@1.0.19",
@@ -2030,6 +2178,7 @@ version  = "4.17"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:10b0c220c058458b52387d30f2790a66c597ad3e47e7bfbcff32993d5f3fa81c"
 scopes   = ["test"]
+licenses = ["MIT"]
 deps = [
   "com.google.guava:guava:jar:@33.6.0-jre",
   "org.robolectric:annotations:jar:@4.17",
@@ -2041,6 +2190,7 @@ version  = "4.17"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:a833b576c740a3e387e849e777d0a97aab41a2ababcf6f87c7e54dfcace88d0c"
 scopes   = ["test"]
+licenses = ["MIT"]
 deps = [
   "com.google.auto.value:auto-value-annotations:jar:@1.11.1",
   "com.google.guava:guava:jar:@33.6.0-jre",
@@ -2054,6 +2204,7 @@ version  = "4.17"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:56a68e8e0f79a0a57ba50fa04a3b688794478e1f1e86a060d98332da01177118"
 scopes   = ["test"]
+licenses = ["MIT"]
 deps = [
   "com.google.auto.value:auto-value-annotations:jar:@1.11.1",
   "com.google.guava:guava:jar:@33.6.0-jre",
@@ -2067,6 +2218,7 @@ version  = "4.17"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:69e5bc128ba8d1fbb09d36bfb8a617018d6a3a418f77d44b36e7aca6747f14ea"
 scopes   = ["test"]
+licenses = ["MIT"]
 deps = [
   "androidx.test.espresso:espresso-idling-resource:jar:@3.7.0",
   "androidx.test:monitor:jar:@1.8.0",
@@ -2093,6 +2245,7 @@ version  = "4.17"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:afd922c4b79db9b38d6eba6bd3e3e8ff2c4b01d5baf43c1178455cbfacaecc1e"
 scopes   = ["test"]
+licenses = ["MIT"]
 deps = [
   "com.google.guava:guava:jar:@33.6.0-jre",
   "javax.annotation:javax.annotation-api:jar:@1.3.2",
@@ -2111,6 +2264,7 @@ version  = "4.17"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:18a94a1fd24ddd37cfc57cbf5cca7b90a9afab3e32fcdce17be20f3fa3179d04"
 scopes   = ["test"]
+licenses = ["MIT"]
 deps = [
   "org.robolectric:annotations:jar:@4.17",
   "org.robolectric:utils:jar:@4.17",
@@ -2122,6 +2276,7 @@ version  = "4.17"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:ee580073a51a045e3950280c16e7d07382cd47f9049053a01f7a6d1dcc6a0527"
 scopes   = ["test"]
+licenses = ["MIT"]
 deps = [
   "androidx.test:monitor:jar:@1.8.0",
   "com.almworks.sqlite4java:sqlite4java:jar:@1.0.392",
@@ -2142,6 +2297,7 @@ version  = "4.17"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:f80de68e0f8538b6204576af42eeea9e6806426dcf313558d7df16d4cabc4f41"
 scopes   = ["test"]
+licenses = ["MIT"]
 deps = [
   "org.ow2.asm:asm-commons:jar:@9.10.1",
   "org.ow2.asm:asm:jar:@9.10.1",
@@ -2154,6 +2310,7 @@ version  = "4.17"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:7b34ee3139de81e4eb3e35877e028aa0f9eb2b08e3e1f50eefb93ca825dafcaa"
 scopes   = ["test"]
+licenses = ["MIT"]
 deps = [
   "javax.annotation:javax.annotation-api:jar:@1.3.2",
   "javax.inject:javax.inject:jar:@1",
@@ -2166,6 +2323,7 @@ version  = "2.6"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:c8f7a98e7394adda02f6317249710e4d1b4c7a25aa8c7eace0c2eea52eb8bf85"
 scopes   = ["test"]
+licenses = ["Apache-2.0"]
 
 [[plugin]]
 coordinate = "cc.jumpkick.guards:android"
