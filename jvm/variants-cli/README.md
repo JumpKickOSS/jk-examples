@@ -11,11 +11,10 @@ jk build --variant demo                 # bare value works: only one custom dime
 jk build                                # FAILS on purpose: the dimension declares no default
 
 java -jar target/variants-cli-1.0.0-all.jar
-unzip -l target/variants-cli-1.0.0-all.jar | grep -c commons   # prod: many; demo: none
+unzip -l target/variants-cli-1.0.0-all.jar | grep -c commons   # prod: 458 entries; demo: 0
 
 jk guard --variant contentType=demo     # every verb that builds needs the selection
 ```
 
-**Why `commons-lang3` is pinned exactly.** The jar listing above names one library build; the
-union lock has to hold still for the comparison to mean anything. Everywhere else in this repo
-versions float to `latest`.
+The prod value pins `commons-lang3 = "3.21.0"` under `[variants.contentType.prod.dependencies]`;
+the one lock holds it for both values, and the demo jar carries none of it.
