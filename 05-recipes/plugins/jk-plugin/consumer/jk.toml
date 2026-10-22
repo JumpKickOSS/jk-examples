@@ -1,0 +1,16 @@
+# A project that uses the hello plugin: the jar ../hello-plugin builds, pinned by its sha256. The
+# [hello] table is the plugin's, validated against the schema its jk-plugin.toml declares.
+
+name    = "greeter"
+group   = "dev.jkexamples"
+version = "0.1.0"
+java    = 25
+
+[application]
+main = "dev.jkexamples.greeter.Greeter"
+
+[plugins]
+hello = { path = "../hello-plugin/target/hello-plugin-0.1.0.jar", sha256 = "f05f81c6d46becb207631e4c217092ca04f5cedc946314d1c276e4283b3bcef8" }
+
+[hello]
+greeting = "Hello from a jk plugin"
