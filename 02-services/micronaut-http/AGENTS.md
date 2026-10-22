@@ -1,9 +1,13 @@
 # AGENTS.md
 
-This project builds with **JumpKick** (`jk`), not Maven or Gradle. Run `jk skill` once per
-session — or call the MCP tool `skill` / read `jk://skill` — before the first build.
+<!-- BEGIN:jumpkick -->
+## JumpKick
 
-## Never
+This project builds with **JumpKick** (`jk`), not Maven or Gradle. Run `jk skill` once per
+session — or call the MCP tool `skill` / read `jk://skill` — before the first build. jk
+keeps this section current (`jk skill agents`); put project rules outside the markers.
+
+### Never
 
 - Do not add `pom.xml`, `build.gradle`, or `build.gradle.kts`. Do not run `mvn` or `./gradlew`.
 - Do not scrape the human terminal. With `-a` (`--agent`) or `JK_AGENT=1`, stdout is the verdict.
@@ -11,7 +15,7 @@ session — or call the MCP tool `skill` / read `jk://skill` — before the firs
 - Do not edit `jk-guards-baseline.toml`. A guard exemption is an `allow` entry with a reason,
   and that is the user's call. `jk guard explain <id>` says what to do instead.
 
-## Files
+### Files
 
 - `jk.toml` — the manifest.
 - `jk-lock.toml` — the lockfile, committed. `jk build` does not re-resolve while it is valid.
@@ -19,14 +23,23 @@ session — or call the MCP tool `skill` / read `jk://skill` — before the firs
 - `node = 24` in a module's `jk.toml` pins its Node.js; jk provisions it and locks the exact
   release. Use `jk node exec -- <cmd>` or `jk node run <script>`, never a host `node` or `npm`.
 
-## Loop
+### Finding code
+
+`jk graph query "<question>"` answers where something is and how it connects, with `file:line`
+for each hit, within a token budget. `jk graph read <Type.method>` prints one declaration, not
+the whole file; `jk graph rules <file>` lists the guard rules that apply before you edit it.
+Prefer these to grep and whole-file reads.
+
+### Loop
 
 `jk test` (or `run(kind=test)`) → read the verdict → edit → `jk format` → `jk test`. Default
-`jk test` is the unit suite. Do not pass `--all` as a habit.
+`jk test` is the unit suite. `jk test -f` names the tests an edit touched. Do not pass `--all`
+as a habit. `jk guard` before handing work back.
 
-## MCP
+### MCP
 
 The engine serves MCP on loopback. `jk engine status -O jsonl` includes `mcpUrl`. Pass
 `dir` on the first call; that binds the connection. Tools: `run`, `diagnostics`, `deps`,
 `why`, `skill`. `deps` edits `jk.toml` and relocks. Other tools: `tools/list` with
 `extended` true.
+<!-- END:jumpkick -->

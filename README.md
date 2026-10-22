@@ -114,8 +114,9 @@ new scenario goes in the first directory whose description fits it.
   ratchet. `jk guard` is clean everywhere; where a scenario has tests, `[test] exclude-tags`
   and one profile per tag give every tagged test exactly one tier.
 - **`[image]`** with a JRE 25 base and `aot-cache = true` on every runnable service.
-- **`AGENTS.md`** at every scenario root is the same file `jk new` writes into every new project
-  (the text is owned by jk and copied here unchanged). It is regenerated, never edited.
+- **`AGENTS.md`** at every scenario root carries jk's section between `<!-- BEGIN:jumpkick -->`
+  and `<!-- END:jumpkick -->`. jk writes it and every build refreshes it, so it is never edited by
+  hand. A scenario's own agent rules go outside the markers.
 
 ## Running
 
