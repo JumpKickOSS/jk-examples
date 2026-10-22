@@ -1,0 +1,2 @@
+cadence = "nightly"
+check   = ["jk build", "jk guard", "java -jar target/assembly-0.0.1-all.jar"]

@@ -24,7 +24,7 @@ need. `ports/` and `bench/` are validation and measurement, not teaching materia
 | `02-services/` | Backend services on a framework (Spring Boot, Micronaut, Ktor, Netty). |
 | `03-fullstack/` | A JVM backend beside a front end jk builds as a node module, or the front end alone. |
 | `04-android/` | Android apps. |
-| `05-recipes/` | One jk feature per project, framework-free: codegen, lint, test tiers, packaging. |
+| `05-recipes/` | One jk feature per project: codegen, lint, test tiers, packaging, build logic, migration, supply chain. |
 | `06-production/` | Production-shaped applications that use everything together. |
 | `ports/` | Third-party builds ported to jk via a pinned checkout plus an `overlay/` (`setup.sh`). |
 | `bench/` | Benchmark harnesses that run jk against real repositories outside this tree. |
@@ -63,6 +63,7 @@ need. `ports/` and `bench/` are validation and measurement, not teaching materia
 | `03-fullstack/spring-boot-spa/` | **A JVM backend serving a single-page front end**: a `web` node module jk builds on the locked Node.js and packages as a resource jar, the app serving `classpath:/static/` with an SPA fallback, and root `jk dev` running the Vite dev server beside the app, inferred from the dependency. |
 | `03-fullstack/vite-react/` | A Boot app serving a Vite + React SPA from its image: `jk new -t …/webapp --frontend vite-react`, the SPA a node module packaged as a resource jar. |
 | `03-fullstack/two-frontends/` | One Boot API, a Vite admin SPA and a Next storefront that both call it (Vite's proxy, a Next `rewrites()`); root `jk dev` runs all three with no `[dev.sidecars]`. |
+| `03-fullstack/vite-sidecar/` | `[node] dir = "web"`: a Vite front end as a node build of the JVM module, and `jk dev` running Vite beside the app with its proxy to the API. |
 | `03-fullstack/angular/` | An Angular SPA as a node module: `ng build` and `ng test` (Vitest) as jk steps, inferred from `angular.json`; `[image] kind = "static"` ships it on nginx. |
 | `03-fullstack/next-standalone/` | A Next.js standalone server as a node module: `jk build`, `jk run`, a distroless Node.js image. |
 | `03-fullstack/sveltekit-node/` | SvelteKit on adapter-node: a Node.js server `jk run` starts and `jk image` ships. |
@@ -79,6 +80,7 @@ need. `ports/` and `bench/` are validation and measurement, not teaching materia
 | Dir | Shows |
 |---|---|
 | `05-recipes/codegen/antlr/` | The `[antlr]` preset: an expression language from one grammar — lexer, parser and visitor generated in the package the grammar's directory names, the runtime pinned to the tool's version. |
+| `05-recipes/codegen/openapi/` | The `[openapi]` preset beside `[spring-boot]`: a Spring interface generated from `api/openapi.yaml`, implemented by a Boot controller; a spec edit regenerates. |
 | `05-recipes/codegen/avro/` | The `[avro]` preset: Avro schemas compiled in the generate stage, the classes joining the compile, `string-type`, `[avro] version` written beside the runtime pin so `jk update` moves both. |
 | `05-recipes/codegen/jaxb/` | The `[jaxb]` preset: xjc over `src/main/xsd` into one package, the `jakarta.xml.bind` API and the JAXB runtime as the only dependencies, `[jaxb] version` on the runtime's line. |
 | `05-recipes/codegen/jooq/` | The `[jooq]` preset over DDL scripts: the Flyway migrations applied in memory through `DDLDatabase`, typed tables and references generated, no database for the build. |
@@ -86,11 +88,13 @@ need. `ports/` and `bench/` are validation and measurement, not teaching materia
 | `05-recipes/codegen/graphql/` | GraphQL codegen as a `[generate]` recipe: DGS codegen's command line over the schema, typed types + client joining the compile, the tool closure fetched and cached. |
 | `05-recipes/lint/checkstyle/` | `[lint] checkstyle` as a cached step after compile: findings as diagnostics with the rule id, `fail-on`, a rule set that repeats nothing `jk format` owns. |
 | `05-recipes/lint/all-tools/` | The four-tool `[lint]` table — Checkstyle, a project PMD ruleset, SpotBugs over the classes, detekt over Kotlin — each its own cached step; runs the real tools so their report parsers see real output. |
+| `05-recipes/build-logic/line-count/` | Project build logic in `.jk/`: a Groovy stem script at the `after-resources` anchor counts the source lines and hands the result to the app as a resource. |
 | `05-recipes/test/testng/` | TestNG through the JUnit team's engine: `org.testng:testng` declared, the engine injected by `jk lock`, a `@DataProvider` fanned out, a TestNG group as a Platform tag in the tier table. |
 | `05-recipes/test/migrations/` | Flyway and Liquibase over one module's scripts: the unit tier on H2, the integration tier on a PostgreSQL Testcontainer, `jk run` migrating an H2 file, and both tools as pinned `jk tool install` / `jk tool run` commands. |
 | `05-recipes/supply-chain/` | Supply-chain controls as build steps: exact pins and a checksummed lock, `[deny.sources]`, `jk audit` against OSV with a reviewed `[audit] ignore` that expires, a guard keeping the excepted library test-only, SBOMs in the jar and from `jk publish -S`. |
 | `05-recipes/migrate/from-maven/` | `jk import pom.xml`: a typical POM (properties, an imported BOM, scopes, a jar manifest) beside the `jk.toml` it becomes, committed unedited; `jk mvn verify` and `jk build` on one tree; a re-import check that the import is reproducible. |
 | `05-recipes/migrate/from-gradle/` | `jk import settings.gradle.kts`: a two-project Kotlin DSL build with a version catalog, a platform, `api`/`implementation`, `application` and a toolchain, evaluated by Gradle in a fork; `jk gradle build` and `jk build` on one tree; the same re-import check. |
+| `05-recipes/packaging/assembly/` | `[application] assembly = true`: a runnable fat jar beside the thin one, merged service files, `java -jar`. |
 | `05-recipes/packaging/native-cli/` | `jk native`: a picocli checksum tool as one GraalVM executable, its reflection config generated by picocli's annotation processor; `[native] enabled = true` leaves `jk build` a JVM build. |
 | `05-recipes/packaging/shrink/` | The minified jar: R8 `--classfile` full mode collapsing a fat jar. |
 | `05-recipes/packaging/variants/` | Core `[variants]`: a custom dimension on a plain JVM app — per-value `extra-src` + deps, union lockfile, mandatory selection. |

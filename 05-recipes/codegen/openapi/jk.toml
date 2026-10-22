@@ -1,0 +1,28 @@
+group = "dev.jkexamples"
+name = "openapi"
+version = "0.1.0"
+java = 25
+
+[application]
+main = "com.acme.Application"
+
+# Two plugins in one module: Boot packages the jar and owns the platform BOM, the generator
+# contributes a step. Each forks its own worker.
+[spring-boot]
+version = "4.1.1"
+
+# The contract generates the GreetingsApi interface and the Greeting model into the generate
+# stage; GreetingController implements the interface. Edit api/openapi.yaml and the next build
+# regenerates and recompiles; an unchanged spec is a cache hit (`jk explain`).
+[openapi]
+spec      = "api/openapi.yaml"
+generator = "spring"
+package   = "com.acme.api"
+
+# Versionless coordinates: the Boot platform BOM the [spring-boot] table imports manages them.
+[dependencies]
+starter-webmvc     = "org.springframework.boot:spring-boot-starter-webmvc"
+starter-validation = "org.springframework.boot:spring-boot-starter-validation"
+
+[test-dependencies]
+starter-test = "org.springframework.boot:spring-boot-starter-test"
