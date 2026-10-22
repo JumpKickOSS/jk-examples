@@ -1,0 +1,62 @@
+# Navigation tasks over 06-production/hotel-reservations. Each names the question an agent starts
+# from, the words a grep-first agent would search for, and the files that hold the answer.
+
+[[task]]
+id       = "weekend-uplift"
+question = "where is the weekend price uplift applied to a nightly rate"
+grep     = ["weekend"]
+answer   = ["backend/core/src/main/java/dev/jkexamples/hotel/core/PricingPolicy.java"]
+
+[[task]]
+id       = "double-booking"
+question = "how is a room prevented from being booked twice for the same night"
+grep     = ["double", "overlap", "free"]
+answer   = ["backend/service/src/main/java/dev/jkexamples/hotel/service/internal/AvailabilityQueries.java"]
+
+[[task]]
+id       = "cancel-rules"
+question = "when may a guest cancel a reservation online"
+grep     = ["cancel"]
+answer   = ["backend/core/src/main/java/dev/jkexamples/hotel/core/Reservation.java"]
+
+[[task]]
+id       = "confirmation-fields"
+question = "which DTO carries the reservation details shown to the guest after booking"
+grep     = ["ReservationView"]
+answer   = ["backend/contract/src/main/java/dev/jkexamples/hotel/contract/ReservationView.java"]
+
+[[task]]
+id       = "staff-sign-in"
+question = "how does front desk staff sign in and where are passwords checked"
+grep     = ["login", "password"]
+answer   = ["backend/rest/src/main/java/dev/jkexamples/hotel/rest/SecurityConfiguration.java"]
+
+[[task]]
+id       = "occupancy"
+question = "where is tonight's occupancy percentage computed for the front desk"
+grep     = ["occupancy"]
+answer   = ["backend/service/src/main/java/dev/jkexamples/hotel/service/internal/FrontDeskService.java"]
+
+[[task]]
+id       = "availability-endpoint"
+question = "which endpoint returns the available rooms of one hotel for given dates"
+grep     = ["availability"]
+answer   = ["backend/rest/src/main/java/dev/jkexamples/hotel/rest/CatalogController.java"]
+
+[[task]]
+id       = "confirmation-codes"
+question = "where are confirmation codes generated"
+grep     = ["confirmation"]
+answer   = ["backend/core/src/main/java/dev/jkexamples/hotel/core/ConfirmationCodes.java"]
+
+[[task]]
+id       = "problem-details"
+question = "how are service exceptions turned into HTTP error responses"
+grep     = ["ExceptionHandler", "ProblemDetail"]
+answer   = ["backend/rest/src/main/java/dev/jkexamples/hotel/rest/ApiErrors.java"]
+
+[[task]]
+id       = "long-stay-discount"
+question = "where is the long stay discount for a week or more decided"
+grep     = ["discount"]
+answer   = ["backend/core/src/main/java/dev/jkexamples/hotel/core/PricingPolicy.java"]
