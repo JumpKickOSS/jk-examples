@@ -1,0 +1,31 @@
+# JPA entities enhanced at build time: a lazily loaded basic column, inline dirty tracking and
+# bidirectional association management, from the project's own Hibernate. Without enhancement
+# Hibernate ignores FetchType.LAZY on a basic attribute and diffs every loaded entity at flush.
+
+name    = "journal"
+group   = "dev.jkexamples"
+version = "0.1.0"
+java    = 25
+
+[application]
+main = "dev.jkexamples.journal.JournalApplication"
+
+[spring-boot]
+version = "4.1.2"
+
+[hibernate]
+enhance                = true
+lazy-initialization    = true
+dirty-tracking         = true
+association-management = true
+
+[dependencies]
+starter-webmvc   = "org.springframework.boot:spring-boot-starter-webmvc"
+starter-data-jpa = "org.springframework.boot:spring-boot-starter-data-jpa"
+
+[runtime-dependencies]
+h2 = "com.h2database:h2"
+
+[test-dependencies]
+starter-data-jpa-test = "org.springframework.boot:spring-boot-starter-data-jpa-test"
+starter-webmvc-test   = "org.springframework.boot:spring-boot-starter-webmvc-test"

@@ -1,0 +1,3 @@
+# House rules: the Spring pack (`jk guard explain` lists it).
+[guards]
+extends = ["cc.jumpkick.guards:spring:0.20.0"]
