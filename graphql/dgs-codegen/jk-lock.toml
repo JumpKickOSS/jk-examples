@@ -1,7 +1,7 @@
 version = 1
-generated-by = "jk 0.15.3"
-generated-by-build = "eafb500388d9"
-generated-by-build-time = "2026-10-22T00:19:05Z"
+generated-by = "jk 0.20.0"
+generated-by-build = "351af4376a6d"
+generated-by-build-time = "2026-10-22T05:59:57Z"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.10"
 manifests-sha256 = "9187c7c5f8e3fa88a4fc0084a39ccc8a8262a81e72e0b0e388630d9d1d4fbe13"
@@ -221,7 +221,157 @@ scopes   = ["main"]
 
 [[plugin]]
 coordinate = "cc.jumpkick:jk-generator"
-version    = "0.15.3"
+version    = "0.20.0"
+
+[[tool]]
+coordinate = "com.fasterxml.jackson.core:jackson-annotations"
+version    = "2.18.3"
+checksum   = "sha256:8aa5740d80b5a5025508b41bbadbaa1fb3772267c628b2e30681a4f45f8b8931"
+
+[[tool]]
+coordinate = "com.fasterxml.jackson.core:jackson-core"
+version    = "2.18.3"
+checksum   = "sha256:056bc4d3e5e53ce821450fa97b3f9e0f8dde125cf6da6884353bb1f09582e1d9"
+
+[[tool]]
+coordinate = "com.fasterxml.jackson.core:jackson-databind"
+version    = "2.18.3"
+checksum   = "sha256:510bdda75a7a6186c5bf33b851239488a1450906ae5757121f2e1cc48a7e108f"
+
+[[tool]]
+coordinate = "com.github.ajalt.clikt:clikt-jvm"
+version    = "4.4.0"
+checksum   = "sha256:dd424c7c4113c114efc103da3fab82ccbee7484970129c0764a4578b58677371"
+
+[[tool]]
+coordinate = "com.github.ajalt.colormath:colormath-jvm"
+version    = "3.5.0"
+checksum   = "sha256:43935db06558b4aac3dd900a775be3e89b54c9f488601457df27d2a1743167b0"
+
+[[tool]]
+coordinate = "com.github.ajalt.mordant:mordant-jvm"
+version    = "2.5.0"
+checksum   = "sha256:13dc1d15407490cfa3e9bc54010f031d6a5c52b735d3415cc7144f0b4680aad7"
+
+[[tool]]
+coordinate = "com.graphql-java:graphql-java"
+version    = "22.3"
+checksum   = "sha256:8828fef5d8133d3d5ad23cee262a9b3ab4ce95aedf5e3332bb577a9aa7c627e0"
+
+[[tool]]
+coordinate = "com.graphql-java:java-dataloader"
+version    = "3.3.0"
+checksum   = "sha256:08cec84ac76e32b53ea666260f288f10b3731c21c89f9199b109ced2361f78b8"
+
+[[tool]]
+coordinate = "com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-core"
+version    = "8.7.0"
+checksum   = "sha256:140cff74666486d9a322de72ea6ff20236e7b883836b371adcc90130f02eded8"
+
+[[tool]]
+coordinate = "com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-core"
+version    = "8.7.0"
+closure = [
+  "com.fasterxml.jackson.core:jackson-annotations:2.18.3",
+  "com.fasterxml.jackson.core:jackson-core:2.18.3",
+  "com.fasterxml.jackson.core:jackson-databind:2.18.3",
+  "com.github.ajalt.clikt:clikt-jvm:4.4.0",
+  "com.github.ajalt.colormath:colormath-jvm:3.5.0",
+  "com.github.ajalt.mordant:mordant-jvm:2.5.0",
+  "com.graphql-java:graphql-java:22.3",
+  "com.graphql-java:java-dataloader:3.3.0",
+  "com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-core:8.7.0",
+  "com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-shared-core:8.7.0",
+  "com.netflix.graphql.dgs:graphql-dgs:10.0.4",
+  "com.palantir.javapoet:javapoet:0.9.0",
+  "com.squareup:kotlinpoet-jvm:1.17.0",
+  "it.unimi.dsi:fastutil-core:8.5.12",
+  "jakarta.annotation:jakarta.annotation-api:3.0.0",
+  "net.java.dev.jna:jna:5.14.0",
+  "org.jetbrains.kotlin:kotlin-reflect:2.0.21",
+  "org.jetbrains.kotlin:kotlin-stdlib:2.1.20",
+  "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.8.1",
+  "org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.8.1",
+  "org.jetbrains:annotations:13.0",
+  "org.jetbrains:markdown-jvm:0.7.0",
+  "org.reactivestreams:reactive-streams:1.0.3",
+  "org.slf4j:slf4j-api:1.7.30",
+]
+
+[[tool]]
+coordinate = "com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-shared-core"
+version    = "8.7.0"
+checksum   = "sha256:234a5b67ba875661708d0fb0490d0e4ddd15456d254ec070c08731ef661139ee"
+
+[[tool]]
+coordinate = "com.netflix.graphql.dgs:graphql-dgs"
+version    = "10.0.4"
+checksum   = "sha256:96804aa9ad96fcd4c87c47acdb8900f2f10a75e3ae0c63b0f081756fa7b28c9f"
+
+[[tool]]
+coordinate = "com.palantir.javapoet:javapoet"
+version    = "0.9.0"
+checksum   = "sha256:1fd424dc74c68db898a9ad016f3badadb9d6cb7990d3f04adcb850149328c2fd"
+
+[[tool]]
+coordinate = "com.squareup:kotlinpoet-jvm"
+version    = "1.17.0"
+checksum   = "sha256:3133d4f48ce77766a6a8cc2e555d89164dfcefbd372f4ff43f89a7fed3586910"
+
+[[tool]]
+coordinate = "it.unimi.dsi:fastutil-core"
+version    = "8.5.12"
+checksum   = "sha256:f31c20f5b06312f3d5e06e6160a32e274d819aa6cebf27528b26b6b5c0c1df19"
+
+[[tool]]
+coordinate = "jakarta.annotation:jakarta.annotation-api"
+version    = "3.0.0"
+checksum   = "sha256:b01f55552284cfb149411e64eabca75e942d26d2e1786b32914250e4330afaa2"
+
+[[tool]]
+coordinate = "net.java.dev.jna:jna"
+version    = "5.14.0"
+checksum   = "sha256:34ed1e1f27fa896bca50dbc4e99cf3732967cec387a7a0d5e3486c09673fe8c6"
+
+[[tool]]
+coordinate = "org.jetbrains.kotlin:kotlin-reflect"
+version    = "2.0.21"
+checksum   = "sha256:3ad2fcad0c09ddc0922debab4444d612144b7b465b75a8bb7587e20ddfafd799"
+
+[[tool]]
+coordinate = "org.jetbrains.kotlin:kotlin-stdlib"
+version    = "2.1.20"
+checksum   = "sha256:1bcc74e8ce84e2c25eaafde10f1248349cce3062b6e36978cbeec610db1e930a"
+
+[[tool]]
+coordinate = "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm"
+version    = "1.8.1"
+checksum   = "sha256:3565b6d4d789bf70683c45566944287fc1d8dc75c23d98bd87d01059cc76f2b3"
+
+[[tool]]
+coordinate = "org.jetbrains.kotlinx:kotlinx-serialization-json-jvm"
+version    = "1.8.1"
+checksum   = "sha256:8769e5647557e3700919c32d508f5c5dad53c5d8234cd10846354fbcff14aa24"
+
+[[tool]]
+coordinate = "org.jetbrains:annotations"
+version    = "13.0"
+checksum   = "sha256:ace2a10dc8e2d5fd34925ecac03e4988b2c0f851650c94b8cef49ba1bd111478"
+
+[[tool]]
+coordinate = "org.jetbrains:markdown-jvm"
+version    = "0.7.0"
+checksum   = "sha256:c8b44be338598912e8bb8a4998b017df7dd198152cceffef01cf128a9900139e"
+
+[[tool]]
+coordinate = "org.reactivestreams:reactive-streams"
+version    = "1.0.3"
+checksum   = "sha256:1dee0481072d19c929b623e155e14d2f6085dc011529a0a0dbefc84cf571d865"
+
+[[tool]]
+coordinate = "org.slf4j:slf4j-api"
+version    = "1.7.30"
+checksum   = "sha256:cdba07964d1bb40a0761485c6b1e8c2f8fd9eb1d19c53928ac0d7f9510105c57"
 
 [[module]]
 path    = "."
