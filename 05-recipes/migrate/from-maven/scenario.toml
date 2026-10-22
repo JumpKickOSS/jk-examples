@@ -1,0 +1,2 @@
+cadence = "nightly"
+check   = ["jk build", "jk mvn -q verify", "../../../scripts/reimport-check.sh pom.xml"]

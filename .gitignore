@@ -14,3 +14,7 @@ bench/maven-top20/results/*/
 
 # graphify output the agent-graph bench writes into the repositories it measures
 graphify-out/
+
+# Gradle's own output in the migration recipe, which still builds with Gradle
+05-recipes/migrate/from-gradle/**/build/
+05-recipes/migrate/from-gradle/.gradle/

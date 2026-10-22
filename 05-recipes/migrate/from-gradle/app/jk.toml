@@ -1,0 +1,12 @@
+group    = "dev.jkexamples"
+name     = "app"
+version  = "0.1.0"
+jdk      = "25"
+java     = 25
+
+[application]
+main       = "dev.jkexamples.wordfreq.app.WordFreq"
+
+[dependencies]
+core.workspace = true
+picocli = "4.7.7"

@@ -1,0 +1,16 @@
+group    = "dev.jkexamples"
+name     = "core"
+version  = "0.1.0"
+jdk      = "25"
+java     = 25
+
+[platform-dependencies]
+junit-bom = "org.junit:junit-bom:6.1.3"
+
+[dependencies]
+guava = "33.7.2-jre"
+
+[test-dependencies]
+assertj-core = "3.27.7"
+junit-jupiter = "managed"
+junit-platform-launcher = "managed"
