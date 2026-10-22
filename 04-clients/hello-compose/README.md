@@ -1,4 +1,4 @@
-# 04-android/hello-compose — the small Android app path
+# 04-clients/hello-compose — the small Android app path
 
 One screen, built the way a new Android app starts: Jetpack Compose with Material 3, a
 `ViewModel` holding the screen's state, tests on the JVM, and a debug APK. It starts from

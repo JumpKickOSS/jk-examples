@@ -23,7 +23,7 @@ need. `ports/` and `bench/` are validation and measurement, not teaching materia
 | `01-start/` | One small project per language: the first thing to read. |
 | `02-services/` | Backend services on a framework (Spring Boot, Micronaut, Ktor, Netty). |
 | `03-fullstack/` | A JVM backend beside a front end jk builds as a node module, or the front end alone. |
-| `04-android/` | Android apps. |
+| `04-clients/` | Apps people run on a device or a desktop: Android, JavaFX. |
 | `05-recipes/` | One jk feature per project: codegen, lint, test tiers, packaging, build logic, migration, supply chain. |
 | `06-production/` | Production-shaped applications that use everything together. |
 | `ports/` | Third-party builds ported to jk via a pinned checkout plus an `overlay/` (`setup.sh`). |
@@ -68,12 +68,13 @@ need. `ports/` and `bench/` are validation and measurement, not teaching materia
 | `03-fullstack/next-standalone/` | A Next.js standalone server as a node module: `jk build`, `jk run`, a distroless Node.js image. |
 | `03-fullstack/sveltekit-node/` | SvelteKit on adapter-node: a Node.js server `jk run` starts and `jk image` ships. |
 
-### 04-android
+### 04-clients — Android and desktop
 
 | Dir | Shows |
 |---|---|
-| `04-android/hello-compose/` | **The small-app path**: the `android/compose` template grown to one screen with a `ViewModel`, JUnit 5 on the logic, a Robolectric Compose UI test on the JVM, and a debug APK in about a minute. |
-| `04-android/nowinandroid/` | **The Android north star**: Google's reference app, all 27 modules — Compose, Hilt (unmodified sources), Room auto-migrations, protobuf/datastore, kotlinx-serialization, navigation3, a contentType variant dimension, non-transitive R, demo-debug APK + signed R8 release AAB. No Gradle, no AGP. A pinned checkout plus `overlay/`. |
+| `04-clients/hello-compose/` | **The small-app path**: the `android/compose` template grown to one screen with a `ViewModel`, JUnit 5 on the logic, a Robolectric Compose UI test on the JVM, and a debug APK in about a minute. |
+| `04-clients/javafx-desktop/` | A JavaFX loan calculator: FXML, a controller, the arithmetic tested without a display, and `[javafx]` putting OpenJFX on the module path for `jk run`. |
+| `04-clients/nowinandroid/` | **The Android north star**: Google's reference app, all 27 modules — Compose, Hilt (unmodified sources), Room auto-migrations, protobuf/datastore, kotlinx-serialization, navigation3, a contentType variant dimension, non-transitive R, demo-debug APK + signed R8 release AAB. No Gradle, no AGP. A pinned checkout plus `overlay/`. |
 
 ### 05-recipes — one feature each
 
@@ -163,7 +164,7 @@ Per-scenario detail lives in each directory's README. The two third-party checko
 `setup.sh` that clones the pinned upstream and applies the `overlay/`:
 
 ```sh
-cd 04-android/nowinandroid && ./setup.sh && ./run.sh
+cd 04-clients/nowinandroid && ./setup.sh && ./run.sh
 cd ports/netty && ./setup.sh && ./run.sh
 ```
 

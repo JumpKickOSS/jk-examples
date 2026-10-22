@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="dev.jkexamples.loans.LoanController" spacing="16" prefWidth="420">
+    <padding><Insets top="24" right="24" bottom="24" left="24"/></padding>
+    <GridPane hgap="12" vgap="10">
+        <Label text="Amount" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="amount" text="300000" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+        <Label text="Rate (%)" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="rate" text="6.5" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        <Label text="Term" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <Slider fx:id="years" min="1" max="40" value="30" majorTickUnit="5" snapToTicks="false"
+                GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        <Label fx:id="yearsLabel" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+    </GridPane>
+    <Label fx:id="payment" style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+    <Label fx:id="interest"/>
+</VBox>

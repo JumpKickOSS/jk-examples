@@ -1,5 +1,5 @@
-04-android/nowinandroid/checkout/
-04-android/nowinandroid/release.jks
+04-clients/nowinandroid/checkout/
+04-clients/nowinandroid/release.jks
 **/target/
 
 # local run artifacts

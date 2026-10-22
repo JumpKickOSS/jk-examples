@@ -1,0 +1,220 @@
+version = 1
+generated-by = "jk 0.20.0"
+generated-by-build = "667f8c92b5bc"
+generated-by-build-time = "2026-10-22T20:29:37Z"
+resolution-algorithm = "pubgrub-v1"
+jk-min = "0.15"
+manifests-sha256 = "3887c720bd3e6a4ef9d57a3fc041fae7e0936e9a35458cd7b149fbaf3d1db6f8"
+project-id = "b9e9f23a40e2f3300432982613030388"
+
+[jdk]
+suggested-vendor = "graalvm"
+suggested-version = "25.0.4.1.1"
+
+[graal]
+suggested-vendor = "graalvm"
+suggested-version = "25.0.4.1.1"
+
+[[artifact]]
+name     = "org.apiguardian:apiguardian-api:jar:"
+version  = "1.1.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b509448ac506d607319f182537f0b35d71007582ec741832a1f111e5b5b70b38"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "org.jspecify:jspecify:jar:"
+version  = "1.0.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:1fad6e6be7557781e4d33729d49ae1cdc8fdda6fe477bb0cc68ce351eafdfbab"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "org.junit.jupiter:junit-jupiter-api:jar:"
+version  = "6.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:555d6cf20fa1710884dd01b86cc5785397ba73e21ada2d4b784f5f1a14dcafc4"
+scopes   = ["test"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
+  "org.junit.platform:junit-platform-commons:jar:@6.1.3",
+  "org.opentest4j:opentest4j:jar:@1.3.0",
+]
+
+[[artifact]]
+name     = "org.junit.jupiter:junit-jupiter-engine:jar:"
+version  = "6.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:414559e78bbfa3bdb2eab009ac3ab1e22369ac31117c270a0bd666da115c5c6c"
+scopes   = ["test"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
+  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3",
+  "org.junit.platform:junit-platform-engine:jar:@6.1.3",
+]
+
+[[artifact]]
+name     = "org.junit.jupiter:junit-jupiter-params:jar:"
+version  = "6.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:05c51cedba2c06a9770707391e006cee825876937dea580b94a265ce145d4939"
+scopes   = ["test"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
+  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3",
+]
+
+[[artifact]]
+name     = "org.junit.jupiter:junit-jupiter:jar:"
+version  = "6.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:6b0a14075c74221de53047e363860b7d19fce802bebc152df2c35c4089c6c379"
+scopes   = ["test"]
+deps = [
+  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3",
+  "org.junit.jupiter:junit-jupiter-engine:jar:@6.1.3",
+  "org.junit.jupiter:junit-jupiter-params:jar:@6.1.3",
+]
+
+[[artifact]]
+name     = "org.junit.platform:junit-platform-commons:jar:"
+version  = "6.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:a4774ae923c109544034aeae7c762cf017fbcdd1342403ba90e0921984b608c3"
+scopes   = ["test"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
+]
+
+[[artifact]]
+name     = "org.junit.platform:junit-platform-engine:jar:"
+version  = "6.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:21ad7ad3a35beda16387979317be1833a72a71d812f9a66ee4b9a7bafb56334c"
+scopes   = ["test"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
+  "org.junit.platform:junit-platform-commons:jar:@6.1.3",
+  "org.opentest4j:opentest4j:jar:@1.3.0",
+]
+
+[[artifact]]
+name     = "org.junit.platform:junit-platform-launcher:jar:"
+version  = "6.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:1dec64b1fc0b7c47a11302aa5b4d37d8160c041b396e27067709ce775601a7b6"
+scopes   = ["test"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
+  "org.junit.platform:junit-platform-engine:jar:@6.1.3",
+]
+
+[[artifact]]
+name     = "org.openjfx:javafx-base:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:96d6cf65983b431a39e7f6c4cd9aae245f9ec986e71537ef800353dc615d16b9"
+scopes   = ["main"]
+deps = [
+  "org.openjfx:javafx-base:jar:mac-aarch64@27.0.1",
+]
+
+[[artifact]]
+name     = "org.openjfx:javafx-base:jar:mac-aarch64"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:625bb1c31b4f30413064b66b15b2b311d57461d71eb9edab651bd5bf68f91ea0"
+scopes   = ["main"]
+deps = [
+  "org.openjfx:javafx-base:jar:mac-aarch64@27.0.1",
+]
+
+[[artifact]]
+name     = "org.openjfx:javafx-controls:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:c784433ff123030dace20263dd9a1963337ad913ffb447353388ad76b66dac30"
+scopes   = ["main"]
+deps = [
+  "org.openjfx:javafx-controls:jar:mac-aarch64@27.0.1",
+  "org.openjfx:javafx-graphics:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "org.openjfx:javafx-controls:jar:mac-aarch64"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:d82d23ea6cdc0d498ac3cc2e45f5609d6b469a60e8435b52594480534e55efcd"
+scopes   = ["main"]
+deps = [
+  "org.openjfx:javafx-controls:jar:mac-aarch64@27.0.1",
+  "org.openjfx:javafx-graphics:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "org.openjfx:javafx-fxml:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:1b366c9576ed6510cc83535dfa54837cbe8b192bb90014fc9503efb10a4b6f5c"
+scopes   = ["main"]
+deps = [
+  "org.openjfx:javafx-controls:jar:@27.0.1",
+  "org.openjfx:javafx-fxml:jar:mac-aarch64@27.0.1",
+]
+
+[[artifact]]
+name     = "org.openjfx:javafx-fxml:jar:mac-aarch64"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:6b1bf5e20bc14199ae17e275b09b68921f766a9c80fc9175d0ff61eda9771783"
+scopes   = ["main"]
+deps = [
+  "org.openjfx:javafx-controls:jar:@27.0.1",
+  "org.openjfx:javafx-fxml:jar:mac-aarch64@27.0.1",
+]
+
+[[artifact]]
+name     = "org.openjfx:javafx-graphics:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:3c491d46bdbf2e6b2654834b29eb6f26da290c35acb1d58d78defccecfe8bb5b"
+scopes   = ["main"]
+deps = [
+  "org.openjfx:javafx-base:jar:@27.0.1",
+  "org.openjfx:javafx-graphics:jar:mac-aarch64@27.0.1",
+]
+
+[[artifact]]
+name     = "org.openjfx:javafx-graphics:jar:mac-aarch64"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:8faed7492269c5d0326b0bcb480fda2f1a008885da3deca7dea14ef094e3cf15"
+scopes   = ["main"]
+deps = [
+  "org.openjfx:javafx-base:jar:@27.0.1",
+  "org.openjfx:javafx-graphics:jar:mac-aarch64@27.0.1",
+]
+
+[[artifact]]
+name     = "org.opentest4j:opentest4j:jar:"
+version  = "1.3.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:48e2df636cab6563ced64dcdff8abb2355627cb236ef0bf37598682ddf742f1b"
+scopes   = ["test"]
+
+[[plugin]]
+coordinate = "cc.jumpkick:jk-javafx"
+version    = "0.20.0"
+
+[[module]]
+path    = "."
+group   = "dev.jkexamples"
+name    = "loans"
+version = "0.1.0"
+java    = 25

@@ -1,0 +1,21 @@
+# A JavaFX desktop app: FXML view, a controller, and the arithmetic in a plain class that tests
+# without a display. [javafx] puts the OpenJFX jars on the module path for jk run and the tests;
+# the lock pins this host's javafx-graphics classifier.
+
+name    = "loans"
+group   = "dev.jkexamples"
+version = "0.1.0"
+java    = 25
+
+[application]
+main     = "dev.jkexamples.loans.Launcher"
+
+[javafx]
+modules = ["javafx.controls", "javafx.fxml"]
+
+[dependencies]
+javafx-controls = { group = "org.openjfx", version = "27.0.1" }
+javafx-fxml     = { group = "org.openjfx", version = "27.0.1" }
+
+[test-dependencies]
+junit-jupiter = "6.1.3"
