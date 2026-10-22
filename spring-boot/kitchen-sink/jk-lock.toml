@@ -1,15 +1,15 @@
 version = 1
-generated-by = "jk 0.13.8"
-generated-by-build = "4e9db48c9cbf"
-generated-by-build-time = "2026-09-20T16:33:23Z"
+generated-by = "jk 0.15.3"
+generated-by-build = "eafb500388d9"
+generated-by-build-time = "2026-10-22T00:19:05Z"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.10"
-manifests-sha256 = "40555112af02399407178274559689c59806f8150e6cfe358c233814cc31a0bf"
+manifests-sha256 = "2428637a96c1513b1f4c9686fbc8e5abc9a9f74bf13c9088fb171b98be9b06f8"
 project-id = "be967e345bf23c5cd4de336575feacc2"
 
 [jdk]
 suggested-vendor = "temurin"
-suggested-version = "25.0.4.1"
+suggested-version = "25.0.2"
 
 [[artifact]]
 name     = "ch.qos.logback:logback-classic:jar:"
@@ -17,7 +17,7 @@ version  = "1.5.38"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:afb439c61fa287c9e1925523b13baab03617e724406a389d48b61c2c3e46b700"
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
-scopes   = ["main", "test"]
+scopes   = ["main"]
 deps = [
   "ch.qos.logback:logback-core:jar:@1.5.38",
   "org.slf4j:slf4j-api:jar:@2.0.18",
@@ -29,7 +29,7 @@ version  = "1.5.38"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:a855a0fc97b1d06f4efb1c3bba5ebd0eb508d8b58e68e89e4bbc23a85135c883"
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
-scopes   = ["main", "test"]
+scopes   = ["main"]
 
 [[artifact]]
 name     = "com.fasterxml.jackson.core:jackson-annotations:jar:"
@@ -56,30 +56,11 @@ pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
 scopes   = ["runtime"]
 
 [[artifact]]
-name     = "com.jayway.jsonpath:json-path:jar:"
-version  = "2.10.0"
-source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:890daa95dd3892d34d9fabc27cd5153656e6f369358625c88f4dc7b79cbd6c5a"
-pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
-scopes   = ["test"]
-deps = [
-  "net.minidev:json-smart:jar:@2.6.0",
-  "org.slf4j:slf4j-api:jar:@2.0.18",
-]
-
-[[artifact]]
 name     = "com.sun.istack:istack-commons-runtime:jar:"
 version  = "4.2.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:21025b7a096ef93f74de659c1be5990fa0c24e59a0f98a706e392e7088725ff6"
 scopes   = ["main"]
-
-[[artifact]]
-name     = "com.vaadin.external.google:android-json:jar:"
-version  = "0.0.20131108.vaadin1"
-source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:dfb7bae2f404cfe0b72b4d23944698cb716b7665171812a0a4d0f5926c0fac79"
-scopes   = ["test"]
 
 [[artifact]]
 name     = "com.zaxxer:HikariCP:jar:"
@@ -98,7 +79,7 @@ version  = "1.3.6"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:f8ead8943401081dea0aa824b5b1ba40a0e4ed297a572a0f02258150a0b62357"
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
-scopes   = ["main", "test", "dev"]
+scopes   = ["main", "dev"]
 
 [[artifact]]
 name     = "io.micrometer:micrometer-commons:jar:"
@@ -106,7 +87,7 @@ version  = "1.17.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:f2cee6ef046e72eec8128474c7f58c6217173b45ae373c30de0289f2a56ab0fd"
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
-scopes   = ["main", "test", "dev"]
+scopes   = ["main", "dev"]
 deps = [
   "org.jspecify:jspecify:jar:@1.0.1",
 ]
@@ -145,7 +126,7 @@ version  = "1.17.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:eb34f0cd84a879393ae5c21160fc06385ccdc74f36a4d1e31b199f59acfdaf71"
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
-scopes   = ["main", "test", "dev"]
+scopes   = ["main", "dev"]
 deps = [
   "io.micrometer:micrometer-commons:jar:@1.17.1",
   "org.jspecify:jspecify:jar:@1.0.1",
@@ -157,7 +138,7 @@ version  = "2.1.4"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:c9db52100ce6c8aac95cc39075f95720d2e561b11f8051b81c121ad4effd7004"
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
-scopes   = ["main", "test"]
+scopes   = ["main"]
 
 [[artifact]]
 name     = "jakarta.annotation:jakarta.annotation-api:jar:"
@@ -165,7 +146,7 @@ version  = "3.0.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:b01f55552284cfb149411e64eabca75e942d26d2e1786b32914250e4330afaa2"
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
-scopes   = ["main", "test"]
+scopes   = ["main"]
 
 [[artifact]]
 name     = "jakarta.inject:jakarta.inject-api:jar:"
@@ -205,18 +186,10 @@ version  = "4.0.5"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:5e489b6c874c4119e003ff1403db523ee3a8959ec499f3de29e77245efccf216"
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
-scopes   = ["main", "test"]
+scopes   = ["main"]
 deps = [
   "jakarta.activation:jakarta.activation-api:jar:@2.1.4",
 ]
-
-[[artifact]]
-name     = "net.bytebuddy:byte-buddy-agent:jar:"
-version  = "1.18.11"
-source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:780b3601c34150ab9fb822673c472f7229c1041e8e2a12facf6a5de9ba7a2d64"
-pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
-scopes   = ["test"]
 
 [[artifact]]
 name     = "net.bytebuddy:byte-buddy:jar:"
@@ -224,28 +197,7 @@ version  = "1.18.11"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:e32f454c2c1f4aca982f9ec764ed892d9a6eee7e8a77f435cbdd180f6ffdb821"
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
-scopes   = ["main", "test"]
-
-[[artifact]]
-name     = "net.minidev:accessors-smart:jar:"
-version  = "2.6.0"
-source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:222c9f547bb20a99fc486403a398352d1306fb671b38abd7ecab6401df170e61"
-scopes   = ["test"]
-deps = [
-  "org.ow2.asm:asm:jar:@9.10.1",
-]
-
-[[artifact]]
-name     = "net.minidev:json-smart:jar:"
-version  = "2.6.0"
-source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:1ae4b561458afb540be8ec5c6dbb4f2e715a319a7ae64854998aaf924770d61b"
-pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
-scopes   = ["test"]
-deps = [
-  "net.minidev:accessors-smart:jar:@2.6.0",
-]
+scopes   = ["main"]
 
 [[artifact]]
 name     = "org.antlr:antlr4-runtime:jar:"
@@ -260,7 +212,7 @@ version  = "2.25.5"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:64777f73ea0b3104c04eb82befbdccc30a425a19e83ad06cb2f93aa303511863"
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
-scopes   = ["main", "test"]
+scopes   = ["main"]
 
 [[artifact]]
 name     = "org.apache.logging.log4j:log4j-to-slf4j:jar:"
@@ -268,7 +220,7 @@ version  = "2.25.5"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:b68e8b47342dbc9b35644a14fe2efc0b7bf18da703910cd05ad5501ffe07bba1"
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
-scopes   = ["main", "test"]
+scopes   = ["main"]
 deps = [
   "org.apache.logging.log4j:log4j-api:jar:@2.25.5",
   "org.slf4j:slf4j-api:jar:@2.0.18",
@@ -320,28 +272,6 @@ pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
 scopes   = ["main"]
 
 [[artifact]]
-name     = "org.assertj:assertj-core:jar:"
-version  = "3.27.7"
-source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:c4a445426c3c2861666863b842cc4ec7bbb1c4226fefd370b6d2fe83d6c4ff0f"
-pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
-scopes   = ["test"]
-deps = [
-  "net.bytebuddy:byte-buddy:jar:@1.18.11",
-]
-
-[[artifact]]
-name     = "org.awaitility:awaitility:jar:"
-version  = "4.3.0"
-source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:ee58568ea5945dcf988551501655183dc184e23e45a8e013fdfd9036194e6f7b"
-pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
-scopes   = ["test"]
-deps = [
-  "org.hamcrest:hamcrest:jar:@3.0",
-]
-
-[[artifact]]
 name     = "org.eclipse.angus:angus-activation:jar:"
 version  = "2.0.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
@@ -384,14 +314,6 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:d6343e5945d87266ca4e8974a0a2a876e1bd147a00fb65ed3f2e1a3a00f3a82a"
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
 scopes   = ["main"]
-
-[[artifact]]
-name     = "org.hamcrest:hamcrest:jar:"
-version  = "3.0"
-source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:5d66b6a4a680755cb6ed7cb104fa7835ef644667586ff0737adeb977c39ecdbc"
-pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
-scopes   = ["test"]
 
 [[artifact]]
 name     = "org.hdrhistogram:HdrHistogram:jar:"
@@ -552,38 +474,6 @@ deps = [
 ]
 
 [[artifact]]
-name     = "org.mockito:mockito-core:jar:"
-version  = "5.23.0"
-source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:ae295bebd5d11fab97ab297815dc7617188b86003cbce3dfd5c0d5c3a6cc4a0c"
-pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
-scopes   = ["test"]
-deps = [
-  "net.bytebuddy:byte-buddy-agent:jar:@1.18.11",
-  "net.bytebuddy:byte-buddy:jar:@1.18.11",
-  "org.objenesis:objenesis:jar:@3.6",
-]
-
-[[artifact]]
-name     = "org.mockito:mockito-junit-jupiter:jar:"
-version  = "5.23.0"
-source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:65938526fdc311bb3a1c0015eb1c8a0be81515aa998f22b9f4e92f1b668e4f63"
-pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
-scopes   = ["test"]
-deps = [
-  "org.junit.jupiter:junit-jupiter-api:jar:@6.0.3",
-  "org.mockito:mockito-core:jar:@5.23.0",
-]
-
-[[artifact]]
-name     = "org.objenesis:objenesis:jar:"
-version  = "3.6"
-source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:6ecc0fc776af04e2bfd2bf42d618ab5161440dcb8a0e7dff9e84c065c7cec3dd"
-scopes   = ["test"]
-
-[[artifact]]
 name     = "org.opentest4j:opentest4j:jar:"
 version  = "1.3.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
@@ -591,30 +481,12 @@ checksum = "sha256:48e2df636cab6563ced64dcdff8abb2355627cb236ef0bf37598682ddf742
 scopes   = ["test"]
 
 [[artifact]]
-name     = "org.ow2.asm:asm:jar:"
-version  = "9.10.1"
-source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:ed825d10ab1399c8c0cb669e688cf0c8c82629b4c8399b58352b68e92ca10fcb"
-scopes   = ["test"]
-
-[[artifact]]
-name     = "org.skyscreamer:jsonassert:jar:"
-version  = "1.5.3"
-source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:719095c07d4203961320da593441d8b3b643c18eb1d81aa98ea933bb7eb351ba"
-pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
-scopes   = ["test"]
-deps = [
-  "com.vaadin.external.google:android-json:jar:@0.0.20131108.vaadin1",
-]
-
-[[artifact]]
 name     = "org.slf4j:jul-to-slf4j:jar:"
 version  = "2.0.18"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:cbb7d1aaaa9e871eb1a06594abd911bf97027152976edf1edc315be75239204e"
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
-scopes   = ["main", "test"]
+scopes   = ["main"]
 deps = [
   "org.slf4j:slf4j-api:jar:@2.0.18",
 ]
@@ -625,7 +497,7 @@ version  = "2.0.18"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:44508fd1576500688c790b190acdd16fec4f8c79a3e0b900afd70503cf055f55"
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
-scopes   = ["main", "test"]
+scopes   = ["main"]
 
 [[artifact]]
 name     = "org.springframework.boot:spring-boot-actuator-autoconfigure:jar:"
@@ -656,7 +528,7 @@ version  = "4.1.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:59228756ddd76cea050f95d86deff334789bc53b6688beaa673b1af2b9794592"
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
-scopes   = ["main", "test", "dev"]
+scopes   = ["main", "dev"]
 deps = [
   "org.springframework.boot:spring-boot:jar:@4.1.1",
 ]
@@ -897,7 +769,7 @@ version  = "4.1.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:8eca7d72c8434f5c3b935385c656cd5337f473434bdbcb4913b3b3a34897d178"
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
-scopes   = ["main", "test"]
+scopes   = ["main"]
 deps = [
   "ch.qos.logback:logback-classic:jar:@1.5.38",
   "org.apache.logging.log4j:log4j-to-slf4j:jar:@2.25.5",
@@ -914,32 +786,6 @@ scopes   = ["main"]
 deps = [
   "org.springframework.boot:spring-boot-micrometer-metrics:jar:@4.1.1",
   "org.springframework.boot:spring-boot-starter:jar:@4.1.1",
-]
-
-[[artifact]]
-name     = "org.springframework.boot:spring-boot-starter-test:jar:"
-version  = "4.1.1"
-source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:37baecb7fdf6bd5ffc1f88320b04ea166da0e0af0b22b35bca17d48bbc7a5d1e"
-pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
-scopes   = ["test"]
-deps = [
-  "com.jayway.jsonpath:json-path:jar:@2.10.0",
-  "jakarta.xml.bind:jakarta.xml.bind-api:jar:@4.0.5",
-  "net.minidev:json-smart:jar:@2.6.0",
-  "org.assertj:assertj-core:jar:@3.27.7",
-  "org.awaitility:awaitility:jar:@4.3.0",
-  "org.hamcrest:hamcrest:jar:@3.0",
-  "org.junit.jupiter:junit-jupiter:jar:@6.0.3",
-  "org.mockito:mockito-core:jar:@5.23.0",
-  "org.mockito:mockito-junit-jupiter:jar:@5.23.0",
-  "org.skyscreamer:jsonassert:jar:@1.5.3",
-  "org.springframework.boot:spring-boot-starter:jar:@4.1.1",
-  "org.springframework.boot:spring-boot-test-autoconfigure:jar:@4.1.1",
-  "org.springframework.boot:spring-boot-test:jar:@4.1.1",
-  "org.springframework:spring-core:jar:@7.0.9",
-  "org.springframework:spring-test:jar:@7.0.9",
-  "org.xmlunit:xmlunit-core:jar:@2.11.0",
 ]
 
 [[artifact]]
@@ -984,16 +830,17 @@ deps = [
 ]
 
 [[artifact]]
-name     = "org.springframework.boot:spring-boot-starter-web:jar:"
+name     = "org.springframework.boot:spring-boot-starter-webmvc:jar:"
 version  = "4.1.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:840d2ccfa8945bbbde526121f7bbbc075b98c816fec188c0c5f89b7b05be5e21"
+checksum = "sha256:4aec3edbdf6317fefe23db1b989d8bba143a45a51c1fc32346146ecebf67d625"
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
 scopes   = ["main"]
 deps = [
   "org.springframework.boot:spring-boot-http-converter:jar:@4.1.1",
   "org.springframework.boot:spring-boot-starter-jackson:jar:@4.1.1",
   "org.springframework.boot:spring-boot-starter-tomcat:jar:@4.1.1",
+  "org.springframework.boot:spring-boot-starter:jar:@4.1.1",
   "org.springframework.boot:spring-boot-webmvc:jar:@4.1.1",
 ]
 
@@ -1003,35 +850,12 @@ version  = "4.1.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:de5b2dd28400eda20914fd4a6054d0c201e68d2e4de35a25a4d89f054ccc2e63"
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
-scopes   = ["main", "test"]
+scopes   = ["main"]
 deps = [
   "jakarta.annotation:jakarta.annotation-api:jar:@3.0.0",
   "org.springframework.boot:spring-boot-autoconfigure:jar:@4.1.1",
   "org.springframework.boot:spring-boot-starter-logging:jar:@4.1.1",
   "org.yaml:snakeyaml:jar:@2.6",
-]
-
-[[artifact]]
-name     = "org.springframework.boot:spring-boot-test-autoconfigure:jar:"
-version  = "4.1.1"
-source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:fcae103bb2ca65226f225b846b210ba19fbfc42bdec1bf7009d3083baeb819b8"
-pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
-scopes   = ["test"]
-deps = [
-  "org.springframework.boot:spring-boot-test:jar:@4.1.1",
-]
-
-[[artifact]]
-name     = "org.springframework.boot:spring-boot-test:jar:"
-version  = "4.1.1"
-source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:c16efcceaf7c0f7fff6c2cbac5ba1e7e47ee68bacc6a446f8adfe07ffe4ea579"
-pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
-scopes   = ["test"]
-deps = [
-  "org.springframework.boot:spring-boot:jar:@4.1.1",
-  "org.springframework:spring-test:jar:@7.0.9",
 ]
 
 [[artifact]]
@@ -1105,7 +929,7 @@ version  = "4.1.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:0d92b532b1d4020640e72d78c31af175c23db8e0ddd45b81855b7fdf4c9c70f0"
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
-scopes   = ["main", "test", "dev"]
+scopes   = ["main", "dev"]
 deps = [
   "org.springframework:spring-context:jar:@7.0.9",
   "org.springframework:spring-core:jar:@7.0.9",
@@ -1150,7 +974,7 @@ version  = "7.0.9"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:b8c5d6bfcb1f4993f2cc124f7ab7fac40edf5256b9e43c2f7250a733cb5510e9"
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
-scopes   = ["main", "test", "dev"]
+scopes   = ["main", "dev"]
 deps = [
   "org.springframework:spring-beans:jar:@7.0.9",
   "org.springframework:spring-core:jar:@7.0.9",
@@ -1173,7 +997,7 @@ version  = "7.0.9"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:ff218b827a25c9e8929b0cd56dfb56916cea9d5b669ed97dc7cb262508ff548b"
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
-scopes   = ["main", "test", "dev"]
+scopes   = ["main", "dev"]
 deps = [
   "org.springframework:spring-core:jar:@7.0.9",
 ]
@@ -1184,7 +1008,7 @@ version  = "7.0.9"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:7552a2fcfa30cea53eb14d7a65a7a8e1b1dd82e832a7164fb7e6fb105f438858"
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
-scopes   = ["main", "test", "dev"]
+scopes   = ["main", "dev"]
 deps = [
   "io.micrometer:micrometer-observation:jar:@1.17.1",
   "org.springframework:spring-aop:jar:@7.0.9",
@@ -1199,7 +1023,7 @@ version  = "7.0.9"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:5195f4722699b39878d99a832549fe65df2890b159d063b88fff31b1ca65ae36"
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
-scopes   = ["main", "test", "dev"]
+scopes   = ["main", "dev"]
 deps = [
   "commons-logging:commons-logging:jar:@1.3.6",
   "org.jspecify:jspecify:jar:@1.0.1",
@@ -1211,7 +1035,7 @@ version  = "7.0.9"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:046434c40f43819729b9b1db0e6c659dfa68184c1c2c2efa5f7b3a5b27c4e2e2"
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
-scopes   = ["main", "test", "dev"]
+scopes   = ["main", "dev"]
 deps = [
   "org.springframework:spring-core:jar:@7.0.9",
 ]
@@ -1241,17 +1065,6 @@ deps = [
   "org.springframework:spring-core:jar:@7.0.9",
   "org.springframework:spring-jdbc:jar:@7.0.9",
   "org.springframework:spring-tx:jar:@7.0.9",
-]
-
-[[artifact]]
-name     = "org.springframework:spring-test:jar:"
-version  = "7.0.9"
-source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:6ce8fc116f5d309b9ac50a6738bd1b15ea4012a4a5563c0ee89b795bfc9af0dc"
-pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
-scopes   = ["test"]
-deps = [
-  "org.springframework:spring-core:jar:@7.0.9",
 ]
 
 [[artifact]]
@@ -1296,20 +1109,12 @@ deps = [
 ]
 
 [[artifact]]
-name     = "org.xmlunit:xmlunit-core:jar:"
-version  = "2.11.0"
-source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:50970e6069c21182689eb44ae9f8193970e080b6f37fc13f22aa4201cca2dfe4"
-pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
-scopes   = ["test"]
-
-[[artifact]]
 name     = "org.yaml:snakeyaml:jar:"
 version  = "2.6"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:c8f7a98e7394adda02f6317249710e4d1b4c7a25aa8c7eace0c2eea52eb8bf85"
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
-scopes   = ["main", "test"]
+scopes   = ["main"]
 
 [[artifact]]
 name     = "tools.jackson.core:jackson-core:jar:"
@@ -1333,11 +1138,11 @@ deps = [
 
 [[plugin]]
 coordinate = "cc.jumpkick.guards:spring"
-version    = "0.13.2"
+version    = "0.15.3"
 
 [[plugin]]
 coordinate = "cc.jumpkick:jk-spring-boot"
-version    = "0.13.8"
+version    = "0.15.3"
 
 [[module]]
 path    = "."
