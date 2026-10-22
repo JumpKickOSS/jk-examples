@@ -1,7 +1,7 @@
 version = 1
-generated-by = "jk 0.13.7"
-generated-by-build = "ee200446bb46"
-generated-by-build-time = "2026-09-18T04:20:35Z"
+generated-by = "jk 0.15.3"
+generated-by-build = "eafb500388d9"
+generated-by-build-time = "2026-10-22T00:19:05Z"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.10"
 manifests-sha256 = "78a995cf6f599b786418b1d916103e34f34b9328405c73d06594d7e3572eb86a"
@@ -9,7 +9,7 @@ project-id = "5bdb7ebe1344862f5d89cd1d00df2eb2"
 
 [jdk]
 suggested-vendor = "temurin"
-suggested-version = "25.0.4.1"
+suggested-version = "25.0.2"
 
 [[artifact]]
 name     = "org.apiguardian:apiguardian-api:jar:"
@@ -120,7 +120,7 @@ scopes   = ["test"]
 
 [[plugin]]
 coordinate = "cc.jumpkick:jk-lint"
-version    = "0.13.7"
+version    = "0.15.3"
 
 [[module]]
 path    = "."

@@ -1,16 +1,16 @@
 version = 1
-generated-by = "jk 0.13.7"
-generated-by-build = "ee200446bb46"
-generated-by-build-time = "2026-09-18T04:20:35Z"
+generated-by = "jk 0.15.3"
+generated-by-build = "eafb500388d9"
+generated-by-build-time = "2026-10-22T00:19:05Z"
 resolution-algorithm = "pubgrub-v1"
-kotlin = "2.4.20"
+kotlin = "2.4.21"
 jk-min = "0.10"
-manifests-sha256 = "27df0d02b18bc70672154b0c0cb4f22082d2ad03f6e5857a2a40755482fbc286"
+manifests-sha256 = "db332c97097d7b41daeddf0730aaea9305c4b4060f767992e51c9ae50da927aa"
 project-id = "b547999d587da2b64de6c3eadef7ff52"
 
 [jdk]
 suggested-vendor = "temurin"
-suggested-version = "25.0.4.1"
+suggested-version = "25.0.2"
 
 [[artifact]]
 name     = "org.apiguardian:apiguardian-api:jar:"
@@ -21,9 +21,9 @@ scopes   = ["test"]
 
 [[artifact]]
 name     = "org.jetbrains.kotlin:kotlin-stdlib:jar:"
-version  = "2.4.20"
+version  = "2.4.21"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:2226de463d309d4a5500a481320b3dea515a6981dcae1def531fbc158884e25f"
+checksum = "sha256:bd8250210584cb659847dce9cda660f8e9906e5def7fbebcea93dc6dcb6a88a3"
 scopes   = ["main"]
 deps = [
   "org.jetbrains:annotations:jar:@13.0",
@@ -138,7 +138,7 @@ scopes   = ["test"]
 
 [[plugin]]
 coordinate = "cc.jumpkick:jk-lint"
-version    = "0.13.7"
+version    = "0.15.3"
 
 [[module]]
 path    = "."
@@ -146,4 +146,4 @@ group   = "com.example"
 name    = "lint-all-tools"
 version = "0.0.1"
 java    = 25
-kotlin  = "2.4.20"
+kotlin  = "2.4.21"

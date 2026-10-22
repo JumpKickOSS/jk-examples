@@ -31,10 +31,12 @@ Write `classify` the quick way — `if (status < 400) return Outcome.OK;` — an
 tests still pass, but the step does not:
 
 ```text
-✘ lint-checkstyle
-  src/main/java/demo/Sample.java:41:9: 'if' construct must use '{}'s. [NeedBraces]
-  src/main/java/demo/Sample.java:41:22: '400' is a magic number. [MagicNumber]
-  …
+FAIL build lint-checkstyle · 3 errors
+E src/main/java/demo/Sample.java:40:9 'if' construct must use '{}'s. [NeedBraces]
+  40|	        if (status < 400) return Outcome.OK;
+E src/main/java/demo/Sample.java:40:22 '400' is a magic number. [MagicNumber]
+  40|	        if (status < 400) return Outcome.OK;
+E plugin-lint-checkstyle: checkstyle: 2 findings at or above `fail-on = "error"` (2 in all)
 ```
 
 The rule set says `severity = "error"`, so each finding is an error and the step fails the

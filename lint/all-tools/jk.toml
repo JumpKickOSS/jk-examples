@@ -8,7 +8,7 @@ name    = "lint-all-tools"
 group   = "com.example"
 version = "0.0.1"
 java    = 25
-kotlin  = "2.4.20"
+kotlin  = "2.4.21"
 
 [application]
 main = "demo.Sample"
@@ -19,6 +19,7 @@ pmd        = ["pmd.xml"]                         # PMD's best-practices category
 spotbugs   = true                                # over target/classes, against the compile classpath
 detekt     = true                                # detekt's default rule set over src/main/kotlin
 # fail-on  = "error"                             # error (default) | warning | never
+# pmd-fail-on = "warning"                       # one tool's own threshold, beside fail-on
 
 # Compile-time only (@NullMarked): on javac's path, in no jar.
 [provided-dependencies]
