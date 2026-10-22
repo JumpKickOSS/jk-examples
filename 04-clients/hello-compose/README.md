@@ -26,10 +26,10 @@ them in the lock.
 
 ## Tests without a device
 
-`GreetingScreenTest` renders the real composable on the JVM. That takes four test
-dependencies: Robolectric, JUnit 4 and the vintage engine (Robolectric's runner is JUnit 4, and
-the vintage engine runs it beside the JUnit 5 tests), and Compose's `ui-test-junit4` with
-`ui-test-manifest`, which declares the activity the rule launches. The android plugin writes
+`GreetingScreenTest` renders the real composable on the JVM. That takes Robolectric, JUnit 4
+(Robolectric's runner is JUnit 4; declaring it makes jk add the Vintage engine that runs it beside
+the JUnit 5 tests), and Compose's `ui-test-junit4` with `ui-test-manifest`, which declares the
+activity the rule launches. The android plugin writes
 Robolectric's `test_config.properties` and gives the test JVM the JDK flags Robolectric needs, so
 there is no `[test]` table.
 
