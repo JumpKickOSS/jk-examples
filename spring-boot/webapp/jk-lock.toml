@@ -1,7 +1,7 @@
 version = 1
-generated-by = "jk 0.15.3"
-generated-by-build = "eafb500388d9"
-generated-by-build-time = "2026-10-22T00:19:05Z"
+generated-by = "jk 0.20.0"
+generated-by-build = "351af4376a6d"
+generated-by-build-time = "2026-10-22T05:59:57Z"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.12.0"
 manifests-sha256 = "4b532db9801cab35b9c5954788ae3d1e4fca6b5cecf03708b2e057dd2a9950a0"
@@ -956,11 +956,21 @@ deps = [
 
 [[plugin]]
 coordinate = "cc.jumpkick.guards:monorepo"
-version    = "0.15.3"
+version    = "0.20.0"
 
 [[plugin]]
 coordinate = "cc.jumpkick.guards:spring"
-version    = "0.15.3"
+version    = "0.20.0"
+
+[[tool]]
+coordinate = "org.springframework.boot:spring-boot-jarmode-tools"
+version    = "4.1.1"
+checksum   = "sha256:062a9edf01809f4a2b48bfc2fe392fedd27448a3a57113bef510576673d4397f"
+
+[[tool]]
+coordinate = "org.springframework.boot:spring-boot-loader"
+version    = "4.1.1"
+checksum   = "sha256:44b15032ec77953fe1eaa7a895f2a7e0309ebe6556ea62abd289018a57031724"
 
 [[module]]
 path    = "."
