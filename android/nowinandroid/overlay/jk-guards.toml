@@ -2,7 +2,7 @@
 # test libraries in the test scope, a file-size ratchet; the monorepo pack for the workspace shape.
 # Applied to checkout/ by setup.sh.
 [guards]
-extends = ["cc.jumpkick.guards:android:0.15.3", "cc.jumpkick.guards:monorepo:0.15.3"]
+extends = ["cc.jumpkick.guards:android:0.20.0", "cc.jumpkick.guards:monorepo:0.20.0"]
 
 # NiA's sources are upstream and unmodified — the overlay adds build files only — so where the
 # pack's logging ban meets upstream code the site is exempted by class, with the reason, rather

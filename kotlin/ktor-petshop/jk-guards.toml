@@ -1,7 +1,7 @@
 # House rules: the monorepo pack for the workspace shape. There is no Ktor pack, so the per-file
 # ratchet the framework packs would bring is declared here, with a tighter cap for Kotlin.
 [guards]
-extends = ["cc.jumpkick.guards:monorepo:0.15.3"]
+extends = ["cc.jumpkick.guards:monorepo:0.20.0"]
 
 [guards.file-size]
 kind     = "metric"

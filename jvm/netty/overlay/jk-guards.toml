@@ -2,7 +2,7 @@
 # ratchet. Upstream sources are what they are; the baseline records today's sites and the cap
 # only tightens from there. Applied to checkout/ by setup.sh like every other overlay file.
 [guards]
-extends = ["cc.jumpkick.guards:monorepo:0.15.3"]
+extends = ["cc.jumpkick.guards:monorepo:0.20.0"]
 
 [guards.file-size]
 kind     = "metric"
