@@ -6,11 +6,11 @@ plus a front end from Vite's own generator (`npm create vite@latest -- --templat
 | Module | Role |
 |--------|------|
 | `app` | Spring Boot: `/api/hello`, the SPA from `classpath:/static/`, the SPA fallback, `[image]`. |
-| `web` | A **node module** (`node = 24`): jk provisions Node.js, runs `npm ci` and the `build` script, and packages `dist/` as `web-0.1.0.jar` under `static/` because `app` depends on it. |
+| `web` | A **node module** (`node = 24`): jk provisions Node.js, runs `npm ci`, the `build` script and the `test` script (Vitest), and packages `dist/` as `web-0.1.0.jar` under `static/` because `app` depends on it. The page fetches `/api/hello` and shows the greeting. |
 
 ```sh
-jk build                          # Node.js, the web jar, the Boot jar, app's tests
-jk dev -m app                     # the JVM and Vite (inferred from the dependency), /api proxied
+jk build                          # Node.js, the web jar and its Vitest test, the Boot jar, app's tests
+jk dev                            # the JVM and Vite (inferred from the dependency), /api proxied
 jk image -m app --tarball target/vite-react-image.tar
 ```
 

@@ -3,3 +3,7 @@ group = "com.example"
 version = "0.1.0"
 
 node = 24
+
+# `jk image`: an nginx image serving dist/ with an index.html fallback for client-side routes.
+[image]
+kind = "static"

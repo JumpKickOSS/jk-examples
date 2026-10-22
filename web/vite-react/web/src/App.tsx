@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { fetchGreeting } from './api'
 import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
@@ -6,6 +7,11 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [greeting, setGreeting] = useState('…')
+
+  useEffect(() => {
+    fetchGreeting().then(setGreeting, (e: Error) => setGreeting(e.message))
+  }, [])
 
   return (
     <>
@@ -17,6 +23,9 @@ function App() {
         </div>
         <div>
           <h1>Get started</h1>
+          <p id="greeting">
+            The API says: <code>{greeting}</code>
+          </p>
           <p>
             Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
           </p>

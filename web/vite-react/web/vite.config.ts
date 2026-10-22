@@ -1,8 +1,9 @@
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 
-// In development /api is proxied to the JVM on :8080 (`jk dev` in app/ starts both). `jk build`
-// runs the build script and packages dist/ as the web jar; the app serves it from classpath:static.
+// In development /api is proxied to the JVM on :8080 (`jk dev` at the workspace root starts both).
+// `jk build` runs the build script and packages dist/ as the web jar; the app serves it from
+// classpath:static.
 export default defineConfig({
   plugins: [react()],
   server: {

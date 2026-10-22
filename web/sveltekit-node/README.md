@@ -5,7 +5,7 @@ swapped for `@sveltejs/adapter-node` (`jk node exec -- npm install -D @sveltejs/
 `vite build` writes a Node.js server to `build/`.
 
 ```sh
-jk build                          # Node.js from the lock, npm ci, vite build
+jk build                          # Node.js from the lock, npm ci, vite build, svelte-check as `test`
 jk run                            # node build/index.js on $PORT
 jk image --tarball target/sveltekit-node.tar
 ```
