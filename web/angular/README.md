@@ -7,7 +7,8 @@ Generated with `jk new --lang node -t angular` (`@angular/cli new`). jk infers t
 ```sh
 jk build                          # Node.js from the lock, npm ci, ng build, ng test
 jk dev                            # ng serve
+jk image --tarball target/angular.tar   # nginx serving dist/, from `[image] kind = "static"`
 ```
 
 A static front end packages nothing until a JVM module depends on it (then `dist/` rides in a
-resource jar under `static/`) or `[image] kind = "static"` asks for an nginx image.
+resource jar under `static/`) or, as here, `[image] kind = "static"` asks for an nginx image.
