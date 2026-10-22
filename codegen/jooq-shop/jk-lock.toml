@@ -1,15 +1,15 @@
 version = 1
-generated-by = "jk 0.13.7"
-generated-by-build = "ee200446bb46"
-generated-by-build-time = "2026-09-18T04:20:35Z"
+generated-by = "jk 0.15.3"
+generated-by-build = "eafb500388d9"
+generated-by-build-time = "2026-10-22T00:19:05Z"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.10"
-manifests-sha256 = "b75c51b18107f365202501bf794b4b441bf962232964a57073e4604f3868f5a1"
+manifests-sha256 = "aae6049da2209dddc140e710503b5fc82c970d67a4e6c1ec0c0ce437994bdc72"
 project-id = "e41d51219d00d96ef5211653b20e8a53"
 
 [jdk]
 suggested-vendor = "temurin"
-suggested-version = "25.0.4.1"
+suggested-version = "25.0.2"
 
 [[artifact]]
 name     = "io.r2dbc:r2dbc-spi:jar:"
@@ -30,9 +30,9 @@ scopes   = ["test"]
 
 [[artifact]]
 name     = "org.jooq:jooq:jar:"
-version  = "3.21.8"
+version  = "3.21.9"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:e1c7728d54b869a1ad16dfe0ec8f4fad29408bcac434924f9bc3f7037728ad08"
+checksum = "sha256:e6cde9651d6795c8a6d3b10043c1edb1f3c2211fa28b15e6d537f078b1584583"
 scopes   = ["main"]
 deps = [
   "io.r2dbc:r2dbc-spi:jar:@1.0.0.RELEASE",
@@ -147,7 +147,7 @@ scopes   = ["main"]
 
 [[plugin]]
 coordinate = "cc.jumpkick:jk-jooq"
-version    = "0.13.7"
+version    = "0.15.3"
 
 [[module]]
 path    = "."

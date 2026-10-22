@@ -3,12 +3,13 @@
 The `[avro]` preset runs Avro's `SpecificCompiler` over `src/main/avro` in the generate stage —
 one parser shared by every schema, so `UserCreated.avsc` may name the `Role` enum another file
 defines — and the generated `com.acme.events` classes join the compile. No compiler jar is in
-`[dependencies]`: the preset fetches `org.apache.avro:avro-compiler` at its pinned release into the
+`[dependencies]`: the preset fetches `org.apache.avro:avro-compiler` at `[avro] version` into the
 store and hashes it into the step's key; `avro = "1.12.2"` is the runtime the generated classes
 read, kept on the compiler's number.
 
 ```toml
 [avro]
+version     = "1.12.2"      # the avro-compiler release; moves with the runtime pin below
 string-type = "String"      # java.lang.String getters instead of CharSequence
 
 [dependencies]

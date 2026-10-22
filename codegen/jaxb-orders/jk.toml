@@ -1,6 +1,6 @@
 # XML schemas as generated classes: [jaxb] runs xjc over src/main/xsd in the generate stage, the
 # classes join the compile, and a schema edit regenerates. xjc itself is not in [dependencies];
-# the preset fetches it at the pinned release.
+# the preset fetches it at the [jaxb] version.
 
 name    = "jaxb-orders"
 group   = "com.acme"
@@ -10,9 +10,10 @@ java    = 25
 [application]
 main = "com.acme.Main"
 
-# One package for every generated class (-p) in place of the schema's namespace-derived one. The
-# xjc release follows `version`, 4.0.9 unless you say otherwise; the runtime below is its line.
+# One package for every generated class (-p) in place of the schema's namespace-derived one.
+# `version` is the xjc release, written out so it moves with jaxb-runtime below.
 [jaxb]
+version = "4.0.9"
 package = "com.acme.order"
 
 [dependencies]
