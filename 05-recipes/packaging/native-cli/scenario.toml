@@ -1,0 +1,3 @@
+cadence = "nightly"
+needs   = ["graalvm"]
+check   = ["jk build", "jk guard", "jk native", "./target/sums jk.toml"]
