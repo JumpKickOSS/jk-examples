@@ -35,6 +35,7 @@ need. `ports/` and `bench/` are validation and measurement, not teaching materia
 | Dir | Language | Shows |
 |---|---|---|
 | `01-start/java-cli/` | Java | A plain CLI with no framework or plugin, plus core JVM AOT (`jk build --aot-cache`). |
+| `01-start/java-library/` | Java | A library packaged for release: sources and javadoc jars, a Central-ready POM from `[publish]`, `git.properties`, CycloneDX and SPDX SBOMs, `jk install`, JSpecify. |
 | `01-start/kotlin-cli/` | Kotlin | Project-declared Kotlin compiler plugins (`[[kotlin-plugins]]`) via kotlinx-serialization. |
 | `01-start/kotlin-library/` | Kotlin | The `library` template as `jk new` writes it: sources and **Dokka** javadoc jars beside the jar, `git.properties` from `[build-info]`, the `library` guard pack, exact pins. |
 | `01-start/groovy-cli/` | Groovy + Java | Groovy and Java compiled jointly in one module (each calls the other), `CliBuilder`, Spock specs with a data table. |
