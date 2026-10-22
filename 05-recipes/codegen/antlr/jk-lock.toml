@@ -1,0 +1,183 @@
+version = 1
+generated-by = "jk 0.20.0"
+generated-by-build = "9750b4fa3fa4"
+generated-by-build-time = "2026-10-22T15:18:14Z"
+resolution-algorithm = "pubgrub-v1"
+jk-min = "0.10"
+manifests-sha256 = "21089804aa07db086d230f444613e40312eea0de4951e8e555abca3956831f05"
+project-id = "fbf55bc5cd53815a74e94e03d9c81a9f"
+
+[jdk]
+suggested-vendor = "graalvm"
+suggested-version = "25.0.4.1.1"
+
+[graal]
+suggested-vendor = "graalvm"
+suggested-version = "25.0.4.1.1"
+
+[[artifact]]
+name     = "org.antlr:antlr4-runtime:jar:"
+version  = "4.13.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:dd3e8a13a2d669bf84fb8d834de35ce4875f27157698d206241ec8488aadcaf7"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "org.apiguardian:apiguardian-api:jar:"
+version  = "1.1.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b509448ac506d607319f182537f0b35d71007582ec741832a1f111e5b5b70b38"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "org.jspecify:jspecify:jar:"
+version  = "1.0.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:1fad6e6be7557781e4d33729d49ae1cdc8fdda6fe477bb0cc68ce351eafdfbab"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "org.junit.jupiter:junit-jupiter-api:jar:"
+version  = "6.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:555d6cf20fa1710884dd01b86cc5785397ba73e21ada2d4b784f5f1a14dcafc4"
+scopes   = ["test"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
+  "org.junit.platform:junit-platform-commons:jar:@6.1.3",
+  "org.opentest4j:opentest4j:jar:@1.3.0",
+]
+
+[[artifact]]
+name     = "org.junit.jupiter:junit-jupiter-engine:jar:"
+version  = "6.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:414559e78bbfa3bdb2eab009ac3ab1e22369ac31117c270a0bd666da115c5c6c"
+scopes   = ["test"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
+  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3",
+  "org.junit.platform:junit-platform-engine:jar:@6.1.3",
+]
+
+[[artifact]]
+name     = "org.junit.jupiter:junit-jupiter-params:jar:"
+version  = "6.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:05c51cedba2c06a9770707391e006cee825876937dea580b94a265ce145d4939"
+scopes   = ["test"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
+  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3",
+]
+
+[[artifact]]
+name     = "org.junit.jupiter:junit-jupiter:jar:"
+version  = "6.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:6b0a14075c74221de53047e363860b7d19fce802bebc152df2c35c4089c6c379"
+scopes   = ["test"]
+deps = [
+  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3",
+  "org.junit.jupiter:junit-jupiter-engine:jar:@6.1.3",
+  "org.junit.jupiter:junit-jupiter-params:jar:@6.1.3",
+]
+
+[[artifact]]
+name     = "org.junit.platform:junit-platform-commons:jar:"
+version  = "6.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:a4774ae923c109544034aeae7c762cf017fbcdd1342403ba90e0921984b608c3"
+scopes   = ["test"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
+]
+
+[[artifact]]
+name     = "org.junit.platform:junit-platform-engine:jar:"
+version  = "6.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:21ad7ad3a35beda16387979317be1833a72a71d812f9a66ee4b9a7bafb56334c"
+scopes   = ["test"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
+  "org.junit.platform:junit-platform-commons:jar:@6.1.3",
+  "org.opentest4j:opentest4j:jar:@1.3.0",
+]
+
+[[artifact]]
+name     = "org.junit.platform:junit-platform-launcher:jar:"
+version  = "6.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:1dec64b1fc0b7c47a11302aa5b4d37d8160c041b396e27067709ce775601a7b6"
+scopes   = ["test"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
+  "org.junit.platform:junit-platform-engine:jar:@6.1.3",
+]
+
+[[artifact]]
+name     = "org.opentest4j:opentest4j:jar:"
+version  = "1.3.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:48e2df636cab6563ced64dcdff8abb2355627cb236ef0bf37598682ddf742f1b"
+scopes   = ["test"]
+
+[[plugin]]
+coordinate = "cc.jumpkick:jk-antlr"
+version    = "0.20.0"
+
+[[tool]]
+coordinate = "com.ibm.icu:icu4j"
+version    = "72.1"
+checksum   = "sha256:3df572b240a68d13b5cd778ad2393e885d26411434cd8f098ac5987ea2e64ce3"
+
+[[tool]]
+coordinate = "org.abego.treelayout:org.abego.treelayout.core"
+version    = "1.0.3"
+checksum   = "sha256:fa5e31395c39c2e7d46aca0f81f72060931607b2fa41bd36038eb2cb6fb93326"
+
+[[tool]]
+coordinate = "org.antlr:ST4"
+version    = "4.3.4"
+checksum   = "sha256:f927ac384c46d749f8b5ec68972a53aed21e00313509299616edb73bfa15ff33"
+
+[[tool]]
+coordinate = "org.antlr:antlr-runtime"
+version    = "3.5.3"
+checksum   = "sha256:68bf9f5a33dfcb34033495c587e6236bef4e37aa6612919f5b1e843b90669fb9"
+
+[[tool]]
+coordinate = "org.antlr:antlr4"
+version    = "4.13.2"
+checksum   = "sha256:e6f0b10d2ad206f338afe16867fc47148b6729d6e3a260ea28379b91f03a3657"
+
+[[tool]]
+coordinate = "org.antlr:antlr4"
+version    = "4.13.2"
+closure = [
+  "com.ibm.icu:icu4j:72.1",
+  "org.abego.treelayout:org.abego.treelayout.core:1.0.3",
+  "org.antlr:ST4:4.3.4",
+  "org.antlr:antlr-runtime:3.5.3",
+  "org.antlr:antlr4-runtime:4.13.2",
+  "org.antlr:antlr4:4.13.2",
+]
+
+[[tool]]
+coordinate = "org.antlr:antlr4-runtime"
+version    = "4.13.2"
+checksum   = "sha256:dd3e8a13a2d669bf84fb8d834de35ce4875f27157698d206241ec8488aadcaf7"
+
+[[module]]
+path    = "."
+group   = "dev.jkexamples"
+name    = "calc"
+version = "0.1.0"
+java    = 25

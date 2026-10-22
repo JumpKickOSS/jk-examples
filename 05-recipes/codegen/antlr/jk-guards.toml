@@ -1,0 +1,9 @@
+# House rules for a plain JVM example. No framework pack applies here, so the file carries the one
+# ratchet every pack ships: a file-size cap that tolerates today's sites (jk-guards-baseline.toml)
+# and only tightens. `jk guard explain --schema metric` lists the keys.
+[guards.file-size]
+kind     = "metric"
+measure  = "lines"
+cap      = 800
+baseline = true
+why      = "a file that no longer fits a review no longer fits a reviewer"

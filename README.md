@@ -25,6 +25,7 @@ need. `ports/` and `bench/` are validation and measurement, not teaching materia
 | `03-fullstack/` | A JVM backend beside a front end jk builds as a node module, or the front end alone. |
 | `04-android/` | Android apps. |
 | `05-recipes/` | One jk feature per project, framework-free: codegen, lint, test tiers, packaging. |
+| `06-production/` | Production-shaped applications that use everything together. |
 | `ports/` | Third-party builds ported to jk via a pinned checkout plus an `overlay/` (`setup.sh`). |
 | `bench/` | Benchmark harnesses that run jk against real repositories outside this tree. |
 
@@ -73,6 +74,7 @@ need. `ports/` and `bench/` are validation and measurement, not teaching materia
 
 | Dir | Shows |
 |---|---|
+| `05-recipes/codegen/antlr/` | The `[antlr]` preset: an expression language from one grammar — lexer, parser and visitor generated in the package the grammar's directory names, the runtime pinned to the tool's version. |
 | `05-recipes/codegen/avro/` | The `[avro]` preset: Avro schemas compiled in the generate stage, the classes joining the compile, `string-type`, `[avro] version` written beside the runtime pin so `jk update` moves both. |
 | `05-recipes/codegen/jaxb/` | The `[jaxb]` preset: xjc over `src/main/xsd` into one package, the `jakarta.xml.bind` API and the JAXB runtime as the only dependencies, `[jaxb] version` on the runtime's line. |
 | `05-recipes/codegen/jooq/` | The `[jooq]` preset over DDL scripts: the Flyway migrations applied in memory through `DDLDatabase`, typed tables and references generated, no database for the build. |
@@ -86,11 +88,18 @@ need. `ports/` and `bench/` are validation and measurement, not teaching materia
 | `05-recipes/packaging/variants/` | Core `[variants]`: a custom dimension on a plain JVM app — per-value `extra-src` + deps, union lockfile, mandatory selection. |
 | `05-recipes/packaging/profiles-vs-variants/` | The decision matrix as running code: a profile (how), a feature (what capability), and the build-type variant (which product) side by side. |
 
+### 06-production — everything together
+
+| Dir | Shows |
+|---|---|
+| `06-production/hotel-reservations/` | **Kestrel & Vine Hotels**: Spring Boot 4 in four modules (contract, core, service, rest) + Angular 22 with Material 3; PostgreSQL 18 with an exclusion constraint, Flyway migrations and seed, jOOQ generated from the migrations, MapStruct, JSpecify + NullAway, ArchUnit and project guard rules, unit / Testcontainers / Playwright tiers, `jk dev` with a database sidecar, an OCI image with a trained AOT cache, `AGENTS.md` and `jk graph` aliases. |
+
 ### ports and bench
 
 | Dir | Shows |
 |---|---|
 | `ports/netty/` | **Full Netty Maven→jk port** (~40 modules, Mill graph parity) — black-box + benchmarks. A pinned checkout plus `overlay/`. |
+| `bench/agent-graph/` | Tokens an agent reads before it finds the answer to ten navigation questions about the hotel app: grep-and-open vs graphify vs `jk graph`; `RESULTS.md` is a ratchet. |
 | `bench/maven-top20/` | The 20 most-starred Maven-built repositories, each pinned to a SHA and driven through its own Maven build and `jk import` → `lock` → `build` → `test`; `RESULTS.md` is a ratchet. |
 
 One scenario per directory; keep each self-contained and its README honest about deviations. A

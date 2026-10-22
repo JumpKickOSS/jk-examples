@@ -1,0 +1,29 @@
+# The [antlr] preset: a grammar under src/main/antlr4 becomes a lexer, a parser and a visitor in the
+# generate stage, in the package its directory names, and the classes join the compile. The tool
+# is fetched at [antlr] version; the runtime the parser reads is pinned beside it.
+
+name    = "calc"
+group   = "dev.jkexamples"
+version = "0.1.0"
+java    = 25
+
+[application]
+main = "dev.jkexamples.calc.Main"
+
+[antlr]
+version  = "4.13.2"
+visitor  = true
+listener = false
+
+[dependencies]
+antlr4-runtime = "4.13.2"   # on the tool's number; `jk update` moves both
+
+[test-dependencies]
+junit-jupiter = "6.1.3"
+
+[test]
+exclude-tags = ["integration"]
+
+[profiles.integration]
+include-tags = ["integration"]
+exclude-tags = []

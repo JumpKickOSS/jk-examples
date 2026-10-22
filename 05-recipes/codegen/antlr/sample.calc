@@ -1,0 +1,6 @@
+# A week at the harbour, nightly rate 240, Friday and Saturday at 120 %
+rate = 240
+weekend = rate * 1.2
+nights = 5 * rate + 2 * weekend
+nights
+nights * 0.9   # long-stay discount
