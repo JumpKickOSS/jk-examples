@@ -1,0 +1,37 @@
+# A Quarkus REST service: Jackson, Hibernate ORM with Panache over PostgreSQL, Flyway, health
+# checks. The [quarkus] table pins the platform BOM, so extensions are versionless; jk packages the
+# fast-jar and `jk native` runs Quarkus's own native build on the GraalVM jk provisions.
+
+name    = "quarkus-rest"
+group   = "dev.jkexamples"
+version = "0.1.0"
+java    = 25
+
+[application]
+main = "dev.jkexamples.talks.Application"
+
+[quarkus]
+version = "3.40.1"
+
+[dependencies]
+quarkus-rest-jackson          = { group = "io.quarkus", name = "quarkus-rest-jackson" }
+quarkus-hibernate-orm-panache = { group = "io.quarkus", name = "quarkus-hibernate-orm-panache" }
+quarkus-hibernate-validator   = { group = "io.quarkus", name = "quarkus-hibernate-validator" }
+quarkus-jdbc-postgresql       = { group = "io.quarkus", name = "quarkus-jdbc-postgresql" }
+quarkus-flyway                = { group = "io.quarkus", name = "quarkus-flyway" }
+quarkus-flyway-postgresql     = { group = "io.quarkus", name = "quarkus-flyway-postgresql" }
+quarkus-smallrye-health       = { group = "io.quarkus", name = "quarkus-smallrye-health" }
+
+# src/test: plain JUnit, no container. src/integration (`jk test -g`): @QuarkusTest on a PostgreSQL
+# that Quarkus Dev Services starts in Docker or Podman.
+[test-dependencies]
+quarkus-junit5 = { group = "io.quarkus", name = "quarkus-junit5" }
+rest-assured   = { group = "io.rest-assured", name = "rest-assured" }
+assertj-core   = "3.27.7"
+
+[native]
+enabled = true
+
+[image]
+base      = "docker.io/bellsoft/liberica-runtime-container:jre-25-slim-glibc"
+aot-cache = false   # Quarkus's fast-jar starts quickly; `jk native` is its startup path

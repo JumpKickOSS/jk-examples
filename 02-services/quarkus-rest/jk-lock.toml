@@ -1,0 +1,4071 @@
+version = 1
+generated-by = "jk 0.20.0"
+generated-by-build = "1e2f5ab573d2"
+generated-by-build-time = "2026-10-22T16:25:37Z"
+resolution-algorithm = "pubgrub-v1"
+jk-min = "0.10"
+manifests-sha256 = "17cd3af8a94c57fdb112c3375bfd9ec5e130dfb93403d63b4662dbf3f01563d2"
+project-id = "be896323bf758a01a0ca68a83a3b9a1a"
+
+[jdk]
+suggested-vendor = "graalvm"
+suggested-version = "25.0.4.1.1"
+
+[graal]
+suggested-vendor = "graalvm"
+suggested-version = "25.0.4.1.1"
+
+[native]
+metadata-repository = "1.1.16"
+checksum = "sha256:cb984cf7fa53fe527672948946a69ebde8c69c24bacae2dfc79e9872fd7218e6"
+
+[[artifact]]
+name     = "aopalliance:aopalliance:jar:"
+version  = "1.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:0addec670fedcd3f113c5c8091d783280d23f75e3acb841b61a9cdb079376a08"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "com.aayushatharva.brotli4j:brotli4j:jar:"
+version  = "1.23.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:5fcf13ad78d07319cc507465dcf61cbc3efee9f45c9ae1c42a9902414696bc0b"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "com.aayushatharva.brotli4j:service:jar:@1.23.0",
+]
+
+[[artifact]]
+name     = "com.aayushatharva.brotli4j:service:jar:"
+version  = "1.23.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:7f298d44dbb7688419f0179ee1dfa0e4436633272b05d38a5faf3a2b8d08697b"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "com.fasterxml.jackson.core:jackson-annotations:jar:"
+version  = "2.21"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:53ca085f4a150f703f49e1aabd935bd03b43e1ea3d55d135438292af22cef56b"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "com.fasterxml.jackson.core:jackson-core:jar:"
+version  = "2.21.7"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:8c5623b98f32d5f7e1287ff61ed50e08ab7b11381e991fff89327faabba42261"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "com.fasterxml.jackson.core:jackson-databind:jar:"
+version  = "2.21.7"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:1290c2795e93e8a6861a6c4d9ff0d844d32f5ea178362cb2721edf5561e828b1"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "com.fasterxml.jackson.core:jackson-annotations:jar:@2.21",
+  "com.fasterxml.jackson.core:jackson-core:jar:@2.21.7",
+]
+
+[[artifact]]
+name     = "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:"
+version  = "2.21.7"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b8f62f98363ed9aa259b3a479a64fcbe7e081158a8bec6733972e900d12f4e47"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "com.fasterxml.jackson.core:jackson-core:jar:@2.21.7",
+  "com.fasterxml.jackson.core:jackson-databind:jar:@2.21.7",
+]
+
+[[artifact]]
+name     = "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:"
+version  = "2.21.7"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:5989b937f0aa5b6407e7a061077c9bfcac0590dc0a32e54b2fac6a3e2d49e812"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "com.fasterxml.jackson.core:jackson-annotations:jar:@2.21",
+  "com.fasterxml.jackson.core:jackson-core:jar:@2.21.7",
+  "com.fasterxml.jackson.core:jackson-databind:jar:@2.21.7",
+]
+
+[[artifact]]
+name     = "com.fasterxml.jackson.module:jackson-module-parameter-names:jar:"
+version  = "2.21.7"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:ffe66bf4bbb7b4f201aad456294312f13b3649aa392c36d95e786c910a0d513a"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "com.fasterxml.jackson.core:jackson-core:jar:@2.21.7",
+  "com.fasterxml.jackson.core:jackson-databind:jar:@2.21.7",
+]
+
+[[artifact]]
+name     = "com.fasterxml:classmate:jar:"
+version  = "1.7.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:cc3299e5df4fc24180e69477c890d07d38db79dd2decc0ef20e74a986897c0a1"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "com.github.ben-manes.caffeine:caffeine:jar:"
+version  = "3.2.4"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:9d9d2cfd681fd9272ded3d27c9930db12f89f732345975aa113ebc223bbf1224"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "com.google.errorprone:error_prone_annotations:jar:@2.49.0",
+  "org.jspecify:jspecify:jar:@1.0.0",
+]
+
+[[artifact]]
+name     = "com.github.ben-manes.caffeine:jcache:jar:"
+version  = "3.2.4"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:4413eb044d9f37f89aa1067295e10041721d5b8ec79ded16480d36573efb415a"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "com.github.ben-manes.caffeine:caffeine:jar:@3.2.4",
+  "com.typesafe:config:jar:@1.4.7",
+  "jakarta.inject:jakarta.inject-api:jar:@2.0.1",
+  "javax.cache:cache-api:jar:@1.1.1",
+  "org.osgi:org.osgi.service.component.annotations:jar:@1.5.1",
+]
+
+[[artifact]]
+name     = "com.google.code.gson:gson:jar:"
+version  = "2.14.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:2cbd119bf1961c28788310963dc80ba65f58cdeec1dd139c8bdb1240faa2c36f"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "com.google.errorprone:error_prone_annotations:jar:@2.49.0",
+]
+
+[[artifact]]
+name     = "com.google.errorprone:error_prone_annotations:jar:"
+version  = "2.49.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:3b1003e51b8ae56fdbd7c71073e81d1683b97e6c4dff5a9151164d59b769d13c"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+
+[[artifact]]
+name     = "com.google.guava:failureaccess:jar:"
+version  = "1.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:a171ee4c734dd2da837e4b16be9df4661afab72a41adaf31eb84dfdaf936ca26"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "com.google.guava:guava:jar:"
+version  = "33.6.0-jre"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:dc573e1fca4fd5454f4a5fd3d7da2df03002876a4175bafc14a95980dd7713b3"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "com.google.errorprone:error_prone_annotations:jar:@2.49.0",
+  "com.google.guava:failureaccess:jar:@1.0.1",
+  "org.jspecify:jspecify:jar:@1.0.0",
+]
+excluded-by = [
+  "com.google.errorprone:error_prone_annotations <- org.apache.maven:maven-core@3.9.16, org.apache.maven:maven-embedder@3.9.16",
+  "com.google.guava:failureaccess <- org.apache.maven:maven-core@3.9.16, org.apache.maven:maven-embedder@3.9.16",
+  "com.google.guava:listenablefuture <- org.apache.maven:maven-core@3.9.16, org.apache.maven:maven-embedder@3.9.16",
+  "com.google.j2objc:j2objc-annotations <- org.apache.maven:maven-core@3.9.16, org.apache.maven:maven-embedder@3.9.16",
+]
+
+[[artifact]]
+name     = "com.google.inject:guice:jar:classes"
+version  = "5.1.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:142ad4475e19524d2fe3ac995b3f7cbc962fc726f2edb9dbdccc61feab9b2bf9"
+scopes   = ["test"]
+deps = [
+  "aopalliance:aopalliance:jar:@1.0",
+  "com.google.guava:guava:jar:@33.6.0-jre",
+  "javax.inject:javax.inject:jar:@1",
+]
+excluded-by = [
+  "com.google.guava:guava <- org.apache.maven:maven-core@3.9.16, org.apache.maven:maven-embedder@3.9.16",
+]
+
+[[artifact]]
+name     = "com.sun.istack:istack-commons-runtime:jar:"
+version  = "4.1.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:7fd6792361f4dd00f8c56af4a20cecc0066deea4a8f3dec38348af23fc2296ee"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "com.typesafe:config:jar:"
+version  = "1.4.7"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:85ae590d22465136e8776bf692d89b81486556bacd2c48aa0281f0c9c54fc044"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "commons-cli:commons-cli:jar:"
+version  = "1.11.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:8f7f8605d68e15bf32db61ec94eac6fdafc51b1bdbe1e0e0802b57d23f387792"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "commons-codec:commons-codec:jar:"
+version  = "1.22.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:78a5d732fbd715e2d10bd7150d2f8030bae57267f8aacc5c88f642cb6c2e5d3f"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "commons-io:commons-io:jar:"
+version  = "2.22.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:2b9a7b1f726fb86216dbd2c8321eabe0221dbd5b1be81c18e1cb53811b104758"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "io.agroal:agroal-api:jar:"
+version  = "3.2.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:2a22fb1b0a0fce6b4890700257a9e7e57d80cf6752529cea6e4bd818cdbd64d3"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "io.agroal:agroal-narayana:jar:"
+version  = "3.2.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:0ab1d55b666a5ca667dfd6bed0e14b73a9be579bf9488234281973a541b71332"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.agroal:agroal-api:jar:@3.2.1",
+  "org.jboss:jboss-transaction-spi:jar:@8.0.0.Final",
+]
+
+[[artifact]]
+name     = "io.agroal:agroal-pool:jar:"
+version  = "3.2.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:ea61be29058a92f5598e77279b1bb5e94d04490a137ca6629051668df6eedaf3"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.agroal:agroal-api:jar:@3.2.1",
+]
+
+[[artifact]]
+name     = "io.netty:netty-buffer:jar:"
+version  = "4.1.138.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:5bef3ea2b9e80c5e8d03151ca1609bd75fd1e264863bf3e2f8d538392c0f2c38"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.netty:netty-common:jar:@4.1.138.Final",
+]
+
+[[artifact]]
+name     = "io.netty:netty-codec-dns:jar:"
+version  = "4.1.138.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:715d8ba984fde2c9ffc35917c8c1dfdea6b10f0460922f4f6f587c92db8f4ef1"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.netty:netty-buffer:jar:@4.1.138.Final",
+  "io.netty:netty-codec:jar:@4.1.138.Final",
+  "io.netty:netty-common:jar:@4.1.138.Final",
+  "io.netty:netty-transport:jar:@4.1.138.Final",
+]
+
+[[artifact]]
+name     = "io.netty:netty-codec-haproxy:jar:"
+version  = "4.1.138.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:56cc45103a0d24329e3065305c802360beb0c921318222142c333059421f3964"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.netty:netty-buffer:jar:@4.1.138.Final",
+  "io.netty:netty-codec:jar:@4.1.138.Final",
+  "io.netty:netty-transport:jar:@4.1.138.Final",
+]
+
+[[artifact]]
+name     = "io.netty:netty-codec-http2:jar:"
+version  = "4.1.138.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:c7521231535c252903d9e424e162f789b5b55b0b0799628ea466a9b3daf49dae"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.netty:netty-buffer:jar:@4.1.138.Final",
+  "io.netty:netty-codec-http:jar:@4.1.138.Final",
+  "io.netty:netty-codec:jar:@4.1.138.Final",
+  "io.netty:netty-common:jar:@4.1.138.Final",
+  "io.netty:netty-handler:jar:@4.1.138.Final",
+  "io.netty:netty-transport:jar:@4.1.138.Final",
+]
+
+[[artifact]]
+name     = "io.netty:netty-codec-http:jar:"
+version  = "4.1.138.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:7d9000e53c8e37504be42b8dd7b646a7d1c73ad2cf801527fe3c6301880fe06f"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.netty:netty-buffer:jar:@4.1.138.Final",
+  "io.netty:netty-codec:jar:@4.1.138.Final",
+  "io.netty:netty-common:jar:@4.1.138.Final",
+  "io.netty:netty-handler:jar:@4.1.138.Final",
+  "io.netty:netty-transport:jar:@4.1.138.Final",
+]
+
+[[artifact]]
+name     = "io.netty:netty-codec-socks:jar:"
+version  = "4.1.138.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:bc15ad96188a6eee2d0c5f7f8e443fa916fa30e74a65e220b1ac0a04574dda87"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.netty:netty-buffer:jar:@4.1.138.Final",
+  "io.netty:netty-codec:jar:@4.1.138.Final",
+  "io.netty:netty-common:jar:@4.1.138.Final",
+  "io.netty:netty-transport:jar:@4.1.138.Final",
+]
+
+[[artifact]]
+name     = "io.netty:netty-codec:jar:"
+version  = "4.1.138.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:21b9b7717da9ed7034c7a9ef4fcea4a08825e8f52d775da4d898364edf99327f"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.netty:netty-buffer:jar:@4.1.138.Final",
+  "io.netty:netty-common:jar:@4.1.138.Final",
+  "io.netty:netty-transport:jar:@4.1.138.Final",
+]
+
+[[artifact]]
+name     = "io.netty:netty-common:jar:"
+version  = "4.1.138.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b4ebb8fa44cd5790731928a83fd0f25a530e41c407c093bef4a0196db30b693f"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "io.netty:netty-handler-proxy:jar:"
+version  = "4.1.138.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:fd26635e06af15b2dd3f7502a195dc19fcd451264948a8707fb26f60e4d510b9"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.netty:netty-buffer:jar:@4.1.138.Final",
+  "io.netty:netty-codec-http:jar:@4.1.138.Final",
+  "io.netty:netty-codec-socks:jar:@4.1.138.Final",
+  "io.netty:netty-codec:jar:@4.1.138.Final",
+  "io.netty:netty-common:jar:@4.1.138.Final",
+  "io.netty:netty-transport:jar:@4.1.138.Final",
+]
+
+[[artifact]]
+name     = "io.netty:netty-handler:jar:"
+version  = "4.1.138.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:a79fb814e029db17da82baea25a0340172af2c59f107fd20b394c1fa28680f21"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.netty:netty-buffer:jar:@4.1.138.Final",
+  "io.netty:netty-codec:jar:@4.1.138.Final",
+  "io.netty:netty-common:jar:@4.1.138.Final",
+  "io.netty:netty-resolver:jar:@4.1.138.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.1.138.Final",
+  "io.netty:netty-transport:jar:@4.1.138.Final",
+]
+
+[[artifact]]
+name     = "io.netty:netty-resolver-dns:jar:"
+version  = "4.1.138.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:a636815e5bcc9501a7d2c9bdba8b058811ddec5d0c76ec58fc6a165f4facf21c"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.netty:netty-buffer:jar:@4.1.138.Final",
+  "io.netty:netty-codec-dns:jar:@4.1.138.Final",
+  "io.netty:netty-codec:jar:@4.1.138.Final",
+  "io.netty:netty-common:jar:@4.1.138.Final",
+  "io.netty:netty-handler:jar:@4.1.138.Final",
+  "io.netty:netty-resolver:jar:@4.1.138.Final",
+  "io.netty:netty-transport:jar:@4.1.138.Final",
+]
+
+[[artifact]]
+name     = "io.netty:netty-resolver:jar:"
+version  = "4.1.138.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:50c338a0e5c9997513e738f0fcb47d579a9e8852d317ba367f5d141e210187c0"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.netty:netty-common:jar:@4.1.138.Final",
+]
+
+[[artifact]]
+name     = "io.netty:netty-tcnative-classes:jar:"
+version  = "2.0.84.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:7a4437abf98b0cec053af4443fe321177d2cfccfec7bcad4e7d8b75571bbec4d"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "io.netty:netty-transport-native-unix-common:jar:"
+version  = "4.1.138.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:8d1ada8f185d6f6da4cd79f9daeef39f1db49908cfec8bc2a1fb602458aa2341"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.netty:netty-buffer:jar:@4.1.138.Final",
+  "io.netty:netty-common:jar:@4.1.138.Final",
+  "io.netty:netty-transport:jar:@4.1.138.Final",
+]
+
+[[artifact]]
+name     = "io.netty:netty-transport:jar:"
+version  = "4.1.138.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:6c064c1cae4d410b920abfc07959a49db1b4778a9547614373e97d31cab0cad6"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.netty:netty-buffer:jar:@4.1.138.Final",
+  "io.netty:netty-common:jar:@4.1.138.Final",
+  "io.netty:netty-resolver:jar:@4.1.138.Final",
+]
+
+[[artifact]]
+name     = "io.quarkus.arc:arc:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:06ef89b8a2da007286342f1855452ae50655d78263e28cc9448d414c4187be54"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.smallrye.reactive:mutiny:jar:@3.3.0",
+  "jakarta.annotation:jakarta.annotation-api:jar:@3.0.0",
+  "jakarta.enterprise:jakarta.enterprise.cdi-api:jar:@4.1.0",
+  "jakarta.transaction:jakarta.transaction-api:jar:@2.0.1",
+  "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
+]
+
+[[artifact]]
+name     = "io.quarkus.gizmo:gizmo2:jar:"
+version  = "2.1.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:777af2f3b98bbc238938e95c0679c5a1473ec86513e1b88c36901a30c58c9b8e"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "io.smallrye.classfile:jdk-classfile-backport:jar:@26",
+  "io.smallrye.common:smallrye-common-constraint:jar:@2.19.0",
+  "io.smallrye.common:smallrye-common-resource:jar:@2.19.0",
+]
+
+[[artifact]]
+name     = "io.quarkus.gizmo:gizmo:jar:"
+version  = "1.10.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:59b8d44767e19a707a63bf9cdd88fb8fb7e0a3310b9bb6f2ee8cef264473bbbe"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "io.smallrye:jandex:jar:@3.6.0",
+  "org.ow2.asm:asm-util:jar:@9.10.1",
+  "org.ow2.asm:asm:jar:@9.10.1",
+]
+
+[[artifact]]
+name     = "io.quarkus.resteasy.reactive:resteasy-reactive-common-types:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:8e5f04e41ac3fea678a13feed770b4253a71c8b94687761d3e1146008beabaa0"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "jakarta.ws.rs:jakarta.ws.rs-api:jar:@3.1.0",
+]
+
+[[artifact]]
+name     = "io.quarkus.resteasy.reactive:resteasy-reactive-common:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:a81e52d3f430a8af4f1ec0ffc5f3c1e30d81756561b480bd63aee390e039be2a"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.quarkus.resteasy.reactive:resteasy-reactive-common-types:jar:@3.40.1",
+  "io.smallrye.common:smallrye-common-annotation:jar:@2.19.0",
+  "io.smallrye.reactive:mutiny-zero-flow-adapters:jar:@1.2.1",
+  "io.smallrye.reactive:mutiny:jar:@3.3.0",
+  "jakarta.annotation:jakarta.annotation-api:jar:@3.0.0",
+  "jakarta.enterprise:jakarta.enterprise.cdi-api:jar:@4.1.0",
+  "jakarta.ws.rs:jakarta.ws.rs-api:jar:@3.1.0",
+  "org.eclipse.parsson:parsson:jar:@1.1.9",
+  "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
+  "org.reactivestreams:reactive-streams:jar:@1.0.4",
+]
+
+[[artifact]]
+name     = "io.quarkus.resteasy.reactive:resteasy-reactive-jackson:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:e334cc0950bb83a6bea6cd90d8158512041fce8d53037dab8e250471fb9bd54f"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "com.fasterxml.jackson.core:jackson-databind:jar:@2.21.7",
+  "io.quarkus.resteasy.reactive:resteasy-reactive:jar:@3.40.1",
+  "jakarta.annotation:jakarta.annotation-api:jar:@3.0.0",
+  "jakarta.xml.bind:jakarta.xml.bind-api:jar:@4.0.5",
+  "org.jboss.logging:commons-logging-jboss-logging:jar:@2.0.0.Final",
+  "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
+]
+
+[[artifact]]
+name     = "io.quarkus.resteasy.reactive:resteasy-reactive-vertx:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:2825004d47480c9452bb6e0510486020512014e278146aff4a5992e9fb7cda16"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.quarkus.resteasy.reactive:resteasy-reactive:jar:@3.40.1",
+  "io.quarkus.vertx.utils:quarkus-vertx-utils:jar:@3.40.1",
+  "io.smallrye.reactive:smallrye-mutiny-vertx-core:jar:@3.23.1",
+  "io.vertx:vertx-web:jar:@4.5.34",
+  "jakarta.annotation:jakarta.annotation-api:jar:@3.0.0",
+  "jakarta.enterprise:jakarta.enterprise.cdi-api:jar:@4.1.0",
+  "jakarta.ws.rs:jakarta.ws.rs-api:jar:@3.1.0",
+  "jakarta.xml.bind:jakarta.xml.bind-api:jar:@4.0.5",
+  "org.jboss.logging:commons-logging-jboss-logging:jar:@2.0.0.Final",
+  "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
+]
+
+[[artifact]]
+name     = "io.quarkus.resteasy.reactive:resteasy-reactive:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:be95ef455fcb19233b375f6b823ccee8188dd768d1f31f97e4185390d5b35553"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.quarkus.resteasy.reactive:resteasy-reactive-common:jar:@3.40.1",
+  "jakarta.annotation:jakarta.annotation-api:jar:@3.0.0",
+  "jakarta.enterprise:jakarta.enterprise.cdi-api:jar:@4.1.0",
+  "jakarta.ws.rs:jakarta.ws.rs-api:jar:@3.1.0",
+  "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
+]
+
+[[artifact]]
+name     = "io.quarkus.security:quarkus-security:jar:"
+version  = "2.3.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:9176a0e5b88d7b29ab28b5137d5702d44a248da3d7e7fa80f1b89d4ec64f929a"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.smallrye.reactive:mutiny:jar:@3.3.0",
+  "jakarta.enterprise:jakarta.enterprise.cdi-api:jar:@4.1.0",
+  "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
+]
+
+[[artifact]]
+name     = "io.quarkus.vertx.utils:quarkus-vertx-utils:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:0f800dc92ea4ade6a3dc0dba32b2f825a1da38b5c8dffaac3a7e1d1be1771381"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.vertx:vertx-web:jar:@4.5.34",
+  "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-agroal:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:fd1e2b6634d7c3fe4fc7a6987286e185187c02605faeba982cbf6318466ca3d3"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.agroal:agroal-api:jar:@3.2.1",
+  "io.agroal:agroal-narayana:jar:@3.2.1",
+  "io.agroal:agroal-pool:jar:@3.2.1",
+  "io.quarkus:quarkus-arc:jar:@3.40.1",
+  "io.quarkus:quarkus-core:jar:@3.40.1",
+  "io.quarkus:quarkus-credentials:jar:@3.40.1",
+  "io.quarkus:quarkus-datasource:jar:@3.40.1",
+  "io.quarkus:quarkus-narayana-jta:jar:@3.40.1",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-arc:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:6e67b61817de34142d2fd97359d9e6b7619cfb8ab2c733f835cb9f85983fb00c"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.quarkus.arc:arc:jar:@3.40.1",
+  "io.quarkus:quarkus-core:jar:@3.40.1",
+  "org.eclipse.microprofile.context-propagation:microprofile-context-propagation-api:jar:@1.3",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-bootstrap-app-model:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:9c9ea7177d008b115ca49d45ff7a58a0fd03af916c955ed88835bfa599932f2d"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "io.quarkus:quarkus-fs-util:jar:@1.4.2",
+  "io.smallrye.classfile:jdk-classfile-backport:jar:@26",
+  "org.jboss.logging:commons-logging-jboss-logging:jar:@2.0.0.Final",
+  "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-bootstrap-core:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:9990129ed5b9cd266fea77f582049f7280e4a4ca4e0d8d0197edfd7e229edb3e"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "io.quarkus:quarkus-bootstrap-app-model:jar:@3.40.1",
+  "io.quarkus:quarkus-bootstrap-json:jar:@3.40.1",
+  "io.quarkus:quarkus-classloader-commons:jar:@3.40.1",
+  "io.quarkus:quarkus-value-registry:jar:@3.40.1",
+  "io.smallrye.common:smallrye-common-io:jar:@2.19.0",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-bootstrap-gradle-resolver:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:85f34f04f7606791948e2229bba9afabf847a88e009172ad8bbef036fcd2899c"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "io.quarkus:quarkus-bootstrap-app-model:jar:@3.40.1",
+  "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
+  "org.jboss.slf4j:slf4j-jboss-logmanager:jar:@2.0.2.Final",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-bootstrap-json:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b3f8d69b8c02033e31406be5a05696b94f418022c40d42cf9139d88385a73e68"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-bootstrap-maven-resolver:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:dac723302da34994e74323da614a4a887b592b46d62429a0fdeb57f223311fe3"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "io.quarkus:quarkus-bootstrap-app-model:jar:@3.40.1",
+  "io.quarkus:quarkus-bootstrap-maven4-resolver:jar:@3.40.1",
+  "io.quarkus:quarkus-classloader-commons:jar:@3.40.1",
+  "io.quarkus:quarkus-fs-util:jar:@1.4.2",
+  "io.smallrye.beanbag:smallrye-beanbag-maven:jar:@1.6.1",
+  "org.apache.maven.resolver:maven-resolver-connector-basic:jar:@1.9.27",
+  "org.apache.maven.resolver:maven-resolver-transport-file:jar:@1.9.27",
+  "org.apache.maven.resolver:maven-resolver-transport-http:jar:@1.9.27",
+  "org.apache.maven:maven-embedder:jar:@3.9.16",
+  "org.apache.maven:maven-resolver-provider:jar:@3.9.16",
+  "org.apache.maven:maven-settings-builder:jar:@3.9.16",
+  "org.eclipse.sisu:org.eclipse.sisu.plexus:jar:@1.0.1",
+  "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
+  "org.jboss.logmanager:jboss-logmanager:jar:@3.2.2.Final",
+  "org.jboss.slf4j:slf4j-jboss-logmanager:jar:@2.0.2.Final",
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-bootstrap-maven4-resolver:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:ff9e0e3b15aaf49e58b0641885f061db2d5da29c8009619985f4ed41e712ef2c"
+scopes   = ["test"]
+deps = [
+  "javax.inject:javax.inject:jar:@1",
+  "org.apache.maven:maven-resolver-provider:jar:@3.9.16",
+  "org.eclipse.sisu:org.eclipse.sisu.inject:jar:@1.0.1",
+]
+excluded-by = [
+  "javax.inject:javax.inject <- io.quarkus:quarkus-bootstrap-maven-resolver@3.40.1",
+  "org.apache.maven:maven-resolver-provider <- io.quarkus:quarkus-bootstrap-maven-resolver@3.40.1",
+  "org.eclipse.sisu:org.eclipse.sisu.inject <- io.quarkus:quarkus-bootstrap-maven-resolver@3.40.1",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-bootstrap-runner:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:19eb62fe3c60ad3f5c6b5aad4b6b879d79daf95ad2078b14683aba95c3a5be33"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+deps = [
+  "io.quarkus:quarkus-classloader-commons:jar:@3.40.1",
+  "io.smallrye.common:smallrye-common-io:jar:@2.19.0",
+  "org.crac:crac:jar:@1.5.0",
+  "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
+  "org.jboss.logmanager:jboss-logmanager:jar:@3.2.2.Final",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-builder:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:03c4c53134209c8df16e7d05ffac2ecec3d8b958dceead0e06740b3ae385fbbf"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "io.quarkus:quarkus-bootstrap-json:jar:@3.40.1",
+  "io.smallrye.common:smallrye-common-constraint:jar:@2.19.0",
+  "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
+  "org.jboss.threads:jboss-threads:jar:@3.9.2",
+  "org.wildfly.common:wildfly-common:jar:@2.0.1",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-caffeine:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:01e6f2a4a0cb199c72b32d97d25b1b6a19418f0401f5d86fad5f64ec26f1612b"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "com.github.ben-manes.caffeine:caffeine:jar:@3.2.4",
+  "io.quarkus:quarkus-core:jar:@3.40.1",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-class-change-agent:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:84067ac73e36dccd6a545c156f86340c3f7a717cfb85931c4426ecc7ef1f597b"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-classloader-commons:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:406f021aedcd1ddb4521fe9fa947d00bfe8e55f6f1d87e6904618eb1f83aa78b"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-core-deployment:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:3a843dd7e1e521ee096a53a1f540a5756f441137d9704df1a3d4018fbe315154"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "io.quarkus.gizmo:gizmo2:jar:@2.1.1",
+  "io.quarkus.gizmo:gizmo:jar:@1.10.1",
+  "io.quarkus:quarkus-bootstrap-core:jar:@3.40.1",
+  "io.quarkus:quarkus-builder:jar:@3.40.1",
+  "io.quarkus:quarkus-class-change-agent:jar:@3.40.1",
+  "io.quarkus:quarkus-classloader-commons:jar:@3.40.1",
+  "io.quarkus:quarkus-core:jar:@3.40.1",
+  "io.quarkus:quarkus-development-mode-spi:jar:@3.40.1",
+  "io.quarkus:quarkus-hibernate-validator-spi:jar:@3.40.1",
+  "io.smallrye.common:smallrye-common-os:jar:@2.19.0",
+  "io.smallrye.common:smallrye-common-process:jar:@2.19.0",
+  "io.smallrye:jandex-gizmo2:jar:@3.6.0",
+  "io.smallrye:jandex:jar:@3.6.0",
+  "net.bytebuddy:byte-buddy-agent:jar:@1.18.8",
+  "org.aesh:aesh:jar:@3.18.2",
+  "org.aesh:readline:jar:@3.18.1",
+  "org.apache.commons:commons-compress:jar:@1.28.0",
+  "org.apache.commons:commons-lang3:jar:@3.20.0",
+  "org.eclipse.sisu:org.eclipse.sisu.inject:jar:@1.0.1",
+  "org.graalvm.sdk:nativeimage:jar:@25.0.4.1",
+  "org.junit.jupiter:junit-jupiter:jar:@6.1.3",
+  "org.junit.platform:junit-platform-launcher:jar:@6.1.3",
+  "org.ow2.asm:asm-commons:jar:@9.10.1",
+  "org.ow2.asm:asm:jar:@9.10.1",
+  "org.wildfly.common:wildfly-common:jar:@2.0.1",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-core:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:3f75b567f56ed89f80451176656a78fdcced7571330f7e7c7527f1f3ea987d97"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+deps = [
+  "io.quarkus:quarkus-bootstrap-runner:jar:@3.40.1",
+  "io.quarkus:quarkus-development-mode-spi:jar:@3.40.1",
+  "io.quarkus:quarkus-fs-util:jar:@1.4.2",
+  "io.quarkus:quarkus-ide-launcher:jar:@3.40.1",
+  "io.quarkus:quarkus-value-registry:jar:@3.40.1",
+  "io.smallrye.common:smallrye-common-os:jar:@2.19.0",
+  "io.smallrye.config:smallrye-config:jar:@3.17.2",
+  "jakarta.annotation:jakarta.annotation-api:jar:@3.0.0",
+  "jakarta.enterprise:jakarta.enterprise.cdi-api:jar:@4.1.0",
+  "jakarta.inject:jakarta.inject-api:jar:@2.0.1",
+  "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
+  "org.jboss.logmanager:jboss-logmanager:jar:@3.2.2.Final",
+  "org.jboss.slf4j:slf4j-jboss-logmanager:jar:@2.0.2.Final",
+  "org.jboss.threads:jboss-threads:jar:@3.9.2",
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+  "org.wildfly.common:wildfly-common:jar:@2.0.1",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-credentials:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:7ea00fcfeaf26c5bd6c925c1ab5247b06ff4afc8528812cdca741fc34bba641d"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.quarkus.arc:arc:jar:@3.40.1",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-datasource-common:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:79d73ea5a6d91e9b077f2fa333d15aeff42c2c352381e5f6be0a73b4fded6a6b"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.quarkus:quarkus-core:jar:@3.40.1",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-datasource:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:73915c5c32b3eb2c4152d30155f73a169e17c03c28972ecb2746b483a81191a8"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.quarkus:quarkus-arc:jar:@3.40.1",
+  "io.quarkus:quarkus-core:jar:@3.40.1",
+  "io.quarkus:quarkus-credentials:jar:@3.40.1",
+  "io.quarkus:quarkus-datasource-common:jar:@3.40.1",
+  "io.quarkus:quarkus-devservices:jar:@3.40.1",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-development-mode-spi:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:33638b290e946702730acf6e57aec4e3dd339815c3fa0f0ce5019288dc3367b9"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+deps = [
+  "io.smallrye.common:smallrye-common-os:jar:@2.19.0",
+  "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-devservices:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:9a668e0e6b84e9d1ce0189c3c8d755aa750c6677150a206728ebe078cd5b8ef7"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.quarkus:quarkus-arc:jar:@3.40.1",
+  "io.quarkus:quarkus-core:jar:@3.40.1",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-flyway-postgresql:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:20da5b4c5471e73a31c6b403b3b102d647845365634fb132cfcfffb7e89dde5f"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.quarkus:quarkus-core:jar:@3.40.1",
+  "org.flywaydb:flyway-database-postgresql:jar:@12.0.0",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-flyway:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:7c5b7743acf2af8f056fe1afa9ed385dedb50fda46ebb66b92629e830503d374"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.quarkus:quarkus-agroal:jar:@3.40.1",
+  "io.quarkus:quarkus-core:jar:@3.40.1",
+  "io.quarkus:quarkus-datasource-common:jar:@3.40.1",
+  "io.quarkus:quarkus-narayana-jta:jar:@3.40.1",
+  "org.flywaydb:flyway-core:jar:@12.0.0",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-fs-util:jar:"
+version  = "1.4.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:a6034133b21de4e3aee4bc9e250f8416abfbdc0c86e6e0737f766415c3866169"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-hibernate-orm-panache-common:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:ac72fd4cca6d2d954c4b6514332a3bd4de71e94aad2c171e32954f51f0ba3fb5"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.quarkus:quarkus-hibernate-orm:jar:@3.40.1",
+  "io.quarkus:quarkus-panache-hibernate-common:jar:@3.40.1",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-hibernate-orm-panache:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:c107e16c82bc9304d8af8aaac680965e3a3dabb6da9679cf55b12ae0ab4bd7c8"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.quarkus:quarkus-arc:jar:@3.40.1",
+  "io.quarkus:quarkus-hibernate-orm-panache-common:jar:@3.40.1",
+  "io.quarkus:quarkus-hibernate-orm:jar:@3.40.1",
+  "io.quarkus:quarkus-panache-common:jar:@3.40.1",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-hibernate-orm:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:9eabfdeac8e651a7234f054a17cff3d27161e8be443f98ef2944f53cc74533d4"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "com.github.ben-manes.caffeine:jcache:jar:@3.2.4",
+  "io.quarkus:quarkus-agroal:jar:@3.40.1",
+  "io.quarkus:quarkus-caffeine:jar:@3.40.1",
+  "io.quarkus:quarkus-core:jar:@3.40.1",
+  "io.quarkus:quarkus-narayana-jta:jar:@3.40.1",
+  "jakarta.persistence:jakarta.persistence-api:jar:@3.2.0",
+  "jakarta.transaction:jakarta.transaction-api:jar:@2.0.1",
+  "jakarta.xml.bind:jakarta.xml.bind-api:jar:@4.0.5",
+  "org.glassfish.jaxb:jaxb-runtime:jar:@4.0.9",
+  "org.hibernate.orm:hibernate-core:jar:@7.4.9.Final",
+  "org.hibernate.orm:hibernate-graalvm:jar:@7.4.9.Final",
+  "org.hibernate.orm:hibernate-jcache:jar:@7.4.9.Final",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-hibernate-validator-spi:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:5c8cffccac1e16c554c89f39512780c486d1224199d2fac3a3396425882645e4"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "io.quarkus:quarkus-builder:jar:@3.40.1",
+  "io.smallrye:jandex:jar:@3.6.0",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-hibernate-validator:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:ba8296dbf301e40ab511fcbae68ef36af057f4e3401f0bd3bdab1b7837167be3"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.quarkus:quarkus-arc:jar:@3.40.1",
+  "io.quarkus:quarkus-core:jar:@3.40.1",
+  "io.smallrye.config:smallrye-config-validator:jar:@3.17.2",
+  "jakarta.ws.rs:jakarta.ws.rs-api:jar:@3.1.0",
+  "org.glassfish.expressly:expressly:jar:@6.0.0",
+  "org.hibernate.validator:hibernate-validator:jar:@9.1.3.Final",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-ide-launcher:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:d956344c362f825780d8f54cf098f1cc40eda82ee8ca424a1d36abc729196f6b"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-jackson:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:95b89d56a93027a9c3d525edb067ae694d71f0dd5d8c99611316f9c63744a35e"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "com.fasterxml.jackson.core:jackson-databind:jar:@2.21.7",
+  "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:@2.21.7",
+  "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:@2.21.7",
+  "com.fasterxml.jackson.module:jackson-module-parameter-names:jar:@2.21.7",
+  "io.quarkus:quarkus-arc:jar:@3.40.1",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-jdbc-postgresql:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:1fc64bd684c07949bfdbec9c44b496075773ba8d8423bea70b97acb2b43eef58"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.quarkus:quarkus-agroal:jar:@3.40.1",
+  "io.quarkus:quarkus-arc:jar:@3.40.1",
+  "org.postgresql:postgresql:jar:@42.7.13",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-jsonp:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:01088afd376475fdf91d5abab712519bd23f167aded8713fdebf0b1e3e8344f1"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.quarkus:quarkus-core:jar:@3.40.1",
+  "org.eclipse.parsson:parsson:jar:@1.1.9",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-junit-common:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:2387ed2f0209e50b7ef82c9121564eb6bd30bc0a85f7c1fbdd4cd4762ba8deb9"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
+  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3",
+  "org.junit.jupiter:junit-jupiter-engine:jar:@6.1.3",
+  "org.junit.jupiter:junit-jupiter-params:jar:@6.1.3",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-junit-config:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:3f625b359f27430a342fc91a15e8db1f476f258955d09ea73b458ed7d8bef881"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "io.quarkus:quarkus-core-deployment:jar:@3.40.1",
+  "io.quarkus:quarkus-core:jar:@3.40.1",
+  "io.smallrye.config:smallrye-config:jar:@3.17.2",
+  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-junit5:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+path     = "quarkus-junit5-3.40.1.pom"
+scopes   = ["test"]
+deps = [
+  "io.quarkus:quarkus-junit:jar:@3.40.1",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-junit:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:f79b727c405c8adcc7dcd51d2e4a46e0fe75484f9d0a9bbf0e5c980f3de9d16d"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "io.quarkus:quarkus-bootstrap-core:jar:@3.40.1",
+  "io.quarkus:quarkus-core:jar:@3.40.1",
+  "io.quarkus:quarkus-junit-common:jar:@3.40.1",
+  "io.quarkus:quarkus-junit-config:jar:@3.40.1",
+  "io.quarkus:quarkus-test-common:jar:@3.40.1",
+  "org.eclipse.sisu:org.eclipse.sisu.inject:jar:@1.0.1",
+  "org.junit.jupiter:junit-jupiter:jar:@6.1.3",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-mutiny:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:eb0c14df189da848ce262920c3315a7ad1d7669f18fb12673e3b9099e69d41b7"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.quarkus:quarkus-core:jar:@3.40.1",
+  "io.quarkus:quarkus-smallrye-context-propagation:jar:@3.40.1",
+  "io.smallrye.reactive:mutiny-smallrye-context-propagation:jar:@3.3.0",
+  "io.smallrye.reactive:mutiny:jar:@3.3.0",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-narayana-jta:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:8b7962d6515e14f3d90f1bef86f01db853b60a880cb54ea4337f3f28c4a48c37"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.quarkus:quarkus-arc:jar:@3.40.1",
+  "io.quarkus:quarkus-core:jar:@3.40.1",
+  "io.quarkus:quarkus-datasource-common:jar:@3.40.1",
+  "io.quarkus:quarkus-mutiny:jar:@3.40.1",
+  "io.quarkus:quarkus-transaction-annotations:jar:@3.40.1",
+  "io.smallrye.reactive:mutiny-zero-flow-adapters:jar:@1.2.1",
+  "io.smallrye.reactive:smallrye-reactive-converter-api:jar:@3.0.3",
+  "io.smallrye.reactive:smallrye-reactive-converter-mutiny:jar:@3.0.3",
+  "io.smallrye:smallrye-context-propagation-jta:jar:@2.3.0",
+  "jakarta.transaction:jakarta.transaction-api:jar:@2.0.1",
+  "org.jboss.narayana.jta:narayana-jta:jar:@7.3.4.Final",
+  "org.jboss.narayana.jts:narayana-jts-integration:jar:@7.3.4.Final",
+  "org.jboss:jboss-transaction-spi:jar:@8.0.0.Final",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-netty:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:c76df5a03a93c634d4a271ca6d8e8a8b352e34bd710782e6d56218c137e966c5"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.netty:netty-codec-http2:jar:@4.1.138.Final",
+  "io.netty:netty-codec-http:jar:@4.1.138.Final",
+  "io.netty:netty-codec:jar:@4.1.138.Final",
+  "io.netty:netty-handler:jar:@4.1.138.Final",
+  "io.quarkus:quarkus-arc:jar:@3.40.1",
+  "jakarta.enterprise:jakarta.enterprise.cdi-api:jar:@4.1.0",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-panache-common:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:643bc9d6de825ef927180994fb88debc8143fc4dc05ac14ecbfcdb923fab71be"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.quarkus:quarkus-arc:jar:@3.40.1",
+  "io.quarkus:quarkus-core:jar:@3.40.1",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-panache-hibernate-common:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:07bef162d02cf0579c5668f89ae3ac4c9d40731a11c0d8f26457cb8f9ad1b0fb"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.quarkus:quarkus-arc:jar:@3.40.1",
+  "io.quarkus:quarkus-core:jar:@3.40.1",
+  "io.quarkus:quarkus-panache-common:jar:@3.40.1",
+  "jakarta.persistence:jakarta.persistence-api:jar:@3.2.0",
+  "org.antlr:antlr4-runtime:jar:@4.13.2",
+  "org.hibernate.orm:hibernate-core:jar:@7.4.9.Final",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-rest-common:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:afda6cd5fe96873e2354e4a43266b52c44c06658dd62f472829ba93a1faafd88"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.quarkus.resteasy.reactive:resteasy-reactive-common:jar:@3.40.1",
+  "io.quarkus:quarkus-jsonp:jar:@3.40.1",
+  "io.quarkus:quarkus-mutiny:jar:@3.40.1",
+  "io.quarkus:quarkus-vertx:jar:@3.40.1",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-rest-jackson-common:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:98373d60e3e93096a51562c9ab85b69cb3068a290b411161b3b0c8dfe329f725"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.quarkus.resteasy.reactive:resteasy-reactive-jackson:jar:@3.40.1",
+  "io.quarkus:quarkus-jackson:jar:@3.40.1",
+  "io.quarkus:quarkus-jsonp:jar:@3.40.1",
+  "io.quarkus:quarkus-rest-common:jar:@3.40.1",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-rest-jackson:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:39fe05c33c2be3008f0796e86bdd4f063796e549c4fd530f331e6c61f802080c"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.quarkus:quarkus-rest-jackson-common:jar:@3.40.1",
+  "io.quarkus:quarkus-rest:jar:@3.40.1",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-rest:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:d5c5a4ab594ee9f80a176bfe9150fc16aa437a44ccaf82175a21668e68afb4e7"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.quarkus.resteasy.reactive:resteasy-reactive-vertx:jar:@3.40.1",
+  "io.quarkus:quarkus-jsonp:jar:@3.40.1",
+  "io.quarkus:quarkus-rest-common:jar:@3.40.1",
+  "io.quarkus:quarkus-vertx-http:jar:@3.40.1",
+  "io.quarkus:quarkus-virtual-threads:jar:@3.40.1",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-security-runtime-spi:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:f155068d9d4fe20ad1e0f2bfc23f1139160a1e53fcc73644d3c0f63faa408668"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.quarkus.security:quarkus-security:jar:@2.3.2",
+  "io.quarkus:quarkus-core:jar:@3.40.1",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-smallrye-context-propagation:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:fb47ec4762179cdda80181e53e9574a914325bddee30158cf776e6bc839d8275"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.quarkus:quarkus-arc:jar:@3.40.1",
+  "io.quarkus:quarkus-core:jar:@3.40.1",
+  "io.smallrye:smallrye-context-propagation:jar:@2.3.0",
+  "jakarta.enterprise:jakarta.enterprise.cdi-api:jar:@4.1.0",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-smallrye-health:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:71765c8ce8a8eb7e8db9ed75e2292603b08ef3f6693f0e67194bdafbb0841429"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.quarkus:quarkus-core:jar:@3.40.1",
+  "io.quarkus:quarkus-jsonp:jar:@3.40.1",
+  "io.quarkus:quarkus-vertx-http:jar:@3.40.1",
+  "io.smallrye:smallrye-health-provided-checks:jar:@4.3.0",
+  "io.smallrye:smallrye-health:jar:@4.3.0",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-test-common:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:d9187f005131414ac3e1019eab0c2dbd2ee33a5647404548439bc36ff91d8d2b"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "commons-io:commons-io:jar:@2.22.0",
+  "io.quarkus:quarkus-bootstrap-gradle-resolver:jar:@3.40.1",
+  "io.quarkus:quarkus-bootstrap-maven-resolver:jar:@3.40.1",
+  "io.quarkus:quarkus-core-deployment:jar:@3.40.1",
+  "io.smallrye:jandex:jar:@3.6.0",
+  "org.jboss.logging:commons-logging-jboss-logging:jar:@2.0.0.Final",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-tls-registry-spi:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:811dd9659d23724fc15109fbcc5754bcbe436705441ce43f771e047b550ab5e1"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.quarkus.arc:arc:jar:@3.40.1",
+  "io.quarkus:quarkus-core:jar:@3.40.1",
+  "io.quarkus:quarkus-vertx:jar:@3.40.1",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-tls-registry:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:d80244e55b66057b9c3e400dfe39dbc57fde7192ea75a5547bc110cd7096a67f"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.quarkus:quarkus-arc:jar:@3.40.1",
+  "io.quarkus:quarkus-credentials:jar:@3.40.1",
+  "io.quarkus:quarkus-tls-registry-spi:jar:@3.40.1",
+  "io.smallrye.certs:smallrye-private-key-pem-parser:jar:@0.9.4",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-transaction-annotations:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b928753769546950c285342d8047e1ef3c5dedd52f198f01d3b61e54643329b5"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-value-registry:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:f0ea7643b20999443d2e53dcc490ad308e38ca9473b83abcaa9bb09bbf1b0f14"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-vertx-http:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:49260443ad38c239e6b42e0ff4072b9b77142fdb4a7e2d4cda2aa43b12ca1aa7"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "com.aayushatharva.brotli4j:brotli4j:jar:@1.23.0",
+  "io.quarkus.security:quarkus-security:jar:@2.3.2",
+  "io.quarkus:quarkus-core:jar:@3.40.1",
+  "io.quarkus:quarkus-credentials:jar:@3.40.1",
+  "io.quarkus:quarkus-mutiny:jar:@3.40.1",
+  "io.quarkus:quarkus-security-runtime-spi:jar:@3.40.1",
+  "io.quarkus:quarkus-tls-registry:jar:@3.40.1",
+  "io.quarkus:quarkus-vertx:jar:@3.40.1",
+  "io.smallrye.common:smallrye-common-vertx-context:jar:@2.19.0",
+  "io.smallrye.reactive:smallrye-mutiny-vertx-web:jar:@3.23.1",
+  "io.vertx:vertx-web:jar:@4.5.34",
+  "org.crac:crac:jar:@1.5.0",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-vertx-latebound-mdc-provider:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:3a808a8e3e41d2519de206067a03365407c3e8c4b9801bad28d82ae9dff1c0ad"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "org.jboss.logmanager:jboss-logmanager:jar:@3.2.2.Final",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-vertx:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:8e7399a09a8a235e495ffd2b0c66b9d35d0ce8a280d6827f6a6876d77c0d61bc"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.netty:netty-codec-haproxy:jar:@4.1.138.Final",
+  "io.quarkus:quarkus-arc:jar:@3.40.1",
+  "io.quarkus:quarkus-mutiny:jar:@3.40.1",
+  "io.quarkus:quarkus-netty:jar:@3.40.1",
+  "io.quarkus:quarkus-security-runtime-spi:jar:@3.40.1",
+  "io.quarkus:quarkus-vertx-latebound-mdc-provider:jar:@3.40.1",
+  "io.quarkus:quarkus-virtual-threads:jar:@3.40.1",
+  "io.smallrye.common:smallrye-common-annotation:jar:@2.19.0",
+  "io.smallrye.common:smallrye-common-vertx-context:jar:@2.19.0",
+  "io.smallrye.reactive:smallrye-mutiny-vertx-core:jar:@3.23.1",
+  "io.smallrye:smallrye-fault-tolerance-vertx:jar:@6.11.4",
+]
+
+[[artifact]]
+name     = "io.quarkus:quarkus-virtual-threads:jar:"
+version  = "3.40.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:eac8ea03397d8849f474c65af22b8348313a77dfa91621c8b54b80cce648321c"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.quarkus:quarkus-arc:jar:@3.40.1",
+  "io.quarkus:quarkus-core:jar:@3.40.1",
+  "io.vertx:vertx-core:jar:@4.5.34",
+]
+
+[[artifact]]
+name     = "io.rest-assured:json-path:jar:"
+version  = "6.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:210434ac4332a864ed5ddc0ace9fd4c4c0ea03cb92a70dca2827b5037c87c665"
+scopes   = ["test"]
+deps = [
+  "io.rest-assured:rest-assured-common:jar:@6.0.1",
+  "org.apache.groovy:groovy-json:jar:@5.0.3",
+  "org.apache.groovy:groovy:jar:@5.0.3",
+]
+
+[[artifact]]
+name     = "io.rest-assured:rest-assured-common:jar:"
+version  = "6.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:cdd462c9b3a1de0517a849b1bbf786829ad24c1ff8e50686f9bf53f25bb34924"
+scopes   = ["test"]
+deps = [
+  "org.apache.commons:commons-lang3:jar:@3.20.0",
+  "org.apache.groovy:groovy:jar:@5.0.3",
+]
+
+[[artifact]]
+name     = "io.rest-assured:rest-assured:jar:"
+version  = "6.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:2a18e0bf45c6d16d642bba7258b03ad22db959eb8ab843f7812ed975ad3266b2"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "io.rest-assured:json-path:jar:@6.0.1",
+  "io.rest-assured:xml-path:jar:@6.0.1",
+  "org.apache.groovy:groovy-xml:jar:@5.0.3",
+  "org.apache.groovy:groovy:jar:@5.0.3",
+  "org.apache.httpcomponents:httpclient:jar:@4.5.14",
+  "org.apache.httpcomponents:httpmime:jar:@4.5.14",
+  "org.ccil.cowan.tagsoup:tagsoup:jar:@1.2.1",
+  "org.hamcrest:hamcrest:jar:@2.2",
+]
+
+[[artifact]]
+name     = "io.rest-assured:xml-path:jar:"
+version  = "6.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:4398e2ea996be2289d3352fef4e9030ad1f2f3842a4bd0c5ecd57a4b4f302f94"
+scopes   = ["test"]
+deps = [
+  "io.rest-assured:rest-assured-common:jar:@6.0.1",
+  "org.apache.commons:commons-lang3:jar:@3.20.0",
+  "org.apache.groovy:groovy-xml:jar:@5.0.3",
+  "org.apache.groovy:groovy:jar:@5.0.3",
+  "org.ccil.cowan.tagsoup:tagsoup:jar:@1.2.1",
+]
+
+[[artifact]]
+name     = "io.smallrye.beanbag:smallrye-beanbag-maven:jar:"
+version  = "1.6.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:69eee1ea15ce2a9923ae0377847d1b0dc0fd44396bed50929b532b95ee623b1a"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "commons-codec:commons-codec:jar:@1.22.1",
+  "commons-io:commons-io:jar:@2.22.0",
+  "io.smallrye.beanbag:smallrye-beanbag-sisu:jar:@1.6.1",
+  "io.smallrye.common:smallrye-common-constraint:jar:@2.19.0",
+  "javax.inject:javax.inject:jar:@1",
+  "org.apache.commons:commons-lang3:jar:@3.20.0",
+  "org.apache.httpcomponents:httpclient:jar:@4.5.14",
+  "org.apache.httpcomponents:httpcore:jar:@4.4.16",
+  "org.apache.maven.resolver:maven-resolver-api:jar:@1.9.27",
+  "org.apache.maven.resolver:maven-resolver-connector-basic:jar:@1.9.27",
+  "org.apache.maven.resolver:maven-resolver-impl:jar:@1.9.27",
+  "org.apache.maven.resolver:maven-resolver-spi:jar:@1.9.27",
+  "org.apache.maven.resolver:maven-resolver-transport-http:jar:@1.9.27",
+  "org.apache.maven.resolver:maven-resolver-util:jar:@1.9.27",
+  "org.apache.maven:maven-artifact:jar:@3.9.16",
+  "org.apache.maven:maven-builder-support:jar:@3.9.16",
+  "org.apache.maven:maven-model-builder:jar:@3.9.16",
+  "org.apache.maven:maven-model:jar:@3.9.16",
+  "org.apache.maven:maven-repository-metadata:jar:@3.9.16",
+  "org.apache.maven:maven-resolver-provider:jar:@3.9.16",
+  "org.apache.maven:maven-settings-builder:jar:@3.9.16",
+  "org.apache.maven:maven-settings:jar:@3.9.16",
+  "org.codehaus.plexus:plexus-cipher:jar:@2.0",
+  "org.codehaus.plexus:plexus-interpolation:jar:@1.26",
+  "org.codehaus.plexus:plexus-sec-dispatcher:jar:@2.0",
+  "org.codehaus.plexus:plexus-utils:jar:@3.6.1",
+  "org.codehaus.plexus:plexus-xml:jar:@4.0.2",
+  "org.eclipse.sisu:org.eclipse.sisu.inject:jar:@1.0.1",
+  "org.eclipse.sisu:org.eclipse.sisu.plexus:jar:@1.0.1",
+  "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
+]
+excluded-by = [
+  "commons-io:commons-io <- io.quarkus:quarkus-bootstrap-maven-resolver@3.40.1",
+  "org.apache.httpcomponents:httpclient <- io.quarkus:quarkus-bootstrap-maven-resolver@3.40.1",
+  "org.apache.httpcomponents:httpcore <- io.quarkus:quarkus-bootstrap-maven-resolver@3.40.1",
+  "org.apache.maven.resolver:maven-resolver-transport-wagon <- io.quarkus:quarkus-bootstrap-maven-resolver@3.40.1",
+  "org.apache.maven.wagon:wagon-file <- io.quarkus:quarkus-bootstrap-maven-resolver@3.40.1",
+  "org.apache.maven.wagon:wagon-http <- io.quarkus:quarkus-bootstrap-maven-resolver@3.40.1",
+  "org.apache.maven.wagon:wagon-http-shared <- io.quarkus:quarkus-bootstrap-maven-resolver@3.40.1",
+  "org.apache.maven.wagon:wagon-provider-api <- io.quarkus:quarkus-bootstrap-maven-resolver@3.40.1",
+  "org.jsoup:jsoup <- io.quarkus:quarkus-bootstrap-maven-resolver@3.40.1",
+]
+
+[[artifact]]
+name     = "io.smallrye.beanbag:smallrye-beanbag-sisu:jar:"
+version  = "1.6.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b3382f432bad1618a2f47e480df6bc514607b43165786d2b8539248da1202a5f"
+scopes   = ["test"]
+deps = [
+  "io.smallrye.beanbag:smallrye-beanbag:jar:@1.6.1",
+  "io.smallrye.common:smallrye-common-constraint:jar:@2.19.0",
+  "javax.inject:javax.inject:jar:@1",
+  "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
+]
+
+[[artifact]]
+name     = "io.smallrye.beanbag:smallrye-beanbag:jar:"
+version  = "1.6.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:a34a767eb7bc54edcd206bf936e0b0db99f2e27260a064ca18faf4b1914e058e"
+scopes   = ["test"]
+deps = [
+  "io.smallrye.common:smallrye-common-constraint:jar:@2.19.0",
+  "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
+]
+
+[[artifact]]
+name     = "io.smallrye.certs:smallrye-private-key-pem-parser:jar:"
+version  = "0.9.4"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:2444ab1430505d1a8a9f6c9797fba60e14948bfe27cf8c98ae012c37bf768c15"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.smallrye.common:smallrye-common-constraint:jar:@2.19.0",
+  "io.vertx:vertx-core:jar:@4.5.34",
+]
+
+[[artifact]]
+name     = "io.smallrye.classfile:jdk-classfile-backport:jar:"
+version  = "26"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:2eb2741b04c632ca361fb7dc947e993785639e76233129e84b2c85d618ae12ca"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "io.smallrye.common:smallrye-common-annotation:jar:"
+version  = "2.19.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:a29ef5d8ed9e306ed683a4d680bb1c03f89c41196aa0a41c95eb0dda8e81e346"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+
+[[artifact]]
+name     = "io.smallrye.common:smallrye-common-classloader:jar:"
+version  = "2.19.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:868c3fcb738281b2b360ba706b9074b674ee6c697d971a52bd77f4099ba2fd5c"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+
+[[artifact]]
+name     = "io.smallrye.common:smallrye-common-constraint:jar:"
+version  = "2.19.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:4454a2f32caeadb47cf6f0565c667f64c21facbee959cf15bcfc8ec8755c471a"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+deps = [
+  "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
+]
+
+[[artifact]]
+name     = "io.smallrye.common:smallrye-common-cpu:jar:"
+version  = "2.19.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:845825ee711b0e0511c2cd12430680b767c6ee69e60d6b32bb90befd52420927"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+
+[[artifact]]
+name     = "io.smallrye.common:smallrye-common-expression:jar:"
+version  = "2.19.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:27863f0441acd0b003536f63ddfd40f9f8c02f16d97d1fd1e9f616d683541aaa"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+deps = [
+  "io.smallrye.common:smallrye-common-function:jar:@2.19.0",
+  "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
+]
+
+[[artifact]]
+name     = "io.smallrye.common:smallrye-common-function:jar:"
+version  = "2.19.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:c78f2661e82821d3ac7153b88bec4aaec375e041aae261832e5e5f4ac17f4800"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+deps = [
+  "io.smallrye.common:smallrye-common-constraint:jar:@2.19.0",
+  "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
+]
+
+[[artifact]]
+name     = "io.smallrye.common:smallrye-common-io:jar:"
+version  = "2.19.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:33d549ed88eb279926706a894459f8fc4ad8a23b1eb01b01b4c72d3e723da877"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+deps = [
+  "io.smallrye.common:smallrye-common-annotation:jar:@2.19.0",
+  "io.smallrye.common:smallrye-common-constraint:jar:@2.19.0",
+  "io.smallrye.common:smallrye-common-os:jar:@2.19.0",
+  "io.smallrye.common:smallrye-common-search:jar:@2.19.0",
+  "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
+]
+
+[[artifact]]
+name     = "io.smallrye.common:smallrye-common-net:jar:"
+version  = "2.19.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:f3d1be529e43214df263f29703dec41bc9b8d1bd0a4af8678166814ae2da5a96"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+deps = [
+  "io.smallrye.common:smallrye-common-constraint:jar:@2.19.0",
+  "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
+]
+
+[[artifact]]
+name     = "io.smallrye.common:smallrye-common-os:jar:"
+version  = "2.19.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:ac12ba8e86119ebd0a3b14d1053a3b6a4722f63978e9c718fb1ffcbbd4e3a3b5"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+
+[[artifact]]
+name     = "io.smallrye.common:smallrye-common-process:jar:"
+version  = "2.19.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:a8057f1abdd17a18634d56277d3751704d1699512bce69c668018d1e668f0bc8"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "io.smallrye.common:smallrye-common-function:jar:@2.19.0",
+  "io.smallrye.common:smallrye-common-os:jar:@2.19.0",
+  "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
+]
+
+[[artifact]]
+name     = "io.smallrye.common:smallrye-common-ref:jar:"
+version  = "2.19.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:56b3173ab124b82559fe6f16bfcbefbe7f904c0e53d2507bb2e3606b43d6d1de"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+deps = [
+  "io.smallrye.common:smallrye-common-constraint:jar:@2.19.0",
+]
+
+[[artifact]]
+name     = "io.smallrye.common:smallrye-common-resource:jar:"
+version  = "2.19.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:dab24d2d3dbf762670f48e17b4bce5664a5140c62caeca00312dec8eb8f7cb31"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "io.smallrye.common:smallrye-common-constraint:jar:@2.19.0",
+  "io.smallrye.common:smallrye-common-io:jar:@2.19.0",
+]
+
+[[artifact]]
+name     = "io.smallrye.common:smallrye-common-search:jar:"
+version  = "2.19.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:973738a728d8efac3c0ab75d3a54236ce5f9c435b4b4a2f9bc0f16a0c46001ff"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+deps = [
+  "io.smallrye.common:smallrye-common-function:jar:@2.19.0",
+]
+
+[[artifact]]
+name     = "io.smallrye.common:smallrye-common-vertx-context:jar:"
+version  = "2.19.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:2c3d3326bab62064e7120ad6c1e4f99e267176b2efd74a44b3ab2cd5aa5c69d6"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.smallrye.common:smallrye-common-constraint:jar:@2.19.0",
+  "io.vertx:vertx-core:jar:@4.5.34",
+]
+
+[[artifact]]
+name     = "io.smallrye.config:smallrye-config-common:jar:"
+version  = "3.17.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:ebbb7b03044580440f63788cb743664749e7169b8eb382b3cfc44a4fb328bb85"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+deps = [
+  "io.smallrye.common:smallrye-common-classloader:jar:@2.19.0",
+  "org.eclipse.microprofile.config:microprofile-config-api:jar:@3.1.1",
+  "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
+]
+
+[[artifact]]
+name     = "io.smallrye.config:smallrye-config-core:jar:"
+version  = "3.17.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:092050099d3144bcc64b33165b3c2b7d25a519808d3c7618a6e1c1debcc0d832"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+deps = [
+  "io.smallrye.common:smallrye-common-annotation:jar:@2.19.0",
+  "io.smallrye.common:smallrye-common-classloader:jar:@2.19.0",
+  "io.smallrye.common:smallrye-common-constraint:jar:@2.19.0",
+  "io.smallrye.common:smallrye-common-expression:jar:@2.19.0",
+  "io.smallrye.config:smallrye-config-common:jar:@3.17.2",
+  "jakarta.annotation:jakarta.annotation-api:jar:@3.0.0",
+  "org.eclipse.microprofile.config:microprofile-config-api:jar:@3.1.1",
+  "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
+  "org.ow2.asm:asm:jar:@9.10.1",
+]
+
+[[artifact]]
+name     = "io.smallrye.config:smallrye-config-validator:jar:"
+version  = "3.17.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:0fa1b7810d7c9877107ce325e3ab448fd73d991b630daaceeeae41d935ce873b"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.smallrye.config:smallrye-config:jar:@3.17.2",
+]
+
+[[artifact]]
+name     = "io.smallrye.config:smallrye-config:jar:"
+version  = "3.17.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:d93d4fec79674f67391c44fc995c61209ef72e816b0fc40ffd631ab883310c14"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+deps = [
+  "io.smallrye.config:smallrye-config-core:jar:@3.17.2",
+  "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
+]
+
+[[artifact]]
+name     = "io.smallrye.reactive:mutiny-smallrye-context-propagation:jar:"
+version  = "3.3.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:e7b20ad3a01d0b0944dfbf86538392621ef38e87e6c69722902fc5bc9af674ff"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.smallrye.reactive:mutiny:jar:@3.3.0",
+  "io.smallrye:smallrye-context-propagation:jar:@2.3.0",
+  "org.eclipse.microprofile.context-propagation:microprofile-context-propagation-api:jar:@1.3",
+]
+
+[[artifact]]
+name     = "io.smallrye.reactive:mutiny-zero-flow-adapters:jar:"
+version  = "1.2.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:623dc619ec3866c6ce6365ed46cd948fe1b6cae93d64006249294ef8a941d943"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "org.jspecify:jspecify:jar:@1.0.0",
+  "org.reactivestreams:reactive-streams:jar:@1.0.4",
+]
+
+[[artifact]]
+name     = "io.smallrye.reactive:mutiny:jar:"
+version  = "3.3.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:468035abda56638307e8dad7d4be3bd818b05725f0559140b32e087be017b83f"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.smallrye.common:smallrye-common-annotation:jar:@2.19.0",
+  "org.jctools:jctools-core:jar:@4.0.5",
+]
+
+[[artifact]]
+name     = "io.smallrye.reactive:smallrye-mutiny-vertx-auth-common:jar:"
+version  = "3.23.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:d4defd33cf294ac695d7817b764f52626d7690d0bee944ba4b84ffa02278faab"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.smallrye.reactive:smallrye-mutiny-vertx-core:jar:@3.23.1",
+  "io.vertx:vertx-auth-common:jar:@4.5.34",
+]
+
+[[artifact]]
+name     = "io.smallrye.reactive:smallrye-mutiny-vertx-bridge-common:jar:"
+version  = "3.23.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:8b14169047ddbb2e5da91de00b37d62ff8b2ca49ae4553a0742660c50fe91065"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.smallrye.reactive:smallrye-mutiny-vertx-core:jar:@3.23.1",
+  "io.vertx:vertx-bridge-common:jar:@4.5.34",
+]
+
+[[artifact]]
+name     = "io.smallrye.reactive:smallrye-mutiny-vertx-core:jar:"
+version  = "3.23.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:dc5578295b8e5dc10f9fd8028ecb3ac3ed8b2ccc54b8b80172181188f577372e"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.smallrye.reactive:mutiny:jar:@3.3.0",
+  "io.smallrye.reactive:smallrye-mutiny-vertx-runtime:jar:@3.23.1",
+  "io.vertx:vertx-core:jar:@4.5.34",
+]
+
+[[artifact]]
+name     = "io.smallrye.reactive:smallrye-mutiny-vertx-runtime:jar:"
+version  = "3.23.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:ab996413864654f8977a4459154d36b093dabd661e8d17c3854d2ca20616bf8c"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.smallrye.reactive:mutiny:jar:@3.3.0",
+  "io.vertx:vertx-core:jar:@4.5.34",
+]
+
+[[artifact]]
+name     = "io.smallrye.reactive:smallrye-mutiny-vertx-uri-template:jar:"
+version  = "3.23.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:95b798fd11f3d199593388c85aea6f9ffbae178a2d48444d9d79b4ca3714fa57"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.smallrye.reactive:smallrye-mutiny-vertx-core:jar:@3.23.1",
+  "io.vertx:vertx-uri-template:jar:@4.5.34",
+]
+
+[[artifact]]
+name     = "io.smallrye.reactive:smallrye-mutiny-vertx-web-common:jar:"
+version  = "3.23.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:05e78bf89604a2653ede8cdad2f540aa63e5e97d1304188a86769db9a57e7558"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.smallrye.reactive:smallrye-mutiny-vertx-core:jar:@3.23.1",
+  "io.vertx:vertx-web-common:jar:@4.5.34",
+]
+
+[[artifact]]
+name     = "io.smallrye.reactive:smallrye-mutiny-vertx-web:jar:"
+version  = "3.23.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:106413b6575604c1eff68a1ad6bbe890d635a7c55ee198858ce4bd8012189da0"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.smallrye.reactive:smallrye-mutiny-vertx-auth-common:jar:@3.23.1",
+  "io.smallrye.reactive:smallrye-mutiny-vertx-bridge-common:jar:@3.23.1",
+  "io.smallrye.reactive:smallrye-mutiny-vertx-core:jar:@3.23.1",
+  "io.smallrye.reactive:smallrye-mutiny-vertx-uri-template:jar:@3.23.1",
+  "io.smallrye.reactive:smallrye-mutiny-vertx-web-common:jar:@3.23.1",
+  "io.vertx:vertx-web:jar:@4.5.34",
+]
+
+[[artifact]]
+name     = "io.smallrye.reactive:smallrye-reactive-converter-api:jar:"
+version  = "3.0.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:8f47b3cbdef72c5875836011beb02f485918febbb73c15d51738c566eb669253"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "org.reactivestreams:reactive-streams:jar:@1.0.4",
+]
+
+[[artifact]]
+name     = "io.smallrye.reactive:smallrye-reactive-converter-mutiny:jar:"
+version  = "3.0.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:5255e5e77d38b0bc166511c3ce7af3a97cf1edeaa19d2946102f929d99273111"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.smallrye.reactive:mutiny-zero-flow-adapters:jar:@1.2.1",
+  "io.smallrye.reactive:mutiny:jar:@3.3.0",
+  "io.smallrye.reactive:smallrye-reactive-converter-api:jar:@3.0.3",
+]
+
+[[artifact]]
+name     = "io.smallrye:jandex-gizmo2:jar:"
+version  = "3.6.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:ae57c6a7a0496b512cf8b4947db7d123b58f2f0ddeae562dfd42df6b9397ae66"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "io.quarkus.gizmo:gizmo2:jar:@2.1.1",
+  "io.smallrye:jandex:jar:@3.6.0",
+]
+
+[[artifact]]
+name     = "io.smallrye:jandex:jar:"
+version  = "3.6.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:246c038ac0190fbe43e4a218344345f332b7a12543d499b47fa64b05f060a2a1"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "io.smallrye:smallrye-context-propagation-api:jar:"
+version  = "2.3.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:da0bc273588cefb478e98c4e137f65cc394a54253e35684d5d917060fdc4147c"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "org.eclipse.microprofile.context-propagation:microprofile-context-propagation-api:jar:@1.3",
+]
+
+[[artifact]]
+name     = "io.smallrye:smallrye-context-propagation-jta:jar:"
+version  = "2.3.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:40fdf6411e8cd7cdb493d1fdcf884d9304b72db58bc4efd077dfc960f8f1684a"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "org.eclipse.microprofile.context-propagation:microprofile-context-propagation-api:jar:@1.3",
+]
+
+[[artifact]]
+name     = "io.smallrye:smallrye-context-propagation-storage:jar:"
+version  = "2.3.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:0fb685500b833b819c934147f0d2f0ab00397df196442aa3fa0b1a6d962dedd0"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "io.smallrye:smallrye-context-propagation:jar:"
+version  = "2.3.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:bc7d83a626d92d223c9f479c24c80e09df4c801781134ace9d826803b8f8eaff"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.smallrye:smallrye-context-propagation-api:jar:@2.3.0",
+  "io.smallrye:smallrye-context-propagation-storage:jar:@2.3.0",
+  "org.eclipse.microprofile.config:microprofile-config-api:jar:@3.1.1",
+  "org.eclipse.microprofile.context-propagation:microprofile-context-propagation-api:jar:@1.3",
+  "org.jboss.threads:jboss-threads:jar:@3.9.2",
+]
+
+[[artifact]]
+name     = "io.smallrye:smallrye-fault-tolerance-vertx:jar:"
+version  = "6.11.4"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:70b53bc8d55093b2b5db4482569544ea5849de149d9df84b0094be7b1e217bc1"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.vertx:vertx-core:jar:@4.5.34",
+  "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
+]
+excluded-by = [
+  "io.smallrye:smallrye-fault-tolerance-core <- io.quarkus:quarkus-vertx@3.40.1",
+  "io.vertx:vertx-core <- io.quarkus:quarkus-vertx@3.40.1",
+  "org.jboss.logging:jboss-logging <- io.quarkus:quarkus-vertx@3.40.1",
+]
+
+[[artifact]]
+name     = "io.smallrye:smallrye-health-api:jar:"
+version  = "4.3.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:a91809158320220877f436a9365ad61f98e0cfe53fa62d95d3eb5a88535dbc67"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.smallrye.common:smallrye-common-annotation:jar:@2.19.0",
+  "io.smallrye.reactive:mutiny:jar:@3.3.0",
+  "jakarta.json:jakarta.json-api:jar:@2.1.3",
+  "org.eclipse.microprofile.health:microprofile-health-api:jar:@4.0.1",
+]
+
+[[artifact]]
+name     = "io.smallrye:smallrye-health-provided-checks:jar:"
+version  = "4.3.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:5ee4c0a40df05ff06216b6761f45d6f9d4caa96cf55345da4be16fd8d89dc863"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.smallrye:smallrye-health:jar:@4.3.0",
+  "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
+]
+
+[[artifact]]
+name     = "io.smallrye:smallrye-health:jar:"
+version  = "4.3.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:7c87ac1db8410ffc286a00e8eadeb60992c7edfa300178ebab0ecfd0781d3ec4"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.smallrye.config:smallrye-config:jar:@3.17.2",
+  "io.smallrye:smallrye-health-api:jar:@4.3.0",
+  "jakarta.enterprise:jakarta.enterprise.cdi-api:jar:@4.1.0",
+  "jakarta.json:jakarta.json-api:jar:@2.1.3",
+  "org.eclipse.microprofile.health:microprofile-health-api:jar:@4.0.1",
+  "org.eclipse.parsson:jakarta.json:jar:@1.1.7",
+  "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
+]
+
+[[artifact]]
+name     = "io.vertx:vertx-auth-common:jar:"
+version  = "4.5.34"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:2fc9f280b2193718db2bde020e8ca9107eff2a78d27389b7c4db63f72980c4de"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.vertx:vertx-core:jar:@4.5.34",
+]
+
+[[artifact]]
+name     = "io.vertx:vertx-bridge-common:jar:"
+version  = "4.5.34"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b57384bda3c9ebb78cc734ddf0d83bd6b55335ceb259e41d315854f9b737318a"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.vertx:vertx-core:jar:@4.5.34",
+]
+
+[[artifact]]
+name     = "io.vertx:vertx-core:jar:"
+version  = "4.5.34"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:750ec27491f9eea3df24e3a85670a0b1998827bb729ec95b2d9d3dbbfdf8792c"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "com.fasterxml.jackson.core:jackson-core:jar:@2.21.7",
+  "io.netty:netty-buffer:jar:@4.1.138.Final",
+  "io.netty:netty-codec-http2:jar:@4.1.138.Final",
+  "io.netty:netty-codec-http:jar:@4.1.138.Final",
+  "io.netty:netty-common:jar:@4.1.138.Final",
+  "io.netty:netty-handler-proxy:jar:@4.1.138.Final",
+  "io.netty:netty-handler:jar:@4.1.138.Final",
+  "io.netty:netty-resolver-dns:jar:@4.1.138.Final",
+  "io.netty:netty-resolver:jar:@4.1.138.Final",
+  "io.netty:netty-tcnative-classes:jar:@2.0.84.Final",
+  "io.netty:netty-transport:jar:@4.1.138.Final",
+]
+
+[[artifact]]
+name     = "io.vertx:vertx-uri-template:jar:"
+version  = "4.5.34"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:d303e9f044347bc350241dfb2150f05d3b93d6c7f56c74757861ca582e8f62df"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.vertx:vertx-core:jar:@4.5.34",
+]
+
+[[artifact]]
+name     = "io.vertx:vertx-web-common:jar:"
+version  = "4.5.34"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:378371867305e73cddcea7027217d9a9fddbd18e57de74021824cb2bf1962019"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.vertx:vertx-core:jar:@4.5.34",
+]
+
+[[artifact]]
+name     = "io.vertx:vertx-web:jar:"
+version  = "4.5.34"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:14ae3cadbac1d0794cbf5e66fdb3cc61611235ac05f57bfdb65d9c21a6b97add"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "io.vertx:vertx-auth-common:jar:@4.5.34",
+  "io.vertx:vertx-bridge-common:jar:@4.5.34",
+  "io.vertx:vertx-core:jar:@4.5.34",
+  "io.vertx:vertx-web-common:jar:@4.5.34",
+]
+
+[[artifact]]
+name     = "jakarta.activation:jakarta.activation-api:jar:"
+version  = "2.1.4"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:c9db52100ce6c8aac95cc39075f95720d2e561b11f8051b81c121ad4effd7004"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "jakarta.annotation:jakarta.annotation-api:jar:"
+version  = "3.0.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b01f55552284cfb149411e64eabca75e942d26d2e1786b32914250e4330afaa2"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+
+[[artifact]]
+name     = "jakarta.el:jakarta.el-api:jar:"
+version  = "6.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:7e84b5bed49de32b79cc5e85d90b6f5adb1a953ac67283adbb41c1e297f9c605"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+
+[[artifact]]
+name     = "jakarta.enterprise:jakarta.enterprise.cdi-api:jar:"
+version  = "4.1.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:c42c808f17925129a0800f618febe050d966e181a4c7384c8a5e7a0283d68699"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+deps = [
+  "jakarta.annotation:jakarta.annotation-api:jar:@3.0.0",
+  "jakarta.el:jakarta.el-api:jar:@6.0.1",
+  "jakarta.enterprise:jakarta.enterprise.lang-model:jar:@4.1.0",
+  "jakarta.inject:jakarta.inject-api:jar:@2.0.1",
+  "jakarta.interceptor:jakarta.interceptor-api:jar:@2.2.0",
+]
+
+[[artifact]]
+name     = "jakarta.enterprise:jakarta.enterprise.lang-model:jar:"
+version  = "4.1.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:bb56f571f60d2862b2387d5468fe8f5540f8094727283ed991f89082708095ee"
+scopes   = ["main", "test"]
+
+[[artifact]]
+name     = "jakarta.inject:jakarta.inject-api:jar:"
+version  = "2.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:f7dc98062fccf14126abb751b64fab12c312566e8cbdc8483598bffcea93af7c"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+
+[[artifact]]
+name     = "jakarta.interceptor:jakarta.interceptor-api:jar:"
+version  = "2.2.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:d240d72b4dd38a2e431c804079810010cb97903678fa5f987fb7434878b04398"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+deps = [
+  "jakarta.annotation:jakarta.annotation-api:jar:@3.0.0",
+]
+excluded-by = [
+  "jakarta.annotation:jakarta.annotation-api <- jakarta.enterprise:jakarta.enterprise.cdi-api@4.1.0",
+]
+
+[[artifact]]
+name     = "jakarta.json:jakarta.json-api:jar:"
+version  = "2.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:bc934142805ea1d794f1440563965a3861a2a9fb7414ecd3fe44f26500734414"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+
+[[artifact]]
+name     = "jakarta.persistence:jakarta.persistence-api:jar:"
+version  = "3.2.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:be8a26b0e75c84c1b7600f759256fbc68d60333d89ec0ce3f784fc3ffa09aa8c"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "jakarta.resource:jakarta.resource-api:jar:"
+version  = "2.1.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:4d26ad86a5f72cd2f9c4a31cc4524f7bf3ec0ff74416f081f8642b7ce8041067"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "jakarta.annotation:jakarta.annotation-api:jar:@3.0.0",
+  "jakarta.transaction:jakarta.transaction-api:jar:@2.0.1",
+]
+
+[[artifact]]
+name     = "jakarta.transaction:jakarta.transaction-api:jar:"
+version  = "2.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:50c0a7c760c13ae6c042acf182b28f0047413db95b4636fb8879bcffab5ba875"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "jakarta.validation:jakarta.validation-api:jar:"
+version  = "3.1.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:63ce00156388c365f3ac1be71fcfaf114682fc0c452020b5df6e7ec236e142ab"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "jakarta.ws.rs:jakarta.ws.rs-api:jar:"
+version  = "3.1.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:6b3b3628b8b4aedda0d24c3354335e985497d8ef3c510b8f3028e920d5b8663d"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "jakarta.xml.bind:jakarta.xml.bind-api:jar:"
+version  = "4.0.5"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:5e489b6c874c4119e003ff1403db523ee3a8959ec499f3de29e77245efccf216"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "jakarta.activation:jakarta.activation-api:jar:@2.1.4",
+]
+
+[[artifact]]
+name     = "javax.annotation:javax.annotation-api:jar:"
+version  = "1.3.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:e04ba5195bcd555dc95650f7cc614d151e4bcd52d29a10b8aa2197f3ab89ab9b"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "javax.cache:cache-api:jar:"
+version  = "1.1.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:9f34e007edfa82a7b2a2e1b969477dcf5099ce7f4f926fb54ce7e27c4a0cd54b"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "javax.inject:javax.inject:jar:"
+version  = "1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:91c77044a50c481636c32d916fd89c9118a72195390452c81065080f957de7ff"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "net.bytebuddy:byte-buddy-agent:jar:"
+version  = "1.18.8"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:e303594d597de090abcb54580aa788478fc5e58f259e6ae914a1115f207c43af"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "net.bytebuddy:byte-buddy:jar:"
+version  = "1.18.8"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:227d3e0ad51915809143f6a744ac0f4cb21f03214dab28e52ee7007c5ad7e9d9"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+
+[[artifact]]
+name     = "org.aesh:aesh:jar:"
+version  = "3.18.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:6825a8932934267afc459f42bc3d05890d670b6e4f971c2376905a829d67f31a"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "org.aesh:readline-api:jar:@3.18.1",
+  "org.aesh:readline:jar:@3.18.1",
+  "org.aesh:terminal-api:jar:@3.18.1",
+  "org.aesh:terminal-tty:jar:@3.18.1",
+]
+
+[[artifact]]
+name     = "org.aesh:readline-api:jar:"
+version  = "3.18.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:4efbd867193fed9d651f2ff1c249710fc1817119efd46aac13137b3622fac413"
+scopes   = ["test"]
+deps = [
+  "org.aesh:terminal-api:jar:@3.18.1",
+]
+
+[[artifact]]
+name     = "org.aesh:readline:jar:"
+version  = "3.18.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:33200d8b3af11c21f76033ece66fc39fb67b0d0a43c7aecf2f07e0339e5347c5"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "org.aesh:readline-api:jar:@3.18.1",
+  "org.aesh:terminal-api:jar:@3.18.1",
+  "org.aesh:terminal-tty:jar:@3.18.1",
+]
+
+[[artifact]]
+name     = "org.aesh:terminal-api:jar:"
+version  = "3.18.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:18fd386682dc720a4613ef890efe81c56a8040c262e565a4c70e4da162b15a33"
+scopes   = ["test"]
+deps = [
+  "org.aesh:terminal-detect:jar:@3.18.1",
+]
+
+[[artifact]]
+name     = "org.aesh:terminal-detect:jar:"
+version  = "3.18.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:4cef070bf4ad905aedd16241b8b540ec64623fc99a3708e80c582a0310ef68b6"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "org.aesh:terminal-tty:jar:"
+version  = "3.18.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:ce334fbe5498cf2ecc0220d3d598edd6ece55a55c4a24247a265dc7af467094b"
+scopes   = ["test"]
+deps = [
+  "org.aesh:terminal-api:jar:@3.18.1",
+]
+
+[[artifact]]
+name     = "org.antlr:antlr4-runtime:jar:"
+version  = "4.13.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:dd3e8a13a2d669bf84fb8d834de35ce4875f27157698d206241ec8488aadcaf7"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "org.apache.commons:commons-compress:jar:"
+version  = "1.28.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:e1522945218456f3649a39bc4afd70ce4bd466221519dba7d378f2141a4642ca"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "commons-codec:commons-codec:jar:@1.22.1",
+  "commons-io:commons-io:jar:@2.22.0",
+  "org.apache.commons:commons-lang3:jar:@3.20.0",
+]
+
+[[artifact]]
+name     = "org.apache.commons:commons-lang3:jar:"
+version  = "3.20.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:69e5c9fa35da7a51a5fd2099dfe56a2d8d32cf233e2f6d770e796146440263f4"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "org.apache.groovy:groovy-json:jar:"
+version  = "5.0.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:0fd0af8c5a94e3915c8eab0967da8dcabe9cbf0b536be29d8f80d586fccf370a"
+scopes   = ["test"]
+deps = [
+  "org.apache.groovy:groovy:jar:@5.0.3",
+]
+
+[[artifact]]
+name     = "org.apache.groovy:groovy-xml:jar:"
+version  = "5.0.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:699ec4f7b2c6893037c1305aa320a1ce411e901500226cf7b90250701703f945"
+scopes   = ["test"]
+deps = [
+  "org.apache.groovy:groovy:jar:@5.0.3",
+]
+
+[[artifact]]
+name     = "org.apache.groovy:groovy:jar:"
+version  = "5.0.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:3f34a6e4a9104c492dbd397691d3e1d1863568b19c3132471bde0a65611b5156"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "org.apache.httpcomponents:httpclient:jar:"
+version  = "4.5.14"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:c8bc7e1c51a6d4ce72f40d2ebbabf1c4b68bfe76e732104b04381b493478e9d6"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "commons-codec:commons-codec:jar:@1.22.1",
+  "org.apache.httpcomponents:httpcore:jar:@4.4.16",
+]
+excluded-by = [
+  "commons-logging:commons-logging <- jk.toml:rest-assured, org.apache.maven.resolver:maven-resolver-transport-http@1.9.27",
+]
+
+[[artifact]]
+name     = "org.apache.httpcomponents:httpcore:jar:"
+version  = "4.4.16"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:6c9b3dd142a09dc468e23ad39aad6f75a0f2b85125104469f026e52a474e464f"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "org.apache.httpcomponents:httpmime:jar:"
+version  = "4.5.14"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:d401243d5c6eae928a37121b6e819158c8c32ea0584793e7285bb489ab2a3d17"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "org.apache.httpcomponents:httpclient:jar:@4.5.14",
+]
+
+[[artifact]]
+name     = "org.apache.maven.resolver:maven-resolver-api:jar:"
+version  = "1.9.27"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:a895d222283666a7320ddc76615e2e93a41fabd93ce9a6bf9ddee39272bb87b4"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "org.apache.maven.resolver:maven-resolver-connector-basic:jar:"
+version  = "1.9.27"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:3bd98e3a426f9adcae39e3786db229e2be77e08a743ecd9be15c5ed77be3a625"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "org.apache.maven.resolver:maven-resolver-api:jar:@1.9.27",
+  "org.apache.maven.resolver:maven-resolver-spi:jar:@1.9.27",
+  "org.apache.maven.resolver:maven-resolver-util:jar:@1.9.27",
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+
+[[artifact]]
+name     = "org.apache.maven.resolver:maven-resolver-impl:jar:"
+version  = "1.9.27"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:295d48ea2a8bb3aef51888967f105fb6251997d111f13c32d28919fd9b1c951e"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "org.apache.maven.resolver:maven-resolver-api:jar:@1.9.27",
+  "org.apache.maven.resolver:maven-resolver-named-locks:jar:@1.9.27",
+  "org.apache.maven.resolver:maven-resolver-spi:jar:@1.9.27",
+  "org.apache.maven.resolver:maven-resolver-util:jar:@1.9.27",
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+
+[[artifact]]
+name     = "org.apache.maven.resolver:maven-resolver-named-locks:jar:"
+version  = "1.9.27"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b39ecd4da98fdac5068e6f5d16910a71f4e4d48e95e17d107f6603e18f2b3fdf"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1 (maven-resolver family)"
+scopes   = ["test"]
+deps = [
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+
+[[artifact]]
+name     = "org.apache.maven.resolver:maven-resolver-spi:jar:"
+version  = "1.9.27"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:1cab02f45bc58d5f4d8e084eaf032f13ea1a5fc9021d8bd74f8360ebb6593e5a"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "org.apache.maven.resolver:maven-resolver-api:jar:@1.9.27",
+]
+
+[[artifact]]
+name     = "org.apache.maven.resolver:maven-resolver-transport-file:jar:"
+version  = "1.9.27"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:3988261bd31e2e79eda802b3971992fce44756b0029557a05c7b871d3c3ddef7"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "org.apache.maven.resolver:maven-resolver-api:jar:@1.9.27",
+  "org.apache.maven.resolver:maven-resolver-spi:jar:@1.9.27",
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+excluded-by = [
+  "org.slf4j:slf4j-api <- io.quarkus:quarkus-bootstrap-maven-resolver@3.40.1",
+]
+
+[[artifact]]
+name     = "org.apache.maven.resolver:maven-resolver-transport-http:jar:"
+version  = "1.9.27"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:723f3d9d717a693d0aac589e266b995f76e9c63edd48ecc8a0cf9e86a77e459c"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "com.google.code.gson:gson:jar:@2.14.0",
+  "commons-codec:commons-codec:jar:@1.22.1",
+  "org.apache.httpcomponents:httpclient:jar:@4.5.14",
+  "org.apache.httpcomponents:httpcore:jar:@4.4.16",
+  "org.apache.maven.resolver:maven-resolver-api:jar:@1.9.27",
+  "org.apache.maven.resolver:maven-resolver-spi:jar:@1.9.27",
+  "org.apache.maven.resolver:maven-resolver-util:jar:@1.9.27",
+  "org.slf4j:jcl-over-slf4j:jar:@1.7.36",
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+
+[[artifact]]
+name     = "org.apache.maven.resolver:maven-resolver-util:jar:"
+version  = "1.9.27"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:74a12548f0d6aad13c728666288c1e81201c24bd05bb4e4ec8c1558517b379a7"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "org.apache.maven.resolver:maven-resolver-api:jar:@1.9.27",
+]
+
+[[artifact]]
+name     = "org.apache.maven.shared:maven-shared-utils:jar:"
+version  = "3.4.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b613357e1bad4dfc1dead801691c9460f9585fe7c6b466bc25186212d7d18487"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "commons-io:commons-io:jar:@2.22.0",
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+excluded-by = [
+  "commons-io:commons-io <- org.apache.maven:maven-core@3.9.16, org.apache.maven:maven-embedder@3.9.16",
+  "org.slf4j:slf4j-api <- io.quarkus:quarkus-bootstrap-maven-resolver@3.40.1",
+]
+
+[[artifact]]
+name     = "org.apache.maven:maven-api-meta:jar:"
+version  = "4.0.0-alpha-7"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:c4f6f3868f5b280cc7e268f0f95e1bb1d2a824afe92a8029e861be7ec48b1272"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "org.apache.maven:maven-api-xml:jar:"
+version  = "4.0.0-alpha-7"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:3388f4d0465f5a7e9a6264baf506da1b052c51f7cc10b7ce73f09723e6cf1d92"
+scopes   = ["test"]
+deps = [
+  "org.apache.maven:maven-api-meta:jar:@4.0.0-alpha-7",
+]
+
+[[artifact]]
+name     = "org.apache.maven:maven-artifact:jar:"
+version  = "3.9.16"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:54cc1c1ef932e3d4a903352111b42b4d3c3ed8e7a1d0de73b625309d9c3ad3e8"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "org.codehaus.plexus:plexus-utils:jar:@3.6.1",
+]
+
+[[artifact]]
+name     = "org.apache.maven:maven-builder-support:jar:"
+version  = "3.9.16"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:02972384eae3495801565fd27abb84cfd75a8e6d2cbb1ae0c556752ebc2b1cde"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "org.apache.maven:maven-core:jar:"
+version  = "3.9.16"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:5d45c72e3dbfab8b68d15ad4f12777b7d9b5fe4d4adc99c3bd51fb9641fab009"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "com.google.guava:failureaccess:jar:@1.0.1",
+  "com.google.guava:guava:jar:@33.6.0-jre",
+  "com.google.inject:guice:jar:classes@5.1.0",
+  "javax.inject:javax.inject:jar:@1",
+  "org.apache.maven.resolver:maven-resolver-api:jar:@1.9.27",
+  "org.apache.maven.resolver:maven-resolver-impl:jar:@1.9.27",
+  "org.apache.maven.resolver:maven-resolver-spi:jar:@1.9.27",
+  "org.apache.maven.resolver:maven-resolver-util:jar:@1.9.27",
+  "org.apache.maven.shared:maven-shared-utils:jar:@3.4.2",
+  "org.apache.maven:maven-artifact:jar:@3.9.16",
+  "org.apache.maven:maven-builder-support:jar:@3.9.16",
+  "org.apache.maven:maven-model-builder:jar:@3.9.16",
+  "org.apache.maven:maven-model:jar:@3.9.16",
+  "org.apache.maven:maven-plugin-api:jar:@3.9.16",
+  "org.apache.maven:maven-repository-metadata:jar:@3.9.16",
+  "org.apache.maven:maven-resolver-provider:jar:@3.9.16",
+  "org.apache.maven:maven-settings-builder:jar:@3.9.16",
+  "org.apache.maven:maven-settings:jar:@3.9.16",
+  "org.codehaus.plexus:plexus-classworlds:jar:@2.6.0",
+  "org.codehaus.plexus:plexus-component-annotations:jar:@2.1.0",
+  "org.codehaus.plexus:plexus-interpolation:jar:@1.26",
+  "org.codehaus.plexus:plexus-utils:jar:@3.6.1",
+  "org.eclipse.sisu:org.eclipse.sisu.inject:jar:@1.0.1",
+  "org.eclipse.sisu:org.eclipse.sisu.plexus:jar:@1.0.1",
+  "org.ow2.asm:asm:jar:@9.10.1",
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+excluded-by = [
+  "org.codehaus.plexus:plexus-utils <- io.quarkus:quarkus-bootstrap-maven-resolver@3.40.1",
+  "org.slf4j:slf4j-api <- io.quarkus:quarkus-bootstrap-maven-resolver@3.40.1",
+]
+
+[[artifact]]
+name     = "org.apache.maven:maven-embedder:jar:"
+version  = "3.9.16"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:a99aaac6ecb1b98d0f3b3ba18c16a122fc503412222055639a3eb4cbe458313b"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "com.google.guava:failureaccess:jar:@1.0.1",
+  "com.google.guava:guava:jar:@33.6.0-jre",
+  "com.google.inject:guice:jar:classes@5.1.0",
+  "commons-cli:commons-cli:jar:@1.11.0",
+  "javax.annotation:javax.annotation-api:jar:@1.3.2",
+  "javax.inject:javax.inject:jar:@1",
+  "org.apache.maven.resolver:maven-resolver-api:jar:@1.9.27",
+  "org.apache.maven.resolver:maven-resolver-util:jar:@1.9.27",
+  "org.apache.maven.shared:maven-shared-utils:jar:@3.4.2",
+  "org.apache.maven:maven-builder-support:jar:@3.9.16",
+  "org.apache.maven:maven-core:jar:@3.9.16",
+  "org.apache.maven:maven-model-builder:jar:@3.9.16",
+  "org.apache.maven:maven-model:jar:@3.9.16",
+  "org.apache.maven:maven-plugin-api:jar:@3.9.16",
+  "org.apache.maven:maven-settings-builder:jar:@3.9.16",
+  "org.apache.maven:maven-settings:jar:@3.9.16",
+  "org.codehaus.plexus:plexus-cipher:jar:@2.0",
+  "org.codehaus.plexus:plexus-classworlds:jar:@2.6.0",
+  "org.codehaus.plexus:plexus-interpolation:jar:@1.26",
+  "org.codehaus.plexus:plexus-sec-dispatcher:jar:@2.0",
+  "org.codehaus.plexus:plexus-utils:jar:@3.6.1",
+  "org.eclipse.sisu:org.eclipse.sisu.plexus:jar:@1.0.1",
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+excluded-by = [
+  "org.codehaus.plexus:plexus-utils <- io.quarkus:quarkus-bootstrap-maven-resolver@3.40.1",
+  "org.slf4j:slf4j-api <- io.quarkus:quarkus-bootstrap-maven-resolver@3.40.1",
+]
+
+[[artifact]]
+name     = "org.apache.maven:maven-model-builder:jar:"
+version  = "3.9.16"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:002be86d1f53b36f559a0786034a17598d71087f1935f205a1f9e51d4dd124b3"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "javax.inject:javax.inject:jar:@1",
+  "org.apache.maven:maven-artifact:jar:@3.9.16",
+  "org.apache.maven:maven-builder-support:jar:@3.9.16",
+  "org.apache.maven:maven-model:jar:@3.9.16",
+  "org.codehaus.plexus:plexus-interpolation:jar:@1.26",
+  "org.eclipse.sisu:org.eclipse.sisu.inject:jar:@1.0.1",
+  "org.ow2.asm:asm:jar:@9.10.1",
+]
+
+[[artifact]]
+name     = "org.apache.maven:maven-model:jar:"
+version  = "3.9.16"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:f59d86a507c241bf17bbf050050d1b8b9c0d34d5010a7e2386c3cab7c83b93de"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "org.codehaus.plexus:plexus-utils:jar:@3.6.1",
+]
+
+[[artifact]]
+name     = "org.apache.maven:maven-plugin-api:jar:"
+version  = "3.9.16"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:37cb5e483e23327cf4ba18f920b45e000d20eec0428a086a5c1bd6bbdecf088c"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "org.apache.maven:maven-artifact:jar:@3.9.16",
+  "org.apache.maven:maven-model:jar:@3.9.16",
+  "org.codehaus.plexus:plexus-classworlds:jar:@2.6.0",
+  "org.codehaus.plexus:plexus-utils:jar:@3.6.1",
+  "org.eclipse.sisu:org.eclipse.sisu.plexus:jar:@1.0.1",
+]
+excluded-by = [
+  "org.codehaus.plexus:plexus-utils <- io.quarkus:quarkus-bootstrap-maven-resolver@3.40.1",
+]
+
+[[artifact]]
+name     = "org.apache.maven:maven-repository-metadata:jar:"
+version  = "3.9.16"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:bc3dd413b89a16b695f35a5d0496b58ea2787c30b7b6062c130d24d6d764720f"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "org.codehaus.plexus:plexus-utils:jar:@3.6.1",
+]
+
+[[artifact]]
+name     = "org.apache.maven:maven-resolver-provider:jar:"
+version  = "3.9.16"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:72a2d6aad3708e2c708b659b292ae9587a4d170ec88f48466290318730221118"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "javax.inject:javax.inject:jar:@1",
+  "org.apache.maven.resolver:maven-resolver-api:jar:@1.9.27",
+  "org.apache.maven.resolver:maven-resolver-impl:jar:@1.9.27",
+  "org.apache.maven.resolver:maven-resolver-spi:jar:@1.9.27",
+  "org.apache.maven.resolver:maven-resolver-util:jar:@1.9.27",
+  "org.apache.maven:maven-model-builder:jar:@3.9.16",
+  "org.apache.maven:maven-model:jar:@3.9.16",
+  "org.apache.maven:maven-repository-metadata:jar:@3.9.16",
+  "org.codehaus.plexus:plexus-utils:jar:@3.6.1",
+]
+
+[[artifact]]
+name     = "org.apache.maven:maven-settings-builder:jar:"
+version  = "3.9.16"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:226f1cbb0b4d414eff773fb151a8977837c98073e14d5963794e6cf464e6adbb"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "javax.inject:javax.inject:jar:@1",
+  "org.apache.maven:maven-builder-support:jar:@3.9.16",
+  "org.apache.maven:maven-settings:jar:@3.9.16",
+  "org.codehaus.plexus:plexus-interpolation:jar:@1.26",
+  "org.codehaus.plexus:plexus-sec-dispatcher:jar:@2.0",
+  "org.codehaus.plexus:plexus-utils:jar:@3.6.1",
+]
+
+[[artifact]]
+name     = "org.apache.maven:maven-settings:jar:"
+version  = "3.9.16"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:322ae5b23f4b7b6ce7896bd33a793143dbbbbcc16c4475e2d7eebbd8f755da92"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "org.codehaus.plexus:plexus-utils:jar:@3.6.1",
+]
+
+[[artifact]]
+name     = "org.apache.maven:maven-xml-impl:jar:"
+version  = "4.0.0-alpha-7"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:c89323b70dd491a3ef21432dba4cad2b74e26caaafd77178b0f15313fe0bd5f0"
+scopes   = ["test"]
+deps = [
+  "org.apache.maven:maven-api-xml:jar:@4.0.0-alpha-7",
+  "org.eclipse.sisu:org.eclipse.sisu.plexus:jar:@1.0.1",
+]
+excluded-by = [
+  "org.eclipse.sisu:org.eclipse.sisu.plexus <- org.codehaus.plexus:plexus-xml@4.0.2",
+]
+
+[[artifact]]
+name     = "org.apiguardian:apiguardian-api:jar:"
+version  = "1.1.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b509448ac506d607319f182537f0b35d71007582ec741832a1f111e5b5b70b38"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "org.assertj:assertj-core:jar:"
+version  = "3.27.7"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:c4a445426c3c2861666863b842cc4ec7bbb1c4226fefd370b6d2fe83d6c4ff0f"
+scopes   = ["test"]
+deps = [
+  "net.bytebuddy:byte-buddy:jar:@1.18.8",
+]
+
+[[artifact]]
+name     = "org.ccil.cowan.tagsoup:tagsoup:jar:"
+version  = "1.2.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:ac97f7b4b1d8e9337edfa0e34044f8d0efe7223f6ad8f3a85d54cc1018ea2e04"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "org.codehaus.plexus:plexus-cipher:jar:"
+version  = "2.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:9a7f1b5c5a9effd61eadfd8731452a2f76a8e79111fac391ef75ea801bea203a"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "javax.inject:javax.inject:jar:@1",
+]
+
+[[artifact]]
+name     = "org.codehaus.plexus:plexus-classworlds:jar:"
+version  = "2.6.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:52f77c5ec49f787c9c417ebed5d6efd9922f44a202f217376e4f94c0d74f3549"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "org.codehaus.plexus:plexus-component-annotations:jar:"
+version  = "2.1.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:bde3617ce9b5bcf9584126046080043af6a4b3baea40a3b153f02e7bbc32acac"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "org.codehaus.plexus:plexus-interpolation:jar:"
+version  = "1.26"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b3b5412ce17889103ea564bcdfcf9fb3dfa540344ffeac6b538a73c9d7182662"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "org.codehaus.plexus:plexus-sec-dispatcher:jar:"
+version  = "2.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:873139960c4c780176dda580b003a2c4bf82188bdce5bb99234e224ef7acfceb"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "javax.inject:javax.inject:jar:@1",
+  "org.codehaus.plexus:plexus-cipher:jar:@2.0",
+  "org.codehaus.plexus:plexus-utils:jar:@3.6.1",
+]
+
+[[artifact]]
+name     = "org.codehaus.plexus:plexus-utils:jar:"
+version  = "3.6.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:05a63effd67e2d6b9d610cc82e2bd7473289d34802e57a529b28110f28af5679"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "org.codehaus.plexus:plexus-xml:jar:"
+version  = "4.0.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:e55f26425ad1ce948e4fca7b0fde5ecc9b0ba90d326c6ecc25a8e0e56ccfb6fd"
+scopes   = ["test"]
+deps = [
+  "org.apache.maven:maven-xml-impl:jar:@4.0.0-alpha-7",
+]
+
+[[artifact]]
+name     = "org.crac:crac:jar:"
+version  = "1.5.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:f4426e1641c8f0fa2f025a4cd7c40c285abaf265930e6717adfcaef03d034850"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+
+[[artifact]]
+name     = "org.eclipse.angus:angus-activation:jar:"
+version  = "2.0.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:a6bd35c538cf90fff941ad6258c40c08fca0b5c9c3f536c657114f27ce0527a7"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "jakarta.activation:jakarta.activation-api:jar:@2.1.4",
+]
+
+[[artifact]]
+name     = "org.eclipse.microprofile.config:microprofile-config-api:jar:"
+version  = "3.1.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:0d4eaa7e17730e153b1e0613104a989af7d7a0d4ba4d19c84c71862bff993773"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+
+[[artifact]]
+name     = "org.eclipse.microprofile.context-propagation:microprofile-context-propagation-api:jar:"
+version  = "1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:69ccc04487e87779d4970aa50c673cc34a9df080c1c0e8d8eab2e8b46f825cf4"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "org.eclipse.microprofile.health:microprofile-health-api:jar:"
+version  = "4.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b89ca4b6c4f7a044250d31c0673f6bc221e40fd669fc5871dbad5e5a0769ca47"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "org.eclipse.parsson:jakarta.json:jar:"
+version  = "1.1.7"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:5905f52283a7491e06ba58556103d45c3199a42602abcd36d510ceda65490ff0"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "org.eclipse.parsson:parsson:jar:"
+version  = "1.1.9"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:03dc4dc834a928730d52a50952de0f30c35e0daf048889132be19ee1e5053a6c"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+deps = [
+  "jakarta.json:jakarta.json-api:jar:@2.1.3",
+]
+
+[[artifact]]
+name     = "org.eclipse.sisu:org.eclipse.sisu.inject:jar:"
+version  = "1.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:dec3f14deb30fd2e8a9b44708da83830cddf29f35d4e3b28d21e94f9b050f8f8"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "org.ow2.asm:asm:jar:@9.10.1",
+]
+
+[[artifact]]
+name     = "org.eclipse.sisu:org.eclipse.sisu.plexus:jar:"
+version  = "1.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b5ab4bc809e04d6c84168165cfae3f6e6b93623fe8e0b58f7da5594150806e97"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "org.codehaus.plexus:plexus-classworlds:jar:@2.6.0",
+  "org.codehaus.plexus:plexus-component-annotations:jar:@2.1.0",
+  "org.codehaus.plexus:plexus-utils:jar:@3.6.1",
+  "org.eclipse.sisu:org.eclipse.sisu.inject:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "org.flywaydb:flyway-core:jar:"
+version  = "12.0.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b87be1aa085fd9fa09ce1ae97499635f57194d0cdb0b608d7c265668f487cea3"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "com.fasterxml.jackson.core:jackson-databind:jar:@2.21.7",
+]
+
+[[artifact]]
+name     = "org.flywaydb:flyway-database-postgresql:jar:"
+version  = "12.0.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:bae270541161a00084e3f94e2ce69a32b1983e5d7e6e76ce40e9b237a29969e4"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "org.flywaydb:flyway-core:jar:@12.0.0",
+]
+
+[[artifact]]
+name     = "org.glassfish.expressly:expressly:jar:"
+version  = "6.0.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:86ee67c7040278bac5204b571f738b8b859f014ceb5f896bd935bacbdaf33cb9"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "jakarta.el:jakarta.el-api:jar:@6.0.1",
+]
+
+[[artifact]]
+name     = "org.glassfish.jaxb:jaxb-core:jar:"
+version  = "4.0.9"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:6b014df25d22c8446cc2df0a378c5b2137747f197a731d99eb24c756b26f7e8d"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "com.sun.istack:istack-commons-runtime:jar:@4.1.2",
+  "jakarta.activation:jakarta.activation-api:jar:@2.1.4",
+  "jakarta.xml.bind:jakarta.xml.bind-api:jar:@4.0.5",
+  "org.eclipse.angus:angus-activation:jar:@2.0.3",
+  "org.glassfish.jaxb:txw2:jar:@4.0.9",
+]
+
+[[artifact]]
+name     = "org.glassfish.jaxb:jaxb-runtime:jar:"
+version  = "4.0.9"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:93e09b7316b6af68d6e2083e4c297daf28e8957f45d725077af812c0b12c39ab"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "org.glassfish.jaxb:jaxb-core:jar:@4.0.9",
+]
+
+[[artifact]]
+name     = "org.glassfish.jaxb:txw2:jar:"
+version  = "4.0.9"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:d6343e5945d87266ca4e8974a0a2a876e1bd147a00fb65ed3f2e1a3a00f3a82a"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "org.graalvm.sdk:nativeimage:jar:"
+version  = "25.0.4.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:41d06072cede6c94485b23674b732d3b35aa3298119bfeef7c9064aeed858818"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "org.graalvm.sdk:word:jar:@25.0.4.1",
+]
+
+[[artifact]]
+name     = "org.graalvm.sdk:word:jar:"
+version  = "25.0.4.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:2f79df7f43d9dc47aead237e0028842a2b6f50debcaee4f239482eb3ab9c2492"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "org.hamcrest:hamcrest:jar:"
+version  = "2.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:5e62846a89f05cd78cd9c1a553f340d002458380c320455dd1f8fc5497a8a1c1"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "org.hibernate.models:hibernate-models:jar:"
+version  = "1.1.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:d683d70e2592b23c5f2fbc3510d2e087aa61f2ac399a9090b941a1a42d3f3a98"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
+]
+
+[[artifact]]
+name     = "org.hibernate.orm:hibernate-core:jar:"
+version  = "7.4.9.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:0e460f689c4c642c040182a844ad844316775198f330b9888db392de32f3b520"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "jakarta.inject:jakarta.inject-api:jar:@2.0.1",
+  "jakarta.persistence:jakarta.persistence-api:jar:@3.2.0",
+  "jakarta.transaction:jakarta.transaction-api:jar:@2.0.1",
+  "jakarta.xml.bind:jakarta.xml.bind-api:jar:@4.0.5",
+  "net.bytebuddy:byte-buddy:jar:@1.18.8",
+  "org.antlr:antlr4-runtime:jar:@4.13.2",
+  "org.glassfish.jaxb:jaxb-runtime:jar:@4.0.9",
+  "org.hibernate.models:hibernate-models:jar:@1.1.2",
+  "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
+]
+
+[[artifact]]
+name     = "org.hibernate.orm:hibernate-graalvm:jar:"
+version  = "7.4.9.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:c59749b711ce13a26c032ca8920330641b141e017a452f93ac02dd242ea62289"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
+]
+
+[[artifact]]
+name     = "org.hibernate.orm:hibernate-jcache:jar:"
+version  = "7.4.9.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:afe1f701b7f946df679a2aeed3f7eab6347864263a72ce0cac95396c800ca592"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "javax.cache:cache-api:jar:@1.1.1",
+  "org.hibernate.orm:hibernate-core:jar:@7.4.9.Final",
+  "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
+]
+
+[[artifact]]
+name     = "org.hibernate.validator:hibernate-validator:jar:"
+version  = "9.1.3.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:0497ebbe23fafe4180b74bd0b96a67eee8556552decc4d3c120c1dc737a2b5fb"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "com.fasterxml:classmate:jar:@1.7.1",
+  "jakarta.validation:jakarta.validation-api:jar:@3.1.1",
+  "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
+]
+
+[[artifact]]
+name     = "org.jboss.logging:commons-logging-jboss-logging:jar:"
+version  = "2.0.0.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:ce4088809c7512228cb34b54686223dec45532b97366a36830f82926b58a4c6c"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+deps = [
+  "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
+]
+
+[[artifact]]
+name     = "org.jboss.logging:jboss-logging:jar:"
+version  = "3.6.3.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:7c12ee575508f81e22b1db9334b969d0ec54ef0fd1dcba24eeab1a44235fc366"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+
+[[artifact]]
+name     = "org.jboss.logmanager:jboss-logmanager:jar:"
+version  = "3.2.2.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:91d3d76c1e41d403cd717026cd6e8c4495068cb3a4a06461d9d984920fbb856c"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+deps = [
+  "io.smallrye.common:smallrye-common-constraint:jar:@2.19.0",
+  "io.smallrye.common:smallrye-common-cpu:jar:@2.19.0",
+  "io.smallrye.common:smallrye-common-expression:jar:@2.19.0",
+  "io.smallrye.common:smallrye-common-net:jar:@2.19.0",
+  "io.smallrye.common:smallrye-common-os:jar:@2.19.0",
+  "io.smallrye.common:smallrye-common-ref:jar:@2.19.0",
+  "jakarta.json:jakarta.json-api:jar:@2.1.3",
+  "org.eclipse.parsson:parsson:jar:@1.1.9",
+  "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
+]
+excluded-by = [
+  "org.jboss.modules:jboss-modules <- io.quarkus:quarkus-bootstrap-runner@3.40.1, io.quarkus:quarkus-core@3.40.1, io.quarkus:quarkus-vertx-latebound-mdc-provider@3.40.1",
+]
+
+[[artifact]]
+name     = "org.jboss.narayana.jta:narayana-jta:jar:"
+version  = "7.3.4.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:af32436a56b806adefc448d356c99a8c3ad27599a060814227fe535ed146380a"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "com.fasterxml.jackson.core:jackson-core:jar:@2.21.7",
+  "com.github.ben-manes.caffeine:caffeine:jar:@3.2.4",
+  "io.smallrye.common:smallrye-common-annotation:jar:@2.19.0",
+  "io.smallrye.common:smallrye-common-constraint:jar:@2.19.0",
+  "io.smallrye.common:smallrye-common-cpu:jar:@2.19.0",
+  "io.smallrye.common:smallrye-common-expression:jar:@2.19.0",
+  "io.smallrye.common:smallrye-common-function:jar:@2.19.0",
+  "io.smallrye.common:smallrye-common-net:jar:@2.19.0",
+  "io.smallrye.common:smallrye-common-os:jar:@2.19.0",
+  "io.smallrye.common:smallrye-common-ref:jar:@2.19.0",
+  "jakarta.el:jakarta.el-api:jar:@6.0.1",
+  "jakarta.enterprise:jakarta.enterprise.cdi-api:jar:@4.1.0",
+  "jakarta.enterprise:jakarta.enterprise.lang-model:jar:@4.1.0",
+  "jakarta.inject:jakarta.inject-api:jar:@2.0.1",
+  "jakarta.interceptor:jakarta.interceptor-api:jar:@2.2.0",
+  "jakarta.resource:jakarta.resource-api:jar:@2.1.0",
+  "jakarta.transaction:jakarta.transaction-api:jar:@2.0.1",
+  "org.jboss.threads:jboss-threads:jar:@3.9.2",
+  "org.jboss:jboss-transaction-spi:jar:@8.0.0.Final",
+  "org.jspecify:jspecify:jar:@1.0.0",
+  "org.reactivestreams:reactive-streams:jar:@1.0.4",
+  "org.wildfly.common:wildfly-common:jar:@2.0.1",
+]
+excluded-by = [
+  "com.fasterxml.jackson.core:jackson-core <- io.quarkus:quarkus-narayana-jta@3.40.1",
+  "com.github.ben-manes.caffeine:caffeine <- io.quarkus:quarkus-narayana-jta@3.40.1",
+  "io.reactivex.rxjava3:rxjava <- io.quarkus:quarkus-narayana-jta@3.40.1",
+  "io.smallrye.common:smallrye-common-annotation <- io.quarkus:quarkus-narayana-jta@3.40.1",
+  "io.smallrye.common:smallrye-common-constraint <- io.quarkus:quarkus-narayana-jta@3.40.1",
+  "io.smallrye.common:smallrye-common-cpu <- io.quarkus:quarkus-narayana-jta@3.40.1",
+  "io.smallrye.common:smallrye-common-expression <- io.quarkus:quarkus-narayana-jta@3.40.1",
+  "io.smallrye.common:smallrye-common-function <- io.quarkus:quarkus-narayana-jta@3.40.1",
+  "io.smallrye.common:smallrye-common-net <- io.quarkus:quarkus-narayana-jta@3.40.1",
+  "io.smallrye.common:smallrye-common-os <- io.quarkus:quarkus-narayana-jta@3.40.1",
+  "io.smallrye.common:smallrye-common-ref <- io.quarkus:quarkus-narayana-jta@3.40.1",
+  "jakarta.el:jakarta.el-api <- io.quarkus:quarkus-narayana-jta@3.40.1",
+  "jakarta.enterprise:jakarta.enterprise.cdi-api <- io.quarkus:quarkus-narayana-jta@3.40.1",
+  "jakarta.enterprise:jakarta.enterprise.lang-model <- io.quarkus:quarkus-narayana-jta@3.40.1",
+  "jakarta.inject:jakarta.inject-api <- io.quarkus:quarkus-narayana-jta@3.40.1",
+  "jakarta.interceptor:jakarta.interceptor-api <- io.quarkus:quarkus-narayana-jta@3.40.1",
+  "jakarta.resource:jakarta.resource-api <- io.quarkus:quarkus-narayana-jta@3.40.1",
+  "jakarta.transaction:jakarta.transaction-api <- io.quarkus:quarkus-narayana-jta@3.40.1",
+  "org.eclipse.microprofile.reactive-streams-operators:microprofile-reactive-streams-operators-api <- io.quarkus:quarkus-narayana-jta@3.40.1",
+  "org.infinispan.protostream:protostream <- io.quarkus:quarkus-narayana-jta@3.40.1",
+  "org.infinispan.protostream:protostream-types <- io.quarkus:quarkus-narayana-jta@3.40.1",
+  "org.infinispan:infinispan-commons <- io.quarkus:quarkus-narayana-jta@3.40.1",
+  "org.infinispan:infinispan-core <- io.quarkus:quarkus-narayana-jta@3.40.1",
+  "org.infinispan:infinispan-counter-api <- io.quarkus:quarkus-narayana-jta@3.40.1",
+  "org.jboss.invocation:jboss-invocation <- io.quarkus:quarkus-narayana-jta@3.40.1",
+  "org.jboss.threads:jboss-threads <- io.quarkus:quarkus-narayana-jta@3.40.1",
+  "org.jboss:jboss-transaction-spi <- io.quarkus:quarkus-narayana-jta@3.40.1",
+  "org.jgroups:jgroups <- io.quarkus:quarkus-narayana-jta@3.40.1",
+  "org.jspecify:jspecify <- io.quarkus:quarkus-narayana-jta@3.40.1",
+  "org.reactivestreams:reactive-streams <- io.quarkus:quarkus-narayana-jta@3.40.1",
+  "org.wildfly.common:wildfly-common <- io.quarkus:quarkus-narayana-jta@3.40.1",
+]
+
+[[artifact]]
+name     = "org.jboss.narayana.jts:narayana-jts-integration:jar:"
+version  = "7.3.4.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:bebc3292b7a024e3d55fdb4ec14f7bab70a8bb3c066b6705f722dae313086bd3"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "org.jboss.slf4j:slf4j-jboss-logmanager:jar:"
+version  = "2.0.2.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:ba469a975e9d1e79f34a8baa1a0afa8b01bbd8cf080537c0e0899476d31db84b"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+
+[[artifact]]
+name     = "org.jboss.threads:jboss-threads:jar:"
+version  = "3.9.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:ac0fd044686122014143267d3688245852ca07c6c4474320c9172062a5af6634"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+deps = [
+  "io.smallrye.common:smallrye-common-annotation:jar:@2.19.0",
+  "io.smallrye.common:smallrye-common-constraint:jar:@2.19.0",
+  "io.smallrye.common:smallrye-common-cpu:jar:@2.19.0",
+  "io.smallrye.common:smallrye-common-function:jar:@2.19.0",
+  "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
+  "org.wildfly.common:wildfly-common:jar:@2.0.1",
+]
+
+[[artifact]]
+name     = "org.jboss:jboss-transaction-spi:jar:"
+version  = "8.0.0.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:07e4e62ceae075a8c11a715d89b19992c879f505b48be6b2727f5be798562ae1"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+deps = [
+  "jakarta.resource:jakarta.resource-api:jar:@2.1.0",
+  "jakarta.transaction:jakarta.transaction-api:jar:@2.0.1",
+]
+
+[[artifact]]
+name     = "org.jctools:jctools-core:jar:"
+version  = "4.0.5"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:d65e5f38bcd0984e26f87187687f1f70dd52740c4d5e046f8d104e01ab5db95f"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "org.jspecify:jspecify:jar:"
+version  = "1.0.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:1fad6e6be7557781e4d33729d49ae1cdc8fdda6fe477bb0cc68ce351eafdfbab"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+
+[[artifact]]
+name     = "org.junit.jupiter:junit-jupiter-api:jar:"
+version  = "6.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:555d6cf20fa1710884dd01b86cc5785397ba73e21ada2d4b784f5f1a14dcafc4"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
+  "org.junit.platform:junit-platform-commons:jar:@6.1.3",
+  "org.opentest4j:opentest4j:jar:@1.3.0",
+]
+
+[[artifact]]
+name     = "org.junit.jupiter:junit-jupiter-engine:jar:"
+version  = "6.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:414559e78bbfa3bdb2eab009ac3ab1e22369ac31117c270a0bd666da115c5c6c"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
+  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3",
+  "org.junit.platform:junit-platform-engine:jar:@6.1.3",
+]
+
+[[artifact]]
+name     = "org.junit.jupiter:junit-jupiter-params:jar:"
+version  = "6.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:05c51cedba2c06a9770707391e006cee825876937dea580b94a265ce145d4939"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
+  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3",
+]
+
+[[artifact]]
+name     = "org.junit.jupiter:junit-jupiter:jar:"
+version  = "6.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:6b0a14075c74221de53047e363860b7d19fce802bebc152df2c35c4089c6c379"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "org.junit.jupiter:junit-jupiter-api:jar:@6.1.3",
+  "org.junit.jupiter:junit-jupiter-engine:jar:@6.1.3",
+  "org.junit.jupiter:junit-jupiter-params:jar:@6.1.3",
+]
+
+[[artifact]]
+name     = "org.junit.platform:junit-platform-commons:jar:"
+version  = "6.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:a4774ae923c109544034aeae7c762cf017fbcdd1342403ba90e0921984b608c3"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
+]
+
+[[artifact]]
+name     = "org.junit.platform:junit-platform-engine:jar:"
+version  = "6.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:21ad7ad3a35beda16387979317be1833a72a71d812f9a66ee4b9a7bafb56334c"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
+  "org.junit.platform:junit-platform-commons:jar:@6.1.3",
+  "org.opentest4j:opentest4j:jar:@1.3.0",
+]
+
+[[artifact]]
+name     = "org.junit.platform:junit-platform-launcher:jar:"
+version  = "6.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:1dec64b1fc0b7c47a11302aa5b4d37d8160c041b396e27067709ce775601a7b6"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
+  "org.junit.platform:junit-platform-engine:jar:@6.1.3",
+]
+
+[[artifact]]
+name     = "org.opentest4j:opentest4j:jar:"
+version  = "1.3.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:48e2df636cab6563ced64dcdff8abb2355627cb236ef0bf37598682ddf742f1b"
+scopes   = ["test"]
+
+[[artifact]]
+name     = "org.osgi:org.osgi.namespace.extender:jar:"
+version  = "1.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:93d798bde7fa760961408c8a10a965ca7ba1dbf98a3a706c86d8290f528ad519"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "org.osgi:org.osgi.service.component.annotations:jar:"
+version  = "1.5.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:42c080de090896f45d2a4e980a261d5b6addeee07ec4b201f01de95ab562b448"
+scopes   = ["main"]
+deps = [
+  "org.osgi:org.osgi.namespace.extender:jar:@1.0.1",
+  "org.osgi:org.osgi.util.function:jar:@1.0.0",
+  "org.osgi:org.osgi.util.promise:jar:@1.0.0",
+  "org.osgi:osgi.annotation:jar:@8.1.0",
+]
+
+[[artifact]]
+name     = "org.osgi:org.osgi.util.function:jar:"
+version  = "1.0.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:4ff9329012c01a0c69c05721a6bd0b910d40a0d32108284e59c1a6215cee7a43"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "org.osgi:org.osgi.util.promise:jar:"
+version  = "1.0.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:7d619c925716f21ae17654529543d00ea56810784040f6ed8c6d6f901526ee67"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "org.osgi:osgi.annotation:jar:"
+version  = "8.1.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:68afeb86a5322675d4dfe3df5863c7d8a37b34c18e3a8e41553f1ab3ac15d78f"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "org.ow2.asm:asm-analysis:jar:"
+version  = "9.10.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:dede75a21306b65974ecd8f87114ff6970f09fb794157a4ca09ab25c888c2bfc"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "org.ow2.asm:asm-tree:jar:@9.10.1",
+]
+
+[[artifact]]
+name     = "org.ow2.asm:asm-commons:jar:"
+version  = "9.10.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:6d0abefb7cbf972ea16edb37ec14835372505063a45f976ab7ea889ed9497895"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "org.ow2.asm:asm-tree:jar:@9.10.1",
+  "org.ow2.asm:asm:jar:@9.10.1",
+]
+
+[[artifact]]
+name     = "org.ow2.asm:asm-tree:jar:"
+version  = "9.10.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:3dfb0d5b6a106cd40b5b250e39935fbf2f927f4477546a5369a3ac609cf0506b"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "org.ow2.asm:asm:jar:@9.10.1",
+]
+
+[[artifact]]
+name     = "org.ow2.asm:asm-util:jar:"
+version  = "9.10.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:1bb99d091fba2597dc6d51193e9bbcf0d8447e7ed96bd8f0198b18152f09655c"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["test"]
+deps = [
+  "org.ow2.asm:asm-analysis:jar:@9.10.1",
+  "org.ow2.asm:asm-tree:jar:@9.10.1",
+  "org.ow2.asm:asm:jar:@9.10.1",
+]
+
+[[artifact]]
+name     = "org.ow2.asm:asm:jar:"
+version  = "9.10.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:ed825d10ab1399c8c0cb669e688cf0c8c82629b4c8399b58352b68e92ca10fcb"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+
+[[artifact]]
+name     = "org.postgresql:postgresql:jar:"
+version  = "42.7.13"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:6e0e4cc2d8cae902084f8a2b18728b073a6fd9d1f87c9d8bff8f298c18185b93"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+excluded-by = [
+  "org.checkerframework:checker-qual <- io.quarkus:quarkus-jdbc-postgresql@3.40.1",
+]
+
+[[artifact]]
+name     = "org.reactivestreams:reactive-streams:jar:"
+version  = "1.0.4"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:f75ca597789b3dac58f61857b9ac2e1034a68fa672db35055a8fb4509e325f28"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main"]
+
+[[artifact]]
+name     = "org.slf4j:jcl-over-slf4j:jar:"
+version  = "1.7.36"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:ab57ca8fd223772c17365d121f59e94ecbf0ae59d08c03a3cb5b81071c019195"
+scopes   = ["test"]
+deps = [
+  "org.slf4j:slf4j-api:jar:@2.0.18",
+]
+
+[[artifact]]
+name     = "org.slf4j:slf4j-api:jar:"
+version  = "2.0.18"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:44508fd1576500688c790b190acdd16fec4f8c79a3e0b900afd70503cf055f55"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+
+[[artifact]]
+name     = "org.wildfly.common:wildfly-common:jar:"
+version  = "2.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:fa4a710db7ae3e598a5f41639eb54e9f7b09de5fd0f58f56bd6070f21d956374"
+pinned-by = "io.quarkus.platform:quarkus-bom:3.40.1"
+scopes   = ["main", "test"]
+deps = [
+  "io.smallrye.common:smallrye-common-cpu:jar:@2.19.0",
+  "io.smallrye.common:smallrye-common-expression:jar:@2.19.0",
+  "io.smallrye.common:smallrye-common-net:jar:@2.19.0",
+  "io.smallrye.common:smallrye-common-os:jar:@2.19.0",
+  "io.smallrye.common:smallrye-common-ref:jar:@2.19.0",
+]
+
+[[plugin]]
+coordinate = "cc.jumpkick.guards:quarkus"
+version    = "0.20.0"
+
+[[plugin]]
+coordinate = "cc.jumpkick:jk-quarkus"
+version    = "0.20.0"
+
+[[tool]]
+coordinate = "aopalliance:aopalliance"
+version    = "1.0"
+checksum   = "sha256:0addec670fedcd3f113c5c8091d783280d23f75e3acb841b61a9cdb079376a08"
+
+[[tool]]
+coordinate = "com.google.code.gson:gson"
+version    = "2.13.2"
+checksum   = "sha256:dd0ce1b55a3ed2080cb70f9c655850cda86c206862310009dcb5e5c95265a5e0"
+
+[[tool]]
+coordinate = "com.google.errorprone:error_prone_annotations"
+version    = "2.41.0"
+checksum   = "sha256:a56e782b5b50811ac204073a355a21d915a2107fce13ec711331ad036f660fcc"
+
+[[tool]]
+coordinate = "com.google.guava:failureaccess"
+version    = "1.0.1"
+checksum   = "sha256:a171ee4c734dd2da837e4b16be9df4661afab72a41adaf31eb84dfdaf936ca26"
+
+[[tool]]
+coordinate = "com.google.guava:guava"
+version    = "33.6.0-jre"
+checksum   = "sha256:dc573e1fca4fd5454f4a5fd3d7da2df03002876a4175bafc14a95980dd7713b3"
+
+[[tool]]
+coordinate = "com.google.inject:guice"
+version    = "5.1.0"
+classifier = "classes"
+checksum   = "sha256:142ad4475e19524d2fe3ac995b3f7cbc962fc726f2edb9dbdccc61feab9b2bf9"
+
+[[tool]]
+coordinate = "commons-cli:commons-cli"
+version    = "1.11.0"
+checksum   = "sha256:8f7f8605d68e15bf32db61ec94eac6fdafc51b1bdbe1e0e0802b57d23f387792"
+
+[[tool]]
+coordinate = "commons-codec:commons-codec"
+version    = "1.22.1"
+checksum   = "sha256:78a5d732fbd715e2d10bd7150d2f8030bae57267f8aacc5c88f642cb6c2e5d3f"
+
+[[tool]]
+coordinate = "io.quarkus.platform:quarkus-bom-quarkus-platform-properties"
+version    = "3.40.1.1"
+type       = "properties"
+checksum   = "sha256:e15fda6af3ce183a067b7ab9f180ee9eb07676a039d6e43c8010e585b9847c58"
+
+[[tool]]
+coordinate = "io.quarkus:quarkus-bootstrap-app-model"
+version    = "3.40.1.1"
+checksum   = "sha256:7c5b893181d3072273d279cdce8cc2b2ee0f1f578d75c6ddc4158c7a89a4b8a0"
+
+[[tool]]
+coordinate = "io.quarkus:quarkus-bootstrap-core"
+version    = "3.40.1.1"
+checksum   = "sha256:e703f3ac4a68f12633054d10ba19f9eebd3004d544f20546ce580c15789ac377"
+
+[[tool]]
+coordinate = "io.quarkus:quarkus-bootstrap-core"
+version    = "3.40.1.1"
+with       = ["io.quarkus:quarkus-bootstrap-maven-resolver:3.40.1.1"]
+managed-by = "io.quarkus:quarkus-bootstrap-bom:3.40.1.1"
+closure = [
+  "aopalliance:aopalliance:1.0",
+  "com.google.code.gson:gson:2.13.2",
+  "com.google.errorprone:error_prone_annotations:2.41.0",
+  "com.google.guava:failureaccess:1.0.1",
+  "com.google.guava:guava:33.6.0-jre",
+  "com.google.inject:guice:5.1.0:classes",
+  "commons-cli:commons-cli:1.11.0",
+  "commons-codec:commons-codec:1.22.1",
+  "io.quarkus:quarkus-bootstrap-app-model:3.40.1.1",
+  "io.quarkus:quarkus-bootstrap-core:3.40.1.1",
+  "io.quarkus:quarkus-bootstrap-json:3.40.1.1",
+  "io.quarkus:quarkus-bootstrap-maven-resolver:3.40.1.1",
+  "io.quarkus:quarkus-bootstrap-maven4-resolver:3.40.1.1",
+  "io.quarkus:quarkus-classloader-commons:3.40.1.1",
+  "io.quarkus:quarkus-fs-util:1.4.2",
+  "io.quarkus:quarkus-value-registry:3.40.1.1",
+  "io.smallrye.beanbag:smallrye-beanbag-maven:1.6.1",
+  "io.smallrye.beanbag:smallrye-beanbag-sisu:1.6.1",
+  "io.smallrye.beanbag:smallrye-beanbag:1.6.1",
+  "io.smallrye.classfile:jdk-classfile-backport:26",
+  "io.smallrye.common:smallrye-common-annotation:2.19.0",
+  "io.smallrye.common:smallrye-common-constraint:2.19.0",
+  "io.smallrye.common:smallrye-common-cpu:2.19.0",
+  "io.smallrye.common:smallrye-common-expression:2.19.0",
+  "io.smallrye.common:smallrye-common-function:2.19.0",
+  "io.smallrye.common:smallrye-common-io:2.19.0",
+  "io.smallrye.common:smallrye-common-net:2.19.0",
+  "io.smallrye.common:smallrye-common-os:2.19.0",
+  "io.smallrye.common:smallrye-common-ref:2.19.0",
+  "io.smallrye.common:smallrye-common-search:2.19.0",
+  "jakarta.json:jakarta.json-api:2.1.3",
+  "javax.annotation:javax.annotation-api:1.3.2",
+  "javax.inject:javax.inject:1",
+  "org.apache.commons:commons-lang3:3.20.0",
+  "org.apache.httpcomponents:httpclient:4.5.14",
+  "org.apache.httpcomponents:httpcore:4.4.16",
+  "org.apache.maven.resolver:maven-resolver-api:1.9.27",
+  "org.apache.maven.resolver:maven-resolver-connector-basic:1.9.27",
+  "org.apache.maven.resolver:maven-resolver-impl:1.9.27",
+  "org.apache.maven.resolver:maven-resolver-named-locks:1.9.27",
+  "org.apache.maven.resolver:maven-resolver-spi:1.9.27",
+  "org.apache.maven.resolver:maven-resolver-transport-file:1.9.27",
+  "org.apache.maven.resolver:maven-resolver-transport-http:1.9.27",
+  "org.apache.maven.resolver:maven-resolver-util:1.9.27",
+  "org.apache.maven.shared:maven-shared-utils:3.4.2",
+  "org.apache.maven:maven-api-meta:4.0.0-alpha-7",
+  "org.apache.maven:maven-api-xml:4.0.0-alpha-7",
+  "org.apache.maven:maven-artifact:3.9.16",
+  "org.apache.maven:maven-builder-support:3.9.16",
+  "org.apache.maven:maven-core:3.9.16",
+  "org.apache.maven:maven-embedder:3.9.16",
+  "org.apache.maven:maven-model-builder:3.9.16",
+  "org.apache.maven:maven-model:3.9.16",
+  "org.apache.maven:maven-plugin-api:3.9.16",
+  "org.apache.maven:maven-repository-metadata:3.9.16",
+  "org.apache.maven:maven-resolver-provider:3.9.16",
+  "org.apache.maven:maven-settings-builder:3.9.16",
+  "org.apache.maven:maven-settings:3.9.16",
+  "org.apache.maven:maven-xml-impl:4.0.0-alpha-7",
+  "org.codehaus.plexus:plexus-cipher:2.0",
+  "org.codehaus.plexus:plexus-classworlds:2.6.0",
+  "org.codehaus.plexus:plexus-component-annotations:2.2.0",
+  "org.codehaus.plexus:plexus-interpolation:1.26",
+  "org.codehaus.plexus:plexus-sec-dispatcher:2.0",
+  "org.codehaus.plexus:plexus-utils:3.6.1",
+  "org.codehaus.plexus:plexus-xml:4.0.2",
+  "org.eclipse.parsson:parsson:1.1.7",
+  "org.eclipse.sisu:org.eclipse.sisu.inject:1.0.1",
+  "org.eclipse.sisu:org.eclipse.sisu.plexus:1.0.1",
+  "org.jboss.logging:commons-logging-jboss-logging:2.0.0.Final",
+  "org.jboss.logging:jboss-logging:3.6.3.Final",
+  "org.jboss.logmanager:jboss-logmanager:3.2.2.Final",
+  "org.jboss.slf4j:slf4j-jboss-logmanager:1.1.0.Final",
+  "org.jspecify:jspecify:1.0.0",
+  "org.ow2.asm:asm:9.10.1",
+  "org.slf4j:jcl-over-slf4j:1.7.36",
+  "org.slf4j:slf4j-api:2.0.18",
+]
+
+[[tool]]
+coordinate = "io.quarkus:quarkus-bootstrap-json"
+version    = "3.40.1.1"
+checksum   = "sha256:1d6048756bb4ffc745521d2716a3da641767eea7b6c5db82be5e776de2cf0c78"
+
+[[tool]]
+coordinate = "io.quarkus:quarkus-bootstrap-maven-resolver"
+version    = "3.40.1.1"
+checksum   = "sha256:05bae76b2f4431068451bbe3564a218c53c742c9595d27e25c3eb45cfa4f3232"
+
+[[tool]]
+coordinate = "io.quarkus:quarkus-bootstrap-maven4-resolver"
+version    = "3.40.1.1"
+checksum   = "sha256:a945bb14d33d217ef06e6f1b7eaaf3c455d41187d0b3dbbeb3513d4b986a1b9d"
+
+[[tool]]
+coordinate = "io.quarkus:quarkus-classloader-commons"
+version    = "3.40.1.1"
+checksum   = "sha256:994e101c013bdfbedde8a0c9e331e4deb997720c69449e84ea11026a49143b35"
+
+[[tool]]
+coordinate = "io.quarkus:quarkus-fs-util"
+version    = "1.4.2"
+checksum   = "sha256:a6034133b21de4e3aee4bc9e250f8416abfbdc0c86e6e0737f766415c3866169"
+
+[[tool]]
+coordinate = "io.quarkus:quarkus-value-registry"
+version    = "3.40.1.1"
+checksum   = "sha256:eeb25bcab4c92b57dfb9fc4d16ba1bb1e2cf382d6eca5879a6537434485ab4bf"
+
+[[tool]]
+coordinate = "io.smallrye.beanbag:smallrye-beanbag"
+version    = "1.6.1"
+checksum   = "sha256:a34a767eb7bc54edcd206bf936e0b0db99f2e27260a064ca18faf4b1914e058e"
+
+[[tool]]
+coordinate = "io.smallrye.beanbag:smallrye-beanbag-maven"
+version    = "1.6.1"
+checksum   = "sha256:69eee1ea15ce2a9923ae0377847d1b0dc0fd44396bed50929b532b95ee623b1a"
+
+[[tool]]
+coordinate = "io.smallrye.beanbag:smallrye-beanbag-sisu"
+version    = "1.6.1"
+checksum   = "sha256:b3382f432bad1618a2f47e480df6bc514607b43165786d2b8539248da1202a5f"
+
+[[tool]]
+coordinate = "io.smallrye.classfile:jdk-classfile-backport"
+version    = "26"
+checksum   = "sha256:2eb2741b04c632ca361fb7dc947e993785639e76233129e84b2c85d618ae12ca"
+
+[[tool]]
+coordinate = "io.smallrye.common:smallrye-common-annotation"
+version    = "2.19.0"
+checksum   = "sha256:a29ef5d8ed9e306ed683a4d680bb1c03f89c41196aa0a41c95eb0dda8e81e346"
+
+[[tool]]
+coordinate = "io.smallrye.common:smallrye-common-constraint"
+version    = "2.19.0"
+checksum   = "sha256:4454a2f32caeadb47cf6f0565c667f64c21facbee959cf15bcfc8ec8755c471a"
+
+[[tool]]
+coordinate = "io.smallrye.common:smallrye-common-cpu"
+version    = "2.19.0"
+checksum   = "sha256:845825ee711b0e0511c2cd12430680b767c6ee69e60d6b32bb90befd52420927"
+
+[[tool]]
+coordinate = "io.smallrye.common:smallrye-common-expression"
+version    = "2.19.0"
+checksum   = "sha256:27863f0441acd0b003536f63ddfd40f9f8c02f16d97d1fd1e9f616d683541aaa"
+
+[[tool]]
+coordinate = "io.smallrye.common:smallrye-common-function"
+version    = "2.19.0"
+checksum   = "sha256:c78f2661e82821d3ac7153b88bec4aaec375e041aae261832e5e5f4ac17f4800"
+
+[[tool]]
+coordinate = "io.smallrye.common:smallrye-common-io"
+version    = "2.19.0"
+checksum   = "sha256:33d549ed88eb279926706a894459f8fc4ad8a23b1eb01b01b4c72d3e723da877"
+
+[[tool]]
+coordinate = "io.smallrye.common:smallrye-common-net"
+version    = "2.19.0"
+checksum   = "sha256:f3d1be529e43214df263f29703dec41bc9b8d1bd0a4af8678166814ae2da5a96"
+
+[[tool]]
+coordinate = "io.smallrye.common:smallrye-common-os"
+version    = "2.19.0"
+checksum   = "sha256:ac12ba8e86119ebd0a3b14d1053a3b6a4722f63978e9c718fb1ffcbbd4e3a3b5"
+
+[[tool]]
+coordinate = "io.smallrye.common:smallrye-common-ref"
+version    = "2.19.0"
+checksum   = "sha256:56b3173ab124b82559fe6f16bfcbefbe7f904c0e53d2507bb2e3606b43d6d1de"
+
+[[tool]]
+coordinate = "io.smallrye.common:smallrye-common-search"
+version    = "2.19.0"
+checksum   = "sha256:973738a728d8efac3c0ab75d3a54236ce5f9c435b4b4a2f9bc0f16a0c46001ff"
+
+[[tool]]
+coordinate = "jakarta.json:jakarta.json-api"
+version    = "2.1.3"
+checksum   = "sha256:bc934142805ea1d794f1440563965a3861a2a9fb7414ecd3fe44f26500734414"
+
+[[tool]]
+coordinate = "javax.annotation:javax.annotation-api"
+version    = "1.3.2"
+checksum   = "sha256:e04ba5195bcd555dc95650f7cc614d151e4bcd52d29a10b8aa2197f3ab89ab9b"
+
+[[tool]]
+coordinate = "javax.inject:javax.inject"
+version    = "1"
+checksum   = "sha256:91c77044a50c481636c32d916fd89c9118a72195390452c81065080f957de7ff"
+
+[[tool]]
+coordinate = "org.apache.commons:commons-lang3"
+version    = "3.20.0"
+checksum   = "sha256:69e5c9fa35da7a51a5fd2099dfe56a2d8d32cf233e2f6d770e796146440263f4"
+
+[[tool]]
+coordinate = "org.apache.httpcomponents:httpclient"
+version    = "4.5.14"
+checksum   = "sha256:c8bc7e1c51a6d4ce72f40d2ebbabf1c4b68bfe76e732104b04381b493478e9d6"
+
+[[tool]]
+coordinate = "org.apache.httpcomponents:httpcore"
+version    = "4.4.16"
+checksum   = "sha256:6c9b3dd142a09dc468e23ad39aad6f75a0f2b85125104469f026e52a474e464f"
+
+[[tool]]
+coordinate = "org.apache.maven.resolver:maven-resolver-api"
+version    = "1.9.27"
+checksum   = "sha256:a895d222283666a7320ddc76615e2e93a41fabd93ce9a6bf9ddee39272bb87b4"
+
+[[tool]]
+coordinate = "org.apache.maven.resolver:maven-resolver-connector-basic"
+version    = "1.9.27"
+checksum   = "sha256:3bd98e3a426f9adcae39e3786db229e2be77e08a743ecd9be15c5ed77be3a625"
+
+[[tool]]
+coordinate = "org.apache.maven.resolver:maven-resolver-impl"
+version    = "1.9.27"
+checksum   = "sha256:295d48ea2a8bb3aef51888967f105fb6251997d111f13c32d28919fd9b1c951e"
+
+[[tool]]
+coordinate = "org.apache.maven.resolver:maven-resolver-named-locks"
+version    = "1.9.27"
+checksum   = "sha256:b39ecd4da98fdac5068e6f5d16910a71f4e4d48e95e17d107f6603e18f2b3fdf"
+
+[[tool]]
+coordinate = "org.apache.maven.resolver:maven-resolver-spi"
+version    = "1.9.27"
+checksum   = "sha256:1cab02f45bc58d5f4d8e084eaf032f13ea1a5fc9021d8bd74f8360ebb6593e5a"
+
+[[tool]]
+coordinate = "org.apache.maven.resolver:maven-resolver-transport-file"
+version    = "1.9.27"
+checksum   = "sha256:3988261bd31e2e79eda802b3971992fce44756b0029557a05c7b871d3c3ddef7"
+
+[[tool]]
+coordinate = "org.apache.maven.resolver:maven-resolver-transport-http"
+version    = "1.9.27"
+checksum   = "sha256:723f3d9d717a693d0aac589e266b995f76e9c63edd48ecc8a0cf9e86a77e459c"
+
+[[tool]]
+coordinate = "org.apache.maven.resolver:maven-resolver-util"
+version    = "1.9.27"
+checksum   = "sha256:74a12548f0d6aad13c728666288c1e81201c24bd05bb4e4ec8c1558517b379a7"
+
+[[tool]]
+coordinate = "org.apache.maven.shared:maven-shared-utils"
+version    = "3.4.2"
+checksum   = "sha256:b613357e1bad4dfc1dead801691c9460f9585fe7c6b466bc25186212d7d18487"
+
+[[tool]]
+coordinate = "org.apache.maven:maven-api-meta"
+version    = "4.0.0-alpha-7"
+checksum   = "sha256:c4f6f3868f5b280cc7e268f0f95e1bb1d2a824afe92a8029e861be7ec48b1272"
+
+[[tool]]
+coordinate = "org.apache.maven:maven-api-xml"
+version    = "4.0.0-alpha-7"
+checksum   = "sha256:3388f4d0465f5a7e9a6264baf506da1b052c51f7cc10b7ce73f09723e6cf1d92"
+
+[[tool]]
+coordinate = "org.apache.maven:maven-artifact"
+version    = "3.9.16"
+checksum   = "sha256:54cc1c1ef932e3d4a903352111b42b4d3c3ed8e7a1d0de73b625309d9c3ad3e8"
+
+[[tool]]
+coordinate = "org.apache.maven:maven-builder-support"
+version    = "3.9.16"
+checksum   = "sha256:02972384eae3495801565fd27abb84cfd75a8e6d2cbb1ae0c556752ebc2b1cde"
+
+[[tool]]
+coordinate = "org.apache.maven:maven-core"
+version    = "3.9.16"
+checksum   = "sha256:5d45c72e3dbfab8b68d15ad4f12777b7d9b5fe4d4adc99c3bd51fb9641fab009"
+
+[[tool]]
+coordinate = "org.apache.maven:maven-embedder"
+version    = "3.9.16"
+checksum   = "sha256:a99aaac6ecb1b98d0f3b3ba18c16a122fc503412222055639a3eb4cbe458313b"
+
+[[tool]]
+coordinate = "org.apache.maven:maven-model"
+version    = "3.9.16"
+checksum   = "sha256:f59d86a507c241bf17bbf050050d1b8b9c0d34d5010a7e2386c3cab7c83b93de"
+
+[[tool]]
+coordinate = "org.apache.maven:maven-model-builder"
+version    = "3.9.16"
+checksum   = "sha256:002be86d1f53b36f559a0786034a17598d71087f1935f205a1f9e51d4dd124b3"
+
+[[tool]]
+coordinate = "org.apache.maven:maven-plugin-api"
+version    = "3.9.16"
+checksum   = "sha256:37cb5e483e23327cf4ba18f920b45e000d20eec0428a086a5c1bd6bbdecf088c"
+
+[[tool]]
+coordinate = "org.apache.maven:maven-repository-metadata"
+version    = "3.9.16"
+checksum   = "sha256:bc3dd413b89a16b695f35a5d0496b58ea2787c30b7b6062c130d24d6d764720f"
+
+[[tool]]
+coordinate = "org.apache.maven:maven-resolver-provider"
+version    = "3.9.16"
+checksum   = "sha256:72a2d6aad3708e2c708b659b292ae9587a4d170ec88f48466290318730221118"
+
+[[tool]]
+coordinate = "org.apache.maven:maven-settings"
+version    = "3.9.16"
+checksum   = "sha256:322ae5b23f4b7b6ce7896bd33a793143dbbbbcc16c4475e2d7eebbd8f755da92"
+
+[[tool]]
+coordinate = "org.apache.maven:maven-settings-builder"
+version    = "3.9.16"
+checksum   = "sha256:226f1cbb0b4d414eff773fb151a8977837c98073e14d5963794e6cf464e6adbb"
+
+[[tool]]
+coordinate = "org.apache.maven:maven-xml-impl"
+version    = "4.0.0-alpha-7"
+checksum   = "sha256:c89323b70dd491a3ef21432dba4cad2b74e26caaafd77178b0f15313fe0bd5f0"
+
+[[tool]]
+coordinate = "org.codehaus.plexus:plexus-cipher"
+version    = "2.0"
+checksum   = "sha256:9a7f1b5c5a9effd61eadfd8731452a2f76a8e79111fac391ef75ea801bea203a"
+
+[[tool]]
+coordinate = "org.codehaus.plexus:plexus-classworlds"
+version    = "2.6.0"
+checksum   = "sha256:52f77c5ec49f787c9c417ebed5d6efd9922f44a202f217376e4f94c0d74f3549"
+
+[[tool]]
+coordinate = "org.codehaus.plexus:plexus-component-annotations"
+version    = "2.2.0"
+checksum   = "sha256:50edb93c73786e62822b4fe1336e22880fdf147191373cf5c911370e16748fcf"
+
+[[tool]]
+coordinate = "org.codehaus.plexus:plexus-interpolation"
+version    = "1.26"
+checksum   = "sha256:b3b5412ce17889103ea564bcdfcf9fb3dfa540344ffeac6b538a73c9d7182662"
+
+[[tool]]
+coordinate = "org.codehaus.plexus:plexus-sec-dispatcher"
+version    = "2.0"
+checksum   = "sha256:873139960c4c780176dda580b003a2c4bf82188bdce5bb99234e224ef7acfceb"
+
+[[tool]]
+coordinate = "org.codehaus.plexus:plexus-utils"
+version    = "3.6.1"
+checksum   = "sha256:05a63effd67e2d6b9d610cc82e2bd7473289d34802e57a529b28110f28af5679"
+
+[[tool]]
+coordinate = "org.codehaus.plexus:plexus-xml"
+version    = "4.0.2"
+checksum   = "sha256:e55f26425ad1ce948e4fca7b0fde5ecc9b0ba90d326c6ecc25a8e0e56ccfb6fd"
+
+[[tool]]
+coordinate = "org.eclipse.parsson:parsson"
+version    = "1.1.7"
+checksum   = "sha256:c21db018f8ac6cf79893f1af77f1cd337937bd12ae6fa3d4b10f5a00819ee56c"
+
+[[tool]]
+coordinate = "org.eclipse.sisu:org.eclipse.sisu.inject"
+version    = "1.0.1"
+checksum   = "sha256:dec3f14deb30fd2e8a9b44708da83830cddf29f35d4e3b28d21e94f9b050f8f8"
+
+[[tool]]
+coordinate = "org.eclipse.sisu:org.eclipse.sisu.plexus"
+version    = "1.0.1"
+checksum   = "sha256:b5ab4bc809e04d6c84168165cfae3f6e6b93623fe8e0b58f7da5594150806e97"
+
+[[tool]]
+coordinate = "org.jboss.logging:commons-logging-jboss-logging"
+version    = "2.0.0.Final"
+checksum   = "sha256:ce4088809c7512228cb34b54686223dec45532b97366a36830f82926b58a4c6c"
+
+[[tool]]
+coordinate = "org.jboss.logging:jboss-logging"
+version    = "3.6.3.Final"
+checksum   = "sha256:7c12ee575508f81e22b1db9334b969d0ec54ef0fd1dcba24eeab1a44235fc366"
+
+[[tool]]
+coordinate = "org.jboss.logmanager:jboss-logmanager"
+version    = "3.2.2.Final"
+checksum   = "sha256:91d3d76c1e41d403cd717026cd6e8c4495068cb3a4a06461d9d984920fbb856c"
+
+[[tool]]
+coordinate = "org.jboss.slf4j:slf4j-jboss-logmanager"
+version    = "1.1.0.Final"
+checksum   = "sha256:1470840f56dee84303b0a81202c4b47f4b54815e9731e44cddb81c38df5e6d4d"
+
+[[tool]]
+coordinate = "org.jspecify:jspecify"
+version    = "1.0.0"
+checksum   = "sha256:1fad6e6be7557781e4d33729d49ae1cdc8fdda6fe477bb0cc68ce351eafdfbab"
+
+[[tool]]
+coordinate = "org.ow2.asm:asm"
+version    = "9.10.1"
+checksum   = "sha256:ed825d10ab1399c8c0cb669e688cf0c8c82629b4c8399b58352b68e92ca10fcb"
+
+[[tool]]
+coordinate = "org.slf4j:jcl-over-slf4j"
+version    = "1.7.36"
+checksum   = "sha256:ab57ca8fd223772c17365d121f59e94ecbf0ae59d08c03a3cb5b81071c019195"
+
+[[tool]]
+coordinate = "org.slf4j:slf4j-api"
+version    = "2.0.18"
+checksum   = "sha256:44508fd1576500688c790b190acdd16fec4f8c79a3e0b900afd70503cf055f55"
+
+[[module]]
+path    = "."
+group   = "dev.jkexamples"
+name    = "quarkus-rest"
+version = "0.1.0"
+java    = 25

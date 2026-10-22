@@ -1,0 +1,3 @@
+cadence = "nightly"
+needs   = ["docker"]
+check   = ["jk build", "jk test -g", "jk guard", "jk image"]
