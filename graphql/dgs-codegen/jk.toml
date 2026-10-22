@@ -13,7 +13,7 @@ main = "com.acme.graphql.Main"
 # The types land under com.acme.graphql.types, the client under com.acme.graphql.client; a schema
 # edit re-runs the step and an unchanged schema is a cache hit (`jk explain`).
 [generate.dgs]
-tool    = "com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-core:8.6.0"
+tool    = "com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-core:8.7.0"
 main    = "com.netflix.graphql.dgs.codegen.CodeGenCli"
 inputs  = ["src/main/resources/schema/**/*.graphqls"]
 args    = ["--output-dir", "${out}", "--package-name", "com.acme.graphql", "--generate-client", "${inputs}"]
@@ -22,7 +22,28 @@ discard = ["generated-examples"]   # the CLI's example data fetchers, which need
 # The generated client extends the query builder base classes this jar carries, at the codegen's
 # own version; the types need nothing beyond the JDK.
 [dependencies]
-graphql-dgs-codegen-shared-core = "com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-shared-core:8.6.0"
+graphql-dgs-codegen-shared-core = "com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-shared-core:8.7.0"
 
 [test-dependencies]
 junit-jupiter = "6.1.3"
+
+# Test tiers: `jk test` is the fast tier; each profile owns one cost tag, so every tagged
+# test runs in exactly one tier (`jk test --profile integration`).
+[test]
+exclude-tags = ["integration", "network", "slow", "bench"]
+
+[profiles.integration]
+include-tags = ["integration"]
+exclude-tags = []
+
+[profiles.network]
+include-tags = ["network"]
+exclude-tags = ["integration"]
+
+[profiles.slow]
+include-tags = ["slow"]
+exclude-tags = ["integration", "network"]
+
+[profiles.bench]
+include-tags = ["bench"]
+exclude-tags = ["integration", "network", "slow"]

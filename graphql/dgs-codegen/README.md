@@ -7,7 +7,7 @@ typed query builder under `com.acme.graphql.client`, and both join the compile.
 
 ```toml
 [generate.dgs]
-tool    = "com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-core:8.6.0"
+tool    = "com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-core:8.7.0"
 main    = "com.netflix.graphql.dgs.codegen.CodeGenCli"
 inputs  = ["src/main/resources/schema/**/*.graphqls"]
 args    = ["--output-dir", "${out}", "--package-name", "com.acme.graphql", "--generate-client", "${inputs}"]
@@ -16,7 +16,11 @@ discard = ["generated-examples"]   # the CLI's example data fetchers, which need
 
 The tool's runtime closure (Kotlin, Spring context, graphql-java, …) is fetched with it and hashed
 into the step's key; `jk-lock.toml` pins the one runtime jar the generated client reads. A schema
-edit re-runs the step, an unchanged schema is a cache hit (`jk explain`).
+edit re-runs the step, an unchanged schema is a cache hit (`jk explain`). The tool and that
+runtime jar are one DGS codegen release, `8.7.0`, and `jk update` moves both.
+
+`[test] exclude-tags` and one `[profiles.<tag>]` per tag make `jk test` the fast tier and give
+every tagged test exactly one tier.
 
 ```sh
 jk build
