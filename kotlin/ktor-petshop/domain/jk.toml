@@ -2,3 +2,7 @@ name = "ktor-petshop-domain"
 
 # `git.properties` in the library jar: the commit, branch and dirty flag the build came from.
 [build-info]
+
+# The Dokka release that documents this Kotlin library's javadoc jar; `jk update` moves it.
+[dokka]
+version = "2.2.0"

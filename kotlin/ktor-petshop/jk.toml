@@ -1,7 +1,7 @@
 name    = "ktor-petshop"
 group   = "com.example"
 version = "0.1.0"
-kotlin  = "2.4.20"
+kotlin  = "2.4.21"
 java    = 25
 
 [workspace]
@@ -27,6 +27,3 @@ exclude-tags = ["integration", "network"]
 [profiles.bench]
 include-tags = ["bench"]
 exclude-tags = ["integration", "network", "slow"]
-
-[profiles.ci]
-exclude-tags = ["integration", "slow", "network", "bench"]

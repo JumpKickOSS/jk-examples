@@ -16,11 +16,13 @@ import org.koin.ktor.plugin.Koin
 import org.koin.logger.slf4jLogger
 
 fun main() {
-    embeddedServer(Netty, port = 8080, host = "0.0.0.0", module = Application::module).start(wait = true)
+    val port = System.getenv("PORT")?.toIntOrNull() ?: 8080
+    embeddedServer(Netty, port = port, host = "0.0.0.0") { module() }.start(wait = true)
 }
 
-fun Application.module() {
-    DatabaseFactory.init()
+/** The whole app: the database, Koin, JSON and the routes, seeded with two pets on first start. */
+fun Application.module(jdbcUrl: String = DatabaseFactory.DEFAULT_URL) {
+    DatabaseFactory.init(jdbcUrl)
     install(Koin) {
         slf4jLogger()
         modules(appModule)
