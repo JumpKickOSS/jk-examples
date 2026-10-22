@@ -1,7 +1,7 @@
 version = 1
-generated-by = "jk 0.15.3"
-generated-by-build = "eafb500388d9"
-generated-by-build-time = "2026-10-22T00:19:05Z"
+generated-by = "jk 0.20.0"
+generated-by-build = "351af4376a6d"
+generated-by-build-time = "2026-10-22T05:59:57Z"
 resolution-algorithm = "pubgrub-v1"
 kotlin = "2.4.21"
 jk-min = "0.10"
@@ -156,7 +156,17 @@ scopes   = ["test"]
 
 [[plugin]]
 coordinate = "cc.jumpkick:jk-protobuf"
-version    = "0.15.3"
+version    = "0.20.0"
+
+[[tool]]
+coordinate = "com.google.protobuf:protoc"
+version    = "4.36.2"
+type       = "exe"
+sha256.linux-aarch_64 = "cb89a125fd3d6c1ee86ee65a2bcbd7c3ac7c3fab1a806e0c466f162882053cb7"
+sha256.linux-x86_64 = "f6ee22d65361338459208da8bff801c9ca689741cba9187b34990dd45198f864"
+sha256.osx-aarch_64 = "765ccb18be73e565bfc3e2ad94e85039ca28f928b3e62b487e51b7b8fdf1dcfb"
+sha256.osx-x86_64 = "56ba0f583d8761975d177670a3375564fd2bf5a7d96182a9d0c3b818a893c0ff"
+sha256.windows-x86_64 = "5a1b5350308309c9729ce4484a798981f281c10909144c4bdefd6a37688e4b1f"
 
 [[module]]
 path    = "."
