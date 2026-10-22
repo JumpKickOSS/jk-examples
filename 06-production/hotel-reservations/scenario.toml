@@ -1,0 +1,5 @@
+cadence = "nightly"
+needs   = ["docker"]
+check   = ["jk build", "jk test -g", "jk test -s e2e", "jk guard"]
+dev     = true
+dev-checks = ["/api/hotels=Kestrel & Vine Harborview"]

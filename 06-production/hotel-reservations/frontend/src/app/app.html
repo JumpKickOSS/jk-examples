@@ -1,0 +1,27 @@
+<mat-toolbar class="bar">
+  <a routerLink="/" class="home" aria-label="Kestrel & Vine Hotels home"><kv-logo /></a>
+  <span class="spacer"></span>
+  <nav class="nav">
+    <a mat-button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <mat-icon svgIcon="travel_explore" /><span class="label">Hotels</span>
+    </a>
+    <a mat-button routerLink="/reservation" routerLinkActive="active">
+      <mat-icon svgIcon="confirmation_number" /><span class="label">My reservation</span>
+    </a>
+    <a mat-stroked-button routerLink="/desk" routerLinkActive="active" class="desk">
+      <mat-icon svgIcon="concierge" /><span class="label">Front desk</span>
+    </a>
+  </nav>
+</mat-toolbar>
+
+<main>
+  <router-outlet />
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <kv-logo />
+    <p>Five houses on the coast, in the old town, among the vines, at the summit and in the city.</p>
+    <p class="fine">© {{ year }} Kestrel &amp; Vine Hotels — a fictional chain, built with JumpKick as a production example.</p>
+  </div>
+</footer>

@@ -1,0 +1,18 @@
+# The domain: hotels, room types, stays, prices and the rules a reservation lives by. Plain Java —
+# no Spring, no SQL, no HTTP — so every rule is a fast unit test.
+name = "core"
+
+[export-dependencies]
+jspecify.workspace = true
+
+[test-dependencies]
+junit-jupiter = "org.junit.jupiter:junit-jupiter"
+assertj       = "org.assertj:assertj-core"
+
+[javac]
+plugins = { ErrorProne = { options = ["-Xep:NullAway:ERROR", "-XepOpt:NullAway:OnlyNullMarked=true", "-XepOpt:NullAway:JSpecifyMode=true", "-XepOpt:NullAway:TreatGeneratedAsUnannotated=true", "-XepDisableWarningsInGeneratedCode"] } }
+args    = ["-XDcompilePolicy=simple", "--should-stop=ifError=FLOW"]
+
+[processor-dependencies]
+error_prone_core.workspace = true
+nullaway.workspace = true

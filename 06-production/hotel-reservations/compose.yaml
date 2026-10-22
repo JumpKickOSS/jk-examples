@@ -1,0 +1,38 @@
+# The production shape on one machine: the image `jk image` builds, and PostgreSQL 18.
+#   jk image                               # builds kestrel-vine-hotels:0.1.0 into docker or podman
+#   docker compose --profile app up        # or: podman compose --profile app up
+# `docker compose up db` alone gives `jk dev` its database (dev/db.sh does the same without compose).
+services:
+  db:
+    image: docker.io/library/postgres:18-alpine
+    environment:
+      POSTGRES_DB: hotel
+      POSTGRES_USER: hotel
+      POSTGRES_PASSWORD: hotel
+    ports: ["5432:5432"]
+    volumes: ["db-data:/var/lib/postgresql"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U hotel -d hotel"]
+      interval: 2s
+      retries: 30
+
+  app:
+    profiles: ["app"]
+    image: kestrel-vine-hotels:0.1.0
+    depends_on:
+      db: { condition: service_healthy }
+    environment:
+      DATABASE_URL: jdbc:postgresql://db:5432/hotel
+      DATABASE_USER: hotel
+      DATABASE_PASSWORD: hotel
+    ports: ["8080:8080"]
+    read_only: true
+    tmpfs: ["/tmp"]
+    security_opt: ["no-new-privileges:true"]
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8080/actuator/health/readiness"]
+      interval: 5s
+      retries: 30
+
+volumes:
+  db-data:

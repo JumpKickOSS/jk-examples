@@ -1,0 +1,40 @@
+# The application's services: availability, booking, the front desk. Its public API takes and
+# returns contract types only; jOOQ, the domain model and the mappers stay inside this module.
+name = "service"
+
+[dependencies]
+contract.workspace = true
+core.workspace     = true
+mapstruct.workspace = true
+starter-jooq   = "org.springframework.boot:spring-boot-starter-jooq"
+starter-flyway = "org.springframework.boot:spring-boot-starter-flyway"
+flyway-postgresql = "org.flywaydb:flyway-database-postgresql"
+spring-security-crypto = "org.springframework.security:spring-security-crypto"
+
+[runtime-dependencies]
+postgresql = "org.postgresql:postgresql"
+
+[test-dependencies]
+starter-test = "org.springframework.boot:spring-boot-starter-test"
+starter-jooq-test = "org.springframework.boot:spring-boot-starter-jooq-test"
+testcontainers-postgresql = "org.testcontainers:testcontainers-postgresql"
+spring-boot-testcontainers = "org.springframework.boot:spring-boot-testcontainers"
+
+# jOOQ classes from the schema migration, without a database: DDLDatabase reads db/migration (the
+# seed lives in db/seed and is not schema). The PostgreSQL-only parts of V1 sit between
+# [jooq ignore] markers, which parseIgnoreComments honours.
+[jooq]
+version    = "3.21.9"
+package    = "dev.jkexamples.hotel.service.db"
+name-case  = "lower"
+excludes   = "flyway_schema_history"
+properties = { parseIgnoreComments = "true" }
+
+[javac]
+plugins = { ErrorProne = { options = ["-Xep:NullAway:ERROR", "-XepOpt:NullAway:OnlyNullMarked=true", "-XepOpt:NullAway:JSpecifyMode=true", "-XepOpt:NullAway:TreatGeneratedAsUnannotated=true", "-XepDisableWarningsInGeneratedCode"] } }
+args    = ["-XDcompilePolicy=simple", "--should-stop=ifError=FLOW", "-Amapstruct.defaultComponentModel=spring"]
+
+[processor-dependencies]
+error_prone_core.workspace = true
+nullaway.workspace = true
+mapstruct-processor.workspace = true

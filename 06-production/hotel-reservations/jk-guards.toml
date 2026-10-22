@@ -1,0 +1,74 @@
+# House rules for Kestrel & Vine Hotels. They run inside `jk build` — before tests, cached per lane
+# — and `jk guard` runs them alone. The two packs bring Spring's and a workspace's rules; the
+# tables below are this application's own architecture. `jk guard explain <id>` says what each
+# one protects and what to do instead.
+[guards]
+extends = ["cc.jumpkick.guards:spring:0.20.0", "cc.jumpkick.guards:monorepo:0.20.0"]
+
+# The module graph is the architecture: rest may reach contract and service (and the front end's
+# bundle), service may reach contract and core, and the leaves reach nothing of ours.
+[guards.module-layers]
+kind   = "layers"
+layers = { contract = "backend/contract", core = "backend/core", service = "backend/service", rest = "backend/rest", frontend = "frontend" }
+access = { rest = ["contract", "service", "frontend"], service = ["contract", "core"], core = [], contract = [], frontend = [] }
+edges  = "both"
+closed = true
+why    = "a controller that can see the domain or the database will, one shortcut at a time"
+
+# Only DTOs cross HTTP: a controller compiles against contract types, never the domain, jOOQ's
+# records or the service's internals.
+[guards.dto-only-over-http]
+kind   = "classes"
+that   = { annotated-with = "org.springframework.web.bind.annotation.RestController" }
+should = { not-depend-on = ["dev.jkexamples.hotel.core..", "dev.jkexamples.hotel.service.internal..", "dev.jkexamples.hotel.service.db..", "org.jooq.."] }
+scope  = "backend/rest"
+why    = "an entity in a response body leaks columns, couples the UI to the schema and invites mass assignment"
+
+[guards.core-is-plain-java]
+kind       = "forbid"
+signatures = ["org.springframework.**", "org.jooq.**", "jakarta.**"]
+scope      = "backend/core"
+fixture    = "guard-fixtures/core-is-plain-java"
+instead    = "a plain Java type in core; the framework adapter belongs in service"
+why        = "the domain rules must run in a unit test with nothing else on the classpath"
+
+[guards.jooq-stays-in-service]
+kind       = "forbid"
+signatures = ["org.jooq.**", "dev.jkexamples.hotel.service.db.**"]
+owner      = ["dev.jkexamples.hotel.service.internal.**", "dev.jkexamples.hotel.service.db.**"]
+instead    = "a method on a service interface that returns contract types"
+why        = "SQL outside the repositories is SQL nobody reviews with the schema"
+
+[guards.null-marked]
+kind    = "annotate"
+require = "org.jspecify.annotations.NullMarked"
+on      = "package"
+scope   = ["backend/*"]
+why     = "NullAway checks only @NullMarked code; an unmarked package is unchecked"
+
+[[guards.null-marked.allow]]
+in     = "dev.jkexamples.hotel.service.db.**"
+reason = "jOOQ's generated classes; regenerated on every schema change and not ours to annotate"
+
+[guards.pinned-and-plain]
+kind       = "depend"
+ban        = ["org.projectlombok:lombok"]
+no-dynamic = true
+instead    = "records, and exact versions `jk update` moves"
+why        = "every type is plain Java a reader can follow, and every version is one the lock names"
+
+[guards.containers-are-integration]
+kind  = "tiers"
+uses  = ["org.testcontainers.**"]
+suite = "integration"
+why   = "a container runtime is not a unit-test dependency"
+
+[[guards.containers-are-integration.allow]]
+in     = "dev.jkexamples.hotel.e2e.**"
+reason = "the browser tier runs the whole application, database included"
+
+[guards.browsers-are-e2e]
+kind  = "tiers"
+uses  = ["com.microsoft.playwright.**"]
+suite = "e2e"
+why   = "a real browser belongs to the end-to-end tier"

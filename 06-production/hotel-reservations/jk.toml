@@ -1,0 +1,40 @@
+# Kestrel & Vine Hotels — a hotel reservation system built the way a production service is built:
+# a Spring Boot 4 backend in four modules under backend/, an Angular front end under frontend/,
+# PostgreSQL 18 with Flyway migrations, jOOQ generated from those migrations, and an OCI image.
+
+group   = "dev.jkexamples.hotel"
+name    = "hotel-reservations"
+version = "0.1.0"
+java    = 25
+
+[workspace]
+modules = ["backend/contract", "backend/core", "backend/service", "backend/rest", "frontend"]
+
+# Spring Boot's BOM governs every member: versionless starters and their libraries resolve to
+# the release below, and rest's [spring-boot] table pins the same release for the Boot jar.
+[platform-dependencies]
+spring-boot-dependencies = "4.1.2"
+
+# One version of each shared library, for every member that says `<name>.workspace = true`.
+[workspace.dependencies]
+jspecify          = "1.0.1"
+mapstruct         = "org.mapstruct:mapstruct:1.6.3"
+mapstruct-processor = "org.mapstruct:mapstruct-processor:1.6.3"
+error_prone_core  = "com.google.errorprone:error_prone_core:2.51.0"
+nullaway          = "com.uber.nullaway:nullaway:0.14.2"
+archunit          = "com.tngtech.archunit:archunit-junit5:1.5.1"
+testcontainers-postgresql = "org.testcontainers:testcontainers-postgresql:2.0.5"
+playwright        = "com.microsoft.playwright:playwright:1.64.0"
+
+# `jk dev` at this root runs the app (rest), the Angular dev server (frontend, proxying /api) and
+# this database. The app is ready once PostgreSQL listens on TCP, not during its first-run init.
+[dev.sidecars]
+db = { command = "dev/db.sh", ready-pattern = "listening on IPv4 address", ready-timeout = "3m" }
+
+# The code graph agents query (`jk graph query …`): the words people use for the code's names.
+[graph]
+[graph.aliases]
+Reservation = ["booking", "stay", "confirmation"]
+RoomType    = ["room category", "suite", "room kind"]
+PricingPolicy = ["price", "rate", "tariff", "nightly rate"]
+FrontDesk   = ["desk", "arrivals", "departures", "check-in", "check-out"]

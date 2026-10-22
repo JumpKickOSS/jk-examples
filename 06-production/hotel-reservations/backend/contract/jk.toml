@@ -1,0 +1,15 @@
+# The HTTP contract: every type the front end sends or receives. Records with Bean Validation
+# constraints and nothing else — no Spring, no domain types. The REST layer may expose only these.
+name = "contract"
+
+[export-dependencies]
+jspecify.workspace = true
+validation-api = "jakarta.validation:jakarta.validation-api"
+
+[javac]
+plugins = { ErrorProne = { options = ["-Xep:NullAway:ERROR", "-XepOpt:NullAway:OnlyNullMarked=true", "-XepOpt:NullAway:JSpecifyMode=true", "-XepOpt:NullAway:TreatGeneratedAsUnannotated=true", "-XepDisableWarningsInGeneratedCode"] } }
+args    = ["-XDcompilePolicy=simple", "--should-stop=ifError=FLOW"]
+
+[processor-dependencies]
+error_prone_core.workspace = true
+nullaway.workspace = true
