@@ -15,13 +15,8 @@ version = "4.1.1"
 base      = "docker.io/bellsoft/liberica-runtime-container:jre-25-slim-glibc"
 aot-cache = true
 
-# `jk dev` runs the Vite dev server beside the app: it waits for 5173 to answer, prints that URL
-# as the front door, and Ctrl-C stops both. Vite proxies /api to the JVM (web/vite.config.ts).
-[dev.sidecars]
-web = { command = "npm run dev", cwd = "../web", ready = "http://localhost:5173", front-door = true }
-
 [dependencies]
-web.workspace  = true   # the SPA bundle: a resource jar with static/ at its root
+web.workspace  = true   # the SPA bundle: a resource jar with static/ at its root; `jk dev` runs its Vite server
 starter-webmvc = "org.springframework.boot:spring-boot-starter-webmvc"
 
 [dev-dependencies]

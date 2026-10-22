@@ -29,6 +29,3 @@ exclude-tags = ["integration", "network"]
 [profiles.bench]
 include-tags = ["bench"]
 exclude-tags = ["integration", "network", "slow"]
-
-[profiles.ci]
-exclude-tags = ["integration", "slow", "network", "bench"]

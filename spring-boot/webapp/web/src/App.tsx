@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-
-type Hello = { message: string };
+import { fetchHello } from "./api";
 
 // One fetch to the backend and one client-side "route" (no router library): the path is
 // changed with pushState, and a reload of /about is what the app's SPA fallback exists for.
@@ -9,10 +8,7 @@ export function App() {
   const [path, setPath] = useState(window.location.pathname);
 
   useEffect(() => {
-    fetch("/api/hello")
-      .then((r) => r.json() as Promise<Hello>)
-      .then((h) => setHello(h.message))
-      .catch((e: unknown) => setHello(`request failed: ${String(e)}`));
+    fetchHello().then(setHello, (e: unknown) => setHello(`request failed: ${String(e)}`));
   }, []);
 
   useEffect(() => {

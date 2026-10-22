@@ -4,8 +4,8 @@ The most common shape of application people actually ship, as a two-module works
 
 | Module | Role |
 |--------|------|
-| `app` | Spring Boot: `/api/hello`, the static SPA from `classpath:/static/`, and the SPA fallback. `[image]`, `[dev.sidecars]`. |
-| `web` | A tiny Vite + React app. A **node module**: `node = 24` and no JVM sources. |
+| `app` | Spring Boot: `/api/hello`, the static SPA from `classpath:/static/`, and the SPA fallback. `[image]`. |
+| `web` | A tiny Vite + React app that fetches `/api/hello`, with one Vitest test. A **node module**: `node = 24` and no JVM sources. |
 
 ## The classpath seam
 
@@ -35,7 +35,7 @@ own assets never reach it.
 ## Build
 
 ```sh
-jk build                                      # Node.js, the web jar, app's Boot jar, the /api/hello test
+jk build                                      # Node.js, the web jar and its Vitest test, app's Boot jar, the /api/hello test
 unzip -l web/target/web-0.1.0.jar | grep static/index.html
 java -jar app/target/app-0.1.0.jar            # http://localhost:8080/ and /about and /api/hello
 jk guard                                      # spring + monorepo packs
@@ -45,21 +45,15 @@ jk image -m app                               # optional: JRE 25 image with a tr
 ## Two live loops with one command
 
 ```sh
-cd app && jk dev
+jk dev                                        # at the workspace root
 ```
 
-`app/jk.toml` declares the Vite dev server as a sidecar:
-
-```toml
-[dev.sidecars]
-web = { command = "npm run dev", cwd = "../web", ready = "http://localhost:5173", front-door = true }
-```
-
-`jk dev` starts the JVM with reload **and** `npm run dev` in `web/`, waits until 5173 answers,
-prints that URL as the front door, and stops both on Ctrl-C. Vite serves the React app with hot
-reload and proxies `/api` to the JVM on 8080 (`server.proxy` in `vite.config.ts`), so in
-development the browser talks to Vite and the classpath seam is not involved at all. `jk dev
---no-sidecars` runs the app alone; `jk run`, `jk build` and `jk test` never read the table.
+Nothing in `jk.toml` declares the front end's dev server: `app` depends on the node module `web`,
+so `jk dev` infers it and runs web's `dev` script under the locked Node.js beside the app. It
+starts the JVM with reload **and** Vite, prefixes each line with its member, prints the Vite URL
+(5173) as the front door once both are up, and stops both on Ctrl-C. Vite serves the React app
+with hot reload and proxies `/api` to the JVM on 8080 (`server.proxy` in `vite.config.ts`), so in
+development the browser talks to Vite and the classpath seam is not involved at all.
 
 ## What else it shows
 
