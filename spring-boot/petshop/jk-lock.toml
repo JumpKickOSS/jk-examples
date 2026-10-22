@@ -1,15 +1,15 @@
 version = 1
-generated-by = "jk 0.14.0"
-generated-by-build = "0f34764db72a"
-generated-by-build-time = "2026-10-01T19:29:49Z"
+generated-by = "jk 0.15.3"
+generated-by-build = "eafb500388d9"
+generated-by-build-time = "2026-10-22T00:19:05Z"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.12.0"
-manifests-sha256 = "c58af664c39ccd34d0cb49b3bb81887ba8b9ef2452a979c987ff379949bf747e"
+manifests-sha256 = "00899f02086cd920d79d7805ca9fd11d8cdf64ff7f4215f58e54afe92aad896f"
 project-id = "00b92b95721309f7df485b4b6f770eb0"
 
 [jdk]
 suggested-vendor = "temurin"
-suggested-version = "25.0.4.1"
+suggested-version = "25.0.2"
 
 [[artifact]]
 name     = "ch.qos.logback:logback-classic:jar:"
@@ -41,19 +41,11 @@ scopes   = ["main", "test"]
 
 [[artifact]]
 name     = "com.fasterxml:classmate:jar:"
-version  = "1.7.1"
-source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:cc3299e5df4fc24180e69477c890d07d38db79dd2decc0ef20e74a986897c0a1"
-scopes   = ["main"]
-
-[[artifact]]
-name     = "com.fasterxml:classmate:jar:"
 version  = "1.7.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:75fbda45456f123fb6e2028a6189442d8d0730b357adce4c0a6d7e789f70669b"
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
 scopes   = ["main"]
-members  = ["web"]
 
 [[artifact]]
 name     = "com.jayway.jsonpath:json-path:jar:"
@@ -76,30 +68,11 @@ scopes   = ["test"]
 
 [[artifact]]
 name     = "commons-logging:commons-logging:jar:"
-version  = "1.3.5"
-source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:6d7a744e4027649fbb50895df9497d109f98c766a637062fe8d2eabbb3140ba4"
-scopes   = ["main", "test"]
-
-[[artifact]]
-name     = "commons-logging:commons-logging:jar:"
 version  = "1.3.6"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:f8ead8943401081dea0aa824b5b1ba40a0e4ed297a572a0f02258150a0b62357"
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
 scopes   = ["main", "test"]
-members  = ["web"]
-
-[[artifact]]
-name     = "io.micrometer:micrometer-commons:jar:"
-version  = "1.16.7"
-source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:cd1ad64a94650a2ed3988a4ab48c9a7fad40c4986a81e328194dd757b5170273"
-scopes   = ["main"]
-members  = ["service"]
-deps = [
-  "org.jspecify:jspecify:jar:@1.0.1",
-]
 
 [[artifact]]
 name     = "io.micrometer:micrometer-commons:jar:"
@@ -137,18 +110,6 @@ deps = [
   "io.micrometer:micrometer-commons:jar:@1.17.1",
   "io.micrometer:micrometer-core:jar:@1.17.1",
   "io.micrometer:micrometer-observation:jar:@1.17.1",
-  "org.jspecify:jspecify:jar:@1.0.1",
-]
-
-[[artifact]]
-name     = "io.micrometer:micrometer-observation:jar:"
-version  = "1.16.7"
-source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:74f9e4d51ef30c141de8a2409879282e572eef98665e033e8922c2fbee16862d"
-scopes   = ["main"]
-members  = ["service"]
-deps = [
-  "io.micrometer:micrometer-commons:jar:@1.16.7",
   "org.jspecify:jspecify:jar:@1.0.1",
 ]
 
@@ -201,19 +162,11 @@ deps = [
 
 [[artifact]]
 name     = "net.bytebuddy:byte-buddy-agent:jar:"
-version  = "1.17.7"
-source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:a9ba887dca252ad61b7d5153294f34e6f3bdf4b2736b04373d13615a695fc0ff"
-scopes   = ["test"]
-
-[[artifact]]
-name     = "net.bytebuddy:byte-buddy-agent:jar:"
 version  = "1.18.11"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:780b3601c34150ab9fb822673c472f7229c1041e8e2a12facf6a5de9ba7a2d64"
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
 scopes   = ["test"]
-members  = ["web"]
 
 [[artifact]]
 name     = "net.bytebuddy:byte-buddy:jar:"
@@ -221,14 +174,6 @@ version  = "1.18.11"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:e32f454c2c1f4aca982f9ec764ed892d9a6eee7e8a77f435cbdd180f6ffdb821"
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
-scopes   = ["test"]
-members  = ["web"]
-
-[[artifact]]
-name     = "net.bytebuddy:byte-buddy:jar:"
-version  = "1.18.3"
-source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:d78396e3c5bce3f2865c9186647481e5589d34cacc632484715b686108d17c66"
 scopes   = ["test"]
 
 [[artifact]]
@@ -317,7 +262,7 @@ checksum = "sha256:c4a445426c3c2861666863b842cc4ec7bbb1c4226fefd370b6d2fe83d6c4f
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
 scopes   = ["test"]
 deps = [
-  "net.bytebuddy:byte-buddy:jar:@1.18.3",
+  "net.bytebuddy:byte-buddy:jar:@1.18.11",
 ]
 
 [[artifact]]
@@ -354,7 +299,7 @@ checksum = "sha256:0497ebbe23fafe4180b74bd0b96a67eee8556552decc4d3c120c1dc737a2b
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
 scopes   = ["main"]
 deps = [
-  "com.fasterxml:classmate:jar:@1.7.1",
+  "com.fasterxml:classmate:jar:@1.7.3",
   "jakarta.validation:jakarta.validation-api:jar:@3.1.1",
   "org.jboss.logging:jboss-logging:jar:@3.6.3.Final",
 ]
@@ -366,14 +311,6 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:7c12ee575508f81e22b1db9334b969d0ec54ef0fd1dcba24eeab1a44235fc366"
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
 scopes   = ["main"]
-
-[[artifact]]
-name     = "org.jspecify:jspecify:jar:"
-version  = "1.0.0"
-source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:1fad6e6be7557781e4d33729d49ae1cdc8fdda6fe477bb0cc68ce351eafdfbab"
-scopes   = ["test"]
-members  = ["domain"]
 
 [[artifact]]
 name     = "org.jspecify:jspecify:jar:"
@@ -393,7 +330,7 @@ scopes   = ["test"]
 deps = [
   "org.apiguardian:apiguardian-api:jar:@1.1.2",
   "org.jspecify:jspecify:jar:@1.0.1",
-  "org.junit.platform:junit-platform-commons:jar:@6.1.3",
+  "org.junit.platform:junit-platform-commons:jar:@6.0.3",
   "org.opentest4j:opentest4j:jar:@1.3.0",
 ]
 
@@ -408,7 +345,7 @@ deps = [
   "org.apiguardian:apiguardian-api:jar:@1.1.2",
   "org.jspecify:jspecify:jar:@1.0.1",
   "org.junit.jupiter:junit-jupiter-api:jar:@6.0.3",
-  "org.junit.platform:junit-platform-engine:jar:@6.1.3",
+  "org.junit.platform:junit-platform-engine:jar:@6.0.3",
 ]
 
 [[artifact]]
@@ -444,18 +381,6 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:39f262d09c3d52719fe0b77f080e90a3695e285d779a41b232e17963ae5da200"
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
 scopes   = ["test"]
-members  = ["web"]
-deps = [
-  "org.apiguardian:apiguardian-api:jar:@1.1.2",
-  "org.jspecify:jspecify:jar:@1.0.1",
-]
-
-[[artifact]]
-name     = "org.junit.platform:junit-platform-commons:jar:"
-version  = "6.1.3"
-source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:a4774ae923c109544034aeae7c762cf017fbcdd1342403ba90e0921984b608c3"
-scopes   = ["test"]
 deps = [
   "org.apiguardian:apiguardian-api:jar:@1.1.2",
   "org.jspecify:jspecify:jar:@1.0.1",
@@ -468,24 +393,10 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:491e9e4f745f161b8a8e4186a1a7c6a450ea12c70930c9aedae427215301d947"
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
 scopes   = ["test"]
-members  = ["web"]
 deps = [
   "org.apiguardian:apiguardian-api:jar:@1.1.2",
   "org.jspecify:jspecify:jar:@1.0.1",
   "org.junit.platform:junit-platform-commons:jar:@6.0.3",
-  "org.opentest4j:opentest4j:jar:@1.3.0",
-]
-
-[[artifact]]
-name     = "org.junit.platform:junit-platform-engine:jar:"
-version  = "6.1.3"
-source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:21ad7ad3a35beda16387979317be1833a72a71d812f9a66ee4b9a7bafb56334c"
-scopes   = ["test"]
-deps = [
-  "org.apiguardian:apiguardian-api:jar:@1.1.2",
-  "org.jspecify:jspecify:jar:@1.0.1",
-  "org.junit.platform:junit-platform-commons:jar:@6.1.3",
   "org.opentest4j:opentest4j:jar:@1.3.0",
 ]
 
@@ -496,23 +407,10 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:315608372e4dc44bca0ccb3ae8a07ecc206b3367033fa05748a03ccd563f1301"
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
 scopes   = ["test"]
-members  = ["web"]
 deps = [
   "org.apiguardian:apiguardian-api:jar:@1.1.2",
   "org.jspecify:jspecify:jar:@1.0.1",
   "org.junit.platform:junit-platform-engine:jar:@6.0.3",
-]
-
-[[artifact]]
-name     = "org.junit.platform:junit-platform-launcher:jar:"
-version  = "6.1.3"
-source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:1dec64b1fc0b7c47a11302aa5b4d37d8160c041b396e27067709ce775601a7b6"
-scopes   = ["test"]
-deps = [
-  "org.apiguardian:apiguardian-api:jar:@1.1.2",
-  "org.jspecify:jspecify:jar:@1.0.1",
-  "org.junit.platform:junit-platform-engine:jar:@6.1.3",
 ]
 
 [[artifact]]
@@ -523,8 +421,8 @@ checksum = "sha256:ae295bebd5d11fab97ab297815dc7617188b86003cbce3dfd5c0d5c3a6cc4
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
 scopes   = ["test"]
 deps = [
-  "net.bytebuddy:byte-buddy-agent:jar:@1.17.7",
-  "net.bytebuddy:byte-buddy:jar:@1.18.3",
+  "net.bytebuddy:byte-buddy-agent:jar:@1.18.11",
+  "net.bytebuddy:byte-buddy:jar:@1.18.11",
   "org.objenesis:objenesis:jar:@3.3",
 ]
 
@@ -1015,6 +913,7 @@ name     = "org.springframework:spring-context:jar:"
 version  = "7.0.9"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:7552a2fcfa30cea53eb14d7a65a7a8e1b1dd82e832a7164fb7e6fb105f438858"
+pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
 scopes   = ["main", "test"]
 deps = [
   "io.micrometer:micrometer-observation:jar:@1.17.1",
@@ -1032,7 +931,7 @@ checksum = "sha256:5195f4722699b39878d99a832549fe65df2890b159d063b88fff31b1ca65a
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.1"
 scopes   = ["main", "test"]
 deps = [
-  "commons-logging:commons-logging:jar:@1.3.5",
+  "commons-logging:commons-logging:jar:@1.3.6",
   "org.jspecify:jspecify:jar:@1.0.1",
 ]
 
@@ -1125,11 +1024,11 @@ deps = [
 
 [[plugin]]
 coordinate = "cc.jumpkick.guards:monorepo"
-version    = "0.13.2"
+version    = "0.15.3"
 
 [[plugin]]
 coordinate = "cc.jumpkick.guards:spring"
-version    = "0.13.2"
+version    = "0.15.3"
 
 [[module]]
 path    = "."
