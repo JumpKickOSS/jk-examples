@@ -12,8 +12,8 @@ unzip -l target/shrink-cli-1.0.0-min.jar | grep -c 'org/apache/commons/lang3'   
 jk guard
 ```
 
-Against the pinned `commons-lang3` `3.21.0`, a build writes a 740,655-byte
-`shrink-cli-1.0.0-all.jar` (457 `org/apache/commons/lang3` entries) and a 15,798-byte
+Against the pinned `commons-lang3` `3.21.0`, a build writes a 740,652-byte
+`shrink-cli-1.0.0-all.jar` (457 `org/apache/commons/lang3` entries) and a 15,807-byte
 `shrink-cli-1.0.0-min.jar` (2 of them); `java -jar` on the slim jar prints
 `Hello from a shrunk jar`. The numbers move with the pin, which `jk update` moves.
 
