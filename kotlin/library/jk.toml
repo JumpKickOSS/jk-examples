@@ -2,7 +2,7 @@ group = "com.example"
 name = "kotlin-library"
 version = "0.1.0"
 java = 25
-kotlin = "2.4.20"
+kotlin = "2.4.21"
 
 [test-dependencies]
 junit-jupiter = "6.1.3"
