@@ -33,6 +33,3 @@ grails-gsp = { group = "org.apache.grails", name = "grails-gsp" }
 grails-testing-support-web         = { group = "org.apache.grails", name = "grails-testing-support-web" }
 grails-testing-support-datamapping = { group = "org.apache.grails", name = "grails-testing-support-datamapping" }
 spock-core                         = { group = "org.spockframework", name = "spock-core" }
-# ControllerUnitTest needs grails-web-common's test fixtures (GrailsWebMockUtil). Grails publishes
-# that edge only in Gradle module metadata, not in the POM, so it is declared here.
-grails-web-common-fixtures         = { group = "org.apache.grails.web", name = "grails-web-common", classifier = "test-fixtures" }

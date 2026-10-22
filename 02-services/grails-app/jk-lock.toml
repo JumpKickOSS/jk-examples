@@ -1,10 +1,10 @@
 version = 1
 generated-by = "jk 0.20.0"
-generated-by-build = "f8df96171fba"
+generated-by-build = "4900110b2237"
 generated-by-build-time = "2026-10-22T18:56:27Z"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.10"
-manifests-sha256 = "ee15811b3ccecc7ed90c85c46733caf5f6cfde71f9f9598da86dadb42da492e1"
+manifests-sha256 = "3c6840d0998c20a9adde63ef42156a7ea2f1fb340e888dc034ea528185d572f9"
 project-id = "a1eb11a2abc96c90fc9834e7a8715316"
 
 [jdk]
@@ -653,6 +653,7 @@ pinned-by = "org.apache.grails:grails-bom:8.0.0"
 scopes   = ["test"]
 deps = [
   "org.apache.grails.web:grails-web-common:jar:@8.0.0",
+  "org.apache.grails.web:grails-web-common:jar:test-fixtures@8.0.0",
   "org.apache.grails.web:grails-web-core:jar:@8.0.0",
   "org.apache.grails:grails-converters:jar:@8.0.0",
   "org.apache.grails:grails-mimetypes:jar:@8.0.0",
@@ -1209,6 +1210,7 @@ deps = [
   "org.apache.grails.views:grails-web-gsp-taglib:jar:@8.0.0",
   "org.apache.grails.views:grails-web-jsp:jar:@8.0.0",
   "org.apache.grails.web:grails-web-common:jar:@8.0.0",
+  "org.apache.grails.web:grails-web-common:jar:test-fixtures@8.0.0",
   "org.apache.grails:grails-gsp:jar:@8.0.0",
   "org.apache.grails:grails-interceptors:jar:@8.0.0",
   "org.apache.grails:grails-rest-transforms:jar:@8.0.0",
