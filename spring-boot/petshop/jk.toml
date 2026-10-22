@@ -6,6 +6,11 @@ java    = 25
 [workspace]
 modules = ["domain", "service", "web"]
 
+# Boot's BOM for every member: `service` takes `spring-context` versionless from it, and `web`'s
+# [spring-boot] table pins the same release for the Boot jar.
+[platform-dependencies]
+spring-boot-dependencies = "4.1.1"
+
 # Test tiers. Bare `jk test` is the unit tier; each profile owns exactly one of the excluded
 # tags, so every tagged test runs in one tier and none is silently skipped.
 [test]
@@ -26,6 +31,3 @@ exclude-tags = ["integration", "network"]
 [profiles.bench]
 include-tags = ["bench"]
 exclude-tags = ["integration", "network", "slow"]
-
-[profiles.ci]
-exclude-tags = ["integration", "slow", "network", "bench"]

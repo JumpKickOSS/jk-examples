@@ -1,7 +1,7 @@
 version = 1
-generated-by = "jk 0.13.7"
-generated-by-build = "ee200446bb46"
-generated-by-build-time = "2026-09-18T04:20:35Z"
+generated-by = "jk 0.15.3"
+generated-by-build = "eafb500388d9"
+generated-by-build-time = "2026-10-22T00:19:05Z"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.12.0"
 manifests-sha256 = "945cd6022a4167b0207ae6cd88c10a6d213caa2d5d2f9eff475b6f0d8964af90"
@@ -9,7 +9,7 @@ project-id = "30dc86dfb700b2fc8afd7e663c1b8cd4"
 
 [jdk]
 suggested-vendor = "temurin"
-suggested-version = "25.0.4.1"
+suggested-version = "25.0.2"
 
 [[artifact]]
 name     = "org.apiguardian:apiguardian-api:jar:"

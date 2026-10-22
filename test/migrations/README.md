@@ -13,16 +13,16 @@ and the tests prove them on two databases, one per tier:
 
 ```toml
 [dependencies]
-flyway-core       = "13.7.0"
-flyway-postgresql = "13.7.0"     # Flyway's PostgreSQL support is its own module
+flyway-core       = "13.11.1"
+flyway-postgresql = "13.11.1"    # Flyway's PostgreSQL support is its own module
 liquibase-core    = "5.0.4"
-postgresql        = "42.7.13"
-h2                = "2.5.250"
+postgresql        = "42.7.14"
+h2                = "2.5.252"
 
 [test-dependencies]
 junit-jupiter             = "6.1.3"
-testcontainers-postgresql = "1.21.4"
-slf4j-simple              = "2.0.17"
+testcontainers-postgresql = "org.testcontainers:testcontainers-postgresql:2.0.5"
+slf4j-simple              = "2.0.20"
 ```
 
 Nothing about migrations is in `jk.toml` beyond those libraries. The same scripts feed
@@ -38,9 +38,13 @@ jk run                          # flyway: 0 applied [] · liquibase: 1 change se
 jk guard
 ```
 
-`jk run` migrates the database named by `JDBC_URL` (`DB_USER`, `DB_PASSWORD`), an H2 file under
-`target/` when nothing is set; put a Postgres URL in the project's `.env` and every process jk
-starts in the project inherits it.
+`jk run` migrates the database named by `JDBC_URL` (`DB_USER`, `DB_PASSWORD`) in its environment,
+an H2 file under `target/` when nothing is set: `JDBC_URL=jdbc:postgresql://localhost:5432/app
+DB_USER=app DB_PASSWORD=app jk run`.
+
+Testcontainers 2 publishes each module as `testcontainers-<module>`, so the PostgreSQL module is
+the full coordinate `org.testcontainers:testcontainers-postgresql`, and the test imports
+`org.testcontainers.postgresql.PostgreSQLContainer`.
 
 ## The integration tier needs a container runtime
 
@@ -63,23 +67,38 @@ unaffected.
 Outside the application — a shared development database, an `info`, a `repair`, a `validate` in
 CI — each tool is a command against a database, run as a pinned [tool](https://github.com/JumpKickOSS/jk/blob/main/docs/user/tools.md)
 with the JDBC driver beside it and the URL through the tool's own variables (`FLYWAY_URL`,
-`LIQUIBASE_COMMAND_URL`) or on the command line. Against a Postgres on `localhost:5432` with
-`app`/`app`:
+`LIQUIBASE_COMMAND_URL`) or on the command line. Installed once, pinned, with the driver beside
+it, each launcher is a command on `PATH`; against a Postgres on `localhost:5432` with `app`/`app`:
+
+```sh
+jk tool install org.flywaydb:flyway-commandline:12.9.0 --bin flyway --main org.flywaydb.commandline.Main \
+  --with org.postgresql:postgresql:42.7.14
+
+jk tool install org.liquibase:liquibase-core:5.0.4 --bin liquibase --main liquibase.integration.commandline.LiquibaseCommandLine \
+  --with org.postgresql:postgresql:42.7.14 --with info.picocli:picocli:4.7.7
+
+flyway -url=jdbc:postgresql://localhost:5432/app -user=app -password=app \
+  -locations=filesystem:src/main/resources/db/migration migrate          # then: info | validate | repair
+liquibase --url=jdbc:postgresql://localhost:5432/app --username=app --password=app \
+  --changelog-file=db/changelog/db.changelog-master.yaml --search-path=src/main/resources update
+```
+
+Or run either without installing — the same coordinates, resolved once and cached:
 
 ```sh
 jk tool run org.flywaydb:flyway-commandline:12.9.0 --main org.flywaydb.commandline.Main \
-  --with org.postgresql:postgresql:42.7.13 -- \
+  --with org.postgresql:postgresql:42.7.14 -- \
   -url=jdbc:postgresql://localhost:5432/app -user=app -password=app \
   -locations=filesystem:src/main/resources/db/migration migrate        # then: info | validate | repair
 
 jk tool run org.liquibase:liquibase-core:5.0.4 --main liquibase.integration.commandline.LiquibaseCommandLine \
-  --with org.postgresql:postgresql:42.7.13 --with info.picocli:picocli:4.7.7 -- \
+  --with org.postgresql:postgresql:42.7.14 --with info.picocli:picocli:4.7.7 -- \
   --url=jdbc:postgresql://localhost:5432/app --username=app --password=app \
   --changelog-file=db/changelog/db.changelog-master.yaml --search-path=src/main/resources update
 ```
 
 `liquibase-core`'s manifest names a launcher that wants a `LIQUIBASE_HOME`, so the command-line
 class is named, and picocli, optional in its POM, rides along. The Flyway command line is pinned
-one major behind the library: `flyway-commandline` 13.x declares a runtime dependency
-(`flyway-database-ignite`) that Maven Central does not carry, so its closure does not resolve
-from Central; 12.9.0's does, and it applies these scripts unchanged.
+behind the library: `flyway-commandline` 12.10.0 and later (13.x included) declare a runtime
+dependency (`flyway-database-ignite`) that Maven Central does not carry, so their closure does not
+resolve from Central; 12.9.0's does, and it applies these scripts unchanged.

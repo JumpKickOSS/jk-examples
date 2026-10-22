@@ -13,16 +13,16 @@ java    = 25
 main = "com.acme.db.Main"
 
 [dependencies]
-flyway-core       = "13.7.0"
-flyway-postgresql = "13.7.0"     # Flyway's PostgreSQL support ships as its own module
+flyway-core       = "13.11.1"
+flyway-postgresql = "13.11.1"    # Flyway's PostgreSQL support ships as its own module
 liquibase-core    = "5.0.4"
-postgresql        = "42.7.13"    # the driver the Postgres URL needs
-h2                = "2.5.250"    # the driver `jk run` and the unit tier use
+postgresql        = "42.7.14"    # the driver the Postgres URL needs
+h2                = "2.5.252"    # the driver `jk run` and the unit tier use
 
 [test-dependencies]
 junit-jupiter             = "6.1.3"
-testcontainers-postgresql = "1.21.4"
-slf4j-simple              = "2.0.17"   # Testcontainers, Flyway and Liquibase log through SLF4J
+testcontainers-postgresql = "org.testcontainers:testcontainers-postgresql:2.0.5"
+slf4j-simple              = "2.0.20"   # Testcontainers, Flyway and Liquibase log through SLF4J
 
 # Test tiers: `jk test` is the unit tier; each profile owns one of the excluded tags, so every
 # tagged test runs in exactly one tier.

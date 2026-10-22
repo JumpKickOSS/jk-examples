@@ -1,15 +1,15 @@
 version = 1
-generated-by = "jk 0.13.7"
-generated-by-build = "ee200446bb46"
-generated-by-build-time = "2026-09-18T04:20:35Z"
+generated-by = "jk 0.15.3"
+generated-by-build = "eafb500388d9"
+generated-by-build-time = "2026-10-22T00:19:05Z"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.12.0"
-manifests-sha256 = "6c2c18ad8ce5e8307f5587aead0b64280ca9edace82064fca832da90359b5eb6"
+manifests-sha256 = "4e4c077bad55d4ae662e49067e8dac8fff93eebf1148ed8455ed969e3a3bea4e"
 project-id = "16c8490ded88094175fac325cc2f89af"
 
 [jdk]
 suggested-vendor = "temurin"
-suggested-version = "25.0.4.1"
+suggested-version = "25.0.2"
 
 [[artifact]]
 name     = "com.fasterxml.jackson.core:jackson-annotations:jar:"
@@ -20,39 +20,39 @@ scopes   = ["main", "test"]
 
 [[artifact]]
 name     = "com.github.docker-java:docker-java-api:jar:"
-version  = "3.4.2"
+version  = "3.7.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:6789d68f95904cf274a6410fdfcc5530976bc94197c856909459bb8c64db557b"
+checksum = "sha256:dad153d484b1f4ef009e2fdbad27e07aeb3191122da52b8985507ac504300081"
 scopes   = ["test"]
 deps = [
   "com.fasterxml.jackson.core:jackson-annotations:jar:@2.22",
-  "org.slf4j:slf4j-api:jar:@2.0.17",
+  "org.slf4j:slf4j-api:jar:@2.0.20",
 ]
 
 [[artifact]]
 name     = "com.github.docker-java:docker-java-transport-zerodep:jar:"
-version  = "3.4.2"
+version  = "3.7.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:582b772e0c52fa9d24710617ef610655465edd9a2930b0db75fc8667d6a8d02b"
+checksum = "sha256:b89bdb1754160323597f9ea32a7fe7a4a3aa8f5b3b43b88e8d71fff3b267ab21"
 scopes   = ["test"]
 deps = [
-  "com.github.docker-java:docker-java-transport:jar:@3.4.2",
-  "net.java.dev.jna:jna:jar:@5.13.0",
-  "org.slf4j:slf4j-api:jar:@2.0.17",
+  "com.github.docker-java:docker-java-transport:jar:@3.7.1",
+  "net.java.dev.jna:jna:jar:@5.18.1",
+  "org.slf4j:slf4j-api:jar:@2.0.20",
 ]
 
 [[artifact]]
 name     = "com.github.docker-java:docker-java-transport:jar:"
-version  = "3.4.2"
+version  = "3.7.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:bc9981224fdc2d4726566fc723470601ceb14378265c865b4c203146a4e39765"
+checksum = "sha256:d15eec8034bf0f92c2a48ca9172691804048115c96dc853272f9486fa2695c3c"
 scopes   = ["test"]
 
 [[artifact]]
 name     = "com.h2database:h2:jar:"
-version  = "2.5.250"
+version  = "2.5.252"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:82a80a2ac06901b03cdb233c663d21c4f49c884bf6d0cf85022729e8db9ab86f"
+checksum = "sha256:90b11dc413da82070ef15fc943282c1408e6ffd34fa68998335fea8603b5ff20"
 scopes   = ["main"]
 
 [[artifact]]
@@ -71,11 +71,18 @@ excluded-by = [
 ]
 
 [[artifact]]
+name     = "commons-codec:commons-codec:jar:"
+version  = "1.19.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:5c3881e4f556855e9c532927ee0c9dfde94cc66760d5805c031a59887070af5f"
+scopes   = ["test"]
+
+[[artifact]]
 name     = "commons-io:commons-io:jar:"
 version  = "2.22.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:2b9a7b1f726fb86216dbd2c8321eabe0221dbd5b1be81c18e1cb53811b104758"
-scopes   = ["main"]
+scopes   = ["main", "test"]
 
 [[artifact]]
 name     = "javax.xml.bind:jaxb-api:jar:"
@@ -88,20 +95,10 @@ excluded-by = [
 ]
 
 [[artifact]]
-name     = "junit:junit:jar:"
-version  = "4.13.2"
-source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:8e495b634469d64fb8acfa3495a065cbacc8a0fff55ce1e31007be4c16dc57d3"
-scopes   = ["test"]
-deps = [
-  "org.hamcrest:hamcrest-core:jar:@1.3",
-]
-
-[[artifact]]
 name     = "net.java.dev.jna:jna:jar:"
-version  = "5.13.0"
+version  = "5.18.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:66d4f819a062a51a1d5627bffc23fac55d1677f0e0a1feba144aabdd670a64bb"
+checksum = "sha256:260c4b1e22b1db9e110ee441c4f13ce115f841fa48c41d78750986214b395557"
 scopes   = ["test"]
 
 [[artifact]]
@@ -113,17 +110,22 @@ scopes   = ["main"]
 
 [[artifact]]
 name     = "org.apache.commons:commons-compress:jar:"
-version  = "1.24.0"
+version  = "1.28.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:fbf2c5d275e513c08f4e4fb539726dbf3ac2142af956ba93efb983244f0c36bd"
+checksum = "sha256:e1522945218456f3649a39bc4afd70ce4bd466221519dba7d378f2141a4642ca"
 scopes   = ["test"]
+deps = [
+  "commons-codec:commons-codec:jar:@1.19.0",
+  "commons-io:commons-io:jar:@2.22.0",
+  "org.apache.commons:commons-lang3:jar:@3.20.0",
+]
 
 [[artifact]]
 name     = "org.apache.commons:commons-lang3:jar:"
 version  = "3.20.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:69e5c9fa35da7a51a5fd2099dfe56a2d8d32cf233e2f6d770e796146440263f4"
-scopes   = ["main"]
+scopes   = ["main", "test"]
 
 [[artifact]]
 name     = "org.apache.commons:commons-text:jar:"
@@ -151,9 +153,9 @@ scopes   = ["main"]
 
 [[artifact]]
 name     = "org.flywaydb:flyway-core:jar:"
-version  = "13.7.0"
+version  = "13.11.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:d651e7640ddb761ad6ecd584d91cbbe5f5fdd4d43a26684bccb79d78c71dd9c7"
+checksum = "sha256:0815490cc273bb319cd04a31aa47145bc23d6f55b48502a002a5fae4b703e53f"
 scopes   = ["main"]
 deps = [
   "com.fasterxml.jackson.core:jackson-annotations:jar:@2.22",
@@ -161,31 +163,24 @@ deps = [
 
 [[artifact]]
 name     = "org.flywaydb:flyway-database-cockroachdb:jar:"
-version  = "13.7.0"
+version  = "13.11.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:1d8b203d4afd06235845162dd79dc6f260c18c7b2aa153554f1712b39e4a6716"
+checksum = "sha256:e8cd9f30081f4bf145fa180c25bfc21a24bab3f90b3d1371351be12a1986d579"
 scopes   = ["main"]
 deps = [
-  "org.flywaydb:flyway-core:jar:@13.7.0",
+  "org.flywaydb:flyway-core:jar:@13.11.1",
 ]
 
 [[artifact]]
 name     = "org.flywaydb:flyway-database-postgresql:jar:"
-version  = "13.7.0"
+version  = "13.11.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:9bff50752b1d336d48a92ea30b4efb52b1b2e2703d230753fed083adf633534f"
+checksum = "sha256:33b165d73f4536b3de5ca0fa1f682c33ab7b65d662eb26ae1a65a873fcaf703d"
 scopes   = ["main"]
 deps = [
-  "org.flywaydb:flyway-core:jar:@13.7.0",
-  "org.flywaydb:flyway-database-cockroachdb:jar:@13.7.0",
+  "org.flywaydb:flyway-core:jar:@13.11.1",
+  "org.flywaydb:flyway-database-cockroachdb:jar:@13.11.1",
 ]
-
-[[artifact]]
-name     = "org.hamcrest:hamcrest-core:jar:"
-version  = "1.3"
-source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:66fdef91e9739348df7a096aa384a5685f4e875584cce89386a7a47251c4d8e9"
-scopes   = ["test"]
 
 [[artifact]]
 name     = "org.jetbrains:annotations:jar:"
@@ -312,9 +307,9 @@ scopes   = ["test"]
 
 [[artifact]]
 name     = "org.postgresql:postgresql:jar:"
-version  = "42.7.13"
+version  = "42.7.14"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:6e0e4cc2d8cae902084f8a2b18728b073a6fd9d1f87c9d8bff8f298c18185b93"
+checksum = "sha256:73914527305a40cce504b0d3d90b23caf565136912d607ae8ae7c5895512332c"
 scopes   = ["main"]
 deps = [
   "org.checkerframework:checker-qual:jar:@3.55.1",
@@ -332,64 +327,63 @@ deps = [
 
 [[artifact]]
 name     = "org.slf4j:slf4j-api:jar:"
-version  = "2.0.17"
+version  = "2.0.20"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:7b751d952061954d5abfed7181c1f645d336091b679891591d63329c622eb832"
+checksum = "sha256:7e1446499b359675d8aabe6af2de86b85e72ae8a2a932c0b40d0e5ba57097439"
 scopes   = ["test"]
 
 [[artifact]]
 name     = "org.slf4j:slf4j-simple:jar:"
-version  = "2.0.17"
+version  = "2.0.20"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:ddfea59ac074c6d3e24ac2c38622d2d963895e17f70b38ed4bdae4d780be6964"
+checksum = "sha256:8e701404786a4f87219d39d4853c86dfe4e86ae99376a39749df6c08e75022e0"
 scopes   = ["test"]
 deps = [
-  "org.slf4j:slf4j-api:jar:@2.0.17",
+  "org.slf4j:slf4j-api:jar:@2.0.20",
 ]
 
 [[artifact]]
-name     = "org.testcontainers:database-commons:jar:"
-version  = "1.21.4"
+name     = "org.testcontainers:testcontainers-database-commons:jar:"
+version  = "2.0.5"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:539167f41549b597efa04a40912f58a2d56f422040d014993951ec6f0e14c691"
+checksum = "sha256:0ebbc62bdcfb315cb840a63fbaa148b455927666d9034b5e5c00009d84c755b0"
 scopes   = ["test"]
 deps = [
-  "org.testcontainers:testcontainers:jar:@1.21.4",
+  "org.testcontainers:testcontainers:jar:@2.0.5",
 ]
 
 [[artifact]]
-name     = "org.testcontainers:jdbc:jar:"
-version  = "1.21.4"
+name     = "org.testcontainers:testcontainers-jdbc:jar:"
+version  = "2.0.5"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:15ce7d24f4a869fcf225875fcfeea8fd1f86991c8f00286e435c8602ea426470"
+checksum = "sha256:0f7fe603a32692c33739cf99d638206f9060ca47615bf0141ca2eb32d33d764a"
 scopes   = ["test"]
 deps = [
-  "org.testcontainers:database-commons:jar:@1.21.4",
+  "org.testcontainers:testcontainers-database-commons:jar:@2.0.5",
 ]
 
 [[artifact]]
-name     = "org.testcontainers:postgresql:jar:"
-version  = "1.21.4"
+name     = "org.testcontainers:testcontainers-postgresql:jar:"
+version  = "2.0.5"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:38fc4c42580c96d9f8cdc2286612dd9e1f589b3ed2f57b3fb5e690f7b1505c03"
+checksum = "sha256:8dbfb2fda977eb813ed1188ce02f098b8b634910eeab220568d54d6bd5b7ce9f"
 scopes   = ["test"]
 deps = [
-  "org.testcontainers:jdbc:jar:@1.21.4",
+  "org.testcontainers:testcontainers-jdbc:jar:@2.0.5",
 ]
 
 [[artifact]]
 name     = "org.testcontainers:testcontainers:jar:"
-version  = "1.21.4"
+version  = "2.0.5"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:ea81a9ca337bbae7ee83f372b92d55140c7ab976bce73ff1b79f2dd151ca9610"
+checksum = "sha256:0466f481343d5f350a91274cd7bf984308cbaf90d706247fd1cf4b1a8010c2e1"
 scopes   = ["test"]
 deps = [
-  "com.github.docker-java:docker-java-api:jar:@3.4.2",
-  "com.github.docker-java:docker-java-transport-zerodep:jar:@3.4.2",
-  "junit:junit:jar:@4.13.2",
-  "org.apache.commons:commons-compress:jar:@1.24.0",
+  "com.github.docker-java:docker-java-api:jar:@3.7.1",
+  "com.github.docker-java:docker-java-transport-zerodep:jar:@3.7.1",
+  "org.apache.commons:commons-compress:jar:@1.28.0",
   "org.rnorth.duct-tape:duct-tape:jar:@1.0.8",
-  "org.slf4j:slf4j-api:jar:@2.0.17",
+  "org.slf4j:slf4j-api:jar:@2.0.20",
 ]
 
 [[artifact]]
