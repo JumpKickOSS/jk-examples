@@ -9,6 +9,7 @@ import com.microsoft.playwright.Playwright;
 import com.microsoft.playwright.options.AriaRole;
 import dev.jkexamples.hotel.rest.HotelApplication;
 import java.time.LocalDate;
+import java.util.Objects;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -69,7 +70,9 @@ class GuestJourneyE2eTest {
         assertThat(page.getByTestId("hotel-saltmeadow")).isVisible();
 
         page.navigate(url("/hotels/saltmeadow?checkIn=" + in + "&checkOut=" + in.plusDays(3) + "&guests=2"));
-        assertThat(page.getByRole(AriaRole.HEADING, new Page.GetByRoleOptions().setName("Kestrel & Vine Saltmeadow Lodge"))).isVisible();
+        assertThat(page.getByRole(
+                        AriaRole.HEADING, new Page.GetByRoleOptions().setName("Kestrel & Vine Saltmeadow Lodge")))
+                .isVisible();
         page.getByTestId("offer-CTG").getByTestId("choose-room").click();
 
         page.getByTestId("first-name").fill("Ines");
@@ -103,7 +106,7 @@ class GuestJourneyE2eTest {
         assertThat(page.getByTestId("kpi-occupancy")).containsText("%");
         var firstCheckIn = page.locator("[data-testid^=check-in-]").first();
         if (firstCheckIn.count() > 0) {
-            String testId = java.util.Objects.requireNonNull(firstCheckIn.getAttribute("data-testid"));
+            String testId = Objects.requireNonNull(firstCheckIn.getAttribute("data-testid"));
             firstCheckIn.click();
             assertThat(page.locator("[data-testid=" + testId + "]")).hasCount(0);
         }

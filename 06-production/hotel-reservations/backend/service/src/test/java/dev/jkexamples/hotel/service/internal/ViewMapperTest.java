@@ -25,17 +25,39 @@ class ViewMapperTest {
     private final ViewMapper views = new ViewMapperImpl();
 
     private static final Hotel HOTEL = new Hotel(
-            UUID.randomUUID(), "harborview", "Kestrel & Vine Harborview", "Port Ellery", "Aurelian Coast",
-            ZoneId.of("Europe/Lisbon"), 5, "Harbour light", "…", "/hero.webp", List.of(), List.of("Spa"),
-            LocalTime.of(15, 0), LocalTime.of(11, 0), "EUR", 1200);
+            UUID.randomUUID(),
+            "harborview",
+            "Kestrel & Vine Harborview",
+            "Port Ellery",
+            "Aurelian Coast",
+            ZoneId.of("Europe/Lisbon"),
+            5,
+            "Harbour light",
+            "…",
+            "/hero.webp",
+            List.of(),
+            List.of("Spa"),
+            LocalTime.of(15, 0),
+            LocalTime.of(11, 0),
+            "EUR",
+            1200);
 
     @Test
     void a_reservation_view_carries_the_stay_the_guest_and_the_hotel() {
         Reservation r = new Reservation(
-                UUID.randomUUID(), "KV-ABC234", HOTEL.id(), UUID.randomUUID(), "204", UUID.randomUUID(), "Harbour King",
+                UUID.randomUUID(),
+                "KV-ABC234",
+                HOTEL.id(),
+                UUID.randomUUID(),
+                "204",
+                UUID.randomUUID(),
+                "Harbour King",
                 new Guest(UUID.randomUUID(), "Ada", "Abbott", "ada.abbott@example.com", ""),
                 new StayDates(LocalDate.of(2026, 12, 1), LocalDate.of(2026, 12, 4)),
-                new Party(2, 0), ReservationStatus.BOOKED, new Money(80_640, "EUR"), "late arrival",
+                new Party(2, 0),
+                ReservationStatus.BOOKED,
+                new Money(80_640, "EUR"),
+                "late arrival",
                 Instant.parse("2026-10-01T10:00:00Z"));
 
         ReservationView view = views.reservation(r, HOTEL, true);

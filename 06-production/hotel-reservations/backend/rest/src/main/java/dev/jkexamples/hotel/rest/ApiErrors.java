@@ -41,8 +41,10 @@ class ApiErrors extends ResponseEntityExceptionHandler {
         return problem(HttpStatus.CONFLICT, "room-unavailable", "that room was just taken; search again");
     }
 
-    private static ProblemDetail problem(HttpStatus status, String type, @org.jspecify.annotations.Nullable String detail) {
-        ProblemDetail problem = ProblemDetail.forStatusAndDetail(status, detail == null ? status.getReasonPhrase() : detail);
+    private static ProblemDetail problem(
+            HttpStatus status, String type, @org.jspecify.annotations.Nullable String detail) {
+        ProblemDetail problem =
+                ProblemDetail.forStatusAndDetail(status, detail == null ? status.getReasonPhrase() : detail);
         problem.setType(URI.create(TYPES + type));
         return problem;
     }

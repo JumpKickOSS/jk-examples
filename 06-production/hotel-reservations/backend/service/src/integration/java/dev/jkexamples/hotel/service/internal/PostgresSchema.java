@@ -22,7 +22,8 @@ final class PostgresSchema {
         DSLContext db = PostgresSchema.db;
         if (db == null) {
             POSTGRES.start();
-            DataSource ds = new DriverManagerDataSource(POSTGRES.getJdbcUrl(), POSTGRES.getUsername(), POSTGRES.getPassword());
+            DataSource ds =
+                    new DriverManagerDataSource(POSTGRES.getJdbcUrl(), POSTGRES.getUsername(), POSTGRES.getPassword());
             migrate(ds);
             db = DSL.using(ds, SQLDialect.POSTGRES);
             PostgresSchema.db = db;
@@ -31,6 +32,10 @@ final class PostgresSchema {
     }
 
     private static void migrate(DataSource ds) {
-        Flyway.configure().dataSource(ds).locations("classpath:db/migration", "classpath:db/seed").load().migrate();
+        Flyway.configure()
+                .dataSource(ds)
+                .locations("classpath:db/migration", "classpath:db/seed")
+                .load()
+                .migrate();
     }
 }

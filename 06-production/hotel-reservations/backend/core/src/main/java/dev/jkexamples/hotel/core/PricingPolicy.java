@@ -29,6 +29,11 @@ public final class PricingPolicy {
                 ? subtotal.percent(LONG_STAY_DISCOUNT_PERCENT)
                 : Money.zero(base.currency());
         Money taxes = subtotal.minus(discount).basisPoints(hotel.taxBasisPoints());
-        return new Quote(List.copyOf(nights), subtotal, discount, taxes, subtotal.minus(discount).plus(taxes));
+        return new Quote(
+                List.copyOf(nights),
+                subtotal,
+                discount,
+                taxes,
+                subtotal.minus(discount).plus(taxes));
     }
 }

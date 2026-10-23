@@ -15,13 +15,16 @@ class StayDatesTest {
     @Test
     void check_out_is_not_a_night() {
         assertThat(stay("2026-12-30", "2027-01-02").nights()).isEqualTo(3);
-        assertThat(stay("2026-12-30", "2027-01-02").includesNight(LocalDate.parse("2027-01-02"))).isFalse();
+        assertThat(stay("2026-12-30", "2027-01-02").includesNight(LocalDate.parse("2027-01-02")))
+                .isFalse();
     }
 
     @Test
     void back_to_back_stays_do_not_overlap() {
-        assertThat(stay("2026-12-01", "2026-12-04").overlaps(stay("2026-12-04", "2026-12-06"))).isFalse();
-        assertThat(stay("2026-12-01", "2026-12-05").overlaps(stay("2026-12-04", "2026-12-06"))).isTrue();
+        assertThat(stay("2026-12-01", "2026-12-04").overlaps(stay("2026-12-04", "2026-12-06")))
+                .isFalse();
+        assertThat(stay("2026-12-01", "2026-12-05").overlaps(stay("2026-12-04", "2026-12-06")))
+                .isTrue();
     }
 
     @Test

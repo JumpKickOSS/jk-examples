@@ -55,7 +55,8 @@ class AvailabilityQueries {
     private static Condition free(StayDates stay) {
         return notExists(selectOne()
                 .from(RESERVATION)
-                .where(RESERVATION.ROOM_ID.eq(ROOM.ID),
+                .where(
+                        RESERVATION.ROOM_ID.eq(ROOM.ID),
                         RESERVATION.STATUS.ne("CANCELLED"),
                         RESERVATION.CHECK_IN.lt(stay.checkOut()),
                         RESERVATION.CHECK_OUT.gt(stay.checkIn())));

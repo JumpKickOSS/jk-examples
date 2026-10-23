@@ -34,12 +34,14 @@ curl -fsSL https://jumpkick.build/install.sh | bash
 irm https://jumpkick.build/install.ps1 | iex
 ```
 
-Podman users: Testcontainers reaches Podman through its socket. jk hands `DOCKER_HOST` and
-Testcontainers' variables from your shell to the test JVMs, so this is enough:
+Podman users (macOS): expose a Docker-compatible socket, then disable Ryuk once:
 
-```sh
-export DOCKER_HOST="unix://$(podman machine inspect --format '{{.ConnectionInfo.PodmanSocket.Path}}')"
-export TESTCONTAINERS_RYUK_DISABLED=true
+1. Enable **Docker Compatibility** in Podman Desktop, **or** run
+   `sudo podman-mac-helper install` (machine must be running: `podman machine start`).
+2. Put this in `~/.testcontainers.properties`:
+
+```properties
+ryuk.disabled=true
 ```
 
 ## Run it

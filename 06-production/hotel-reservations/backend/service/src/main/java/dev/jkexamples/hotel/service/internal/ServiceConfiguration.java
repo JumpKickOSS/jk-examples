@@ -3,6 +3,7 @@ package dev.jkexamples.hotel.service.internal;
 import dev.jkexamples.hotel.core.ConfirmationCodes;
 import dev.jkexamples.hotel.core.PricingPolicy;
 import java.time.Clock;
+import java.time.ZoneId;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,7 +15,7 @@ class ServiceConfiguration {
     @Bean
     @ConditionalOnMissingBean
     Clock clock() {
-        return Clock.systemDefaultZone();
+        return Clock.system(ZoneId.systemDefault());
     }
 
     @Bean

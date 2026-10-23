@@ -15,7 +15,8 @@ import java.net.http.HttpResponse;
 final class ApiClient {
 
     private final CookieManager cookies = new CookieManager(null, CookiePolicy.ACCEPT_ALL);
-    private final HttpClient http = HttpClient.newBuilder().cookieHandler(cookies).build();
+    private final HttpClient http =
+            HttpClient.newBuilder().cookieHandler(cookies).build();
     private final String base;
 
     ApiClient(int port) {
@@ -23,7 +24,8 @@ final class ApiClient {
     }
 
     HttpResponse<String> get(String path) throws Exception {
-        return http.send(HttpRequest.newBuilder(URI.create(base + path)).GET().build(), HttpResponse.BodyHandlers.ofString());
+        return http.send(
+                HttpRequest.newBuilder(URI.create(base + path)).GET().build(), HttpResponse.BodyHandlers.ofString());
     }
 
     HttpResponse<String> post(String path, String json) throws Exception {

@@ -19,6 +19,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -72,7 +73,7 @@ class CatalogService implements HotelCatalog {
     }
 
     private List<Offer> offers(Hotel hotel, StayDates stay, int guests) {
-        Map<java.util.UUID, Integer> free = availability.freeRoomsByType(hotel.id(), stay);
+        Map<UUID, Integer> free = availability.freeRoomsByType(hotel.id(), stay);
         List<Offer> offers = new ArrayList<>();
         for (RoomType type : hotels.roomTypes(hotel)) {
             int left = free.getOrDefault(type.id(), 0);

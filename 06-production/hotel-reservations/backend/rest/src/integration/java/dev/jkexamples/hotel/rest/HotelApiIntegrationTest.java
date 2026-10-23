@@ -34,7 +34,9 @@ class HotelApiIntegrationTest {
     @Test
     void a_guest_searches_books_finds_and_cancels() throws Exception {
         var api = new ApiClient(port);
-        JsonNode results = JSON.readTree(api.get("/api/search?checkIn=" + IN + "&checkOut=" + IN.plusDays(3) + "&guests=2").body());
+        JsonNode results =
+                JSON.readTree(api.get("/api/search?checkIn=" + IN + "&checkOut=" + IN.plusDays(3) + "&guests=2")
+                        .body());
         assertThat(results.size()).isEqualTo(5);
 
         var booked = api.post("/api/reservations", booking("saltmeadow", "CTG", IN, IN.plusDays(3), "Okafor"));
@@ -44,7 +46,8 @@ class HotelApiIntegrationTest {
 
         var found = api.post("/api/reservations/lookup", lookup(code, "okafor"));
         assertThat(JSON.readTree(found.body()).get("nights").asInt()).isEqualTo(3);
-        assertThat(api.post("/api/reservations/lookup", lookup(code, "Someone")).statusCode()).isEqualTo(404);
+        assertThat(api.post("/api/reservations/lookup", lookup(code, "Someone")).statusCode())
+                .isEqualTo(404);
 
         var cancelled = api.post("/api/reservations/cancel", lookup(code, "Okafor"));
         assertThat(JSON.readTree(cancelled.body()).get("status").asString()).isEqualTo("CANCELLED");
@@ -54,16 +57,22 @@ class HotelApiIntegrationTest {
     void two_guests_racing_for_the_last_rooms_never_share_one() throws Exception {
         LocalDate in = IN.plusDays(30);
         var api = new ApiClient(port);
-        JsonNode offers = JSON.readTree(api.get("/api/hotels/summit-house/availability?checkIn=" + in + "&checkOut=" + in.plusDays(2) + "&guests=2").body()).get("offers");
+        JsonNode offers = JSON.readTree(api.get("/api/hotels/summit-house/availability?checkIn=" + in + "&checkOut="
+                                + in.plusDays(2) + "&guests=2")
+                        .body())
+                .get("offers");
         JsonNode chalet = null;
-        for (JsonNode offer : offers) if (offer.get("roomType").get("code").asString().equals("CHT")) chalet = offer;
+        for (JsonNode offer : offers)
+            if (offer.get("roomType").get("code").asString().equals("CHT")) chalet = offer;
         int rooms = chalet == null ? 0 : chalet.get("roomsLeft").asInt();
         assertThat(rooms).isPositive();
 
         List<Callable<Integer>> attempts = new ArrayList<>();
         for (int i = 0; i < rooms + 4; i++) {
             String name = "Racer" + i;
-            attempts.add(() -> new ApiClient(port).post("/api/reservations", booking("summit-house", "CHT", in, in.plusDays(2), name)).statusCode());
+            attempts.add(() -> new ApiClient(port)
+                    .post("/api/reservations", booking("summit-house", "CHT", in, in.plusDays(2), name))
+                    .statusCode());
         }
         List<Integer> statuses = new ArrayList<>();
         try (var pool = Executors.newVirtualThreadPerTaskExecutor()) {
@@ -77,17 +86,21 @@ class HotelApiIntegrationTest {
     void the_front_desk_signs_in_and_sees_its_day() throws Exception {
         var desk = new ApiClient(port);
         assertThat(desk.get("/api/desk/me").statusCode()).isEqualTo(401);
-        assertThat(desk.post("/api/auth/login", "username=desk&password=kestrel-desk").statusCode()).isEqualTo(204);
+        assertThat(desk.post("/api/auth/login", "username=desk&password=kestrel-desk")
+                        .statusCode())
+                .isEqualTo(204);
 
         JsonNode me = JSON.readTree(desk.get("/api/desk/me").body());
         assertThat(me.get("hotels").size()).isEqualTo(5);
-        JsonNode day = JSON.readTree(desk.get("/api/desk/harborview/day?date=" + LocalDate.now()).body());
+        JsonNode day = JSON.readTree(
+                desk.get("/api/desk/harborview/day?date=" + LocalDate.now()).body());
         assertThat(day.get("rooms").asInt()).isPositive();
         assertThat(day.get("occupancyPercent").asInt()).isBetween(1, 100);
 
         var harbor = new ApiClient(port);
         harbor.post("/api/auth/login", "username=harbor&password=kestrel-desk");
-        assertThat(harbor.get("/api/desk/lantern-row/day?date=" + LocalDate.now()).statusCode())
+        assertThat(harbor.get("/api/desk/lantern-row/day?date=" + LocalDate.now())
+                        .statusCode())
                 .as("a hotel the user does not work is not found")
                 .isEqualTo(404);
     }

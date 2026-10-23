@@ -46,8 +46,10 @@ class StaffQueries implements StaffAccounts {
     List<String> hotels(String username) {
         return db.select(HOTEL.SLUG)
                 .from(HOTEL)
-                .join(STAFF_HOTEL).on(STAFF_HOTEL.HOTEL_ID.eq(HOTEL.ID))
-                .join(STAFF_USER).on(STAFF_USER.ID.eq(STAFF_HOTEL.STAFF_ID))
+                .join(STAFF_HOTEL)
+                .on(STAFF_HOTEL.HOTEL_ID.eq(HOTEL.ID))
+                .join(STAFF_USER)
+                .on(STAFF_USER.ID.eq(STAFF_HOTEL.STAFF_ID))
                 .where(STAFF_USER.USERNAME.eq(username))
                 .orderBy(HOTEL.NAME)
                 .fetch(HOTEL.SLUG);

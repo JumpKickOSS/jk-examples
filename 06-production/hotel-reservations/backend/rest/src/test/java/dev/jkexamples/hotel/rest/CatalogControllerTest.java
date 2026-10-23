@@ -43,9 +43,17 @@ class CatalogControllerTest {
 
     @Test
     void hotels_are_listed_with_security_headers() throws Exception {
-        given(catalog.hotels()).willReturn(List.of(new HotelSummary(
-                "harborview", "Kestrel & Vine Harborview", "Port Ellery", "Aurelian Coast", 5, "Harbour light",
-                "/hero.webp", new MoneyView(19_000, "EUR"), List.of("Spa"))));
+        given(catalog.hotels())
+                .willReturn(List.of(new HotelSummary(
+                        "harborview",
+                        "Kestrel & Vine Harborview",
+                        "Port Ellery",
+                        "Aurelian Coast",
+                        5,
+                        "Harbour light",
+                        "/hero.webp",
+                        new MoneyView(19_000, "EUR"),
+                        List.of("Spa"))));
 
         mvc.perform(get("/api/hotels"))
                 .andExpect(status().isOk())

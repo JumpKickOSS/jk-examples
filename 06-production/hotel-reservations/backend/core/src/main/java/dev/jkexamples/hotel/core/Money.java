@@ -25,14 +25,20 @@ public record Money(long minor, String currency) {
     /** This amount scaled by {@code percent} (e.g. {@code 120} for +20 %), rounded half-up to a cent. */
     public Money percent(int percent) {
         return new Money(
-                BigDecimal.valueOf(minor).multiply(BigDecimal.valueOf(percent)).divide(BigDecimal.valueOf(100), 0, RoundingMode.HALF_UP).longValueExact(),
+                BigDecimal.valueOf(minor)
+                        .multiply(BigDecimal.valueOf(percent))
+                        .divide(BigDecimal.valueOf(100), 0, RoundingMode.HALF_UP)
+                        .longValueExact(),
                 currency);
     }
 
     /** This amount times a rate in basis points ({@code 1200} is 12 %), rounded half-up to a cent. */
     public Money basisPoints(int bp) {
         return new Money(
-                BigDecimal.valueOf(minor).multiply(BigDecimal.valueOf(bp)).divide(BigDecimal.valueOf(10_000), 0, RoundingMode.HALF_UP).longValueExact(),
+                BigDecimal.valueOf(minor)
+                        .multiply(BigDecimal.valueOf(bp))
+                        .divide(BigDecimal.valueOf(10_000), 0, RoundingMode.HALF_UP)
+                        .longValueExact(),
                 currency);
     }
 

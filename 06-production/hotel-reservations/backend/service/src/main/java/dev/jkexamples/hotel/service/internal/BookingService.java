@@ -19,6 +19,7 @@ import dev.jkexamples.hotel.service.NotFoundException;
 import dev.jkexamples.hotel.service.RoomUnavailableException;
 import java.time.Clock;
 import java.time.LocalDate;
+import java.util.Locale;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -56,7 +57,8 @@ class BookingService implements Bookings {
     public ReservationView book(BookingRequest request) {
         Hotel hotel = hotels.bySlug(request.hotelSlug());
         RoomType type = hotels.roomType(hotel, request.roomTypeCode())
-                .orElseThrow(() -> new NotFoundException("no room type " + request.roomTypeCode() + " at " + hotel.name()));
+                .orElseThrow(
+                        () -> new NotFoundException("no room type " + request.roomTypeCode() + " at " + hotel.name()));
         StayDates stay = CatalogService.stay(request.checkIn(), request.checkOut());
         if (stay.checkIn().isBefore(today(hotel))) throw new BookingRuleException("check-in is in the past");
         Party party = CatalogService.party(request.adults(), request.children());
@@ -65,12 +67,14 @@ class BookingService implements Bookings {
         } catch (InvalidStayException e) {
             throw new BookingRuleException(e);
         }
-        var room = availability.claimFreeRoom(type.id(), stay)
+        var room = availability
+                .claimFreeRoom(type.id(), stay)
                 .orElseThrow(() -> new RoomUnavailableException(type.name() + " is sold out for those dates"));
         Quote quote = pricing.quote(hotel, type, stay);
         String code = codes.next();
         var guestId = reservations.upsertGuest(request.guest());
-        reservations.insert(code, hotel.id(), room.id(), guestId, stay, party, quote.total(), request.specialRequests());
+        reservations.insert(
+                code, hotel.id(), room.id(), guestId, stay, party, quote.total(), request.specialRequests());
         return view(reservations.byCode(code).orElseThrow(), hotel);
     }
 
@@ -86,7 +90,7 @@ class BookingService implements Bookings {
         Reservation reservation = owned(lookup);
         Hotel hotel = hotels.byId(reservation.hotelId());
         if (!reservation.cancellableOn(today(hotel))) {
-            throw new BookingRuleException("a " + reservation.status().name().toLowerCase(java.util.Locale.ROOT)
+            throw new BookingRuleException("a " + reservation.status().name().toLowerCase(Locale.ROOT)
                     + " reservation can no longer be cancelled online; call the hotel");
         }
         reservations.setStatus(reservation.id(), reservation.status().moveTo(ReservationStatus.CANCELLED));
@@ -95,8 +99,9 @@ class BookingService implements Bookings {
 
     /** The reservation, if the code exists and the last name matches; the same answer either way otherwise. */
     private Reservation owned(LookupRequest lookup) {
-        String code = lookup.confirmationCode().strip().toUpperCase(java.util.Locale.ROOT);
-        return reservations.byCode(code)
+        String code = lookup.confirmationCode().strip().toUpperCase(Locale.ROOT);
+        return reservations
+                .byCode(code)
                 .filter(r -> r.belongsTo(lookup.lastName()))
                 .orElseThrow(() -> new NotFoundException("no reservation " + code + " under that name"));
     }

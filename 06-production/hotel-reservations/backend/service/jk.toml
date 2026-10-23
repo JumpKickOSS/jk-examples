@@ -32,7 +32,7 @@ properties = { parseIgnoreComments = "true" }
 
 [javac]
 plugins = { ErrorProne = { options = ["-Xep:NullAway:ERROR", "-XepOpt:NullAway:OnlyNullMarked=true", "-XepOpt:NullAway:JSpecifyMode=true", "-XepOpt:NullAway:TreatGeneratedAsUnannotated=true", "-XepDisableWarningsInGeneratedCode"] } }
-args    = ["-XDcompilePolicy=simple", "--should-stop=ifError=FLOW", "-Amapstruct.defaultComponentModel=spring"]
+args    = ["-XDcompilePolicy=simple", "--should-stop=ifError=FLOW"]
 
 [processor-dependencies]
 error_prone_core.workspace = true

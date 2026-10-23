@@ -14,6 +14,7 @@ import dev.jkexamples.hotel.core.ReservationStatus;
 import dev.jkexamples.hotel.core.StayDates;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Locale;
 import java.util.Optional;
 import java.util.UUID;
 import org.jooq.DSLContext;
@@ -36,7 +37,7 @@ class ReservationQueries {
         return db.insertInto(GUEST)
                 .set(GUEST.FIRST_NAME, guest.firstName().strip())
                 .set(GUEST.LAST_NAME, guest.lastName().strip())
-                .set(GUEST.EMAIL, guest.email().strip().toLowerCase(java.util.Locale.ROOT))
+                .set(GUEST.EMAIL, guest.email().strip().toLowerCase(Locale.ROOT))
                 .set(GUEST.PHONE, guest.phone().strip())
                 .onConflict(GUEST.EMAIL)
                 .doUpdate()
@@ -48,7 +49,15 @@ class ReservationQueries {
                 .getId();
     }
 
-    void insert(String code, UUID hotelId, UUID roomId, UUID guestId, StayDates stay, Party party, Money total, String requests) {
+    void insert(
+            String code,
+            UUID hotelId,
+            UUID roomId,
+            UUID guestId,
+            StayDates stay,
+            Party party,
+            Money total,
+            String requests) {
         db.insertInto(RESERVATION)
                 .set(RESERVATION.CONFIRMATION_CODE, code)
                 .set(RESERVATION.HOTEL_ID, hotelId)
@@ -71,31 +80,42 @@ class ReservationQueries {
 
     /** The slug of the hotel a reservation is at. */
     String hotelSlug(Reservation reservation) {
-        return db.select(HOTEL.SLUG).from(HOTEL).where(HOTEL.ID.eq(reservation.hotelId())).fetchSingle().value1();
+        return db.select(HOTEL.SLUG)
+                .from(HOTEL)
+                .where(HOTEL.ID.eq(reservation.hotelId()))
+                .fetchSingle()
+                .value1();
     }
 
     void setStatus(UUID id, ReservationStatus status) {
-        db.update(RESERVATION).set(RESERVATION.STATUS, status.name()).where(RESERVATION.ID.eq(id)).execute();
+        db.update(RESERVATION)
+                .set(RESERVATION.STATUS, status.name())
+                .where(RESERVATION.ID.eq(id))
+                .execute();
     }
 
     List<Reservation> arriving(UUID hotelId, LocalDate date) {
-        return select()
-                .where(RESERVATION.HOTEL_ID.eq(hotelId), RESERVATION.CHECK_IN.eq(date), RESERVATION.STATUS.ne("CANCELLED"))
+        return select().where(
+                        RESERVATION.HOTEL_ID.eq(hotelId),
+                        RESERVATION.CHECK_IN.eq(date),
+                        RESERVATION.STATUS.ne("CANCELLED"))
                 .orderBy(ROOM.NUMBER)
                 .fetch(Rows::reservation);
     }
 
     List<Reservation> departing(UUID hotelId, LocalDate date) {
-        return select()
-                .where(RESERVATION.HOTEL_ID.eq(hotelId), RESERVATION.CHECK_OUT.eq(date), RESERVATION.STATUS.ne("CANCELLED"))
+        return select().where(
+                        RESERVATION.HOTEL_ID.eq(hotelId),
+                        RESERVATION.CHECK_OUT.eq(date),
+                        RESERVATION.STATUS.ne("CANCELLED"))
                 .orderBy(ROOM.NUMBER)
                 .fetch(Rows::reservation);
     }
 
     /** Live reservations of one hotel with at least one night in {@code [from, to)}. */
     List<Reservation> overlapping(UUID hotelId, LocalDate from, LocalDate to) {
-        return select()
-                .where(RESERVATION.HOTEL_ID.eq(hotelId),
+        return select().where(
+                        RESERVATION.HOTEL_ID.eq(hotelId),
                         RESERVATION.STATUS.ne("CANCELLED"),
                         RESERVATION.CHECK_IN.lt(to),
                         RESERVATION.CHECK_OUT.gt(from))
@@ -110,8 +130,11 @@ class ReservationQueries {
     private SelectOnConditionStep<Record> select() {
         return db.select()
                 .from(RESERVATION)
-                .join(GUEST).on(GUEST.ID.eq(RESERVATION.GUEST_ID))
-                .join(ROOM).on(ROOM.ID.eq(RESERVATION.ROOM_ID))
-                .join(ROOM_TYPE).on(ROOM_TYPE.ID.eq(ROOM.ROOM_TYPE_ID));
+                .join(GUEST)
+                .on(GUEST.ID.eq(RESERVATION.GUEST_ID))
+                .join(ROOM)
+                .on(ROOM.ID.eq(RESERVATION.ROOM_ID))
+                .join(ROOM_TYPE)
+                .on(ROOM_TYPE.ID.eq(ROOM.ROOM_TYPE_ID));
     }
 }

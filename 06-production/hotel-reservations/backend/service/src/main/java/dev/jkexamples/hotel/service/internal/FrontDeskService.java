@@ -51,7 +51,9 @@ class FrontDeskService implements FrontDesk {
                 new Occupancy(tonight.size(), rooms).percent(),
                 desk(reservations.arriving(hotel.id(), date)),
                 desk(reservations.departing(hotel.id(), date)),
-                desk(tonight.stream().filter(r -> r.status() == ReservationStatus.CHECKED_IN).toList()));
+                desk(tonight.stream()
+                        .filter(r -> r.status() == ReservationStatus.CHECKED_IN)
+                        .toList()));
     }
 
     @Override
@@ -76,14 +78,16 @@ class FrontDeskService implements FrontDesk {
         List<OccupancyPoint> points = new ArrayList<>();
         for (LocalDate night = from; night.isBefore(to); night = night.plusDays(1)) {
             LocalDate n = night;
-            int occupied = (int) live.stream().filter(r -> r.stay().includesNight(n)).count();
+            int occupied =
+                    (int) live.stream().filter(r -> r.stay().includesNight(n)).count();
             points.add(new OccupancyPoint(night, occupied, rooms));
         }
         return points;
     }
 
     private DeskReservation move(String username, String code, ReservationStatus target) {
-        Reservation reservation = reservations.byCode(code).orElseThrow(() -> new NotFoundException("no reservation " + code));
+        Reservation reservation =
+                reservations.byCode(code).orElseThrow(() -> new NotFoundException("no reservation " + code));
         worked(username, reservations.hotelSlug(reservation));
         try {
             reservations.setStatus(reservation.id(), reservation.status().moveTo(target));

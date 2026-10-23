@@ -71,7 +71,12 @@ final class Rows {
                 r.get(ROOM.NUMBER),
                 r.get(ROOM_TYPE.ID),
                 r.get(ROOM_TYPE.NAME),
-                new Guest(r.get(GUEST.ID), r.get(GUEST.FIRST_NAME), r.get(GUEST.LAST_NAME), r.get(GUEST.EMAIL), r.get(GUEST.PHONE)),
+                new Guest(
+                        r.get(GUEST.ID),
+                        r.get(GUEST.FIRST_NAME),
+                        r.get(GUEST.LAST_NAME),
+                        r.get(GUEST.EMAIL),
+                        r.get(GUEST.PHONE)),
                 new StayDates(r.get(RESERVATION.CHECK_IN), r.get(RESERVATION.CHECK_OUT)),
                 new Party(r.get(RESERVATION.ADULTS), r.get(RESERVATION.CHILDREN)),
                 ReservationStatus.valueOf(r.get(RESERVATION.STATUS)),
