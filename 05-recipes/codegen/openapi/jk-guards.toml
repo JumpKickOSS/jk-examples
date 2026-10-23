@@ -1,0 +1,10 @@
+# House rules: the Spring pack, plus a package-level @NullMarked ratchet so NullAway never
+# silently skips a package.
+[guards]
+extends = ["cc.jumpkick.guards:spring:0.20.0"]
+
+[guards.null-marked]
+kind    = "annotate"
+require = "org.jspecify.annotations.NullMarked"
+on      = "package"
+why     = "NullAway checks only @NullMarked code; an unmarked package is unchecked"

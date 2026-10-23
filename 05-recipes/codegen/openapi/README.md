@@ -4,7 +4,10 @@ A Spring Boot module whose API interface is generated from `api/openapi.yaml` by
 preset ([Generate](https://github.com/JumpKickOSS/jk/blob/main/docs/user/generate.md)), with `[spring-boot]` beside it in the same module: the
 generator contributes the `generate-openapi` step, Boot owns the platform BOM and packages the
 jar. `GreetingController` implements the generated `GreetingsApi`; the `Greeting` model is
-generated too, and both compile into the Boot jar.
+generated too, and both compile into the Boot jar. Nullness is non-null by default: every package is
+`@NullMarked`, and only an explicit JSpecify `@Nullable` may be null. `options.useJspecify` makes the
+generator emit that vocabulary (Spring Framework 7 deprecated `org.springframework.lang.Nullable`);
+NullAway fails the compile on a mistake in hand-written code.
 
 ```bash
 jk build          # generate-openapi runs openapi-generator-cli, javac compiles the interface, boot-jar packs it
