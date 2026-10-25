@@ -1,7 +1,7 @@
 version = 1
-generated-by = "jk 0.20.0"
-generated-by-build = "8d791a6605a5"
-generated-by-build-time = "2026-10-22T21:20:28Z"
+generated-by = "jk 0.40.0"
+generated-by-build = "ceb41198cbc4"
+generated-by-build-time = "2026-10-24T23:26:50Z"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.10"
 manifests-sha256 = "8b6c9fdde9861782ed0ebe2db099578d6e6a7a249c0b4d16dfce669dc2ffae95"
@@ -1382,11 +1382,11 @@ version    = "0.20.0"
 
 [[plugin]]
 coordinate = "cc.jumpkick:jk-hibernate"
-version    = "0.20.0"
+version    = "0.40.0"
 
 [[plugin]]
 coordinate = "cc.jumpkick:jk-spring-boot"
-version    = "0.20.0"
+version    = "0.40.0"
 
 [[tool]]
 coordinate = "org.springframework.boot:spring-boot-jarmode-tools"

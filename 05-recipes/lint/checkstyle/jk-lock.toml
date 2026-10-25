@@ -1,7 +1,7 @@
 version = 1
-generated-by = "jk 0.20.0"
-generated-by-build = "8d791a6605a5"
-generated-by-build-time = "2026-10-22T21:20:28Z"
+generated-by = "jk 0.40.0"
+generated-by-build = "ceb41198cbc4"
+generated-by-build-time = "2026-10-24T23:26:50Z"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.10"
 manifests-sha256 = "78a995cf6f599b786418b1d916103e34f34b9328405c73d06594d7e3572eb86a"
@@ -130,7 +130,7 @@ licenses = ["Apache-2.0"]
 
 [[plugin]]
 coordinate = "cc.jumpkick:jk-lint"
-version    = "0.20.0"
+version    = "0.40.0"
 
 [[tool]]
 coordinate = "com.github.oowekyala.ooxml:nice-xml-messages"

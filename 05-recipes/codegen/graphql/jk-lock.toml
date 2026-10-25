@@ -1,7 +1,7 @@
 version = 1
-generated-by = "jk 0.20.0"
-generated-by-build = "8d791a6605a5"
-generated-by-build-time = "2026-10-22T21:20:28Z"
+generated-by = "jk 0.40.0"
+generated-by-build = "ceb41198cbc4"
+generated-by-build-time = "2026-10-24T23:26:50Z"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.10"
 manifests-sha256 = "9187c7c5f8e3fa88a4fc0084a39ccc8a8262a81e72e0b0e388630d9d1d4fbe13"
@@ -242,7 +242,7 @@ licenses = ["MIT"]
 
 [[plugin]]
 coordinate = "cc.jumpkick:jk-generator"
-version    = "0.20.0"
+version    = "0.40.0"
 
 [[tool]]
 coordinate = "com.fasterxml.jackson.core:jackson-annotations"

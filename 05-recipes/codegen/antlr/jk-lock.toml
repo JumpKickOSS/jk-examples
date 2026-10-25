@@ -1,7 +1,7 @@
 version = 1
-generated-by = "jk 0.20.0"
-generated-by-build = "8d791a6605a5"
-generated-by-build-time = "2026-10-22T21:20:28Z"
+generated-by = "jk 0.40.0"
+generated-by-build = "ceb41198cbc4"
+generated-by-build-time = "2026-10-24T23:26:50Z"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.10"
 manifests-sha256 = "21089804aa07db086d230f444613e40312eea0de4951e8e555abca3956831f05"
@@ -142,7 +142,7 @@ licenses = ["Apache-2.0"]
 
 [[plugin]]
 coordinate = "cc.jumpkick:jk-antlr"
-version    = "0.20.0"
+version    = "0.40.0"
 
 [[tool]]
 coordinate = "com.ibm.icu:icu4j"

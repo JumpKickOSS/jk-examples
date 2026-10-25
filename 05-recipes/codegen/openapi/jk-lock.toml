@@ -1,7 +1,7 @@
 version = 1
-generated-by = "jk 0.20.0"
-generated-by-build = "b4864efc81eb"
-generated-by-build-time = "2026-10-23T02:25:56Z"
+generated-by = "jk 0.40.0"
+generated-by-build = "ceb41198cbc4"
+generated-by-build-time = "2026-10-24T23:26:50Z"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.10"
 manifests-sha256 = "ccab574deb268fe541b754df6ccc682d74ecafbb2b62c83a66ed78a8ad278ef2"
@@ -1188,11 +1188,11 @@ version    = "0.20.0"
 
 [[plugin]]
 coordinate = "cc.jumpkick:jk-openapi"
-version    = "0.20.0"
+version    = "0.40.0"
 
 [[plugin]]
 coordinate = "cc.jumpkick:jk-spring-boot"
-version    = "0.20.0"
+version    = "0.40.0"
 
 [[tool]]
 coordinate = "org.openapitools:openapi-generator-cli"
