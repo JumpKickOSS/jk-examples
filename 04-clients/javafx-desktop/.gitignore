@@ -1,0 +1,2 @@
+# JavaFX natives are per-OS, so each user locks for their own platform.
+jk-lock.toml
