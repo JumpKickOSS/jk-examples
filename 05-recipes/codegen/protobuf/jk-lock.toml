@@ -1,11 +1,11 @@
 version = 1
-generated-by = "jk 0.20.0"
-generated-by-build = "8d791a6605a5"
-generated-by-build-time = "2026-10-22T21:20:28Z"
+generated-by = "jk 0.40.0"
+generated-by-build = "ceb41198cbc4"
+generated-by-build-time = "2026-10-24T23:26:50Z"
 resolution-algorithm = "pubgrub-v1"
 kotlin = "2.4.21"
 jk-min = "0.10"
-manifests-sha256 = "eb7e5b2420f71cc7b67b9db40ec35da947f9bac7fca55e9793ebc600197d97ca"
+manifests-sha256 = "8629f562f8dd5d472a0162e2f33a56cb62971c1785d8b8408713bf0f16e3c6f6"
 project-id = "11aa43510a295288b58ccb5a453cf85e"
 
 [jdk]
@@ -170,7 +170,7 @@ licenses = ["Apache-2.0"]
 
 [[plugin]]
 coordinate = "cc.jumpkick:jk-protobuf"
-version    = "0.20.0"
+version    = "0.40.0"
 
 [[tool]]
 coordinate = "com.google.protobuf:protoc"

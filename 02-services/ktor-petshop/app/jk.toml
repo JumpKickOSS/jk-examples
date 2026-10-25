@@ -2,6 +2,8 @@ name = "ktor-petshop-app"
 
 [application]
 main = "com.example.petshop.ApplicationKt"
+# Netty loads its native transport through System.loadLibrary; JDK 24+ warns about that unless allowed.
+jvm-args = ["--enable-native-access=ALL-UNNAMED"]
 
 # A shippable container: a JRE 25 base and a JEP 514 AOT cache trained with the image's own JVM.
 [image]

@@ -9,6 +9,8 @@ kotlin  = "2.4.21"
 
 [application]
 main = "dev.jkharness.pb.MainKt"
+# protobuf-javalite reads memory through sun.misc.Unsafe; JDK 24+ warns about that unless allowed.
+jvm-args = ["--sun-misc-unsafe-memory-access=allow"]
 
 # protoc and the runtime library are one protobuf release.
 [protobuf]

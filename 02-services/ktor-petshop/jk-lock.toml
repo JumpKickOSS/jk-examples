@@ -1,11 +1,11 @@
 version = 1
-generated-by = "jk 0.20.0"
-generated-by-build = "8d791a6605a5"
-generated-by-build-time = "2026-10-22T21:20:28Z"
+generated-by = "jk 0.40.0"
+generated-by-build = "ceb41198cbc4"
+generated-by-build-time = "2026-10-24T23:26:50Z"
 resolution-algorithm = "pubgrub-v1"
 kotlin = "2.4.21"
 jk-min = "0.12.0"
-manifests-sha256 = "439d035fa7ad42ffbec384e3457785ec71b82defd53b2532e360c6a72e8297e8"
+manifests-sha256 = "a520ef00dc175b12a8d82c9db0343bc55eede8ed34f7cc0b7d688c26cc21f9ac"
 project-id = "c2d49ac391b9f09ba94f39e1c8c70597"
 
 [jdk]
