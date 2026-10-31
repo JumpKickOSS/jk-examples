@@ -35,7 +35,7 @@ ports/netty/
     jk-lock.toml            # the committed lock; setup.sh copies it into the checkout
     jk-guards.toml          # monorepo pack + file-size ratchet, baselined against upstream
     jk-guards-baseline.toml # engine-written: the upstream sites the rules tolerate
-    common/.jk/before-compile.groovy   # collection codegen (BEFORE_COMPILE)
+    common/.jk/scripts/before-compile.groovy   # collection codegen (BEFORE_COMPILE)
     handler/jk.toml         # [javac] args export sun.security.x509 for OpenJdkSelfSignedCertGenerator
     common/jk.toml, buffer/jk.toml, …
   checkout/                 # gitignored working tree (after setup)
@@ -138,7 +138,7 @@ Deferred / partial (see [PARITY.md](PARITY.md)):
 ## Design notes
 
 - **No `jk.toml` scripting language** — modules are data; codegen is
-  **`common/.jk/before-compile.groovy`** on `BEFORE_COMPILE`, running the same upstream
+  **`common/.jk/scripts/before-compile.groovy`** on `BEFORE_COMPILE`, running the same upstream
   `codegen.groovy` as Maven gmaven / Mill. Optional `scripts/generate-common.sh` remains for
   setup-without-jk (`NETTY_SKIP_SHELL_CODEGEN=1` to force the build-logic path).
 - **One lockfile** at the workspace root (`jk-lock.toml`), committed under `overlay/`.

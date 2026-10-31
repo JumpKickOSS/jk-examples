@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
-/** Prints the Java line count that {@code .jk/after-resources.groovy} generated at build time. */
+/** Prints the Java line count that {@code .jk/scripts/after-resources.groovy} generated at build time. */
 public final class App {
     private static final String RESOURCE = "/line-count.txt";
 

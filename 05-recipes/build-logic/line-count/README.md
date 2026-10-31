@@ -1,10 +1,10 @@
 # Line-count build logic
 
-Project build logic: the `.jk/` convention directory next to `jk.toml`, holding **stem
+Project build logic: the `.jk/scripts/` convention directory next to `jk.toml`, holding **stem
 scripts** that run at named anchors of the build. Reference doc:
 [build-logic.md](https://github.com/JumpKickOSS/jk/blob/main/docs/user/build-logic.md).
 
-`.jk/after-resources.groovy` runs after resources are copied. It counts lines of Java under
+`.jk/scripts/after-resources.groovy` runs after resources are copied. It counts lines of Java under
 `src/`, writes the total to `line-count.txt` in its `outDir`, and jk merges that directory
 into the module's resources — so `demo.App` reads `/line-count.txt` back off the classpath
 at runtime. No script, no resource: the sample only prints a number if its own build logic
@@ -87,27 +87,14 @@ Exception in thread "main" java.lang.IllegalStateException: /line-count.txt is n
 
 `jk test` fails on the same message, which is the point of the test.
 
-**A leftover `.jk-build/`.** The compiled-build-logic scheme that directory belonged to is
-retired and has no compatibility path, so its mere existence fails the build — even with a
-valid `.jk/` beside it:
-
-```text
-$ mkdir .jk-build && jk build
-[Build Logic Before Compile] Failure in demo:line-count
- | project build logic lives in jk/ or .jk/ -- rename .jk-build/ (no compatibility path)
- +--
-
-jk: ! Build > Failed to build demo:line-count - took 225ms
-```
-
-(jk repeats that diagnostic once per reporting scope; the message is the same each time.)
+**A script left at the top of `.jk/`.** Only `.jk/scripts/` is build logic; the rest of `.jk/`
+is jk's other checked-in state (the code graph lives in `.jk/graph/`). A script left directly in
+`.jk/` does not run, and the build says so once instead of skipping it quietly.
 
 ## Variations
 
-- `jk/` instead of `.jk/` is the same feature, visible in a default listing. If both exist,
-  `jk/` wins and the trees are not merged.
 - `[build] logic = "tools/codegen"` points the convention elsewhere; `logic = "off"` disables
-  it. Omit the table to use `jk/` / `.jk/`, as this sample does.
+  it. Omit the table to use `.jk/scripts/`, as this sample does.
 - Other anchors (`before-compile`, `after-compile`, `before-package`), `.kts` scripts, and
   the workspace-root stems (`after-build`, `guard`) work the same way; this sample stays at
   one anchor on purpose. See [build-logic.md](https://github.com/JumpKickOSS/jk/blob/main/docs/user/build-logic.md).
