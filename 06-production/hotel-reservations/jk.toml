@@ -26,11 +26,13 @@ playwright        = "com.microsoft.playwright:playwright:1.64.0"
 
 # `jk dev` at this root runs the app (rest), the Angular dev server (frontend, proxying /api) and
 # compose.yaml's database, on every OS. The app is ready once PostgreSQL listens on TCP, not during
-# its first-run init (the pattern matches inside compose's `db-1  | ` line prefix). podman-compose is
-# Python and holds its output in a buffer when piped, so the probe would never see the line without
-# PYTHONUNBUFFERED; Docker's compose ignores it.
+# its first-run init (the pattern matches inside compose's `db-1  | ` line prefix).
+# --force-recreate replaces a container a killed session left running (data stays in the volume),
+# so PostgreSQL starts fresh and prints the line again. podman-compose is Python and buffers its
+# output when piped, so the probe would never see the line without PYTHONUNBUFFERED; Docker's
+# compose ignores it.
 [dev.sidecars]
-db = { command = "docker compose up db", env = { PYTHONUNBUFFERED = "1" }, ready-pattern = "listening on IPv4 address", ready-timeout = "3m" }
+db = { command = "docker compose up --force-recreate db", env = { PYTHONUNBUFFERED = "1" }, ready-pattern = "listening on IPv4 address", ready-timeout = "3m" }
 
 # The code graph agents query (`jk graph query …`): the words people use for the code's names.
 [graph]

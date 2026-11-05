@@ -48,7 +48,7 @@ ryuk.disabled=true
 ## Run it
 
 ```sh
-jk dev            # PostgreSQL (docker compose up db), the app on :8080, Angular on :4200 with /api proxied
+jk dev            # PostgreSQL (compose.yaml's db), the app on :8080, Angular on :4200 with /api proxied
 ```
 
 Open <http://localhost:4200>. Edit a Java file and jk restarts the app; edit a component and the
