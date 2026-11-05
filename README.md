@@ -89,7 +89,7 @@ need. `ports/` and `bench/` are validation and measurement, not teaching materia
 | `05-recipes/codegen/graphql/` | GraphQL codegen as a `[generate]` recipe: DGS codegen's command line over the schema, typed types + client joining the compile, the tool closure fetched and cached. |
 | `05-recipes/lint/checkstyle/` | `[lint] checkstyle` as a cached step after compile: findings as diagnostics with the rule id, `fail-on`, a rule set that repeats nothing `jk format` owns. |
 | `05-recipes/lint/all-tools/` | The four-tool `[lint]` table — Checkstyle, a project PMD ruleset, SpotBugs over the classes, detekt over Kotlin — each its own cached step; runs the real tools so their report parsers see real output. |
-| `05-recipes/build-logic/line-count/` | Project build logic in `.jk/`: a Groovy stem script at the `after-resources` anchor counts the source lines and hands the result to the app as a resource. |
+| `05-recipes/build-logic/line-count/` | Project build logic in `.jk/scripts/`: a Groovy stem script at the `after-resources` anchor counts the source lines and hands the result to the app as a resource. |
 | `05-recipes/test/testng/` | TestNG through the JUnit team's engine: `org.testng:testng` declared, the engine injected by `jk lock`, a `@DataProvider` fanned out, a TestNG group as a Platform tag in the tier table. |
 | `05-recipes/test/migrations/` | Flyway and Liquibase over one module's scripts: the unit tier on H2, the integration tier on a PostgreSQL Testcontainer, `jk run` migrating an H2 file, and both tools as pinned `jk tool install` / `jk tool run` commands. |
 | `05-recipes/plugins/intellij-plugin/` | `[intellij]`: an IntelliJ IDEA action compiled against the IDE, `BasePlatformTestCase` tests in a headless IDE, and the zip an IDE installs from disk. |
@@ -141,9 +141,12 @@ new scenario goes in the first directory whose description fits it.
   ratchet. `jk guard` is clean everywhere; where a scenario has tests, `[test] exclude-tags`
   and one profile per tag give every tagged test exactly one tier.
 - **`[image]`** with a JRE 25 base and `aot-cache = true` on every runnable service.
-- **`AGENTS.md`** at every scenario root carries jk's section between `<!-- BEGIN:jumpkick -->`
-  and `<!-- END:jumpkick -->`. jk writes it and every build refreshes it, so it is never edited by
-  hand. A scenario's own agent rules go outside the markers.
+- **Agent files at every scenario root**, written by `jk agents`: `AGENTS.md` with jk's section
+  between `<!-- BEGIN:jumpkick -->` and `<!-- END:jumpkick -->`, `CLAUDE.md` importing it, and
+  `.mcp.json` plus `.claude/settings.json` registering `jk mcp` and jk's hook. jk owns the section
+  and a build refreshes it, so it is never edited by hand; a scenario's own agent rules go outside
+  the markers. Other agents' files (`.gemini/`, `.cursor/`, …) and the code graph `.jk/graph/` are
+  not committed. `scripts/scenarios.py lint` checks the first two files.
 
 ## Running
 
@@ -188,7 +191,7 @@ dev-checks = ["/api/hello=hello"]    # fetched through the first front door
 ```sh
 scripts/scenarios.py list --cadence nightly --have docker   # what a nightly with Docker runs
 scripts/scenarios.py check 01-start/java-workspace          # run one scenario's checks
-scripts/scenarios.py lint                                   # every scenario has a manifest and a README row
+scripts/scenarios.py lint                                   # every scenario has a manifest, a README row and AGENTS.md
 ```
 
 jk's nightly examples job runs `list` and `check` from a clean checkout, so a new scenario needs

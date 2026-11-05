@@ -17,4 +17,7 @@ git -C checkout checkout -q "$NIA_SHA"
 # R8 missing-rules file. Paths mirror the NiA tree.
 cp -r overlay/. checkout/
 
+# Wire the checkout for coding agents: jk's AGENTS.md section, CLAUDE.md, MCP and the hook.
+if command -v jk >/dev/null 2>&1; then jk agents checkout >/dev/null; fi
+
 echo "nowinandroid ready at checkout/ (SHA $NIA_SHA, overlay applied)"

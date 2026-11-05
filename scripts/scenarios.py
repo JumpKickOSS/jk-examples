@@ -4,7 +4,7 @@
   scripts/scenarios.py list [--cadence C] [--have NEEDS] [--dev]   scenario dirs, one per line
   scripts/scenarios.py check DIR                                   run DIR's check commands
   scripts/scenarios.py dev-checks DIR                              DIR's `jk dev` API checks
-  scripts/scenarios.py lint                                        manifests and README agree
+  scripts/scenarios.py lint                                        manifests, README and agent files agree
 
 A manifest:
 
@@ -102,6 +102,14 @@ def cmd_lint(_args):
         d = project.parent
         if not (d / "scenario.toml").exists() and rel(d).count("/") in (1, 2):
             problems.append(f"{rel(d)}: a project with no scenario.toml")
+    for d, _ in manifests():
+        if rel(d).startswith("bench/"):
+            continue
+        agents, claude = d / "AGENTS.md", d / "CLAUDE.md"
+        if not agents.exists() or "<!-- BEGIN:jumpkick -->" not in agents.read_text(encoding="utf-8"):
+            problems.append(f"{rel(d)}: no AGENTS.md with jk's section (run `jk agents {rel(d)}`)")
+        elif not claude.exists() or "@AGENTS.md" not in claude.read_text(encoding="utf-8"):
+            problems.append(f"{rel(d)}: no CLAUDE.md importing AGENTS.md (run `jk agents {rel(d)}`)")
     for p in problems:
         print(p, file=sys.stderr)
     return 1 if problems else 0

@@ -21,6 +21,9 @@ SHA=$(git -C checkout rev-parse HEAD)
 # Overlay: root workspace + per-module jk.toml (hand-maintained / generated from Mill graph).
 cp -a overlay/. checkout/
 
+# Wire the checkout for coding agents: jk's AGENTS.md section, CLAUDE.md, MCP and the hook.
+if command -v jk >/dev/null 2>&1; then jk agents checkout >/dev/null; fi
+
 # common/ collection templates: preferred path is .jk BEFORE_COMPILE on `jk build -m common`.
 # Keep shell codegen for offline/setup-without-jk and Mill bench prep when tools already cached.
 if [ "${NETTY_SKIP_SHELL_CODEGEN:-}" != "1" ]; then

@@ -18,3 +18,9 @@ graphify-out/
 # Gradle's own output in the migration recipe, which still builds with Gradle
 05-recipes/migrate/from-gradle/**/build/
 05-recipes/migrate/from-gradle/.gradle/
+
+# jk's code graph, rebuilt by the first graph question in a scenario; not committed here
+**/.jk/graph/
+
+# per-user Claude Code settings
+**/.claude/settings.local.json
