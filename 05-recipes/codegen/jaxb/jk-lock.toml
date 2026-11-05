@@ -1,7 +1,7 @@
 version = 1
-generated-by = "jk 0.40.0"
-generated-by-build = "ceb41198cbc4"
-generated-by-build-time = "2026-10-24T23:26:50Z"
+generated-by = "jk 0.50.2"
+generated-by-build = "cb17db83b069"
+generated-by-build-time = "2026-11-04T22:33:39Z"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.10"
 manifests-sha256 = "1ca32d5cb564706cf3674a7fac3c77b37531249c405b3855bad6a12fdddbe51b"
@@ -202,7 +202,7 @@ licenses = ["Apache-2.0"]
 
 [[plugin]]
 coordinate = "cc.jumpkick:jk-jaxb"
-version    = "0.40.0"
+version    = "0.50.2"
 
 [[tool]]
 coordinate = "com.sun.istack:istack-commons-runtime"
