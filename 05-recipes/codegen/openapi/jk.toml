@@ -32,14 +32,11 @@ jspecify           = "1.0.1"
 starter-test = "org.springframework.boot:spring-boot-starter-test"
 
 # NullAway over JSpecify: every package is @NullMarked (hand-written package-info; the generator
-# emits the same for com.acme.api*), so types are non-null unless marked @Nullable. @Generated
-# models keep a JavaBeans empty ctor that leaves required fields unset until setters run — NullAway
-# would reject that, so TreatGeneratedAsUnannotated leaves those types to their JSpecify surface
-# for IDEs while still enforcing this module's own code.
-[javac]
-plugins = { ErrorProne = { options = ["-Xep:NullAway:ERROR", "-XepOpt:NullAway:OnlyNullMarked=true", "-XepOpt:NullAway:JSpecifyMode=true", "-XepOpt:NullAway:TreatGeneratedAsUnannotated=true", "-XepDisableWarningsInGeneratedCode"] } }
-args    = ["-XDcompilePolicy=simple", "--should-stop=ifError=FLOW"]
-
-[processor-dependencies]
-error_prone_core = "com.google.errorprone:error_prone_core:2.51.0"
-nullaway         = "com.uber.nullaway:nullaway:0.14.2"
+# emits the same for com.acme.api*), so types are non-null unless marked @Nullable. The code lives
+# under com.acme, outside the group, so include names it. @Generated models keep a JavaBeans empty
+# ctor that leaves required fields unset until setters run — NullAway would reject that, so
+# TreatGeneratedAsUnannotated leaves those types to their JSpecify surface for IDEs while still
+# enforcing this module's own code.
+[nullness]
+include = ["com.acme"]
+options = ["-XepOpt:NullAway:TreatGeneratedAsUnannotated=true"]

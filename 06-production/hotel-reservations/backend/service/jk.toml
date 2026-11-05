@@ -30,11 +30,11 @@ name-case  = "lower"
 excludes   = "flyway_schema_history"
 properties = { parseIgnoreComments = "true" }
 
-[javac]
-plugins = { ErrorProne = { options = ["-Xep:NullAway:ERROR", "-XepOpt:NullAway:OnlyNullMarked=true", "-XepOpt:NullAway:JSpecifyMode=true", "-XepOpt:NullAway:TreatGeneratedAsUnannotated=true", "-XepDisableWarningsInGeneratedCode"] } }
-args    = ["-XDcompilePolicy=simple", "--should-stop=ifError=FLOW"]
+# NullAway over JSpecify, checking only code under @NullMarked (every hand-written package says so
+# in its package-info), never generated code.
+[nullness]
+include = []
+options = ["-XepOpt:NullAway:TreatGeneratedAsUnannotated=true"]
 
 [processor-dependencies]
-error_prone_core.workspace = true
-nullaway.workspace = true
 mapstruct-processor.workspace = true

@@ -9,10 +9,8 @@ jspecify.workspace = true
 junit-jupiter = "org.junit.jupiter:junit-jupiter"
 assertj       = "org.assertj:assertj-core"
 
-[javac]
-plugins = { ErrorProne = { options = ["-Xep:NullAway:ERROR", "-XepOpt:NullAway:OnlyNullMarked=true", "-XepOpt:NullAway:JSpecifyMode=true", "-XepOpt:NullAway:TreatGeneratedAsUnannotated=true", "-XepDisableWarningsInGeneratedCode"] } }
-args    = ["-XDcompilePolicy=simple", "--should-stop=ifError=FLOW"]
-
-[processor-dependencies]
-error_prone_core.workspace = true
-nullaway.workspace = true
+# NullAway over JSpecify, checking only code under @NullMarked (every hand-written package says so
+# in its package-info), never generated code.
+[nullness]
+include = []
+options = ["-XepOpt:NullAway:TreatGeneratedAsUnannotated=true"]

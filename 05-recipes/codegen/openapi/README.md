@@ -7,7 +7,8 @@ jar. `GreetingController` implements the generated `GreetingsApi`; the `Greeting
 generated too, and both compile into the Boot jar. Nullness is non-null by default: every package is
 `@NullMarked`, and only an explicit JSpecify `@Nullable` may be null. `options.useJspecify` makes the
 generator emit that vocabulary (Spring Framework 7 deprecated `org.springframework.lang.Nullable`);
-NullAway fails the compile on a mistake in hand-written code.
+NullAway, which the `[nullness]` table brings with Error Prone and JSpecify, fails the compile on a
+mistake in hand-written code.
 
 ```bash
 jk build          # generate-openapi runs openapi-generator-cli, javac compiles the interface, boot-jar packs it

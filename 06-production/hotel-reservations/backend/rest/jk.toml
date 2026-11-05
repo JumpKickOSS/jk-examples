@@ -57,10 +57,8 @@ testcontainers-postgresql = "org.testcontainers:testcontainers-postgresql"
 spring-boot-testcontainers = "org.springframework.boot:spring-boot-testcontainers"
 playwright.workspace  = true
 
-[javac]
-plugins = { ErrorProne = { options = ["-Xep:NullAway:ERROR", "-XepOpt:NullAway:OnlyNullMarked=true", "-XepOpt:NullAway:JSpecifyMode=true", "-XepOpt:NullAway:TreatGeneratedAsUnannotated=true", "-XepDisableWarningsInGeneratedCode"] } }
-args    = ["-XDcompilePolicy=simple", "--should-stop=ifError=FLOW"]
-
-[processor-dependencies]
-error_prone_core.workspace = true
-nullaway.workspace = true
+# NullAway over JSpecify, checking only code under @NullMarked (every hand-written package says so
+# in its package-info), never generated code.
+[nullness]
+include = []
+options = ["-XepOpt:NullAway:TreatGeneratedAsUnannotated=true"]

@@ -13,7 +13,7 @@ on, in one application small enough to read in an afternoon.
 | **Database** | PostgreSQL 18 (`uuidv7()` keys, a no-double-booking exclusion constraint), Flyway migrations and seed |
 | **Data access** | jOOQ, generated from the migration scripts at build time — no database needed to compile |
 | **Mapping** | MapStruct, generated at compile time; only DTOs cross HTTP |
-| **Nullness** | JSpecify `@NullMarked` everywhere, NullAway as a compile error |
+| **Nullness** | JSpecify `@NullMarked` everywhere, NullAway as a compile error, from one `[nullness]` table per module |
 | **Architecture** | jk guards in the build (module layers, DTO-only controllers, jOOQ confined) + ArchUnit tests |
 | **Frontend** | Angular 22 (signals, zoneless, standalone) with a customised Material 3 theme, under `frontend/` |
 | **Tests** | unit (seconds) · integration (Testcontainers PostgreSQL) · end-to-end (Playwright for Java) |
