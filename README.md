@@ -156,8 +156,8 @@ fail in confusing ways.
 ```sh
 # release install
 curl -fsSL https://jumpkick.build/install.sh | bash
-# or from a jk checkout
-jk build --skip-tests && jk install --skip-tests
+# or from a jk checkout (with a released jk on PATH): its client, engine and workers take over ~/.jk
+jk snapshot -S
 
 # then, in this repo:
 cd 01-start/java-cli && jk build && jk run
