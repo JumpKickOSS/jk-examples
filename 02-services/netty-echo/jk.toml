@@ -15,7 +15,7 @@ base      = "docker.io/bellsoft/liberica-runtime-container:jre-25-slim-glibc"
 aot-cache = true
 
 [dependencies]
-netty-all = "4.2.19.Final"
+netty-all = "4.2.20.Final"
 
 [test-dependencies]
 junit-jupiter = "6.1.3"

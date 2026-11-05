@@ -15,7 +15,7 @@ Install it with **Settings → Plugins → ⚙ → Install Plugin from Disk…**
 
 ```toml
 [intellij]
-version = "262.10968.63"   # the platform build; the IDE's About dialog shows IC-262.10968.63
+version = "262.11879.100"  # the platform build; the IDE's About dialog shows IC-262.11879.100
 
 [repositories.jetbrains]
 url    = "https://www.jetbrains.com/intellij-repository/releases"

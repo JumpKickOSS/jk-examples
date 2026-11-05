@@ -1,10 +1,10 @@
 version = 1
-generated-by = "jk 0.20.0"
-generated-by-build = "8d791a6605a5"
-generated-by-build-time = "2026-10-22T21:20:28Z"
+generated-by = "jk 0.50.2"
+generated-by-build = "cb17db83b069"
+generated-by-build-time = "2026-11-04T22:33:39Z"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.12.0"
-manifests-sha256 = "3f8f450dbde5e8ef0cfdc56ea479cf9ce12951d645224c3ef153d452e9522d0d"
+manifests-sha256 = "e29c0c93aea2d1c89b469668e46db3aaa3e8bdd1886bc68deee42c8eed8ec25f"
 project-id = "98ddca599f58eea7287aca4747a0e4b9"
 
 [jdk]
@@ -13,9 +13,9 @@ suggested-version = "25.0.4"
 
 [[artifact]]
 name     = "commons-codec:commons-codec:jar:"
-version  = "1.22.1"
+version  = "1.23.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:78a5d732fbd715e2d10bd7150d2f8030bae57267f8aacc5c88f642cb6c2e5d3f"
+checksum = "sha256:47504a3ce71d73a1b0af07675546b8d8c5af87f82ef12b6381f9eb3c17dd5a5b"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 

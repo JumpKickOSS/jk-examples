@@ -1,11 +1,11 @@
 version = 1
-generated-by = "jk 0.40.0"
-generated-by-build = "ceb41198cbc4"
-generated-by-build-time = "2026-10-24T23:26:50Z"
+generated-by = "jk 0.50.2"
+generated-by-build = "cb17db83b069"
+generated-by-build-time = "2026-11-04T22:33:39Z"
 resolution-algorithm = "pubgrub-v1"
 kotlin = "2.4.21"
 jk-min = "0.12.0"
-manifests-sha256 = "a520ef00dc175b12a8d82c9db0343bc55eede8ed34f7cc0b7d688c26cc21f9ac"
+manifests-sha256 = "f198f9b8ebfd6bfafeca6818cd18a609dd12b2beff326b7620ccb4ca10bd7529"
 project-id = "c2d49ac391b9f09ba94f39e1c8c70597"
 
 [jdk]
@@ -14,21 +14,21 @@ suggested-version = "25.0.2"
 
 [[artifact]]
 name     = "ch.qos.logback:logback-classic:jar:"
-version  = "1.6.5"
+version  = "1.6.6"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:2e8c73aadad525e854af1ac95793af3dc75ecedd53c010ea2389de44c08e729b"
+checksum = "sha256:5230217ccba7a9d31dda1dd878e5606037a7972282c7d3f8eac1efa80e9463d9"
 scopes   = ["main"]
 licenses = ["EPL-2.0", "LGPL-2.1-only"]
 deps = [
-  "ch.qos.logback:logback-core:jar:@1.6.5",
+  "ch.qos.logback:logback-core:jar:@1.6.6",
   "org.slf4j:slf4j-api:jar:@2.0.19",
 ]
 
 [[artifact]]
 name     = "ch.qos.logback:logback-core:jar:"
-version  = "1.6.5"
+version  = "1.6.6"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:03dcbf053b40166849b8eb0a30cbde40c04a448820e9a7589c4b0a2ec3a9db63"
+checksum = "sha256:5458415d5d58a97ab670632f9b2bdac2d6f7e0e11455b45dd4e64e90d12670ab"
 scopes   = ["main"]
 licenses = ["EPL-2.0", "LGPL-2.1-only"]
 
@@ -246,7 +246,7 @@ scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
   "io.insert-koin:koin-core-jvm:jar:@4.2.2",
-  "io.ktor:ktor-server-core-jvm:jar:@3.6.0",
+  "io.ktor:ktor-server-core-jvm:jar:@3.6.1",
   "io.ktor:ktor-server-di-jvm:jar:@3.4.0",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
@@ -262,7 +262,7 @@ licenses = ["Apache-2.0"]
 deps = [
   "io.insert-koin:koin-core:jar:@4.2.2",
   "io.insert-koin:koin-ktor-jvm:jar:@4.2.2",
-  "io.ktor:ktor-server-core:jar:@3.6.0",
+  "io.ktor:ktor-server-core:jar:@3.6.1",
   "io.ktor:ktor-server-di:jar:@3.4.0",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.11.0",
@@ -313,13 +313,13 @@ deps = [
 
 [[artifact]]
 name     = "io.ktor:ktor-client-apache5-jvm:jar:"
-version  = "3.6.0"
+version  = "3.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:bfacc3fe75bef5d3e1e42e336b455ba970f6baa825ca4c7653c4de8bfeeb124c"
+checksum = "sha256:6e4c9a13324121e9e8eb579b99a4dae93f9e5f1c1367e4e7fc67991a97943e5a"
 scopes   = ["test"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.ktor:ktor-client-core-jvm:jar:@3.6.0",
+  "io.ktor:ktor-client-core-jvm:jar:@3.6.1",
   "org.apache.httpcomponents.client5:httpclient5:jar:@5.6.4",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
@@ -328,16 +328,16 @@ deps = [
 
 [[artifact]]
 name     = "io.ktor:ktor-client-cio-jvm:jar:"
-version  = "3.6.0"
+version  = "3.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:a12b3d94e140cc235a9b77f37f6946deee5e4d32cb8afa7b64b29746412c1dd0"
+checksum = "sha256:6f2b3194e8fbb28250b84e8868b1064731b54f1a950379b2a1c6d83c59e1d018"
 scopes   = ["test"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.ktor:ktor-client-core-jvm:jar:@3.6.0",
-  "io.ktor:ktor-http-cio-jvm:jar:@3.6.0",
-  "io.ktor:ktor-network-tls-jvm:jar:@3.6.0",
-  "io.ktor:ktor-websockets-jvm:jar:@3.6.0",
+  "io.ktor:ktor-client-core-jvm:jar:@3.6.1",
+  "io.ktor:ktor-http-cio-jvm:jar:@3.6.1",
+  "io.ktor:ktor-network-tls-jvm:jar:@3.6.1",
+  "io.ktor:ktor-websockets-jvm:jar:@3.6.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
   "org.slf4j:slf4j-api:jar:@2.0.19",
@@ -345,17 +345,17 @@ deps = [
 
 [[artifact]]
 name     = "io.ktor:ktor-client-core-jvm:jar:"
-version  = "3.6.0"
+version  = "3.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:7dc9a3c76bf43f672e8331aad1ecb06864f69f464ab1517c24ed8a38c86f812f"
+checksum = "sha256:3a288b4d75a52d3b2460765067c2fc035bcd18ffcaa0a2296f4b9983cd2f041f"
 scopes   = ["main", "test"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.ktor:ktor-events-jvm:jar:@3.6.0",
-  "io.ktor:ktor-http-cio-jvm:jar:@3.6.0",
-  "io.ktor:ktor-http-jvm:jar:@3.6.0",
-  "io.ktor:ktor-sse-jvm:jar:@3.6.0",
-  "io.ktor:ktor-websocket-serialization-jvm:jar:@3.6.0",
+  "io.ktor:ktor-events-jvm:jar:@3.6.1",
+  "io.ktor:ktor-http-cio-jvm:jar:@3.6.1",
+  "io.ktor:ktor-http-jvm:jar:@3.6.1",
+  "io.ktor:ktor-sse-jvm:jar:@3.6.1",
+  "io.ktor:ktor-websocket-serialization-jvm:jar:@3.6.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
   "org.jetbrains.kotlinx:kotlinx-coroutines-slf4j:jar:@1.11.0",
@@ -364,13 +364,13 @@ deps = [
 
 [[artifact]]
 name     = "io.ktor:ktor-events-jvm:jar:"
-version  = "3.6.0"
+version  = "3.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:d3962f4a4244102d1ef8b84b21429ffc26be3512b5f1f96c607265ca1cec5c0b"
+checksum = "sha256:9759d0e39dcb8682479c5303625180b90b9cff94d70a5caf78081ba33f78d154"
 scopes   = ["main", "test"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.ktor:ktor-utils-jvm:jar:@3.6.0",
+  "io.ktor:ktor-utils-jvm:jar:@3.6.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
   "org.slf4j:slf4j-api:jar:@2.0.19",
@@ -378,29 +378,29 @@ deps = [
 
 [[artifact]]
 name     = "io.ktor:ktor-events:jar:"
-version  = "3.6.0"
+version  = "3.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-path     = "ktor-events-3.6.0.module"
+path     = "ktor-events-3.6.1.module"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.ktor:ktor-events-jvm:jar:@3.6.0",
-  "io.ktor:ktor-utils:jar:@3.6.0",
+  "io.ktor:ktor-events-jvm:jar:@3.6.1",
+  "io.ktor:ktor-utils:jar:@3.6.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.11.0",
 ]
 
 [[artifact]]
 name     = "io.ktor:ktor-http-cio-jvm:jar:"
-version  = "3.6.0"
+version  = "3.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:4cabe83cb367e0a807f849f2d4313b9de563cffcec0d262844a783d51a47738d"
+checksum = "sha256:cef2c4f69393eea3937bf3deeca4622a048951b76f38f699ea1d706ef5f5d3b7"
 scopes   = ["main", "test"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.ktor:ktor-http-jvm:jar:@3.6.0",
-  "io.ktor:ktor-io-jvm:jar:@3.6.0",
-  "io.ktor:ktor-network-jvm:jar:@3.6.0",
+  "io.ktor:ktor-http-jvm:jar:@3.6.1",
+  "io.ktor:ktor-io-jvm:jar:@3.6.1",
+  "io.ktor:ktor-network-jvm:jar:@3.6.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
   "org.slf4j:slf4j-api:jar:@2.0.19",
@@ -408,28 +408,28 @@ deps = [
 
 [[artifact]]
 name     = "io.ktor:ktor-http-cio:jar:"
-version  = "3.6.0"
+version  = "3.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-path     = "ktor-http-cio-3.6.0.module"
+path     = "ktor-http-cio-3.6.1.module"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.ktor:ktor-http-cio-jvm:jar:@3.6.0",
-  "io.ktor:ktor-http:jar:@3.6.0",
-  "io.ktor:ktor-io:jar:@3.6.0",
+  "io.ktor:ktor-http-cio-jvm:jar:@3.6.1",
+  "io.ktor:ktor-http:jar:@3.6.1",
+  "io.ktor:ktor-io:jar:@3.6.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.11.0",
 ]
 
 [[artifact]]
 name     = "io.ktor:ktor-http-jvm:jar:"
-version  = "3.6.0"
+version  = "3.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:2a14cb160436b134c10793727aeed3055ae7014ff170c79ffbcd90b26dd90de2"
+checksum = "sha256:77bcd2f92be9c226c2434bcda04c95edc5d407fc3d1b3774a6401b8d95b7f671"
 scopes   = ["main", "test"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.ktor:ktor-utils-jvm:jar:@3.6.0",
+  "io.ktor:ktor-utils-jvm:jar:@3.6.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
   "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:@1.11.0",
@@ -438,14 +438,14 @@ deps = [
 
 [[artifact]]
 name     = "io.ktor:ktor-http:jar:"
-version  = "3.6.0"
+version  = "3.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-path     = "ktor-http-3.6.0.module"
+path     = "ktor-http-3.6.1.module"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.ktor:ktor-http-jvm:jar:@3.6.0",
-  "io.ktor:ktor-utils:jar:@3.6.0",
+  "io.ktor:ktor-http-jvm:jar:@3.6.1",
+  "io.ktor:ktor-utils:jar:@3.6.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.11.0",
   "org.jetbrains.kotlinx:kotlinx-serialization-core:jar:@1.11.0",
@@ -453,9 +453,9 @@ deps = [
 
 [[artifact]]
 name     = "io.ktor:ktor-io-jvm:jar:"
-version  = "3.6.0"
+version  = "3.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:7426ad1759833460507ee7065f17085410dc7b32081a1daee8c91cf6f40e257c"
+checksum = "sha256:94934d96b37c38f17dd7dfaaf9c50cd9c0255bea5ae60fd4cd2476838bd525d8"
 scopes   = ["main", "test"]
 licenses = ["Apache-2.0"]
 deps = [
@@ -467,13 +467,13 @@ deps = [
 
 [[artifact]]
 name     = "io.ktor:ktor-io:jar:"
-version  = "3.6.0"
+version  = "3.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-path     = "ktor-io-3.6.0.module"
+path     = "ktor-io-3.6.1.module"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.ktor:ktor-io-jvm:jar:@3.6.0",
+  "io.ktor:ktor-io-jvm:jar:@3.6.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.11.0",
   "org.jetbrains.kotlinx:kotlinx-io-core:jar:@0.9.1",
@@ -481,13 +481,13 @@ deps = [
 
 [[artifact]]
 name     = "io.ktor:ktor-network-jvm:jar:"
-version  = "3.6.0"
+version  = "3.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:746a751146d61865f51d6dd56b18e3e0fa68b36587561ee123ff7ce730d8c590"
+checksum = "sha256:3d1c8dba07e2d8939015fdb8436e2d28f3c7465e578ab938f9ff67cba5a4f535"
 scopes   = ["main", "test"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.ktor:ktor-utils-jvm:jar:@3.6.0",
+  "io.ktor:ktor-utils-jvm:jar:@3.6.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
   "org.slf4j:slf4j-api:jar:@2.0.19",
@@ -495,13 +495,13 @@ deps = [
 
 [[artifact]]
 name     = "io.ktor:ktor-network-tls-certificates-jvm:jar:"
-version  = "3.6.0"
+version  = "3.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:67bfadd70bdacbaa1fa1dcb848762b528db9f2681a830fb4cadaec035e80468b"
+checksum = "sha256:90a2d77d100fb14cebf9acc6938f0a504fdd977acdf82ac1f9993dc8037df242"
 scopes   = ["test"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.ktor:ktor-network-tls-jvm:jar:@3.6.0",
+  "io.ktor:ktor-network-tls-jvm:jar:@3.6.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
   "org.slf4j:slf4j-api:jar:@2.0.19",
@@ -509,15 +509,15 @@ deps = [
 
 [[artifact]]
 name     = "io.ktor:ktor-network-tls-jvm:jar:"
-version  = "3.6.0"
+version  = "3.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:09ed94b6783aacd3bb7d19ce606230153762bf68d399cbff0474299a00407a41"
+checksum = "sha256:6491dfadbcd02cbe05660b42d841305044ad1a92d31f229037d2fe32a23550f8"
 scopes   = ["test"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.ktor:ktor-http-jvm:jar:@3.6.0",
-  "io.ktor:ktor-network-jvm:jar:@3.6.0",
-  "io.ktor:ktor-utils-jvm:jar:@3.6.0",
+  "io.ktor:ktor-http-jvm:jar:@3.6.1",
+  "io.ktor:ktor-network-jvm:jar:@3.6.1",
+  "io.ktor:ktor-utils-jvm:jar:@3.6.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
   "org.slf4j:slf4j-api:jar:@2.0.19",
@@ -525,15 +525,15 @@ deps = [
 
 [[artifact]]
 name     = "io.ktor:ktor-openapi-schema-jvm:jar:"
-version  = "3.6.0"
+version  = "3.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:b5a290b3e9ceb9a1b485bcb4813d1dacec28f7e88353f317080b9dddb2a9c9d1"
+checksum = "sha256:6d543198b0454dbe6d6d671f2c6a5c41a4bbd377d73e17018add3a05ae45037f"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
   "com.charleskorn.kaml:kaml-jvm:jar:@0.79.0",
-  "io.ktor:ktor-http-jvm:jar:@3.6.0",
-  "io.ktor:ktor-io-jvm:jar:@3.6.0",
+  "io.ktor:ktor-http-jvm:jar:@3.6.1",
+  "io.ktor:ktor-io-jvm:jar:@3.6.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
   "org.jetbrains.kotlinx:kotlinx-datetime-jvm:jar:@0.8.0-0.6.x-compat",
@@ -544,15 +544,15 @@ deps = [
 
 [[artifact]]
 name     = "io.ktor:ktor-serialization-jackson-jvm:jar:"
-version  = "3.6.0"
+version  = "3.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:6d6d3adbba70c9f3ef2875cfc8eb9793263ddae2290374ecfd033ec1bee2011c"
+checksum = "sha256:bca4c83d6991ce6e1870dcd1d5e864726120d7b790930b0876d110aa244afcfc"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
   "com.fasterxml.jackson.core:jackson-databind:jar:@2.22.2",
   "com.fasterxml.jackson.module:jackson-module-kotlin:jar:@2.22.2",
-  "io.ktor:ktor-serialization-jvm:jar:@3.6.0",
+  "io.ktor:ktor-serialization-jvm:jar:@3.6.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
   "org.slf4j:slf4j-api:jar:@2.0.19",
@@ -560,13 +560,13 @@ deps = [
 
 [[artifact]]
 name     = "io.ktor:ktor-serialization-jvm:jar:"
-version  = "3.6.0"
+version  = "3.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:d67f46cf64f8c97a2e14d4d5c0c1a4be315c8bc128bcc58370c0716363c258db"
+checksum = "sha256:c453ea5c53456c10b0cca4c86477190885042cfd92c68596bd36e34832da4e57"
 scopes   = ["main", "test"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.ktor:ktor-websockets-jvm:jar:@3.6.0",
+  "io.ktor:ktor-websockets-jvm:jar:@3.6.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
   "org.slf4j:slf4j-api:jar:@2.0.19",
@@ -574,28 +574,28 @@ deps = [
 
 [[artifact]]
 name     = "io.ktor:ktor-serialization:jar:"
-version  = "3.6.0"
+version  = "3.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-path     = "ktor-serialization-3.6.0.module"
+path     = "ktor-serialization-3.6.1.module"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.ktor:ktor-serialization-jvm:jar:@3.6.0",
-  "io.ktor:ktor-websockets:jar:@3.6.0",
+  "io.ktor:ktor-serialization-jvm:jar:@3.6.1",
+  "io.ktor:ktor-websockets:jar:@3.6.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.11.0",
 ]
 
 [[artifact]]
 name     = "io.ktor:ktor-server-auth-api-key-jvm:jar:"
-version  = "3.6.0"
+version  = "3.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:abf0242d45ec333930d86bece02a20602c505506a78bdeb9563bf77a12d67682"
+checksum = "sha256:347d322b33adaad6dce55d1fa3ce2c18e1aba1f2b999df5c9ac92433031c12b9"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.ktor:ktor-server-auth-jvm:jar:@3.6.0",
-  "io.ktor:ktor-server-core-jvm:jar:@3.6.0",
+  "io.ktor:ktor-server-auth-jvm:jar:@3.6.1",
+  "io.ktor:ktor-server-core-jvm:jar:@3.6.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
   "org.slf4j:slf4j-api:jar:@2.0.19",
@@ -603,16 +603,16 @@ deps = [
 
 [[artifact]]
 name     = "io.ktor:ktor-server-auth-jvm:jar:"
-version  = "3.6.0"
+version  = "3.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:2a84859846efb7ffc22d0faf39022e0e6dab8930f581044a0dfe2e2f7a0433e5"
+checksum = "sha256:47dab95a14ee9afe5e5235d9dd150da16f2457a3e04c697eab7bc05f08cc7008"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.ktor:ktor-client-core-jvm:jar:@3.6.0",
-  "io.ktor:ktor-server-core-jvm:jar:@3.6.0",
-  "io.ktor:ktor-server-csrf-jvm:jar:@3.6.0",
-  "io.ktor:ktor-server-sessions-jvm:jar:@3.6.0",
+  "io.ktor:ktor-client-core-jvm:jar:@3.6.1",
+  "io.ktor:ktor-server-core-jvm:jar:@3.6.1",
+  "io.ktor:ktor-server-csrf-jvm:jar:@3.6.1",
+  "io.ktor:ktor-server-sessions-jvm:jar:@3.6.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
   "org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:jar:@1.11.0",
@@ -621,13 +621,13 @@ deps = [
 
 [[artifact]]
 name     = "io.ktor:ktor-server-call-logging-jvm:jar:"
-version  = "3.6.0"
+version  = "3.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:2c24bbca3cdb61e887d8850b9f227cc38192eabce9f130e54dfaecdb61609c30"
+checksum = "sha256:17eea8847b35416bad440bacfc35f69f3bcc22df47ed256d00821376081d7081"
 scopes   = ["test"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.ktor:ktor-server-core-jvm:jar:@3.6.0",
+  "io.ktor:ktor-server-core-jvm:jar:@3.6.1",
   "org.fusesource.jansi:jansi:jar:@2.4.3",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
@@ -637,14 +637,14 @@ deps = [
 
 [[artifact]]
 name     = "io.ktor:ktor-server-content-negotiation-jvm:jar:"
-version  = "3.6.0"
+version  = "3.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:b0a2d3b38abacd5783833d76e75b2961293e5835cacda221d765df89ed829413"
+checksum = "sha256:63e2acbad0421791d4301cc5eacd96f498c9bbc3e57793da1665a5ab52e156db"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.ktor:ktor-server-core-jvm:jar:@3.6.0",
-  "io.ktor:ktor-server-routing-openapi-jvm:jar:@3.6.0",
+  "io.ktor:ktor-server-core-jvm:jar:@3.6.1",
+  "io.ktor:ktor-server-routing-openapi-jvm:jar:@3.6.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
   "org.slf4j:slf4j-api:jar:@2.0.19",
@@ -652,19 +652,19 @@ deps = [
 
 [[artifact]]
 name     = "io.ktor:ktor-server-core-jvm:jar:"
-version  = "3.6.0"
+version  = "3.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:2838b5d739cb659947ab11b0b220581ad077da8adf62a0248e30c0cdbb93192e"
+checksum = "sha256:273c891aab65cb5548734209b28d7e4220b5369b012ec4a56057103ed83ec272"
 scopes   = ["main", "test"]
 licenses = ["Apache-2.0"]
 deps = [
   "com.typesafe:config:jar:@1.4.9",
-  "io.ktor:ktor-events-jvm:jar:@3.6.0",
-  "io.ktor:ktor-http-cio-jvm:jar:@3.6.0",
-  "io.ktor:ktor-http-jvm:jar:@3.6.0",
-  "io.ktor:ktor-serialization-jvm:jar:@3.6.0",
-  "io.ktor:ktor-utils-jvm:jar:@3.6.0",
-  "io.ktor:ktor-websockets-jvm:jar:@3.6.0",
+  "io.ktor:ktor-events-jvm:jar:@3.6.1",
+  "io.ktor:ktor-http-cio-jvm:jar:@3.6.1",
+  "io.ktor:ktor-http-jvm:jar:@3.6.1",
+  "io.ktor:ktor-serialization-jvm:jar:@3.6.1",
+  "io.ktor:ktor-utils-jvm:jar:@3.6.1",
+  "io.ktor:ktor-websockets-jvm:jar:@3.6.1",
   "org.jetbrains.kotlin:kotlin-reflect:jar:@2.3.21",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
@@ -673,19 +673,19 @@ deps = [
 
 [[artifact]]
 name     = "io.ktor:ktor-server-core:jar:"
-version  = "3.6.0"
+version  = "3.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-path     = "ktor-server-core-3.6.0.module"
+path     = "ktor-server-core-3.6.1.module"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.ktor:ktor-events:jar:@3.6.0",
-  "io.ktor:ktor-http-cio:jar:@3.6.0",
-  "io.ktor:ktor-http:jar:@3.6.0",
-  "io.ktor:ktor-serialization:jar:@3.6.0",
-  "io.ktor:ktor-server-core-jvm:jar:@3.6.0",
-  "io.ktor:ktor-utils:jar:@3.6.0",
-  "io.ktor:ktor-websockets:jar:@3.6.0",
+  "io.ktor:ktor-events:jar:@3.6.1",
+  "io.ktor:ktor-http-cio:jar:@3.6.1",
+  "io.ktor:ktor-http:jar:@3.6.1",
+  "io.ktor:ktor-serialization:jar:@3.6.1",
+  "io.ktor:ktor-server-core-jvm:jar:@3.6.1",
+  "io.ktor:ktor-utils:jar:@3.6.1",
+  "io.ktor:ktor-websockets:jar:@3.6.1",
   "org.jetbrains.kotlin:kotlin-reflect:jar:@2.3.21",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.11.0",
@@ -693,13 +693,13 @@ deps = [
 
 [[artifact]]
 name     = "io.ktor:ktor-server-csrf-jvm:jar:"
-version  = "3.6.0"
+version  = "3.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:046881c4366502131fe694e0d50602c03b0aa688881b71ef43dc04d14e1a0ee0"
+checksum = "sha256:36a2a61da203eec8bff46626c166ece773841c3b8fa1cc0039fa1a9ec8a82260"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.ktor:ktor-server-core-jvm:jar:@3.6.0",
+  "io.ktor:ktor-server-core-jvm:jar:@3.6.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
   "org.slf4j:slf4j-api:jar:@2.0.19",
@@ -713,7 +713,7 @@ checksum = "sha256:591cca1d18973066f0c3946ba0738d6e48d48594725d24c3320e83a982b7b
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.ktor:ktor-server-core-jvm:jar:@3.6.0",
+  "io.ktor:ktor-server-core-jvm:jar:@3.6.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
   "org.slf4j:slf4j-api:jar:@2.0.19",
@@ -727,7 +727,7 @@ path     = "ktor-server-di-3.4.0.module"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.ktor:ktor-server-core:jar:@3.6.0",
+  "io.ktor:ktor-server-core:jar:@3.6.1",
   "io.ktor:ktor-server-di-jvm:jar:@3.4.0",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.11.0",
@@ -735,13 +735,13 @@ deps = [
 
 [[artifact]]
 name     = "io.ktor:ktor-server-netty-jvm:jar:"
-version  = "3.6.0"
+version  = "3.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:44a4fc7d43e3794b618510d468d8c703049bf219a88adf4011cc878f9e7af413"
+checksum = "sha256:da3bdf81fc86f6129570132c04c2de565b963c8d748eaa8c42d295f79428bb49"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.ktor:ktor-server-core-jvm:jar:@3.6.0",
+  "io.ktor:ktor-server-core-jvm:jar:@3.6.1",
   "io.netty:netty-codec-http2:jar:@4.2.17.Final",
   "io.netty:netty-codec-http3:jar:@4.2.17.Final",
   "io.netty:netty-codec:jar:@4.2.17.Final",
@@ -755,17 +755,17 @@ deps = [
 
 [[artifact]]
 name     = "io.ktor:ktor-server-routing-openapi-jvm:jar:"
-version  = "3.6.0"
+version  = "3.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:dab7e4ab162a8b6128da624618af95ae698ddfbe76c23fd03d65c4910d6eea71"
+checksum = "sha256:b752c0dc144bd5921f7d6edf095fdbc7ecb0b1cf4e774f7e10a64e879c6b2d76"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
   "com.charleskorn.kaml:kaml-jvm:jar:@0.79.0",
-  "io.ktor:ktor-openapi-schema-jvm:jar:@3.6.0",
-  "io.ktor:ktor-server-auth-api-key-jvm:jar:@3.6.0",
-  "io.ktor:ktor-server-auth-jvm:jar:@3.6.0",
-  "io.ktor:ktor-server-core-jvm:jar:@3.6.0",
+  "io.ktor:ktor-openapi-schema-jvm:jar:@3.6.1",
+  "io.ktor:ktor-server-auth-api-key-jvm:jar:@3.6.1",
+  "io.ktor:ktor-server-auth-jvm:jar:@3.6.1",
+  "io.ktor:ktor-server-core-jvm:jar:@3.6.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
   "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:@1.11.0",
@@ -775,13 +775,13 @@ deps = [
 
 [[artifact]]
 name     = "io.ktor:ktor-server-sessions-jvm:jar:"
-version  = "3.6.0"
+version  = "3.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:f4be10d67f8180e73641c685fe200fb9d78878496ccb5d012ff33481bc128809"
+checksum = "sha256:ae04912ad16034c9fc83469cc2bdbe3b9b4d21c92e42deb835b95784e19f3594"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.ktor:ktor-server-core-jvm:jar:@3.6.0",
+  "io.ktor:ktor-server-core-jvm:jar:@3.6.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
   "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:@1.11.0",
@@ -791,21 +791,21 @@ deps = [
 
 [[artifact]]
 name     = "io.ktor:ktor-server-test-host-jvm:jar:"
-version  = "3.6.0"
+version  = "3.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:7230176e5ab404d0fc1d7026c5ce5fa320e26e749665e22bdbf045c53ce35cc2"
+checksum = "sha256:608ce4457e16c3344fdbca5e599ebbff67811f640837fb4e0346f659ac9f9b4b"
 scopes   = ["test"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.ktor:ktor-client-apache5-jvm:jar:@3.6.0",
-  "io.ktor:ktor-client-cio-jvm:jar:@3.6.0",
-  "io.ktor:ktor-client-core-jvm:jar:@3.6.0",
-  "io.ktor:ktor-network-tls-certificates-jvm:jar:@3.6.0",
-  "io.ktor:ktor-network-tls-jvm:jar:@3.6.0",
-  "io.ktor:ktor-server-call-logging-jvm:jar:@3.6.0",
-  "io.ktor:ktor-server-core-jvm:jar:@3.6.0",
-  "io.ktor:ktor-server-websockets-jvm:jar:@3.6.0",
-  "io.ktor:ktor-test-dispatcher-jvm:jar:@3.6.0",
+  "io.ktor:ktor-client-apache5-jvm:jar:@3.6.1",
+  "io.ktor:ktor-client-cio-jvm:jar:@3.6.1",
+  "io.ktor:ktor-client-core-jvm:jar:@3.6.1",
+  "io.ktor:ktor-network-tls-certificates-jvm:jar:@3.6.1",
+  "io.ktor:ktor-network-tls-jvm:jar:@3.6.1",
+  "io.ktor:ktor-server-call-logging-jvm:jar:@3.6.1",
+  "io.ktor:ktor-server-core-jvm:jar:@3.6.1",
+  "io.ktor:ktor-server-websockets-jvm:jar:@3.6.1",
+  "io.ktor:ktor-test-dispatcher-jvm:jar:@3.6.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
   "org.jetbrains.kotlinx:kotlinx-coroutines-debug:jar:@1.11.0",
@@ -814,15 +814,15 @@ deps = [
 
 [[artifact]]
 name     = "io.ktor:ktor-server-websockets-jvm:jar:"
-version  = "3.6.0"
+version  = "3.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:228336824cde03f02374b0a2d23a243470051d58d11cf9d235ebdcf126ef22d9"
+checksum = "sha256:58d843a1dde40f39082446a95aba014c2afe6970f91670cb57ea40a18f61d9eb"
 scopes   = ["test"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.ktor:ktor-server-core-jvm:jar:@3.6.0",
-  "io.ktor:ktor-websocket-serialization-jvm:jar:@3.6.0",
-  "io.ktor:ktor-websockets-jvm:jar:@3.6.0",
+  "io.ktor:ktor-server-core-jvm:jar:@3.6.1",
+  "io.ktor:ktor-websocket-serialization-jvm:jar:@3.6.1",
+  "io.ktor:ktor-websockets-jvm:jar:@3.6.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
   "org.slf4j:slf4j-api:jar:@2.0.19",
@@ -830,13 +830,13 @@ deps = [
 
 [[artifact]]
 name     = "io.ktor:ktor-sse-jvm:jar:"
-version  = "3.6.0"
+version  = "3.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:9fcb5074b74d14b9f18ace4ee9acd6263176ae01b4e8e5c8f72b6aa978c279ea"
+checksum = "sha256:365f54d957081de3a7c4d17937a9ece27ad8cc3140ae35a5e8159ea019508445"
 scopes   = ["main", "test"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.ktor:ktor-utils-jvm:jar:@3.6.0",
+  "io.ktor:ktor-utils-jvm:jar:@3.6.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
   "org.slf4j:slf4j-api:jar:@2.0.19",
@@ -844,9 +844,9 @@ deps = [
 
 [[artifact]]
 name     = "io.ktor:ktor-test-dispatcher-jvm:jar:"
-version  = "3.6.0"
+version  = "3.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:fcb6bfeaae8ee63295012bc9188777af8146314b6505dc72bb942aca758e08b4"
+checksum = "sha256:9beb3ca21153b8057f367ff8ac2aa6502e942360bef21ec6b5578abd83e363a5"
 scopes   = ["test"]
 licenses = ["Apache-2.0"]
 deps = [
@@ -858,13 +858,13 @@ deps = [
 
 [[artifact]]
 name     = "io.ktor:ktor-utils-jvm:jar:"
-version  = "3.6.0"
+version  = "3.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:05698e23c0539c7042676a98557e3358e77e19efa9fa4fc2145f20ad8721aefc"
+checksum = "sha256:0df228f4d134facd49218a5a309fb20a16ff53759dbcdf52714b7129572beafc"
 scopes   = ["main", "test"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.ktor:ktor-io-jvm:jar:@3.6.0",
+  "io.ktor:ktor-io-jvm:jar:@3.6.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
   "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:jar:@1.11.0",
@@ -873,14 +873,14 @@ deps = [
 
 [[artifact]]
 name     = "io.ktor:ktor-utils:jar:"
-version  = "3.6.0"
+version  = "3.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-path     = "ktor-utils-3.6.0.module"
+path     = "ktor-utils-3.6.1.module"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.ktor:ktor-io:jar:@3.6.0",
-  "io.ktor:ktor-utils-jvm:jar:@3.6.0",
+  "io.ktor:ktor-io:jar:@3.6.1",
+  "io.ktor:ktor-utils-jvm:jar:@3.6.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.11.0",
   "org.jetbrains.kotlinx:kotlinx-serialization-core:jar:@1.11.0",
@@ -888,13 +888,13 @@ deps = [
 
 [[artifact]]
 name     = "io.ktor:ktor-websocket-serialization-jvm:jar:"
-version  = "3.6.0"
+version  = "3.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:c87fe370c17868dc8c101947452bf8a8622363cf4d83a342334666bb46fe627b"
+checksum = "sha256:d8dd32ed720cd6f940ef5df74a9f081a42c6c537e6b0a3762bc79f68730d868e"
 scopes   = ["main", "test"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.ktor:ktor-serialization-jvm:jar:@3.6.0",
+  "io.ktor:ktor-serialization-jvm:jar:@3.6.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
   "org.slf4j:slf4j-api:jar:@2.0.19",
@@ -902,14 +902,14 @@ deps = [
 
 [[artifact]]
 name     = "io.ktor:ktor-websockets-jvm:jar:"
-version  = "3.6.0"
+version  = "3.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:3ef8b5d544dc7f9bd041a245bb8c2ff6647d0fd1e111a65b7be54977476a5464"
+checksum = "sha256:58a3b887d3f220bfcf1e6405386409dbc8eccc5072ff9bb1e75c70cf6388fb2d"
 scopes   = ["main", "test"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.ktor:ktor-http-jvm:jar:@3.6.0",
-  "io.ktor:ktor-utils-jvm:jar:@3.6.0",
+  "io.ktor:ktor-http-jvm:jar:@3.6.1",
+  "io.ktor:ktor-utils-jvm:jar:@3.6.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:jar:@1.11.0",
   "org.slf4j:slf4j-api:jar:@2.0.19",
@@ -917,15 +917,15 @@ deps = [
 
 [[artifact]]
 name     = "io.ktor:ktor-websockets:jar:"
-version  = "3.6.0"
+version  = "3.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-path     = "ktor-websockets-3.6.0.module"
+path     = "ktor-websockets-3.6.1.module"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.ktor:ktor-http:jar:@3.6.0",
-  "io.ktor:ktor-utils:jar:@3.6.0",
-  "io.ktor:ktor-websockets-jvm:jar:@3.6.0",
+  "io.ktor:ktor-http:jar:@3.6.1",
+  "io.ktor:ktor-utils:jar:@3.6.1",
+  "io.ktor:ktor-websockets-jvm:jar:@3.6.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
   "org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:@1.11.0",
 ]
@@ -1383,9 +1383,9 @@ licenses = ["Apache-2.0"]
 
 [[artifact]]
 name     = "org.jetbrains.exposed:exposed-core:jar:"
-version  = "1.6.0"
+version  = "1.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:7a8dbee347d3577f1e4f204e940f5f3e31a6fe93395af203b27263ff99fd8ae3"
+checksum = "sha256:8f7366315b2cca5a92f72c1011583b74d4926beb2598ae2d50ce8d1a62338919"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
@@ -1398,26 +1398,26 @@ deps = [
 
 [[artifact]]
 name     = "org.jetbrains.exposed:exposed-dao:jar:"
-version  = "1.6.0"
+version  = "1.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:825dbd2104dd240ed3c83e1a7556d25ca3eb6ef10c774bc8a172222344e026af"
+checksum = "sha256:006384523d049fae44b7e102e165987114b4fb3a4700710f18b7937f58d81398"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "org.jetbrains.exposed:exposed-core:jar:@1.6.0",
-  "org.jetbrains.exposed:exposed-jdbc:jar:@1.6.0",
+  "org.jetbrains.exposed:exposed-core:jar:@1.6.1",
+  "org.jetbrains.exposed:exposed-jdbc:jar:@1.6.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
 ]
 
 [[artifact]]
 name     = "org.jetbrains.exposed:exposed-jdbc:jar:"
-version  = "1.6.0"
+version  = "1.6.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:4e364fcec09afa36a81ec2b3602bb317969eede659ed573a36e4d3fdb45275f5"
+checksum = "sha256:9fa98df52849bdd6174a47f9ee72e794a0a93026d03062f94ee0a926ae516e08"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "org.jetbrains.exposed:exposed-core:jar:@1.6.0",
+  "org.jetbrains.exposed:exposed-core:jar:@1.6.1",
   "org.jetbrains.kotlin:kotlin-stdlib:jar:@2.3.21",
 ]
 
@@ -1751,7 +1751,7 @@ licenses = ["MIT"]
 
 [[plugin]]
 coordinate = "cc.jumpkick.guards:monorepo"
-version    = "0.20.0"
+version    = "0.50.2"
 
 [[module]]
 path    = "."

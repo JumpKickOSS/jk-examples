@@ -1,7 +1,8 @@
 # The production shape on one machine: the image `jk image` builds, and PostgreSQL 18.
 #   jk image                               # builds kestrel-vine-hotels:0.1.0 into docker or podman
 #   docker compose --profile app up        # or: podman compose --profile app up
-# `docker compose up db` alone gives `jk dev` its database (dev/db.sh does the same without compose).
+# `jk dev` runs `docker compose up db` as its database sidecar; Ctrl-C stops it, and the next
+# session reattaches to a container a killed one left behind.
 services:
   db:
     image: docker.io/library/postgres:18-alpine

@@ -10,7 +10,7 @@ assembly = true
 
 # The Micronaut platform BOM at an exact release; starters below are versionless under it.
 [micronaut]
-version = "5.2.3"
+version = "5.2.5"
 # Optional deploy optimization:
 # aot = true
 # aot-runtime = "jit"   # [native] switches it to "native" for `jk native`

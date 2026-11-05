@@ -1,10 +1,10 @@
 version = 1
-generated-by = "jk 0.20.0"
-generated-by-build = "8d791a6605a5"
-generated-by-build-time = "2026-10-22T21:20:28Z"
+generated-by = "jk 0.50.2"
+generated-by-build = "cb17db83b069"
+generated-by-build-time = "2026-11-04T22:33:39Z"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.12.0"
-manifests-sha256 = "c657a34727a6ad9630ed99ebe9a23cb107eb531cd310f371e2f9bf87dde624ed"
+manifests-sha256 = "10808b2ef802e96d14b560bbd35da1aa107b61b4049d179efb852ab357f15610"
 project-id = "872c331a8fe262b7ef7ffcb8b0462733"
 
 [jdk]
@@ -13,9 +13,9 @@ suggested-version = "25.0.2"
 
 [[artifact]]
 name     = "com.google.code.gson:gson:jar:"
-version  = "2.14.0"
+version  = "2.15.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:2cbd119bf1961c28788310963dc80ba65f58cdeec1dd139c8bdb1240faa2c36f"
+checksum = "sha256:96d3dd843dc2911de01cdabcd50064cb9e860353102a0a78c96fd833d396fc7d"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [

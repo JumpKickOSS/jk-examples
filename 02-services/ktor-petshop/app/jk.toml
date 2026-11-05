@@ -14,10 +14,10 @@ aot-cache = true
 ktor-petshop-domain = { workspace = true }
 
 # Ktor — one release across every coordinate
-ktor-server-core = "io.ktor:ktor-server-core-jvm:3.6.0"
-ktor-server-netty = "io.ktor:ktor-server-netty-jvm:3.6.0"
-ktor-server-content-negotiation = "io.ktor:ktor-server-content-negotiation-jvm:3.6.0"
-ktor-serialization-jackson = "io.ktor:ktor-serialization-jackson-jvm:3.6.0"
+ktor-server-core = "io.ktor:ktor-server-core-jvm:3.6.1"
+ktor-server-netty = "io.ktor:ktor-server-netty-jvm:3.6.1"
+ktor-server-content-negotiation = "io.ktor:ktor-server-content-negotiation-jvm:3.6.1"
+ktor-serialization-jackson = "io.ktor:ktor-serialization-jackson-jvm:3.6.1"
 
 # Koin
 koin-core = "4.2.2"
@@ -25,15 +25,15 @@ koin-ktor = "4.2.2"
 koin-logger-slf4j = "4.2.2"
 
 # Exposed + H2
-exposed-core = "1.6.0"
-exposed-dao = "1.6.0"
-exposed-jdbc = "1.6.0"
+exposed-core = "1.6.1"
+exposed-dao = "1.6.1"
+exposed-jdbc = "1.6.1"
 h2 = "2.5.252"
 
-logback-classic = "1.6.5"
+logback-classic = "1.6.6"
 
 [test-dependencies]
 junit-jupiter = "6.1.3"
 junit-platform-launcher = "6.1.3"
-ktor-server-test-host = "io.ktor:ktor-server-test-host-jvm:3.6.0"
+ktor-server-test-host = "io.ktor:ktor-server-test-host-jvm:3.6.1"
 koin-test = "4.2.2"

@@ -1,7 +1,7 @@
 # House rules: the Spring pack, plus a package-level @NullMarked ratchet so NullAway never
 # silently skips a package.
 [guards]
-extends = ["cc.jumpkick.guards:spring:0.20.0"]
+extends = ["cc.jumpkick.guards:spring:0.50.2"]
 
 [guards.null-marked]
 kind    = "annotate"

@@ -1378,7 +1378,7 @@ deps = [
 
 [[plugin]]
 coordinate = "cc.jumpkick.guards:spring"
-version    = "0.20.0"
+version    = "0.50.2"
 
 [[plugin]]
 coordinate = "cc.jumpkick:jk-hibernate"

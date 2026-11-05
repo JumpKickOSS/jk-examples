@@ -5,7 +5,7 @@ description = "The service: a REST API under /api, and the SPA bundle served fro
 main = "com.example.Application"
 
 [spring-boot]
-version = "4.1.1"
+version = "4.1.2"
 
 # `git.properties` and Boot's `META-INF/build-info.properties` in the jar: the commit, branch and
 # version the build came from.

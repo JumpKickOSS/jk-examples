@@ -4,7 +4,7 @@ generated-by-build = "cb17db83b069"
 generated-by-build-time = "2026-11-04T22:33:39Z"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.15"
-manifests-sha256 = "d609366b76d0a40a9d9db3b72ac9b6790aa8146f9fb0bb23c83656947181aeee"
+manifests-sha256 = "2f631616039d231c77500a7cbc44cffcd45f7643fe3779c1118a0a865cd3adf6"
 project-id = "fcd7830ee424b2489749a2acea6c8d38"
 
 [jdk]
@@ -117,23 +117,23 @@ version    = "0.50.2"
 
 [[tool]]
 coordinate = "com.jetbrains.intellij.idea:ideaIC"
-version    = "262.10968.63"
+version    = "262.11879.100"
 type       = "zip"
-checksum   = "sha256:4d25ba9308dffc84903e805833aa6a2652effc17e54b126189610c140c2f30b1"
+checksum   = "sha256:f8039ee1c0e9a3f9789f44f5ced685f9615d27c40b9e2885868c68e24145f96a"
 
 [[tool]]
 coordinate = "com.jetbrains.intellij.platform:test-framework"
-version    = "262.10968.63"
+version    = "262.11879.100"
 checksum   = "sha256:9fba2e627ca532d2d1b37930493e6012c02e24f85ab51baae5584f10027becc5"
 
 [[tool]]
 coordinate = "com.jetbrains.intellij.platform:test-framework-common"
-version    = "262.10968.63"
+version    = "262.11879.100"
 checksum   = "sha256:86678b858cddad792791f1f80d6308b07e342b9ee3cd584d298a545d100e5787"
 
 [[tool]]
 coordinate = "com.jetbrains.intellij.platform:test-framework-core"
-version    = "262.10968.63"
+version    = "262.11879.100"
 checksum   = "sha256:2680da5da14830adf79fece75a66881e5e3e62ae414cd70b2f84b8a81e73dbcc"
 
 [[tool]]

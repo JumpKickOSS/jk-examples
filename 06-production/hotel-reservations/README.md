@@ -21,8 +21,9 @@ on, in one application small enough to read in an afternoon.
 
 ## Setup
 
-You need JumpKick and, for the database, Docker or Podman. jk installs the JDK and Node.js the
-lockfile pins; nothing else.
+You need JumpKick and, for the database, Docker with Compose (or Podman with `docker` pointing at
+it, as `podman-docker` or Podman Desktop sets up). jk installs the JDK and Node.js the lockfile
+pins; nothing else.
 
 ```sh
 # macOS / Linux
@@ -47,7 +48,7 @@ ryuk.disabled=true
 ## Run it
 
 ```sh
-jk dev            # PostgreSQL (dev/db.sh), the app on :8080, Angular on :4200 with /api proxied
+jk dev            # PostgreSQL (docker compose up db), the app on :8080, Angular on :4200 with /api proxied
 ```
 
 Open <http://localhost:4200>. Edit a Java file and jk restarts the app; edit a component and the
@@ -75,7 +76,7 @@ hotel-reservations/
   jk.toml                   # workspace: modules, Boot's BOM, shared versions, dev database, graph aliases
   jk-guards.toml            # the architecture, as rules the build enforces
   AGENTS.md                 # how a coding agent works here (jk's section + this project's rules)
-  compose.yaml  dev/db.sh   # PostgreSQL 18 for dev; the image + database for "production"
+  compose.yaml              # PostgreSQL 18 for dev; the image + database for "production"
   backend/
     contract/   # DTO records + Bean Validation — the HTTP contract, nothing else
     core/       # the domain: Money, StayDates, PricingPolicy, ReservationStatus — plain Java

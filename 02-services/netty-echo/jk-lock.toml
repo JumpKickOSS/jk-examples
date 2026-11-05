@@ -1,10 +1,10 @@
 version = 1
-generated-by = "jk 0.20.0"
-generated-by-build = "8d791a6605a5"
-generated-by-build-time = "2026-10-22T21:20:28Z"
+generated-by = "jk 0.50.2"
+generated-by-build = "cb17db83b069"
+generated-by-build-time = "2026-11-04T22:33:39Z"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.12.0"
-manifests-sha256 = "0bdc1d9cd9d98f8a3a8e8cb8173ca64fa15be3333d4d6d1d65566d4ecd62c000"
+manifests-sha256 = "2a7d3d888c9a9d468ad610d06257548bc0d062abd1d126d0a7b83618bce710cd"
 project-id = "669fa9c44c0f506dcca7ea4a09957cea"
 
 [jdk]
@@ -13,874 +13,874 @@ suggested-version = "25.0.2"
 
 [[artifact]]
 name     = "io.netty:netty-all:jar:"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:4409956545582c735c42ba7cb4a0619a5db4f041d96fad99e31ad13671134fcd"
+checksum = "sha256:6e7bf785132e387c74685f02fe8aa207e523a807d6c12c43b9d6c37febd195f6"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.19.Final",
-  "io.netty:netty-codec-base:jar:@4.2.19.Final",
-  "io.netty:netty-codec-classes-quic:jar:@4.2.19.Final",
-  "io.netty:netty-codec-compression:jar:@4.2.19.Final",
-  "io.netty:netty-codec-dns:jar:@4.2.19.Final",
-  "io.netty:netty-codec-haproxy:jar:@4.2.19.Final",
-  "io.netty:netty-codec-http2:jar:@4.2.19.Final",
-  "io.netty:netty-codec-http3:jar:@4.2.19.Final",
-  "io.netty:netty-codec-http:jar:@4.2.19.Final",
-  "io.netty:netty-codec-marshalling:jar:@4.2.19.Final",
-  "io.netty:netty-codec-memcache:jar:@4.2.19.Final",
-  "io.netty:netty-codec-mqtt:jar:@4.2.19.Final",
-  "io.netty:netty-codec-native-quic:jar:linux-aarch_64@4.2.19.Final",
-  "io.netty:netty-codec-native-quic:jar:linux-x86_64@4.2.19.Final",
-  "io.netty:netty-codec-native-quic:jar:osx-aarch_64@4.2.19.Final",
-  "io.netty:netty-codec-native-quic:jar:osx-x86_64@4.2.19.Final",
-  "io.netty:netty-codec-native-quic:jar:windows-x86_64@4.2.19.Final",
-  "io.netty:netty-codec-protobuf:jar:@4.2.19.Final",
-  "io.netty:netty-codec-redis:jar:@4.2.19.Final",
-  "io.netty:netty-codec-smtp:jar:@4.2.19.Final",
-  "io.netty:netty-codec-socks:jar:@4.2.19.Final",
-  "io.netty:netty-codec-stomp:jar:@4.2.19.Final",
-  "io.netty:netty-codec-xml:jar:@4.2.19.Final",
-  "io.netty:netty-codec:jar:@4.2.19.Final",
-  "io.netty:netty-common:jar:@4.2.19.Final",
-  "io.netty:netty-handler-proxy:jar:@4.2.19.Final",
-  "io.netty:netty-handler-ssl-ocsp:jar:@4.2.19.Final",
-  "io.netty:netty-handler:jar:@4.2.19.Final",
-  "io.netty:netty-resolver-dns-classes-macos:jar:@4.2.19.Final",
-  "io.netty:netty-resolver-dns-native-macos:jar:osx-aarch_64@4.2.19.Final",
-  "io.netty:netty-resolver-dns-native-macos:jar:osx-x86_64@4.2.19.Final",
-  "io.netty:netty-resolver-dns:jar:@4.2.19.Final",
-  "io.netty:netty-resolver:jar:@4.2.19.Final",
-  "io.netty:netty-transport-classes-epoll:jar:@4.2.19.Final",
-  "io.netty:netty-transport-classes-io_uring:jar:@4.2.19.Final",
-  "io.netty:netty-transport-classes-kqueue:jar:@4.2.19.Final",
-  "io.netty:netty-transport-native-epoll:jar:linux-aarch_64@4.2.19.Final",
-  "io.netty:netty-transport-native-epoll:jar:linux-riscv64@4.2.19.Final",
-  "io.netty:netty-transport-native-epoll:jar:linux-x86_64@4.2.19.Final",
-  "io.netty:netty-transport-native-io_uring:jar:linux-aarch_64@4.2.19.Final",
-  "io.netty:netty-transport-native-io_uring:jar:linux-riscv64@4.2.19.Final",
-  "io.netty:netty-transport-native-io_uring:jar:linux-x86_64@4.2.19.Final",
-  "io.netty:netty-transport-native-kqueue:jar:osx-aarch_64@4.2.19.Final",
-  "io.netty:netty-transport-native-kqueue:jar:osx-x86_64@4.2.19.Final",
-  "io.netty:netty-transport-native-unix-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport-rxtx:jar:@4.2.19.Final",
-  "io.netty:netty-transport-sctp:jar:@4.2.19.Final",
-  "io.netty:netty-transport-udt:jar:@4.2.19.Final",
-  "io.netty:netty-transport:jar:@4.2.19.Final",
+  "io.netty:netty-buffer:jar:@4.2.20.Final",
+  "io.netty:netty-codec-base:jar:@4.2.20.Final",
+  "io.netty:netty-codec-classes-quic:jar:@4.2.20.Final",
+  "io.netty:netty-codec-compression:jar:@4.2.20.Final",
+  "io.netty:netty-codec-dns:jar:@4.2.20.Final",
+  "io.netty:netty-codec-haproxy:jar:@4.2.20.Final",
+  "io.netty:netty-codec-http2:jar:@4.2.20.Final",
+  "io.netty:netty-codec-http3:jar:@4.2.20.Final",
+  "io.netty:netty-codec-http:jar:@4.2.20.Final",
+  "io.netty:netty-codec-marshalling:jar:@4.2.20.Final",
+  "io.netty:netty-codec-memcache:jar:@4.2.20.Final",
+  "io.netty:netty-codec-mqtt:jar:@4.2.20.Final",
+  "io.netty:netty-codec-native-quic:jar:linux-aarch_64@4.2.20.Final",
+  "io.netty:netty-codec-native-quic:jar:linux-x86_64@4.2.20.Final",
+  "io.netty:netty-codec-native-quic:jar:osx-aarch_64@4.2.20.Final",
+  "io.netty:netty-codec-native-quic:jar:osx-x86_64@4.2.20.Final",
+  "io.netty:netty-codec-native-quic:jar:windows-x86_64@4.2.20.Final",
+  "io.netty:netty-codec-protobuf:jar:@4.2.20.Final",
+  "io.netty:netty-codec-redis:jar:@4.2.20.Final",
+  "io.netty:netty-codec-smtp:jar:@4.2.20.Final",
+  "io.netty:netty-codec-socks:jar:@4.2.20.Final",
+  "io.netty:netty-codec-stomp:jar:@4.2.20.Final",
+  "io.netty:netty-codec-xml:jar:@4.2.20.Final",
+  "io.netty:netty-codec:jar:@4.2.20.Final",
+  "io.netty:netty-common:jar:@4.2.20.Final",
+  "io.netty:netty-handler-proxy:jar:@4.2.20.Final",
+  "io.netty:netty-handler-ssl-ocsp:jar:@4.2.20.Final",
+  "io.netty:netty-handler:jar:@4.2.20.Final",
+  "io.netty:netty-resolver-dns-classes-macos:jar:@4.2.20.Final",
+  "io.netty:netty-resolver-dns-native-macos:jar:osx-aarch_64@4.2.20.Final",
+  "io.netty:netty-resolver-dns-native-macos:jar:osx-x86_64@4.2.20.Final",
+  "io.netty:netty-resolver-dns:jar:@4.2.20.Final",
+  "io.netty:netty-resolver:jar:@4.2.20.Final",
+  "io.netty:netty-transport-classes-epoll:jar:@4.2.20.Final",
+  "io.netty:netty-transport-classes-io_uring:jar:@4.2.20.Final",
+  "io.netty:netty-transport-classes-kqueue:jar:@4.2.20.Final",
+  "io.netty:netty-transport-native-epoll:jar:linux-aarch_64@4.2.20.Final",
+  "io.netty:netty-transport-native-epoll:jar:linux-riscv64@4.2.20.Final",
+  "io.netty:netty-transport-native-epoll:jar:linux-x86_64@4.2.20.Final",
+  "io.netty:netty-transport-native-io_uring:jar:linux-aarch_64@4.2.20.Final",
+  "io.netty:netty-transport-native-io_uring:jar:linux-riscv64@4.2.20.Final",
+  "io.netty:netty-transport-native-io_uring:jar:linux-x86_64@4.2.20.Final",
+  "io.netty:netty-transport-native-kqueue:jar:osx-aarch_64@4.2.20.Final",
+  "io.netty:netty-transport-native-kqueue:jar:osx-x86_64@4.2.20.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport-rxtx:jar:@4.2.20.Final",
+  "io.netty:netty-transport-sctp:jar:@4.2.20.Final",
+  "io.netty:netty-transport-udt:jar:@4.2.20.Final",
+  "io.netty:netty-transport:jar:@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-buffer:jar:"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:863f09b46cfe7d83872c9499086b9681cd9878c30a319d9f1f3a681bbfb0b12f"
+checksum = "sha256:794136fc6be78e44a286c2b1420a182e135c6d06eb8c397030c1551ee50acccd"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-common:jar:@4.2.19.Final",
+  "io.netty:netty-common:jar:@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-codec-base:jar:"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:5702c8097cc81e939dd12e5b39ac2e81f83737c320f6f4d88553577842f9ceb6"
+checksum = "sha256:5a66da26b86d7eecedd9e0d8fe0e22ef1733bbf873e476cb9b860afbed22210c"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.19.Final",
-  "io.netty:netty-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport:jar:@4.2.19.Final",
+  "io.netty:netty-buffer:jar:@4.2.20.Final",
+  "io.netty:netty-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport:jar:@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-codec-classes-quic:jar:"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:c6f5765ac2cb37ce23156fce40629ff0221b80e53cfa68af21bad08def370098"
+checksum = "sha256:eb558b7906be9f37cfff0ef71acb0865aa3b7cf2e52ba0a646e6e79d487d1711"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.19.Final",
-  "io.netty:netty-codec-base:jar:@4.2.19.Final",
-  "io.netty:netty-common:jar:@4.2.19.Final",
-  "io.netty:netty-handler:jar:@4.2.19.Final",
-  "io.netty:netty-transport:jar:@4.2.19.Final",
+  "io.netty:netty-buffer:jar:@4.2.20.Final",
+  "io.netty:netty-codec-base:jar:@4.2.20.Final",
+  "io.netty:netty-common:jar:@4.2.20.Final",
+  "io.netty:netty-handler:jar:@4.2.20.Final",
+  "io.netty:netty-transport:jar:@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-codec-compression:jar:"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:8935c51c7217780ae56d178c938b50ea5729b1e088cf3c2568674e331665554c"
+checksum = "sha256:7ebae4ac80c01e2d279d0e50d377bcdaf0cf8f2f65797e0578afc810a66ab57d"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.19.Final",
-  "io.netty:netty-codec-base:jar:@4.2.19.Final",
-  "io.netty:netty-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport:jar:@4.2.19.Final",
+  "io.netty:netty-buffer:jar:@4.2.20.Final",
+  "io.netty:netty-codec-base:jar:@4.2.20.Final",
+  "io.netty:netty-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport:jar:@4.2.20.Final",
 ]
 excluded-by = [
-  "io.netty:netty-buffer <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-common <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-transport <- io.netty:netty-all@4.2.19.Final",
+  "io.netty:netty-buffer <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-common <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-codec-dns:jar:"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:d8177c55f0864807f6ab02d0af7c72a6b88dd6bfd1a39f3a17e5954e0942fcad"
+checksum = "sha256:8296127e74eb871eea6e17520ad5d12aec37700252a61165057b28df6e5f9499"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.19.Final",
-  "io.netty:netty-codec-base:jar:@4.2.19.Final",
-  "io.netty:netty-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport:jar:@4.2.19.Final",
+  "io.netty:netty-buffer:jar:@4.2.20.Final",
+  "io.netty:netty-codec-base:jar:@4.2.20.Final",
+  "io.netty:netty-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport:jar:@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-codec-haproxy:jar:"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:a9050a26e34019c204ab40e6ae44e555433c7f1164a8990ebbfe3d8ed3f917dc"
+checksum = "sha256:7c39ebbb12a0669756957e84f9a8c60ce4572b88eb739a52b5e87df099a0891b"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.19.Final",
-  "io.netty:netty-codec-base:jar:@4.2.19.Final",
-  "io.netty:netty-transport:jar:@4.2.19.Final",
+  "io.netty:netty-buffer:jar:@4.2.20.Final",
+  "io.netty:netty-codec-base:jar:@4.2.20.Final",
+  "io.netty:netty-transport:jar:@4.2.20.Final",
 ]
 excluded-by = [
-  "io.netty:netty-buffer <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-transport <- io.netty:netty-all@4.2.19.Final",
+  "io.netty:netty-buffer <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-codec-http2:jar:"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:f45756b12a75b907e98cd0158dc947308ca463cd3d27b9035d11a025a4fdbc4d"
+checksum = "sha256:168790c8d10d2e7cc53fa08906162e3d6c23b4528e7d062eea328d4a281484c6"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.19.Final",
-  "io.netty:netty-codec-base:jar:@4.2.19.Final",
-  "io.netty:netty-codec-http:jar:@4.2.19.Final",
-  "io.netty:netty-common:jar:@4.2.19.Final",
-  "io.netty:netty-handler:jar:@4.2.19.Final",
-  "io.netty:netty-transport:jar:@4.2.19.Final",
+  "io.netty:netty-buffer:jar:@4.2.20.Final",
+  "io.netty:netty-codec-base:jar:@4.2.20.Final",
+  "io.netty:netty-codec-http:jar:@4.2.20.Final",
+  "io.netty:netty-common:jar:@4.2.20.Final",
+  "io.netty:netty-handler:jar:@4.2.20.Final",
+  "io.netty:netty-transport:jar:@4.2.20.Final",
 ]
 excluded-by = [
-  "io.netty:netty-buffer <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-codec-http <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-common <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-handler <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-transport <- io.netty:netty-all@4.2.19.Final",
+  "io.netty:netty-buffer <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-codec-http <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-common <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-handler <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-codec-http3:jar:"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:a13018427735554428a409c27ae679c44614b31fd402837caa7530a9fd688a26"
+checksum = "sha256:9d3698b9787ddb46226c3e3e4d1d51415503b18eb3be9da19b4918b4cb6e63bf"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.19.Final",
-  "io.netty:netty-codec-base:jar:@4.2.19.Final",
-  "io.netty:netty-codec-classes-quic:jar:@4.2.19.Final",
-  "io.netty:netty-codec-http:jar:@4.2.19.Final",
-  "io.netty:netty-codec-native-quic:jar:linux-aarch_64@4.2.19.Final",
-  "io.netty:netty-codec-native-quic:jar:linux-x86_64@4.2.19.Final",
-  "io.netty:netty-codec-native-quic:jar:osx-aarch_64@4.2.19.Final",
-  "io.netty:netty-codec-native-quic:jar:osx-x86_64@4.2.19.Final",
-  "io.netty:netty-codec-native-quic:jar:windows-x86_64@4.2.19.Final",
-  "io.netty:netty-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport:jar:@4.2.19.Final",
+  "io.netty:netty-buffer:jar:@4.2.20.Final",
+  "io.netty:netty-codec-base:jar:@4.2.20.Final",
+  "io.netty:netty-codec-classes-quic:jar:@4.2.20.Final",
+  "io.netty:netty-codec-http:jar:@4.2.20.Final",
+  "io.netty:netty-codec-native-quic:jar:linux-aarch_64@4.2.20.Final",
+  "io.netty:netty-codec-native-quic:jar:linux-x86_64@4.2.20.Final",
+  "io.netty:netty-codec-native-quic:jar:osx-aarch_64@4.2.20.Final",
+  "io.netty:netty-codec-native-quic:jar:osx-x86_64@4.2.20.Final",
+  "io.netty:netty-codec-native-quic:jar:windows-x86_64@4.2.20.Final",
+  "io.netty:netty-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport:jar:@4.2.20.Final",
 ]
 excluded-by = [
-  "io.netty:netty-buffer <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-codec-classes-quic <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-codec-http <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-codec-native-quic <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-codec-native-quic <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-codec-native-quic <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-codec-native-quic <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-codec-native-quic <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-common <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-transport <- io.netty:netty-all@4.2.19.Final",
+  "io.netty:netty-buffer <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-codec-classes-quic <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-codec-http <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-codec-native-quic <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-codec-native-quic <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-codec-native-quic <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-codec-native-quic <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-codec-native-quic <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-common <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-codec-http:jar:"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:7c28809a4f527746fbce2369f5ac5d5fcef45cfe9da21aa3dd9d3f6bdf00cbe0"
+checksum = "sha256:d08b0d473c48c61ebb2bc4d145111fa1777832aee4d2be1024891e904e36eaf5"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.19.Final",
-  "io.netty:netty-codec-base:jar:@4.2.19.Final",
-  "io.netty:netty-codec-compression:jar:@4.2.19.Final",
-  "io.netty:netty-common:jar:@4.2.19.Final",
-  "io.netty:netty-handler:jar:@4.2.19.Final",
-  "io.netty:netty-transport:jar:@4.2.19.Final",
+  "io.netty:netty-buffer:jar:@4.2.20.Final",
+  "io.netty:netty-codec-base:jar:@4.2.20.Final",
+  "io.netty:netty-codec-compression:jar:@4.2.20.Final",
+  "io.netty:netty-common:jar:@4.2.20.Final",
+  "io.netty:netty-handler:jar:@4.2.20.Final",
+  "io.netty:netty-transport:jar:@4.2.20.Final",
 ]
 excluded-by = [
-  "io.netty:netty-buffer <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-codec-compression <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-common <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-handler <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-transport <- io.netty:netty-all@4.2.19.Final",
+  "io.netty:netty-buffer <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-codec-compression <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-common <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-handler <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-codec-marshalling:jar:"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:5b24976fda31fd52a85fb7f79f2a5867a0416f68f7b03a9d6ea062b2959d50f7"
+checksum = "sha256:49ceb3f4f29f7f29a9acbb31b134b1c886d8fb843278d8dab530bf83cd6dfd0d"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.19.Final",
-  "io.netty:netty-codec-base:jar:@4.2.19.Final",
-  "io.netty:netty-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport:jar:@4.2.19.Final",
+  "io.netty:netty-buffer:jar:@4.2.20.Final",
+  "io.netty:netty-codec-base:jar:@4.2.20.Final",
+  "io.netty:netty-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport:jar:@4.2.20.Final",
 ]
 excluded-by = [
-  "io.netty:netty-buffer <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-common <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-transport <- io.netty:netty-all@4.2.19.Final",
-  "org.jboss.marshalling:jboss-marshalling <- io.netty:netty-all@4.2.19.Final",
+  "io.netty:netty-buffer <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-common <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.20.Final",
+  "org.jboss.marshalling:jboss-marshalling <- io.netty:netty-all@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-codec-memcache:jar:"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:84aff23aed87cbc503f3118e9003f627ea03620e2748d0bacc7c6ba5d15e17f0"
+checksum = "sha256:99c6eb1073b8cd9b119f37e9eafbfda9396a7c4cc322f0d34902e714516a3f6a"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.19.Final",
-  "io.netty:netty-codec-base:jar:@4.2.19.Final",
-  "io.netty:netty-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport:jar:@4.2.19.Final",
+  "io.netty:netty-buffer:jar:@4.2.20.Final",
+  "io.netty:netty-codec-base:jar:@4.2.20.Final",
+  "io.netty:netty-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport:jar:@4.2.20.Final",
 ]
 excluded-by = [
-  "io.netty:netty-buffer <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-common <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-transport <- io.netty:netty-all@4.2.19.Final",
+  "io.netty:netty-buffer <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-common <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-codec-mqtt:jar:"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:c08f7fce3ceade5db70dbab979872bf7f87ef00dadb406071e35024eac3f91aa"
+checksum = "sha256:66978b0b72b4a53fb992058af688e962021e9e92774321a44220b46164f6dfa2"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.19.Final",
-  "io.netty:netty-codec-base:jar:@4.2.19.Final",
-  "io.netty:netty-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport:jar:@4.2.19.Final",
+  "io.netty:netty-buffer:jar:@4.2.20.Final",
+  "io.netty:netty-codec-base:jar:@4.2.20.Final",
+  "io.netty:netty-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport:jar:@4.2.20.Final",
 ]
 excluded-by = [
-  "io.netty:netty-buffer <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-common <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-transport <- io.netty:netty-all@4.2.19.Final",
+  "io.netty:netty-buffer <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-common <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-codec-native-quic:jar:linux-aarch_64"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:bdd044c7d6c2e67b647f203e304c551935693bba789c22a1920e45e00afc6c2b"
+checksum = "sha256:14d096f65bf5727bf2abe6f5cb74a8d1b85e185e5956235ee9ebd51bc0c7a89f"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-codec-classes-quic:jar:@4.2.19.Final",
+  "io.netty:netty-codec-classes-quic:jar:@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-codec-native-quic:jar:linux-x86_64"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:fd8d07e2a67a0d8574d02b698888cc4f604d1849cf20544c8f9af19cb33530c6"
+checksum = "sha256:6208c52346d7802b43f4d523dce64d25053c64d53e857d5e9ef43af046db0a5a"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-codec-classes-quic:jar:@4.2.19.Final",
+  "io.netty:netty-codec-classes-quic:jar:@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-codec-native-quic:jar:osx-aarch_64"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:16a0a99ae9a3261c9ed2f246ee6926a518dcf81d6b020d3b44abf5115792b998"
+checksum = "sha256:794da379e32791394ef1eab5093179b267e31418be7dde5988def345c88181c1"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-codec-classes-quic:jar:@4.2.19.Final",
+  "io.netty:netty-codec-classes-quic:jar:@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-codec-native-quic:jar:osx-x86_64"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:1b2673f22efc0bb4240eb0b76b9592d80ef006a71d70ede884c9413093cd787d"
+checksum = "sha256:76f43c0c3abebc083b764376d224bab76e0422023f44d3b93298594571c9ef21"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-codec-classes-quic:jar:@4.2.19.Final",
+  "io.netty:netty-codec-classes-quic:jar:@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-codec-native-quic:jar:windows-x86_64"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:8979a2ab34a498ab447eaad71cd233ca3a3c5043695d57b0f035f1add776836f"
+checksum = "sha256:d99b1946e93e278c52af3f049c20703b705a7f51f37badc8a6c0b951321dd10e"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-codec-classes-quic:jar:@4.2.19.Final",
+  "io.netty:netty-codec-classes-quic:jar:@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-codec-protobuf:jar:"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:f4d10c51f9237d4cffe78978dee2d2473c0eacdb021f0c04a0cc4f123e01f15d"
+checksum = "sha256:dc995dcfc841c8593c482604d38aab0fa414e9a7c8ea49dc36ebf188064a6470"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.19.Final",
-  "io.netty:netty-codec-base:jar:@4.2.19.Final",
-  "io.netty:netty-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport:jar:@4.2.19.Final",
+  "io.netty:netty-buffer:jar:@4.2.20.Final",
+  "io.netty:netty-codec-base:jar:@4.2.20.Final",
+  "io.netty:netty-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport:jar:@4.2.20.Final",
 ]
 excluded-by = [
-  "com.google.protobuf.nano:protobuf-javanano <- io.netty:netty-all@4.2.19.Final",
-  "com.google.protobuf:protobuf-java <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-buffer <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-common <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-transport <- io.netty:netty-all@4.2.19.Final",
+  "com.google.protobuf.nano:protobuf-javanano <- io.netty:netty-all@4.2.20.Final",
+  "com.google.protobuf:protobuf-java <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-buffer <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-common <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-codec-redis:jar:"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:20d10b3a0dba873f26c7041fc9f5f6333328af71f86b9e5bc47113ea1496e27f"
+checksum = "sha256:206c0b23f8e1dd0589cad40bccd412d8e9b05c7e73613ca37208fc057448642d"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.19.Final",
-  "io.netty:netty-codec-base:jar:@4.2.19.Final",
-  "io.netty:netty-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport:jar:@4.2.19.Final",
+  "io.netty:netty-buffer:jar:@4.2.20.Final",
+  "io.netty:netty-codec-base:jar:@4.2.20.Final",
+  "io.netty:netty-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport:jar:@4.2.20.Final",
 ]
 excluded-by = [
-  "io.netty:netty-buffer <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-common <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-transport <- io.netty:netty-all@4.2.19.Final",
+  "io.netty:netty-buffer <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-common <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-codec-smtp:jar:"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:124ca2c30a45b6c77a838fcea042b6bc5b7271dc038828bdd7566f048f9a7c2c"
+checksum = "sha256:ed26c3299585ccc8700d897141b418c2ce0d234fc9f8813bc9988f2194ca1d67"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.19.Final",
-  "io.netty:netty-codec-base:jar:@4.2.19.Final",
-  "io.netty:netty-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport:jar:@4.2.19.Final",
+  "io.netty:netty-buffer:jar:@4.2.20.Final",
+  "io.netty:netty-codec-base:jar:@4.2.20.Final",
+  "io.netty:netty-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport:jar:@4.2.20.Final",
 ]
 excluded-by = [
-  "io.netty:netty-buffer <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-common <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-transport <- io.netty:netty-all@4.2.19.Final",
+  "io.netty:netty-buffer <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-common <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-codec-socks:jar:"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:b837044e8edbd977bafe4e643c13958a45cf0caefd1338b7e6660e716a769624"
+checksum = "sha256:8510f0ceee40a4254760b2927431e2403a6588c4068022e2440356acfc5e24c1"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.19.Final",
-  "io.netty:netty-codec-base:jar:@4.2.19.Final",
-  "io.netty:netty-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport:jar:@4.2.19.Final",
+  "io.netty:netty-buffer:jar:@4.2.20.Final",
+  "io.netty:netty-codec-base:jar:@4.2.20.Final",
+  "io.netty:netty-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport:jar:@4.2.20.Final",
 ]
 excluded-by = [
-  "io.netty:netty-buffer <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-common <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-transport <- io.netty:netty-all@4.2.19.Final",
+  "io.netty:netty-buffer <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-common <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-codec-stomp:jar:"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:2b68275ede38763d144e4604e2c1ce26e8bd4c15d911f983ea127e7614ea3cd9"
+checksum = "sha256:06b75a5577f100cc28bebc1cd0dec9716155ab71c5a28431263bef87c4597df4"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.19.Final",
-  "io.netty:netty-codec-base:jar:@4.2.19.Final",
-  "io.netty:netty-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport:jar:@4.2.19.Final",
+  "io.netty:netty-buffer:jar:@4.2.20.Final",
+  "io.netty:netty-codec-base:jar:@4.2.20.Final",
+  "io.netty:netty-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport:jar:@4.2.20.Final",
 ]
 excluded-by = [
-  "io.netty:netty-buffer <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-common <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-transport <- io.netty:netty-all@4.2.19.Final",
+  "io.netty:netty-buffer <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-common <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-codec-xml:jar:"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:0ec71c975b8566f905518c128b6f8bef9f7abd3a9a624a2f8ea6252976bb0dd6"
+checksum = "sha256:47b9dd4bb1a6833944ab3df7bed90d6e28295f5a60a47da467a46e108534b60d"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.19.Final",
-  "io.netty:netty-codec-base:jar:@4.2.19.Final",
-  "io.netty:netty-transport:jar:@4.2.19.Final",
+  "io.netty:netty-buffer:jar:@4.2.20.Final",
+  "io.netty:netty-codec-base:jar:@4.2.20.Final",
+  "io.netty:netty-transport:jar:@4.2.20.Final",
 ]
 excluded-by = [
-  "com.fasterxml:aalto-xml <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-buffer <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-transport <- io.netty:netty-all@4.2.19.Final",
+  "com.fasterxml:aalto-xml <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-buffer <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-codec:jar:"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:9da978357522895ed6141e14c81f776173206f6cdd72e92b637c60e6e624735b"
+checksum = "sha256:f6616d7c26c6198c7fa3d94e20a1a0d17e8ef9fc2433de792f4009cf38b00c15"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.19.Final",
-  "io.netty:netty-codec-base:jar:@4.2.19.Final",
-  "io.netty:netty-codec-compression:jar:@4.2.19.Final",
-  "io.netty:netty-codec-marshalling:jar:@4.2.19.Final",
-  "io.netty:netty-codec-protobuf:jar:@4.2.19.Final",
-  "io.netty:netty-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport:jar:@4.2.19.Final",
+  "io.netty:netty-buffer:jar:@4.2.20.Final",
+  "io.netty:netty-codec-base:jar:@4.2.20.Final",
+  "io.netty:netty-codec-compression:jar:@4.2.20.Final",
+  "io.netty:netty-codec-marshalling:jar:@4.2.20.Final",
+  "io.netty:netty-codec-protobuf:jar:@4.2.20.Final",
+  "io.netty:netty-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport:jar:@4.2.20.Final",
 ]
 excluded-by = [
-  "io.netty:netty-buffer <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-codec-compression <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-codec-marshalling <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-codec-protobuf <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-common <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-transport <- io.netty:netty-all@4.2.19.Final",
+  "io.netty:netty-buffer <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-codec-compression <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-codec-marshalling <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-codec-protobuf <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-common <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-common:jar:"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:22fa74761f6e35c8c88972f35cf65664566b922dd73d3424528e97c34278fa79"
+checksum = "sha256:5807fef7eb619bc0a5d1c0e6c83199ea9bca8503203a3eb73cfdccec2d215743"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 
 [[artifact]]
 name     = "io.netty:netty-handler-proxy:jar:"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:6a46fb5716c8b2a227e3d5e4533ab67abaccc6cb3a4f431ff0ed0859ae8a6993"
+checksum = "sha256:9fd508051bb39829117e4dbfa2d0b485aafb88d2d627ae6ec1fed5a3faa3842a"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.19.Final",
-  "io.netty:netty-codec-base:jar:@4.2.19.Final",
-  "io.netty:netty-codec-http:jar:@4.2.19.Final",
-  "io.netty:netty-codec-socks:jar:@4.2.19.Final",
-  "io.netty:netty-common:jar:@4.2.19.Final",
-  "io.netty:netty-handler:jar:@4.2.19.Final",
-  "io.netty:netty-transport:jar:@4.2.19.Final",
+  "io.netty:netty-buffer:jar:@4.2.20.Final",
+  "io.netty:netty-codec-base:jar:@4.2.20.Final",
+  "io.netty:netty-codec-http:jar:@4.2.20.Final",
+  "io.netty:netty-codec-socks:jar:@4.2.20.Final",
+  "io.netty:netty-common:jar:@4.2.20.Final",
+  "io.netty:netty-handler:jar:@4.2.20.Final",
+  "io.netty:netty-transport:jar:@4.2.20.Final",
 ]
 excluded-by = [
-  "io.netty:netty-buffer <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-codec-http <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-codec-socks <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-common <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-handler <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-transport <- io.netty:netty-all@4.2.19.Final",
+  "io.netty:netty-buffer <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-codec-base <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-codec-http <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-codec-socks <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-common <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-handler <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-handler-ssl-ocsp:jar:"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:388432c4dc4dd4d737c7d2892bd3cd6c863807d8795f8a9c7f3296b09b241b5e"
+checksum = "sha256:383b419fca4988d1c81ba6ba0d558d943776634ad70d8f7bc26ac8e114c71e5c"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-codec-http:jar:@4.2.19.Final",
-  "io.netty:netty-handler:jar:@4.2.19.Final",
-  "io.netty:netty-resolver-dns:jar:@4.2.19.Final",
-  "io.netty:netty-transport:jar:@4.2.19.Final",
+  "io.netty:netty-codec-http:jar:@4.2.20.Final",
+  "io.netty:netty-handler:jar:@4.2.20.Final",
+  "io.netty:netty-resolver-dns:jar:@4.2.20.Final",
+  "io.netty:netty-transport:jar:@4.2.20.Final",
 ]
 excluded-by = [
-  "io.netty:netty-codec-http <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-handler <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-resolver-dns <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-transport <- io.netty:netty-all@4.2.19.Final",
+  "io.netty:netty-codec-http <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-handler <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-resolver-dns <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-handler:jar:"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:8b469cf23ddf21ba84291f4dff470d2277a28deac95e7084b0ff2ce853e58276"
+checksum = "sha256:211dbbba074298046b37f841ad9ca89ed91968f6b9e97400c99ab4e6177b1f96"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.19.Final",
-  "io.netty:netty-codec-base:jar:@4.2.19.Final",
-  "io.netty:netty-common:jar:@4.2.19.Final",
-  "io.netty:netty-resolver:jar:@4.2.19.Final",
-  "io.netty:netty-transport-native-unix-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport:jar:@4.2.19.Final",
+  "io.netty:netty-buffer:jar:@4.2.20.Final",
+  "io.netty:netty-codec-base:jar:@4.2.20.Final",
+  "io.netty:netty-common:jar:@4.2.20.Final",
+  "io.netty:netty-resolver:jar:@4.2.20.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport:jar:@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-resolver-dns-classes-macos:jar:"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:434de28e1e21c9d1c3dd2ef497e3f8ff3abba000a963fcd5eb1d85970ce434f0"
+checksum = "sha256:fb3b1eeeadc78c311a1258cbe6c35b038937339f1e6d05820518dc11884d0a1b"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-common:jar:@4.2.19.Final",
-  "io.netty:netty-resolver-dns:jar:@4.2.19.Final",
-  "io.netty:netty-transport-native-unix-common:jar:@4.2.19.Final",
+  "io.netty:netty-common:jar:@4.2.20.Final",
+  "io.netty:netty-resolver-dns:jar:@4.2.20.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-resolver-dns-native-macos:jar:osx-aarch_64"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:61cde9386d677ad5dc66d9f58d18acf9e6fc3a3931f2d2fb0751d05cbe137f09"
+checksum = "sha256:90049da3f2cdb2ce343fe679e5999b209f2b47b2932c63a196c32815239856de"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-resolver-dns-classes-macos:jar:@4.2.19.Final",
+  "io.netty:netty-resolver-dns-classes-macos:jar:@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-resolver-dns-native-macos:jar:osx-x86_64"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:0c1eec26d9c0aa2629592080106b3c75eb7f10cdde4a6b251e2873f29c431c1e"
+checksum = "sha256:7af5846288020c1e3cebefe1bcef96515203ed96464f4fdf0215f816de4509cb"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-resolver-dns-classes-macos:jar:@4.2.19.Final",
+  "io.netty:netty-resolver-dns-classes-macos:jar:@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-resolver-dns:jar:"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:417aaf5cf25cd07865ea91d2e08916b6974995c54aa83730264fc0e06dd4ea90"
+checksum = "sha256:9a1dc5abc7f146bf0ff0938dceb384f7c972dc052cd9cd2f367cb30a0718fa71"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.19.Final",
-  "io.netty:netty-codec-base:jar:@4.2.19.Final",
-  "io.netty:netty-codec-dns:jar:@4.2.19.Final",
-  "io.netty:netty-common:jar:@4.2.19.Final",
-  "io.netty:netty-handler:jar:@4.2.19.Final",
-  "io.netty:netty-resolver:jar:@4.2.19.Final",
-  "io.netty:netty-transport:jar:@4.2.19.Final",
+  "io.netty:netty-buffer:jar:@4.2.20.Final",
+  "io.netty:netty-codec-base:jar:@4.2.20.Final",
+  "io.netty:netty-codec-dns:jar:@4.2.20.Final",
+  "io.netty:netty-common:jar:@4.2.20.Final",
+  "io.netty:netty-handler:jar:@4.2.20.Final",
+  "io.netty:netty-resolver:jar:@4.2.20.Final",
+  "io.netty:netty-transport:jar:@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-resolver:jar:"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:3ded47536faeb3c4c544a84871d82f461511589afb2a892a180ca425f281363e"
+checksum = "sha256:cb7a6027e4f366fb28dcea7e1f7088ca16bd23c2cc38e8ddfdac77a77bd144dc"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-common:jar:@4.2.19.Final",
+  "io.netty:netty-common:jar:@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-transport-classes-epoll:jar:"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:4d96ba8dd98ace998f6ae7bfe53ae9e581bd92ad2f7ebe5bd994d1a24306db7e"
+checksum = "sha256:814438f990be4eddb997f4bee67617e19bab8554d9ee2c7bd8c9c8adb970bf69"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.19.Final",
-  "io.netty:netty-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport-native-unix-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport:jar:@4.2.19.Final",
+  "io.netty:netty-buffer:jar:@4.2.20.Final",
+  "io.netty:netty-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport:jar:@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-transport-classes-io_uring:jar:"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:7c153ac4e0339e19a21b16913750d8f5ae360e3aeea05830efe8e00e6d46979d"
+checksum = "sha256:9b47d19a7c39abeeaf3091c38c0e1d7de0a940a0e39fa7ae52defff0f33b8232"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.19.Final",
-  "io.netty:netty-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport-native-unix-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport:jar:@4.2.19.Final",
+  "io.netty:netty-buffer:jar:@4.2.20.Final",
+  "io.netty:netty-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport:jar:@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-transport-classes-kqueue:jar:"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:e1decb5bf69a45118dd8b7fa7ac815462275c5055f75959b7a8d5383196b9ae9"
+checksum = "sha256:62be6151dfb8a76a3902e2f0b7ce410482e91015e8ecdc89ee9e0944c30cf6eb"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.19.Final",
-  "io.netty:netty-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport-native-unix-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport:jar:@4.2.19.Final",
+  "io.netty:netty-buffer:jar:@4.2.20.Final",
+  "io.netty:netty-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport:jar:@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-transport-native-epoll:jar:linux-aarch_64"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:e3e69412243f28942dac2d1772e5be72302cc0123fd58a31f357e1eef9d2bfa5"
+checksum = "sha256:19318b1d161d7f0916e2cd2184d5a7baa1ddb4f5c7a0b03e2881678f919933bd"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.19.Final",
-  "io.netty:netty-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport-classes-epoll:jar:@4.2.19.Final",
-  "io.netty:netty-transport-native-unix-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport:jar:@4.2.19.Final",
+  "io.netty:netty-buffer:jar:@4.2.20.Final",
+  "io.netty:netty-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport-classes-epoll:jar:@4.2.20.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport:jar:@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-transport-native-epoll:jar:linux-riscv64"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:ef252d28ebdbefa8d3f2b4ef62bbe87d28bdd7980a78012dfca7bd1aaf320287"
+checksum = "sha256:f85d39830f4b018d8d304863a7aa447038f036adef402e831aa566ed8185a42f"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.19.Final",
-  "io.netty:netty-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport-classes-epoll:jar:@4.2.19.Final",
-  "io.netty:netty-transport-native-unix-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport:jar:@4.2.19.Final",
+  "io.netty:netty-buffer:jar:@4.2.20.Final",
+  "io.netty:netty-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport-classes-epoll:jar:@4.2.20.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport:jar:@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-transport-native-epoll:jar:linux-x86_64"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:3dd01532f34540676c9e0153f96a44c78a73f2b0118ef46cb14247e512dde76b"
+checksum = "sha256:3f13d5fc5b96d1a02209c0082be84b4308736da8abcff18285fbbef3a333143a"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.19.Final",
-  "io.netty:netty-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport-classes-epoll:jar:@4.2.19.Final",
-  "io.netty:netty-transport-native-unix-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport:jar:@4.2.19.Final",
+  "io.netty:netty-buffer:jar:@4.2.20.Final",
+  "io.netty:netty-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport-classes-epoll:jar:@4.2.20.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport:jar:@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-transport-native-io_uring:jar:linux-aarch_64"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:460234769cde9fd298634d3ad0aacfdddaad387299f3e8b8ced8377c5701ee41"
+checksum = "sha256:2655539705fbd60ed2c0442fb00c8cba25eb98f102ddd5f19bb60fe93b927654"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.19.Final",
-  "io.netty:netty-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport-classes-io_uring:jar:@4.2.19.Final",
-  "io.netty:netty-transport-native-unix-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport:jar:@4.2.19.Final",
+  "io.netty:netty-buffer:jar:@4.2.20.Final",
+  "io.netty:netty-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport-classes-io_uring:jar:@4.2.20.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport:jar:@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-transport-native-io_uring:jar:linux-riscv64"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:f98ff0a42de94905a56112b9c8df0a6f3ce4fd6eaea659b12f9426b6a5e4d328"
+checksum = "sha256:ae61e6df214fdf6be23321a810995e5a86fed82f81bb32aabfc3d50012f5d449"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.19.Final",
-  "io.netty:netty-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport-classes-io_uring:jar:@4.2.19.Final",
-  "io.netty:netty-transport-native-unix-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport:jar:@4.2.19.Final",
+  "io.netty:netty-buffer:jar:@4.2.20.Final",
+  "io.netty:netty-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport-classes-io_uring:jar:@4.2.20.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport:jar:@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-transport-native-io_uring:jar:linux-x86_64"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:68de895bb82274577d785b0d7ed7c95c9f09157a5cec139fe0e2cafa3718e9e2"
+checksum = "sha256:ec22404f0260d75ce7b1b4a3b9b61a1472671cc6b44399c42529cfb42e1f613f"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.19.Final",
-  "io.netty:netty-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport-classes-io_uring:jar:@4.2.19.Final",
-  "io.netty:netty-transport-native-unix-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport:jar:@4.2.19.Final",
+  "io.netty:netty-buffer:jar:@4.2.20.Final",
+  "io.netty:netty-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport-classes-io_uring:jar:@4.2.20.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport:jar:@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-transport-native-kqueue:jar:osx-aarch_64"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:b4f35ac20ed23100af364e5ce895a62c8940a755ecc8d2f15562dbecfa8588f2"
+checksum = "sha256:a5930920f9ae417aafdfa19b65c3b657326a7f7fc48b9fc27e072a574b36ec5d"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.19.Final",
-  "io.netty:netty-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport-classes-kqueue:jar:@4.2.19.Final",
-  "io.netty:netty-transport-native-unix-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport:jar:@4.2.19.Final",
+  "io.netty:netty-buffer:jar:@4.2.20.Final",
+  "io.netty:netty-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport-classes-kqueue:jar:@4.2.20.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport:jar:@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-transport-native-kqueue:jar:osx-x86_64"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:a9996715c0d43c35d948ee33e60cec9783e36bda16fed74e01d33d4d4089f7fd"
+checksum = "sha256:053143c77b10fa7d90ec76a92b0cd4904c6708df6ce48552ef51475e474635e5"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.19.Final",
-  "io.netty:netty-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport-classes-kqueue:jar:@4.2.19.Final",
-  "io.netty:netty-transport-native-unix-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport:jar:@4.2.19.Final",
+  "io.netty:netty-buffer:jar:@4.2.20.Final",
+  "io.netty:netty-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport-classes-kqueue:jar:@4.2.20.Final",
+  "io.netty:netty-transport-native-unix-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport:jar:@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-transport-native-unix-common:jar:"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:341e91b8e69e6b7d92c353c845ffd91f34e921b7186254c176a64c7089b3e721"
+checksum = "sha256:6f600d5cbd3ce39e50680de66b00d7e6a9652dac7d08a5b022101d717cb7fb52"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.19.Final",
-  "io.netty:netty-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport:jar:@4.2.19.Final",
+  "io.netty:netty-buffer:jar:@4.2.20.Final",
+  "io.netty:netty-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport:jar:@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-transport-rxtx:jar:"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:1a75b93823bcbf7afc7cc0c5fac60b9e5e57ef24a4a3e6265957f0075039e43d"
+checksum = "sha256:f1d23cf88c8bce3ce75324c590aca05e556cc870cd00cbcf11996e1e8961c6f7"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.19.Final",
-  "io.netty:netty-transport:jar:@4.2.19.Final",
+  "io.netty:netty-buffer:jar:@4.2.20.Final",
+  "io.netty:netty-transport:jar:@4.2.20.Final",
 ]
 excluded-by = [
-  "io.netty:netty-buffer <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-transport <- io.netty:netty-all@4.2.19.Final",
-  "org.rxtx:rxtx <- io.netty:netty-all@4.2.19.Final",
+  "io.netty:netty-buffer <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.20.Final",
+  "org.rxtx:rxtx <- io.netty:netty-all@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-transport-sctp:jar:"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:2e69f3b8b2fbaf85bb5f4d1ee81ce0df15916defeb556e845e266e6d7a9bd0b4"
+checksum = "sha256:60b56e32029756cd13b8df1fdfdfa08c2cb600fb3bb5ab2574e0276df52a84fd"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.19.Final",
-  "io.netty:netty-codec:jar:@4.2.19.Final",
-  "io.netty:netty-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport:jar:@4.2.19.Final",
+  "io.netty:netty-buffer:jar:@4.2.20.Final",
+  "io.netty:netty-codec:jar:@4.2.20.Final",
+  "io.netty:netty-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport:jar:@4.2.20.Final",
 ]
 excluded-by = [
-  "io.netty:netty-buffer <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-codec <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-common <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-transport <- io.netty:netty-all@4.2.19.Final",
+  "io.netty:netty-buffer <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-codec <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-common <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-transport-udt:jar:"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:b941ef4cb39165a20efe8d06e9a52e4c1ec58c2237714f322ecd2e78a6d9434e"
+checksum = "sha256:b642ad48b478cf97d6e04b6a01330493549c9dfc397017a04c5f7b23caca0ca6"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.19.Final",
-  "io.netty:netty-common:jar:@4.2.19.Final",
-  "io.netty:netty-transport:jar:@4.2.19.Final",
+  "io.netty:netty-buffer:jar:@4.2.20.Final",
+  "io.netty:netty-common:jar:@4.2.20.Final",
+  "io.netty:netty-transport:jar:@4.2.20.Final",
 ]
 excluded-by = [
-  "com.barchart.udt:barchart-udt-bundle <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-buffer <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-common <- io.netty:netty-all@4.2.19.Final",
-  "io.netty:netty-transport <- io.netty:netty-all@4.2.19.Final",
+  "com.barchart.udt:barchart-udt-bundle <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-buffer <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-common <- io.netty:netty-all@4.2.20.Final",
+  "io.netty:netty-transport <- io.netty:netty-all@4.2.20.Final",
 ]
 
 [[artifact]]
 name     = "io.netty:netty-transport:jar:"
-version  = "4.2.19.Final"
+version  = "4.2.20.Final"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:d82d4e200456b8c5d8a1647a3724603f80616e5b35b9ada6e7a20d048f175075"
+checksum = "sha256:ff4f1f8158c714c1b485ef10cf2456fbd3c1b2930256b70287aeb7dc3ad94783"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "io.netty:netty-buffer:jar:@4.2.19.Final",
-  "io.netty:netty-common:jar:@4.2.19.Final",
-  "io.netty:netty-resolver:jar:@4.2.19.Final",
+  "io.netty:netty-buffer:jar:@4.2.20.Final",
+  "io.netty:netty-common:jar:@4.2.20.Final",
+  "io.netty:netty-resolver:jar:@4.2.20.Final",
 ]
 
 [[artifact]]

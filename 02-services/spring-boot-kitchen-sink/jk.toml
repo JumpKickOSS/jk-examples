@@ -12,7 +12,7 @@ java    = 25
 main = "dev.jkharness.kitchensink.KitchenSinkApplication"
 
 [spring-boot]
-version       = "4.1.1"
+version       = "4.1.2"
 aot           = true
 aot-jvm-args  = []     # flags for the AOT processor's JVM (an --add-opens, a heap size)
 aot-args      = []     # arguments the app sees while it starts under AOT processing

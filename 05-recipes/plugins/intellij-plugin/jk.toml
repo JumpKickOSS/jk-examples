@@ -7,7 +7,7 @@ version = "1.0.0"
 java    = 25
 
 [intellij]
-version = "262.10968.63"   # IntelliJ IDEA 2026.2, Community; its About dialog shows IC-262.10968.63
+version = "262.11879.100"  # IntelliJ IDEA 2026.2, Community; its About dialog shows IC-262.11879.100
 
 [repositories.jetbrains]
 url    = "https://www.jetbrains.com/intellij-repository/releases"

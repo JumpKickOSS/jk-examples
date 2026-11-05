@@ -13,8 +13,8 @@ and the tests prove them on two databases, one per tier:
 
 ```toml
 [dependencies]
-flyway-core       = "13.11.1"
-flyway-postgresql = "13.11.1"    # Flyway's PostgreSQL support is its own module
+flyway-core       = "13.12.0"
+flyway-postgresql = "13.12.0"    # Flyway's PostgreSQL support is its own module
 liquibase-core    = "5.0.4"
 postgresql        = "42.7.14"
 h2                = "2.5.252"

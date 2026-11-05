@@ -7,8 +7,8 @@ An idiomatic multi-module Kotlin pet shop:
 | `domain` | `Pet` data class + `PetRepository` interface, package `com.example.petshop.domain`; a library, so `jk build` also writes its sources and javadoc jars, `[build-info]` puts `git.properties` in the jar |
 | `app` | Ktor Netty, **Koin** DI, **Exposed** + **H2**, REST `/api/pets`, `testApplication` tests, `[image]` |
 
-Every version is an exact pin: `kotlin = "2.4.21"` at the root, Ktor `3.6.0`, Koin `4.2.2`,
-Exposed `1.6.0` (its 1.x API, `org.jetbrains.exposed.v1.*`), H2 `2.5.252` and Logback `1.6.5`
+Every version is an exact pin: `kotlin = "2.4.21"` at the root, Ktor `3.6.1`, Koin `4.2.2`,
+Exposed `1.6.1` (its 1.x API, `org.jetbrains.exposed.v1.*`), H2 `2.5.252` and Logback `1.6.6`
 in `app`, `[dokka] version = "2.2.0"` in `domain`; `jk update` moves them all.
 
 It exercises:

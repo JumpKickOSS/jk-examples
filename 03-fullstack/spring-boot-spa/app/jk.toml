@@ -5,7 +5,7 @@ description = "The Spring Boot service: the /api endpoints, the static SPA, and 
 main = "com.example.webapp.WebappApplication"
 
 [spring-boot]
-version = "4.1.1"
+version = "4.1.2"
 
 # `git.properties` and `META-INF/build-info.properties` in the Boot jar: the commit, branch and
 # version the build came from.

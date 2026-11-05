@@ -1,10 +1,10 @@
 version = 1
-generated-by = "jk 0.20.0"
-generated-by-build = "8d791a6605a5"
-generated-by-build-time = "2026-10-22T21:20:28Z"
+generated-by = "jk 0.50.2"
+generated-by-build = "cb17db83b069"
+generated-by-build-time = "2026-11-04T22:33:39Z"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.12.0"
-manifests-sha256 = "641aeba970df7802852c05fd8f792512defd0af457ae374f6418e40a0e8067b0"
+manifests-sha256 = "3c7369643d7323c3b66b776fcfd5699b56c667651cd69178132065c6e2df8755"
 project-id = "8dceb29cf3773ace8f3f35ff82a1e5e6"
 
 [jdk]
@@ -13,20 +13,20 @@ suggested-version = "25.0.2"
 
 [[artifact]]
 name     = "com.google.code.gson:gson:jar:"
-version  = "2.14.0"
+version  = "2.15.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:2cbd119bf1961c28788310963dc80ba65f58cdeec1dd139c8bdb1240faa2c36f"
+checksum = "sha256:96d3dd843dc2911de01cdabcd50064cb9e860353102a0a78c96fd833d396fc7d"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "com.google.errorprone:error_prone_annotations:jar:@2.48.0",
+  "com.google.errorprone:error_prone_annotations:jar:@2.50.0",
 ]
 
 [[artifact]]
 name     = "com.google.errorprone:error_prone_annotations:jar:"
-version  = "2.48.0"
+version  = "2.50.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:b49c5c958316ed67a09c699dda9aa749caf434d51d863dea599ef36a49b9c855"
+checksum = "sha256:4667724877f1d37a689202da191e23efa7657c62eef93ccdac406eccfe5cdd0a"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 

@@ -26,7 +26,7 @@ assembly = true # also writes target/assembly-0.0.1-all.jar
 
 # Bundled into the fat jar — main hashes with it, so the jar cannot run without it.
 [dependencies]
-commons-codec = "1.22.1"
+commons-codec = "1.23.0"
 
 # Compile-time only (@NullMarked): present on javac's path, absent from every jar.
 [provided-dependencies]

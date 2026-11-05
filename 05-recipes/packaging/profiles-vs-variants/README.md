@@ -24,5 +24,5 @@ The jar prints `debug build, json feature ON` by default and `release build, jso
 after `--release`; a following plain `jk build` prints `debug build` again — the release-only
 class does not survive a variant switch, so no `jk clean` is needed between selections.
 
-`gson` is an exact pin (`2.14.0`) that `jk update` moves. The fat jar (`assembly = true`) is what
+`gson` is an exact pin (`2.15.0`) that `jk update` moves. The fat jar (`assembly = true`) is what
 makes `java -jar` work with the feature dependency on the classpath.

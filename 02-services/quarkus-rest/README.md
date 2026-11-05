@@ -6,7 +6,7 @@ Bean Validation, Flyway migrations and health checks on PostgreSQL. It starts fr
 
 ```toml
 [quarkus]
-version = "3.40.1"      # the platform BOM; every io.quarkus extension below is versionless
+version = "3.40.1.1"    # the platform BOM; every io.quarkus extension below is versionless
 ```
 
 jk runs Quarkus's own build: the `quarkus-augment` step bootstraps Quarkus from the lock and writes

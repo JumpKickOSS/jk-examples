@@ -1,10 +1,10 @@
 version = 1
-generated-by = "jk 0.20.0"
-generated-by-build = "8d791a6605a5"
-generated-by-build-time = "2026-10-22T21:20:28Z"
+generated-by = "jk 0.50.2"
+generated-by-build = "cb17db83b069"
+generated-by-build-time = "2026-11-04T22:33:39Z"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.12.0"
-manifests-sha256 = "4e4c077bad55d4ae662e49067e8dac8fff93eebf1148ed8455ed969e3a3bea4e"
+manifests-sha256 = "4614543f26a86e8c8cda5454f027368be312a420101ec1be71caad86c4915fd5"
 project-id = "16c8490ded88094175fac325cc2f89af"
 
 [jdk]
@@ -16,7 +16,7 @@ name     = "com.fasterxml.jackson.core:jackson-annotations:jar:"
 version  = "2.22"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:21ddb598807d3a51a876704eb979d9296e1c6a6f47ab1826ff88c6d6a127a2d0"
-scopes   = ["main", "test"]
+scopes   = ["test"]
 licenses = ["Apache-2.0"]
 
 [[artifact]]
@@ -169,36 +169,33 @@ licenses = ["MIT"]
 
 [[artifact]]
 name     = "org.flywaydb:flyway-core:jar:"
-version  = "13.11.1"
+version  = "13.12.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:0815490cc273bb319cd04a31aa47145bc23d6f55b48502a002a5fae4b703e53f"
+checksum = "sha256:88e8aac8a19fec1e768fb64b693611eb9e0770222079567b0d5cf8b11de5d362"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
-deps = [
-  "com.fasterxml.jackson.core:jackson-annotations:jar:@2.22",
-]
 
 [[artifact]]
 name     = "org.flywaydb:flyway-database-cockroachdb:jar:"
-version  = "13.11.1"
+version  = "13.12.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:e8cd9f30081f4bf145fa180c25bfc21a24bab3f90b3d1371351be12a1986d579"
+checksum = "sha256:d6a568084f1d58e2a7780d29f08629e7b717e0a1b643d31379f25242ea1c0a18"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "org.flywaydb:flyway-core:jar:@13.11.1",
+  "org.flywaydb:flyway-core:jar:@13.12.0",
 ]
 
 [[artifact]]
 name     = "org.flywaydb:flyway-database-postgresql:jar:"
-version  = "13.11.1"
+version  = "13.12.0"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:33b165d73f4536b3de5ca0fa1f682c33ab7b65d662eb26ae1a65a873fcaf703d"
+checksum = "sha256:ccacc5f2a4b7dc7c09cdc4d64b6f36ed434f06384490c2a33a20ad155def815a"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 deps = [
-  "org.flywaydb:flyway-core:jar:@13.11.1",
-  "org.flywaydb:flyway-database-cockroachdb:jar:@13.11.1",
+  "org.flywaydb:flyway-core:jar:@13.12.0",
+  "org.flywaydb:flyway-database-cockroachdb:jar:@13.12.0",
 ]
 
 [[artifact]]
