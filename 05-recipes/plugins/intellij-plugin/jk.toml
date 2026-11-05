@@ -1,4 +1,4 @@
-# An IntelliJ Platform plugin: compiled against the IDE distribution, tested in a headless IDE,
+# An IntelliJ Platform plugin: compiled against the platform modules it names, tested in a headless IDE,
 # packaged as the zip an IDE installs from disk (target/sort-lines-1.0.0.zip).
 
 name    = "sort-lines"
@@ -7,11 +7,17 @@ version = "1.0.0"
 java    = 25
 
 [intellij]
-version = "262.11879.100"  # IntelliJ IDEA 2026.2, Community; its About dialog shows IC-262.11879.100
+version   = "262.11879.100"        # IntelliJ IDEA Community; its About dialog shows IC- and this build
+libraries = ["platform:ide-impl"]   # the platform modules the code compiles against
 
 [repositories.jetbrains]
 url    = "https://www.jetbrains.com/intellij-repository/releases"
 groups = ["com.jetbrains.intellij.*"]
+
+# The one platform dependency in neither Central nor the repository above.
+[repositories.ij-deps]
+url    = "https://packages.jetbrains.team/maven/p/ij/intellij-dependencies"
+groups = ["org.jetbrains.intellij.deps.fastutil"]
 
 # The platform's test bases (BasePlatformTestCase) are JUnit 3 TestCase classes. Declaring JUnit 4
 # makes jk add the JUnit Vintage engine, which runs them as they are written.
