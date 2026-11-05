@@ -138,8 +138,10 @@ new scenario goes in the first directory whose description fits it.
   snippet elides it as `"…"`. A version the README alone carries (a `jk tool` command line, why a
   release is held back, an upstream tag) stays.
 - **`jk-lock.toml` is committed** — one per scenario, at the workspace root. A clean clone builds
-  the graph the lock describes, and `jk build` never rewrites it. For the two overlay scenarios
-  the lock lives under `overlay/` and `setup.sh` copies it into the checkout.
+  the graph the lock describes, and `jk build` never re-resolves it; only the rows of jk's own
+  plugins follow the jk that builds, so a newer jk rewrites their version. Commit a lock a
+  released jk wrote, so those rows name a published release. For the two overlay scenarios the
+  lock lives under `overlay/` and `setup.sh` copies it into the checkout.
 - **`jk-guards.toml` in every scenario**: the framework pack where one exists (`spring`,
   `android`; `monorepo` beside it for workspaces), otherwise a house baseline with one file-size
   ratchet. `jk guard` is clean everywhere; where a scenario has tests, `[test] exclude-tags`
