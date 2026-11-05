@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__jk",
+      "Bash(jk *)"
+    ],
+    "deny": [
+      "Read(.jk/graph/**)"
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "jk"
+  ],
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|Grep",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jk agent-hook"
+          }
+        ]
+      }
+    ]
+  }
+}
