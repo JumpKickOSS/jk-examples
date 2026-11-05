@@ -2,7 +2,7 @@
 
 A single JumpKick module whose `src/main/java` and `src/main/scala` compile in one Zinc session and
 reference each other both ways: `Greeting.java` calls the Scala `Greeter`, `Main.scala` reads its
-default from `Greeting`. Scala `3.10.0` is the manifest's exact pin (`scala = "3.10.0"`); JUnit 6 runs
+default from `Greeting`. Scala is the manifest's exact pin (`scala = "…"`); JUnit 6 runs
 a Java test and a Scala test in the same unit tier.
 
 It demonstrates:
@@ -31,7 +31,7 @@ jk bsp install           # .bsp/jk.json — what Metals and IntelliJ's BSP disco
 ```json
 {
   "name": "jk",
-  "version": "0.15.3",
+  "version": "…",
   "bspVersion": "2.1.0",
   "languages": ["java", "scala"],
   "argv": ["jk", "bsp", "serve"]
@@ -45,7 +45,7 @@ Metals reads `.bsp/jk.json` when the folder opens and offers **Import build**; c
 `build/initialize` — the server names `scala` among the languages it compiles, tests and runs:
 
 ```json
-{"displayName": "jk", "version": "0.15.3", "bspVersion": "2.1.0",
+{"displayName": "jk", "version": "…", "bspVersion": "2.1.0",
  "capabilities": {"compileProvider": {"languageIds": ["java", "scala"]},
                   "testProvider": {"languageIds": ["java", "scala"]},
                   "runProvider": {"languageIds": ["java", "scala"]}, "canReload": true}}
@@ -60,11 +60,11 @@ because `[application] main` names a main class (Metals offers a run lens on it)
  "tags": ["application"], "languageIds": ["java", "scala"], "dependencies": [],
  "capabilities": {"canCompile": true, "canTest": true, "canRun": true},
  "dataKind": "scala",
- "data": {"scalaOrganization": "org.scala-lang", "scalaVersion": "3.10.0", "scalaBinaryVersion": "3",
+ "data": {"scalaOrganization": "org.scala-lang", "scalaVersion": "…", "scalaBinaryVersion": "3",
           "platform": 1,
-          "jars": ["file:///…/store/tools/scala/3.10.0/lib/asm-9.10.1.jar",
-                   "file:///…/store/tools/scala/3.10.0/lib/asm-analysis-9.10.1.jar", "… 19 more"],
-          "jvmBuildTarget": {"javaHome": "file:///…/temurin-25/", "javaVersion": "25.0.2"}}}
+          "jars": ["file:///…/store/tools/scala/…/lib/asm-….jar",
+                   "file:///…/store/tools/scala/…/lib/asm-analysis-….jar", "… 19 more"],
+          "jvmBuildTarget": {"javaHome": "file:///…/temurin-25/", "javaVersion": "25…"}}}
 ```
 
 `buildTarget/scalacOptions` and `buildTarget/javacOptions` — the flags jk's Zinc session passes for
@@ -74,8 +74,8 @@ one class directory both halves compile into:
 ```json
 {"target": {"uri": "file:///…/01-start/java-scala-mixed/#scala-mixed"},
  "options": ["-java-output-version", "25"],
- "classpath": ["file:///…/store/tools/scala/3.10.0/lib/scala-library-3.10.0.jar",
-               "file:///…/store/tools/scala/3.10.0/lib/scala3-library_3-3.10.0.jar", "… 12 more"],
+ "classpath": ["file:///…/store/tools/scala/…/lib/scala-library-….jar",
+               "file:///…/store/tools/scala/…/lib/scala3-library_3-….jar", "… 12 more"],
  "classDirectory": "file:///…/01-start/java-scala-mixed/target/classes/"}
 ```
 

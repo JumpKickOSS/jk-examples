@@ -12,7 +12,7 @@ assembly/
   src/test/java/demo/AppTest.java        # locks the digest and the printed line
 ```
 
-The whole manifest:
+The whole manifest, versions elided (`jk.toml` has the exact pins):
 
 ```toml
 group = "com.example"
@@ -26,14 +26,14 @@ assembly = true # also writes target/assembly-0.0.1-all.jar
 
 # Bundled into the fat jar — main hashes with it, so the jar cannot run without it.
 [dependencies]
-commons-codec = "1.23.0"
+commons-codec = "…"
 
 # Compile-time only (@NullMarked): present on javac's path, absent from every jar.
 [provided-dependencies]
-jspecify = "1.0.1"
+jspecify = "…"
 
 [test-dependencies]
-junit-jupiter = "6.1.3"
+junit-jupiter = "…"
 ```
 
 A bare version is an **exact** pin: `jk build` and `jk lock` never move it, while `"latest"`

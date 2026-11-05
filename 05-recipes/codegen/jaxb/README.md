@@ -9,12 +9,12 @@ at run time: the `jakarta.xml.bind` annotations and the JAXB implementation on x
 
 ```toml
 [jaxb]
-version = "4.0.9"              # the jaxb-xjc release; moves with jaxb-runtime below
+version = "…"                # the jaxb-xjc release; moves with jaxb-runtime below
 package = "com.acme.order"     # one package for every class (-p), in place of the namespace's
 
 [dependencies]
-jakarta-xml-bind-api = "4.0.5"
-jaxb-runtime         = "4.0.9"
+jakarta-xml-bind-api = "…"
+jaxb-runtime         = "…"
 ```
 
 The step is `generate-jaxb` (`jk explain` shows it). A schema edit re-runs it and the compile; an

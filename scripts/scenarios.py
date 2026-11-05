@@ -30,6 +30,36 @@ NEEDS = {"docker", "android-sdk", "graalvm", "idle-host"}
 KEYS = {"cadence", "needs", "check", "dev", "dev-checks"}
 
 
+VERSION = re.compile(r"\d+(?:\.\d+)+(?:[.-][A-Za-z0-9]+)*")
+SKIP_DIRS = {"node_modules", "target", "checkout", ".git"}
+
+
+def pinned_versions(d):
+    """Every dependency or tool version the scenario's manifests pin (not the project's own)."""
+    found = set()
+
+    def walk(value, top):
+        if isinstance(value, dict):
+            for k, v in value.items():
+                if top and k == "version":
+                    continue  # the project's own version names its artifacts, and moves with it
+                walk(v, False)
+        elif isinstance(value, list):
+            for v in value:
+                walk(v, False)
+        elif isinstance(value, str):
+            tail = value.rsplit(":", 1)[-1] if value.count(":") >= 2 else value
+            if VERSION.fullmatch(tail):
+                found.add(tail)
+
+    for manifest in d.rglob("jk.toml"):
+        if SKIP_DIRS & set(manifest.relative_to(d).parts):
+            continue
+        with manifest.open("rb") as f:
+            walk(tomllib.load(f), True)
+    return found
+
+
 def manifests():
     for path in sorted(ROOT.glob("**/scenario.toml")):
         if any(part in {"node_modules", "target", "checkout"} for part in path.parts):
@@ -110,6 +140,14 @@ def cmd_lint(_args):
             problems.append(f"{rel(d)}: no AGENTS.md with jk's section (run `jk agents {rel(d)}`)")
         elif not claude.exists() or "@AGENTS.md" not in claude.read_text(encoding="utf-8"):
             problems.append(f"{rel(d)}: no CLAUDE.md importing AGENTS.md (run `jk agents {rel(d)}`)")
+    for d, _ in manifests():
+        readme = d / "README.md"
+        if not readme.exists():
+            continue
+        text = readme.read_text(encoding="utf-8")
+        for v in sorted(pinned_versions(d)):
+            if re.search(r"(?<![\w.])" + re.escape(v) + r"(?![\w]|\.\d)", text):
+                problems.append(f"{rel(d)}/README.md: names {v}, a version jk.toml pins (name the dependency, not its number)")
     for p in problems:
         print(p, file=sys.stderr)
     return 1 if problems else 0

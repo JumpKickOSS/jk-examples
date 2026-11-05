@@ -11,7 +11,7 @@ JVM project gets for free:
 - `jk run` — classpath execution from `target/classes/`; it does not use the cache (a cache dump
   rejects directory classpath entries).
 
-`gson` is pinned to `2.15.0`; `jk update` moves it.
+`gson` is an exact pin in `jk.toml`; `jk update` moves it.
 
 ```sh
 jk build --aot-cache

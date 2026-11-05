@@ -13,16 +13,16 @@ and the tests prove them on two databases, one per tier:
 
 ```toml
 [dependencies]
-flyway-core       = "13.12.0"
-flyway-postgresql = "13.12.0"    # Flyway's PostgreSQL support is its own module
-liquibase-core    = "5.0.4"
-postgresql        = "42.7.14"
-h2                = "2.5.252"
+flyway-core       = "…"
+flyway-postgresql = "…"    # Flyway's PostgreSQL support is its own module
+liquibase-core    = "…"
+postgresql        = "…"
+h2                = "…"
 
 [test-dependencies]
-junit-jupiter             = "6.1.3"
-testcontainers-postgresql = "org.testcontainers:testcontainers-postgresql:2.0.5"
-slf4j-simple              = "2.0.20"
+junit-jupiter             = "…"
+testcontainers-postgresql = "org.testcontainers:testcontainers-postgresql:…"
+slf4j-simple              = "…"
 ```
 
 Nothing about migrations is in `jk.toml` beyond those libraries. The same scripts feed
@@ -72,10 +72,10 @@ it, each launcher is a command on `PATH`; against a Postgres on `localhost:5432`
 
 ```sh
 jk tool install org.flywaydb:flyway-commandline:12.9.0 --bin flyway --main org.flywaydb.commandline.Main \
-  --with org.postgresql:postgresql:42.7.14
+  --with org.postgresql:postgresql
 
-jk tool install org.liquibase:liquibase-core:5.0.4 --bin liquibase --main liquibase.integration.commandline.LiquibaseCommandLine \
-  --with org.postgresql:postgresql:42.7.14 --with info.picocli:picocli:4.7.7
+jk tool install org.liquibase:liquibase-core --bin liquibase --main liquibase.integration.commandline.LiquibaseCommandLine \
+  --with org.postgresql:postgresql --with info.picocli:picocli
 
 flyway -url=jdbc:postgresql://localhost:5432/app -user=app -password=app \
   -locations=filesystem:src/main/resources/db/migration migrate          # then: info | validate | repair
@@ -83,16 +83,17 @@ liquibase --url=jdbc:postgresql://localhost:5432/app --username=app --password=a
   --changelog-file=db/changelog/db.changelog-master.yaml --search-path=src/main/resources update
 ```
 
-Or run either without installing — the same coordinates, resolved once and cached:
+Or run either without installing — the same coordinates, resolved once and cached. A coordinate
+with no version takes the newest release:
 
 ```sh
 jk tool run org.flywaydb:flyway-commandline:12.9.0 --main org.flywaydb.commandline.Main \
-  --with org.postgresql:postgresql:42.7.14 -- \
+  --with org.postgresql:postgresql -- \
   -url=jdbc:postgresql://localhost:5432/app -user=app -password=app \
   -locations=filesystem:src/main/resources/db/migration migrate        # then: info | validate | repair
 
-jk tool run org.liquibase:liquibase-core:5.0.4 --main liquibase.integration.commandline.LiquibaseCommandLine \
-  --with org.postgresql:postgresql:42.7.14 --with info.picocli:picocli:4.7.7 -- \
+jk tool run org.liquibase:liquibase-core --main liquibase.integration.commandline.LiquibaseCommandLine \
+  --with org.postgresql:postgresql --with info.picocli:picocli -- \
   --url=jdbc:postgresql://localhost:5432/app --username=app --password=app \
   --changelog-file=db/changelog/db.changelog-master.yaml --search-path=src/main/resources update
 ```

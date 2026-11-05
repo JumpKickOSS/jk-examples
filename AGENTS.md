@@ -32,8 +32,9 @@ conventions they all follow; read it before adding or reshaping one.
   wants a manifest, a README row, and the agent files below.
 - Conventions: bare identity keys at the top of `jk.toml`, `java = 25` (Android: 21), exact pins
   that `jk update` moves, a lock that is never hand-edited, a clean `jk guard`, `[image]` on every
-  runnable service. A README quotes the manifest's pin or the lock, never a third number; change
-  the README with the behaviour it describes.
+  runnable service. A README names no version `jk.toml` or `jk-lock.toml` holds (a TOML snippet
+  elides it as `"…"`), so `jk update` never leaves one behind; change the README with the
+  behaviour it describes.
 - Build scripts live in a scenario's `.jk/scripts/`. `.jk/graph/` is jk's code graph: generated,
   never committed.
 - `ports/netty` and `04-clients/nowinandroid` are pinned upstream checkouts: edit `overlay/`, run

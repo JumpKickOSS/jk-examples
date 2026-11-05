@@ -1,7 +1,7 @@
 # 05-recipes/plugins/jk-plugin — writing a jk plugin, and using it
 
 Two projects. `hello-plugin/` is a jk build plugin written outside jk's own tree, compiled against
-the published SDK (`cc.jumpkick:jk-plugin-sdk:0.50.2`). `consumer/` is an ordinary project that uses
+the published SDK (`cc.jumpkick:jk-plugin-sdk`). `consumer/` is an ordinary project that uses
 it: it pins the plugin jar by SHA-256, configures it with a `[hello]` table, and its app prints what
 the plugin's build step wrote.
 
@@ -28,7 +28,7 @@ its code. The step is cached like any of jk's own: same `[hello]` config, same o
 
 ```toml
 [plugins]
-hello = { path = "../hello-plugin/target/hello-plugin-0.1.0.jar", sha256 = "b7290f0a…" }
+hello = { path = "../hello-plugin/target/hello-plugin-0.1.0.jar", sha256 = "…" }
 
 [hello]
 greeting = "Hello from a jk plugin"

@@ -16,5 +16,5 @@ unzip -l target/variants-cli-1.0.0-all.jar | grep -c commons   # prod: 458 entri
 jk guard --variant contentType=demo     # every verb that builds needs the selection
 ```
 
-The prod value pins `commons-lang3 = "3.21.0"` under `[variants.contentType.prod.dependencies]`;
+The prod value pins `commons-lang3` under `[variants.contentType.prod.dependencies]`;
 the one lock holds it for both values, and the demo jar carries none of it.

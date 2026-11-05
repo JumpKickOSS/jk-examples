@@ -5,7 +5,7 @@
 `target/jk-results.md`, on the terminal, and in the MCP `jk_diagnostics` an agent reads. A clean
 module is a cache hit on the next build; a source or rule-set edit re-runs the step and nothing
 else does. Checkstyle is not in `[dependencies]`: the step fetches `com.puppycrawl.tools:checkstyle`
-at its pinned release (`checkstyle-version`, `14.1.0` unless you say otherwise) into the store and
+at its pinned release (`checkstyle-version`, or the release jk pins when you say nothing) into the store and
 hashes it into the step's key, with the rule set beside it.
 
 ```toml

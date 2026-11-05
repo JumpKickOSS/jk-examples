@@ -26,7 +26,7 @@ jk dev                       # the same, restarting on change
 
 `ControllerUnitTest` needs `grails-web-common`'s test fixtures (`GrailsWebMockUtil`). Grails
 publishes that dependency only in its Gradle module metadata, not in its POM. jk reads the
-metadata and locks `grails-web-common-8.0.0-test-fixtures.jar` on its own; a Maven build of the
+metadata and locks `grails-web-common-<version>-test-fixtures.jar` on its own; a Maven build of the
 same app would have to declare it.
 
 ## Teaches

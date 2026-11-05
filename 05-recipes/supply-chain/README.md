@@ -27,7 +27,7 @@ unzip -p target/csvjson-0.1.0.jar META-INF/sbom/application.cdx.json
 
 ## The accepted advisory
 
-`commons-io` 2.13.0 has `GHSA-78wr-2p64-hpwj`, a denial of service in `XmlStreamReader`. Here it is
+The pinned `commons-io` has `GHSA-78wr-2p64-hpwj`, a denial of service in `XmlStreamReader`. Here it is
 a test dependency that reads a fixture file, so the advisory cannot reach production. The exception
 records that judgement where the next reader will see it:
 

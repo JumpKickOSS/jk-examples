@@ -15,8 +15,8 @@ jk run                       # opens the window: JavaFX on the module path
 modules = ["javafx.controls", "javafx.fxml"]
 
 [dependencies]
-javafx-controls = { group = "org.openjfx", version = "27.0.1" }
-javafx-fxml     = { group = "org.openjfx", version = "27.0.1" }
+javafx-controls = { group = "org.openjfx", version = "…" }
+javafx-fxml     = { group = "org.openjfx", version = "…" }
 ```
 
 JavaFX runs as named modules. `[javafx]` puts every OpenJFX jar on the module path with

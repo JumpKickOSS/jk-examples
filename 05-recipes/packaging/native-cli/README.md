@@ -20,7 +20,7 @@ jk native                         # target/sums, built by native-image
 enabled = true          # `jk native` builds it; `jk build` stays JVM. "always" builds both.
 
 [processor-dependencies]
-picocli-codegen = "info.picocli:picocli-codegen:4.7.7"
+picocli-codegen = "info.picocli:picocli-codegen:…"
 ```
 
 - **No hand-written reflection config.** picocli binds options to fields by reflection, which

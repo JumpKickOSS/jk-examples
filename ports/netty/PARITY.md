@@ -11,7 +11,7 @@ Graph: Mill [`example/thirdparty/netty/build.mill`](https://github.com/com-lihao
 |------|--------|
 | `jk lock` (workspace) | **green** (~138 external coords) |
 | `jk build --skip-tests` | **green — 41 modules** |
-| Tests on JUnit Jupiter **5.14.3** (the tag's pin) | **green** — jk's launcher follows it onto Platform 1.14.3 |
+| Tests on the tag's JUnit Jupiter pin | **green** — jk's launcher follows it onto its Platform release |
 | Full `jk build` (curated unit tests) | **green — 41 modules, 25,396 passed / 1,321 skipped** (macOS aarch64) |
 | **`kind = "tests"`** (transport → codec smoke) | **green** — `TransportTestsKindSmokeTest` (`@Tag("kind-smoke")`); fails compile without the edge |
 | **BEFORE_COMPILE codegen** (common collections) | **green** — `.jk/scripts/before-compile.groovy` runs upstream `codegen.groovy`; no shell required when `NETTY_SKIP_SHELL_CODEGEN=1` |
@@ -54,6 +54,6 @@ Graph: Mill [`example/thirdparty/netty/build.mill`](https://github.com/com-lihao
 | `transport = { workspace = true, kind = "tests" }` | Mill `testModuleDeps` / Maven test-jar (ChannelHandlerMetadataUtil) |
 | `brotli4j` + every platform native the POMs list | codec-http / codec-http2 Brotli tests load one on any host |
 | codec-http2 `[test] jvm-args = ["-Xmx2g"]` | HPACK tests allocate 4 GiB-capacity tables concurrently |
-| root `[managed-dependencies]` `slf4j-api` 1.7.30 | Netty parent POM's dependencyManagement |
+| root `[managed-dependencies]` `slf4j-api` at the parent POM's release | Netty parent POM's dependencyManagement |
 | `HttpContentDecoderTest.isNotSupported → !Brotli.isAvailable()` | safety net if native missing |
 | `git checkout -f` + `clean -fdq` on setup | soft re-checkout left prior curate deletions |

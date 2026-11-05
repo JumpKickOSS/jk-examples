@@ -2,7 +2,7 @@
 
 One module, every knob the `[spring-boot]` plugin has, plus the core `[build-info]` table:
 
-- `version = "4.1.2"` — the Boot release, an exact pin; the BOM auto-imports and every
+- `version` — the Boot release, an exact pin; the BOM auto-imports and every
   starter is a versionless coordinate it manages.
 - `aot = true` — the Spring AOT step runs in the build.
 - `aot-jvm-args`, `aot-args`, `include-tools`, `platform` — written out at their defaults so

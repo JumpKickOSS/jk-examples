@@ -1,6 +1,6 @@
 # 02-services/netty-echo — Netty echo server on the published artifact
 
-An idiomatic single-module JumpKick app on `io.netty:netty-all` (pinned to `4.2.20.Final`). This is the small dogfood unit for cold / warm / no-op benches; the full
+An idiomatic single-module JumpKick app on `io.netty:netty-all` (an exact 4.2 pin). This is the small dogfood unit for cold / warm / no-op benches; the full
 multi-module port of Netty's own sources is [`../netty`](../netty/).
 
 It demonstrates:

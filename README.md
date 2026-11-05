@@ -127,12 +127,16 @@ new scenario goes in the first directory whose description fits it.
 - **`java = 25`** (bytecode target; the host JDK is already 25+). Prefer `java =`, never
   `jdk = 17/21` — those force obsolete runtime downloads. Android keeps `java = 21` for that
   platform.
-- **Versions are exact pins**, the current stable when the scenario was written
-  (`h2 = "2.5.250"`, a catalog short name with its version, or a `group:artifact:version` string;
-  a BOM-managed artifact is its catalog short name set to `"managed"`, or a versionless coordinate
-  under a handle that is not the catalog name), and `jk update` moves them — the rule the
-  template catalog follows. A README quotes the manifest's pin or the lock, never a third number.
-  The Netty port and Now in Android pin at the upstream tag they mirror and say so.
+- **Versions are exact pins** (`h2 = "2.5.250"`, a catalog short name with its version, or a
+  `group:artifact:version` string; a BOM-managed artifact is its catalog short name set to
+  `"managed"`, or a versionless coordinate under a handle that is not the catalog name), and
+  `jk update` moves them — the rule the template catalog follows. Four scenarios are not updated:
+  the Netty port and Now in Android pin at the upstream tag they mirror, the two migration recipes'
+  manifests are `jk import`'s output, and `supply-chain` holds `commons-io` below a fix on purpose.
+- **A README names no version that `jk.toml` or `jk-lock.toml` holds.** It names the dependency
+  and lets the manifest carry the number, so `jk update` never leaves a README behind; a TOML
+  snippet elides it as `"…"`. A version the README alone carries (a `jk tool` command line, why a
+  release is held back, an upstream tag) stays.
 - **`jk-lock.toml` is committed** — one per scenario, at the workspace root. A clean clone builds
   the graph the lock describes, and `jk build` never rewrites it. For the two overlay scenarios
   the lock lives under `overlay/` and `setup.sh` copies it into the checkout.

@@ -6,16 +6,16 @@ The `[jooq]` preset reads the schema from the module's own migrations: the Flywa
 keys and references generate `com.acme.jooq.Tables`, `Customers` and `Orders`, which join the
 compile. No database runs for the build, and the scripts are the step's cache key. The generator
 is not in `[dependencies]`: the preset fetches `org.jooq:jooq-codegen` into the store at
-`[jooq] version`; `jooq = "3.21.9"` is the runtime the generated classes read, on the generator's
+`[jooq] version`; `jooq` is the runtime the generated classes read, on the generator's
 number.
 
 ```toml
 [jooq]
-version  = "3.21.9"                   # the jooq-codegen release; moves with the runtime pin below
+version  = "…"                        # the jooq-codegen release; moves with the runtime pin below
 excludes = "flyway_schema_history"    # Flyway's history table is a table too, to DDLDatabase
 
 [dependencies]
-jooq = "3.21.9"
+jooq = "…"
 ```
 
 The names are upper case because DDLDatabase applies the scripts to H2, which folds an unquoted

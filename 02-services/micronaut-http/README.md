@@ -2,7 +2,7 @@
 
 Minimal Micronaut service on the built-in `[micronaut]` plugin. It demonstrates:
 
-- `[micronaut] version = "5.2.5"` — the platform BOM is an exact pin, starters are versionless,
+- `[micronaut] version` — the platform BOM is an exact pin, starters are versionless,
   and `jk update` moves the pin.
 - `assembly = true` — one runnable fat jar (Maven shade parity).
 - A bare `[native]` — `jk native` builds a GraalVM executable at `target/hello-http` (about a

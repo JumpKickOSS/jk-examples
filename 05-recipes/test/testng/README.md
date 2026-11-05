@@ -7,7 +7,7 @@ engine appears:
 
 ```toml
 [test-dependencies]
-testng = "7.12.0"
+testng = "…"
 ```
 
 Discovery is the engine's class scan over the test root, the way Jupiter's is: every class with a

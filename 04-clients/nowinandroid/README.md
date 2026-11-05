@@ -50,22 +50,21 @@ jk build --skip-tests --variant contentType=demo
 ## Known deviations from NiA's Gradle build
 
 Pins follow NiA's `gradle/libs.versions.toml` at the pinned SHA and move with it — do not
-`jk update` them. Every version below is either what the lock pins or a deliberate call:
+`jk update` them. The exact pins live in `overlay/` (`jk.toml`s and `jk-lock.toml`); each call below is deliberate:
 
-- **Kotlin `2.4.20`** (NiA pins 2.3.0): jk's Build-Tools-API worker floor is 2.4.
+- **Kotlin 2.4** (NiA pins 2.3): jk's Build-Tools-API worker floor is 2.4.
 - **compile-sdk 36** (matches current NiA): platform is provisioned from the managed SDK.
-- **`compose-bom-alpha = 2026.07.01`** (NiA uses `2025.09.01`): the alpha BOM aligns Material3
+- **`compose-bom-alpha`** in place of NiA's stable `compose-bom`: the alpha BOM aligns Material3
   adaptive 1.3 + navigation-suite + Compose runtime for Navigation3. A pure *stable* compose-bom
   cannot co-resolve suite 1.4 with adaptive-navigation3 1.3 today — Google's own catalog uses
   the alpha BOM for this stack.
-- **Navigation3 `1.2.0`** — NiA's own pin (its deep-link API, `UriDeepLinkMatcher`, is new in
+- **Navigation3 1.2** — NiA's own line (its deep-link API, `UriDeepLinkMatcher`, is new in
   1.2).
-- **Lifecycle `2.11.0`**, **Hilt `2.60.1`**, **Activity Compose `1.13.0`**, **Room `2.8.4`**,
-  **Work `2.11.2`** — newer than NiA's catalog, chosen when the port was written; they co-resolve
+- **Lifecycle**, **Hilt**, **Activity Compose**, **Room** and **Work** — newer than NiA's catalog, chosen when the port was written; they co-resolve
   with the alpha Compose BOM above.
 - **No `runtime-tracing`**: AndroidX POM floors fight Compose runtime under PubGrub; optional
   tracing dep omitted (use `tracing-ktx` only).
-- **kotlinx-datetime `0.6.1`** exact (source-level API).
+- **kotlinx-datetime** held on its 0.6 line (source-level API).
 - **`guava` on `sync/work`**: processor-scope guava vs `listenablefuture`.
 - **One flavor selection for the workspace**: `--variant contentType=demo` on the app's build
   selects `demo` in every member that declares the dimension (`core/notifications` compiles
@@ -75,8 +74,8 @@ Pins follow NiA's `gradle/libs.versions.toml` at the pinned SHA and move with it
 
 ## Guards on an upstream tree
 
-`overlay/jk-guards.toml` extends `cc.jumpkick.guards:android` and `cc.jumpkick.guards:monorepo`
-(both `0.15.3`). NiA logs with `android.util.Log` in six classes (`StubAnalyticsHelper`,
+`overlay/jk-guards.toml` extends `cc.jumpkick.guards:android` and `cc.jumpkick.guards:monorepo`.
+NiA logs with `android.util.Log` in six classes (`StubAnalyticsHelper`,
 `NiaPreferencesDataSource`, `SyncUtilities`, `StubSyncSubscriber`, `JankStatsModule`,
 `ProfileVerifierLogger`), which the android pack bans, so each is a
 `[[guards.no-android-log.allow]]` entry with its reason. An entry that stops matching is red, so

@@ -20,8 +20,8 @@ detekt     = true
 ```
 
 None of the tools is in `[dependencies]`: each is fetched at its pinned release
-(`checkstyle-version` `14.1.0`, `pmd-version` `7.27.0`, `spotbugs-version` `4.10.4`,
-`detekt-version` `1.23.8`) into the store and forked on the build JDK. `pmd.xml` is a project
+(`checkstyle-version`, `pmd-version`, `spotbugs-version`, `detekt-version`, or the release jk
+pins for each when the key is absent) into the store and forked on the build JDK. `pmd.xml` is a project
 ruleset over PMD's `category/java/bestpractices.xml` minus `SystemPrintln`, since a command-line
 program's stdout is its output; detekt runs its default configuration, so `Band.kt` names its
 constants (`MagicNumber`) and matches its file name (`MatchingDeclarationName`). The Java and

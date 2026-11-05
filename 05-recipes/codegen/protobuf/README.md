@@ -6,12 +6,12 @@ the packaged jar.
 
 ```toml
 [protobuf]
-version = "4.36.2"
+version = "…"
 lite    = true
 kotlin  = true
 ```
 
-`protoc` and `protobuf-kotlin-lite` are pinned to the same protobuf release, `4.36.2`, so
+`protoc` and `protobuf-kotlin-lite` are pinned to the same protobuf release, so
 generated code and runtime agree; `jk update` moves the pair together.
 
 ```sh

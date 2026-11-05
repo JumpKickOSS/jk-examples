@@ -38,7 +38,7 @@ dir     = "web"
 ready = "http://localhost:8080/api/hello"
 
 [test-dependencies]
-junit-jupiter = "6.1.3"
+junit-jupiter = "…"
 ```
 
 `[node] dir = "web"` makes `web/` a node build of this module ([Node.js](https://github.com/JumpKickOSS/jk/blob/main/docs/user/node.md#the-two-shapes)):
@@ -58,7 +58,7 @@ $ jk dev -u
 jk watch run: watching src -- process restart on change. Ctrl-C stops.
 vite-sidecar-node │ > dev
 vite-sidecar-node │ > vite
-vite-sidecar-node │   VITE v8.3.0  ready in 144 ms
+vite-sidecar-node │   VITE v…  ready in 144 ms
 vite-sidecar-node │   ➜  Local:   http://localhost:5173/
 listening on http://localhost:8080
 jk watch run: ready - http://localhost:5173 (java -cp target/classes demo.Api)

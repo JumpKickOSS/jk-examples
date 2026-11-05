@@ -15,11 +15,11 @@ Here we build **Netty's own sources** as a JumpKick workspace: the module graph 
 | **Layout** | `overlay/` + `setup.sh` → `checkout/` (gitignored) |
 
 **Why these pins.** Every dependency is an exact pin at the version Netty's own POMs use at the
-tag — JUnit Jupiter `5.14.3`, Mockito `4.11.0`, Bouncy Castle `1.70`, log4j `2.25.3`, … — so do
+tag — JUnit Jupiter, Mockito, Bouncy Castle, log4j, … — so do
 not `jk update` them; move them with the tag. The module graph and each module's dependency set
 follow Mill's `build.mill`. The workspace root's `[managed-dependencies]` pins `slf4j-api` to
-`1.7.30` as Netty's parent POM does, and `java = 25` compiles the same sources Mill compiles at a
-current release. jk's test launcher follows the declared Jupiter (Platform `1.14.3` here), so no
+the release Netty's parent POM does, and `java = 25` compiles the same sources Mill compiles at a
+current release. jk's test launcher follows the declared Jupiter onto its own Platform release, so no
 module pins the platform.
 
 ## Layout
@@ -79,7 +79,7 @@ jk build --skip-tests -m codec-http
 
 ## Guards on an upstream tree
 
-`overlay/jk-guards.toml` extends the `monorepo` pack (`0.15.3`) and adds the file-size ratchet.
+`overlay/jk-guards.toml` extends the `monorepo` pack and adds the file-size ratchet.
 Upstream is what it is, so two rules are baselines: `one-module-per-package` (microbench and a few
 split-out modules share packages with the module that owns them) and `file-size`. The sites are
 in `overlay/jk-guards-baseline.toml`, written by `jk guard freeze <id> -W "…"`, never by hand;

@@ -9,7 +9,7 @@ on, in one application small enough to read in an afternoon.
 
 | | |
 |---|---|
-| **Backend** | Spring Boot 4.1 on Java 25, virtual threads, Spring AOT, four modules under `backend/` |
+| **Backend** | Spring Boot 4 on Java 25, virtual threads, Spring AOT, four modules under `backend/` |
 | **Database** | PostgreSQL 18 (`uuidv7()` keys, a no-double-booking exclusion constraint), Flyway migrations and seed |
 | **Data access** | jOOQ, generated from the migration scripts at build time — no database needed to compile |
 | **Mapping** | MapStruct, generated at compile time; only DTOs cross HTTP |

@@ -5,7 +5,7 @@ the whole file when nothing is selected, as one undoable edit. The build compile
 IDE itself, runs the tests inside a headless IDE, and packages the zip an IDE installs.
 
 ```sh
-jk build                     # compile against IntelliJ IDEA 2026.2, run the tests in a headless IDE
+jk build                     # compile against the pinned IntelliJ IDEA, run the tests in a headless IDE
 ls target/sort-lines-1.0.0.zip
 ```
 
@@ -15,14 +15,14 @@ Install it with **Settings → Plugins → ⚙ → Install Plugin from Disk…**
 
 ```toml
 [intellij]
-version = "262.11879.100"  # the platform build; the IDE's About dialog shows IC-262.11879.100
+version = "…"  # the platform build number, as the IDE's About dialog shows it (IC-<build>)
 
 [repositories.jetbrains]
 url    = "https://www.jetbrains.com/intellij-repository/releases"
 groups = ["com.jetbrains.intellij.*"]
 
 [test-dependencies]
-junit = "junit:junit:4.13.2"
+junit = "junit:junit:…"
 ```
 
 jk fetches the IDE distribution once and compiles against its jars, which stay out of the zip. The
