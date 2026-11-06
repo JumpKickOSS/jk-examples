@@ -151,8 +151,8 @@ new scenario goes in the first directory whose description fits it.
   between `<!-- BEGIN:jumpkick -->` and `<!-- END:jumpkick -->`, `CLAUDE.md` importing it, and
   `.mcp.json` plus `.claude/settings.json` registering `jk mcp` and jk's hook. jk owns the section
   and a build refreshes it, so it is never edited by hand; a scenario's own agent rules go outside
-  the markers. Other agents' files (`.gemini/`, `.cursor/`, …) and the code graph `.jk/graph/` are
-  not committed. `scripts/scenarios.py lint` checks the first two files.
+  the markers. Other agents' files (`.gemini/`, `.cursor/`, …) are not committed, and jk's code
+  graph is a build artifact under `target/`. `scripts/scenarios.py lint` checks the first two files.
 
 ## Running
 

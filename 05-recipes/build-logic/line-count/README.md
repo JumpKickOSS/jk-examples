@@ -87,9 +87,8 @@ Exception in thread "main" java.lang.IllegalStateException: /line-count.txt is n
 
 `jk test` fails on the same message, which is the point of the test.
 
-**A script left at the top of `.jk/`.** Only `.jk/scripts/` is build logic; the rest of `.jk/`
-is jk's other checked-in state (the code graph lives in `.jk/graph/`). A script left directly in
-`.jk/` does not run, and the build says so once instead of skipping it quietly.
+**A script left at the top of `.jk/`.** Only `.jk/scripts/` is build logic. A script left
+directly in `.jk/` does not run, and the build says so once instead of skipping it quietly.
 
 ## Variations
 

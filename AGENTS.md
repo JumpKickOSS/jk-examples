@@ -35,8 +35,8 @@ conventions they all follow; read it before adding or reshaping one.
   runnable service. A README names no version `jk.toml` or `jk-lock.toml` holds (a TOML snippet
   elides it as `"…"`), so `jk update` never leaves one behind; change the README with the
   behaviour it describes.
-- Build scripts live in a scenario's `.jk/scripts/`. `.jk/graph/` is jk's code graph: generated,
-  never committed.
+- Build scripts live in a scenario's `.jk/scripts/`. jk's code graph is a build artifact
+  (`target/graph/` and jk's action cache), never in the tree.
 - `ports/netty` and `04-clients/nowinandroid` are pinned upstream checkouts: edit `overlay/`, run
   `./setup.sh`, build in `checkout/` (gitignored). `bench/` holds harnesses and results, not
   scenarios.
