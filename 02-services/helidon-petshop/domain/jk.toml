@@ -1,0 +1,5 @@
+name = "petshop-domain"
+
+# Null checking: every package is @NullMarked (package-info.java), and NullAway checks it at
+# compile time.
+[nullness]

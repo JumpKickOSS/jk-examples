@@ -1,0 +1,1803 @@
+version = 1
+generated-by = "jk 0.50.4-SNAPSHOT"
+generated-by-build = "8e4c8c56e570"
+generated-by-build-time = "2026-11-07T21:14:02Z"
+resolution-algorithm = "pubgrub-v1"
+jk-min = "0.12.0"
+manifests-sha256 = "6b51f21d3cc30d848903ea22916c52350712e446aa4eae54ea6e4db68e14077a"
+project-id = "2ffad9771e030c9675e9994f6c3337bc"
+
+[jdk]
+suggested-vendor = "temurin"
+suggested-version = "27.0.1.0.2"
+
+[[artifact]]
+name     = "com.github.ben-manes.caffeine:caffeine:jar:"
+version  = "3.3.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:5d015adc655191c8f9a152c4cc871170a04d28040ed281d0e74ade87d6ae8aff"
+scopes   = ["processor"]
+licenses = ["Apache-2.0"]
+deps = [
+  "com.google.errorprone:error_prone_annotations:jar:@2.30.0",
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "com.github.kevinstern:software-and-algorithms:jar:"
+version  = "1.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:61ab82439cef37343b14f53154c461619375373a56b9338e895709fb54e0864c"
+scopes   = ["processor"]
+licenses = ["MIT"]
+
+[[artifact]]
+name     = "com.google.auto.service:auto-service-annotations:jar:"
+version  = "1.1.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:16a76dd00a2650568447f5d6e3a9e2c809d9a42367d56b45215cfb89731f4d24"
+scopes   = ["processor"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "com.google.auto.value:auto-value-annotations:jar:"
+version  = "1.11.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:6c61a11420a5cddf3313888e9d335d5eedfbeb9a8da26591470fbfe61f5bf859"
+scopes   = ["processor"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "com.google.auto:auto-common:jar:"
+version  = "1.2.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:f50b1ce8a41fad31a8a819c052f8ffa362ea0a3dbe9ef8f7c7dc9a36d4738a59"
+scopes   = ["processor"]
+licenses = ["Apache-2.0"]
+deps = [
+  "com.google.guava:guava:jar:@33.3.1-jre",
+]
+
+[[artifact]]
+name     = "com.google.code.findbugs:jsr305:jar:"
+version  = "3.0.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:766ad2a0783f2687962c8ad74ceecc38a28b9f72a2d085ee438b7813e928d0c7"
+scopes   = ["processor"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "com.google.errorprone:error_prone_annotation:jar:"
+version  = "2.51.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:e9a7e46490fa272381a427e91dd266189c6b6b622985821a092d24acad3aa7c9"
+scopes   = ["processor"]
+licenses = ["Apache-2.0"]
+deps = [
+  "com.google.guava:guava:jar:@33.3.1-jre",
+]
+
+[[artifact]]
+name     = "com.google.errorprone:error_prone_annotations:jar:"
+version  = "2.30.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:144f3aefbd6e27daec55d3753b2c6b13c1afdaf0cf04816cdb564588ed92f1bd"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["processor"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "com.google.errorprone:error_prone_check_api:jar:"
+version  = "2.51.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:208d9ae3f9de9b9f2e6e773b27a5c4c363cc62f27d4699bd6fde57be373e0174"
+scopes   = ["processor"]
+licenses = ["Apache-2.0"]
+deps = [
+  "com.github.ben-manes.caffeine:caffeine:jar:@3.3.0",
+  "com.github.kevinstern:software-and-algorithms:jar:@1.0",
+  "com.google.auto.value:auto-value-annotations:jar:@1.11.1",
+  "com.google.errorprone:error_prone_annotation:jar:@2.51.0",
+  "com.google.errorprone:error_prone_annotations:jar:@2.30.0",
+  "io.github.eisop:dataflow-errorprone:jar:@3.41.0-eisop1",
+  "io.github.java-diff-utils:java-diff-utils:jar:@4.17",
+  "javax.inject:javax.inject:jar:@1",
+  "org.jspecify:jspecify:jar:@1.0.1",
+  "org.safere:safere:jar:@1.0.0",
+]
+
+[[artifact]]
+name     = "com.google.errorprone:error_prone_core:jar:"
+version  = "2.51.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:9a2e2d326fc686c7a0497ab508fde32c298f59cbb78b88e3f26a24fa8e30c31d"
+scopes   = ["processor"]
+licenses = ["Apache-2.0"]
+deps = [
+  "com.google.auto.service:auto-service-annotations:jar:@1.1.1",
+  "com.google.auto.value:auto-value-annotations:jar:@1.11.1",
+  "com.google.auto:auto-common:jar:@1.2.2",
+  "com.google.errorprone:error_prone_annotation:jar:@2.51.0",
+  "com.google.errorprone:error_prone_annotations:jar:@2.30.0",
+  "com.google.errorprone:error_prone_check_api:jar:@2.51.0",
+  "com.google.googlejavaformat:google-java-format:jar:@1.37.0",
+  "com.google.guava:guava:jar:@33.3.1-jre",
+  "com.google.protobuf:protobuf-java:jar:@4.36.0",
+  "io.github.eisop:dataflow-errorprone:jar:@3.41.0-eisop1",
+  "javax.inject:javax.inject:jar:@1",
+  "org.jspecify:jspecify:jar:@1.0.1",
+  "org.pcollections:pcollections:jar:@5.0.0",
+]
+
+[[artifact]]
+name     = "com.google.googlejavaformat:google-java-format:jar:"
+version  = "1.37.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:49874ad1d6b1006d2f8660482135609eb124888e0046c3dbfefc706a0387c700"
+scopes   = ["processor"]
+licenses = ["Apache-2.0"]
+deps = [
+  "com.google.guava:guava:jar:@33.3.1-jre",
+  "org.commonmark:commonmark-ext-gfm-tables:jar:@0.29.0",
+  "org.commonmark:commonmark:jar:@0.29.0",
+]
+
+[[artifact]]
+name     = "com.google.guava:failureaccess:jar:"
+version  = "1.0.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:8a8f81cf9b359e3f6dfa691a1e776985c061ef2f223c9b2c80753e1b458e8064"
+scopes   = ["processor"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "com.google.guava:guava:jar:"
+version  = "33.3.1-jre"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:4bf0e2c5af8e4525c96e8fde17a4f7307f97f8478f11c4c8e35a0e3298ae4e90"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["processor"]
+licenses = ["Apache-2.0"]
+deps = [
+  "com.google.code.findbugs:jsr305:jar:@3.0.2",
+  "com.google.errorprone:error_prone_annotations:jar:@2.30.0",
+  "com.google.guava:failureaccess:jar:@1.0.2",
+  "com.google.guava:listenablefuture:jar:@9999.0-empty-to-avoid-conflict-with-guava",
+  "com.google.j2objc:j2objc-annotations:jar:@3.0.0",
+  "org.checkerframework:checker-qual:jar:@4.3.1",
+]
+
+[[artifact]]
+name     = "com.google.guava:listenablefuture:jar:"
+version  = "9999.0-empty-to-avoid-conflict-with-guava"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b372a037d4230aa57fbeffdef30fd6123f9c0c2db85d0aced00c91b974f33f99"
+scopes   = ["processor"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "com.google.j2objc:j2objc-annotations:jar:"
+version  = "3.0.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:88241573467ddca44ffd4d74aa04c2bbfd11bf7c17e0c342c94c9de7a70a7c64"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["processor"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "com.google.protobuf:protobuf-java:jar:"
+version  = "4.36.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:06515776b10bfed334b610273ffdd8884098a9333cb816314b4e4876bfcd2041"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main", "processor"]
+licenses = ["BSD-3-Clause"]
+
+[[artifact]]
+name     = "com.h2database:h2:jar:"
+version  = "2.4.240"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:29b70e427cc1c40cdc376283adbb0cc62853073797bb5fe5761f81fe73d57ce0"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["runtime"]
+licenses = ["MPL-2.0", "EPL-1.0"]
+
+[[artifact]]
+name     = "com.uber.nullaway:nullaway:jar:"
+version  = "0.14.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:440d3217f6a74d3b8dab766b0c63dbfbb87bea36d798879865218249dc3f1604"
+scopes   = ["processor"]
+licenses = ["MIT"]
+deps = [
+  "com.google.guava:guava:jar:@33.3.1-jre",
+  "org.checkerframework:dataflow-nullaway:jar:@4.3.1",
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "com.zaxxer:HikariCP:jar:"
+version  = "7.1.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:2be45c641b841e81df87292e181f2c203500c5f0e9a1676f135927387f3cf40b"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "org.slf4j:slf4j-api:jar:@2.0.17",
+]
+
+[[artifact]]
+name     = "io.github.eisop:dataflow-errorprone:jar:"
+version  = "3.41.0-eisop1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:10434fba4e53f55fa9c76904cde414b918932548c9dfc4e2d634ac05ff7a7d10"
+scopes   = ["processor"]
+licenses = ["GPL-2.0-with-classpath-exception"]
+
+[[artifact]]
+name     = "io.github.java-diff-utils:java-diff-utils:jar:"
+version  = "4.17"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:3e3b6e149bf5d091422689ad6fcc22baad503a52b1139a9baf250fb6de633024"
+scopes   = ["processor"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "io.helidon.builder:helidon-builder-api:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:bbd00b798e03b32ad92f570b85f0f80f6be0fbbb2b91eacf2cc4030dd67ed934"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main", "runtime", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.common.concurrency:helidon-common-concurrency-limits:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:cf0e0115ac01813c302068fe6e3839a2aa5237c1b61c58cfe269643522129d03"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.builder:helidon-builder-api:jar:@27.0.1",
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+  "io.helidon.config:helidon-config:jar:@27.0.1",
+  "io.helidon.metrics:helidon-metrics-api:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.common.features:helidon-common-features-api:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:7fe8748deed16336704526d59c89b365201ccd9b059c69ca760fd7cb8fae1a7a"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.common.features:helidon-common-features-metadata:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.common.features:helidon-common-features-metadata:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:6d4de49b2b75c68440e669ee26498216f00c41967505efef5de7910c86901a88"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.builder:helidon-builder-api:jar:@27.0.1",
+  "io.helidon.metadata:helidon-metadata-hson:jar:@27.0.1",
+  "io.helidon.metadata:helidon-metadata:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.common.features:helidon-common-features:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:175185b3aec1f6cc6a72f71d7ec7e91eb1acb09b1f659a61fe223ca8cb56b6dd"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.common.features:helidon-common-features-api:jar:@27.0.1",
+  "io.helidon.common.features:helidon-common-features-metadata:jar:@27.0.1",
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+  "io.helidon.metadata:helidon-metadata-hson:jar:@27.0.1",
+  "io.helidon.metadata:helidon-metadata:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.common.testing:helidon-common-testing-http-junit5:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:d671209081254702baad97ff1c9c0d31a4a1f46222f545e762fb69fe91c51e64"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.common.testing:helidon-common-testing-junit5:jar:@27.0.1",
+  "io.helidon.http:helidon-http:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.common.testing:helidon-common-testing-junit5:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:8d07c29d603291a0f9376f84a3cb43e3e7b792d7e87757d719ed1ea3cc18b2a6"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["test"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "io.helidon.common.testing:helidon-common-testing-virtual-threads:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:e49ee184eafa28d20111cc980018f62e8d4f904a3dfe96419659e3d09c7b1b00"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["test"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "io.helidon.common:helidon-common-buffers:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:84ecfef5615e37e005d665837f17c3048c147d3708ab8d60c393cde370fdeadb"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main", "runtime", "test"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "io.helidon.common:helidon-common-configurable:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:f91e35feb7f2f0ddc0c3be6127e9467bdf96cc8b5209731961e3c5225170bbb0"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main", "runtime", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.builder:helidon-builder-api:jar:@27.0.1",
+  "io.helidon.common:helidon-common-context:jar:@27.0.1",
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+  "io.helidon.config:helidon-config:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.common:helidon-common-context:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:e651f177592906203c66a41cba16e6ae38ade422fc06b9f0fecb09a52296baa0"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main", "runtime", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.common:helidon-common-key-util:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:2171c75244f1aa1d6c99ea4eb08b980e10ff77aa962743754fb4918982213c65"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.builder:helidon-builder-api:jar:@27.0.1",
+  "io.helidon.common:helidon-common-configurable:jar:@27.0.1",
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+  "io.helidon.config:helidon-config:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.common:helidon-common-mapper:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:21aa08081c64441c28f8f75de4cdf43500d4af56c4f5113bb606ce1d191919dd"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main", "runtime", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.builder:helidon-builder-api:jar:@27.0.1",
+  "io.helidon.common:helidon-common-types:jar:@27.0.1",
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+  "io.helidon.service:helidon-service-registry:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.common:helidon-common-media-type:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:50a8f616475c5dea448499349815e3fe5c30bd889656ce8709565cf2f9722496"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main", "runtime", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+  "io.helidon.metadata:helidon-metadata:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.common:helidon-common-parameters:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:7f7bfa8aa6b11a1f72f4952058f26e3bddefbdaa18cbd9291f3b5032e14d68cb"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main", "runtime", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.common:helidon-common-mapper:jar:@27.0.1",
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.common:helidon-common-resumable:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:02935122725159d036a56b546c608432fd537106795021a1503be0e34b982983"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main", "runtime", "test"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "io.helidon.common:helidon-common-security:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:1387d64b7d37f12b9b5c0c4f0af40deda7e8792dbb62f2cfe19f00400a30a054"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "io.helidon.common:helidon-common-socket:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:d5e96efcab505d8a150e631522ad9cefc68193b244c729ee319546571b99252d"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.builder:helidon-builder-api:jar:@27.0.1",
+  "io.helidon.common:helidon-common-buffers:jar:@27.0.1",
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+  "io.helidon.config:helidon-config:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.common:helidon-common-task:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b1d5b899b36cb0ca622d4a60cbb16c6b94dc9d5a1a26ad3364fb80ae61ec8aa5"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "io.helidon.common:helidon-common-tls:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:6adba968d6d3c31938ca6a35ec1614824a4f7bb99fefe5b7def5c89e39b9f197"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.builder:helidon-builder-api:jar:@27.0.1",
+  "io.helidon.common:helidon-common-key-util:jar:@27.0.1",
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+  "io.helidon.config:helidon-config:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.common:helidon-common-types:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:d71507b2976c96174db2b41d5f5612b6c2e966321f286193728451831f1861f8"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main", "runtime", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.builder:helidon-builder-api:jar:@27.0.1",
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.common:helidon-common-uri:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:f68ea6789ef8f8a8a0c89215a4d42d766304c900b351a299a46a64bbaab20d9d"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main", "runtime", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.builder:helidon-builder-api:jar:@27.0.1",
+  "io.helidon.common:helidon-common-mapper:jar:@27.0.1",
+  "io.helidon.common:helidon-common-parameters:jar:@27.0.1",
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.common:helidon-common:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:52d89809086d7c5f140c5969ad964ce9da38ee09ef08f3761b42bfa2246822ac"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main", "runtime", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.metadata:helidon-metadata:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.config:helidon-config-yaml:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:71ff50aac8f93f02e40d02d4154b5c2aa5f68441e00614b74555d28794ea08ac"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+  "io.helidon.config:helidon-config:jar:@27.0.1",
+  "org.yaml:snakeyaml:jar:@2.7",
+]
+
+[[artifact]]
+name     = "io.helidon.config:helidon-config:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:d5a6e3c56b30e8ff54988dea4ae598d5d7585f6d378c06419e5d5e2f314c8ada"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main", "runtime", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.builder:helidon-builder-api:jar:@27.0.1",
+  "io.helidon.common:helidon-common-mapper:jar:@27.0.1",
+  "io.helidon.common:helidon-common-media-type:jar:@27.0.1",
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.dbclient:helidon-dbclient-health:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:2ddb9725f484ca96ab719b15512b3058a4d8df26c3b656dae04733dd05f0fca0"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.config:helidon-config:jar:@27.0.1",
+  "io.helidon.dbclient:helidon-dbclient:jar:@27.0.1",
+  "io.helidon.health:helidon-health:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.dbclient:helidon-dbclient-hikari:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:1d6b0c9796abc40b01af179e37dbd6df54b342653c94ec7e85fe6204aabd5b25"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "com.zaxxer:HikariCP:jar:@7.1.0",
+  "io.helidon.builder:helidon-builder-api:jar:@27.0.1",
+  "io.helidon.common.features:helidon-common-features-api:jar:@27.0.1",
+  "io.helidon.config:helidon-config:jar:@27.0.1",
+  "io.helidon.dbclient:helidon-dbclient-jdbc:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.dbclient:helidon-dbclient-jdbc:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:83c6fa78d87b7df37ec3dca965f4ced5581884b067981dd637f2140ba7fc9cdd"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.builder:helidon-builder-api:jar:@27.0.1",
+  "io.helidon.common.features:helidon-common-features-api:jar:@27.0.1",
+  "io.helidon.config:helidon-config:jar:@27.0.1",
+  "io.helidon.dbclient:helidon-dbclient:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.dbclient:helidon-dbclient:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:66ef2cbf280e19270019874e0dc60d18926e725e576d55dfbf2a498ce9ea1d44"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.common:helidon-common-context:jar:@27.0.1",
+  "io.helidon.common:helidon-common-mapper:jar:@27.0.1",
+  "io.helidon.config:helidon-config:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.health:helidon-health-checks:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:6d83f126c798c8530ef34e578db0541d545755baf8d72059e909bc0fc506b15a"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.config:helidon-config:jar:@27.0.1",
+  "io.helidon.health:helidon-health:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.health:helidon-health:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:ccd64608e9efc42e5993bc067c6c7fd1bfaa9c551d8817ca0f7ec4a98e6f14d0"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+  "io.helidon.config:helidon-config:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.http.encoding:helidon-http-encoding:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:e191739abdeef6012cbe1f2945fb0964113bd80513653bfa5fb703821c8a1787"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.builder:helidon-builder-api:jar:@27.0.1",
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+  "io.helidon.config:helidon-config:jar:@27.0.1",
+  "io.helidon.http:helidon-http:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.http.media:helidon-http-media-json-binding:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:589540ed8f676a7399c3890e809b7ca33089bba8c092fd5bae417a936d1ed1aa"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.builder:helidon-builder-api:jar:@27.0.1",
+  "io.helidon.common:helidon-common-media-type:jar:@27.0.1",
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+  "io.helidon.config:helidon-config:jar:@27.0.1",
+  "io.helidon.http.media:helidon-http-media:jar:@27.0.1",
+  "io.helidon.http:helidon-http:jar:@27.0.1",
+  "io.helidon.json:helidon-json-binding:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.http.media:helidon-http-media-json:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:895fc09bcd913dbd06043aa2a7068d0d4ae27c099059eb00f384ead1b94241a5"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.builder:helidon-builder-api:jar:@27.0.1",
+  "io.helidon.common:helidon-common-media-type:jar:@27.0.1",
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+  "io.helidon.config:helidon-config:jar:@27.0.1",
+  "io.helidon.http.media:helidon-http-media:jar:@27.0.1",
+  "io.helidon.http:helidon-http:jar:@27.0.1",
+  "io.helidon.json:helidon-json:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.http.media:helidon-http-media:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:566b61d0b839141737fe24a45c3fef9e148c54da50e93ace9b916d25e6aa7930"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.builder:helidon-builder-api:jar:@27.0.1",
+  "io.helidon.common:helidon-common-buffers:jar:@27.0.1",
+  "io.helidon.common:helidon-common-media-type:jar:@27.0.1",
+  "io.helidon.common:helidon-common-parameters:jar:@27.0.1",
+  "io.helidon.common:helidon-common-uri:jar:@27.0.1",
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+  "io.helidon.config:helidon-config:jar:@27.0.1",
+  "io.helidon.http:helidon-http:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.http:helidon-http-http1:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:2f5dd7dfebaa347bcd983c613c4009dc21bd3703fbb809a54e7946311829f793"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.common:helidon-common-buffers:jar:@27.0.1",
+  "io.helidon.common:helidon-common-socket:jar:@27.0.1",
+  "io.helidon.common:helidon-common-uri:jar:@27.0.1",
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+  "io.helidon.http:helidon-http:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.http:helidon-http:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:1a5cca922ab62b8a2541f0fd2baaf62f9363a8c70b26be01ab661967ac955c27"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main", "runtime", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.builder:helidon-builder-api:jar:@27.0.1",
+  "io.helidon.common:helidon-common-buffers:jar:@27.0.1",
+  "io.helidon.common:helidon-common-configurable:jar:@27.0.1",
+  "io.helidon.common:helidon-common-mapper:jar:@27.0.1",
+  "io.helidon.common:helidon-common-media-type:jar:@27.0.1",
+  "io.helidon.common:helidon-common-parameters:jar:@27.0.1",
+  "io.helidon.common:helidon-common-types:jar:@27.0.1",
+  "io.helidon.common:helidon-common-uri:jar:@27.0.1",
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+  "io.helidon.config:helidon-config:jar:@27.0.1",
+  "io.helidon.service:helidon-service-registry:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.json:helidon-json-binding:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:c196b4ae5140b6de0e0449f1867900a7148cb3a74ea3bad0fa98d1f94467b955"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.builder:helidon-builder-api:jar:@27.0.1",
+  "io.helidon.common:helidon-common-types:jar:@27.0.1",
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+  "io.helidon.config:helidon-config:jar:@27.0.1",
+  "io.helidon.json:helidon-json:jar:@27.0.1",
+  "io.helidon.service:helidon-service-registry:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.json:helidon-json:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b9a802e3415b4d7ab8a3e76a7cc978b5c87c030f3ca94ff0f8940a1f8cf61101"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.common:helidon-common-buffers:jar:@27.0.1",
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.logging:helidon-logging-common:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:d98a742d947047b04981359bd0a33a5d528f64116c9abad1f87ab76f236e4e8a"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main", "runtime", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.common:helidon-common-context:jar:@27.0.1",
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.logging:helidon-logging-jul:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:ce45313f48bfad032f10c42536bf4dd6960bc63495a606013e5cbed5ed0b1e6d"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["runtime"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.common:helidon-common-context:jar:@27.0.1",
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+  "io.helidon.logging:helidon-logging-common:jar:@27.0.1",
+  "io.helidon.metadata:helidon-metadata-hson:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.metadata:helidon-metadata-hson:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:866758e956ed656059548181d057f3893e5fca8927656dbf89b5ec20ca436b30"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main", "runtime", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.common:helidon-common-buffers:jar:@27.0.1",
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.metadata:helidon-metadata:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:02b5945ebc7bf6d3b2b09b0b11fbfbb87d29ee7f59e09c7ea7fee0bfeecd7944"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main", "runtime", "test"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "io.helidon.metrics.providers:helidon-metrics-providers-micrometer:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:bc03d5693e05af89f3b1f389a4d6fb9c755bbc5aa1473275bd7fc489d5ec32b0"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+  "io.helidon.config:helidon-config:jar:@27.0.1",
+  "io.helidon.metrics:helidon-metrics-api:jar:@27.0.1",
+  "io.helidon.service:helidon-service-registry:jar:@27.0.1",
+  "io.micrometer:micrometer-core:jar:@1.17.1",
+  "io.micrometer:micrometer-registry-otlp:jar:@1.17.1",
+  "io.micrometer:micrometer-registry-prometheus:jar:@1.17.1",
+  "io.prometheus:prometheus-metrics-exposition-textformats:jar:@1.7.0",
+  "io.prometheus:prometheus-metrics-model:jar:@1.7.0",
+  "io.prometheus:prometheus-metrics-tracer-common:jar:@1.7.0",
+]
+
+[[artifact]]
+name     = "io.helidon.metrics:helidon-metrics-api:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:0139306b486164fe09e4b53622c7fbcc729aa7960b409754a4f7e8dcb104d94f"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main", "runtime", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.builder:helidon-builder-api:jar:@27.0.1",
+  "io.helidon.config:helidon-config:jar:@27.0.1",
+  "io.helidon.http:helidon-http:jar:@27.0.1",
+  "io.helidon.service:helidon-service-registry:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.metrics:helidon-metrics-system-meters:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:d66a7f15ca48b6f32a20126baa6958e9c18f16229190bf1ad2a89d2ac3d734a3"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["runtime"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.common:helidon-common-resumable:jar:@27.0.1",
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+  "io.helidon.config:helidon-config:jar:@27.0.1",
+  "io.helidon.metrics:helidon-metrics-api:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.service:helidon-service-metadata:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:42f1314886ca8d6c2ff27a11b1f6ee61b87f63da5adab2ad62b0225cf3ff5d66"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main", "runtime", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.common:helidon-common-types:jar:@27.0.1",
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+  "io.helidon.metadata:helidon-metadata-hson:jar:@27.0.1",
+  "io.helidon.metadata:helidon-metadata:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.service:helidon-service-registry:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:94acfeca28b654540257e0a3794b24a4a4fa39df36def55efb01966b6daf26a4"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main", "runtime", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.builder:helidon-builder-api:jar:@27.0.1",
+  "io.helidon.common:helidon-common-context:jar:@27.0.1",
+  "io.helidon.common:helidon-common-types:jar:@27.0.1",
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+  "io.helidon.metadata:helidon-metadata-hson:jar:@27.0.1",
+  "io.helidon.metadata:helidon-metadata:jar:@27.0.1",
+  "io.helidon.service:helidon-service-metadata:jar:@27.0.1",
+  "io.helidon:helidon:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.testing:helidon-testing-junit5:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:fb84f07e25f521690d10f20816b1e0bc77bf95b57a23f15e4585ee0629f4927b"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.common:helidon-common-context:jar:@27.0.1",
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+  "io.helidon.logging:helidon-logging-common:jar:@27.0.1",
+  "io.helidon.service:helidon-service-registry:jar:@27.0.1",
+  "io.helidon.testing:helidon-testing:jar:@27.0.1",
+  "org.junit.jupiter:junit-jupiter-api:jar:@5.12.2",
+]
+
+[[artifact]]
+name     = "io.helidon.testing:helidon-testing:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:24e3bf7b20c1c2edf103ed25ec9d3ff1ae745076aed60b06b742144454328745"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["test"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "io.helidon.validation:helidon-validation:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:8e8bdb99fd5c9e8196e5acc3b8fa706034206cd712cb0d6fcf4cbf77a688ca67"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.builder:helidon-builder-api:jar:@27.0.1",
+  "io.helidon.common:helidon-common-types:jar:@27.0.1",
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+  "io.helidon.service:helidon-service-registry:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.webclient:helidon-webclient-api:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:d1f1b79f78254cbe4eb0fd2f37ac844fc5e2103e8f78c2fb02e3fe1bfc2cd043"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.builder:helidon-builder-api:jar:@27.0.1",
+  "io.helidon.common:helidon-common-context:jar:@27.0.1",
+  "io.helidon.common:helidon-common-key-util:jar:@27.0.1",
+  "io.helidon.common:helidon-common-resumable:jar:@27.0.1",
+  "io.helidon.common:helidon-common-socket:jar:@27.0.1",
+  "io.helidon.common:helidon-common-task:jar:@27.0.1",
+  "io.helidon.common:helidon-common-tls:jar:@27.0.1",
+  "io.helidon.config:helidon-config:jar:@27.0.1",
+  "io.helidon.http.encoding:helidon-http-encoding:jar:@27.0.1",
+  "io.helidon.http.media:helidon-http-media:jar:@27.0.1",
+  "io.helidon.http:helidon-http:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.webclient:helidon-webclient-http1:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:d342bd5980ace3233dcddab76c00ca0f468067480b9bfc90d9ea172ece884442"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.builder:helidon-builder-api:jar:@27.0.1",
+  "io.helidon.common:helidon-common-context:jar:@27.0.1",
+  "io.helidon.common:helidon-common-key-util:jar:@27.0.1",
+  "io.helidon.common:helidon-common-socket:jar:@27.0.1",
+  "io.helidon.common:helidon-common-tls:jar:@27.0.1",
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+  "io.helidon.config:helidon-config:jar:@27.0.1",
+  "io.helidon.http.encoding:helidon-http-encoding:jar:@27.0.1",
+  "io.helidon.http.media:helidon-http-media:jar:@27.0.1",
+  "io.helidon.http:helidon-http-http1:jar:@27.0.1",
+  "io.helidon.http:helidon-http:jar:@27.0.1",
+  "io.helidon.webclient:helidon-webclient-api:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.webclient:helidon-webclient:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:a08aeceebb1cc3b18bf74a20176ea091df1c5e540620a39bb45d896fcd7897dc"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.webclient:helidon-webclient-api:jar:@27.0.1",
+  "io.helidon.webclient:helidon-webclient-http1:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.webserver.observe:helidon-webserver-observe-health:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:2adc92594b2249dc87902f7504f94b246179a020434c9d42b95bd23f9f522bfe"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+  "io.helidon.config:helidon-config:jar:@27.0.1",
+  "io.helidon.health:helidon-health:jar:@27.0.1",
+  "io.helidon.http.media:helidon-http-media-json:jar:@27.0.1",
+  "io.helidon.service:helidon-service-registry:jar:@27.0.1",
+  "io.helidon.webserver.observe:helidon-webserver-observe:jar:@27.0.1",
+  "io.helidon.webserver:helidon-webserver:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.webserver.observe:helidon-webserver-observe-metrics:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:e8524db22872bb8d52a8f8062b89f31a6629db601ca19df9207f2a5353100f3f"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+  "io.helidon.config:helidon-config:jar:@27.0.1",
+  "io.helidon.http.media:helidon-http-media-json:jar:@27.0.1",
+  "io.helidon.metrics.providers:helidon-metrics-providers-micrometer:jar:@27.0.1",
+  "io.helidon.metrics:helidon-metrics-api:jar:@27.0.1",
+  "io.helidon.service:helidon-service-registry:jar:@27.0.1",
+  "io.helidon.webserver.observe:helidon-webserver-observe:jar:@27.0.1",
+  "io.helidon.webserver:helidon-webserver:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.webserver.observe:helidon-webserver-observe:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:715d9682059823de2b594dccc870ad28da70db4efbd79da4441fce85f1dbce2c"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.builder:helidon-builder-api:jar:@27.0.1",
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+  "io.helidon.config:helidon-config:jar:@27.0.1",
+  "io.helidon.service:helidon-service-registry:jar:@27.0.1",
+  "io.helidon.webserver:helidon-webserver:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.webserver.testing.junit5:helidon-webserver-testing-junit5:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:0485917c1dbb88ab00b82b54060c9f57c6632bc1b04f196fa2d9769ffbf4aa32"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.common.testing:helidon-common-testing-http-junit5:jar:@27.0.1",
+  "io.helidon.common.testing:helidon-common-testing-virtual-threads:jar:@27.0.1",
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+  "io.helidon.config:helidon-config-yaml:jar:@27.0.1",
+  "io.helidon.testing:helidon-testing-junit5:jar:@27.0.1",
+  "io.helidon.webclient:helidon-webclient:jar:@27.0.1",
+  "io.helidon.webserver:helidon-webserver:jar:@27.0.1",
+  "org.hamcrest:hamcrest-all:jar:@1.3",
+  "org.junit.jupiter:junit-jupiter-api:jar:@5.12.2",
+]
+
+[[artifact]]
+name     = "io.helidon.webserver:helidon-webserver-validation:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:cd1898494767ffaabb01a94c0ddd8638bc104ef45468b0b253dfcaaf914a33a7"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+  "io.helidon.config:helidon-config:jar:@27.0.1",
+  "io.helidon.validation:helidon-validation:jar:@27.0.1",
+  "io.helidon.webserver:helidon-webserver:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon.webserver:helidon-webserver:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:c657ac735e4259b80a6000bde52b683341bf1a32c5837d65b4eceec3f5a80acc"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.common.concurrency:helidon-common-concurrency-limits:jar:@27.0.1",
+  "io.helidon.common.features:helidon-common-features:jar:@27.0.1",
+  "io.helidon.common:helidon-common-configurable:jar:@27.0.1",
+  "io.helidon.common:helidon-common-context:jar:@27.0.1",
+  "io.helidon.common:helidon-common-key-util:jar:@27.0.1",
+  "io.helidon.common:helidon-common-resumable:jar:@27.0.1",
+  "io.helidon.common:helidon-common-security:jar:@27.0.1",
+  "io.helidon.common:helidon-common-socket:jar:@27.0.1",
+  "io.helidon.common:helidon-common-task:jar:@27.0.1",
+  "io.helidon.common:helidon-common-tls:jar:@27.0.1",
+  "io.helidon.common:helidon-common-uri:jar:@27.0.1",
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+  "io.helidon.config:helidon-config:jar:@27.0.1",
+  "io.helidon.http.encoding:helidon-http-encoding:jar:@27.0.1",
+  "io.helidon.http.media:helidon-http-media:jar:@27.0.1",
+  "io.helidon.http:helidon-http-http1:jar:@27.0.1",
+  "io.helidon.http:helidon-http:jar:@27.0.1",
+  "io.helidon.logging:helidon-logging-common:jar:@27.0.1",
+  "io.helidon:helidon:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.helidon:helidon:jar:"
+version  = "27.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:4c66f7c976541f19397adb3202dfbfe9d97297bfdef2a1f831bb1d2adbb91d9f"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main", "runtime", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.helidon.common:helidon-common:jar:@27.0.1",
+  "io.helidon.logging:helidon-logging-common:jar:@27.0.1",
+]
+
+[[artifact]]
+name     = "io.micrometer:micrometer-commons:jar:"
+version  = "1.17.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:f2cee6ef046e72eec8128474c7f58c6217173b45ae373c30de0289f2a56ab0fd"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "io.micrometer:micrometer-core:jar:"
+version  = "1.17.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:9ca47dfa831409b40253c8dc98c17b9d3e050ebbde4d1543c5521dca2b95ad56"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.micrometer:micrometer-commons:jar:@1.17.1",
+  "io.micrometer:micrometer-observation:jar:@1.17.1",
+  "org.hdrhistogram:HdrHistogram:jar:@2.2.2",
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "io.micrometer:micrometer-observation:jar:"
+version  = "1.17.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:eb34f0cd84a879393ae5c21160fc06385ccdc74f36a4d1e31b199f59acfdaf71"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.micrometer:micrometer-commons:jar:@1.17.1",
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "io.micrometer:micrometer-registry-otlp:jar:"
+version  = "1.17.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:c991036f05cf1a84b02bcc95b9a686ac39a584b01e7afdab1562a5c1dc71d0c9"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.micrometer:micrometer-core:jar:@1.17.1",
+  "io.opentelemetry.proto:opentelemetry-proto:jar:@1.10.0-alpha",
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "io.micrometer:micrometer-registry-prometheus:jar:"
+version  = "1.17.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:ac24d43f123e103828a23a86f092a8709d87d309ad3212e798305654e951a8ce"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.micrometer:micrometer-core:jar:@1.17.1",
+  "io.prometheus:prometheus-metrics-core:jar:@1.7.0",
+  "io.prometheus:prometheus-metrics-exposition-formats:jar:@1.7.0",
+  "io.prometheus:prometheus-metrics-tracer-common:jar:@1.7.0",
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "io.opentelemetry.proto:opentelemetry-proto:jar:"
+version  = "1.10.0-alpha"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:931e84b0802d77ae963e26c6ad6129b4ad0f2510fe907f019f5c988c2a869c3a"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "com.google.protobuf:protobuf-java:jar:@4.36.0",
+]
+
+[[artifact]]
+name     = "io.prometheus:prometheus-metrics-config:jar:"
+version  = "1.7.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:bc9455f938df76ec4add13fe31903a5bb583c605679a16a779d6a6c2b21218f2"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "io.prometheus:prometheus-metrics-core:jar:"
+version  = "1.7.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:f9e5f1c8a20073347c88941d43e8c64ae6810afe0a61cbfe9c2f4efffe72808b"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.prometheus:prometheus-metrics-config:jar:@1.7.0",
+  "io.prometheus:prometheus-metrics-model:jar:@1.7.0",
+]
+excluded-by = [
+  "io.prometheus:prometheus-metrics-tracer-initializer <- io.micrometer:micrometer-registry-prometheus@1.17.1",
+]
+
+[[artifact]]
+name     = "io.prometheus:prometheus-metrics-exposition-formats:jar:"
+version  = "1.7.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:7352ca8b50e861eca3567ceb332e9590a06742a9d177cff54e52c8cff4c4fb90"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.prometheus:prometheus-metrics-exposition-textformats:jar:@1.7.0",
+]
+
+[[artifact]]
+name     = "io.prometheus:prometheus-metrics-exposition-textformats:jar:"
+version  = "1.7.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:7e49065895a35181c57f2c3c6d07b7b3f9b5754cd6422e0a7bd793f20a29c28a"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.prometheus:prometheus-metrics-config:jar:@1.7.0",
+  "io.prometheus:prometheus-metrics-model:jar:@1.7.0",
+]
+
+[[artifact]]
+name     = "io.prometheus:prometheus-metrics-model:jar:"
+version  = "1.7.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:e6d94538f8735c4161c36a660298f3a0fa8e4b281ceaf209723aaf9e212d292d"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.prometheus:prometheus-metrics-config:jar:@1.7.0",
+]
+
+[[artifact]]
+name     = "io.prometheus:prometheus-metrics-tracer-common:jar:"
+version  = "1.7.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b7e8699032f0f1501556eeafd20fcfdd89b355f5d22b6d8361d723d467d88ed4"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "javax.inject:javax.inject:jar:"
+version  = "1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:91c77044a50c481636c32d916fd89c9118a72195390452c81065080f957de7ff"
+scopes   = ["processor"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "org.apiguardian:apiguardian-api:jar:"
+version  = "1.1.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b509448ac506d607319f182537f0b35d71007582ec741832a1f111e5b5b70b38"
+scopes   = ["test"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "org.checkerframework:checker-qual:jar:"
+version  = "4.3.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:66c061a19e20fb005c173169534aba7bf78e904a8a6da6fe8c6e97d277f6d347"
+scopes   = ["processor"]
+licenses = ["MIT"]
+
+[[artifact]]
+name     = "org.checkerframework:dataflow-nullaway:jar:"
+version  = "4.3.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:dc7b9ceddc9a68a1ffa9d66b5d62967ca3843712a671127c5a6c184f23a4f940"
+scopes   = ["processor"]
+licenses = ["GPL-2.0-with-classpath-exception"]
+deps = [
+  "org.checkerframework:checker-qual:jar:@4.3.1",
+]
+
+[[artifact]]
+name     = "org.commonmark:commonmark-ext-gfm-tables:jar:"
+version  = "0.29.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:f263d284c0795b0ddd6071d4fa969f67d460644c20828e51957ad5aec0d75612"
+scopes   = ["processor"]
+licenses = ["BSD-2-Clause"]
+deps = [
+  "org.commonmark:commonmark:jar:@0.29.0",
+]
+
+[[artifact]]
+name     = "org.commonmark:commonmark:jar:"
+version  = "0.29.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:4c9b0fa481e36d7176f38e572c134656424cf9601bc190855d0f89478df901c6"
+scopes   = ["processor"]
+licenses = ["BSD-2-Clause"]
+
+[[artifact]]
+name     = "org.hamcrest:hamcrest-all:jar:"
+version  = "1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:4877670629ab96f34f5f90ab283125fcd9acb7e683e66319a68be6eb2cca60de"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["test"]
+licenses = ["BSD-3-Clause"]
+
+[[artifact]]
+name     = "org.hdrhistogram:HdrHistogram:jar:"
+version  = "2.2.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:22d1d4316c4ec13a68b559e98c8256d69071593731da96136640f864fa14fad8"
+scopes   = ["main"]
+licenses = ["CC0-1.0", "BSD-2-Clause"]
+
+[[artifact]]
+name     = "org.jspecify:jspecify:jar:"
+version  = "1.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:070d75f261fe4c5b8202508366715f7f2d4660f88c8ef7e6d3575e48c9683b66"
+scopes   = ["main", "processor"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "org.junit.jupiter:junit-jupiter-api:jar:"
+version  = "5.12.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:0b9ca728e4bcd9adc57f29deb9556ff9ed5e08b4e8843b875aba4e4e3e04f092"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["test"]
+licenses = ["EPL-2.0"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.junit.platform:junit-platform-commons:jar:@1.12.2",
+  "org.opentest4j:opentest4j:jar:@1.3.0",
+]
+
+[[artifact]]
+name     = "org.junit.jupiter:junit-jupiter-engine:jar:"
+version  = "5.12.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:f576c06b8accde9985063b8bc80526cb980eec24dee0b7221fc8ddd7ace65800"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["test"]
+licenses = ["EPL-2.0"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.junit.jupiter:junit-jupiter-api:jar:@5.12.2",
+  "org.junit.platform:junit-platform-engine:jar:@1.12.2",
+]
+
+[[artifact]]
+name     = "org.junit.jupiter:junit-jupiter-params:jar:"
+version  = "5.12.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b219ffa949b90a71aa3b6c2b606456b82bca0b2089b7459c8ff461156ff59b0f"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["test"]
+licenses = ["EPL-2.0"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.junit.jupiter:junit-jupiter-api:jar:@5.12.2",
+]
+
+[[artifact]]
+name     = "org.junit.jupiter:junit-jupiter:jar:"
+version  = "5.12.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:3854b3ad434906b827fec474aa0d8da8b56e9e56d5fc7f2e20fc3f12ec4be894"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["test"]
+licenses = ["EPL-2.0"]
+deps = [
+  "org.junit.jupiter:junit-jupiter-api:jar:@5.12.2",
+  "org.junit.jupiter:junit-jupiter-engine:jar:@5.12.2",
+  "org.junit.jupiter:junit-jupiter-params:jar:@5.12.2",
+]
+
+[[artifact]]
+name     = "org.junit.platform:junit-platform-commons:jar:"
+version  = "1.12.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:e683a01e85dfabea520c056ac6015a6162756e602ec653c0da85e233f0afbc18"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["test"]
+licenses = ["EPL-2.0"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+]
+
+[[artifact]]
+name     = "org.junit.platform:junit-platform-engine:jar:"
+version  = "1.12.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:cef0efcb5bd2e05e2b808d38bab5c655089c0c3001527376e74cb606a7911ec8"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["test"]
+licenses = ["EPL-2.0"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.junit.platform:junit-platform-commons:jar:@1.12.2",
+  "org.opentest4j:opentest4j:jar:@1.3.0",
+]
+
+[[artifact]]
+name     = "org.junit.platform:junit-platform-launcher:jar:"
+version  = "1.12.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:dccf2c1fa0a977c53ad094ad859bfdddd524d97594b76307ad787de71985757f"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["test"]
+licenses = ["EPL-2.0"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.junit.platform:junit-platform-engine:jar:@1.12.2",
+]
+
+[[artifact]]
+name     = "org.opentest4j:opentest4j:jar:"
+version  = "1.3.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:48e2df636cab6563ced64dcdff8abb2355627cb236ef0bf37598682ddf742f1b"
+scopes   = ["test"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "org.pcollections:pcollections:jar:"
+version  = "5.0.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:d42da212e052cbeedfea5eb20641b74ee574bc02302c584a16718db5376fa92c"
+scopes   = ["processor"]
+licenses = ["MIT"]
+
+[[artifact]]
+name     = "org.safere:safere:jar:"
+version  = "1.0.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:388c5a91ad8648f96d55a6b0e7068d40b38c4fb9e19139026fc2c0168f54dd95"
+scopes   = ["processor"]
+licenses = ["BSD-3-Clause"]
+
+[[artifact]]
+name     = "org.slf4j:slf4j-api:jar:"
+version  = "2.0.17"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:7b751d952061954d5abfed7181c1f645d336091b679891591d63329c622eb832"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main", "runtime"]
+licenses = ["MIT"]
+
+[[artifact]]
+name     = "org.slf4j:slf4j-jdk14:jar:"
+version  = "2.0.17"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:ead25c1b15f59db1fb5552b76fe63de4164f0df40024d19287b75dece47ad3be"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["runtime"]
+licenses = ["MIT"]
+deps = [
+  "org.slf4j:slf4j-api:jar:@2.0.17",
+]
+
+[[artifact]]
+name     = "org.yaml:snakeyaml:jar:"
+version  = "2.7"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:2e194eba45a67dee19a4e272f4a04b18de8054e9f598b094382f6dae0b0e4b5e"
+pinned-by = "io.helidon:helidon-dependencies:27.0.1"
+scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
+
+[[plugin]]
+coordinate = "cc.jumpkick.guards:helidon"
+version    = "0.50.4-SNAPSHOT"
+
+[[plugin]]
+coordinate = "cc.jumpkick.guards:monorepo"
+version    = "0.50.4-SNAPSHOT"
+
+[[tool]]
+coordinate = "io.github.classgraph:classgraph"
+version    = "4.8.195"
+checksum   = "sha256:84820d3e187d208c311f2b24719689f371c1361608e0881ff61d6acef0bf6807"
+
+[[tool]]
+coordinate = "io.helidon.builder:helidon-builder-api"
+version    = "27.0.1"
+checksum   = "sha256:bbd00b798e03b32ad92f570b85f0f80f6be0fbbb2b91eacf2cc4030dd67ed934"
+
+[[tool]]
+coordinate = "io.helidon.builder:helidon-builder-codegen"
+version    = "27.0.1"
+checksum   = "sha256:3e4fe49bab5ecd57f889605f5db78a6552837d0a385142fab13c394a22ce2040"
+
+[[tool]]
+coordinate = "io.helidon.bundles:helidon-bundles-apt"
+version    = "27.0.1"
+checksum   = "sha256:794e70aea0ff0e348411c505a012c0d6db57417150d39661d350bdc8be0b95cc"
+
+[[tool]]
+coordinate = "io.helidon.bundles:helidon-bundles-apt"
+version    = "27.0.1"
+closure = [
+  "io.helidon.builder:helidon-builder-api:27.0.1",
+  "io.helidon.builder:helidon-builder-codegen:27.0.1",
+  "io.helidon.bundles:helidon-bundles-apt:27.0.1",
+  "io.helidon.codegen:helidon-codegen-api-stability:27.0.1",
+  "io.helidon.codegen:helidon-codegen-apt:27.0.1",
+  "io.helidon.codegen:helidon-codegen-class-model:27.0.1",
+  "io.helidon.codegen:helidon-codegen:27.0.1",
+  "io.helidon.common:helidon-common-buffers:27.0.1",
+  "io.helidon.common:helidon-common-types:27.0.1",
+  "io.helidon.common:helidon-common:27.0.1",
+  "io.helidon.data.codegen:helidon-data-codegen-common:27.0.1",
+  "io.helidon.data.codegen:helidon-data-codegen-parser:27.0.1",
+  "io.helidon.data.codegen:helidon-data-codegen-query:27.0.1",
+  "io.helidon.data.codegen:helidon-data-codegen:27.0.1",
+  "io.helidon.declarative:helidon-declarative-codegen-model:27.0.1",
+  "io.helidon.declarative:helidon-declarative-codegen:27.0.1",
+  "io.helidon.json.schema:helidon-json-schema-codegen:27.0.1",
+  "io.helidon.json:helidon-json-codegen:27.0.1",
+  "io.helidon.json:helidon-json:27.0.1",
+  "io.helidon.metadata:helidon-metadata-hson:27.0.1",
+  "io.helidon.metadata:helidon-metadata:27.0.1",
+  "io.helidon.service:helidon-service-codegen:27.0.1",
+  "io.helidon.service:helidon-service-metadata:27.0.1",
+  "org.antlr:antlr4-runtime:4.13.2",
+]
+
+[[tool]]
+coordinate = "io.helidon.codegen:helidon-codegen"
+version    = "27.0.1"
+checksum   = "sha256:57319d33e0f7c693d48476c3898aed4a7658cd286342b935bf0f6ebe8a474517"
+
+[[tool]]
+coordinate = "io.helidon.codegen:helidon-codegen-api-stability"
+version    = "27.0.1"
+checksum   = "sha256:3a558df2a8bad679530c97d87fba60b1d5db806723d6d67804798529a47ae101"
+
+[[tool]]
+coordinate = "io.helidon.codegen:helidon-codegen-apt"
+version    = "27.0.1"
+checksum   = "sha256:cfd988c3035986795835167b02081360c6456dc2275d546ee8ea996f9e8adfe7"
+
+[[tool]]
+coordinate = "io.helidon.codegen:helidon-codegen-apt"
+version    = "27.0.1"
+closure = [
+  "io.helidon.builder:helidon-builder-api:27.0.1",
+  "io.helidon.codegen:helidon-codegen-apt:27.0.1",
+  "io.helidon.codegen:helidon-codegen-class-model:27.0.1",
+  "io.helidon.codegen:helidon-codegen:27.0.1",
+  "io.helidon.common:helidon-common-types:27.0.1",
+  "io.helidon.common:helidon-common:27.0.1",
+  "io.helidon.metadata:helidon-metadata:27.0.1",
+]
+
+[[tool]]
+coordinate = "io.helidon.codegen:helidon-codegen-class-model"
+version    = "27.0.1"
+checksum   = "sha256:7c4f42e135b4b5891e659d071533e268d5b9e7ba0430fee39927896e112e4fb3"
+
+[[tool]]
+coordinate = "io.helidon.codegen:helidon-codegen-compiler"
+version    = "27.0.1"
+checksum   = "sha256:814849e106050ff2e4b3b3886eb8bb8298ecfdc5bff4adb87dc83e33720542c3"
+
+[[tool]]
+coordinate = "io.helidon.codegen:helidon-codegen-scan"
+version    = "27.0.1"
+checksum   = "sha256:acb83ff77d4773daf15b5d4b08b04d50909597df28917395dd5bdf9b037de1dc"
+
+[[tool]]
+coordinate = "io.helidon.common:helidon-common"
+version    = "27.0.1"
+checksum   = "sha256:52d89809086d7c5f140c5969ad964ce9da38ee09ef08f3761b42bfa2246822ac"
+
+[[tool]]
+coordinate = "io.helidon.common:helidon-common-buffers"
+version    = "27.0.1"
+checksum   = "sha256:84ecfef5615e37e005d665837f17c3048c147d3708ab8d60c393cde370fdeadb"
+
+[[tool]]
+coordinate = "io.helidon.common:helidon-common-context"
+version    = "27.0.1"
+checksum   = "sha256:e651f177592906203c66a41cba16e6ae38ade422fc06b9f0fecb09a52296baa0"
+
+[[tool]]
+coordinate = "io.helidon.common:helidon-common-types"
+version    = "27.0.1"
+checksum   = "sha256:d71507b2976c96174db2b41d5f5612b6c2e966321f286193728451831f1861f8"
+
+[[tool]]
+coordinate = "io.helidon.data.codegen:helidon-data-codegen"
+version    = "27.0.1"
+checksum   = "sha256:effae5e2d67895a0b59f1e13ac4581ae9f75cddef2ca4dd859fadd06d5fef106"
+
+[[tool]]
+coordinate = "io.helidon.data.codegen:helidon-data-codegen-common"
+version    = "27.0.1"
+checksum   = "sha256:5377e01ae89b9bf1ebac22c21228222575757645501ecb6343bbacb21feda9c1"
+
+[[tool]]
+coordinate = "io.helidon.data.codegen:helidon-data-codegen-parser"
+version    = "27.0.1"
+checksum   = "sha256:a8490deafc11f3cf97054019bed3e8bbb7f5aafe9aa95df1b060c2475dd266d7"
+
+[[tool]]
+coordinate = "io.helidon.data.codegen:helidon-data-codegen-query"
+version    = "27.0.1"
+checksum   = "sha256:da03fcb78c3dc61af15c634bcf5dd9fde3f559f79ce78158f7b4e16660ee3c70"
+
+[[tool]]
+coordinate = "io.helidon.declarative:helidon-declarative-codegen"
+version    = "27.0.1"
+checksum   = "sha256:05599b84a742f461567666a1871d0f3a6d1b595f6c814fe33ea15101ba3e1452"
+
+[[tool]]
+coordinate = "io.helidon.declarative:helidon-declarative-codegen-model"
+version    = "27.0.1"
+checksum   = "sha256:3baf00661497db9c3f3995303c23770179ad707452e45606296d8ab2abea97c5"
+
+[[tool]]
+coordinate = "io.helidon.json.schema:helidon-json-schema-codegen"
+version    = "27.0.1"
+checksum   = "sha256:6b1641f0fb35d417ba3536dbb86dfcff91ae0fffa638487479b33d0c8528cbce"
+
+[[tool]]
+coordinate = "io.helidon.json:helidon-json"
+version    = "27.0.1"
+checksum   = "sha256:b9a802e3415b4d7ab8a3e76a7cc978b5c87c030f3ca94ff0f8940a1f8cf61101"
+
+[[tool]]
+coordinate = "io.helidon.json:helidon-json-codegen"
+version    = "27.0.1"
+checksum   = "sha256:a520c28eb29cca122c886e7b55139a022ad4f313f95303581397703b3f891811"
+
+[[tool]]
+coordinate = "io.helidon.logging:helidon-logging-common"
+version    = "27.0.1"
+checksum   = "sha256:d98a742d947047b04981359bd0a33a5d528f64116c9abad1f87ab76f236e4e8a"
+
+[[tool]]
+coordinate = "io.helidon.metadata:helidon-metadata"
+version    = "27.0.1"
+checksum   = "sha256:02b5945ebc7bf6d3b2b09b0b11fbfbb87d29ee7f59e09c7ea7fee0bfeecd7944"
+
+[[tool]]
+coordinate = "io.helidon.metadata:helidon-metadata-hson"
+version    = "27.0.1"
+checksum   = "sha256:866758e956ed656059548181d057f3893e5fca8927656dbf89b5ec20ca436b30"
+
+[[tool]]
+coordinate = "io.helidon.service:helidon-service-codegen"
+version    = "27.0.1"
+checksum   = "sha256:ccca44014efed500eb604338b710f9a3aa80fc788dce27f5cbd9191abae25928"
+
+[[tool]]
+coordinate = "io.helidon.service:helidon-service-codegen"
+version    = "27.0.1"
+closure = [
+  "io.helidon.builder:helidon-builder-api:27.0.1",
+  "io.helidon.codegen:helidon-codegen-class-model:27.0.1",
+  "io.helidon.codegen:helidon-codegen:27.0.1",
+  "io.helidon.common:helidon-common-buffers:27.0.1",
+  "io.helidon.common:helidon-common-types:27.0.1",
+  "io.helidon.common:helidon-common:27.0.1",
+  "io.helidon.metadata:helidon-metadata-hson:27.0.1",
+  "io.helidon.metadata:helidon-metadata:27.0.1",
+  "io.helidon.service:helidon-service-codegen:27.0.1",
+  "io.helidon.service:helidon-service-metadata:27.0.1",
+]
+
+[[tool]]
+coordinate = "io.helidon.service:helidon-service-maven-plugin"
+version    = "27.0.1"
+checksum   = "sha256:5a7df616f52aebec42a2ab661d4d7811eb52956f7c9e9cda4f82e2a7b46f11c9"
+
+[[tool]]
+coordinate = "io.helidon.service:helidon-service-maven-plugin"
+version    = "27.0.1"
+closure = [
+  "io.github.classgraph:classgraph:4.8.195",
+  "io.helidon.builder:helidon-builder-api:27.0.1",
+  "io.helidon.codegen:helidon-codegen-class-model:27.0.1",
+  "io.helidon.codegen:helidon-codegen-compiler:27.0.1",
+  "io.helidon.codegen:helidon-codegen-scan:27.0.1",
+  "io.helidon.codegen:helidon-codegen:27.0.1",
+  "io.helidon.common:helidon-common-buffers:27.0.1",
+  "io.helidon.common:helidon-common-context:27.0.1",
+  "io.helidon.common:helidon-common-types:27.0.1",
+  "io.helidon.common:helidon-common:27.0.1",
+  "io.helidon.logging:helidon-logging-common:27.0.1",
+  "io.helidon.metadata:helidon-metadata-hson:27.0.1",
+  "io.helidon.metadata:helidon-metadata:27.0.1",
+  "io.helidon.service:helidon-service-codegen:27.0.1",
+  "io.helidon.service:helidon-service-maven-plugin:27.0.1",
+  "io.helidon.service:helidon-service-metadata:27.0.1",
+  "io.helidon.service:helidon-service-registry:27.0.1",
+  "io.helidon:helidon:27.0.1",
+]
+
+[[tool]]
+coordinate = "io.helidon.service:helidon-service-metadata"
+version    = "27.0.1"
+checksum   = "sha256:42f1314886ca8d6c2ff27a11b1f6ee61b87f63da5adab2ad62b0225cf3ff5d66"
+
+[[tool]]
+coordinate = "io.helidon.service:helidon-service-registry"
+version    = "27.0.1"
+checksum   = "sha256:94acfeca28b654540257e0a3794b24a4a4fa39df36def55efb01966b6daf26a4"
+
+[[tool]]
+coordinate = "io.helidon:helidon"
+version    = "27.0.1"
+checksum   = "sha256:4c66f7c976541f19397adb3202dfbfe9d97297bfdef2a1f831bb1d2adbb91d9f"
+
+[[tool]]
+coordinate = "org.antlr:antlr4-runtime"
+version    = "4.13.2"
+checksum   = "sha256:dd3e8a13a2d669bf84fb8d834de35ce4875f27157698d206241ec8488aadcaf7"
+
+[[module]]
+path    = "."
+group   = "com.example"
+name    = "petshop"
+version = "0.1.0"
+java    = 27
+
+[[module]]
+path    = "domain"
+group   = "com.example"
+name    = "petshop-domain"
+version = "0.1.0"
+java    = 27
+
+[[module]]
+path    = "service"
+group   = "com.example"
+name    = "petshop-service"
+version = "0.1.0"
+java    = 27
+
+[[module]]
+path    = "web"
+group   = "com.example"
+name    = "petshop-web"
+version = "0.1.0"
+java    = 27

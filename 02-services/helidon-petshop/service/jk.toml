@@ -1,0 +1,22 @@
+name = "petshop-service"
+
+# Helidon's annotation processors: PetService and PetDatabase become service registry services
+# (descriptors generated at build time), which web's ApplicationBinding then binds.
+[helidon]
+version     = "27.0.1"
+declarative = true
+
+[dependencies]
+petshop-domain = { workspace = true }
+helidon-service-registry = { group = "io.helidon.service", name = "helidon-service-registry" }
+helidon-config = { group = "io.helidon.config", name = "helidon-config" }
+helidon-dbclient = { group = "io.helidon.dbclient", name = "helidon-dbclient" }
+helidon-dbclient-jdbc = { group = "io.helidon.dbclient", name = "helidon-dbclient-jdbc" }
+helidon-dbclient-hikari = { group = "io.helidon.dbclient", name = "helidon-dbclient-hikari" }
+
+[runtime-dependencies]
+h2 = { group = "com.h2database", name = "h2" }
+
+# Null checking: every package is @NullMarked (package-info.java), and NullAway checks it at
+# compile time.
+[nullness]

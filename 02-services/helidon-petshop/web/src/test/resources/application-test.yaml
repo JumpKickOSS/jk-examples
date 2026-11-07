@@ -1,0 +1,5 @@
+# The test config profile ([helidon] runs the tests with helidon.config.profile=test): a database of
+# its own, so a test run never shares one with a running copy of the shop.
+db:
+  connection:
+    url: "jdbc:h2:mem:petshop-test;DB_CLOSE_DELAY=-1;DATABASE_TO_LOWER=TRUE"

@@ -1,0 +1,25 @@
+server:
+  port: 8080
+  host: 0.0.0.0
+
+# Helidon DB Client: an in-memory H2 that lives as long as the application, and every statement the
+# pet shop runs, by name.
+db:
+  source: jdbc
+  connection:
+    url: "jdbc:h2:mem:petshop;DB_CLOSE_DELAY=-1;DATABASE_TO_LOWER=TRUE"
+    username: sa
+    password: ""
+  health-check:
+    type: "query"
+    statementName: "ping"
+  statements:
+    ping: "SELECT 0"
+    create-table: >-
+      CREATE TABLE IF NOT EXISTS pets (id BIGINT AUTO_INCREMENT PRIMARY KEY,
+      name VARCHAR(80) NOT NULL, species VARCHAR(40) NOT NULL)
+    count-pets: "SELECT COUNT(*) FROM pets"
+    select-all: "SELECT id, name, species FROM pets ORDER BY id"
+    select-by-species: "SELECT id, name, species FROM pets WHERE LOWER(species) = LOWER(?) ORDER BY id"
+    select-by-id: "SELECT id, name, species FROM pets WHERE id = ?"
+    insert: "INSERT INTO pets (name, species) VALUES (?, ?)"

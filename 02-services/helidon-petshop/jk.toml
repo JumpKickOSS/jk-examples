@@ -1,0 +1,34 @@
+name    = "petshop"
+group   = "com.example"
+version = "0.1.0"
+# Helidon 27 is compiled for Java 27: on a machine without that JDK, the first jk build installs it.
+java    = 27
+
+[workspace]
+modules = ["domain", "service", "web"]
+
+# Helidon's BOM for every member, so no Helidon dependency carries a version. `service` and `web`
+# also carry [helidon], the same release, for Helidon's annotation processors.
+[platform-dependencies]
+helidon-dependencies = "io.helidon:helidon-dependencies:27.0.1"
+
+# Test tiers. Bare `jk test` is the unit tier; each profile owns exactly one of the excluded
+# tags, so every tagged test runs in one tier and none is silently skipped.
+[test]
+exclude-tags = ["integration", "slow", "network", "bench"]
+
+[profiles.integration]
+include-tags = ["integration"]
+exclude-tags = []
+
+[profiles.network]
+include-tags = ["network"]
+exclude-tags = ["integration"]
+
+[profiles.slow]
+include-tags = ["slow"]
+exclude-tags = ["integration", "network"]
+
+[profiles.bench]
+include-tags = ["bench"]
+exclude-tags = ["integration", "network", "slow"]

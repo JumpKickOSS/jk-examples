@@ -21,7 +21,7 @@ need. `ports/` and `bench/` are validation and measurement, not teaching materia
 | Dir | What's there |
 |---|---|
 | `01-start/` | One small project per language: the first thing to read. |
-| `02-services/` | Backend services on a framework (Spring Boot, Micronaut, Ktor, Netty). |
+| `02-services/` | Backend services on a framework (Spring Boot, Helidon, Micronaut, Ktor, Netty). |
 | `03-fullstack/` | A JVM backend beside a front end jk builds as a node module, or the front end alone. |
 | `04-clients/` | Apps people run on a device or a desktop: Android, JavaFX. |
 | `05-recipes/` | One jk feature per project: codegen, lint, test tiers, packaging, build logic, migration, supply chain. |
@@ -49,6 +49,7 @@ need. `ports/` and `bench/` are validation and measurement, not teaching materia
 |---|---|---|
 | `02-services/spring-boot-kitchen-sink/` | Java | Spring Boot at an exact pin — web + data-jpa + validation + actuator, BOM auto-import, boot-jar layout, Spring AOT step, `[build-info]`, the actuator `sbom` endpoint over jk's SBOM, dev-scope devtools, `[image]`. |
 | `02-services/spring-boot-petshop/` | Java | Multi-module Spring Boot pet shop (domain / service / web) — Boot's BOM as the workspace platform, workspace DI + MockMvc tests, the spring and monorepo guard packs. |
+| `02-services/helidon-petshop/` | Java | The same pet shop the Helidon way — the `[helidon]` plugin on Helidon Declarative (generated routing, validation, JSON and the build-time `ApplicationBinding` across workspace jars), Helidon DB Client on H2, the pinned JDK installed by the first build, `[jlink]` and `[image]`, the helidon and monorepo guard packs. |
 | `02-services/micronaut-http/` | Java | Micronaut HTTP service — the `[micronaut]` plugin at an exact platform pin, assembly fat jar, `@MicronautTest` client smoke, `[native]` through `jk native`, `[image]`. |
 | `02-services/quarkus-rest/` | Java | Quarkus REST + Hibernate ORM Panache + Flyway on PostgreSQL 18 — `[quarkus] version` and versionless extensions, the augment and `@QuarkusTest` models from the lock, plain JUnit in `src/test` and Dev Services Postgres in `src/integration`, the fast-jar `[image]`, `jk native`. |
 | `02-services/spring-boot-jpa-enhanced/` | Java | `[hibernate] enhance`: build-time bytecode enhancement from the project's own Hibernate — a lazily loaded `@Lob`, self-tracking dirtiness, association management — each proved by a `@DataJpaTest`. |

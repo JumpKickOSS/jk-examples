@@ -1,0 +1,5 @@
+# House rules: the Helidon pack for the framework (SE only, Jakarta, test support in the test
+# scope), the monorepo pack for the workspace (one module per package, converged versions, no
+# snapshots, a Java floor).
+[guards]
+extends = ["cc.jumpkick.guards:helidon:0.50.4-SNAPSHOT", "cc.jumpkick.guards:monorepo:0.50.4-SNAPSHOT"]

@@ -1,0 +1,56 @@
+name = "petshop-web"
+
+[application]
+main = "com.example.petshop.Main"
+
+# Helidon 27, declarative: the annotation processors generate the endpoint's routing and, from
+# Main's @Service.GenerateBinding, an ApplicationBinding that names every service of the workspace,
+# so the application starts without scanning the classpath.
+[helidon]
+version     = "27.0.1"
+declarative = true
+validate    = true
+
+[dependencies]
+petshop-service = { workspace = true }
+helidon-webserver = { group = "io.helidon.webserver", name = "helidon-webserver" }
+helidon-config-yaml = { group = "io.helidon.config", name = "helidon-config-yaml" }
+helidon-http-media-json-binding = { group = "io.helidon.http.media", name = "helidon-http-media-json-binding" }
+helidon-validation = { group = "io.helidon.validation", name = "helidon-validation" }
+helidon-webserver-validation = { group = "io.helidon.webserver", name = "helidon-webserver-validation" }
+helidon-webserver-observe-health = { group = "io.helidon.webserver.observe", name = "helidon-webserver-observe-health" }
+helidon-health-checks = { group = "io.helidon.health", name = "helidon-health-checks" }
+helidon-dbclient-health = { group = "io.helidon.dbclient", name = "helidon-dbclient-health" }
+helidon-webserver-observe-metrics = { group = "io.helidon.webserver.observe", name = "helidon-webserver-observe-metrics" }
+
+[runtime-dependencies]
+helidon-logging-jul = { group = "io.helidon.logging", name = "helidon-logging-jul" }
+helidon-metrics-system-meters = { group = "io.helidon.metrics", name = "helidon-metrics-system-meters" }
+slf4j-jdk14 = { group = "org.slf4j", name = "slf4j-jdk14" }
+
+[test-dependencies]
+junit-jupiter = { group = "org.junit.jupiter", name = "junit-jupiter" }
+helidon-webserver-testing-junit5 = { group = "io.helidon.webserver.testing.junit5", name = "helidon-webserver-testing-junit5" }
+hamcrest-all = { group = "org.hamcrest", name = "hamcrest-all" }
+
+# A shippable container: target/petshop-web.jar and target/libs/ as layers, and a JEP 514 AOT
+# cache trained with the image's own JVM.
+[image]
+name      = "helidon-petshop"
+base      = "docker.io/bellsoft/liberica-runtime-container:jre-27-slim-glibc"
+ports     = [8080]
+aot-cache = true
+
+# jk build also writes target/petshop-web-jri/: a runtime linked from the project JDK, with an AOT
+# cache trained by starting it.
+[jlink]
+# HikariCP and the H2 driver load through ServiceLoader, where jdeps does not look, and use JNDI.
+modules = ["java.naming"]
+
+# The training starts bind a free port, so a build beside a running copy does not collide.
+[jlink.training-env]
+SERVER_PORT = "0"
+
+# Null checking: every package is @NullMarked (package-info.java), and NullAway checks it at
+# compile time.
+[nullness]
