@@ -1,0 +1,9 @@
+# Upstream Helidon clone, imported and overlaid (not published).
+checkout/
+# Local bench outputs and scratch logs
+bench-results/
+*.log
+*.txt
+!MODULE_MAP.txt
+maven-checkout/
+*.jsonl

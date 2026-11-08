@@ -114,6 +114,7 @@ need. `ports/` and `bench/` are validation and measurement, not teaching materia
 | Dir | Shows |
 |---|---|
 | `ports/netty/` | **Full Netty Maven→jk port** (~40 modules, Mill graph parity) — black-box + benchmarks. A pinned checkout plus `overlay/`. |
+| `ports/helidon/` | **Helidon 27 from Maven, whole default reactor** (223 modules, JDK 27 provisioned on first build) — `jk import` run live, hand edits tracked as import gaps, Maven A/B walls. |
 | `bench/agent-graph/` | Tokens an agent reads before it finds the answer to ten navigation questions about the hotel app: grep-and-open vs graphify vs `jk graph`; `RESULTS.md` is a ratchet. |
 | `bench/maven-top20/` | The 20 most-starred Maven-built repositories, each pinned to a SHA and driven through its own Maven build and `jk import` → `lock` → `build` → `test`; `RESULTS.md` is a ratchet. |
 
@@ -176,6 +177,7 @@ Per-scenario detail lives in each directory's README. The two third-party checko
 ```sh
 cd 04-clients/nowinandroid && ./setup.sh && ./run.sh
 cd ports/netty && ./setup.sh && ./run.sh
+cd ports/helidon && ./setup.sh && ./run.sh
 ```
 
 Network required throughout: Maven Central, Google Maven, and (for Android) the SDK

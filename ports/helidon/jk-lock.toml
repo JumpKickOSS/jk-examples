@@ -1,0 +1,4006 @@
+version = 1
+generated-by = "jk 0.50.4-SNAPSHOT"
+generated-by-build = "35a4065fd79b"
+generated-by-build-time = "2026-11-08T06:56:00Z"
+resolution-algorithm = "pubgrub-v1"
+jk-min = "0.12.0"
+manifests-sha256 = "cc81ff1b0e20d99b2812aac53eaabf06dd72946a109d2a5cde17222aea760bee"
+project-id = "4fd5fd1371ea57b0aa798ca48ed27912"
+
+[jdk]
+suggested-vendor = "temurin"
+suggested-version = "27.0.1.0.2"
+
+[[artifact]]
+name     = "backport-util-concurrent:backport-util-concurrent:jar:"
+version  = "3.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:f5759b7fcdfc83a525a036deedcbd32e5b536b625ebc282426f16ca137eb5902"
+scopes   = ["provided"]
+licenses = ["Public-Domain"]
+
+[[artifact]]
+name     = "classworlds:classworlds:jar:"
+version  = "1.1-alpha-2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:2bf4e59f3acd106fea6145a9a88fe8956509f8b9c0fdd11eb96fee757269e3f3"
+scopes   = ["provided"]
+licenses = []
+
+[[artifact]]
+name     = "com.cronutils:cron-utils:jar:"
+version  = "9.2.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:02af0e8b2fe93c9fa6eecf97b53b39faae14c5b996356edb132e9fe620013744"
+pinned-by = "jk.toml:cron-utils"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "org.slf4j:slf4j-api:jar:@2.0.17",
+]
+
+[[artifact]]
+name     = "com.fasterxml.jackson.core:jackson-annotations:jar:"
+version  = "2.21"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:53ca085f4a150f703f49e1aabd935bd03b43e1ea3d55d135438292af22cef56b"
+pinned-by = "com.fasterxml.jackson:jackson-bom:2.21.7"
+scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "com.fasterxml.jackson.core:jackson-core:jar:"
+version  = "2.21.7"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:8c5623b98f32d5f7e1287ff61ed50e08ab7b11381e991fff89327faabba42261"
+pinned-by = "com.fasterxml.jackson:jackson-bom:2.21.7"
+scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "com.fasterxml.jackson.core:jackson-databind:jar:"
+version  = "2.21.7"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:1290c2795e93e8a6861a6c4d9ff0d844d32f5ea178362cb2721edf5561e828b1"
+pinned-by = "com.fasterxml.jackson:jackson-bom:2.21.7"
+scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "com.fasterxml.jackson.core:jackson-annotations:jar:@2.21",
+  "com.fasterxml.jackson.core:jackson-core:jar:@2.21.7",
+]
+
+[[artifact]]
+name     = "com.fasterxml.jackson.dataformat:jackson-dataformat-smile:jar:"
+version  = "2.21.7"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:52f6549816e1166b5e658624d3ea71d3978cc37058a8a853afa59d91c534555c"
+pinned-by = "com.fasterxml.jackson:jackson-bom:2.21.7"
+scopes   = ["test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "com.fasterxml.jackson.core:jackson-core:jar:@2.21.7",
+  "com.fasterxml.jackson.core:jackson-databind:jar:@2.21.7",
+]
+
+[[artifact]]
+name     = "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:"
+version  = "2.21.7"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b8f62f98363ed9aa259b3a479a64fcbe7e081158a8bec6733972e900d12f4e47"
+pinned-by = "com.fasterxml.jackson:jackson-bom:2.21.7"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "com.fasterxml.jackson.core:jackson-core:jar:@2.21.7",
+  "com.fasterxml.jackson.core:jackson-databind:jar:@2.21.7",
+]
+
+[[artifact]]
+name     = "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:"
+version  = "2.21.7"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:5989b937f0aa5b6407e7a061077c9bfcac0590dc0a32e54b2fac6a3e2d49e812"
+pinned-by = "com.fasterxml.jackson:jackson-bom:2.21.7"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "com.fasterxml.jackson.core:jackson-annotations:jar:@2.21",
+  "com.fasterxml.jackson.core:jackson-core:jar:@2.21.7",
+  "com.fasterxml.jackson.core:jackson-databind:jar:@2.21.7",
+]
+
+[[artifact]]
+name     = "com.fasterxml.jackson.module:jackson-module-parameter-names:jar:"
+version  = "2.21.7"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:ffe66bf4bbb7b4f201aad456294312f13b3649aa392c36d95e786c910a0d513a"
+pinned-by = "com.fasterxml.jackson:jackson-bom:2.21.7"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "com.fasterxml.jackson.core:jackson-core:jar:@2.21.7",
+  "com.fasterxml.jackson.core:jackson-databind:jar:@2.21.7",
+]
+
+[[artifact]]
+name     = "com.github.docker-java:docker-java-api:jar:"
+version  = "3.4.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:6789d68f95904cf274a6410fdfcc5530976bc94197c856909459bb8c64db557b"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "com.fasterxml.jackson.core:jackson-annotations:jar:@2.21",
+  "org.slf4j:slf4j-api:jar:@2.0.17",
+]
+
+[[artifact]]
+name     = "com.github.docker-java:docker-java-transport-zerodep:jar:"
+version  = "3.4.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:582b772e0c52fa9d24710617ef610655465edd9a2930b0db75fc8667d6a8d02b"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "com.github.docker-java:docker-java-transport:jar:@3.4.2",
+  "org.slf4j:slf4j-api:jar:@2.0.17",
+]
+excluded-by = [
+  "net.java.dev.jna:jna <- jk.toml:testcontainers",
+]
+
+[[artifact]]
+name     = "com.github.docker-java:docker-java-transport:jar:"
+version  = "3.4.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:bc9981224fdc2d4726566fc723470601ceb14378265c865b4c203146a4e39765"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "com.github.jknack:handlebars:jar:"
+version  = "4.5.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:86355b9fb8e79e6648012f013165dd471b405f37f1a770e6d239db7a6916ff78"
+pinned-by = "jk.toml:handlebars"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "org.apache.commons:commons-lang3:jar:@3.18.0",
+  "org.apache.commons:commons-text:jar:@1.15.0",
+  "org.openjdk.nashorn:nashorn-core:jar:@15.4",
+  "org.slf4j:slf4j-api:jar:@2.0.17",
+]
+
+[[artifact]]
+name     = "com.google.android:annotations:jar:"
+version  = "4.1.1.4"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:ba734e1e84c09d615af6a09d33034b4f0442f8772dec120efb376d86a565ae15"
+scopes   = ["main", "runtime"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "com.google.api.grpc:proto-google-common-protos:jar:"
+version  = "2.51.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:0b27938f3d28ccd6884945d7e4f75f4e26a677bbf3cd39bbcb694f130f782aa9"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "com.google.protobuf:protobuf-java:jar:@4.36.0",
+]
+
+[[artifact]]
+name     = "com.google.code.findbugs:jsr305:jar:"
+version  = "3.0.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:766ad2a0783f2687962c8ad74ceecc38a28b9f72a2d085ee438b7813e928d0c7"
+scopes   = ["main", "runtime"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "com.google.code.gson:gson:jar:"
+version  = "2.13.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:dd0ce1b55a3ed2080cb70f9c655850cda86c206862310009dcb5e5c95265a5e0"
+pinned-by = "jk.toml:gson"
+scopes   = ["main", "runtime"]
+licenses = ["Apache-2.0"]
+deps = [
+  "com.google.errorprone:error_prone_annotations:jar:@2.30.0",
+]
+
+[[artifact]]
+name     = "com.google.errorprone:error_prone_annotations:jar:"
+version  = "2.30.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:144f3aefbd6e27daec55d3753b2c6b13c1afdaf0cf04816cdb564588ed92f1bd"
+pinned-by = "jk.toml:error_prone_annotations"
+scopes   = ["main", "runtime"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "com.google.guava:failureaccess:jar:"
+version  = "1.0.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:8a8f81cf9b359e3f6dfa691a1e776985c061ef2f223c9b2c80753e1b458e8064"
+scopes   = ["main", "runtime"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "com.google.guava:guava:jar:"
+version  = "33.3.1-jre"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:4bf0e2c5af8e4525c96e8fde17a4f7307f97f8478f11c4c8e35a0e3298ae4e90"
+pinned-by = "jk.toml:guava"
+scopes   = ["main", "runtime"]
+licenses = ["Apache-2.0"]
+deps = [
+  "com.google.code.findbugs:jsr305:jar:@3.0.2",
+  "com.google.errorprone:error_prone_annotations:jar:@2.30.0",
+  "com.google.guava:failureaccess:jar:@1.0.2",
+  "com.google.guava:listenablefuture:jar:@9999.0-empty-to-avoid-conflict-with-guava",
+  "com.google.j2objc:j2objc-annotations:jar:@3.0.0",
+  "org.checkerframework:checker-qual:jar:@3.43.0",
+]
+
+[[artifact]]
+name     = "com.google.guava:listenablefuture:jar:"
+version  = "9999.0-empty-to-avoid-conflict-with-guava"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b372a037d4230aa57fbeffdef30fd6123f9c0c2db85d0aced00c91b974f33f99"
+scopes   = ["main", "runtime"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "com.google.j2objc:j2objc-annotations:jar:"
+version  = "3.0.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:88241573467ddca44ffd4d74aa04c2bbfd11bf7c17e0c342c94c9de7a70a7c64"
+pinned-by = "jk.toml:j2objc-annotations"
+scopes   = ["main", "runtime"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "com.google.protobuf:protobuf-java-util:jar:"
+version  = "3.25.5"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:dacc58b2c3d2fa8d4bddc1acb881e78d6cf7c137dd78bc1d67f6aca732436a8d"
+scopes   = ["main"]
+licenses = ["BSD-3-Clause"]
+deps = [
+  "com.google.code.findbugs:jsr305:jar:@3.0.2",
+  "com.google.code.gson:gson:jar:@2.13.2",
+  "com.google.errorprone:error_prone_annotations:jar:@2.30.0",
+  "com.google.guava:guava:jar:@33.3.1-jre",
+  "com.google.j2objc:j2objc-annotations:jar:@3.0.0",
+  "com.google.protobuf:protobuf-java:jar:@4.36.0",
+]
+
+[[artifact]]
+name     = "com.google.protobuf:protobuf-java-util:jar:"
+version  = "4.36.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:ebbe226e2444db95d042280561d2c5bdf4117a5bae4c0536d85bd0910b297df5"
+pinned-by = "com.google.protobuf:protobuf-bom:4.36.0"
+scopes   = ["main"]
+licenses = ["BSD-3-Clause"]
+members  = ["all", "webclient/grpc", "webserver/grpc", "webserver/grpc-security", "webserver/grpc-tracing", "webserver/grpc-validation", "webserver/testing/junit5/grpc"]
+deps = [
+  "com.google.code.findbugs:jsr305:jar:@3.0.2",
+  "com.google.code.gson:gson:jar:@2.13.2",
+  "com.google.errorprone:error_prone_annotations:jar:@2.30.0",
+  "com.google.protobuf:protobuf-java:jar:@4.36.0",
+]
+
+[[artifact]]
+name     = "com.google.protobuf:protobuf-java:jar:"
+version  = "4.36.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:06515776b10bfed334b610273ffdd8884098a9333cb816314b4e4876bfcd2041"
+pinned-by = "com.google.protobuf:protobuf-bom:4.36.0"
+scopes   = ["main"]
+licenses = ["BSD-3-Clause"]
+
+[[artifact]]
+name     = "com.graphql-java:graphql-java:jar:"
+version  = "22.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:59037ddf59cb88a8dd98202741c772d71d986f735f796e1b8e6fce3eaca181e9"
+pinned-by = "jk.toml:graphql-java"
+scopes   = ["main"]
+licenses = ["MIT"]
+deps = [
+  "com.graphql-java:java-dataloader:jar:@3.3.0",
+  "org.reactivestreams:reactive-streams:jar:@1.0.4",
+]
+
+[[artifact]]
+name     = "com.graphql-java:java-dataloader:jar:"
+version  = "3.3.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:08cec84ac76e32b53ea666260f288f10b3731c21c89f9199b109ced2361f78b8"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "org.slf4j:slf4j-api:jar:@2.0.17",
+]
+
+[[artifact]]
+name     = "com.jayway.jsonpath:json-path:jar:"
+version  = "2.1.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:9927c3e3472459e3c48f4a73224a7040dcb877cf96151fb3f19d6479dffccae9"
+scopes   = ["test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "net.minidev:json-smart:jar:@2.2",
+  "org.slf4j:slf4j-api:jar:@2.0.17",
+]
+
+[[artifact]]
+name     = "com.nimbusds:nimbus-jose-jwt:jar:"
+version  = "10.4"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:6f13f3480ddc53d820d276f582f54843cff1daf5c6e35e534947e9de7723b46b"
+pinned-by = "jk.toml:nimbus-jose-jwt"
+scopes   = ["test"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "com.oracle.database.jdbc:ojdbc17:jar:"
+version  = "23.26.1.0.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:a26dbb47bdb0a4e2f0af09dd486e41f0c50ed5fb8910df5943e29d264b2eb8cc"
+pinned-by = "com.oracle.database.jdbc:ojdbc-bom:23.26.1.0.0"
+scopes   = ["main"]
+licenses = ["Oracle Free Use Terms and Conditions (FUTC)"]
+
+[[artifact]]
+name     = "com.oracle.database.jdbc:ucp17:jar:"
+version  = "23.26.1.0.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:dc00fb21fdd5d9faaed7edaa4fd108051a3e41d328b556a52fe2f804eaf9be28"
+pinned-by = "com.oracle.database.jdbc:ojdbc-bom:23.26.1.0.0"
+scopes   = ["main"]
+licenses = ["Oracle Free Use Terms and Conditions (FUTC)"]
+
+[[artifact]]
+name     = "com.squareup.okio:okio-jvm:jar:"
+version  = "3.4.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:0139ec7a506dbbd54cad62291b019cb850534be097c8c66c1000d5fbe8edef3e"
+scopes   = ["runtime"]
+licenses = ["Apache-2.0"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib-common:jar:@1.8.0",
+  "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:@1.8.0",
+]
+
+[[artifact]]
+name     = "com.squareup.okio:okio:jar:"
+version  = "3.4.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+path     = "okio-3.4.0.module"
+scopes   = ["runtime"]
+licenses = ["Apache-2.0"]
+deps = [
+  "com.squareup.okio:okio-jvm:jar:@3.4.0",
+]
+
+[[artifact]]
+name     = "com.typesafe:config:jar:"
+version  = "1.4.8"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:bf91fd793fcd9ed52cc7a0f90863794321af8797b90f3f71d7306e6b98ec8e7e"
+pinned-by = "jk.toml:config"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "com.xebialabs.restito:restito:jar:"
+version  = "0.9.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:051db0c7ea387663ccb62beff4c01cda61ba9d009c895eac3b8876d2aa32e487"
+pinned-by = "jk.toml:restito"
+scopes   = ["test"]
+licenses = ["MIT"]
+deps = [
+  "com.jayway.jsonpath:json-path:jar:@2.1.0",
+  "junit:junit:jar:@4.13.2",
+  "org.apache.mina:mina-core:jar:@2.0.13",
+  "org.glassfish.grizzly:grizzly-http-server:jar:@2.3.25",
+  "org.slf4j:slf4j-api:jar:@2.0.17",
+]
+
+[[artifact]]
+name     = "com.zaxxer:HikariCP:jar:"
+version  = "7.1.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:2be45c641b841e81df87292e181f2c203500c5f0e9a1676f135927387f3cf40b"
+pinned-by = "jk.toml:HikariCP"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "org.slf4j:slf4j-api:jar:@2.0.17",
+]
+
+[[artifact]]
+name     = "commons-codec:commons-codec:jar:"
+version  = "1.17.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:f9f6cb103f2ddc3c99a9d80ada2ae7bf0685111fd6bffccb72033d1da4e6ff23"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "commons-io:commons-io:jar:"
+version  = "2.16.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:f41f7baacd716896447ace9758621f62c1c6b0a91d89acee488da26fc477c84f"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "io.dropwizard.metrics:metrics-core:jar:"
+version  = "4.1.36"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:d3401c0c9e4d4cedf941d294f7f174ff46e0e4b8f8f77ebcb47d43d1f69dc077"
+pinned-by = "jk.toml:metrics-core"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "org.slf4j:slf4j-api:jar:@2.0.17",
+]
+
+[[artifact]]
+name     = "io.github.classgraph:classgraph:jar:"
+version  = "4.8.195"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:84820d3e187d208c311f2b24719689f371c1361608e0881ff61d6acef0bf6807"
+pinned-by = "jk.toml:classgraph"
+scopes   = ["main"]
+licenses = ["MIT"]
+
+[[artifact]]
+name     = "io.grpc:grpc-api:jar:"
+version  = "1.73.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:bae13d4e4716a0955d316b5fcb75582504325e5b11ac946b13b64b4fce19bc6e"
+pinned-by = "jk.toml:grpc-api"
+scopes   = ["main", "runtime"]
+licenses = ["Apache-2.0"]
+deps = [
+  "com.google.code.findbugs:jsr305:jar:@3.0.2",
+  "com.google.errorprone:error_prone_annotations:jar:@2.30.0",
+  "com.google.guava:guava:jar:@33.3.1-jre",
+]
+excluded-by = [
+  "com.google.code.findbugs:jsr305 <- io.grpc:grpc-context@1.73.0, jk.toml:grpc-api, jk.toml:grpc-protobuf",
+]
+
+[[artifact]]
+name     = "io.grpc:grpc-context:jar:"
+version  = "1.73.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:d8d6911e225b55501692651272ce961ba5be1f76662ceb7f0aa79ecce8f63f25"
+pinned-by = "io.grpc:grpc-bom:1.73.0"
+scopes   = ["main", "runtime"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.grpc:grpc-api:jar:@1.73.0",
+]
+
+[[artifact]]
+name     = "io.grpc:grpc-core:jar:"
+version  = "1.73.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:cffb55f1e7268e160647e88da142c09c6175ff72970c64f7cb411d78eb661663"
+pinned-by = "io.grpc:grpc-bom:1.73.0"
+scopes   = ["main", "runtime"]
+licenses = ["Apache-2.0"]
+deps = [
+  "com.google.android:annotations:jar:@4.1.1.4",
+  "com.google.code.gson:gson:jar:@2.13.2",
+  "com.google.errorprone:error_prone_annotations:jar:@2.30.0",
+  "com.google.guava:guava:jar:@33.3.1-jre",
+  "io.grpc:grpc-api:jar:@1.73.0",
+  "io.grpc:grpc-context:jar:@1.73.0",
+  "io.perfmark:perfmark-api:jar:@0.27.0",
+  "org.codehaus.mojo:animal-sniffer-annotations:jar:@1.24",
+]
+
+[[artifact]]
+name     = "io.grpc:grpc-okhttp:jar:"
+version  = "1.73.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:4f57308eb286d952701609f0ac804136668ad3f2d6b21541c4a00f56987bec75"
+pinned-by = "io.grpc:grpc-bom:1.73.0"
+scopes   = ["runtime"]
+licenses = ["Apache-2.0"]
+deps = [
+  "com.google.guava:guava:jar:@33.3.1-jre",
+  "com.squareup.okio:okio:jar:@3.4.0",
+  "io.grpc:grpc-api:jar:@1.73.0",
+  "io.grpc:grpc-core:jar:@1.73.0",
+  "io.grpc:grpc-util:jar:@1.73.0",
+  "io.perfmark:perfmark-api:jar:@0.27.0",
+]
+
+[[artifact]]
+name     = "io.grpc:grpc-protobuf-lite:jar:"
+version  = "1.73.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:de8ce5309713e72bb57d5ff2dabdb4c173ae4872bd1439b9c3d3f93430b407d9"
+pinned-by = "io.grpc:grpc-bom:1.73.0"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "com.google.code.findbugs:jsr305:jar:@3.0.2",
+  "com.google.guava:guava:jar:@33.3.1-jre",
+  "io.grpc:grpc-api:jar:@1.73.0",
+]
+excluded-by = [
+  "com.google.code.findbugs:jsr305 <- jk.toml:grpc-protobuf",
+  "com.google.protobuf:protobuf-javalite <- io.grpc:grpc-protobuf@1.73.0",
+]
+
+[[artifact]]
+name     = "io.grpc:grpc-protobuf:jar:"
+version  = "1.73.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:5c0ca9e321c02845c47dc6edcef9f22e49015cef7753c54012f5398425163c08"
+pinned-by = "jk.toml:grpc-protobuf"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "com.google.api.grpc:proto-google-common-protos:jar:@2.51.0",
+  "com.google.code.findbugs:jsr305:jar:@3.0.2",
+  "com.google.guava:guava:jar:@33.3.1-jre",
+  "com.google.protobuf:protobuf-java:jar:@4.36.0",
+  "io.grpc:grpc-api:jar:@1.73.0",
+  "io.grpc:grpc-protobuf-lite:jar:@1.73.0",
+]
+excluded-by = [
+  "com.google.code.findbugs:jsr305 <- jk.toml:grpc-protobuf",
+]
+
+[[artifact]]
+name     = "io.grpc:grpc-services:jar:"
+version  = "1.73.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:7dc27d49f834eeb283a784a1ec56433d76e34fa4322021e047897319159c87b8"
+pinned-by = "io.grpc:grpc-bom:1.73.0"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "com.google.code.gson:gson:jar:@2.13.2",
+  "com.google.errorprone:error_prone_annotations:jar:@2.30.0",
+  "com.google.guava:guava:jar:@33.3.1-jre",
+  "com.google.protobuf:protobuf-java-util:jar:@3.25.5",
+  "io.grpc:grpc-core:jar:@1.73.0",
+  "io.grpc:grpc-protobuf:jar:@1.73.0",
+  "io.grpc:grpc-stub:jar:@1.73.0",
+  "io.grpc:grpc-util:jar:@1.73.0",
+]
+
+[[artifact]]
+name     = "io.grpc:grpc-stub:jar:"
+version  = "1.73.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:050fe139de47d8937e6b0080e8dff3d0f42df6782f147c10bb298c0e9cd94b2f"
+pinned-by = "io.grpc:grpc-bom:1.73.0"
+scopes   = ["main", "runtime"]
+licenses = ["Apache-2.0"]
+deps = [
+  "com.google.errorprone:error_prone_annotations:jar:@2.30.0",
+  "com.google.guava:guava:jar:@33.3.1-jre",
+  "io.grpc:grpc-api:jar:@1.73.0",
+  "org.codehaus.mojo:animal-sniffer-annotations:jar:@1.24",
+]
+
+[[artifact]]
+name     = "io.grpc:grpc-util:jar:"
+version  = "1.73.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b7df6cbcc30b7a3219f06483a9a9d320a431beda8a1ace5b16d879f84112373f"
+pinned-by = "io.grpc:grpc-bom:1.73.0"
+scopes   = ["main", "runtime"]
+licenses = ["Apache-2.0"]
+deps = [
+  "com.google.guava:guava:jar:@33.3.1-jre",
+  "io.grpc:grpc-api:jar:@1.73.0",
+  "io.grpc:grpc-core:jar:@1.73.0",
+  "org.codehaus.mojo:animal-sniffer-annotations:jar:@1.24",
+]
+
+[[artifact]]
+name     = "io.micrometer:micrometer-commons:jar:"
+version  = "1.17.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:f2cee6ef046e72eec8128474c7f58c6217173b45ae373c30de0289f2a56ab0fd"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "io.micrometer:micrometer-core:jar:"
+version  = "1.17.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:9ca47dfa831409b40253c8dc98c17b9d3e050ebbde4d1543c5521dca2b95ad56"
+pinned-by = "jk.toml:micrometer-core"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.micrometer:micrometer-commons:jar:@1.17.1",
+  "io.micrometer:micrometer-observation:jar:@1.17.1",
+  "org.hdrhistogram:HdrHistogram:jar:@2.2.2",
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "io.micrometer:micrometer-observation:jar:"
+version  = "1.17.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:eb34f0cd84a879393ae5c21160fc06385ccdc74f36a4d1e31b199f59acfdaf71"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.micrometer:micrometer-commons:jar:@1.17.1",
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "io.micrometer:micrometer-registry-otlp:jar:"
+version  = "1.17.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:c991036f05cf1a84b02bcc95b9a686ac39a584b01e7afdab1562a5c1dc71d0c9"
+pinned-by = "jk.toml:micrometer-registry-otlp"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.micrometer:micrometer-core:jar:@1.17.1",
+  "io.opentelemetry.proto:opentelemetry-proto:jar:@1.10.0-alpha",
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "io.micrometer:micrometer-registry-prometheus:jar:"
+version  = "1.17.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:ac24d43f123e103828a23a86f092a8709d87d309ad3212e798305654e951a8ce"
+pinned-by = "jk.toml:micrometer-registry-prometheus"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.micrometer:micrometer-core:jar:@1.17.1",
+  "io.prometheus:prometheus-metrics-core:jar:@1.7.0",
+  "io.prometheus:prometheus-metrics-exposition-formats:jar:@1.7.0",
+  "io.prometheus:prometheus-metrics-tracer-common:jar:@1.7.0",
+  "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "io.opentelemetry.proto:opentelemetry-proto:jar:"
+version  = "1.10.0-alpha"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:931e84b0802d77ae963e26c6ad6129b4ad0f2510fe907f019f5c988c2a869c3a"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "com.google.protobuf:protobuf-java:jar:@4.36.0",
+]
+
+[[artifact]]
+name     = "io.opentelemetry.semconv:opentelemetry-semconv:jar:"
+version  = "1.43.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:40e0776423dcad5c9c81e744ddeb8b1b9dca932fe597234dddb7fd045823febd"
+pinned-by = "jk.toml:opentelemetry-semconv"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "io.opentelemetry:opentelemetry-api:jar:"
+version  = "1.65.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:ffaad9334ac41c02b6820b19da589d13dca72d7c6663cc9621c3ca64901f7995"
+pinned-by = "io.opentelemetry:opentelemetry-bom:1.65.0"
+scopes   = ["main", "runtime", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.opentelemetry:opentelemetry-context:jar:@1.65.0",
+]
+
+[[artifact]]
+name     = "io.opentelemetry:opentelemetry-common:jar:"
+version  = "1.65.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:be2a8c3e458a3b3b8de0670c9f6649624b4b6f10f3bde64d3d340a029e86454e"
+pinned-by = "io.opentelemetry:opentelemetry-bom:1.65.0"
+scopes   = ["main", "runtime", "test"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "io.opentelemetry:opentelemetry-context:jar:"
+version  = "1.65.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:7d763d701412dc10d5c70de8217a25d08bce1b7fe8fe3e3c6818568e14c1aabf"
+pinned-by = "io.opentelemetry:opentelemetry-bom:1.65.0"
+scopes   = ["main", "runtime", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.opentelemetry:opentelemetry-common:jar:@1.65.0",
+]
+
+[[artifact]]
+name     = "io.opentelemetry:opentelemetry-exporter-common:jar:"
+version  = "1.65.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:c17005d82bf8efa300328b15099fa4100eff20038a1db6c50e604f592f7641e7"
+pinned-by = "io.opentelemetry:opentelemetry-bom:1.65.0"
+scopes   = ["main", "runtime", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.opentelemetry:opentelemetry-api:jar:@1.65.0",
+]
+
+[[artifact]]
+name     = "io.opentelemetry:opentelemetry-exporter-logging-otlp:jar:"
+version  = "1.65.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:0f36b2e644afc5bc8788544fc6b3d275f937894da789c3b17fabb5a494eb4dc7"
+pinned-by = "io.opentelemetry:opentelemetry-bom:1.65.0"
+scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.opentelemetry:opentelemetry-exporter-otlp-common:jar:@1.65.0",
+  "io.opentelemetry:opentelemetry-sdk-logs:jar:@1.65.0",
+  "io.opentelemetry:opentelemetry-sdk-metrics:jar:@1.65.0",
+  "io.opentelemetry:opentelemetry-sdk-trace:jar:@1.65.0",
+]
+
+[[artifact]]
+name     = "io.opentelemetry:opentelemetry-exporter-logging:jar:"
+version  = "1.65.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:caf84d6cfad110fb7c61c9a98478d045c6ed3f618e17feb05e97739f74def401"
+pinned-by = "io.opentelemetry:opentelemetry-bom:1.65.0"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.opentelemetry:opentelemetry-sdk:jar:@1.65.0",
+]
+
+[[artifact]]
+name     = "io.opentelemetry:opentelemetry-exporter-otlp-common:jar:"
+version  = "1.65.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:821ea048731b21797de338cebfe4e8c439414cf8a2b13110c2d5c69238be431d"
+pinned-by = "io.opentelemetry:opentelemetry-bom:1.65.0"
+scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.opentelemetry:opentelemetry-exporter-common:jar:@1.65.0",
+]
+
+[[artifact]]
+name     = "io.opentelemetry:opentelemetry-exporter-otlp:jar:"
+version  = "1.65.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:ef6cd5fe9de01caa2bc062a21322d2e4bf07c7dbb968c21fef4373325fbc452d"
+pinned-by = "jk.toml:opentelemetry-exporter-otlp"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.opentelemetry:opentelemetry-exporter-otlp-common:jar:@1.65.0",
+  "io.opentelemetry:opentelemetry-sdk-logs:jar:@1.65.0",
+  "io.opentelemetry:opentelemetry-sdk-metrics:jar:@1.65.0",
+  "io.opentelemetry:opentelemetry-sdk-trace:jar:@1.65.0",
+]
+excluded-by = [
+  "io.opentelemetry:opentelemetry-exporter-sender-okhttp <- jk.toml:opentelemetry-exporter-otlp",
+]
+
+[[artifact]]
+name     = "io.opentelemetry:opentelemetry-exporter-sender-grpc-managed-channel:jar:"
+version  = "1.65.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:3659d28886a6bb9d038e7c74ba3289f158a4de6029535f92b6b575a89ba2dea9"
+pinned-by = "io.opentelemetry:opentelemetry-bom:1.65.0"
+scopes   = ["runtime"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.grpc:grpc-stub:jar:@1.73.0",
+  "io.opentelemetry:opentelemetry-exporter-common:jar:@1.65.0",
+  "io.opentelemetry:opentelemetry-sdk-common:jar:@1.65.0",
+]
+
+[[artifact]]
+name     = "io.opentelemetry:opentelemetry-exporter-sender-jdk:jar:"
+version  = "1.65.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:4537628c76e4cfbb157f371bd8b92a760eda8f4e960a02aabaacd89ec7bc0e5f"
+pinned-by = "io.opentelemetry:opentelemetry-bom:1.65.0"
+scopes   = ["runtime"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.opentelemetry:opentelemetry-exporter-common:jar:@1.65.0",
+  "io.opentelemetry:opentelemetry-sdk-common:jar:@1.65.0",
+]
+
+[[artifact]]
+name     = "io.opentelemetry:opentelemetry-extension-trace-propagators:jar:"
+version  = "1.65.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:de0c8477e4388244f23c984285100705202a8a9b4d9f507f27a750f267345649"
+pinned-by = "io.opentelemetry:opentelemetry-bom:1.65.0"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.opentelemetry:opentelemetry-api:jar:@1.65.0",
+]
+
+[[artifact]]
+name     = "io.opentelemetry:opentelemetry-sdk-common:jar:"
+version  = "1.65.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b7756881df140002c4cf523931ac6cb77a98f2d4386a7a59f4d3c64dac9f051a"
+pinned-by = "io.opentelemetry:opentelemetry-bom:1.65.0"
+scopes   = ["main", "runtime", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.opentelemetry:opentelemetry-api:jar:@1.65.0",
+]
+
+[[artifact]]
+name     = "io.opentelemetry:opentelemetry-sdk-extension-autoconfigure-spi:jar:"
+version  = "1.65.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b043fbb9c6130dac1d1ac0d8dc1902c559250c0c7cb89341a988f325bab79592"
+pinned-by = "io.opentelemetry:opentelemetry-bom:1.65.0"
+scopes   = ["test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.opentelemetry:opentelemetry-sdk:jar:@1.65.0",
+]
+
+[[artifact]]
+name     = "io.opentelemetry:opentelemetry-sdk-extension-autoconfigure:jar:"
+version  = "1.65.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:17a03d1b5dc0b1cff0258b7551eeecee9f9baff5134b6b411d40dc0c487285f6"
+pinned-by = "io.opentelemetry:opentelemetry-bom:1.65.0"
+scopes   = ["test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.opentelemetry:opentelemetry-sdk-extension-autoconfigure-spi:jar:@1.65.0",
+  "io.opentelemetry:opentelemetry-sdk:jar:@1.65.0",
+]
+
+[[artifact]]
+name     = "io.opentelemetry:opentelemetry-sdk-logs:jar:"
+version  = "1.65.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:7a22fb31101842705a57256ffbd7ee60f5ade75a51944a3b43169c2eb7158358"
+pinned-by = "io.opentelemetry:opentelemetry-bom:1.65.0"
+scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.opentelemetry:opentelemetry-api:jar:@1.65.0",
+  "io.opentelemetry:opentelemetry-sdk-common:jar:@1.65.0",
+]
+
+[[artifact]]
+name     = "io.opentelemetry:opentelemetry-sdk-metrics:jar:"
+version  = "1.65.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:6ee721f1bb0a2cffc9bb1c002df58d6d4d0d9916e5f9968c3088fbb3aa7d82a8"
+pinned-by = "io.opentelemetry:opentelemetry-bom:1.65.0"
+scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.opentelemetry:opentelemetry-api:jar:@1.65.0",
+  "io.opentelemetry:opentelemetry-sdk-common:jar:@1.65.0",
+]
+
+[[artifact]]
+name     = "io.opentelemetry:opentelemetry-sdk-trace:jar:"
+version  = "1.65.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:fe479a975bbe1a5989c37866ea065204230ab835025c7da992cf906536504055"
+pinned-by = "io.opentelemetry:opentelemetry-bom:1.65.0"
+scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.opentelemetry:opentelemetry-api:jar:@1.65.0",
+  "io.opentelemetry:opentelemetry-sdk-common:jar:@1.65.0",
+]
+
+[[artifact]]
+name     = "io.opentelemetry:opentelemetry-sdk:jar:"
+version  = "1.65.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:870f39762211792e902a981ca98d811839987b0586f84d7bb26660a751810553"
+pinned-by = "io.opentelemetry:opentelemetry-bom:1.65.0"
+scopes   = ["main", "test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.opentelemetry:opentelemetry-api:jar:@1.65.0",
+  "io.opentelemetry:opentelemetry-sdk-common:jar:@1.65.0",
+  "io.opentelemetry:opentelemetry-sdk-logs:jar:@1.65.0",
+  "io.opentelemetry:opentelemetry-sdk-metrics:jar:@1.65.0",
+  "io.opentelemetry:opentelemetry-sdk-trace:jar:@1.65.0",
+]
+
+[[artifact]]
+name     = "io.perfmark:perfmark-api:jar:"
+version  = "0.27.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:c7b478503ec524e55df19b424d46d27c8a68aeb801664fadd4f069b71f52d0f6"
+scopes   = ["main", "runtime"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "io.prometheus:prometheus-metrics-config:jar:"
+version  = "1.7.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:bc9455f938df76ec4add13fe31903a5bb583c605679a16a779d6a6c2b21218f2"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "io.prometheus:prometheus-metrics-core:jar:"
+version  = "1.7.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:f9e5f1c8a20073347c88941d43e8c64ae6810afe0a61cbfe9c2f4efffe72808b"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.prometheus:prometheus-metrics-config:jar:@1.7.0",
+  "io.prometheus:prometheus-metrics-model:jar:@1.7.0",
+]
+excluded-by = [
+  "io.prometheus:prometheus-metrics-tracer-initializer <- io.micrometer:micrometer-registry-prometheus@1.17.1",
+]
+
+[[artifact]]
+name     = "io.prometheus:prometheus-metrics-exposition-formats:jar:"
+version  = "1.7.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:7352ca8b50e861eca3567ceb332e9590a06742a9d177cff54e52c8cff4c4fb90"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.prometheus:prometheus-metrics-exposition-textformats:jar:@1.7.0",
+]
+
+[[artifact]]
+name     = "io.prometheus:prometheus-metrics-exposition-textformats:jar:"
+version  = "1.7.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:7e49065895a35181c57f2c3c6d07b7b3f9b5754cd6422e0a7bd793f20a29c28a"
+pinned-by = "jk.toml:prometheus-metrics-exposition-textformats"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.prometheus:prometheus-metrics-config:jar:@1.7.0",
+  "io.prometheus:prometheus-metrics-model:jar:@1.7.0",
+]
+
+[[artifact]]
+name     = "io.prometheus:prometheus-metrics-model:jar:"
+version  = "1.7.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:e6d94538f8735c4161c36a660298f3a0fa8e4b281ceaf209723aaf9e212d292d"
+pinned-by = "jk.toml:prometheus-metrics-model"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "io.prometheus:prometheus-metrics-config:jar:@1.7.0",
+]
+
+[[artifact]]
+name     = "io.prometheus:prometheus-metrics-tracer-common:jar:"
+version  = "1.7.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b7e8699032f0f1501556eeafd20fcfdd89b355f5d22b6d8361d723d467d88ed4"
+pinned-by = "jk.toml:prometheus-metrics-tracer-common"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "jakarta.annotation:jakarta.annotation-api:jar:"
+version  = "2.1.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:5f65fdaf424eee2b55e1d882ba9bb376be93fb09b37b808be6e22e8851c909fe"
+pinned-by = "jk.toml:jakarta.annotation-api"
+scopes   = ["main", "provided"]
+licenses = ["EPL-2.0", "GPL-2.0-with-classpath-exception"]
+
+[[artifact]]
+name     = "jakarta.el:jakarta.el-api:jar:"
+version  = "5.0.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:57b822380207900f5145c2a687384c50fd41495d388a235791d96ae3b9bfd36d"
+scopes   = ["main", "provided"]
+licenses = ["EPL-2.0", "GNU General Public License, version 2 with the GNU Classpath Exception"]
+
+[[artifact]]
+name     = "jakarta.enterprise:jakarta.enterprise.cdi-api:jar:"
+version  = "4.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:beaf74c4f2618189309e3f4a09c43effab633dd96aa1f6dc58a6ba7ee0042717"
+pinned-by = "jk.toml:jakarta.enterprise.cdi-api"
+scopes   = ["main", "provided"]
+licenses = ["Apache-2.0"]
+deps = [
+  "jakarta.annotation:jakarta.annotation-api:jar:@2.1.1",
+  "jakarta.el:jakarta.el-api:jar:@5.0.0",
+  "jakarta.enterprise:jakarta.enterprise.lang-model:jar:@4.0.1",
+  "jakarta.inject:jakarta.inject-api:jar:@2.0.1",
+  "jakarta.interceptor:jakarta.interceptor-api:jar:@2.1.0",
+]
+
+[[artifact]]
+name     = "jakarta.enterprise:jakarta.enterprise.lang-model:jar:"
+version  = "4.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:53acafe65b6ef0195fa1b8a0ef2650e5aa024c32cb4059c4df372d6b32089cd3"
+pinned-by = "jk.toml:jakarta.enterprise.lang-model"
+scopes   = ["main", "provided"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "jakarta.inject:jakarta.inject-api:jar:"
+version  = "2.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:f7dc98062fccf14126abb751b64fab12c312566e8cbdc8483598bffcea93af7c"
+pinned-by = "jk.toml:jakarta.inject-api"
+scopes   = ["main", "provided"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "jakarta.interceptor:jakarta.interceptor-api:jar:"
+version  = "2.1.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:ef787d3f713fc6ff4f02cd4b0dbed08f93d8af3400c90cbb43fb4b5c0583710b"
+scopes   = ["main", "provided"]
+licenses = ["EPL-2.0", "GPL-2.0-with-classpath-exception"]
+deps = [
+  "jakarta.annotation:jakarta.annotation-api:jar:@2.1.1",
+]
+excluded-by = [
+  "jakarta.annotation:jakarta.annotation-api <- jakarta.enterprise:jakarta.enterprise.cdi-api@4.0.1, org.jboss.narayana.jta:narayana-jta@7.1.0.Final",
+]
+
+[[artifact]]
+name     = "jakarta.json.bind:jakarta.json.bind-api:jar:"
+version  = "3.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:d937f01c12d416f0a615a87cd8251c2bdd45f750244ebe288c4ba6d469db0377"
+pinned-by = "jk.toml:jakarta.json.bind-api"
+scopes   = ["main", "runtime"]
+licenses = ["EPL-2.0", "GNU General Public License, version 2 with the GNU Classpath Exception"]
+
+[[artifact]]
+name     = "jakarta.json:jakarta.json-api:jar:"
+version  = "2.1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:bc934142805ea1d794f1440563965a3861a2a9fb7414ecd3fe44f26500734414"
+pinned-by = "jk.toml:jakarta.json-api"
+scopes   = ["main", "runtime", "test"]
+licenses = ["EPL-2.0", "GNU General Public License, version 2 with the GNU Classpath Exception"]
+
+[[artifact]]
+name     = "jakarta.persistence:jakarta.persistence-api:jar:"
+version  = "3.1.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:475389446d35c6f46c565728b756dc508c284644ea2690644e0d8e7e339d42fd"
+pinned-by = "jk.toml:jakarta.persistence-api"
+scopes   = ["main"]
+licenses = ["EPL-2.0", "BSD-3-Clause"]
+
+[[artifact]]
+name     = "jakarta.resource:jakarta.resource-api:jar:"
+version  = "2.0.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:d0f42504e5ddf731d3d5b623e69618efb5a8922e25b5ff83b6e0340951cc0790"
+scopes   = ["main"]
+licenses = ["EPL-2.0", "GPL-2.0-with-classpath-exception"]
+deps = [
+  "jakarta.annotation:jakarta.annotation-api:jar:@2.1.1",
+  "jakarta.transaction:jakarta.transaction-api:jar:@2.0.1",
+]
+
+[[artifact]]
+name     = "jakarta.transaction:jakarta.transaction-api:jar:"
+version  = "2.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:50c0a7c760c13ae6c042acf182b28f0047413db95b4636fb8879bcffab5ba875"
+pinned-by = "jk.toml:jakarta.transaction-api"
+scopes   = ["main"]
+licenses = ["EPL-2.0", "GPL-2.0-with-classpath-exception"]
+
+[[artifact]]
+name     = "javax.annotation:javax.annotation-api:jar:"
+version  = "1.3.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:e04ba5195bcd555dc95650f7cc614d151e4bcd52d29a10b8aa2197f3ab89ab9b"
+pinned-by = "jk.toml:javax.annotation-api"
+scopes   = ["main"]
+licenses = ["CDDL + GPLv2 with classpath exception"]
+
+[[artifact]]
+name     = "junit:junit:jar:"
+version  = "3.8.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b58e459509e190bed737f3592bc1950485322846cf10e78ded1d065153012d70"
+scopes   = ["provided"]
+licenses = ["Common Public License Version 1.0"]
+members  = ["service/maven-plugin"]
+
+[[artifact]]
+name     = "junit:junit:jar:"
+version  = "4.12"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:59721f0805e223d84b90677887d9ff567dc534d7c502ca903c0c2b17f05c116a"
+scopes   = ["test"]
+licenses = ["EPL-1.0"]
+members  = ["config/config"]
+deps = [
+  "org.hamcrest:hamcrest-core:jar:@1.3",
+]
+
+[[artifact]]
+name     = "junit:junit:jar:"
+version  = "4.13.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:8e495b634469d64fb8acfa3495a065cbacc8a0fff55ce1e31007be4c16dc57d3"
+scopes   = ["main", "provided", "test"]
+licenses = ["EPL-1.0"]
+deps = [
+  "org.hamcrest:hamcrest-core:jar:@1.3",
+]
+
+[[artifact]]
+name     = "net.bytebuddy:byte-buddy-agent:jar:"
+version  = "1.9.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:547288e013a9d1f4a4ce2ab84c24e3edda6e433c7fa6b2c3c3613932671b05b1"
+scopes   = ["test"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "net.bytebuddy:byte-buddy:jar:"
+version  = "1.18.5"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:e50ba78d8fd22e832c7a87bfa84cbdf93476ff4901b6e985ff66ebbde83f7f8a"
+pinned-by = "jk.toml:byte-buddy"
+scopes   = ["test"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "net.minidev:accessors-smart:jar:"
+version  = "1.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:e6e04753913546da3ff0fbf532ac2831d0266f69246b1e6e295ba367aa9f02a5"
+scopes   = ["test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "org.ow2.asm:asm:jar:@7.3.1",
+]
+
+[[artifact]]
+name     = "net.minidev:json-smart:jar:"
+version  = "2.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:758d1b10c455a79991d10e2cf178ed89335290a5dcacd5483678ea626c0bd6e4"
+scopes   = ["test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "net.minidev:accessors-smart:jar:@1.1",
+]
+
+[[artifact]]
+name     = "net.sf.jopt-simple:jopt-simple:jar:"
+version  = "5.0.4"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:df26cc58f235f477db07f753ba5a3ab243ebe5789d9f89ecf68dd62ea9a66c28"
+scopes   = ["test"]
+licenses = ["MIT"]
+
+[[artifact]]
+name     = "org.antlr:antlr4-runtime:jar:"
+version  = "4.13.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:dd3e8a13a2d669bf84fb8d834de35ce4875f27157698d206241ec8488aadcaf7"
+pinned-by = "jk.toml:antlr4-runtime"
+scopes   = ["main"]
+licenses = ["BSD-3-Clause"]
+
+[[artifact]]
+name     = "org.apache.commons:commons-compress:jar:"
+version  = "1.27.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:293d80f54b536b74095dcd7ea3cf0a29bbfc3402519281332495f4420d370d16"
+pinned-by = "jk.toml:commons-compress"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "commons-codec:commons-codec:jar:@1.17.1",
+  "commons-io:commons-io:jar:@2.16.1",
+  "org.apache.commons:commons-lang3:jar:@3.18.0",
+]
+
+[[artifact]]
+name     = "org.apache.commons:commons-lang3:jar:"
+version  = "3.18.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:4eeeae8d20c078abb64b015ec158add383ac581571cddc45c68f0c9ae0230720"
+pinned-by = "jk.toml:commons-lang3"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "org.apache.commons:commons-math3:jar:"
+version  = "3.6.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:1e56d7b058d28b65abd256b8458e3885b674c1d588fa43cd7d1cbb9c7ef2b308"
+scopes   = ["test"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "org.apache.commons:commons-text:jar:"
+version  = "1.15.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:58d2da30f058512a1e7f914e39241deca4dff5c27a085b4ed2faa9e7208067f6"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "org.apache.commons:commons-lang3:jar:@3.18.0",
+]
+
+[[artifact]]
+name     = "org.apache.logging.log4j:log4j-api:jar:"
+version  = "2.25.5"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:64777f73ea0b3104c04eb82befbdccc30a425a19e83ad06cb2f93aa303511863"
+pinned-by = "org.apache.logging.log4j:log4j-bom:2.25.5"
+scopes   = ["main", "provided", "test"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "org.apache.logging.log4j:log4j-core:jar:"
+version  = "2.25.5"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:050c4f85deb48b055e9c041ac39043fbb79ce477841a11a1eb2969c86c6a0072"
+pinned-by = "org.apache.logging.log4j:log4j-bom:2.25.5"
+scopes   = ["test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "org.apache.logging.log4j:log4j-api:jar:@2.25.5",
+]
+
+[[artifact]]
+name     = "org.apache.logging.log4j:log4j-jpl:jar:"
+version  = "2.25.5"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:6d1b4e15f35475de268ac4d5fdba57ee4750b9ea1755e01b59d919e71a81f400"
+pinned-by = "org.apache.logging.log4j:log4j-bom:2.25.5"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "org.apache.logging.log4j:log4j-api:jar:@2.25.5",
+]
+
+[[artifact]]
+name     = "org.apache.maven.plugin-tools:maven-plugin-annotations:jar:"
+version  = "3.15.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b58bcb3a1f362f6e1efa2772064026bb3d4ad92e6f43a1812d8d2886489912f5"
+pinned-by = "jk.toml:maven-plugin-annotations"
+scopes   = ["provided"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "org.apache.maven.wagon:wagon-provider-api:jar:"
+version  = "1.0-beta-6"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:e116f32edcb77067289a3148143f2c0c97b27cf9a1342f8108ee37dec4868861"
+scopes   = ["provided"]
+licenses = ["Apache-2.0"]
+deps = [
+  "org.codehaus.plexus:plexus-utils:jar:@3.6.1",
+]
+
+[[artifact]]
+name     = "org.apache.maven:maven-artifact-manager:jar:"
+version  = "2.2.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:d1e247c4ed3952385fd704ac9db2a222247cfe7d20508b4f3c76b90f857952ed"
+scopes   = ["provided"]
+licenses = ["Apache-2.0"]
+deps = [
+  "backport-util-concurrent:backport-util-concurrent:jar:@3.1",
+  "org.apache.maven.wagon:wagon-provider-api:jar:@1.0-beta-6",
+  "org.apache.maven:maven-artifact:jar:@3.9.15",
+  "org.apache.maven:maven-repository-metadata:jar:@2.2.1",
+  "org.codehaus.plexus:plexus-container-default:jar:@1.0-alpha-9-stable-1",
+  "org.codehaus.plexus:plexus-utils:jar:@3.6.1",
+]
+
+[[artifact]]
+name     = "org.apache.maven:maven-artifact:jar:"
+version  = "3.9.15"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:f154c31f15ac97c37b9cdf9f8d63cde5053c470d2daf54df7dfd3bb3c9e501c6"
+pinned-by = "jk.toml:maven-artifact"
+scopes   = ["provided"]
+licenses = ["Apache-2.0"]
+deps = [
+  "org.codehaus.plexus:plexus-utils:jar:@3.6.1",
+]
+
+[[artifact]]
+name     = "org.apache.maven:maven-model:jar:"
+version  = "3.9.15"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:591722f628000086c5af93d5a367aaefec2f78476b6f732ad70a05d49942fbfd"
+pinned-by = "jk.toml:maven-model"
+scopes   = ["provided"]
+licenses = ["Apache-2.0"]
+deps = [
+  "org.codehaus.plexus:plexus-utils:jar:@3.6.1",
+]
+
+[[artifact]]
+name     = "org.apache.maven:maven-plugin-api:jar:"
+version  = "3.9.15"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:ea4ae22e2b86e7b63c674c3b5cdfcb074d2c54237b983d9292f94b6966986938"
+pinned-by = "jk.toml:maven-plugin-api"
+scopes   = ["provided"]
+licenses = ["Apache-2.0"]
+deps = [
+  "org.apache.maven:maven-artifact:jar:@3.9.15",
+  "org.apache.maven:maven-model:jar:@3.9.15",
+  "org.codehaus.plexus:plexus-classworlds:jar:@2.9.0",
+  "org.codehaus.plexus:plexus-utils:jar:@3.6.1",
+  "org.eclipse.sisu:org.eclipse.sisu.plexus:jar:@1.0.0",
+]
+
+[[artifact]]
+name     = "org.apache.maven:maven-plugin-registry:jar:"
+version  = "2.2.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:4ad0673155d7e0e5cf6d13689802d8d507f38e5ea00a6d2fb92aef206108213d"
+scopes   = ["provided"]
+licenses = ["Apache-2.0"]
+deps = [
+  "org.codehaus.plexus:plexus-container-default:jar:@1.0-alpha-9-stable-1",
+  "org.codehaus.plexus:plexus-utils:jar:@3.6.1",
+]
+
+[[artifact]]
+name     = "org.apache.maven:maven-profile:jar:"
+version  = "2.2.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:ecaffef655fea6b138f0855a12f7dbb59fc0d6bffb5c1bfd31803cccb49ea08c"
+scopes   = ["provided"]
+licenses = ["Apache-2.0"]
+deps = [
+  "org.apache.maven:maven-model:jar:@3.9.15",
+  "org.codehaus.plexus:plexus-container-default:jar:@1.0-alpha-9-stable-1",
+  "org.codehaus.plexus:plexus-interpolation:jar:@1.11",
+  "org.codehaus.plexus:plexus-utils:jar:@3.6.1",
+]
+
+[[artifact]]
+name     = "org.apache.maven:maven-project:jar:"
+version  = "2.2.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:24ddb65b7a6c3befb6267ce5f739f237c84eba99389265c30df67c3dd8396a40"
+pinned-by = "jk.toml:maven-project"
+scopes   = ["provided"]
+licenses = ["Apache-2.0"]
+deps = [
+  "org.apache.maven:maven-artifact-manager:jar:@2.2.1",
+  "org.apache.maven:maven-artifact:jar:@3.9.15",
+  "org.apache.maven:maven-model:jar:@3.9.15",
+  "org.apache.maven:maven-plugin-registry:jar:@2.2.1",
+  "org.apache.maven:maven-profile:jar:@2.2.1",
+  "org.apache.maven:maven-settings:jar:@2.2.1",
+  "org.codehaus.plexus:plexus-container-default:jar:@1.0-alpha-9-stable-1",
+  "org.codehaus.plexus:plexus-interpolation:jar:@1.11",
+  "org.codehaus.plexus:plexus-utils:jar:@3.6.1",
+]
+
+[[artifact]]
+name     = "org.apache.maven:maven-repository-metadata:jar:"
+version  = "2.2.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:5fe283f47b0e7f7d95a4252af3fa7a0db4d8f080cd9df308608c0472b8f168a1"
+scopes   = ["provided"]
+licenses = ["Apache-2.0"]
+deps = [
+  "org.codehaus.plexus:plexus-utils:jar:@3.6.1",
+]
+
+[[artifact]]
+name     = "org.apache.maven:maven-settings:jar:"
+version  = "2.2.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:9a9f556713a404e770c9dbdaed7eb086078014c989291960c76fdde6db4192f7"
+scopes   = ["provided"]
+licenses = ["Apache-2.0"]
+deps = [
+  "org.apache.maven:maven-model:jar:@3.9.15",
+  "org.codehaus.plexus:plexus-container-default:jar:@1.0-alpha-9-stable-1",
+  "org.codehaus.plexus:plexus-interpolation:jar:@1.11",
+  "org.codehaus.plexus:plexus-utils:jar:@3.6.1",
+]
+
+[[artifact]]
+name     = "org.apache.mina:mina-core:jar:"
+version  = "2.0.13"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:951d3b40b6f3e6351e13748ec711d79f25466937b5608838dcf7f765e96ce12b"
+scopes   = ["test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "org.slf4j:slf4j-api:jar:@2.0.17",
+]
+
+[[artifact]]
+name     = "org.apiguardian:apiguardian-api:jar:"
+version  = "1.1.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b509448ac506d607319f182537f0b35d71007582ec741832a1f111e5b5b70b38"
+scopes   = ["main", "provided", "test"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "org.assertj:assertj-core:jar:"
+version  = "3.27.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:5b8a26205f6d5ea60ad9ce65ce4a40a2afe4c48abeec61bd0740a088c24e89f5"
+scopes   = ["test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "net.bytebuddy:byte-buddy:jar:@1.18.5",
+]
+
+[[artifact]]
+name     = "org.awaitility:awaitility:jar:"
+version  = "3.1.6"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:694e2e915312b6fe0123c3d532f6675eed3b6d60e4f2ab677d3688fde3defcfc"
+pinned-by = "jk.toml:awaitility"
+scopes   = ["test"]
+licenses = ["Apache-2.0"]
+deps = [
+  "org.hamcrest:hamcrest-core:jar:@1.3",
+  "org.hamcrest:hamcrest-library:jar:@1.3",
+  "org.objenesis:objenesis:jar:@2.6",
+]
+
+[[artifact]]
+name     = "org.checkerframework:checker-qual:jar:"
+version  = "3.43.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:3fbc2e98f05854c3df16df9abaa955b91b15b3ecac33623208ed6424640ef0f6"
+scopes   = ["main", "runtime"]
+licenses = ["MIT"]
+
+[[artifact]]
+name     = "org.codehaus.mojo:animal-sniffer-annotations:jar:"
+version  = "1.24"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:c720e6e5bcbe6b2f48ded75a47bccdb763eede79d14330102e0d352e3d89ed92"
+scopes   = ["main", "runtime"]
+licenses = ["MIT"]
+
+[[artifact]]
+name     = "org.codehaus.plexus:plexus-classworlds:jar:"
+version  = "2.9.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:1ad3292cd563381e3fd632f3fded1988f9e9b2be7a9f3db63ff4c4cedba13fa5"
+scopes   = ["provided"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "org.codehaus.plexus:plexus-component-annotations:jar:"
+version  = "2.2.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:50edb93c73786e62822b4fe1336e22880fdf147191373cf5c911370e16748fcf"
+scopes   = ["provided"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "org.codehaus.plexus:plexus-container-default:jar:"
+version  = "1.0-alpha-9-stable-1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:7c758612888782ccfe376823aee7cdcc7e0cdafb097f7ef50295a0b0c3a16edf"
+scopes   = ["provided"]
+licenses = []
+deps = [
+  "classworlds:classworlds:jar:@1.1-alpha-2",
+  "junit:junit:jar:@4.13.2",
+  "org.codehaus.plexus:plexus-utils:jar:@3.6.1",
+]
+
+[[artifact]]
+name     = "org.codehaus.plexus:plexus-interpolation:jar:"
+version  = "1.11"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:fd9507feb858fa620d1b4aa4b7039fdea1a77e09d3fd28cfbddfff468d9d8c28"
+scopes   = ["provided"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "org.codehaus.plexus:plexus-utils:jar:"
+version  = "3.6.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:05a63effd67e2d6b9d610cc82e2bd7473289d34802e57a529b28110f28af5679"
+scopes   = ["provided"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "org.eclipse.microprofile.reactive-streams-operators:microprofile-reactive-streams-operators-api:jar:"
+version  = "3.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:a5385fa6eb55939c4fe2f8a6573f8aa93b6d7db4e6f5178a0bd2cb3d26328905"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "org.reactivestreams:reactive-streams:jar:@1.0.4",
+]
+
+[[artifact]]
+name     = "org.eclipse.parsson:parsson:jar:"
+version  = "1.1.9"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:03dc4dc834a928730d52a50952de0f30c35e0daf048889132be19ee1e5053a6c"
+pinned-by = "jk.toml:parsson"
+scopes   = ["main", "runtime", "test"]
+licenses = ["EPL-2.0", "GNU General Public License, version 2 with the GNU Classpath Exception"]
+deps = [
+  "jakarta.json:jakarta.json-api:jar:@2.1.3",
+]
+
+[[artifact]]
+name     = "org.eclipse.sisu:org.eclipse.sisu.plexus:jar:"
+version  = "1.0.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:865b5300034fc08c790215d7d97f141914c932191bef9338a7dcef589f7536e9"
+scopes   = ["provided"]
+licenses = ["EPL-2.0"]
+deps = [
+  "org.codehaus.plexus:plexus-classworlds:jar:@2.9.0",
+  "org.codehaus.plexus:plexus-component-annotations:jar:@2.2.0",
+  "org.codehaus.plexus:plexus-utils:jar:@3.6.1",
+]
+excluded-by = [
+  "org.eclipse.sisu:org.eclipse.sisu.inject <- org.apache.maven:maven-plugin-api@3.9.15",
+]
+
+[[artifact]]
+name     = "org.eclipse:yasson:jar:"
+version  = "3.0.4"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:f658285f9e3e1a3999e2ea92695fc33892b258305d2adafb72985e81452ddd07"
+pinned-by = "jk.toml:yasson"
+scopes   = ["runtime"]
+licenses = ["EPL-2.0", "BSD-3-Clause"]
+deps = [
+  "jakarta.json.bind:jakarta.json.bind-api:jar:@3.0.1",
+  "jakarta.json:jakarta.json-api:jar:@2.1.3",
+  "org.eclipse.parsson:parsson:jar:@1.1.9",
+]
+
+[[artifact]]
+name     = "org.glassfish.grizzly:grizzly-framework:jar:"
+version  = "2.3.25"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:bc1569b48ec957c82a0f1bd095dfce38faf74511177e46f6af62ad110acfedae"
+scopes   = ["test"]
+licenses = ["CDDL+GPL"]
+
+[[artifact]]
+name     = "org.glassfish.grizzly:grizzly-http-server:jar:"
+version  = "2.3.25"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:8c265e31cac2a04ccc514dbd3dd0f98b20f217447753370f06d00c785f9e7cd9"
+scopes   = ["test"]
+licenses = ["CDDL+GPL"]
+deps = [
+  "org.glassfish.grizzly:grizzly-http:jar:@2.3.25",
+]
+
+[[artifact]]
+name     = "org.glassfish.grizzly:grizzly-http:jar:"
+version  = "2.3.25"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:68b11ab262c7a384b26178baf27299635346b656a00f8c3f9fdcf417cbfa5f13"
+scopes   = ["test"]
+licenses = ["CDDL+GPL"]
+deps = [
+  "org.glassfish.grizzly:grizzly-framework:jar:@2.3.25",
+]
+
+[[artifact]]
+name     = "org.hamcrest:hamcrest-all:jar:"
+version  = "1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:4877670629ab96f34f5f90ab283125fcd9acb7e683e66319a68be6eb2cca60de"
+pinned-by = "jk.toml:hamcrest-all"
+scopes   = ["main", "provided", "test"]
+licenses = ["BSD-3-Clause"]
+
+[[artifact]]
+name     = "org.hamcrest:hamcrest-core:jar:"
+version  = "1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:66fdef91e9739348df7a096aa384a5685f4e875584cce89386a7a47251c4d8e9"
+pinned-by = "jk.toml:hamcrest-core"
+scopes   = ["main", "provided", "test"]
+licenses = ["BSD-3-Clause"]
+
+[[artifact]]
+name     = "org.hamcrest:hamcrest-library:jar:"
+version  = "1.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:711d64522f9ec410983bd310934296da134be4254a125080a0416ec178dfad1c"
+scopes   = ["test"]
+licenses = ["BSD-3-Clause"]
+deps = [
+  "org.hamcrest:hamcrest-core:jar:@1.3",
+]
+
+[[artifact]]
+name     = "org.hdrhistogram:HdrHistogram:jar:"
+version  = "2.2.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:22d1d4316c4ec13a68b559e98c8256d69071593731da96136640f864fa14fad8"
+scopes   = ["main"]
+licenses = ["CC0-1.0", "BSD-2-Clause"]
+
+[[artifact]]
+name     = "org.jboss.invocation:jboss-invocation:jar:"
+version  = "2.0.0.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:ef9beb3bff85930710b367b6f84d40bf72128898ca6ccdf3775537793b74b067"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "org.jboss.logging:jboss-logging:jar:"
+version  = "3.5.3.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:7b119460de174195aca412dfed52ca0bbef0ece26c2d74301b6172cfadf4ff59"
+pinned-by = "jk.toml:jboss-logging"
+scopes   = ["test"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "org.jboss.narayana.jta:narayana-jta:jar:"
+version  = "7.1.0.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:52e18ea7444581afe8c0f347c11041abe1c2733424337bc5dad7dc95649dd724"
+pinned-by = "jk.toml:narayana-jta"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "jakarta.el:jakarta.el-api:jar:@5.0.0",
+  "jakarta.enterprise:jakarta.enterprise.cdi-api:jar:@4.0.1",
+  "jakarta.enterprise:jakarta.enterprise.lang-model:jar:@4.0.1",
+  "jakarta.inject:jakarta.inject-api:jar:@2.0.1",
+  "jakarta.interceptor:jakarta.interceptor-api:jar:@2.1.0",
+  "jakarta.resource:jakarta.resource-api:jar:@2.0.0",
+  "jakarta.transaction:jakarta.transaction-api:jar:@2.0.1",
+  "org.eclipse.microprofile.reactive-streams-operators:microprofile-reactive-streams-operators-api:jar:@3.0",
+  "org.jboss.invocation:jboss-invocation:jar:@2.0.0.Final",
+  "org.jboss:jboss-transaction-spi:jar:@8.0.0.Final",
+  "org.reactivestreams:reactive-streams:jar:@1.0.4",
+]
+
+[[artifact]]
+name     = "org.jboss:jboss-transaction-spi:jar:"
+version  = "8.0.0.Final"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:07e4e62ceae075a8c11a715d89b19992c879f505b48be6b2727f5be798562ae1"
+scopes   = ["main"]
+licenses = ["Public-Domain"]
+deps = [
+  "jakarta.resource:jakarta.resource-api:jar:@2.0.0",
+  "jakarta.transaction:jakarta.transaction-api:jar:@2.0.1",
+]
+
+[[artifact]]
+name     = "org.jetbrains.kotlin:kotlin-stdlib-common:jar:"
+version  = "1.8.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:78ef93b59e603cc0fe51def9bd4c037b07cbace3b3b7806d1a490a42bc1f4cb2"
+scopes   = ["runtime"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:"
+version  = "1.8.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:4c889d1d9803f5f2eb6c1592a6b7e62369ac7660c9eee15aba16fec059163666"
+scopes   = ["runtime"]
+licenses = ["Apache-2.0"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@1.8.0",
+]
+
+[[artifact]]
+name     = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:"
+version  = "1.8.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:05b62804441b0c9a1920b6b7d5cf7329a4e24b6258478e32b1f046ca01900946"
+scopes   = ["runtime"]
+licenses = ["Apache-2.0"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:@1.8.0",
+  "org.jetbrains.kotlin:kotlin-stdlib:jar:@1.8.0",
+]
+
+[[artifact]]
+name     = "org.jetbrains.kotlin:kotlin-stdlib:jar:"
+version  = "1.8.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:c77bef8774640b9fb9d6e217459ff220dae59878beb7d2e4b430506feffc654e"
+scopes   = ["runtime"]
+licenses = ["Apache-2.0"]
+deps = [
+  "org.jetbrains.kotlin:kotlin-stdlib-common:jar:@1.8.0",
+  "org.jetbrains:annotations:jar:@17.0.0",
+]
+
+[[artifact]]
+name     = "org.jetbrains:annotations:jar:"
+version  = "17.0.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:195fb0da046d55bb042e91543484cf1da68b02bb7afbfe031f229e45ac84b3f2"
+pinned-by = "jk.toml:annotations"
+scopes   = ["main", "runtime", "test"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "org.jspecify:jspecify:jar:"
+version  = "1.0.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:070d75f261fe4c5b8202508366715f7f2d4660f88c8ef7e6d3575e48c9683b66"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "org.junit.jupiter:junit-jupiter-api:jar:"
+version  = "5.12.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:0b9ca728e4bcd9adc57f29deb9556ff9ed5e08b4e8843b875aba4e4e3e04f092"
+pinned-by = "org.junit:junit-bom:5.12.2"
+scopes   = ["main", "provided", "test"]
+licenses = ["EPL-2.0"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.junit.platform:junit-platform-commons:jar:@1.12.2",
+  "org.opentest4j:opentest4j:jar:@1.3.0",
+]
+
+[[artifact]]
+name     = "org.junit.jupiter:junit-jupiter-engine:jar:"
+version  = "5.12.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:f576c06b8accde9985063b8bc80526cb980eec24dee0b7221fc8ddd7ace65800"
+pinned-by = "org.junit:junit-bom:5.12.2"
+scopes   = ["test"]
+licenses = ["EPL-2.0"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.junit.jupiter:junit-jupiter-api:jar:@5.12.2",
+  "org.junit.platform:junit-platform-engine:jar:@1.12.2",
+]
+
+[[artifact]]
+name     = "org.junit.jupiter:junit-jupiter-params:jar:"
+version  = "5.12.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:b219ffa949b90a71aa3b6c2b606456b82bca0b2089b7459c8ff461156ff59b0f"
+pinned-by = "org.junit:junit-bom:5.12.2"
+scopes   = ["main", "test"]
+licenses = ["EPL-2.0"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.junit.jupiter:junit-jupiter-api:jar:@5.12.2",
+]
+
+[[artifact]]
+name     = "org.junit.jupiter:junit-jupiter:jar:"
+version  = "5.12.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:3854b3ad434906b827fec474aa0d8da8b56e9e56d5fc7f2e20fc3f12ec4be894"
+pinned-by = "org.junit:junit-bom:5.12.2"
+scopes   = ["test"]
+licenses = ["EPL-2.0"]
+members  = ["all", "service/maven-plugin", "webserver/testing/junit5/grpc"]
+deps = [
+  "org.junit.jupiter:junit-jupiter-api:jar:@5.12.2",
+  "org.junit.jupiter:junit-jupiter-engine:jar:@5.12.2",
+  "org.junit.jupiter:junit-jupiter-params:jar:@5.12.2",
+]
+
+[[artifact]]
+name     = "org.junit.platform:junit-platform-commons:jar:"
+version  = "1.12.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:e683a01e85dfabea520c056ac6015a6162756e602ec653c0da85e233f0afbc18"
+pinned-by = "org.junit:junit-bom:5.12.2"
+scopes   = ["main", "provided", "test"]
+licenses = ["EPL-2.0"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+]
+
+[[artifact]]
+name     = "org.junit.platform:junit-platform-engine:jar:"
+version  = "1.12.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:cef0efcb5bd2e05e2b808d38bab5c655089c0c3001527376e74cb606a7911ec8"
+pinned-by = "org.junit:junit-bom:5.12.2"
+scopes   = ["test"]
+licenses = ["EPL-2.0"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.junit.platform:junit-platform-commons:jar:@1.12.2",
+  "org.opentest4j:opentest4j:jar:@1.3.0",
+]
+
+[[artifact]]
+name     = "org.junit.platform:junit-platform-launcher:jar:"
+version  = "1.12.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:dccf2c1fa0a977c53ad094ad859bfdddd524d97594b76307ad787de71985757f"
+pinned-by = "org.junit:junit-bom:5.12.2"
+scopes   = ["test"]
+licenses = ["EPL-2.0"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.junit.platform:junit-platform-engine:jar:@1.12.2",
+]
+
+[[artifact]]
+name     = "org.junit.platform:junit-platform-testkit:jar:"
+version  = "1.12.2"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:36e3d2b876740079591521e26dcc01cc3ea203fdc4ba786fd86628bd892a1190"
+pinned-by = "org.junit:junit-bom:5.12.2"
+scopes   = ["test"]
+licenses = ["EPL-2.0"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.assertj:assertj-core:jar:@3.27.3",
+  "org.junit.platform:junit-platform-launcher:jar:@1.12.2",
+  "org.opentest4j:opentest4j:jar:@1.3.0",
+]
+
+[[artifact]]
+name     = "org.mockito:mockito-core:jar:"
+version  = "2.23.4"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:d77e018b6bc211d78ddcec54bc508732c4677b9a9eb9103793be85441b20bc5d"
+pinned-by = "jk.toml:mockito-core"
+scopes   = ["test"]
+licenses = ["MIT"]
+deps = [
+  "net.bytebuddy:byte-buddy-agent:jar:@1.9.3",
+  "net.bytebuddy:byte-buddy:jar:@1.18.5",
+  "org.objenesis:objenesis:jar:@2.6",
+]
+
+[[artifact]]
+name     = "org.mongodb:bson-record-codec:jar:"
+version  = "5.11.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:36c5558b54b73e3aab253408210d65513be088cfc76c76b61471c54d29b0f5e5"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "org.mongodb:bson:jar:@5.11.1",
+]
+
+[[artifact]]
+name     = "org.mongodb:bson:jar:"
+version  = "5.11.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:daea840f3430618043f433d3a6cbf21404a388386f9fcc0bc2fd3a450aa74594"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "org.mongodb:mongodb-driver-core:jar:"
+version  = "5.11.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:39ea5514c2439914e53f0e057cf4015364cc20bda50be71c13e1b46a209638c6"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "org.mongodb:bson-record-codec:jar:@5.11.1",
+  "org.mongodb:bson:jar:@5.11.1",
+]
+
+[[artifact]]
+name     = "org.mongodb:mongodb-driver-sync:jar:"
+version  = "5.11.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:3485ae7f4cb6b5a84a3c50c98ed984e4c317d0d346048441e6abcea14a16e8f6"
+pinned-by = "jk.toml:mongodb-driver-sync"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+deps = [
+  "org.mongodb:bson:jar:@5.11.1",
+  "org.mongodb:mongodb-driver-core:jar:@5.11.1",
+]
+
+[[artifact]]
+name     = "org.objenesis:objenesis:jar:"
+version  = "2.6"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:5e168368fbc250af3c79aa5fef0c3467a2d64e5a7bd74005f25d8399aeb0708d"
+scopes   = ["test"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "org.openjdk.jmh:jmh-core:jar:"
+version  = "1.37"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:dc0eaf2bbf0036a70b60798c785d6e03a9daf06b68b8edb0f1ba9eb3421baeb3"
+pinned-by = "jk.toml:jmh-core"
+scopes   = ["test"]
+licenses = ["GNU General Public License (GPL), version 2, with the Classpath exception"]
+deps = [
+  "net.sf.jopt-simple:jopt-simple:jar:@5.0.4",
+  "org.apache.commons:commons-math3:jar:@3.6.1",
+]
+
+[[artifact]]
+name     = "org.openjdk.jmh:jmh-generator-annprocess:jar:"
+version  = "1.37"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:6a5604b5b804e0daca1145df1077609321687734a8b49387e49f10557c186c77"
+pinned-by = "jk.toml:jmh-generator-annprocess"
+scopes   = ["test"]
+licenses = ["GNU General Public License (GPL), version 2, with the Classpath exception"]
+deps = [
+  "org.openjdk.jmh:jmh-core:jar:@1.37",
+]
+
+[[artifact]]
+name     = "org.openjdk.nashorn:nashorn-core:jar:"
+version  = "15.4"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:6f816e84dfd63a81d4eaa7829c08337bbaff3ec683ff3bf6bbd90d017a00dc6f"
+scopes   = ["main"]
+licenses = ["GPL v2 with the Classpath exception"]
+deps = [
+  "org.ow2.asm:asm-commons:jar:@7.3.1",
+  "org.ow2.asm:asm-tree:jar:@7.3.1",
+  "org.ow2.asm:asm-util:jar:@7.3.1",
+  "org.ow2.asm:asm:jar:@7.3.1",
+]
+
+[[artifact]]
+name     = "org.opentest4j:opentest4j:jar:"
+version  = "1.3.0"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:48e2df636cab6563ced64dcdff8abb2355627cb236ef0bf37598682ddf742f1b"
+scopes   = ["main", "provided", "test"]
+licenses = ["Apache-2.0"]
+
+[[artifact]]
+name     = "org.ow2.asm:asm-analysis:jar:"
+version  = "7.3.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:46b8a8efd4b94facb5ab4b35afe30ee0546ae7a43d2c64e6def56c2f168fefa5"
+scopes   = ["main"]
+licenses = ["BSD-3-Clause"]
+deps = [
+  "org.ow2.asm:asm-tree:jar:@7.3.1",
+]
+
+[[artifact]]
+name     = "org.ow2.asm:asm-commons:jar:"
+version  = "7.3.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:87cd8bb3c6bf6bcbb33fca48060c5065f66ebf6a3d7de9bf18bff51bcf156ebc"
+scopes   = ["main"]
+licenses = ["BSD-3-Clause"]
+deps = [
+  "org.ow2.asm:asm-analysis:jar:@7.3.1",
+  "org.ow2.asm:asm-tree:jar:@7.3.1",
+  "org.ow2.asm:asm:jar:@7.3.1",
+]
+
+[[artifact]]
+name     = "org.ow2.asm:asm-tree:jar:"
+version  = "7.3.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:f91a4a8aa868c5c4665bb4fd134019a91f9f8b9216527fba295e3c8b5422b78b"
+scopes   = ["main"]
+licenses = ["BSD-3-Clause"]
+deps = [
+  "org.ow2.asm:asm:jar:@7.3.1",
+]
+
+[[artifact]]
+name     = "org.ow2.asm:asm-util:jar:"
+version  = "7.3.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:182128592742ed4883ac82bf205f137b6bfbe1234c68e6feb13759e75a85b729"
+scopes   = ["main"]
+licenses = ["BSD-3-Clause"]
+deps = [
+  "org.ow2.asm:asm-analysis:jar:@7.3.1",
+  "org.ow2.asm:asm-tree:jar:@7.3.1",
+  "org.ow2.asm:asm:jar:@7.3.1",
+]
+
+[[artifact]]
+name     = "org.ow2.asm:asm:jar:"
+version  = "5.0.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:71c4f78e437b8fdcd9cc0dfd2abea8c089eb677005a6a5cff320206cc52b46cc"
+scopes   = ["test"]
+licenses = ["BSD"]
+members  = ["config/config"]
+
+[[artifact]]
+name     = "org.ow2.asm:asm:jar:"
+version  = "7.3.1"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:2f67e11ceec819ebd88ddee5300aba699b1cbab2e20c22e97cf027d3be93959b"
+scopes   = ["main", "test"]
+licenses = ["BSD-3-Clause"]
+
+[[artifact]]
+name     = "org.reactivestreams:reactive-streams:jar:"
+version  = "1.0.4"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:f75ca597789b3dac58f61857b9ac2e1034a68fa672db35055a8fb4509e325f28"
+pinned-by = "jk.toml:reactive-streams"
+scopes   = ["main"]
+licenses = ["MIT-0"]
+
+[[artifact]]
+name     = "org.rnorth.duct-tape:duct-tape:jar:"
+version  = "1.0.8"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:31cef12ddec979d1f86d7cf708c41a17da523d05c685fd6642e9d0b2addb7240"
+scopes   = ["main"]
+licenses = ["MIT"]
+deps = [
+  "org.jetbrains:annotations:jar:@17.0.0",
+]
+
+[[artifact]]
+name     = "org.slf4j:slf4j-api:jar:"
+version  = "2.0.17"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:7b751d952061954d5abfed7181c1f645d336091b679891591d63329c622eb832"
+pinned-by = "org.slf4j:slf4j-bom:2.0.17"
+scopes   = ["main", "provided", "test"]
+licenses = ["MIT"]
+
+[[artifact]]
+name     = "org.slf4j:slf4j-jdk-platform-logging:jar:"
+version  = "2.0.17"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:36f6a35b83ce2dd8d269c1c437ef3a7d05a0122f0f392886878ed74548401af8"
+pinned-by = "org.slf4j:slf4j-bom:2.0.17"
+scopes   = ["main"]
+licenses = ["MIT"]
+deps = [
+  "org.slf4j:slf4j-api:jar:@2.0.17",
+]
+
+[[artifact]]
+name     = "org.slf4j:slf4j-jdk14:jar:"
+version  = "2.0.17"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:ead25c1b15f59db1fb5552b76fe63de4164f0df40024d19287b75dece47ad3be"
+pinned-by = "org.slf4j:slf4j-bom:2.0.17"
+scopes   = ["test"]
+licenses = ["MIT"]
+deps = [
+  "org.slf4j:slf4j-api:jar:@2.0.17",
+]
+
+[[artifact]]
+name     = "org.testcontainers:database-commons:jar:"
+version  = "1.21.4"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:539167f41549b597efa04a40912f58a2d56f422040d014993951ec6f0e14c691"
+scopes   = ["main"]
+licenses = ["MIT"]
+deps = [
+  "org.testcontainers:testcontainers:jar:@1.21.4",
+]
+
+[[artifact]]
+name     = "org.testcontainers:jdbc:jar:"
+version  = "1.21.4"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:15ce7d24f4a869fcf225875fcfeea8fd1f86991c8f00286e435c8602ea426470"
+pinned-by = "jk.toml:jdbc"
+scopes   = ["main"]
+licenses = ["MIT"]
+deps = [
+  "org.testcontainers:database-commons:jar:@1.21.4",
+]
+
+[[artifact]]
+name     = "org.testcontainers:testcontainers:jar:"
+version  = "1.21.4"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:ea81a9ca337bbae7ee83f372b92d55140c7ab976bce73ff1b79f2dd151ca9610"
+pinned-by = "jk.toml:testcontainers"
+scopes   = ["main"]
+licenses = ["MIT"]
+deps = [
+  "com.github.docker-java:docker-java-api:jar:@3.4.2",
+  "com.github.docker-java:docker-java-transport-zerodep:jar:@3.4.2",
+  "junit:junit:jar:@4.13.2",
+  "org.apache.commons:commons-compress:jar:@1.27.1",
+  "org.rnorth.duct-tape:duct-tape:jar:@1.0.8",
+  "org.slf4j:slf4j-api:jar:@2.0.17",
+]
+
+[[artifact]]
+name     = "org.yaml:snakeyaml:jar:"
+version  = "2.7"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:2e194eba45a67dee19a4e272f4a04b18de8054e9f598b094382f6dae0b0e4b5e"
+pinned-by = "jk.toml:snakeyaml"
+scopes   = ["main"]
+licenses = ["Apache-2.0"]
+
+[[tool]]
+coordinate = "com.ibm.icu:icu4j"
+version    = "72.1"
+checksum   = "sha256:3df572b240a68d13b5cd778ad2393e885d26411434cd8f098ac5987ea2e64ce3"
+
+[[tool]]
+coordinate = "org.abego.treelayout:org.abego.treelayout.core"
+version    = "1.0.3"
+checksum   = "sha256:fa5e31395c39c2e7d46aca0f81f72060931607b2fa41bd36038eb2cb6fb93326"
+
+[[tool]]
+coordinate = "org.antlr:ST4"
+version    = "4.3.4"
+checksum   = "sha256:f927ac384c46d749f8b5ec68972a53aed21e00313509299616edb73bfa15ff33"
+
+[[tool]]
+coordinate = "org.antlr:antlr-runtime"
+version    = "3.5.3"
+checksum   = "sha256:68bf9f5a33dfcb34033495c587e6236bef4e37aa6612919f5b1e843b90669fb9"
+
+[[tool]]
+coordinate = "org.antlr:antlr4"
+version    = "4.13.2"
+checksum   = "sha256:e6f0b10d2ad206f338afe16867fc47148b6729d6e3a260ea28379b91f03a3657"
+
+[[tool]]
+coordinate = "org.antlr:antlr4"
+version    = "4.13.2"
+closure = [
+  "com.ibm.icu:icu4j:72.1",
+  "org.abego.treelayout:org.abego.treelayout.core:1.0.3",
+  "org.antlr:ST4:4.3.4",
+  "org.antlr:antlr-runtime:3.5.3",
+  "org.antlr:antlr4-runtime:4.13.2",
+  "org.antlr:antlr4:4.13.2",
+]
+
+[[tool]]
+coordinate = "org.antlr:antlr4-runtime"
+version    = "4.13.2"
+checksum   = "sha256:dd3e8a13a2d669bf84fb8d834de35ce4875f27157698d206241ec8488aadcaf7"
+
+[[module]]
+path    = "."
+group   = "io.helidon"
+name    = "helidon-project"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "all"
+group   = "io.helidon"
+name    = "helidon-all"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "applications/parent"
+group   = "io.helidon.applications"
+name    = "helidon-applications"
+version = "27.0.1"
+java    = 27
+description = "Maven boilerplate for Helidon applications"
+
+[[module]]
+path    = "applications/se"
+group   = "io.helidon.applications"
+name    = "helidon-se"
+version = "27.0.1"
+java    = 27
+description = "Parent pom for Helidon SE applications"
+
+[[module]]
+path    = "builder/api"
+group   = "io.helidon.builder"
+name    = "helidon-builder-api"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "builder/codegen"
+group   = "io.helidon.builder"
+name    = "helidon-builder-codegen"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "builder/codegen-jackson"
+group   = "io.helidon.builder"
+name    = "helidon-builder-codegen-jackson"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "bundles/apt"
+group   = "io.helidon.bundles"
+name    = "helidon-bundles-apt"
+version = "27.0.1"
+java    = 27
+description = "Annotation processing bundles for Helidon.\n        Contains:\n        - Helidon API stability\n        - Helidon Blueprint (builders)\n        - Helidon Service Inject\n        - Helidon @Generated extension\n        - Helidon Declarative\n        - Helidon Data\n        - Helidon JSON Schema\n        - Helidon JSON\n        Does not contain:\n        - Helidon Copyright extension\n        - Helidon Data implementation (JPA specific)"
+
+[[module]]
+path    = "bundles/config"
+group   = "io.helidon.bundles"
+name    = "helidon-bundles-config"
+version = "27.0.1"
+java    = 27
+description = "The single Config reference Bundle that provides dependencies on selected runtime modules."
+
+[[module]]
+path    = "bundles/security"
+group   = "io.helidon.bundles"
+name    = "helidon-bundles-security"
+version = "27.0.1"
+java    = 27
+description = "Helidon SE security bundle.\n        This bundle does not contain integration with webserver."
+
+[[module]]
+path    = "codegen/api-stability"
+group   = "io.helidon.codegen"
+name    = "helidon-codegen-api-stability"
+version = "27.0.1"
+java    = 27
+description = "API stability annotation processor"
+
+[[module]]
+path    = "codegen/api-stability-enforcer"
+group   = "io.helidon.codegen"
+name    = "helidon-codegen-api-stability-enforcer"
+version = "27.0.1"
+java    = 27
+description = "API stability enforcer annotation processor"
+
+[[module]]
+path    = "codegen/apt"
+group   = "io.helidon.codegen"
+name    = "helidon-codegen-apt"
+version = "27.0.1"
+java    = 27
+description = "Tools for annotation processing"
+
+[[module]]
+path    = "codegen/class-model"
+group   = "io.helidon.codegen"
+name    = "helidon-codegen-class-model"
+version = "27.0.1"
+java    = 27
+description = "Class model generator designed to be used by code generating components (annotation processors, maven plugins)"
+
+[[module]]
+path    = "codegen/codegen"
+group   = "io.helidon.codegen"
+name    = "helidon-codegen"
+version = "27.0.1"
+java    = 27
+description = "Code generation common utilities"
+
+[[module]]
+path    = "codegen/compiler"
+group   = "io.helidon.codegen"
+name    = "helidon-codegen-compiler"
+version = "27.0.1"
+java    = 27
+description = "Tools for compilation of Java"
+
+[[module]]
+path    = "codegen/helidon-copyright"
+group   = "io.helidon.codegen"
+name    = "helidon-codegen-helidon-copyright"
+version = "27.0.1"
+java    = 27
+description = "Implementation of Helidon copyrights"
+
+[[module]]
+path    = "codegen/scan"
+group   = "io.helidon.codegen"
+name    = "helidon-codegen-scan"
+version = "27.0.1"
+java    = 27
+description = "Tools for classpath scanning"
+
+[[module]]
+path    = "codegen/testing"
+group   = "io.helidon.codegen"
+name    = "helidon-codegen-testing"
+version = "27.0.1"
+java    = 27
+description = "Tools for testing codegen extensions"
+
+[[module]]
+path    = "common/buffers"
+group   = "io.helidon.common"
+name    = "helidon-common-buffers"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "common/common"
+group   = "io.helidon.common"
+name    = "helidon-common"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "common/concurrency/limits"
+group   = "io.helidon.common.concurrency"
+name    = "helidon-common-concurrency-limits"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "common/configurable"
+group   = "io.helidon.common"
+name    = "helidon-common-configurable"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "common/context/context"
+group   = "io.helidon.common"
+name    = "helidon-common-context"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "common/context/http"
+group   = "io.helidon.common.context"
+name    = "helidon-common-context-http"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "common/crypto"
+group   = "io.helidon.common"
+name    = "helidon-common-crypto"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "common/features/api"
+group   = "io.helidon.common.features"
+name    = "helidon-common-features-api"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "common/features/codegen"
+group   = "io.helidon.common.features"
+name    = "helidon-common-features-codegen"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "common/features/features"
+group   = "io.helidon.common.features"
+name    = "helidon-common-features"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "common/features/metadata"
+group   = "io.helidon.common.features"
+name    = "helidon-common-features-metadata"
+version = "27.0.1"
+java    = 27
+description = "Metadata module to be shared between codegen and runtime"
+
+[[module]]
+path    = "common/key-util"
+group   = "io.helidon.common"
+name    = "helidon-common-key-util"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "common/mapper"
+group   = "io.helidon.common"
+name    = "helidon-common-mapper"
+version = "27.0.1"
+java    = 27
+description = "A generic mapper to convert types."
+
+[[module]]
+path    = "common/media-type"
+group   = "io.helidon.common"
+name    = "helidon-common-media-type"
+version = "27.0.1"
+java    = 27
+description = "Media type support (usable both for files and for HTTP)"
+
+[[module]]
+path    = "common/parameters"
+group   = "io.helidon.common"
+name    = "helidon-common-parameters"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "common/reactive"
+group   = "io.helidon.common"
+name    = "helidon-common-reactive"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "common/resumable"
+group   = "io.helidon.common"
+name    = "helidon-common-resumable"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "common/security"
+group   = "io.helidon.common"
+name    = "helidon-common-security"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "common/socket"
+group   = "io.helidon.common"
+name    = "helidon-common-socket"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "common/task"
+group   = "io.helidon.common"
+name    = "helidon-common-task"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "common/testing/http-junit5"
+group   = "io.helidon.common.testing"
+name    = "helidon-common-testing-http-junit5"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "common/testing/junit5"
+group   = "io.helidon.common.testing"
+name    = "helidon-common-testing-junit5"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "common/testing/virtual-threads"
+group   = "io.helidon.common.testing"
+name    = "helidon-common-testing-virtual-threads"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "common/tls"
+group   = "io.helidon.common"
+name    = "helidon-common-tls"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "common/types"
+group   = "io.helidon.common"
+name    = "helidon-common-types"
+version = "27.0.1"
+java    = 27
+description = "Abstraction of language types, that can be used during annotation processing and at runtime instead of reflection."
+
+[[module]]
+path    = "common/uri"
+group   = "io.helidon.common"
+name    = "helidon-common-uri"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "config/config"
+group   = "io.helidon.config"
+name    = "helidon-config"
+version = "27.0.1"
+java    = 27
+description = "Configuration Core module."
+
+[[module]]
+path    = "config/encryption"
+group   = "io.helidon.config"
+name    = "helidon-config-encryption"
+version = "27.0.1"
+java    = 27
+description = "Configuration filter checking property values and decrypting them if needed. Also provides tools to encrypt values to\n        store them in config files."
+
+[[module]]
+path    = "config/hocon"
+group   = "io.helidon.config"
+name    = "helidon-config-hocon"
+version = "27.0.1"
+java    = 27
+description = "Typesafe (Lightbend) Config (HOCON) Parser implementation."
+
+[[module]]
+path    = "config/metadata/codegen"
+group   = "io.helidon.config.metadata"
+name    = "helidon-config-metadata-codegen"
+version = "27.0.1"
+java    = 27
+description = "Configuration Metadata Code Generation"
+
+[[module]]
+path    = "config/metadata/docs"
+group   = "io.helidon.config.metadata"
+name    = "helidon-config-metadata-docs"
+version = "27.0.1"
+java    = 27
+description = "Configuration Metadata annotations and codegen."
+
+[[module]]
+path    = "config/metadata/metadata"
+group   = "io.helidon.config.metadata"
+name    = "helidon-config-metadata"
+version = "27.0.1"
+java    = 27
+description = "Configuration Metadata annotations and processing."
+
+[[module]]
+path    = "config/metadata/model"
+group   = "io.helidon.config.metadata"
+name    = "helidon-config-metadata-model"
+version = "27.0.1"
+java    = 27
+description = "Configuration Metadata annotations and codegen."
+
+[[module]]
+path    = "config/object-mapping"
+group   = "io.helidon.config"
+name    = "helidon-config-object-mapping"
+version = "27.0.1"
+java    = 27
+description = "Support for loading java pojos from configuration."
+
+[[module]]
+path    = "config/testing"
+group   = "io.helidon.config"
+name    = "helidon-config-testing"
+version = "27.0.1"
+java    = 27
+description = "Configuration Testing Support."
+
+[[module]]
+path    = "config/yaml"
+group   = "io.helidon.config"
+name    = "helidon-config-yaml"
+version = "27.0.1"
+java    = 27
+description = "YAML Parser implementation."
+
+[[module]]
+path    = "data/codegen/codegen"
+group   = "io.helidon.data.codegen"
+name    = "helidon-data-codegen"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "data/codegen/common"
+group   = "io.helidon.data.codegen"
+name    = "helidon-data-codegen-common"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "data/codegen/parser"
+group   = "io.helidon.data.codegen"
+name    = "helidon-data-codegen-parser"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "data/codegen/query"
+group   = "io.helidon.data.codegen"
+name    = "helidon-data-codegen-query"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "data/data"
+group   = "io.helidon.data"
+name    = "helidon-data"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "data/jakarta-persistence/codegen"
+group   = "io.helidon.data.jakarta.persistence"
+name    = "helidon-data-jakarta-persistence-codegen"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "data/jakarta-persistence/jakarta-persistence"
+group   = "io.helidon.data.jakarta.persistence"
+name    = "helidon-data-jakarta-persistence"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "data/jdbc/codegen"
+group   = "io.helidon.data.jdbc"
+name    = "helidon-data-jdbc-codegen"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "data/jdbc/jdbc"
+group   = "io.helidon.data.jdbc"
+name    = "helidon-data-jdbc"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "data/jdbc/lexical"
+group   = "io.helidon.data.jdbc"
+name    = "helidon-data-jdbc-lexical"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "data/sql/common"
+group   = "io.helidon.data.sql"
+name    = "helidon-data-sql-common"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "data/sql/datasource/datasource"
+group   = "io.helidon.data.sql.datasource"
+name    = "helidon-data-sql-datasource"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "data/sql/datasource/hikari"
+group   = "io.helidon.data.sql.datasource"
+name    = "helidon-data-sql-datasource-hikari"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "data/sql/datasource/jdbc"
+group   = "io.helidon.data.sql.datasource"
+name    = "helidon-data-sql-datasource-jdbc"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "data/sql/datasource/ucp"
+group   = "io.helidon.data.sql.datasource"
+name    = "helidon-data-sql-datasource-ucp"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "data/sql/testing"
+group   = "io.helidon.data.sql"
+name    = "helidon-data-sql-testing"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "dbclient/dbclient"
+group   = "io.helidon.dbclient"
+name    = "helidon-dbclient"
+version = "27.0.1"
+java    = 27
+description = "Helidon Database Client API"
+
+[[module]]
+path    = "dbclient/health"
+group   = "io.helidon.dbclient"
+name    = "helidon-dbclient-health"
+version = "27.0.1"
+java    = 27
+description = "Helidon Database Client Health Support"
+
+[[module]]
+path    = "dbclient/hikari"
+group   = "io.helidon.dbclient"
+name    = "helidon-dbclient-hikari"
+version = "27.0.1"
+java    = 27
+description = "Hikari connection pool for JDBC DB client"
+
+[[module]]
+path    = "dbclient/jdbc"
+group   = "io.helidon.dbclient"
+name    = "helidon-dbclient-jdbc"
+version = "27.0.1"
+java    = 27
+description = "Helidon Database Client JDBC Support"
+
+[[module]]
+path    = "dbclient/json"
+group   = "io.helidon.dbclient"
+name    = "helidon-dbclient-json"
+version = "27.0.1"
+java    = 27
+description = "Helidon Database Client JSON Support"
+
+[[module]]
+path    = "dbclient/jsonp"
+group   = "io.helidon.dbclient"
+name    = "helidon-dbclient-jsonp"
+version = "27.0.1"
+java    = 27
+description = "Helidon Database Client JSON-Processing Support"
+
+[[module]]
+path    = "dbclient/metrics"
+group   = "io.helidon.dbclient"
+name    = "helidon-dbclient-metrics"
+version = "27.0.1"
+java    = 27
+description = "Helidon Database Client Metrics Support"
+
+[[module]]
+path    = "dbclient/metrics-hikari"
+group   = "io.helidon.dbclient"
+name    = "helidon-dbclient-metrics-hikari"
+version = "27.0.1"
+java    = 27
+description = "Helidon Database Client Hikari Pool Metrics Support"
+
+[[module]]
+path    = "dbclient/mongodb"
+group   = "io.helidon.dbclient"
+name    = "helidon-dbclient-mongodb"
+version = "27.0.1"
+java    = 27
+description = "Helidon Database Client MongoDB Support"
+
+[[module]]
+path    = "dbclient/tracing"
+group   = "io.helidon.dbclient"
+name    = "helidon-dbclient-tracing"
+version = "27.0.1"
+java    = 27
+description = "Helidon Database Client Tracing Support"
+
+[[module]]
+path    = "declarative/codegen"
+group   = "io.helidon.declarative"
+name    = "helidon-declarative-codegen"
+version = "27.0.1"
+java    = 27
+description = "Code generation for Helidon Declarative"
+
+[[module]]
+path    = "declarative/codegen-model"
+group   = "io.helidon.declarative"
+name    = "helidon-declarative-codegen-model"
+version = "27.0.1"
+java    = 27
+description = "Model for code generation for Helidon Declarative (blueprints etc.)"
+
+[[module]]
+path    = "discovery/discovery"
+group   = "io.helidon.discovery"
+name    = "helidon-discovery"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "discovery/providers"
+group   = "io.helidon.discovery.providers"
+name    = "helidon-discovery-providers-project"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "fault-tolerance/fault-tolerance"
+group   = "io.helidon.fault-tolerance"
+name    = "helidon-fault-tolerance"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "graphql/graphql"
+group   = "io.helidon.graphql"
+name    = "helidon-graphql"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "graphql/server"
+group   = "io.helidon.graphql"
+name    = "helidon-graphql-server"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "grpc/api"
+group   = "io.helidon.grpc"
+name    = "helidon-grpc-api"
+version = "27.0.1"
+java    = 27
+description = "gRPC support for Helidon"
+
+[[module]]
+path    = "grpc/core"
+group   = "io.helidon.grpc"
+name    = "helidon-grpc-core"
+version = "27.0.1"
+java    = 27
+description = "gRPC support for Helidon"
+
+[[module]]
+path    = "health/health"
+group   = "io.helidon.health"
+name    = "helidon-health"
+version = "27.0.1"
+java    = 27
+description = "Health check support for Helidon SE"
+
+[[module]]
+path    = "health/health-checks"
+group   = "io.helidon.health"
+name    = "helidon-health-checks"
+version = "27.0.1"
+java    = 27
+description = "Built-in health checks supported out of the box"
+
+[[module]]
+path    = "helidon"
+group   = "io.helidon"
+name    = "helidon"
+version = "27.0.1"
+java    = 27
+description = "Helidon main entry point"
+
+[[module]]
+path    = "http/encoding/deflate"
+group   = "io.helidon.http.encoding"
+name    = "helidon-http-encoding-deflate"
+version = "27.0.1"
+java    = 27
+description = "Content-Encoding schemes"
+
+[[module]]
+path    = "http/encoding/encoding"
+group   = "io.helidon.http.encoding"
+name    = "helidon-http-encoding"
+version = "27.0.1"
+java    = 27
+description = "Content-Encoding schemes"
+
+[[module]]
+path    = "http/encoding/gzip"
+group   = "io.helidon.http.encoding"
+name    = "helidon-http-encoding-gzip"
+version = "27.0.1"
+java    = 27
+description = "Content-Encoding schemes"
+
+[[module]]
+path    = "http/http"
+group   = "io.helidon.http"
+name    = "helidon-http"
+version = "27.0.1"
+java    = 27
+description = "HTTP primitives for client and server"
+
+[[module]]
+path    = "http/http1"
+group   = "io.helidon.http"
+name    = "helidon-http-http1"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "http/http2"
+group   = "io.helidon.http"
+name    = "helidon-http-http2"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "http/media/jackson"
+group   = "io.helidon.http.media"
+name    = "helidon-http-media-jackson"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "http/media/json"
+group   = "io.helidon.http.media"
+name    = "helidon-http-media-json"
+version = "27.0.1"
+java    = 27
+description = "Helidon JSON Media support for JsonValue subtypes (i.e. JsonObject)"
+
+[[module]]
+path    = "http/media/json-binding"
+group   = "io.helidon.http.media"
+name    = "helidon-http-media-json-binding"
+version = "27.0.1"
+java    = 27
+description = "Helidon JSON Binding Media support"
+
+[[module]]
+path    = "http/media/jsonb"
+group   = "io.helidon.http.media"
+name    = "helidon-http-media-jsonb"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "http/media/jsonp"
+group   = "io.helidon.http.media"
+name    = "helidon-http-media-jsonp"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "http/media/media"
+group   = "io.helidon.http.media"
+name    = "helidon-http-media"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "http/media/multipart"
+group   = "io.helidon.http.media"
+name    = "helidon-http-media-multipart"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "http/media/smile"
+group   = "io.helidon.http.media"
+name    = "helidon-http-media-json-smile"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "http/sse"
+group   = "io.helidon.http"
+name    = "helidon-http-sse"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "json/binding"
+group   = "io.helidon.json"
+name    = "helidon-json-binding"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "json/codegen"
+group   = "io.helidon.json"
+name    = "helidon-json-codegen"
+version = "27.0.1"
+java    = 27
+description = "Code generator for the JSON Binding converters"
+
+[[module]]
+path    = "json/json"
+group   = "io.helidon.json"
+name    = "helidon-json"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "json/schema/codegen"
+group   = "io.helidon.json.schema"
+name    = "helidon-json-schema-codegen"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "json/schema/schema"
+group   = "io.helidon.json.schema"
+name    = "helidon-json-schema"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "json/smile"
+group   = "io.helidon.json"
+name    = "helidon-json-smile"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "jsonrpc/core"
+group   = "io.helidon.jsonrpc"
+name    = "helidon-jsonrpc-core"
+version = "27.0.1"
+java    = 27
+description = "JSON-RPC support for Helidon"
+
+[[module]]
+path    = "licensing"
+group   = "io.helidon.licensing"
+name    = "helidon-licensing"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "logging/common"
+group   = "io.helidon.logging"
+name    = "helidon-logging-common"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "logging/jul"
+group   = "io.helidon.logging"
+name    = "helidon-logging-jul"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "logging/log4j"
+group   = "io.helidon.logging"
+name    = "helidon-logging-log4j"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "logging/slf4j"
+group   = "io.helidon.logging"
+name    = "helidon-logging-slf4j"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "messaging/messaging"
+group   = "io.helidon.messaging"
+name    = "helidon-messaging"
+version = "27.0.1"
+java    = 27
+description = "Helidon Messaging API and runtime"
+
+[[module]]
+path    = "metadata/hson"
+group   = "io.helidon.metadata"
+name    = "helidon-metadata-hson"
+version = "27.0.1"
+java    = 27
+description = "Helidon format for metadata (HSON) - a simplified JSON."
+
+[[module]]
+path    = "metadata/metadata"
+group   = "io.helidon.metadata"
+name    = "helidon-metadata"
+version = "27.0.1"
+java    = 27
+description = "A module for discovering Helidon metadata"
+
+[[module]]
+path    = "metadata/reflection"
+group   = "io.helidon.metadata"
+name    = "helidon-metadata-reflection"
+version = "27.0.1"
+java    = 27
+description = "Reflection based access to type metadata (using helidon-common-types)"
+
+[[module]]
+path    = "metrics/api"
+group   = "io.helidon.metrics"
+name    = "helidon-metrics-api"
+version = "27.0.1"
+java    = 27
+description = "Loader for metrics implementation and a no-op implementation"
+
+[[module]]
+path    = "metrics/metrics"
+group   = "io.helidon.metrics"
+name    = "helidon-metrics"
+version = "27.0.1"
+java    = 27
+description = "Metrics implementation and built-in system meters"
+
+[[module]]
+path    = "metrics/provider-tests"
+group   = "io.helidon.metrics"
+name    = "helidon-metrics-provider-tests"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "metrics/providers/micrometer"
+group   = "io.helidon.metrics.providers"
+name    = "helidon-metrics-providers-micrometer"
+version = "27.0.1"
+java    = 27
+description = "Micrometer implementation of the Helidon metrics API"
+
+[[module]]
+path    = "metrics/system-meters"
+group   = "io.helidon.metrics"
+name    = "helidon-metrics-system-meters"
+version = "27.0.1"
+java    = 27
+description = "Built-in system (JVM) meters"
+
+[[module]]
+path    = "metrics/trace-exemplar"
+group   = "io.helidon.metrics"
+name    = "helidon-metrics-trace-exemplar"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "openapi/openapi"
+group   = "io.helidon.openapi"
+name    = "helidon-openapi"
+version = "27.0.1"
+java    = 27
+description = "Helidon OpenAPI implementation"
+
+[[module]]
+path    = "openapi/openapi-31"
+group   = "io.helidon.openapi"
+name    = "helidon-openapi-31"
+version = "27.0.1"
+java    = 27
+description = "Helidon OpenAPI 3.1 document version support"
+
+[[module]]
+path    = "openapi/openapi-32"
+group   = "io.helidon.openapi"
+name    = "helidon-openapi-32"
+version = "27.0.1"
+java    = 27
+description = "Helidon OpenAPI 3.2 document version support"
+
+[[module]]
+path    = "parent"
+group   = "io.helidon"
+name    = "helidon-parent"
+version = "27.0.1"
+java    = 25
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "scheduling"
+group   = "io.helidon.scheduling"
+name    = "helidon-scheduling"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "security/abac/policy"
+group   = "io.helidon.security.abac"
+name    = "helidon-security-abac-policy"
+version = "27.0.1"
+java    = 27
+description = "Policy based authorization support."
+
+[[module]]
+path    = "security/abac/role"
+group   = "io.helidon.security.abac"
+name    = "helidon-security-abac-role"
+version = "27.0.1"
+java    = 27
+description = "Role based authorization support."
+
+[[module]]
+path    = "security/abac/scope"
+group   = "io.helidon.security.abac"
+name    = "helidon-security-abac-scope"
+version = "27.0.1"
+java    = 27
+description = "Authorization support for Scopes."
+
+[[module]]
+path    = "security/abac/time"
+group   = "io.helidon.security.abac"
+name    = "helidon-security-abac-time"
+version = "27.0.1"
+java    = 27
+description = "Time based authorization support."
+
+[[module]]
+path    = "security/annotations"
+group   = "io.helidon.security"
+name    = "helidon-security-annotations"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "security/integration/common"
+group   = "io.helidon.security.integration"
+name    = "helidon-security-integration-common"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "security/jwt"
+group   = "io.helidon.security"
+name    = "helidon-security-jwt"
+version = "27.0.1"
+java    = 27
+description = "Implementation of JWT and JWK to be used in other modules."
+
+[[module]]
+path    = "security/providers/abac"
+group   = "io.helidon.security.providers"
+name    = "helidon-security-providers-abac"
+version = "27.0.1"
+java    = 27
+description = "Attribute based access control provider"
+
+[[module]]
+path    = "security/providers/common"
+group   = "io.helidon.security.providers"
+name    = "helidon-security-providers-common"
+version = "27.0.1"
+java    = 27
+description = "Common utilities for providers."
+
+[[module]]
+path    = "security/providers/header"
+group   = "io.helidon.security.providers"
+name    = "helidon-security-providers-header"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "security/providers/http-auth"
+group   = "io.helidon.security.providers"
+name    = "helidon-security-providers-http-auth"
+version = "27.0.1"
+java    = 27
+description = "HTTP basic authentication provider"
+
+[[module]]
+path    = "security/providers/http-sign"
+group   = "io.helidon.security.providers"
+name    = "helidon-security-providers-http-sign"
+version = "27.0.1"
+java    = 27
+description = "HTTP Signatures authentication and outbound security provider"
+
+[[module]]
+path    = "security/providers/idcs-mapper"
+group   = "io.helidon.security.providers"
+name    = "helidon-security-providers-idcs-mapper"
+version = "27.0.1"
+java    = 27
+description = "Role mapper retrieving roles from Oracle IDCS"
+
+[[module]]
+path    = "security/providers/jwt"
+group   = "io.helidon.security.providers"
+name    = "helidon-security-providers-jwt"
+version = "27.0.1"
+java    = 27
+description = "Support for JWT (any provider), together with JWK (to get keys for verification/signatures)"
+
+[[module]]
+path    = "security/providers/oidc"
+group   = "io.helidon.security.providers"
+name    = "helidon-security-providers-oidc"
+version = "27.0.1"
+java    = 27
+description = "OIDC (Open ID Connect) security provider"
+
+[[module]]
+path    = "security/providers/oidc-common"
+group   = "io.helidon.security.providers"
+name    = "helidon-security-providers-oidc-common"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "security/security"
+group   = "io.helidon.security"
+name    = "helidon-security"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "security/util"
+group   = "io.helidon.security"
+name    = "helidon-security-util"
+version = "27.0.1"
+java    = 27
+description = "Utilities for security modules"
+
+[[module]]
+path    = "service/codegen"
+group   = "io.helidon.service"
+name    = "helidon-service-codegen"
+version = "27.0.1"
+java    = 27
+description = "Code generation implementation for Helidon Service, to be used from annotation processing and from maven plugin"
+
+[[module]]
+path    = "service/jndi"
+group   = "io.helidon.service"
+name    = "helidon-service-jndi"
+version = "27.0.1"
+java    = 27
+description = "JNDI backed by service registry"
+
+[[module]]
+path    = "service/maven-plugin"
+group   = "io.helidon.service"
+name    = "helidon-service-maven-plugin"
+version = "27.0.1"
+java    = 27
+description = "Service declaration and registry support."
+
+[[module]]
+path    = "service/metadata"
+group   = "io.helidon.service"
+name    = "helidon-service-metadata"
+version = "27.0.1"
+java    = 27
+description = "Metadata library to read and write service registry information."
+
+[[module]]
+path    = "service/registry"
+group   = "io.helidon.service"
+name    = "helidon-service-registry"
+version = "27.0.1"
+java    = 27
+description = "Service registry (a replacement for service loader that allows dependencies on other services), and API necessary to\n        declare services."
+
+[[module]]
+path    = "telemetry/opentelemetry"
+group   = "io.helidon.telemetry"
+name    = "helidon-telemetry-opentelemetry"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "telemetry/opentelemetry-config"
+group   = "io.helidon.telemetry"
+name    = "helidon-telemetry-opentelemetry-config"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "telemetry/testing/tracing"
+group   = "io.helidon.telemetry.testing"
+name    = "helidon-telemetry-testing-tracing"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "testing/junit5"
+group   = "io.helidon.testing"
+name    = "helidon-testing-junit5"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "testing/junit5-suite"
+group   = "io.helidon.testing"
+name    = "helidon-testing-junit5-suite"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "testing/testing"
+group   = "io.helidon.testing"
+name    = "helidon-testing"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "tracing/config"
+group   = "io.helidon.tracing"
+name    = "helidon-tracing-config"
+version = "27.0.1"
+java    = 27
+description = "Configuration of traced components."
+
+[[module]]
+path    = "tracing/provider-tests"
+group   = "io.helidon.tracing"
+name    = "helidon-tracing-provider-tests"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "tracing/providers/opentelemetry"
+group   = "io.helidon.tracing.providers"
+name    = "helidon-tracing-providers-opentelemetry"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "tracing/tracing"
+group   = "io.helidon.tracing"
+name    = "helidon-tracing"
+version = "27.0.1"
+java    = 27
+description = "Support for distributed tracing."
+
+[[module]]
+path    = "transaction/jta"
+group   = "io.helidon.transaction"
+name    = "helidon-transaction-jta"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "transaction/narayana"
+group   = "io.helidon.transaction"
+name    = "helidon-transaction-narayana"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "transaction/transaction"
+group   = "io.helidon.transaction"
+name    = "helidon-transaction"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "validation/validation"
+group   = "io.helidon.validation"
+name    = "helidon-validation"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "webclient/api"
+group   = "io.helidon.webclient"
+name    = "helidon-webclient-api"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "webclient/context"
+group   = "io.helidon.webclient"
+name    = "helidon-webclient-context"
+version = "27.0.1"
+java    = 27
+description = "Context Propagation for Helidon WebClient"
+
+[[module]]
+path    = "webclient/discovery"
+group   = "io.helidon.webclient"
+name    = "helidon-webclient-discovery"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "webclient/dns-resolver/first"
+group   = "io.helidon.webclient.dns.resolver"
+name    = "helidon-webclient-dns-resolver-first"
+version = "27.0.1"
+java    = 27
+description = "DNS resolver that uses the first address from DNS lookup"
+
+[[module]]
+path    = "webclient/dns-resolver/round-robin"
+group   = "io.helidon.webclient.dns.resolver"
+name    = "helidon-webclient-dns-resolver-round-robin"
+version = "27.0.1"
+java    = 27
+description = "DNS resolver that cycles through addresses from DNS lookup"
+
+[[module]]
+path    = "webclient/grpc"
+group   = "io.helidon.webclient"
+name    = "helidon-webclient-grpc"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "webclient/grpc-tracing"
+group   = "io.helidon.webclient"
+name    = "helidon-webclient-grpc-tracing"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "webclient/http1"
+group   = "io.helidon.webclient"
+name    = "helidon-webclient-http1"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "webclient/http2"
+group   = "io.helidon.webclient"
+name    = "helidon-webclient-http2"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "webclient/jsonrpc"
+group   = "io.helidon.webclient"
+name    = "helidon-webclient-jsonrpc"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "webclient/metrics"
+group   = "io.helidon.webclient"
+name    = "helidon-webclient-metrics"
+version = "27.0.1"
+java    = 27
+description = "Helidon WebClient Metrics support"
+
+[[module]]
+path    = "webclient/security"
+group   = "io.helidon.webclient"
+name    = "helidon-webclient-security"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "webclient/sse"
+group   = "io.helidon.webclient"
+name    = "helidon-webclient-sse"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "webclient/telemetry/metrics"
+group   = "io.helidon.webclient"
+name    = "helidon-webclient-telemetry-metrics"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "webclient/telemetry/telemetry"
+group   = "io.helidon.webclient"
+name    = "helidon-webclient-telemetry"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "webclient/telemetry/tracing"
+group   = "io.helidon.webclient"
+name    = "helidon-webclient-telemetry-tracing"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "webclient/tracing"
+group   = "io.helidon.webclient"
+name    = "helidon-webclient-tracing"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "webclient/webclient"
+group   = "io.helidon.webclient"
+name    = "helidon-webclient"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "webclient/websocket"
+group   = "io.helidon.webclient"
+name    = "helidon-webclient-websocket"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "webserver/access-log"
+group   = "io.helidon.webserver"
+name    = "helidon-webserver-access-log"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "webserver/concurrency-limits"
+group   = "io.helidon.webserver"
+name    = "helidon-webserver-concurrency-limits"
+version = "27.0.1"
+java    = 27
+description = "Feature that adds filters for concurrency limits"
+
+[[module]]
+path    = "webserver/context"
+group   = "io.helidon.webserver"
+name    = "helidon-webserver-context"
+version = "27.0.1"
+java    = 27
+description = "Integration of Helidon Common Context with Helidon WebServer"
+
+[[module]]
+path    = "webserver/cors"
+group   = "io.helidon.webserver"
+name    = "helidon-webserver-cors"
+version = "27.0.1"
+java    = 27
+description = "Cross-origin resource sharing support"
+
+[[module]]
+path    = "webserver/graphql"
+group   = "io.helidon.webserver"
+name    = "helidon-webserver-graphql"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "webserver/grpc"
+group   = "io.helidon.webserver"
+name    = "helidon-webserver-grpc"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "webserver/grpc-security"
+group   = "io.helidon.webserver"
+name    = "helidon-webserver-grpc-security"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "webserver/grpc-tracing"
+group   = "io.helidon.webserver"
+name    = "helidon-webserver-grpc-tracing"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "webserver/grpc-validation"
+group   = "io.helidon.webserver"
+name    = "helidon-webserver-grpc-validation"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "webserver/hsts"
+group   = "io.helidon.webserver"
+name    = "helidon-webserver-hsts"
+version = "27.0.1"
+java    = 27
+description = "HTTP Strict Transport Security support"
+
+[[module]]
+path    = "webserver/http2"
+group   = "io.helidon.webserver"
+name    = "helidon-webserver-http2"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "webserver/jsonrpc"
+group   = "io.helidon.webserver"
+name    = "helidon-webserver-jsonrpc"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "webserver/observe/config"
+group   = "io.helidon.webserver.observe"
+name    = "helidon-webserver-observe-config"
+version = "27.0.1"
+java    = 27
+description = "Information from configuration (secured by default)"
+
+[[module]]
+path    = "webserver/observe/health"
+group   = "io.helidon.webserver.observe"
+name    = "helidon-webserver-observe-health"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "webserver/observe/info"
+group   = "io.helidon.webserver.observe"
+name    = "helidon-webserver-observe-info"
+version = "27.0.1"
+java    = 27
+description = "Application information"
+
+[[module]]
+path    = "webserver/observe/log"
+group   = "io.helidon.webserver.observe"
+name    = "helidon-webserver-observe-log"
+version = "27.0.1"
+java    = 27
+description = "Logging setup and log files"
+
+[[module]]
+path    = "webserver/observe/metrics"
+group   = "io.helidon.webserver.observe"
+name    = "helidon-webserver-observe-metrics"
+version = "27.0.1"
+java    = 27
+description = "Metrics output, either Prometheus format, or JSON"
+
+[[module]]
+path    = "webserver/observe/observe"
+group   = "io.helidon.webserver.observe"
+name    = "helidon-webserver-observe"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "webserver/observe/telemetry/metrics"
+group   = "io.helidon.webserver.observe"
+name    = "helidon-webserver-observe-telemetry-metrics"
+version = "27.0.1"
+java    = 27
+description = "WebServer Telemetry Metrics observability support"
+
+[[module]]
+path    = "webserver/observe/telemetry/tracing"
+group   = "io.helidon.webserver.observe"
+name    = "helidon-webserver-observe-telemetry-tracing"
+version = "27.0.1"
+java    = 27
+description = "WebServer Telemetry Tracing observability support"
+
+[[module]]
+path    = "webserver/observe/tracing"
+group   = "io.helidon.webserver.observe"
+name    = "helidon-webserver-observe-tracing"
+version = "27.0.1"
+java    = 27
+description = "WebServer Tracing observability support"
+
+[[module]]
+path    = "webserver/security"
+group   = "io.helidon.webserver"
+name    = "helidon-webserver-security"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "webserver/sse"
+group   = "io.helidon.webserver"
+name    = "helidon-webserver-sse"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "webserver/static-content"
+group   = "io.helidon.webserver"
+name    = "helidon-webserver-static-content"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "webserver/testing/junit5/grpc"
+group   = "io.helidon.webserver.testing.junit5"
+name    = "helidon-webserver-testing-junit5-grpc"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "webserver/testing/junit5/http2"
+group   = "io.helidon.webserver.testing.junit5"
+name    = "helidon-webserver-testing-junit5-http2"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "webserver/testing/junit5/jsonrpc"
+group   = "io.helidon.webserver.testing.junit5"
+name    = "helidon-webserver-testing-junit5-jsonrpc"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "webserver/testing/junit5/junit5"
+group   = "io.helidon.webserver.testing.junit5"
+name    = "helidon-webserver-testing-junit5"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "webserver/testing/junit5/websocket"
+group   = "io.helidon.webserver.testing.junit5"
+name    = "helidon-webserver-testing-junit5-websocket"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "webserver/validation"
+group   = "io.helidon.webserver"
+name    = "helidon-webserver-validation"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "webserver/webserver"
+group   = "io.helidon.webserver"
+name    = "helidon-webserver"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "webserver/websocket"
+group   = "io.helidon.webserver"
+name    = "helidon-webserver-websocket"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"
+
+[[module]]
+path    = "websocket"
+group   = "io.helidon.websocket"
+name    = "helidon-websocket"
+version = "27.0.1"
+java    = 27
+description = "Java libraries for writing microservices"

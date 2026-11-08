@@ -1,0 +1,18 @@
+--- a/data/sql/datasource/ucp/jk.toml
++++ b/data/sql/datasource/ucp/jk.toml
+@@ -20,7 +20,6 @@
+ args = ["-Xlint:unchecked", "-Xpkginfo:always", "-proc:full"]
+ 
+ [platform-dependencies]
+-ojdbc17-production = "com.oracle.database.jdbc:ojdbc17-production:23.26.1.0.0"
+ protobuf-bom = "com.google.protobuf:protobuf-bom:4.36.0"
+ grpc-bom = "io.grpc:grpc-bom:1.73.0"
+ ojdbc-bom = "com.oracle.database.jdbc:ojdbc-bom:23.26.1.0.0"
+@@ -40,6 +39,7 @@
+ helidon-data-sql-common.workspace = true
+ helidon-data-sql-datasource.workspace = true
+ helidon-service-registry.workspace = true
++ojdbc17 = "com.oracle.database.jdbc:ojdbc17"
+ ucp17 = "com.oracle.database.jdbc:ucp17"
+ 
+ [processor-dependencies]

@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "jk": {
+      "command": "jk",
+      "args": [
+        "mcp"
+      ],
+      "trust": true
+    }
+  },
+  "context": {
+    "fileName": [
+      "AGENTS.md",
+      "GEMINI.md"
+    ]
+  }
+}
