@@ -17,33 +17,45 @@ One machine, one tag, three runs per scenario (median; every run's wall in the r
 
 ## Walls (seconds, median of 3)
 
-| Scenario | Maven | jk (javadoc jars off) | jk (default: javadoc jars on) |
-|---|---:|---:|---:|
-| Cold build, whole reactor (223 modules) | **23.1** | 35.2 | 66.4 |
-| Warm no-op | 20.8 | **0.8** | **0.8** |
-| Dirty leaf (`webserver/static-content`, 1 file) | 20.7 | **4.7** | 5.3 |
-| Dirty mid-graph (`common/common`, 1 file) | 22.4 | **6.7** | 6.9 |
-| Tests, one module (`webserver`) | 16.0 | **5.4** | 5.7 |
+Run 4, 2026-11-08, jk `origin/main` 7f6c7a645 (resident multi-threaded compiler worker, javadoc
+opt-in, ETA priced beside the build). Raw: `bench-results/run4.md`.
 
-The "javadoc jars off" column is the like-for-like one: Maven's `package` writes main jars only,
-while jk writes a sources jar and a javadoc jar for every library module by default
-(`JAVADOC=0 ./scripts/bench-helidon.sh jk` sets `javadoc = false` in every module for the run).
+| Scenario | Maven | jk |
+|---|---:|---:|
+| Cold build, whole reactor (223 modules) | 22.0 | **15.0** |
+| Warm no-op | 20.7 | **0.8** |
+| Dirty leaf (`webserver/static-content`, 1 file) | 20.6 | **4.5** |
+| Dirty mid-graph (`common/common`, 1 file) | 22.2 | **7.4** |
+| Tests, one module (`webserver`) | 16.0 | **2.3** |
+
+The first cold run after the engine starts, with the compiler worker's JIT still cold, took 20.3 s;
+the median is the next two.
+
+### How the cold build got here
+
+Run 2 (jk 7047b121b) took 66.4 s by default and 35.2 s with javadoc off, against Maven's 23.1 s.
+What changed, each measured on this reactor:
+
+| Change | Ticket | Effect |
+|---|---|---|
+| `jk build` writes no javadoc jar unless a module opts in (`jk publish` / `jk javadoc` still do) | JK-4714 | 66 s → 35 s |
+| The ETA is priced beside the build, not before it | JK-4716 | first compile at 1.2 s instead of 4.9 s |
+| One resident compiler JVM per JDK runs every compile on its own threads, instead of one cold JVM per concurrent compile (17 per build) | JK-4718 | 26–40 s → 15–21 s |
+| The worker's heap follows its concurrency and admits compiles by estimated demand | JK-4720 | no memory-cap kills mid-build |
 
 ## Reading it
 
-- **Every build after the first is 3–26× faster under jk.** A no-op is under a second because jk
-  hashes inputs and replays recorded steps; Maven re-walks 220 modules and re-runs its bound
-  plugins (enforcer, dependency analysis, Helidon's services plugin) every time. A one-file edit
-  recompiles that module and only the dependents whose compile inputs (the edited module's ABI)
-  changed; Maven's reactor rebuilds every module downstream and repackages all of them.
-- **The cold build is slower under jk** — 35 s against 23 s like-for-like. jk's compile step sums
-  184 s of work across 223 modules at about 5.4× effective parallelism; the per-module compile
-  carries jk's incremental bookkeeping (Zinc analysis, generated-file provenance, the reference
-  index) that makes the warm and dirty columns possible. Tracked as JK-4712.
+- **Every scenario is faster under jk.** A no-op is under a second because jk hashes inputs and
+  replays recorded steps; Maven re-walks 220 modules and re-runs its bound plugins every time. A
+  one-file edit recompiles that module and only the dependents whose compile inputs (the edited
+  module's ABI) changed.
+- **The cold build is critical-path bound** (a 20-module chain from `metadata` through `webserver`
+  to `grpc-security`). jk's compiles on that chain now run on a warm, shared JIT, as Maven's do in
+  its one JVM, and jk starts the first one about a second in.
 - **The one-module test row is not quite the same work.** `mvn -pl webserver/webserver test` runs
   against the *published* 27.0.1 jars of every upstream module from `~/.m2`; `jk test -m` builds
   (or restores) the upstream workspace modules and runs on them. jk's first test run, which
-  compiles the test sources, took 26–30 s; the median is a warm re-run.
+  compiles the test sources, took 26.9 s; the median is a warm re-run.
 - **Dev loop** (`helidon dev` vs `jk dev`) is not measured here: the reactor is libraries, not an
   app. The `02-services/helidon-petshop` scenario covers `jk dev` on a Helidon app.
 
@@ -52,6 +64,5 @@ while jk writes a sources jar and a javadoc jar for every library module by defa
 ```bash
 ./setup.sh
 RUNS=3 ./scripts/bench-helidon.sh                 # both tools, jk with javadoc jars (default)
-JAVADOC=0 RUNS=3 ./scripts/bench-helidon.sh jk    # jk without javadoc jars
 ./setup.sh                                         # restore the imported manifests afterwards
 ```

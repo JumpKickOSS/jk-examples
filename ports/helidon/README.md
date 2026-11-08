@@ -18,8 +18,8 @@ built in the same workspace. It shows three things at once:
    in `overlay/` and `patches/`, each one a filed jk import gap ([PARITY.md](PARITY.md)). The size
    of that list is the import's quality metric.
 3. **A/B against Maven** on the same tree, in [RESULTS.md](RESULTS.md) (`scripts/bench-helidon.sh`):
-   after the first build jk is 3–26× faster (no-op under a second against Maven's ~21 s, a one-file
-   edit 5–7 s against ~21 s); the cold build is slower (35 s against 23 s, tracked in jk).
+   jk is faster in every scenario: cold build 15 s against 22 s, no-op 0.8 s against 21 s, a
+   one-file edit 4.5–7.4 s against ~21 s.
 
 | Pin | Value |
 |-----|-------|

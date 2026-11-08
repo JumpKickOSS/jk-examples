@@ -8,15 +8,15 @@
 #   ./scripts/bench-helidon.sh jk         # jk only
 #   ./scripts/bench-helidon.sh maven      # Maven only
 #   RUNS=1 ./scripts/bench-helidon.sh     # one run per scenario (default 3)
-#   JAVADOC=0 ./scripts/bench-helidon.sh jk   # jk without javadoc jars, the output Maven's package has
 #
 # Fairness:
 # - Dependencies are cached for both: ~/.m2 is primed by one untimed Maven build, jk's store by
 #   setup.sh/run.sh. Cold means build outputs gone (mvn clean / target/ removed + jk --redo, so
 #   jk's action cache cannot restore classes), not an empty dependency cache.
 # - Each tool runs what its own build runs by default: Maven `package` with Helidon's bound plugins
-#   (enforcer, dependency analysis, services, ...), jk `build` (which also writes sources and
-#   javadoc jars for every library module). The flags are printed with the results.
+#   (enforcer, dependency analysis, services, ...), jk `build` (which also writes a sources jar per
+#   library module; javadoc jars are written by jk publish / jk javadoc, as Maven writes them only
+#   in a release). The flags are printed with the results.
 # - A dirty run appends a unique comment to one source, so the content changes on every run:
 #   a touch alone is a no-op to jk's content hashing but a recompile to Maven's staleness check.
 set -euo pipefail
@@ -72,15 +72,10 @@ header() {
 
 run_jk() {
   [ -f checkout/jk.toml ] || ./setup.sh
-  if [ "${JAVADOC:-1}" = "0" ]; then
-    # Maven's package writes no javadoc jar; jk writes one per library module unless told not to.
-    find checkout -name jk.toml -not -path '*/target/*' -not -path 'checkout/jk.toml' -print0 \
-      | xargs -0 sed -i -e '/^javadoc *=/d' -e 's/^java     = \(.*\)$/java     = \1\njavadoc  = false/'
-  fi
   ( cd checkout
     echo "## jk"; echo
     echo "- jk: $(jk --version | head -1); tag $(cat .jk-helidon-tag)"
-    echo "- flags: \`jk build --skip-tests\`; tests \`jk test -t report -m webserver/webserver\`; javadoc jars: $([ "${JAVADOC:-1}" = "0" ] && echo 'off (javadoc = false in every module)' || echo 'on (jk default)')"; echo
+    echo "- flags: \`jk build --skip-tests\`; tests \`jk test -t report -m webserver/webserver\`"; echo
     echo "| scenario | median s | runs ms |"; echo "|---|---:|---|"
     jk build --skip-tests >>"$LOG" 2>&1   # prime: lock, store, workers
     time_cmd "cold (targets removed, --redo)" \
