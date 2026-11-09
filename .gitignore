@@ -22,5 +22,5 @@ graphify-out/
 # per-user Claude Code settings
 **/.claude/settings.local.json
 
-# Playwright MCP screenshots and logs
-.playwright-mcp/
+# Playwright MCP console logs
+.playwright-mcp/console*.log
