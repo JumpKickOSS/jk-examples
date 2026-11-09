@@ -72,10 +72,13 @@ clean history (`~/.jk/state/builds` wiped first). Final run (jk 1b7eb19a5, JK-47
 | Mid-graph API change | 11.6 | 1.02 | +2 / +5 / +3 / +3 |
 
 The estimate is within 10% of the execute wall for every shape, and the bar within 10 points once
-it arrives (one +12). The negative 25 % column on short builds is the first ~0.5 s, before the
-estimate exists: until the cache check ends nothing says whether the build is a no-op, a one-file
-edit or a cold build, and a bar that guessed from the previous build would overshoot the commonest
-step, an edit after a no-op. The estimate costs no wall time: it is priced beside the build.
+it arrives (one +12). The negative 25 % column on short builds (and the no-op row) is the first
+~0.5 s, before the estimate exists: until the cache check ends nothing says whether the build is a
+no-op, a one-file edit or a cold build. Since this table was measured, the terminal draws no bar
+there: the header shows the breathing orb beside the preflight stage and the clock, and the taskbar
+gets the indeterminate state (OSC 9;4;3), until the estimate arrives or the build reaches execute
+without one; `eta-harness.py` now reports those samples as "–". The estimate costs no wall time:
+it is priced beside the build.
 
 ## Reading it
 

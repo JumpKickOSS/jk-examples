@@ -7,7 +7,8 @@ and reads, from jk's own event stream:
 
 - R0: the first remaining-time estimate the engine publishes, and when it arrives;
 - the actual wall of the job (first event to last);
-- the bar the terminal paints at 25/50/75/90 % of that wall: the last `workspace-progress.progress`,
+- the bar the terminal paints at 25/50/75/90 % of that wall ("–" where no run drew one: before the
+  estimate exists the header shows no bar): the last `workspace-progress.progress`,
   or between events the clock bar on the last residual, as the header recomputes it every frame.
 
 Accuracy is R0 / actual (1.00 is perfect) and the bar's distance from the wall fraction in points.
@@ -81,9 +82,10 @@ def painted(bar, t):
     counted down since it was taken while the last module runs, elapsed / (elapsed + remaining), recomputed every frame and
     never lower than what it showed."""
     prior = [b for b in bar if b[0] <= t]
-    if not prior:
-        return 0.0
-    shown = max(p for (_, p, _) in prior)
+    if not prior or prior[-1][1] is None:
+        # Before the estimate, in the preflight: the terminal draws no bar (orb + OSC 9;4;3).
+        return None
+    shown = max(p for (_, p, _) in prior if p is not None)
     if prior[-1][2] is None:
         return shown
     rem, pending = prior[-1][2]
@@ -120,7 +122,8 @@ def measure(args):
             rem = e.get("remainingMs")
             live = (e.get("R0") or 0) > 0 and rem is not None and rem >= 0
             pending = (e.get("modulesTotal") or 0) - (e.get("modulesComplete") or 0)
-            bar.append((t, e["progress"], (rem, pending) if live else None))
+            estimating = e.get("phase") == "preflight" and not (e.get("R0") or 0) > 0
+            bar.append((t, None if estimating else e["progress"], (rem, pending) if live else None))
     points = []
     for f in FRACTIONS:
         if not bar:
