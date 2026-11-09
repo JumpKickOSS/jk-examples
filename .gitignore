@@ -23,4 +23,4 @@ graphify-out/
 **/.claude/settings.local.json
 
 # Playwright MCP console logs
-.playwright-mcp/console*.log
+**/.playwright-mcp/console*.log
