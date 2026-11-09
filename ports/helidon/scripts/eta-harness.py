@@ -7,7 +7,8 @@ and reads, from jk's own event stream:
 
 - R0: the first remaining-time estimate the engine publishes, and when it arrives;
 - the actual wall of the job (first event to last);
-- the bar (`workspace-progress.progress`) at 25/50/75/90 % of that wall.
+- the bar the terminal paints at 25/50/75/90 % of that wall: the last `workspace-progress.progress`,
+  or between events the clock bar on the last residual, as the header recomputes it every frame.
 
 Accuracy is R0 / actual (1.00 is perfect) and the bar's distance from the wall fraction in points.
 Results print as Markdown. Usage:
@@ -75,6 +76,31 @@ def restore(*paths):
     subprocess.run(["git", "checkout", "-q", "--", *[str(p) for p in paths]], cwd=CHECKOUT)
 
 
+def painted(bar, t):
+    """The bar the terminal paints at t: between events it is the clock bar on the last residual
+    counted down since it was taken while the last module runs, elapsed / (elapsed + remaining), recomputed every frame and
+    never lower than what it showed."""
+    prior = [b for b in bar if b[0] <= t]
+    if not prior:
+        return 0.0
+    shown = max(p for (_, p, _) in prior)
+    if prior[-1][2] is None:
+        return shown
+    rem, pending = prior[-1][2]
+    # While the last module runs, counted down from where the residual last changed, to a quarter
+    # of it (HeaderProgressState.residualNowMs).
+    if pending <= 1:
+        taken = prior[-1][0]
+        for ts, _, r in reversed(prior):
+            if r is None or r[0] != rem:
+                break
+            taken = ts
+        rem = max(rem - 1000 * (t - taken), rem / 4)
+    total = t + rem / 1000
+    clock = 100 * min(0.99, t / total) if total > 0 else 99.0
+    return max(shown, clock)
+
+
 def measure(args):
     out = jk(*args, "-O", "jsonl", capture=True)
     events = [json.loads(l) for l in out.stdout.splitlines() if l.startswith("{")]
@@ -91,15 +117,16 @@ def measure(args):
         if r0 is None and (e.get("R0") or 0) > 0:
             r0, r0_at = e["R0"] / 1000, t
         if e.get("progress") is not None:
-            bar.append((t, e["progress"]))
+            rem = e.get("remainingMs")
+            live = (e.get("R0") or 0) > 0 and rem is not None and rem >= 0
+            pending = (e.get("modulesTotal") or 0) - (e.get("modulesComplete") or 0)
+            bar.append((t, e["progress"], (rem, pending) if live else None))
     points = []
     for f in FRACTIONS:
         if not bar:
             points.append(None)
             continue
-        t = wall * f
-        prior = [p for (ts, p) in bar if ts <= t]
-        points.append(prior[-1] if prior else 0.0)
+        points.append(painted(bar, wall * f))
     starts = [(e["ts"] - t0) / 1000 for e in events if e.get("type") == "module-start"]
     # R0 predicts the execute phase (the engine's own quality line compares it to the execute wall,
     # and the countdown anchors at execute start), so that is what it is judged against.
