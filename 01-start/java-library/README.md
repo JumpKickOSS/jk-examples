@@ -16,7 +16,7 @@ It starts from `jk new -t library` and adds what a release needs:
 ```sh
 jk build                 # jar, sources jar, javadoc jar, POM; runs the tests
 jk publish -S -U         # dry run: assemble the bundle and write the SBOMs; uploads nothing
-jk install               # into the local repository, for another project on this machine
+jk snapshot              # into the local repository as a -SNAPSHOT, for another project on this machine
 jk guard
 ```
 
@@ -24,7 +24,7 @@ Another jk project on the same machine then depends on it like anything from Cen
 
 ```toml
 [dependencies]
-money = "dev.jkexamples:money:0.1.0"
+money = "dev.jkexamples:money:0.1.0-SNAPSHOT"
 ```
 
 A real release is `jk publish -c -I -f <key>` to the Central Portal, signed; see jk's
