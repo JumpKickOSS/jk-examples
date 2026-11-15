@@ -59,7 +59,7 @@ development the browser talks to Vite and the classpath seam is not involved at 
 
 - `[spring-boot] version` on `app` — one exact Boot pin, and `jk-lock.toml` carries the
   BOM's versions for the whole workspace.
-- Root-level test tiers: `[test] exclude-tags` plus one profile per tag.
+- Root-level test tiers: one `[test.suites.<tag>]` per cost tag beside the built-in `integration` suite, run in every member.
 - Guards: the `spring` pack for the framework and the `monorepo` pack for the workspace.
 - `[build-info]` on `app`: the Boot jar carries `git.properties` and `META-INF/build-info.properties`
   with the commit the build came from.

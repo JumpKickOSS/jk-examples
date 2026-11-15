@@ -9,7 +9,7 @@ It demonstrates:
 - Netty 4.2's event-loop idiom (`MultiThreadIoEventLoopGroup` over `NioIoHandler.newFactory()`)
 - an `EmbeddedChannel` unit test of the echo handler, no socket needed
 - `[image]` with a JRE 25 base and an AOT cache (`jk image`)
-- the test-tier table (`[test] exclude-tags` plus one profile per tag) and the house guard baseline
+- the test tiers (the built-in `integration` suite plus one `[test.suites.<tag>]` per other cost tag) and the house guard baseline
 
 ```sh
 jk build          # compiles, runs the unit tier, packages target/netty-echo-0.1.0.jar

@@ -9,6 +9,3 @@ jspecify.workspace = true
 
 [test-dependencies]
 junit-jupiter.workspace = true
-
-[test]
-exclude-tags = ["integration"]

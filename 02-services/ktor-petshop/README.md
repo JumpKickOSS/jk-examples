@@ -14,7 +14,7 @@ moves them all.
 It exercises:
 
 - a Kotlin workspace with one root lock and inherited identity
-- root-level test tiers (`[test] exclude-tags`, one profile per tag)
+- root-level test tiers (one `[test.suites.<tag>]` per cost tag beside the built-in `integration` suite), which run in every member
 - the `monorepo` guard pack — `one-module-per-package` is why `domain` has its own package —
   plus a per-language file-size ratchet (`cap = { java = 800, kt = 600 }`)
 - a Kotlin library's javadoc jar: `domain` has no `[application]`, so `jk build` writes

@@ -17,15 +17,9 @@ groovy-json        = "org.apache.groovy:groovy-json:6.0.0"
 [test-dependencies]
 spock-core = "org.spockframework:spock-core:2.5-groovy-6.0"
 
-# Test tiers: `jk test` is the unit tier; each profile owns one of the excluded tags, so every
-# tagged test runs in exactly one tier.
-[test]
-exclude-tags = ["integration", "slow"]
-
-[profiles.integration]
-include-tags = ["integration"]
-exclude-tags = []
-
-[profiles.slow]
-include-tags = ["slow"]
+# Test tiers: `jk test` runs what no suite claims; `@Tag("integration")` tests are the built-in
+# integration suite's (`jk test -s integration`, or `jk test -g` for both), and each suite below
+# claims one more cost tag, so every tagged test runs in exactly one tier.
+[test.suites.slow]
+tags = ["slow"]
 exclude-tags = ["integration"]

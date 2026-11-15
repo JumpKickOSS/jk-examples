@@ -144,8 +144,9 @@ new scenario goes in the first directory whose description fits it.
   lock lives under `overlay/` and `setup.sh` copies it into the checkout.
 - **`jk-guards.toml` in every scenario**: the framework pack where one exists (`spring`,
   `android`; `monorepo` beside it for workspaces), otherwise a house baseline with one file-size
-  ratchet. `jk guard` is clean everywhere; where a scenario has tests, `[test] exclude-tags`
-  and one profile per tag give every tagged test exactly one tier.
+  ratchet. `jk guard` is clean everywhere; where a scenario has tests, the built-in
+  `integration` suite and one `[test.suites.<tag>]` per other cost tag give every tagged test
+  exactly one tier (`jk test -s <tag>`).
 - **`[image]`** with a JRE 25 base and `aot-cache = true` on every runnable service.
 - **Agent files at every scenario root**, written by `jk agents`: `AGENTS.md` with jk's section
   between `<!-- BEGIN:jumpkick -->` and `<!-- END:jumpkick -->`, `CLAUDE.md` importing it, and
@@ -189,7 +190,7 @@ Every scenario has a `scenario.toml` saying how CI runs it:
 ```toml
 cadence = "nightly"                  # pr | nightly | weekly | manual
 needs   = ["docker"]                 # docker, android-sdk, graalvm, idle-host
-check   = ["jk build", "jk test -p integration", "jk guard"]
+check   = ["jk build", "jk test -s integration", "jk guard"]
 dev     = true                       # also run under `jk dev` until its front doors answer
 dev-checks = ["/api/hello=hello"]    # fetched through the first front door
 ```
@@ -210,7 +211,7 @@ Treat this repository as the **out-of-tree acceptance surface**:
 | Layer | Where |
 |-------|--------|
 | Fast unit / module tests | [jk](https://github.com/JumpKickOSS/jk) gate: `jk format` → `jk guard` → `jk build` |
-| Integration / e2e (tagged) | [jk](https://github.com/JumpKickOSS/jk) `jk test --profile integration` |
+| Integration / e2e (tagged) | [jk](https://github.com/JumpKickOSS/jk) `jk test -s integration` / `jk test -g` |
 | **Product scenarios** | **This repo** — `jk build` / `test` / `guard` / `run` on real layouts |
 
 When changing resolve, packaging, plugins, workspaces, guards, or the CLI↔engine wire, re-run the

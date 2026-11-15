@@ -9,7 +9,7 @@ The `library` template for Kotlin (`jk new -t library --lang kotlin`) as `jk new
 | `git.properties` in the jar — commit, branch, build time and version | `[build-info]` |
 | The `library` guard pack (`no-unsafe-defaults`, `no-snapshot-versions`, `converge-versions`, `file-size`; `null-marked-packages` leaves a package of Kotlin classes alone out of scope) | `jk-guards.toml` |
 | Exact pins: `kotlin`, and `junit-jupiter` as a catalog short name | `jk.toml` |
-| Test tiers: `[test] exclude-tags` and one `[profiles.<tag>]` per tag | `jk.toml` |
+| Test tiers: the built-in `integration` suite and one `[test.suites.<tag>]` per other cost tag (`jk test -s <tag>`) | `jk.toml` |
 
 ```sh
 jk build         # jar + sources jar + Dokka javadoc jar under target/

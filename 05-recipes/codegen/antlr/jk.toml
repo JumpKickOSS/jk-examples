@@ -20,10 +20,3 @@ antlr4-runtime = "4.13.2"   # on the tool's number; `jk update` moves both
 
 [test-dependencies]
 junit-jupiter = "6.1.3"
-
-[test]
-exclude-tags = ["integration"]
-
-[profiles.integration]
-include-tags = ["integration"]
-exclude-tags = []

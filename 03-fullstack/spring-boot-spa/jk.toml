@@ -9,23 +9,18 @@ java    = 25
 [workspace]
 modules = ["app", "web"]
 
-# Test tiers. Bare `jk test` is the unit tier; each profile owns exactly one of the excluded
-# tags, so every tagged test runs in one tier and none is silently skipped.
-[test]
-exclude-tags = ["integration", "slow", "network", "bench"]
-
-[profiles.integration]
-include-tags = ["integration"]
-exclude-tags = []
-
-[profiles.network]
-include-tags = ["network"]
+# Test tiers, declared once at the root, run in every member: `jk test` runs what no suite claims;
+# `@Tag("integration")` tests are the built-in integration suite's (`jk test -s integration`, or
+# `jk test -g` for both), and each suite below claims one more cost tag, so every tagged test runs
+# in exactly one tier.
+[test.suites.network]
+tags = ["network"]
 exclude-tags = ["integration"]
 
-[profiles.slow]
-include-tags = ["slow"]
+[test.suites.slow]
+tags = ["slow"]
 exclude-tags = ["integration", "network"]
 
-[profiles.bench]
-include-tags = ["bench"]
+[test.suites.bench]
+tags = ["bench"]
 exclude-tags = ["integration", "network", "slow"]

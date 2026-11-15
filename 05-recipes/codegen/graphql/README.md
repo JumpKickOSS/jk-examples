@@ -19,8 +19,8 @@ into the step's key; `jk-lock.toml` pins the one runtime jar the generated clien
 edit re-runs the step, an unchanged schema is a cache hit (`jk explain`). The tool and that
 runtime jar are one DGS codegen release, and `jk update` moves both.
 
-`[test] exclude-tags` and one `[profiles.<tag>]` per tag make `jk test` the fast tier and give
-every tagged test exactly one tier.
+The built-in `integration` suite and one `[test.suites.<tag>]` per other cost tag make `jk test`
+the fast tier and give every tagged test exactly one tier (`jk test -s <tag>`).
 
 ```sh
 jk build

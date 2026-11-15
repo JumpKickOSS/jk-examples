@@ -4,7 +4,7 @@ import static org.testng.Assert.assertEquals;
 
 import org.testng.annotations.Test;
 
-/** A TestNG group is a Platform tag: this class is out of the unit tier and in `--profile integration`. */
+/** A TestNG group is a Platform tag: this class is out of the unit tier and in the integration suite. */
 @Test(groups = "integration")
 public class AdderIntegrationTest {
 

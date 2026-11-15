@@ -9,7 +9,7 @@ and the tests prove them on two databases, one per tier:
 | Tier | Test | Database |
 |---|---|---|
 | `jk test` | `MigrationsH2Test` | an in-memory H2, no Docker |
-| `jk test --profile integration` | `MigrationsPostgresTest` | a `postgres:18-alpine` Testcontainer |
+| `jk test -s integration` | `MigrationsPostgresTest` | a `postgres:18-alpine` Testcontainer |
 
 ```toml
 [dependencies]
@@ -32,7 +32,7 @@ without any database at all.
 ```sh
 jk build                        # compiles, runs the unit tier on H2, packages target/migrations-1.0.0.jar
 jk test                         # Passed 2 tests
-jk test --profile integration   # Passed 1 test — starts the Postgres container, migrates it twice
+jk test -s integration          # Passed 1 test — starts the Postgres container, migrates it twice
 jk run                          # flyway: 2 applied [1, 2] · liquibase: 1 change set(s) · tables: audit_log, customers, databasechangelog, databasechangeloglock, flyway_schema_history, orders
 jk run                          # flyway: 0 applied [] · liquibase: 1 change set(s) · tables: …   (the H2 file under target/ is already migrated)
 jk guard
@@ -59,7 +59,7 @@ testcontainers.docker.socket.override=unix:///run/user/1000/podman/podman.sock
 ryuk.disabled=true
 ```
 
-Without a runtime `jk test --profile integration` fails on the container start; the unit tier is
+Without a runtime `jk test -s integration` fails on the container start; the unit tier is
 unaffected.
 
 ## The tools as commands

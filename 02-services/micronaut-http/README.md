@@ -9,8 +9,8 @@ Minimal Micronaut service on the built-in `[micronaut]` plugin. It demonstrates:
   minute and a half; `jk build` stays on the JVM). The plugin supplies Micronaut's native-image
   arguments and runs Micronaut AOT for the native runtime.
 - `[image]` with a JRE 25 base and `aot-cache = true` — `jk image` writes a shippable container.
-- `@MicronautTest` with `@Client("/")` as the smoke test, in the unit tier of the
-  `[test] exclude-tags` table.
+- `@MicronautTest` with `@Client("/")` as the smoke test, in the default suite: the one
+  `jk test` runs, beside the `integration` suite and the `[test.suites.<tag>]` tiers.
 - The house guard baseline (there is no Micronaut guard pack yet).
 
 ```sh

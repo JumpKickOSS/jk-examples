@@ -19,12 +19,12 @@ java-workspace/
 | **API vs implementation**: `api` *exports* JSpecify (`[export-dependencies]`), so every module that depends on `api` compiles against it; a plain `[dependencies]` entry would reach consumers only at runtime | `api/jk.toml` |
 | **Sibling edges**: `api.workspace = true` — built in dependency order, from source, no install step | `store/`, `cli/` |
 | **Shared test code**: `api`'s abstract `LinkStoreContract` runs against both stores through `api = { workspace = true, kind = "tests" }` | `store/jk.toml` |
-| **Tiers once**: the root declares `[profiles.integration]`; every module gets it | root `jk.toml` |
+| **Tiers with no table**: `@Tag("integration")` puts a test in the built-in `integration` suite of whichever module holds it; a suite declared at the root would run in every member | `store/` |
 
 ```sh
 jk build                     # every module, in order; unit tests
 jk build -m store            # one module (and what it needs)
-jk test -p integration       # the integration tier: FileLinkStoreConcurrencyTest
+jk test -s integration       # the integration tier: FileLinkStoreConcurrencyTest
 jk run -m cli -- add https://jumpkick.build
 jk run -m cli -- list
 jk tree store --transitive   # what store compiles against: api, and the JSpecify api exports

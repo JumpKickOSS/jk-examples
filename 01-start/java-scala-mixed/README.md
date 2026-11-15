@@ -12,7 +12,7 @@ It demonstrates:
   fetched, the JDK), and `buildTarget/scalacOptions` / `buildTarget/javacOptions` answer with the
   arguments jk's Zinc session passes, the compile classpath and the class directory
 - a compile through `buildTarget/compile`, and a Scala type error arriving as `build/publishDiagnostics`
-- the test-tier table (`[test] exclude-tags` plus one profile per tag) and the house guard baseline
+- the test tiers (the built-in `integration` suite plus one `[test.suites.<tag>]` per other cost tag) and the house guard baseline
 
 ```sh
 jk build                 # compiles both halves, runs the unit tier, packages target/scala-mixed-0.1.0.jar

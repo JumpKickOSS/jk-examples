@@ -22,7 +22,7 @@ keep the two pins on one release.
   `org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc`.
 - Workspace edges: `{ workspace = true }`, and `@SpringBootApplication`'s own component scan of
   `com.example.petshop` finding `PetService` in the sibling `service` jar.
-- Root-level test tiers (`[test] exclude-tags` and one profile per tag) apply to every member.
+- Root-level test tiers (one `[test.suites.<tag>]` per cost tag beside the built-in `integration` suite) run in every member.
 - Guards: the `spring` pack for the framework and the `monorepo` pack for the workspace.
 - `[build-info]` on `web`: the Boot jar carries `git.properties` and `META-INF/build-info.properties`,
   so `/actuator/info` reports the commit the build came from.
