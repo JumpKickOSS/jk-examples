@@ -1,3 +1,9 @@
 name = "storefront"
 
 node = 24
+
+# next.config.ts bakes API_ORIGIN into the standalone server's /api rewrite at `next build`. A node
+# build sees only the variables its module declares, so it is declared here; unset, the build uses
+# http://localhost:8080.
+[env]
+optional = ["API_ORIGIN"]
