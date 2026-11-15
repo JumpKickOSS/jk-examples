@@ -26,3 +26,5 @@ class does not survive a variant switch, so no `jk clean` is needed between sele
 
 `gson` is an exact pin that `jk update` moves. The fat jar (`assembly = true`) is what
 makes `java -jar` work with the feature dependency on the classpath.
+
+`[features]` `default = ["json"]` switches the `json` feature on in a plain `jk build`; `jk new` writes no `[features]` table.

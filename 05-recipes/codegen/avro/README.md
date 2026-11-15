@@ -25,3 +25,7 @@ jk run       # ada@acme.com is ADMIN
 jk test      # the record round-trips through Avro binary and its getters are java.lang.String
 jk guard
 ```
+
+`[test] system-properties` sets `org.apache.avro.SERIALIZABLE_PACKAGES` so Avro deserializes the `com.acme.events` classes the tests round-trip; a fresh `jk new` project has no such need.
+
+The `[nullness]` table excludes `com.acme.events`: the codegen plugin writes those classes without nullness annotations.

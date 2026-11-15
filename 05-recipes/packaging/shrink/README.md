@@ -20,3 +20,5 @@ Against the pinned `commons-lang3`, a build writes a 740,652-byte
 R8 is a tool jk provisions itself, so the manifest declares no extra repository for it. The
 effective keep rules jk derived are written next to the artifact as
 `target/shrink-cli-1.0.0-min-keep.pro`.
+
+The `[minified]` table holds the R8 options (`keep`, `obfuscate`) for the `minified = true` jar; `jk new` does not write one.

@@ -157,3 +157,5 @@ jk: + Lock > Lock successful. Resolved 11 dependencies - took 127ms
 
 [Packaging](https://github.com/JumpKickOSS/jk/blob/main/docs/user/packaging.md) · [Projects](https://github.com/JumpKickOSS/jk/blob/main/docs/user/projects.md) ·
 [Lockfile](https://github.com/JumpKickOSS/jk/blob/main/docs/user/lockfile.md) · [shrink](../shrink/) adds R8 on top of this.
+
+The `[nullness]` table adds `include = ["demo"]`: the sources live in `demo`, outside the group, which is the default package set NullAway checks.

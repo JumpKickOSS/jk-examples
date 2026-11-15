@@ -22,4 +22,12 @@ spock-core = "org.spockframework:spock-core:2.5-groovy-6.0"
 # claims one more cost tag, so every tagged test runs in exactly one tier.
 [test.suites.slow]
 tags = ["slow"]
+exclude-tags = ["integration", "network"]
+
+[test.suites.network]
+tags = ["network"]
 exclude-tags = ["integration"]
+
+[test.suites.bench]
+tags = ["bench"]
+exclude-tags = ["integration", "network", "slow"]

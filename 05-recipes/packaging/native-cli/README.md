@@ -46,3 +46,5 @@ picocli-codegen = "info.picocli:picocli-codegen:…"
 - `[native]` declared does not change what `jk build` produces.
 
 [picocli]: https://picocli.info/
+
+The `[nullness]` table adds an `ExcludedFieldAnnotations` option: picocli injects `@Option`, `@Parameters` and `@Spec` fields after construction, which NullAway cannot see.

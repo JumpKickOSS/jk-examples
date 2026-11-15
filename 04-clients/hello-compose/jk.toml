@@ -38,3 +38,8 @@ ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 central = "https://repo.maven.apache.org/maven2/"
 google  = "https://dl.google.com/dl/android/maven2/"
 
+# `jk guard` formats the sources that changed before it checks; under CI it fails naming each one
+# that is not formatted.
+[format]
+style   = "standard"
+enforce = true

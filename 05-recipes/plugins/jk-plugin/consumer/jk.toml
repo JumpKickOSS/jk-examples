@@ -10,7 +10,29 @@ java    = 25
 main = "dev.jkexamples.greeter.Greeter"
 
 [plugins]
-hello = { path = "../hello-plugin/target/hello-plugin-0.1.0.jar", sha256 = "b7290f0a396593e787b38e4e507920364296ba336fe33a6881cb139f8f6b1f4f" }
+hello = { path = "../hello-plugin/target/hello-plugin-0.1.0.jar", sha256 = "9da3d922464f60cb041c644c7226b6a8d26a16e84507e67bdaf2138300fcb7c1" }
 
 [hello]
 greeting = "Hello from a jk plugin"
+
+# Test tiers: `jk test` runs what no suite claims; `@Tag("integration")` tests are the built-in
+# integration suite's (`jk test -s integration`, or `jk test -g` for both), and each suite below
+# claims one more cost tag, so every tagged test runs in exactly one tier.
+[test.suites.network]
+tags = ["network"]
+exclude-tags = ["integration"]
+
+[test.suites.slow]
+tags = ["slow"]
+exclude-tags = ["integration", "network"]
+
+[test.suites.bench]
+tags = ["bench"]
+exclude-tags = ["integration", "network", "slow"]
+
+[format]
+style = "standard"
+
+# Null checking: every package is @NullMarked (package-info.java), and NullAway checks it at
+# compile time. The table brings JSpecify, Error Prone and NullAway at versions jk tests together.
+[nullness]

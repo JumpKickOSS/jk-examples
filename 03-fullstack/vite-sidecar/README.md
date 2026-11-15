@@ -100,3 +100,5 @@ Vite, Ctrl-C — and fails if anything outlives the session or a committed lock 
 
 [Node.js](https://github.com/JumpKickOSS/jk/blob/main/docs/user/node.md) · [Run](https://github.com/JumpKickOSS/jk/blob/main/docs/user/run.md#sidecars-devsidecars) ·
 [Machine output](https://github.com/JumpKickOSS/jk/blob/main/docs/user/machine-output.md#jk-dev) · [Projects](https://github.com/JumpKickOSS/jk/blob/main/docs/user/projects.md)
+
+The `[nullness]` table adds `include = ["demo"]`: the sources live in `demo`, outside the group, which is the default package set NullAway checks.

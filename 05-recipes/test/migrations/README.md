@@ -103,3 +103,5 @@ class is named, and picocli, optional in its POM, rides along. The Flyway comman
 behind the library: `flyway-commandline` 12.10.0 and later (13.x included) declare a runtime
 dependency (`flyway-database-ignite`) that Maven Central does not carry, so their closure does not
 resolve from Central; 12.9.0's does, and it applies these scripts unchanged.
+
+`[test] system-properties` sets `liquibase.analytics.enabled` to false so the test JVMs never reach Liquibase's analytics host and both test tiers stay cacheable; a fresh `jk new` project does not run Liquibase.

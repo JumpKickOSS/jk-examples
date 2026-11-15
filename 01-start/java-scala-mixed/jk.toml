@@ -28,3 +28,6 @@ exclude-tags = ["integration", "network"]
 [test.suites.bench]
 tags = ["bench"]
 exclude-tags = ["integration", "network", "slow"]
+
+[format]
+style = "standard"

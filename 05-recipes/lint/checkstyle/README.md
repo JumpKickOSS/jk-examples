@@ -42,3 +42,5 @@ E plugin-lint-checkstyle: checkstyle: 2 findings at or above `fail-on = "error"`
 The rule set says `severity = "error"`, so each finding is an error and the step fails the
 build; `fail-on = "warning"` would fail on warnings too, `fail-on = "never"` reports and passes.
 The four-tool variant is [`../all-tools`](../all-tools/).
+
+The `[nullness]` table adds `include = ["demo"]`: the sources live in `demo`, outside the group, which is the default package set NullAway checks.

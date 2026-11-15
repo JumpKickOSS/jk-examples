@@ -47,3 +47,5 @@ that does not extend `Application`; that's what `Launcher` is for. With a fat ja
 ## Validates
 
 - The javafx plugin: the module path and `--add-modules` for `jk run` and tests, the host classifier.
+
+The `[nullness]` table adds an `ExcludedFieldAnnotations` option: `@FXML` fields are injected by the FXML loader after construction, which NullAway cannot see.

@@ -26,3 +26,5 @@ jk run       # <?xml version="1.0" encoding="UTF-8" standalone="yes"?><order xml
 jk test      # an Order marshals with the schema's namespace and unmarshals to the same values
 jk guard
 ```
+
+The `[nullness]` table excludes `com.acme.order`: the codegen plugin writes those classes without nullness annotations.

@@ -1,5 +1,5 @@
 cadence = "nightly"
 check   = [
   "cd hello-plugin && jk build",
-  "cd consumer && jk trust plugin sha256:b7290f0a396593e787b38e4e507920364296ba336fe33a6881cb139f8f6b1f4f && jk build && jk run | grep -q 'Hello from a jk plugin'",
+  "cd consumer && jk trust plugin sha256:9da3d922464f60cb041c644c7226b6a8d26a16e84507e67bdaf2138300fcb7c1 && jk build && jk run | grep -q 'Hello from a jk plugin'",
 ]
