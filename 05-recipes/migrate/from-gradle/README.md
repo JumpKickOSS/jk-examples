@@ -26,10 +26,10 @@ text: the `subprojects { }` block, catalog accessors and plugin defaults are alr
 | `api` / `implementation` / `test*` | `[dependencies]` / `[test-dependencies]` |
 | `implementation(project(":core"))` | `core.workspace = true` |
 | `application { mainClass }` | `[application] main` |
-| `toolchain.languageVersion = 25` | `java = 25` and `jdk = "25"` |
+| `toolchain.languageVersion = 25` | `java = 25` at the root, which both modules inherit |
 
-A toolchain chooses a JDK, so the import pins one. jk already runs on JDK 25, so after the move
-you can drop the `jdk` lines and keep `java = 25`, the language level.
+A toolchain with no vendor at the major the host JDK already compiles to needs no JDK pin, so the
+import writes only `java = 25`, the language level, and no `jdk` line.
 
 ## Teaches
 

@@ -11,7 +11,7 @@ main       = "dev.jkexamples.ledger.Ledger"
 junit-bom = "org.junit:junit-bom:6.1.3"
 
 [dependencies]
-commons-csv = "org.apache.commons:commons-csv:1.14.1"
+commons-csv = "1.14.1"
 slf4j-api = "2.0.20"
 
 [runtime-dependencies]

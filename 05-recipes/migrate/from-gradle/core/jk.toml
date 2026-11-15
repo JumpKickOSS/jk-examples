@@ -1,8 +1,6 @@
 group    = "dev.jkexamples"
 name     = "core"
 version  = "0.1.0"
-jdk      = "25"
-java     = 25
 
 [platform-dependencies]
 junit-bom = "org.junit:junit-bom:6.1.3"
