@@ -1,7 +1,7 @@
 version = 1
-generated-by = "jk 0.50.3-SNAPSHOT"
-generated-by-build = "0be5674be3a6"
-generated-by-build-time = "2026-11-05T05:03:57Z"
+generated-by = "jk 0.51.0"
+generated-by-build = "495be503c792"
+generated-by-build-time = "2026-11-14T22:08:20Z"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.15"
 manifests-sha256 = "cbd9a3a2fe7d7b925cd69250375f33c674cfbf8a07f3e124af0fb811b4f16471"
@@ -113,7 +113,7 @@ licenses = ["Apache-2.0"]
 
 [[plugin]]
 coordinate = "cc.jumpkick:jk-intellij"
-version    = "0.50.3-SNAPSHOT"
+version    = "0.51.0"
 
 [[tool]]
 coordinate = "at.yawk.lz4:lz4-java"

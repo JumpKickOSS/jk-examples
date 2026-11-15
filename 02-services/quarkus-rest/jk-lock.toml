@@ -1,7 +1,7 @@
 version = 1
-generated-by = "jk 0.50.2"
-generated-by-build = "cb17db83b069"
-generated-by-build-time = "2026-11-04T22:33:39Z"
+generated-by = "jk 0.51.0"
+generated-by-build = "495be503c792"
+generated-by-build-time = "2026-11-14T22:08:20Z"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.10"
 manifests-sha256 = "d93bbcba4b5a75510945ba8758495fe8148e0acc77befb9046110a6dac175365"
@@ -1005,6 +1005,9 @@ deps = [
   "io.quarkus:quarkus-core:jar:@3.40.1.1",
   "org.flywaydb:flyway-database-postgresql:jar:@12.0.0",
 ]
+added-by = [
+  "io.quarkus:quarkus-jdbc-postgresql when io.quarkus:quarkus-flyway",
+]
 
 [[artifact]]
 name     = "io.quarkus:quarkus-flyway:jar:"
@@ -1148,6 +1151,7 @@ licenses = ["Apache-2.0"]
 deps = [
   "io.quarkus:quarkus-agroal:jar:@3.40.1.1",
   "io.quarkus:quarkus-arc:jar:@3.40.1.1",
+  "io.quarkus:quarkus-flyway-postgresql:jar:@3.40.1.1",
   "org.postgresql:postgresql:jar:@42.7.13",
 ]
 
@@ -3869,7 +3873,7 @@ version    = "0.50.2"
 
 [[plugin]]
 coordinate = "cc.jumpkick:jk-quarkus"
-version    = "0.50.2"
+version    = "0.51.0"
 
 [[tool]]
 coordinate = "aopalliance:aopalliance"
@@ -4350,8 +4354,8 @@ checksum   = "sha256:44508fd1576500688c790b190acdd16fec4f8c79a3e0b900afd70503cf0
 
 [[tool]]
 resolved-by = "quarkus/deployment"
-plugin      = "quarkus 1.0.0 jk 0.50.2 jar 8f612087c5221144"
-inputs      = "sha256:a692dd7a8e44cb96211a71504c713ef405f703a5d0ebcedbc7b6fadc4df015c8"
+plugin      = "quarkus 1.0.0 jk 0.51.0 jar 15b62431a28bb0eb"
+inputs      = "sha256:a31e17df51964fcfbe1ef0f7bd3982d89f9b9452c0c36b815d7b53de9bd91992"
 files = [
   "com.aayushatharva.brotli4j:brotli4j-parent:1.23.0!pom sha256:e5396c28d74a0c27262aeafce391c35a1e420fa15d6eba6a2ab4269f4033cf29",
   "com.aayushatharva.brotli4j:brotli4j:1.23.0 sha256:5fcf13ad78d07319cc507465dcf61cbc3efee9f45c9ae1c42a9902414696bc0b",
@@ -5175,8 +5179,8 @@ files = [
 
 [[tool]]
 resolved-by = "quarkus/test-deployment"
-plugin      = "quarkus 1.0.0 jk 0.50.2 jar 8f612087c5221144"
-inputs      = "sha256:bc5707e57b80d40f58dfe5a713916ed63183842ae80799561dba8047c473d822"
+plugin      = "quarkus 1.0.0 jk 0.51.0 jar 15b62431a28bb0eb"
+inputs      = "sha256:6bd7df32d7a25e123738c789e455e5305f33d6a76e0cc6ed478a354eb0019bb7"
 files = [
   "aopalliance:aopalliance:1.0 sha256:0addec670fedcd3f113c5c8091d783280d23f75e3acb841b61a9cdb079376a08",
   "aopalliance:aopalliance:1.0!pom sha256:26e82330157d6b844b67a8064945e206581e772977183e3e31fec6058aa9a59b",
