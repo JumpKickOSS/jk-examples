@@ -20,7 +20,8 @@ public final class Main {
     static String showsQuery(String titleFilter) {
         ShowsGraphQLQuery query =
                 ShowsGraphQLQuery.newRequest().titleFilter(titleFilter).build();
-        ShowsProjectionRoot<?, ?> projection = new ShowsProjectionRoot<>().title().releaseYear();
+        ShowsProjectionRoot<?, ?> projection =
+                new ShowsProjectionRoot<>().title().releaseYear();
         return new GraphQLQueryRequest(query, projection).serialize();
     }
 }

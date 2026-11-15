@@ -21,8 +21,14 @@ class CalcTest {
 
     @Test
     void errors_name_where_they_happened() {
-        assertTrue(assertThrows(CalcException.class, () -> Calc.run("1 +\n")).getMessage().startsWith("line "));
-        assertEquals("undefined variable x", assertThrows(CalcException.class, () -> Calc.run("x * 2")).getMessage());
-        assertEquals("division by zero: 1/0", assertThrows(CalcException.class, () -> Calc.run("1/0")).getMessage());
+        assertTrue(assertThrows(CalcException.class, () -> Calc.run("1 +\n"))
+                .getMessage()
+                .startsWith("line "));
+        assertEquals(
+                "undefined variable x",
+                assertThrows(CalcException.class, () -> Calc.run("x * 2")).getMessage());
+        assertEquals(
+                "division by zero: 1/0",
+                assertThrows(CalcException.class, () -> Calc.run("1/0")).getMessage());
     }
 }

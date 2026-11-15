@@ -24,6 +24,28 @@ archunit          = "com.tngtech.archunit:archunit-junit5:1.5.1"
 testcontainers-postgresql = "org.testcontainers:testcontainers-postgresql:2.0.5"
 playwright        = "com.microsoft.playwright:playwright:1.64.0"
 
+# Test tiers, declared once at the root, run in every member: `jk test` runs what no suite claims;
+# `@Tag("integration")` tests are the built-in integration suite's (`jk test -s integration`, or
+# `jk test -g` for both), and each suite below claims one more cost tag, so every tagged test runs
+# in exactly one tier.
+[test.suites.network]
+tags = ["network"]
+exclude-tags = ["integration"]
+
+[test.suites.slow]
+tags = ["slow"]
+exclude-tags = ["integration", "network"]
+
+[test.suites.bench]
+tags = ["bench"]
+exclude-tags = ["integration", "network", "slow"]
+
+# `jk guard` formats the sources that changed before it checks; under CI it fails naming each one
+# that is not formatted.
+[format]
+style   = "standard"
+enforce = true
+
 # `jk dev` at this root runs the app (rest), the Angular dev server (frontend, proxying /api) and
 # compose.yaml's database, on every OS. run-before holds the app back until PostgreSQL listens on
 # TCP, not during its first-run init (the pattern matches inside compose's `db-1  | ` line prefix),

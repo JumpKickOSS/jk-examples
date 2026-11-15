@@ -21,7 +21,8 @@ class FileLinkStoreConcurrencyTest {
         Path file = dir.resolve("links.tsv");
         var store = new FileLinkStore(file, Clock.systemUTC());
         try (var pool = Executors.newVirtualThreadPerTaskExecutor()) {
-            IntStream.range(0, 2_000).forEach(i -> pool.submit(() -> store.add(URI.create("https://example.com/" + i))));
+            IntStream.range(0, 2_000)
+                    .forEach(i -> pool.submit(() -> store.add(URI.create("https://example.com/" + i))));
         }
         assertEquals(2_000, Files.readAllLines(file).size());
         assertEquals(2_000, new FileLinkStore(file, Clock.systemUTC()).all().size());

@@ -20,14 +20,19 @@ class SumsTest {
 
     private Run run(String... args) {
         StringWriter out = new StringWriter();
-        int exit = new CommandLine(new Sums()).setOut(new PrintWriter(out)).setErr(new PrintWriter(new StringWriter())).execute(args);
+        int exit = new CommandLine(new Sums())
+                .setOut(new PrintWriter(out))
+                .setErr(new PrintWriter(new StringWriter()))
+                .execute(args);
         return new Run(exit, out.toString());
     }
 
     @Test
     void prints_sha256_like_sha256sum() throws Exception {
         Path f = Files.writeString(dir.resolve("hello.txt"), "hello\n");
-        assertEquals("5891b5b522d5df086d0ff0b110fbd9d21bb4fc7163af34d08286a2e846f6be03  " + f + "\n", run(f.toString()).out());
+        assertEquals(
+                "5891b5b522d5df086d0ff0b110fbd9d21bb4fc7163af34d08286a2e846f6be03  " + f + "\n",
+                run(f.toString()).out());
     }
 
     @Test

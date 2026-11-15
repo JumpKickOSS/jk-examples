@@ -32,6 +32,9 @@ public record Amortization(BigDecimal principal, BigDecimal annualRatePercent, i
     }
 
     public BigDecimal totalInterest() {
-        return monthlyPayment().multiply(BigDecimal.valueOf(months())).subtract(principal).setScale(2, RoundingMode.HALF_UP);
+        return monthlyPayment()
+                .multiply(BigDecimal.valueOf(months()))
+                .subtract(principal)
+                .setScale(2, RoundingMode.HALF_UP);
     }
 }

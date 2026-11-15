@@ -20,14 +20,22 @@ import picocli.CommandLine.Parameters;
  * {@code sums [-a ALGORITHM] FILE…} prints a checksum line per file, as {@code sha256sum} does;
  * {@code sums -c LIST} checks the files a list names. Exit 1 when a check fails.
  */
-@Command(name = "sums", mixinStandardHelpOptions = true, version = "sums 0.1.0",
+@Command(
+        name = "sums",
+        mixinStandardHelpOptions = true,
+        version = "sums 0.1.0",
         description = "Print or check file checksums.")
 public final class Sums implements Callable<Integer> {
 
-    @Option(names = {"-a", "--algorithm"}, defaultValue = "SHA-256", description = "SHA-256 (default), SHA-512, SHA-1, MD5")
+    @Option(
+            names = {"-a", "--algorithm"},
+            defaultValue = "SHA-256",
+            description = "SHA-256 (default), SHA-512, SHA-1, MD5")
     String algorithm;
 
-    @Option(names = {"-c", "--check"}, description = "Read checksum lines from FILE and verify them")
+    @Option(
+            names = {"-c", "--check"},
+            description = "Read checksum lines from FILE and verify them")
     Path check;
 
     @Parameters(arity = "0..*", paramLabel = "FILE")
@@ -44,7 +52,8 @@ public final class Sums implements Callable<Integer> {
     public Integer call() throws IOException, NoSuchAlgorithmException {
         PrintWriter out = spec.commandLine().getOut();
         if (check != null) return verify(out);
-        if (files.isEmpty()) throw new CommandLine.ParameterException(spec.commandLine(), "name at least one FILE, or -c LIST");
+        if (files.isEmpty())
+            throw new CommandLine.ParameterException(spec.commandLine(), "name at least one FILE, or -c LIST");
         for (Path f : files) out.println(digest(f) + "  " + f);
         out.flush();
         return 0;

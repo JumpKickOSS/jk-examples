@@ -17,7 +17,8 @@ public final class Calc {
         CalcParser parser = new CalcParser(new CommonTokenStream(lexer));
         var failFast = new BaseErrorListener() {
             @Override
-            public void syntaxError(Recognizer<?, ?> r, Object symbol, int line, int col, String msg, RecognitionException e) {
+            public void syntaxError(
+                    Recognizer<?, ?> r, Object symbol, int line, int col, String msg, RecognitionException e) {
                 throw new CalcException("line " + line + ":" + col + " " + msg);
             }
         };

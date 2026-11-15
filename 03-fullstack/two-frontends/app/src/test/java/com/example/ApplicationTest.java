@@ -36,9 +36,7 @@ class ApplicationTest {
 
     @Test
     void clientRouteGetsTheShell() throws Exception {
-        assumeTrue(
-                getClass().getResource("/static/index.html") != null,
-                "the admin bundle is not built: jk build");
+        assumeTrue(getClass().getResource("/static/index.html") != null, "the admin bundle is not built: jk build");
         HttpResponse<String> res = get("/some/client/route", "text/html");
         assertThat(res.statusCode()).isEqualTo(200);
         assertThat(res.headers().firstValue("Content-Type"))

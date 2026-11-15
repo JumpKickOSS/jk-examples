@@ -1,9 +1,9 @@
 version = 1
-generated-by = "jk 0.40.0"
-generated-by-build = "ceb41198cbc4"
-generated-by-build-time = "2026-10-24T23:26:50Z"
+generated-by = "jk 0.51.1"
+generated-by-build = "b99b298c75ee"
+generated-by-build-time = "2026-11-15T21:30:46Z"
 resolution-algorithm = "pubgrub-v1"
-jk-min = "0.12.0"
+jk-min = "0.51.0"
 manifests-sha256 = "30e6a9cf94cd6efe09550d9893b1d27df8e148853a5fc4c780531dd953b149d1"
 project-id = "8db5cec16f5fc05b28ecec3680b76784"
 

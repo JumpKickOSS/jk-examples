@@ -25,24 +25,28 @@ class TalkResourceTest {
                         {"title": "Supply chains", "speaker": "Elena Eriksen", "track": "build", "room": "Vine",
                          "startsAt": "2026-11-12T16:00:00", "minutes": 30}""")
                 .post("/talks")
-                .then().statusCode(201).extract().header("Location");
+                .then()
+                .statusCode(201)
+                .extract()
+                .header("Location");
         given().delete(location).then().statusCode(204);
         given().get(location).then().statusCode(404);
     }
 
     @Test
     void a_talk_that_clashes_in_its_room_is_refused() {
-        given().contentType("application/json")
-                .body("""
+        given().contentType("application/json").body("""
                         {"title": "Overbooked", "speaker": "Femi Falade", "track": "jvm", "room": "Harbour",
-                         "startsAt": "2026-11-12T09:45:00", "minutes": 30}""")
-                .post("/talks")
-                .then().statusCode(409);
+                         "startsAt": "2026-11-12T09:45:00", "minutes": 30}""").post("/talks").then().statusCode(409);
     }
 
     @Test
     void an_invalid_talk_is_refused() {
-        given().contentType("application/json").body("{\"title\": \"\", \"minutes\": 1}").post("/talks").then().statusCode(400);
+        given().contentType("application/json")
+                .body("{\"title\": \"\", \"minutes\": 1}")
+                .post("/talks")
+                .then()
+                .statusCode(400);
     }
 
     @Test

@@ -20,7 +20,8 @@ class MainTest {
         String code = out.toString(StandardCharsets.UTF_8).strip();
         out.reset();
         assertEquals(0, Main.run(store, new String[] {"open", code}, print, System.err));
-        assertEquals("https://jumpkick.build", out.toString(StandardCharsets.UTF_8).strip());
+        assertEquals(
+                "https://jumpkick.build", out.toString(StandardCharsets.UTF_8).strip());
     }
 
     @Test

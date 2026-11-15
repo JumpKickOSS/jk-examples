@@ -42,8 +42,11 @@ exclude-tags = ["integration", "network"]
 tags = ["bench"]
 exclude-tags = ["integration", "network", "slow"]
 
+# `jk guard` formats the sources that changed before it checks; under CI it fails naming each one
+# that is not formatted.
 [format]
-style = "standard"
+style   = "standard"
+enforce = true
 
 # Null checking: every package is @NullMarked (package-info.java), and NullAway checks it at
 # compile time. The table brings JSpecify, Error Prone and NullAway at versions jk tests together.

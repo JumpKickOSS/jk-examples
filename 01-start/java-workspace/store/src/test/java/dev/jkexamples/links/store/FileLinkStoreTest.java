@@ -25,6 +25,8 @@ class FileLinkStoreTest extends LinkStoreContract {
     void links_survive_a_reopen() throws Exception {
         Path file = dir.resolve("links.tsv");
         var first = new FileLinkStore(file, Clock.systemUTC()).add(URI.create("https://example.com/kept"));
-        assertEquals(first, new FileLinkStore(file, Clock.systemUTC()).find(first.code()).orElseThrow());
+        assertEquals(
+                first,
+                new FileLinkStore(file, Clock.systemUTC()).find(first.code()).orElseThrow());
     }
 }

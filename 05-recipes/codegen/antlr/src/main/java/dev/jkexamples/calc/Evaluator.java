@@ -37,7 +37,8 @@ public final class Evaluator extends CalcBaseVisitor<BigDecimal> {
     @Override
     public BigDecimal visitPower(CalcParser.PowerContext ctx) {
         BigDecimal exponent = visit(ctx.expr(1));
-        if (exponent.stripTrailingZeros().scale() > 0) throw new CalcException("only whole exponents: " + ctx.getText());
+        if (exponent.stripTrailingZeros().scale() > 0)
+            throw new CalcException("only whole exponents: " + ctx.getText());
         return visit(ctx.expr(0)).pow(exponent.intValueExact(), MATH);
     }
 
@@ -72,8 +73,10 @@ public final class Evaluator extends CalcBaseVisitor<BigDecimal> {
         List<BigDecimal> args = ctx.expr().stream().map(this::visit).toList();
         String name = ctx.ID().getText();
         return switch (name) {
-            case "min" -> args.stream().reduce(BigDecimal::min).orElseThrow(() -> new CalcException("min() needs arguments"));
-            case "max" -> args.stream().reduce(BigDecimal::max).orElseThrow(() -> new CalcException("max() needs arguments"));
+            case "min" ->
+                args.stream().reduce(BigDecimal::min).orElseThrow(() -> new CalcException("min() needs arguments"));
+            case "max" ->
+                args.stream().reduce(BigDecimal::max).orElseThrow(() -> new CalcException("max() needs arguments"));
             case "sqrt" -> {
                 if (args.size() != 1) throw new CalcException("sqrt takes one argument");
                 yield args.getFirst().sqrt(MATH);
@@ -85,7 +88,8 @@ public final class Evaluator extends CalcBaseVisitor<BigDecimal> {
     @Override
     public BigDecimal visitVariable(CalcParser.VariableContext ctx) {
         BigDecimal value = variables.get(ctx.ID().getText());
-        if (value == null) throw new CalcException("undefined variable " + ctx.ID().getText());
+        if (value == null)
+            throw new CalcException("undefined variable " + ctx.ID().getText());
         return value;
     }
 

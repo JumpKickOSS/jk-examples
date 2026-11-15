@@ -1,10 +1,10 @@
 version = 1
-generated-by = "jk 0.51.0"
-generated-by-build = "495be503c792"
-generated-by-build-time = "2026-11-14T22:08:20Z"
+generated-by = "jk 0.51.1"
+generated-by-build = "b99b298c75ee"
+generated-by-build-time = "2026-11-15T21:30:46Z"
 resolution-algorithm = "pubgrub-v1"
-jk-min = "0.10"
-manifests-sha256 = "8b6c9fdde9861782ed0ebe2db099578d6e6a7a249c0b4d16dfce669dc2ffae95"
+jk-min = "0.51.0"
+manifests-sha256 = "5aef073cf2bab170368e1f6e564a65f12dd948ab573a1475cbf83805554193b9"
 project-id = "eea17dad9eb880d1d118822f8381b691"
 
 [jdk]
@@ -1382,11 +1382,11 @@ version    = "0.50.2"
 
 [[plugin]]
 coordinate = "cc.jumpkick:jk-hibernate"
-version    = "0.51.0"
+version    = "0.51.1"
 
 [[plugin]]
 coordinate = "cc.jumpkick:jk-spring-boot"
-version    = "0.51.0"
+version    = "0.51.1"
 
 [[tool]]
 coordinate = "org.springframework.boot:spring-boot-jarmode-tools"

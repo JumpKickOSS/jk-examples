@@ -1,10 +1,10 @@
 version = 1
-generated-by = "jk 0.51.0"
-generated-by-build = "495be503c792"
-generated-by-build-time = "2026-11-14T22:08:20Z"
+generated-by = "jk 0.51.1"
+generated-by-build = "b99b298c75ee"
+generated-by-build-time = "2026-11-15T21:30:46Z"
 resolution-algorithm = "pubgrub-v1"
-jk-min = "0.10"
-manifests-sha256 = "93334dc6cefb42215c8f19899bf192ff89c7484fc9e342c9609fec1efe9c45ed"
+jk-min = "0.51.0"
+manifests-sha256 = "d762a3d27efee7bc278a7e06cdfe512468227b2ac6633fa4228b5d193efbbf06"
 project-id = "122e33b50cbd20fd612c847929e000e6"
 
 [jdk]
@@ -1005,7 +1005,7 @@ deps = [
 
 [[plugin]]
 coordinate = "cc.jumpkick:jk-micronaut"
-version    = "0.51.0"
+version    = "0.51.1"
 
 [[tool]]
 coordinate = "com.squareup:javapoet"

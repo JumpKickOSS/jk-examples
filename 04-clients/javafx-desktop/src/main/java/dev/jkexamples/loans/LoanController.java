@@ -13,12 +13,23 @@ public class LoanController {
 
     private static final NumberFormat MONEY = NumberFormat.getCurrencyInstance(Locale.US);
 
-    @FXML private TextField amount;
-    @FXML private TextField rate;
-    @FXML private Slider years;
-    @FXML private Label yearsLabel;
-    @FXML private Label payment;
-    @FXML private Label interest;
+    @FXML
+    private TextField amount;
+
+    @FXML
+    private TextField rate;
+
+    @FXML
+    private Slider years;
+
+    @FXML
+    private Label yearsLabel;
+
+    @FXML
+    private Label payment;
+
+    @FXML
+    private Label interest;
 
     @FXML
     private void initialize() {
@@ -32,7 +43,10 @@ public class LoanController {
         int term = (int) Math.round(years.getValue());
         yearsLabel.setText(term + " years");
         try {
-            var loan = new Amortization(new BigDecimal(amount.getText().trim()), new BigDecimal(rate.getText().trim()), term);
+            var loan = new Amortization(
+                    new BigDecimal(amount.getText().trim()),
+                    new BigDecimal(rate.getText().trim()),
+                    term);
             payment.setText(MONEY.format(loan.monthlyPayment()) + " / month");
             interest.setText(MONEY.format(loan.totalInterest()) + " interest over " + loan.months() + " payments");
         } catch (IllegalArgumentException e) {

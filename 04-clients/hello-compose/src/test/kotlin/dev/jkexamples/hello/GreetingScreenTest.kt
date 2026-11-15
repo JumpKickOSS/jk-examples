@@ -12,8 +12,7 @@ import org.robolectric.RobolectricTestRunner
 /** The screen itself, rendered by Robolectric on the JVM: type, tap, read. */
 @RunWith(RobolectricTestRunner::class)
 class GreetingScreenTest {
-    @get:Rule
-    val compose = createComposeRule()
+    @get:Rule val compose = createComposeRule()
 
     @Test
     fun typingANameAndTappingGreets() {

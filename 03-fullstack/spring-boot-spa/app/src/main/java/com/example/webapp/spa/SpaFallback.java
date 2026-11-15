@@ -25,11 +25,12 @@ class SpaFallback {
 
     static final String INDEX = "static/index.html";
 
+    /** Empty when the bundle was not built: the API still serves, the pages 404. */
     private final byte[] index = load();
 
     @ExceptionHandler(NoResourceFoundException.class)
     ResponseEntity<?> notFound(NoResourceFoundException e, HttpServletRequest request) {
-        if (index != null && isPage(request)) {
+        if (index.length > 0 && isPage(request)) {
             return ResponseEntity.ok()
                     .contentType(MediaType.TEXT_HTML)
                     .cacheControl(CacheControl.noStore())
@@ -54,7 +55,7 @@ class SpaFallback {
 
     private static byte[] load() {
         try (InputStream in = SpaFallback.class.getClassLoader().getResourceAsStream(INDEX)) {
-            return in == null ? null : in.readAllBytes();
+            return in == null ? new byte[0] : in.readAllBytes();
         } catch (IOException e) {
             throw new IllegalStateException("cannot read " + INDEX, e);
         }

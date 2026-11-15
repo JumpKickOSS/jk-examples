@@ -29,7 +29,11 @@ public class ArticleController {
     @GetMapping
     public List<Summary> index() {
         return articles.findAllByOrderByPublishedDesc().stream()
-                .map(a -> new Summary(a.getSlug(), a.getTitle(), a.getPublished(), a.getComments().size()))
+                .map(a -> new Summary(
+                        a.getSlug(),
+                        a.getTitle(),
+                        a.getPublished(),
+                        a.getComments().size()))
                 .toList();
     }
 
@@ -41,6 +45,8 @@ public class ArticleController {
                 a.getTitle(),
                 a.getPublished(),
                 a.getBody(),
-                a.getComments().stream().map(c -> c.getAuthor() + ": " + c.getText()).toList());
+                a.getComments().stream()
+                        .map(c -> c.getAuthor() + ": " + c.getText())
+                        .toList());
     }
 }

@@ -12,16 +12,19 @@ class SlotTest {
 
     @Test
     void overlapping_talks_in_one_room_clash() {
-        assertThat(new Slot("Harbour", NINE, 60).clashesWith(new Slot("harbour", NINE.plusMinutes(30), 30))).isTrue();
+        assertThat(new Slot("Harbour", NINE, 60).clashesWith(new Slot("harbour", NINE.plusMinutes(30), 30)))
+                .isTrue();
     }
 
     @Test
     void back_to_back_talks_do_not_clash() {
-        assertThat(new Slot("Harbour", NINE, 45).clashesWith(new Slot("Harbour", NINE.plusMinutes(45), 30))).isFalse();
+        assertThat(new Slot("Harbour", NINE, 45).clashesWith(new Slot("Harbour", NINE.plusMinutes(45), 30)))
+                .isFalse();
     }
 
     @Test
     void the_same_time_in_another_room_does_not_clash() {
-        assertThat(new Slot("Harbour", NINE, 45).clashesWith(new Slot("Vine", NINE, 45))).isFalse();
+        assertThat(new Slot("Harbour", NINE, 45).clashesWith(new Slot("Vine", NINE, 45)))
+                .isFalse();
     }
 }

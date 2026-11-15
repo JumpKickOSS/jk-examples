@@ -9,7 +9,8 @@ class GreetingControllerTest {
 
     @Test
     void greets_by_name() {
-        var body = Objects.requireNonNull(new GreetingController().getGreeting("Ada").getBody());
+        var body = Objects.requireNonNull(
+                new GreetingController().getGreeting("Ada").getBody());
         assertThat(body.getMessage()).isEqualTo("Hello, Ada!");
     }
 }

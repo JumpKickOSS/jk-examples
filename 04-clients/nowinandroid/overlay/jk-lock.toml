@@ -1,10 +1,10 @@
 version = 1
-generated-by = "jk 0.40.0"
-generated-by-build = "ceb41198cbc4"
-generated-by-build-time = "2026-10-24T23:26:50Z"
+generated-by = "jk 0.51.1"
+generated-by-build = "b99b298c75ee"
+generated-by-build-time = "2026-11-15T21:30:46Z"
 resolution-algorithm = "pubgrub-v1"
 kotlin = "2.4.20"
-jk-min = "0.12.0"
+jk-min = "0.51.0"
 manifests-sha256 = "be9c63ebf260b93ea0172f8ba38ae3f57a8fa0f1f68f7bec42b0d757501136fd"
 project-id = "2d22aa92728d217c54eba54e6bc7ebdf"
 
@@ -7390,9 +7390,9 @@ deps = [
 
 [[artifact]]
 name     = "org.junit.platform:junit-platform-launcher:jar:"
-version  = "6.1.1"
+version  = "6.1.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:a5e12b743cf960df7be5c5a93428b0d9e2df76ca9282762f5ddc47c0d7170050"
+checksum = "sha256:1dec64b1fc0b7c47a11302aa5b4d37d8160c041b396e27067709ce775601a7b6"
 scopes   = ["test"]
 licenses = ["EPL-2.0"]
 deps = [
