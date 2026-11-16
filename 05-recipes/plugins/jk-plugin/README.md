@@ -6,9 +6,9 @@ it: it pins the plugin jar by SHA-256, configures it with a `[hello]` table, and
 the plugin's build step wrote.
 
 ```sh
-(cd hello-plugin && jk build)                 # target/hello-plugin-0.1.0.jar is the plugin
+(cd hello-plugin && jk build)                 # target/hello-plugin-0.1.0-SNAPSHOT.jar is the plugin
 cd consumer
-jk trust plugin sha256:9da3d922464f60cb041c644c7226b6a8d26a16e84507e67bdaf2138300fcb7c1
+jk trust plugin sha256:79adc6f6136d11f0f32794dfc22edc0ea8ea96d2e187d6c44f52ed3cb631e52b
 jk build && jk run                            # Hello from a jk plugin
 ```
 
@@ -28,7 +28,7 @@ its code. The step is cached like any of jk's own: same `[hello]` config, same o
 
 ```toml
 [plugins]
-hello = { path = "../hello-plugin/target/hello-plugin-0.1.0.jar", sha256 = "…" }
+hello = { path = "../hello-plugin/target/hello-plugin-0.1.0-SNAPSHOT.jar", sha256 = "…" }
 
 [hello]
 greeting = "Hello from a jk plugin"

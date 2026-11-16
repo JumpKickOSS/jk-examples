@@ -2208,11 +2208,11 @@ deps = [
 
 [[plugin]]
 coordinate = "cc.jumpkick.guards:monorepo"
-version    = "0.50.2"
+version    = "0.51.1"
 
 [[plugin]]
 coordinate = "cc.jumpkick.guards:spring"
-version    = "0.50.2"
+version    = "0.51.1"
 
 [[tool]]
 coordinate = "com.h2database:h2"

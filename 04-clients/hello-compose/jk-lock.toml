@@ -2327,7 +2327,7 @@ licenses = ["Apache-2.0"]
 
 [[plugin]]
 coordinate = "cc.jumpkick.guards:android"
-version    = "0.50.2"
+version    = "0.51.1"
 
 [[plugin]]
 coordinate = "cc.jumpkick:jk-android"

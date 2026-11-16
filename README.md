@@ -198,7 +198,8 @@ dev-checks = ["/api/hello=hello"]    # fetched through the first front door
 ```sh
 scripts/scenarios.py list --cadence nightly --have docker   # what a nightly with Docker runs
 scripts/scenarios.py check 01-start/java-workspace          # run one scenario's checks
-scripts/scenarios.py lint                                   # every scenario has a manifest, a README row and AGENTS.md
+scripts/scenarios.py lint                                   # every scenario has a manifest, a README row and AGENTS.md, and
+                                                            # JumpKick's own pins (guard packs, jk-plugin-sdk) match the jk that wrote the locks
 ```
 
 jk's nightly examples job runs `list` and `check` from a clean checkout, so a new scenario needs

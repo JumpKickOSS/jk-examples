@@ -10,7 +10,7 @@ java    = 25
 main = "dev.jkexamples.greeter.Greeter"
 
 [plugins]
-hello = { path = "../hello-plugin/target/hello-plugin-0.1.0.jar", sha256 = "9da3d922464f60cb041c644c7226b6a8d26a16e84507e67bdaf2138300fcb7c1" }
+hello = { path = "../hello-plugin/target/hello-plugin-0.1.0-SNAPSHOT.jar", sha256 = "79adc6f6136d11f0f32794dfc22edc0ea8ea96d2e187d6c44f52ed3cb631e52b" }
 
 [hello]
 greeting = "Hello from a jk plugin"

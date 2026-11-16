@@ -7419,11 +7419,11 @@ licenses = ["Apache-2.0"]
 
 [[plugin]]
 coordinate = "cc.jumpkick.guards:android"
-version    = "0.20.0"
+version    = "0.51.1"
 
 [[plugin]]
 coordinate = "cc.jumpkick.guards:monorepo"
-version    = "0.20.0"
+version    = "0.51.1"
 
 [[plugin]]
 coordinate = "org.jetbrains.kotlin:kotlin-compose-compiler-plugin-embeddable"

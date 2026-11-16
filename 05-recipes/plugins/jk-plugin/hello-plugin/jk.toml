@@ -7,7 +7,7 @@ description = "A jk plugin that owns the [hello] table"
 java = 25
 
 [dependencies]
-jk-plugin-sdk = "cc.jumpkick:jk-plugin-sdk:0.50.2"
+jk-plugin-sdk = "cc.jumpkick:jk-plugin-sdk:0.51.1"
 
 # Test tiers: `jk test` runs what no suite claims; `@Tag("integration")` tests are the built-in
 # integration suite's (`jk test -s integration`, or `jk test -g` for both), and each suite below

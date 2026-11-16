@@ -1751,7 +1751,7 @@ licenses = ["MIT"]
 
 [[plugin]]
 coordinate = "cc.jumpkick.guards:monorepo"
-version    = "0.50.2"
+version    = "0.51.1"
 
 [[module]]
 path    = "."

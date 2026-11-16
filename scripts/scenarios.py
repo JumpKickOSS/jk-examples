@@ -4,7 +4,7 @@
   scripts/scenarios.py list [--cadence C] [--have NEEDS] [--dev]   scenario dirs, one per line
   scripts/scenarios.py check DIR                                   run DIR's check commands
   scripts/scenarios.py dev-checks DIR                              DIR's `jk dev` API checks
-  scripts/scenarios.py lint                                        manifests, README and agent files agree
+  scripts/scenarios.py lint                                        manifests, README, agent files and JumpKick pins agree
 
 A manifest:
 
@@ -148,9 +148,47 @@ def cmd_lint(_args):
         for v in sorted(pinned_versions(d)):
             if re.search(r"(?<![\w.])" + re.escape(v) + r"(?![\w]|\.\d)", text):
                 problems.append(f"{rel(d)}/README.md: names {v}, a version jk.toml pins (name the dependency, not its number)")
+    problems += stale_first_party_pins()
     for p in problems:
         print(p, file=sys.stderr)
     return 1 if problems else 0
+
+
+FIRST_PARTY = re.compile(r"cc\.jumpkick(?:\.[\w-]+)*:[\w-]+:(\d[\w.+-]*)")
+
+
+def version_key(v):
+    return tuple(int(n) for n in re.findall(r"\d+", v))
+
+
+def stale_first_party_pins():
+    """JumpKick's own artifacts (a guard pack `extends`, jk-plugin-sdk, a plugin's `sdk`) pinned at
+    another release than the newest jk that wrote a lock here: the locks moved to a release and
+    these did not, and an older release's artifacts may be gone from jumpkick.build."""
+    writers = set()
+    for lock in ROOT.glob("**/jk-lock.toml"):
+        if SKIP_DIRS & set(lock.relative_to(ROOT).parts):
+            continue
+        m = re.search(r'^generated-by = "jk ([^"]+)"', lock.read_text(encoding="utf-8"), re.M)
+        if m and "SNAPSHOT" not in m[1]:
+            writers.add(m[1])
+    if not writers:
+        return []
+    want = max(writers, key=version_key)
+    problems = []
+    for pattern in ("**/jk.toml", "**/jk-guards.toml", "**/jk-plugin.toml"):
+        for f in sorted(ROOT.glob(pattern)):
+            parts = set(f.relative_to(ROOT).parts)
+            if SKIP_DIRS & parts or "bench" in parts:
+                continue
+            for n, line in enumerate(f.read_text(encoding="utf-8").splitlines(), 1):
+                found = FIRST_PARTY.findall(line)
+                if f.name == "jk-plugin.toml":
+                    found += re.findall(r'^sdk\s*=\s*"([^"]+)"', line)
+                for v in found:
+                    if v != want:
+                        problems.append(f"{rel(f.parent)}/{f.name}:{n}: pins JumpKick's {v}; the locks are written by jk {want} (move it with them)")
+    return problems
 
 
 def main():

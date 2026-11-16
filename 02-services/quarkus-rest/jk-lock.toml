@@ -3869,7 +3869,7 @@ deps = [
 
 [[plugin]]
 coordinate = "cc.jumpkick.guards:quarkus"
-version    = "0.50.2"
+version    = "0.51.1"
 
 [[plugin]]
 coordinate = "cc.jumpkick:jk-quarkus"

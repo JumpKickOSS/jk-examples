@@ -3,7 +3,7 @@
 # tables below are this application's own architecture. `jk guard explain <id>` says what each
 # one protects and what to do instead.
 [guards]
-extends = ["cc.jumpkick.guards:spring:0.50.2", "cc.jumpkick.guards:monorepo:0.50.2"]
+extends = ["cc.jumpkick.guards:spring:0.51.1", "cc.jumpkick.guards:monorepo:0.51.1"]
 
 # The module graph is the architecture: rest may reach contract and service (and the front end's
 # bundle), service may reach contract and core, and the leaves reach nothing of ours.

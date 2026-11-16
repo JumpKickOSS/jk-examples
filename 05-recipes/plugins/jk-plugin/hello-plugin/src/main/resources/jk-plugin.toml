@@ -6,8 +6,8 @@
 id        = "hello"
 table     = "hello"
 version   = "0.1.0"
-sdk       = "0.50.2"
-jk-compat = ">=0.13"
+sdk       = "0.51.1"
+jk-compat = ">=0.51.1"
 
 [schema]
 greeting = { type = "string", default = "hello", hint = "the word the plugin says" }

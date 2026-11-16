@@ -4,7 +4,7 @@ generated-by-build = "b99b298c75ee"
 generated-by-build-time = "2026-11-15T21:30:46Z"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.51.0"
-manifests-sha256 = "b4f72545721d7902b2e39bcfa9c058fa2109514a6e3a7f404c2296e31d101c14"
+manifests-sha256 = "e4c65e277eda878f3815e756f18edf98e20a57b77774a197485a5dfdd4283b3b"
 project-id = "f10b3ac96aedcb2e0760ad23f4e56589"
 
 [jdk]
@@ -13,9 +13,9 @@ suggested-version = "25.0.4.1"
 
 [[artifact]]
 name     = "cc.jumpkick:jk-plugin-sdk:jar:"
-version  = "0.50.2"
+version  = "0.51.1"
 source   = "jumpkick+https://jumpkick.build/repo/"
-checksum = "sha256:372e950bf8ead70e41abf1ebea4c1e3ac081686406dece37facf0728333b237d"
+checksum = "sha256:306de3e09c17298e2ca11abc4ab2d319fdfc07820374f7373c2348c8abd28495"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 

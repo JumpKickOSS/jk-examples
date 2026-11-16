@@ -4,7 +4,7 @@ generated-by-build = "b99b298c75ee"
 generated-by-build-time = "2026-11-15T21:30:46Z"
 resolution-algorithm = "pubgrub-v1"
 jk-min = "0.51.0"
-manifests-sha256 = "fedb3c13eac7b5abb9dfe89fa7f773409838cada37beeeaeb22247de1fb93dd6"
+manifests-sha256 = "df64a52b9037356b01220b3254cd05d139ef887ec86f4fedaf3964e040274123"
 project-id = "cde0b3547459357263ad0356401c2689"
 
 [jdk]
@@ -17,17 +17,17 @@ suggested-version = "25.0.4.1.1"
 
 [[artifact]]
 name     = "cc.jumpkick:jk-host:jar:"
-version  = "0.50.2"
+version  = "0.51.1"
 source   = "jumpkick+https://jumpkick.build/repo/"
-checksum = "sha256:9ec792ca12373487fc8c8999bd8cad33a3dc062e8f721ed75cb12d1303b5640f"
+checksum = "sha256:405c39ccff8b4c0f7c0ae3fbf169e59239d38f7f79cad709bffe33fbc8780deb"
 pinned-by = "plugin:path:hello"
 scopes   = ["plugin"]
 
 [[artifact]]
 name     = "cc.jumpkick:jk-plugin-sdk:jar:"
-version  = "0.50.2"
+version  = "0.51.1"
 source   = "jumpkick+https://jumpkick.build/repo/"
-checksum = "sha256:372e950bf8ead70e41abf1ebea4c1e3ac081686406dece37facf0728333b237d"
+checksum = "sha256:306de3e09c17298e2ca11abc4ab2d319fdfc07820374f7373c2348c8abd28495"
 pinned-by = "plugin:path:hello"
 scopes   = ["plugin"]
 
@@ -411,7 +411,7 @@ licenses = ["BSD-3-Clause"]
 [[plugin]]
 coordinate = "path:hello"
 version    = "local"
-checksum   = "sha256:9da3d922464f60cb041c644c7226b6a8d26a16e84507e67bdaf2138300fcb7c1"
+checksum   = "sha256:79adc6f6136d11f0f32794dfc22edc0ea8ea96d2e187d6c44f52ed3cb631e52b"
 
 [[module]]
 path    = "."

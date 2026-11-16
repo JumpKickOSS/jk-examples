@@ -394,7 +394,7 @@ licenses = ["BSD-3-Clause"]
 
 [[plugin]]
 coordinate = "cc.jumpkick.guards:library"
-version    = "0.50.2"
+version    = "0.51.1"
 
 [[module]]
 path    = "."

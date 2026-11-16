@@ -1418,7 +1418,7 @@ licenses = ["Public-Domain"]
 
 [[plugin]]
 coordinate = "cc.jumpkick.guards:monorepo"
-version    = "0.20.0"
+version    = "0.51.1"
 
 [[module]]
 path    = "."
