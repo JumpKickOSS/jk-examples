@@ -8,7 +8,7 @@ Minimal Micronaut service on the built-in `[micronaut]` plugin. It demonstrates:
 - A bare `[native]` — `jk native` builds a GraalVM executable at `target/hello-http` (about a
   minute and a half; `jk build` stays on the JVM). The plugin supplies Micronaut's native-image
   arguments and runs Micronaut AOT for the native runtime.
-- `[image]` with a JRE 25 base and `aot-cache = true` — `jk image` writes a shippable container.
+- `[image]` on the default base (a JRE of the project's `java`) with `aot-cache = true` — `jk image` writes a shippable container.
 - `@MicronautTest` with `@Client("/")` as the smoke test, in the default suite: the one
   `jk test` runs, beside the `integration` suite and the `[test.suites.<tag>]` tiers.
 - The house guard baseline (there is no Micronaut guard pack yet).

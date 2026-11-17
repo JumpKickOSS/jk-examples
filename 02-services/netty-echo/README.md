@@ -8,7 +8,7 @@ It demonstrates:
 - a declarative `jk.toml` with `[application] main`
 - Netty 4.2's event-loop idiom (`MultiThreadIoEventLoopGroup` over `NioIoHandler.newFactory()`)
 - an `EmbeddedChannel` unit test of the echo handler, no socket needed
-- `[image]` with a JRE 25 base and an AOT cache (`jk image`)
+- `[image]` on the default base (a JRE of the project's `java`) with an AOT cache (`jk image`)
 - the test tiers (the built-in `integration` suite plus one `[test.suites.<tag>]` per other cost tag) and the house guard baseline
 
 ```sh
@@ -16,7 +16,7 @@ jk build          # compiles, runs the unit tier, packages target/netty-echo-0.1
 jk test
 jk guard
 jk run            # listens on 8080; `nc localhost 8080` echoes what you type
-jk image          # OCI image on the JRE 25 base
+jk image          # OCI image on the default JRE base
 ```
 
 Bench, from the `jk` repo: `./scripts/netty-echo-bench.sh /path/to/jk-examples/02-services/netty-echo`.

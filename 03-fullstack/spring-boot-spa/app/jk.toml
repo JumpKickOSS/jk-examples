@@ -11,8 +11,9 @@ version = "4.1.2"
 # version the build came from.
 [build-info]
 
+# `jk image`: the default base, a JRE of this project's `java`, and a JEP 514 AOT cache trained
+# with the image's own JVM.
 [image]
-base      = "docker.io/bellsoft/liberica-runtime-container:jre-25-slim-glibc"
 aot-cache = true
 
 [dependencies]

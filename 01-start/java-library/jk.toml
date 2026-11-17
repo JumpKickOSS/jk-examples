@@ -19,9 +19,11 @@ name = "jk-examples money"
 url = "https://github.com/JumpKickOSS/jk-examples/tree/main/01-start/java-library"
 licenses = [{ name = "Apache-2.0", url = "https://www.apache.org/licenses/LICENSE-2.0" }]
 developers = [{ id = "jumpkick", name = "JumpKick examples" }]
-scm = { url = "https://github.com/JumpKickOSS/jk-examples",
-        connection = "scm:git:https://github.com/JumpKickOSS/jk-examples.git",
-        developer-connection = "scm:git:ssh://git@github.com/JumpKickOSS/jk-examples.git" }
+
+[publish.scm]
+url                  = "https://github.com/JumpKickOSS/jk-examples"
+connection           = "scm:git:https://github.com/JumpKickOSS/jk-examples.git"
+developer-connection = "scm:git:ssh://git@github.com/JumpKickOSS/jk-examples.git"
 
 # `git.properties` in the jar: the commit, branch and dirty flag the library was built from.
 [build-info]

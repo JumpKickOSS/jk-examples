@@ -15,7 +15,7 @@ One module, every knob the `[spring-boot]` plugin has, plus the core `[build-inf
 - `[runtime-dependencies] h2` — runtime only.
 - The CycloneDX SBOM jk writes into every jar (`META-INF/sbom/application.cdx.json`) is what the
   actuator's `sbom` endpoint serves: `curl -s localhost:8080/actuator/sbom/application`.
-- `[image]` with a JRE 25 base and `aot-cache = true`; Boot jars are unpacked into the CDS/AOT
+- `[image]` on the default base (a JRE of the project's `java`) with `aot-cache = true`; Boot jars are unpacked into the CDS/AOT
   layout before training.
 - The `cc.jumpkick.guards:spring` pack in `jk-guards.toml`.
 

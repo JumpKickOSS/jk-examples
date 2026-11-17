@@ -11,7 +11,7 @@ java    = 25
 main = "dev.jkexamples.talks.Application"
 
 [quarkus]
-version = "3.40.1.1"
+version = "3.40.1.2"
 
 [dependencies]
 quarkus-rest-jackson          = { group = "io.quarkus", name = "quarkus-rest-jackson" }
@@ -32,9 +32,10 @@ assertj-core   = "3.27.7"
 [native]
 enabled = true
 
+# `jk image`: the default base, a JRE of this project's `java`. Quarkus's fast-jar starts quickly
+# on its own; `jk native` is its startup path.
 [image]
-base      = "docker.io/bellsoft/liberica-runtime-container:jre-25-slim-glibc"
-aot-cache = false   # Quarkus's fast-jar starts quickly; `jk native` is its startup path
+aot-cache = false
 
 # Test tiers: `jk test` runs what no suite claims; `@Tag("integration")` tests are the built-in
 # integration suite's (`jk test -s integration`, or `jk test -g` for both), and each suite below

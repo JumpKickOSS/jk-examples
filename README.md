@@ -147,7 +147,7 @@ new scenario goes in the first directory whose description fits it.
   ratchet. `jk guard` is clean everywhere; where a scenario has tests, the built-in
   `integration` suite and one `[test.suites.<tag>]` per other cost tag give every tagged test
   exactly one tier (`jk test -s <tag>`).
-- **`[image]`** with a JRE 25 base and `aot-cache = true` on every runnable service.
+- **`[image]`** on the default base (a JRE of the project's `java`) with `aot-cache = true` on every runnable service.
 - **Agent files at every scenario root**, written by `jk agents`: `AGENTS.md` with jk's section
   between `<!-- BEGIN:jumpkick -->` and `<!-- END:jumpkick -->`, `CLAUDE.md` importing it, and
   `.mcp.json` plus `.claude/settings.json` registering `jk mcp` and jk's hook. jk owns the section

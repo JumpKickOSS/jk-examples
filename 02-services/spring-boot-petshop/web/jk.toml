@@ -9,9 +9,9 @@ version = "4.1.2"
 # `git.properties` and `META-INF/build-info.properties` in the Boot jar, for the actuator's /info.
 [build-info]
 
-# A shippable container: a JRE 25 base and a JEP 514 AOT cache trained with the image's own JVM.
+# `jk image`: the default base, a JRE of this project's `java`, and a JEP 514 AOT cache trained
+# with the image's own JVM.
 [image]
-base      = "docker.io/bellsoft/liberica-runtime-container:jre-25-slim-glibc"
 aot-cache = true
 
 [dependencies]

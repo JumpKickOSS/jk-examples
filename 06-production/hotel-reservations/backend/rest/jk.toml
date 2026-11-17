@@ -15,11 +15,10 @@ aot     = true
 # `git.properties` and `META-INF/build-info.properties` in the Boot jar, for /actuator/info.
 [build-info]
 
-# The production image: a JRE 25 base, a non-root user, and a JEP 514 AOT cache trained by a run of
-# the app inside the image's own JVM.
+# The production image: the default base (a JRE of the project's `java`), a non-root user, and a
+# JEP 514 AOT cache trained by a run of the app inside the image's own JVM.
 [image]
 name      = "kestrel-vine-hotels"
-base      = "docker.io/bellsoft/liberica-runtime-container:jre-25-slim-glibc"
 user      = "65532:65532"
 ports     = [8080]
 aot-cache = true
