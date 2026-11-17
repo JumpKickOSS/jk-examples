@@ -142,9 +142,12 @@ new scenario goes in the first directory whose description fits it.
   plugins follow the jk that builds, so a newer jk rewrites their version. Commit a lock a
   released jk wrote, so those rows name a published release. For the two overlay scenarios the
   lock lives under `overlay/` and `setup.sh` copies it into the checkout.
-- **`jk-guards.toml` in every scenario**: the framework pack where one exists (`spring`,
-  `android`; `monorepo` beside it for workspaces), otherwise a house baseline with one file-size
-  ratchet. `jk guard` is clean everywhere; where a scenario has tests, the built-in
+- **`jk-guards.toml` in every scenario**, with the packs `jk new` writes for that kind of project:
+  the framework pack where one exists (`spring`, `quarkus`, `android`; `monorepo` beside it for
+  workspaces), the `library` pack for a plain app, CLI, library or plugin (explicit locales and
+  charsets, `@NullMarked` packages, released and converged dependencies, a file-size ratchet), and
+  a house baseline where the template ships no pack (a native CLI, a Kotlin CLI, Ktor, Micronaut,
+  Grails, a front end). `jk guard` is clean everywhere; where a scenario has tests, the built-in
   `integration` suite and one `[test.suites.<tag>]` per other cost tag give every tagged test
   exactly one tier (`jk test -s <tag>`).
 - **`[image]`** on the default base (a JRE of the project's `java`) with `aot-cache = true` on every runnable service.

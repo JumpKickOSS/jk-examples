@@ -1,4 +1,8 @@
-# House rules: the supply-chain rules beside the usual size ratchet. They run inside `jk build`.
+# House rules: the starter pack `jk new` ships with (`library`: explicit locales and charsets,
+# @NullMarked packages, released and converged dependencies, a file-size ratchet), and the
+# supply-chain rules beside it. They run inside `jk build`; `jk lock` pins the pack.
+[guards]
+extends = ["cc.jumpkick.guards:library:0.52.0"]
 
 [guards.no-floating-versions]
 kind        = "depend"
@@ -18,10 +22,3 @@ kind     = "depend"
 licenses = { forbid = ["GPL-*", "AGPL-*", "LGPL-*"] }
 scopes   = ["main", "runtime"]
 why      = "a copyleft licence on a shipped dependency is a legal review, not a build"
-
-[guards.file-size]
-kind     = "metric"
-measure  = "lines"
-cap      = 400
-baseline = true
-why      = "a file that no longer fits a review no longer fits a reviewer"

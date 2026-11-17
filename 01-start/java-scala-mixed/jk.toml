@@ -11,6 +11,12 @@ scala   = "3.10.0"
 [application]
 main = "com.example.mixed.Main"
 
+# The library pack asks a package with a Java class in it to be @NullMarked (package-info.java).
+# JSpecify alone, not [nullness]: Error Prone and NullAway would sit in javacOptions, which the BSP
+# transcript in the README records as jk's Zinc session passes them.
+[dependencies]
+jspecify = "1.0.1"
+
 [test-dependencies]
 junit-jupiter = "6.1.3"
 

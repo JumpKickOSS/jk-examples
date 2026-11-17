@@ -29,6 +29,9 @@ jk guard
 - A Groovy module is `groovy = "<version>"` plus sources; there is no Groovy plugin to apply.
 - Joint compilation in both directions, with no source-set ceremony.
 - Spock's `spock-core` variant matches the Groovy line (a `-groovy-6.0` suffix for Groovy 6).
+- The `library` guard pack `jk new` writes, and `[nullness]`, which the Groovy template leaves out
+  (nullness is Java's alone): the module's Java half is `@NullMarked` (`package-info.java`), as the
+  pack asks of any package holding a Java class, and NullAway checks it in the joint compile.
 
 ## Validates
 

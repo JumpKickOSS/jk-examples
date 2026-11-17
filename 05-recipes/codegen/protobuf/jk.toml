@@ -20,6 +20,10 @@ kotlin  = true
 
 [dependencies]
 protobuf-kotlin-lite = "4.36.2"
+# The library pack's null-marked-packages rule reads the Java classes protoc writes, and resolves
+# @NullMarked to judge them even where jk-guards.toml exempts their package; a Kotlin project carries
+# no JSpecify of its own.
+jspecify = "1.0.1"
 
 # Test tiers: `jk test` runs what no suite claims; `@Tag("integration")` tests are the built-in
 # integration suite's (`jk test -s integration`, or `jk test -g` for both), and each suite below

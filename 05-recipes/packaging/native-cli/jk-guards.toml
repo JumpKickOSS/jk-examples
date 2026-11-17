@@ -1,12 +1,9 @@
-# House rules. No framework pack fits a plain project, so this is a small baseline of its own:
-# `jk guard explain` lists it, and a ban proves it bites against guard-fixtures/<id>.
-[guards.file-size]
-kind     = "metric"
-measure  = "lines"
-cap      = 800
-baseline = true
-why      = "a file that no longer fits a review no longer fits a reviewer"
+# House rules, from the starter pack this template ships with; `jk lock` pins it, `jk guard explain`
+# lists its rules. Add your own [guards.<id>] tables below; exempt a site with `allow` and a reason.
+[guards]
+extends = ["cc.jumpkick.guards:library:0.52.0"]
 
+# A ban of the project's own, proven against guard-fixtures/<id>.
 [guards.no-soft-reference]
 kind       = "forbid"
 signatures = ["java.lang.ref.SoftReference"]
