@@ -1,10 +1,10 @@
 version = 1
-generated-by = "jk 0.51.1"
-generated-by-build = "b99b298c75ee"
-generated-by-build-time = "2026-11-15T21:30:46Z"
+generated-by = "jk 0.52.0"
+generated-by-build = "d7eb88904002"
+generated-by-build-time = "2026-11-17T06:00:13Z"
 resolution-algorithm = "pubgrub-v1"
-jk-min = "0.51.0"
-manifests-sha256 = "e4c65e277eda878f3815e756f18edf98e20a57b77774a197485a5dfdd4283b3b"
+jk-min = "0.51.1"
+manifests-sha256 = "0644f79328f30c8fbdc30917bfaea5e02d2d32a9df32150b6fd3ec8cf838c05e"
 project-id = "f10b3ac96aedcb2e0760ad23f4e56589"
 
 [jdk]
@@ -13,7 +13,7 @@ suggested-version = "25.0.4.1"
 
 [[artifact]]
 name     = "cc.jumpkick:jk-plugin-sdk:jar:"
-version  = "0.51.1"
+version  = "0.52.0"
 source   = "jumpkick+https://jumpkick.build/repo/"
 checksum = "sha256:306de3e09c17298e2ca11abc4ab2d319fdfc07820374f7373c2348c8abd28495"
 scopes   = ["main"]
@@ -395,6 +395,12 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:388c5a91ad8648f96d55a6b0e7068d40b38c4fb9e19139026fc2c0168f54dd95"
 scopes   = ["processor"]
 licenses = ["BSD-3-Clause"]
+
+[[plugin]]
+coordinate = "cc.jumpkick.guards:library"
+version    = "0.52.0"
+source     = "jumpkick+https://jumpkick.build/repo/"
+checksum   = "sha256:c1347a67185d82deac30857550f42ef93c4722aba8ac3f9e1f86c888e0773ebe"
 
 [[module]]
 path    = "."

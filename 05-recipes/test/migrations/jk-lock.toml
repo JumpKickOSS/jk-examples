@@ -1,9 +1,9 @@
 version = 1
-generated-by = "jk 0.51.1"
-generated-by-build = "b99b298c75ee"
-generated-by-build-time = "2026-11-15T21:30:46Z"
+generated-by = "jk 0.52.0"
+generated-by-build = "d7eb88904002"
+generated-by-build-time = "2026-11-17T06:00:13Z"
 resolution-algorithm = "pubgrub-v1"
-jk-min = "0.51.0"
+jk-min = "0.51.1"
 manifests-sha256 = "1b5781aa29270c472c17596f8198b30db83fb54cf4de0cb19aa28a73077e2030"
 project-id = "16c8490ded88094175fac325cc2f89af"
 
@@ -688,6 +688,12 @@ source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:c8f7a98e7394adda02f6317249710e4d1b4c7a25aa8c7eace0c2eea52eb8bf85"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
+
+[[plugin]]
+coordinate = "cc.jumpkick.guards:library"
+version    = "0.52.0"
+source     = "jumpkick+https://jumpkick.build/repo/"
+checksum   = "sha256:c1347a67185d82deac30857550f42ef93c4722aba8ac3f9e1f86c888e0773ebe"
 
 [[module]]
 path    = "."

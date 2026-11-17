@@ -1,10 +1,10 @@
 version = 1
-generated-by = "jk 0.51.1"
-generated-by-build = "b99b298c75ee"
-generated-by-build-time = "2026-11-15T21:30:46Z"
+generated-by = "jk 0.52.0"
+generated-by-build = "d7eb88904002"
+generated-by-build-time = "2026-11-17T06:00:13Z"
 resolution-algorithm = "pubgrub-v1"
-jk-min = "0.51.0"
-manifests-sha256 = "0594ce33cb5b6d6bdae898a13afb96cf13464b6a03b1a6fbfdc4b9cd0afe700a"
+jk-min = "0.51.1"
+manifests-sha256 = "19f21a0f6a4cd0138c8c28aead71f763d0c7080395424ee4bf2bcdef3cbd0699"
 project-id = "43149be240c0b7126905464ab3062d11"
 
 [jdk]
@@ -394,7 +394,9 @@ licenses = ["BSD-3-Clause"]
 
 [[plugin]]
 coordinate = "cc.jumpkick.guards:library"
-version    = "0.51.1"
+version    = "0.52.0"
+source     = "jumpkick+https://jumpkick.build/repo/"
+checksum   = "sha256:c1347a67185d82deac30857550f42ef93c4722aba8ac3f9e1f86c888e0773ebe"
 
 [[module]]
 path    = "."

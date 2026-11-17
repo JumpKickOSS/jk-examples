@@ -1,10 +1,10 @@
 version = 1
-generated-by = "jk 0.51.1"
-generated-by-build = "b99b298c75ee"
-generated-by-build-time = "2026-11-15T21:30:46Z"
+generated-by = "jk 0.52.0"
+generated-by-build = "d7eb88904002"
+generated-by-build-time = "2026-11-17T06:00:13Z"
 resolution-algorithm = "pubgrub-v1"
-jk-min = "0.51.0"
-manifests-sha256 = "030e3c754faf5b7aeaea7eb7c302eca3e8b41f738fca9175d0da624013be30ee"
+jk-min = "0.51.1"
+manifests-sha256 = "5fff6dd4b6783aa03768dd56976d8200fcbfd7a53a24bdda446d9b20175dc17c"
 project-id = "00b92b95721309f7df485b4b6f770eb0"
 
 [jdk]
@@ -1374,11 +1374,15 @@ deps = [
 
 [[plugin]]
 coordinate = "cc.jumpkick.guards:monorepo"
-version    = "0.51.1"
+version    = "0.52.0"
+source     = "jumpkick+https://jumpkick.build/repo/"
+checksum   = "sha256:bbfeca626612594a4699047c87143dc902e5e2912b4bdd637b487642b3e607d2"
 
 [[plugin]]
 coordinate = "cc.jumpkick.guards:spring"
-version    = "0.51.1"
+version    = "0.52.0"
+source     = "jumpkick+https://jumpkick.build/repo/"
+checksum   = "sha256:d44d48187a38fcca54f5a2877908702e4ff6307bd614fac4e7ab079efbc16274"
 
 [[tool]]
 coordinate = "org.springframework.boot:spring-boot-jarmode-tools"

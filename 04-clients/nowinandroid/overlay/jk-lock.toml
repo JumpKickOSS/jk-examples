@@ -1,10 +1,10 @@
 version = 1
-generated-by = "jk 0.51.1"
-generated-by-build = "b99b298c75ee"
-generated-by-build-time = "2026-11-15T21:30:46Z"
+generated-by = "jk 0.52.0"
+generated-by-build = "d7eb88904002"
+generated-by-build-time = "2026-11-17T06:00:13Z"
 resolution-algorithm = "pubgrub-v1"
 kotlin = "2.4.20"
-jk-min = "0.51.0"
+jk-min = "0.51.1"
 manifests-sha256 = "be9c63ebf260b93ea0172f8ba38ae3f57a8fa0f1f68f7bec42b0d757501136fd"
 project-id = "2d22aa92728d217c54eba54e6bc7ebdf"
 
@@ -7419,20 +7419,26 @@ licenses = ["Apache-2.0"]
 
 [[plugin]]
 coordinate = "cc.jumpkick.guards:android"
-version    = "0.51.1"
+version    = "0.52.0"
+source     = "jumpkick+https://jumpkick.build/repo/"
+checksum   = "sha256:051f501cbbad92309ab33ed121b92bab61546161d6efec787267bbcb42964451"
 
 [[plugin]]
 coordinate = "cc.jumpkick.guards:monorepo"
-version    = "0.51.1"
+version    = "0.52.0"
+source     = "jumpkick+https://jumpkick.build/repo/"
+checksum   = "sha256:bbfeca626612594a4699047c87143dc902e5e2912b4bdd637b487642b3e607d2"
 
 [[plugin]]
 coordinate = "org.jetbrains.kotlin:kotlin-compose-compiler-plugin-embeddable"
 version    = "2.4.20"
+source     = "central+https://repo.maven.apache.org/maven2/"
 checksum   = "sha256:e6fc101fd0b8592911de57f96a75b09e0b6158eaccbc71ddd6ca82e05e0386a2"
 
 [[plugin]]
 coordinate = "org.jetbrains.kotlin:kotlin-serialization-compiler-plugin-embeddable"
 version    = "2.4.20"
+source     = "central+https://repo.maven.apache.org/maven2/"
 checksum   = "sha256:2221ec78c4f8d7367df9a9bd4310c916c5ef70150fb49eeacf238f074f368b52"
 
 [[tool]]

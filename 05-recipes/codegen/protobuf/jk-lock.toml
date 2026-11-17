@@ -1,11 +1,11 @@
 version = 1
-generated-by = "jk 0.51.1"
-generated-by-build = "b99b298c75ee"
-generated-by-build-time = "2026-11-15T21:30:46Z"
+generated-by = "jk 0.52.0"
+generated-by-build = "d7eb88904002"
+generated-by-build-time = "2026-11-17T06:00:13Z"
 resolution-algorithm = "pubgrub-v1"
 kotlin = "2.4.21"
-jk-min = "0.51.0"
-manifests-sha256 = "b8b203ab0f44d4a13909c56cfa19a5b21e9251023f4e564b23fa93634f501d2c"
+jk-min = "0.51.1"
+manifests-sha256 = "b05d13f05d5299b4bfd62281064ec4a527706eff68bfe63345d2ebf6c46a6ce2"
 project-id = "11aa43510a295288b58ccb5a453cf85e"
 
 [jdk]
@@ -64,7 +64,7 @@ name     = "org.jspecify:jspecify:jar:"
 version  = "1.0.1"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:070d75f261fe4c5b8202508366715f7f2d4660f88c8ef7e6d3575e48c9683b66"
-scopes   = ["test"]
+scopes   = ["main", "test"]
 licenses = ["Apache-2.0"]
 
 [[artifact]]
@@ -169,8 +169,14 @@ scopes   = ["test"]
 licenses = ["Apache-2.0"]
 
 [[plugin]]
+coordinate = "cc.jumpkick.guards:library"
+version    = "0.52.0"
+source     = "jumpkick+https://jumpkick.build/repo/"
+checksum   = "sha256:c1347a67185d82deac30857550f42ef93c4722aba8ac3f9e1f86c888e0773ebe"
+
+[[plugin]]
 coordinate = "cc.jumpkick:jk-protobuf"
-version    = "0.51.1"
+version    = "0.52.0"
 
 [[tool]]
 coordinate = "com.google.protobuf:protoc"

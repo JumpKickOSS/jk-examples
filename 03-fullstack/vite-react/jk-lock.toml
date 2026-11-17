@@ -1,10 +1,10 @@
 version = 1
-generated-by = "jk 0.51.1"
-generated-by-build = "b99b298c75ee"
-generated-by-build-time = "2026-11-15T21:30:46Z"
+generated-by = "jk 0.52.0"
+generated-by-build = "d7eb88904002"
+generated-by-build-time = "2026-11-17T06:00:13Z"
 resolution-algorithm = "pubgrub-v1"
-jk-min = "0.51.0"
-manifests-sha256 = "73b5389eec5cfd9114b4fe141e8aa732d06b915f9e6b60f096b0c924060c4b2f"
+jk-min = "0.51.1"
+manifests-sha256 = "e819bc5b5897b60e47fe9f7a39d763aa6a9be36003482ae1bc9c7212c787f651"
 project-id = "46063e539695674a000f0e7f55e1d526"
 
 [jdk]
@@ -12,14 +12,14 @@ suggested-vendor = "temurin"
 suggested-version = "25.0.2"
 
 [node]
-version = "24.22.2"
+version = "24.22.3"
 npm = "11.19.1"
-sha256.darwin-arm64 = "aa9549349e47dffaa42dcf95d6e06ade8c4bdafc980979883b88767670df385a"
-sha256.darwin-x64 = "d5e336d588c45be0c37dbd52cc29895593009ca4997a77a1fd02815131ed0e52"
-sha256.linux-arm64 = "95c264150aceb7f3437a29fd6984924f5f8d1511ea3cbd6c508b83f6c555dae2"
-sha256.linux-x64 = "361718c444e49af2ca5a110c83ba6a8901143f23ab285ebbef0341f391f482a9"
-sha256.win-arm64 = "f47968c213105077f64c6510f007632c0ca2574802a0b5067c327c49abe1c468"
-sha256.win-x64 = "ca1bff5d8ead13c9f2ea404a176db46bd430704d5b5113734049fa365e7799e2"
+sha256.darwin-arm64 = "ff6e17d4874b76d272212b908cc020d6e815fba5a6c7eaaa06add725840307fd"
+sha256.darwin-x64 = "977614af0504c81045e7fd85596dbca0e5f951b96681516dadafedcca8c447f7"
+sha256.linux-arm64 = "261af2af250dfd7e9f25cf151d1b2713a0adf8f10a9ad116c4947f68627affe8"
+sha256.linux-x64 = "061ec3e3062115705b56b51fa9cc330ab50d34b6969387d4e4b1a50c6809acc2"
+sha256.win-arm64 = "b3cc74a295b39d4f273271e96f58c06dd2b35757ca12abec64c7d0598b434f14"
+sha256.win-x64 = "e612af99f626ab415ea225af6bce5c971feb448cb5cae250bb1c3fa50c5f7d9f"
 
 [[artifact]]
 name     = "ch.qos.logback:logback-classic:jar:"
@@ -665,6 +665,19 @@ name     = "org.junit.platform:junit-platform-commons:jar:"
 version  = "6.0.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:39f262d09c3d52719fe0b77f080e90a3695e285d779a41b232e17963ae5da200"
+scopes   = ["test"]
+licenses = ["EPL-2.0"]
+members  = ["web"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
+]
+
+[[artifact]]
+name     = "org.junit.platform:junit-platform-commons:jar:"
+version  = "6.0.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:39f262d09c3d52719fe0b77f080e90a3695e285d779a41b232e17963ae5da200"
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.2"
 scopes   = ["test"]
 licenses = ["EPL-2.0"]
@@ -684,6 +697,21 @@ licenses = ["EPL-2.0"]
 deps = [
   "org.apiguardian:apiguardian-api:jar:@1.1.2",
   "org.jspecify:jspecify:jar:@1.0.1",
+]
+
+[[artifact]]
+name     = "org.junit.platform:junit-platform-engine:jar:"
+version  = "6.0.3"
+source   = "central+https://repo.maven.apache.org/maven2/"
+checksum = "sha256:491e9e4f745f161b8a8e4186a1a7c6a450ea12c70930c9aedae427215301d947"
+scopes   = ["test"]
+licenses = ["EPL-2.0"]
+members  = ["web"]
+deps = [
+  "org.apiguardian:apiguardian-api:jar:@1.1.2",
+  "org.jspecify:jspecify:jar:@1.0.0",
+  "org.junit.platform:junit-platform-commons:jar:@6.0.3",
+  "org.opentest4j:opentest4j:jar:@1.3.0",
 ]
 
 [[artifact]]
@@ -721,35 +749,7 @@ name     = "org.junit.platform:junit-platform-launcher:jar:"
 version  = "6.0.3"
 source   = "central+https://repo.maven.apache.org/maven2/"
 checksum = "sha256:315608372e4dc44bca0ccb3ae8a07ecc206b3367033fa05748a03ccd563f1301"
-scopes   = ["test"]
-licenses = ["EPL-2.0"]
-members  = ["web"]
-deps = [
-  "org.apiguardian:apiguardian-api:jar:@1.1.2",
-  "org.jspecify:jspecify:jar:@1.0.0",
-  "org.junit.platform:junit-platform-engine:jar:@6.1.3",
-]
-
-[[artifact]]
-name     = "org.junit.platform:junit-platform-launcher:jar:"
-version  = "6.0.3"
-source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:315608372e4dc44bca0ccb3ae8a07ecc206b3367033fa05748a03ccd563f1301"
 pinned-by = "org.springframework.boot:spring-boot-dependencies:4.1.2"
-scopes   = ["test"]
-licenses = ["EPL-2.0"]
-members  = ["app"]
-deps = [
-  "org.apiguardian:apiguardian-api:jar:@1.1.2",
-  "org.jspecify:jspecify:jar:@1.0.1",
-  "org.junit.platform:junit-platform-engine:jar:@6.0.3",
-]
-
-[[artifact]]
-name     = "org.junit.platform:junit-platform-launcher:jar:"
-version  = "6.1.3"
-source   = "central+https://repo.maven.apache.org/maven2/"
-checksum = "sha256:1dec64b1fc0b7c47a11302aa5b4d37d8160c041b396e27067709ce775601a7b6"
 scopes   = ["test"]
 licenses = ["EPL-2.0"]
 deps = [
@@ -1256,11 +1256,15 @@ deps = [
 
 [[plugin]]
 coordinate = "cc.jumpkick.guards:monorepo"
-version    = "0.51.1"
+version    = "0.52.0"
+source     = "jumpkick+https://jumpkick.build/repo/"
+checksum   = "sha256:bbfeca626612594a4699047c87143dc902e5e2912b4bdd637b487642b3e607d2"
 
 [[plugin]]
 coordinate = "cc.jumpkick.guards:spring"
-version    = "0.51.1"
+version    = "0.52.0"
+source     = "jumpkick+https://jumpkick.build/repo/"
+checksum   = "sha256:d44d48187a38fcca54f5a2877908702e4ff6307bd614fac4e7ab079efbc16274"
 
 [[tool]]
 coordinate = "org.springframework.boot:spring-boot-jarmode-tools"

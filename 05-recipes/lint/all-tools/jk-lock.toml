@@ -1,10 +1,10 @@
 version = 1
-generated-by = "jk 0.51.1"
-generated-by-build = "b99b298c75ee"
-generated-by-build-time = "2026-11-15T21:30:46Z"
+generated-by = "jk 0.52.0"
+generated-by-build = "d7eb88904002"
+generated-by-build-time = "2026-11-17T06:00:13Z"
 resolution-algorithm = "pubgrub-v1"
 kotlin = "2.4.21"
-jk-min = "0.51.0"
+jk-min = "0.51.1"
 manifests-sha256 = "a01d9bddde04b1a15a8085561ded27962508d4eaada64a7a83b0854663797dc9"
 project-id = "b547999d587da2b64de6c3eadef7ff52"
 
@@ -149,8 +149,14 @@ scopes   = ["test"]
 licenses = ["Apache-2.0"]
 
 [[plugin]]
+coordinate = "cc.jumpkick.guards:library"
+version    = "0.52.0"
+source     = "jumpkick+https://jumpkick.build/repo/"
+checksum   = "sha256:c1347a67185d82deac30857550f42ef93c4722aba8ac3f9e1f86c888e0773ebe"
+
+[[plugin]]
 coordinate = "cc.jumpkick:jk-lint"
-version    = "0.51.1"
+version    = "0.52.0"
 
 [[tool]]
 coordinate = "com.github.oowekyala.ooxml:nice-xml-messages"

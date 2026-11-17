@@ -1,9 +1,9 @@
 version = 1
-generated-by = "jk 0.51.1"
-generated-by-build = "b99b298c75ee"
-generated-by-build-time = "2026-11-15T21:30:46Z"
+generated-by = "jk 0.52.0"
+generated-by-build = "d7eb88904002"
+generated-by-build-time = "2026-11-17T06:00:13Z"
 resolution-algorithm = "pubgrub-v1"
-jk-min = "0.51.0"
+jk-min = "0.51.1"
 manifests-sha256 = "ccf3854bcf13824651c362c4b3aed7a5fdcaaedb1073332ce42db8fc5cb7d883"
 project-id = "a1eb11a2abc96c90fc9834e7a8715316"
 
@@ -2487,7 +2487,7 @@ licenses = ["Apache-2.0"]
 
 [[plugin]]
 coordinate = "cc.jumpkick:jk-grails"
-version    = "0.51.1"
+version    = "0.52.0"
 
 [[tool]]
 coordinate = "org.springframework.boot:spring-boot-loader"

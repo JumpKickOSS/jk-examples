@@ -1,9 +1,9 @@
 version = 1
-generated-by = "jk 0.51.1"
-generated-by-build = "b99b298c75ee"
-generated-by-build-time = "2026-11-15T21:30:46Z"
+generated-by = "jk 0.52.0"
+generated-by-build = "d7eb88904002"
+generated-by-build-time = "2026-11-17T06:00:13Z"
 resolution-algorithm = "pubgrub-v1"
-jk-min = "0.51.0"
+jk-min = "0.51.1"
 manifests-sha256 = "943f593b9bbe103994e043f8c92c5917adcbd360e0c7d79de1da3a663b5f356c"
 project-id = "635704774cb6a1323a8feac85624f724"
 
@@ -476,8 +476,14 @@ scopes   = ["main"]
 licenses = ["MIT"]
 
 [[plugin]]
+coordinate = "cc.jumpkick.guards:library"
+version    = "0.52.0"
+source     = "jumpkick+https://jumpkick.build/repo/"
+checksum   = "sha256:c1347a67185d82deac30857550f42ef93c4722aba8ac3f9e1f86c888e0773ebe"
+
+[[plugin]]
 coordinate = "cc.jumpkick:jk-avro"
-version    = "0.51.1"
+version    = "0.52.0"
 
 [[tool]]
 coordinate = "com.fasterxml.jackson.core:jackson-annotations"

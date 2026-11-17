@@ -1,11 +1,11 @@
 version = 1
-generated-by = "jk 0.51.1"
-generated-by-build = "b99b298c75ee"
-generated-by-build-time = "2026-11-15T21:30:46Z"
+generated-by = "jk 0.52.0"
+generated-by-build = "d7eb88904002"
+generated-by-build-time = "2026-11-17T06:00:13Z"
 resolution-algorithm = "pubgrub-v1"
 kotlin = "2.4.21"
-jk-min = "0.51.0"
-manifests-sha256 = "fa9f60ff0953faf2ccc288ddda976de0fc1466ac569787b7ec108dcfc9e10d59"
+jk-min = "0.51.1"
+manifests-sha256 = "2e8e136a366024993e7c518f5294ba29d5464b446c79a94858ad9f9db478323d"
 project-id = "c2d49ac391b9f09ba94f39e1c8c70597"
 
 [jdk]
@@ -1751,7 +1751,9 @@ licenses = ["MIT"]
 
 [[plugin]]
 coordinate = "cc.jumpkick.guards:monorepo"
-version    = "0.51.1"
+version    = "0.52.0"
+source     = "jumpkick+https://jumpkick.build/repo/"
+checksum   = "sha256:bbfeca626612594a4699047c87143dc902e5e2912b4bdd637b487642b3e607d2"
 
 [[module]]
 path    = "."
