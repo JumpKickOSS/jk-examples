@@ -3,7 +3,3 @@
 [guards]
 extends = ["cc.jumpkick.guards:library:0.52.0"]
 
-# Generated code: the generator owns this package and writes no @NullMarked package-info.
-[[guards.null-marked-packages.allow]]
-in     = "com.acme.events"
-reason = "the Avro classes the codegen step writes; [nullness] excludes them, and a package-info in src would mark code the generator does not annotate"

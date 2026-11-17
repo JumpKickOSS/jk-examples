@@ -3,7 +3,3 @@
 [guards]
 extends = ["cc.jumpkick.guards:library:0.52.0"]
 
-# Generated code: the generator owns this package and writes no @NullMarked package-info.
-[[guards.null-marked-packages.allow]]
-in     = "com.acme.order"
-reason = "xjc writes this package and its package-info.java (the @XmlSchema namespace); [nullness] excludes it, and the generator does not annotate it"
