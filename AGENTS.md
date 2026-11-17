@@ -3,19 +3,17 @@
 <!-- BEGIN:jumpkick -->
 ## JumpKick
 
-This project builds with **JumpKick** (`jk`), not Maven or Gradle; `jk skill <topic>` has
-details. jk rewrites this section; put project rules outside the markers.
+This repository groups self-contained **JumpKick** (`jk`) workspaces: `[workspaces] members` in
+`jk.toml` lists them. jk rewrites this section; put repository rules outside the markers.
 
-- Loop: `jk -a test` (MCP `run(kind=test)`) → edit what the verdict names → rerun. Ignore the
-  terminal and `target/jk-results.md`.
-- Before handing work back: `jk guard` (MCP `run(kind=guard)`).
-- Who calls `T.m`, or rename it: MCP `callers` or `rename` (`jk graph callers|rename`), first,
-  with `T.m` as the task names it, before opening or searching a file. The answers are compiled
-  facts and final: do not grep or re-read to check them.
-- `jk add g:a` / `jk remove g:a` (MCP `deps`) edit `jk.toml` and relock `jk-lock.toml`.
-- Never add `pom.xml` or Gradle files, run `mvn` or `./gradlew`, or edit
-  `jk-guards-baseline.toml` (`jk guard explain <id>` says what to do).
-- `node = N` in `jk.toml` pins Node.js: `jk node exec -- <cmd>`, never a host `node` or `npm`.
+- Work inside one member (`cd <member>`): its own `AGENTS.md` and `jk.toml` apply, and it builds
+  the same with or without this root.
+- From here `jk build`, `jk test`, `jk install`, `jk guard`, `jk format`, `jk explain` and
+  `jk clean` run over every member in dependency order; `-m <member>` runs one and what it
+  depends on. A member left out by default prints why; `-p <profile>` adds it back.
+- `jk release` and `jk publish` run in the member being released; its tag is
+  `<artifact>-v<version>`.
+- Never add `pom.xml` or Gradle files, or run `mvn` or `./gradlew`.
 <!-- END:jumpkick -->
 
 ## This repository
@@ -24,8 +22,9 @@ jk-examples is about 50 self-contained JumpKick projects ("scenarios") that teac
 and serve as jk's out-of-tree acceptance suite. `README.md` lists every scenario and the
 conventions they all follow; read it before adding or reshaping one.
 
-- The root is not a jk project. Run jk inside one scenario, the directory holding
-  `scenario.toml`. Each has its own `AGENTS.md` (read it), `jk.toml`, committed `jk-lock.toml` and
+- The root `jk.toml` only groups the scenarios (`[workspaces] members`): `jk build` there builds
+  each in turn, as inside it. Work inside one scenario, the directory holding `scenario.toml`.
+  Each has its own `AGENTS.md` (read it), `jk.toml`, committed `jk-lock.toml` and
   `jk-guards.toml`. Scenarios never depend on one another.
 - A scenario's check is the `check` list in its `scenario.toml`: `scripts/scenarios.py check <dir>`
   runs it. After adding, moving or renaming a scenario, `scripts/scenarios.py lint` must pass: it

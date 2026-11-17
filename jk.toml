@@ -1,0 +1,29 @@
+# The examples as one group root: `jk build` here builds every scenario below in turn, each exactly
+# as `cd <scenario> && jk build` does (the root contributes nothing a scenario reads). A scenario
+# stays self-contained; this file only lists them.
+[workspaces]
+members = [
+  "01-start/*",
+  "02-services/*",
+  "03-fullstack/*",
+  "04-clients/hello-compose",
+  "04-clients/javafx-desktop",
+  "05-recipes/build-logic/*",
+  "05-recipes/codegen/*",
+  "05-recipes/lint/*",
+  "05-recipes/migrate/*",
+  "05-recipes/packaging/*",
+  "05-recipes/plugins/intellij-plugin",
+  "05-recipes/plugins/jk-plugin/hello-plugin",
+  "05-recipes/plugins/jk-plugin/consumer",
+  "05-recipes/supply-chain",
+  "05-recipes/test/*",
+  "06-production/*",
+]
+exclude = [
+  { path = "04-clients/hello-compose", reason = "downloads the Android SDK and needs its licence accepted (jk android licenses -y)" },
+  { path = "05-recipes/plugins/jk-plugin/consumer", reason = "loads hello-plugin's jar, which needs `jk trust plugin` and a build of hello-plugin first" },
+]
+
+[profiles.all.workspaces]
+include = ["04-clients/hello-compose", "05-recipes/plugins/jk-plugin/consumer"]

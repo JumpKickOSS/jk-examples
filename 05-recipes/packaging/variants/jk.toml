@@ -5,7 +5,7 @@
 #   jk build --variant contentType=demo     # stub backend, no external client dep
 #   jk build --variant contentType=prod     # real Backend using commons-lang3
 #   jk build --variant demo                 # bare value works: only one custom dimension
-#   jk build                                # FAILS: the dimension declares no default
+#   jk build                                # the dimension's default, demo
 
 name    = "variants-cli"
 group   = "dev.jkexamples"
@@ -15,6 +15,11 @@ java    = 25
 [application]
 main     = "dev.jkexamples.vcli.Main"
 assembly = true   # java -jar runnable for either variant
+
+# A build that selects no value builds this one; without a default every verb that builds
+# needs --variant.
+[variants.contentType]
+default = "demo"
 
 [variants.contentType.demo]
 extra-src = ["src-demo"]
