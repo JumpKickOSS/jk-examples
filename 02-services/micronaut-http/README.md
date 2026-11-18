@@ -22,8 +22,9 @@ jk image           # optional: an OCI image with a trained AOT cache
 jk native          # optional: GraalVM native executable, then ./target/hello-http
 ```
 
-`src/test/resources/application-test.properties` binds the test server to `localhost`.
-Without it Micronaut advertises the machine's hostname, and on a host that resolves only to
-IPv6 link-local or VPN addresses the injected client waits on a socket nothing answers.
+`src/test/resources/application-test.properties` binds the test server to `localhost`, as
+`jk new` writes it. Tests see your shell's environment, and without that line Micronaut calls the
+`HOSTNAME` your shell exports; where that name does not resolve to this machine (Fedora and RHEL
+export it), the injected client waits on a socket nothing answers.
 
 Optional deploy optimization, not for every edit cycle: `[micronaut] aot = true`.
