@@ -1,10 +1,10 @@
 version = 1
-generated-by = "jk 0.52.0"
-generated-by-build = "d7eb88904002"
-generated-by-build-time = "2026-11-17T06:00:13Z"
+generated-by = "jk 0.53.0"
+generated-by-build = "2a5d4b5deea5"
+generated-by-build-time = "2026-11-18T14:12:56Z"
 resolution-algorithm = "pubgrub-v1"
-jk-min = "0.51.1"
-manifests-sha256 = "0644f79328f30c8fbdc30917bfaea5e02d2d32a9df32150b6fd3ec8cf838c05e"
+jk-min = "0.52.0"
+manifests-sha256 = "94063d8cbe7067014ad3cdb8b35819d9c739ad02f91d718f1f633221defe5f60"
 project-id = "f10b3ac96aedcb2e0760ad23f4e56589"
 
 [jdk]
@@ -13,9 +13,9 @@ suggested-version = "25.0.4.1"
 
 [[artifact]]
 name     = "cc.jumpkick:jk-plugin-sdk:jar:"
-version  = "0.52.0"
+version  = "0.53.0"
 source   = "jumpkick+https://jumpkick.build/repo/"
-checksum = "sha256:306de3e09c17298e2ca11abc4ab2d319fdfc07820374f7373c2348c8abd28495"
+checksum = "sha256:dc7a1805461f9bb0626e6fb47301e07a8628adf356f9e5dfc96db188fc99d3c6"
 scopes   = ["main"]
 licenses = ["Apache-2.0"]
 
@@ -398,7 +398,7 @@ licenses = ["BSD-3-Clause"]
 
 [[plugin]]
 coordinate = "cc.jumpkick.guards:library"
-version    = "0.52.0"
+version    = "0.53.0"
 source     = "jumpkick+https://jumpkick.build/repo/"
 checksum   = "sha256:c1347a67185d82deac30857550f42ef93c4722aba8ac3f9e1f86c888e0773ebe"
 

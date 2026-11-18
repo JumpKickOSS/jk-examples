@@ -1,9 +1,9 @@
 version = 1
-generated-by = "jk 0.52.0"
-generated-by-build = "d7eb88904002"
-generated-by-build-time = "2026-11-17T06:00:13Z"
+generated-by = "jk 0.53.0"
+generated-by-build = "2a5d4b5deea5"
+generated-by-build-time = "2026-11-18T14:12:56Z"
 resolution-algorithm = "pubgrub-v1"
-jk-min = "0.51.1"
+jk-min = "0.52.0"
 manifests-sha256 = "437bdb4272db1a38ca2d9ed83aa9f4ace7e36e6958261996c3bc7fe8aace14c8"
 project-id = "30dc86dfb700b2fc8afd7e663c1b8cd4"
 
@@ -385,7 +385,7 @@ licenses = ["MIT"]
 
 [[plugin]]
 coordinate = "cc.jumpkick.guards:library"
-version    = "0.52.0"
+version    = "0.53.0"
 source     = "jumpkick+https://jumpkick.build/repo/"
 checksum   = "sha256:c1347a67185d82deac30857550f42ef93c4722aba8ac3f9e1f86c888e0773ebe"
 

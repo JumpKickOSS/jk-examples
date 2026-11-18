@@ -1,9 +1,9 @@
 version = 1
-generated-by = "jk 0.52.0"
-generated-by-build = "d7eb88904002"
-generated-by-build-time = "2026-11-17T06:00:13Z"
+generated-by = "jk 0.53.0"
+generated-by-build = "2a5d4b5deea5"
+generated-by-build-time = "2026-11-18T14:12:56Z"
 resolution-algorithm = "pubgrub-v1"
-jk-min = "0.51.1"
+jk-min = "0.52.0"
 manifests-sha256 = "be1731ed583330d9a2bc43a233221de48ee756e36143112d0d3b86f7ea6bc8b1"
 project-id = "547c5de896c4470b7325ffda660a17f0"
 
@@ -12,14 +12,14 @@ suggested-vendor = "temurin"
 suggested-version = "25.0.4.1"
 
 [node]
-version = "24.22.2"
+version = "24.22.3"
 npm = "11.19.1"
-sha256.darwin-arm64 = "aa9549349e47dffaa42dcf95d6e06ade8c4bdafc980979883b88767670df385a"
-sha256.darwin-x64 = "d5e336d588c45be0c37dbd52cc29895593009ca4997a77a1fd02815131ed0e52"
-sha256.linux-arm64 = "95c264150aceb7f3437a29fd6984924f5f8d1511ea3cbd6c508b83f6c555dae2"
-sha256.linux-x64 = "361718c444e49af2ca5a110c83ba6a8901143f23ab285ebbef0341f391f482a9"
-sha256.win-arm64 = "f47968c213105077f64c6510f007632c0ca2574802a0b5067c327c49abe1c468"
-sha256.win-x64 = "ca1bff5d8ead13c9f2ea404a176db46bd430704d5b5113734049fa365e7799e2"
+sha256.darwin-arm64 = "ff6e17d4874b76d272212b908cc020d6e815fba5a6c7eaaa06add725840307fd"
+sha256.darwin-x64 = "977614af0504c81045e7fd85596dbca0e5f951b96681516dadafedcca8c447f7"
+sha256.linux-arm64 = "261af2af250dfd7e9f25cf151d1b2713a0adf8f10a9ad116c4947f68627affe8"
+sha256.linux-x64 = "061ec3e3062115705b56b51fa9cc330ab50d34b6969387d4e4b1a50c6809acc2"
+sha256.win-arm64 = "b3cc74a295b39d4f273271e96f58c06dd2b35757ca12abec64c7d0598b434f14"
+sha256.win-x64 = "e612af99f626ab415ea225af6bce5c971feb448cb5cae250bb1c3fa50c5f7d9f"
 
 [[artifact]]
 name     = "com.github.ben-manes.caffeine:caffeine:jar:"
@@ -400,7 +400,7 @@ licenses = ["BSD-3-Clause"]
 
 [[plugin]]
 coordinate = "cc.jumpkick.guards:library"
-version    = "0.52.0"
+version    = "0.53.0"
 source     = "jumpkick+https://jumpkick.build/repo/"
 checksum   = "sha256:c1347a67185d82deac30857550f42ef93c4722aba8ac3f9e1f86c888e0773ebe"
 

@@ -1,10 +1,10 @@
 version = 1
-generated-by = "jk 0.52.0"
-generated-by-build = "d7eb88904002"
-generated-by-build-time = "2026-11-17T06:00:13Z"
+generated-by = "jk 0.53.0"
+generated-by-build = "2a5d4b5deea5"
+generated-by-build-time = "2026-11-18T14:12:56Z"
 resolution-algorithm = "pubgrub-v1"
 kotlin = "2.4.20"
-jk-min = "0.51.1"
+jk-min = "0.52.0"
 manifests-sha256 = "be9c63ebf260b93ea0172f8ba38ae3f57a8fa0f1f68f7bec42b0d757501136fd"
 project-id = "2d22aa92728d217c54eba54e6bc7ebdf"
 
@@ -7419,13 +7419,13 @@ licenses = ["Apache-2.0"]
 
 [[plugin]]
 coordinate = "cc.jumpkick.guards:android"
-version    = "0.52.0"
+version    = "0.53.0"
 source     = "jumpkick+https://jumpkick.build/repo/"
 checksum   = "sha256:051f501cbbad92309ab33ed121b92bab61546161d6efec787267bbcb42964451"
 
 [[plugin]]
 coordinate = "cc.jumpkick.guards:monorepo"
-version    = "0.52.0"
+version    = "0.53.0"
 source     = "jumpkick+https://jumpkick.build/repo/"
 checksum   = "sha256:bbfeca626612594a4699047c87143dc902e5e2912b4bdd637b487642b3e607d2"
 

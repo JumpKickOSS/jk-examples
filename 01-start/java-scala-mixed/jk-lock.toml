@@ -1,10 +1,10 @@
 version = 1
-generated-by = "jk 0.52.0"
-generated-by-build = "d7eb88904002"
-generated-by-build-time = "2026-11-17T06:00:13Z"
+generated-by = "jk 0.53.0"
+generated-by-build = "2a5d4b5deea5"
+generated-by-build-time = "2026-11-18T14:12:56Z"
 resolution-algorithm = "pubgrub-v1"
 scala = "3.10.0"
-jk-min = "0.51.1"
+jk-min = "0.52.0"
 manifests-sha256 = "18c1cab87b553e289210a28b9f629d8c7861f12f789472e51d3724068334174e"
 project-id = "879901c11c760e4e02a2b544d9b88866"
 
@@ -150,7 +150,7 @@ deps = [
 
 [[plugin]]
 coordinate = "cc.jumpkick.guards:library"
-version    = "0.52.0"
+version    = "0.53.0"
 source     = "jumpkick+https://jumpkick.build/repo/"
 checksum   = "sha256:c1347a67185d82deac30857550f42ef93c4722aba8ac3f9e1f86c888e0773ebe"
 

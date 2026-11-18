@@ -1,9 +1,9 @@
 version = 1
-generated-by = "jk 0.52.0"
-generated-by-build = "d7eb88904002"
-generated-by-build-time = "2026-11-17T06:00:13Z"
+generated-by = "jk 0.53.0"
+generated-by-build = "2a5d4b5deea5"
+generated-by-build-time = "2026-11-18T14:12:56Z"
 resolution-algorithm = "pubgrub-v1"
-jk-min = "0.51.1"
+jk-min = "0.52.0"
 manifests-sha256 = "211fb66b21439a02e69e9cffedfb094b7bd43712c91fc88c2c3833a7c7a7dee1"
 project-id = "be896323bf758a01a0ca68a83a3b9a1a"
 
@@ -3869,13 +3869,13 @@ deps = [
 
 [[plugin]]
 coordinate = "cc.jumpkick.guards:quarkus"
-version    = "0.52.0"
+version    = "0.53.0"
 source     = "jumpkick+https://jumpkick.build/repo/"
 checksum   = "sha256:8af05412c7e35617cd17bdc4c5f4cd8ef32c768e21547fda2a9b7cd06dba56e6"
 
 [[plugin]]
 coordinate = "cc.jumpkick:jk-quarkus"
-version    = "0.52.0"
+version    = "0.53.0"
 
 [[tool]]
 coordinate = "aopalliance:aopalliance"
@@ -4356,8 +4356,8 @@ checksum   = "sha256:44508fd1576500688c790b190acdd16fec4f8c79a3e0b900afd70503cf0
 
 [[tool]]
 resolved-by = "quarkus/deployment"
-plugin      = "quarkus 1.0.0 jk 0.52.0 jar 22c682c4f2b69c24"
-inputs      = "sha256:257369fd8696ec8fbaa8c4b5fa6cb00ea3074930be36dbf332c43a854cfee19f"
+plugin      = "quarkus 1.0.0 jk 0.53.0 jar 7c50db907a364d11"
+inputs      = "sha256:bba4fdca84f1d25bf8bfdb565c5ca1bdebaf301f536ee20e923c15d5265a794e"
 files = [
   "com.aayushatharva.brotli4j:brotli4j-parent:1.24.0!pom sha256:7f4f1dfa0bd70d26a1ecee6338595708b0d6f1711c2bb81520d3d4c94634f76f",
   "com.aayushatharva.brotli4j:brotli4j:1.24.0 sha256:cd0ac4425d2c8449723c93d66ec4379faf1093eb6609ede83e49947f90a772e8",
@@ -5182,8 +5182,8 @@ files = [
 
 [[tool]]
 resolved-by = "quarkus/test-deployment"
-plugin      = "quarkus 1.0.0 jk 0.52.0 jar 22c682c4f2b69c24"
-inputs      = "sha256:d859c8173191fae1a2c87d0d6435d040662459c12f14cf585fb43e8bcd290bff"
+plugin      = "quarkus 1.0.0 jk 0.53.0 jar 7c50db907a364d11"
+inputs      = "sha256:2b836b644fbb79d0c8317b005c652af7b9f61be7f9630e52da2aba0d6f070ede"
 files = [
   "aopalliance:aopalliance:1.0 sha256:0addec670fedcd3f113c5c8091d783280d23f75e3acb841b61a9cdb079376a08",
   "aopalliance:aopalliance:1.0!pom sha256:26e82330157d6b844b67a8064945e206581e772977183e3e31fec6058aa9a59b",

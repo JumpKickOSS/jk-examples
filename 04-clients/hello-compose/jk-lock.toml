@@ -1,10 +1,10 @@
 version = 1
-generated-by = "jk 0.52.0"
-generated-by-build = "d7eb88904002"
-generated-by-build-time = "2026-11-17T06:00:13Z"
+generated-by = "jk 0.53.0"
+generated-by-build = "2a5d4b5deea5"
+generated-by-build-time = "2026-11-18T14:12:56Z"
 resolution-algorithm = "pubgrub-v1"
 kotlin = "2.4.21"
-jk-min = "0.51.1"
+jk-min = "0.52.0"
 manifests-sha256 = "65fff8107f528c11ee969f69dadf6687229d0c94f3319be740f4ade22ee3b2c0"
 project-id = "0eaa32e543c8406a5ddc8b012f85844e"
 
@@ -2327,13 +2327,13 @@ licenses = ["Apache-2.0"]
 
 [[plugin]]
 coordinate = "cc.jumpkick.guards:android"
-version    = "0.52.0"
+version    = "0.53.0"
 source     = "jumpkick+https://jumpkick.build/repo/"
 checksum   = "sha256:051f501cbbad92309ab33ed121b92bab61546161d6efec787267bbcb42964451"
 
 [[plugin]]
 coordinate = "cc.jumpkick:jk-android"
-version    = "0.52.0"
+version    = "0.53.0"
 
 [[plugin]]
 coordinate = "org.jetbrains.kotlin:kotlin-compose-compiler-plugin-embeddable"

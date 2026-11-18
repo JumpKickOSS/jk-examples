@@ -18,8 +18,9 @@ fallback. jk rewrites this section; put project rules outside the markers.
 | finish: format, tests + guards | `run(kind=gate)` | `jk -a test -g` |
 | anything else | `skill(topic=…)` | `jk skill <topic>` |
 
-- Done when the gate is OK; `· up to date` means nothing was left to run. A `W` saying an input
-  moved: rerun. A guard rule id: `jk guard explain <id>`.
+- Done when the gate is OK, or when `rename` says the task is done (it ran the tests and guards).
+  `· up to date`: nothing was left to run. A `W` saying an input moved: rerun. A guard rule id:
+  `jk guard explain <id>`.
 - `callers` and `rename` answers are compiled facts and final: do not grep, re-read or re-test to check;
   apply the uses `rename` lists with its `also`.
 - Never add `pom.xml` or Gradle files, run `mvn` or `./gradlew`, or edit `jk-guards-baseline.toml`.

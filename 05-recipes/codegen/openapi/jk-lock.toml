@@ -1,9 +1,9 @@
 version = 1
-generated-by = "jk 0.52.0"
-generated-by-build = "d7eb88904002"
-generated-by-build-time = "2026-11-17T06:00:13Z"
+generated-by = "jk 0.53.0"
+generated-by-build = "2a5d4b5deea5"
+generated-by-build-time = "2026-11-18T14:12:56Z"
 resolution-algorithm = "pubgrub-v1"
-jk-min = "0.51.1"
+jk-min = "0.52.0"
 manifests-sha256 = "73056c82b27b0d7270535de98b815b89200a98c6173520808a97638a1ccbbf2e"
 project-id = "98eca0f1682d6b46793dd13e694ea38b"
 
@@ -1184,17 +1184,17 @@ deps = [
 
 [[plugin]]
 coordinate = "cc.jumpkick.guards:spring"
-version    = "0.52.0"
+version    = "0.53.0"
 source     = "jumpkick+https://jumpkick.build/repo/"
 checksum   = "sha256:d44d48187a38fcca54f5a2877908702e4ff6307bd614fac4e7ab079efbc16274"
 
 [[plugin]]
 coordinate = "cc.jumpkick:jk-openapi"
-version    = "0.52.0"
+version    = "0.53.0"
 
 [[plugin]]
 coordinate = "cc.jumpkick:jk-spring-boot"
-version    = "0.52.0"
+version    = "0.53.0"
 
 [[tool]]
 coordinate = "org.openapitools:openapi-generator-cli"

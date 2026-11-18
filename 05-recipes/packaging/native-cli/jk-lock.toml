@@ -1,9 +1,9 @@
 version = 1
-generated-by = "jk 0.52.0"
-generated-by-build = "d7eb88904002"
-generated-by-build-time = "2026-11-17T06:00:13Z"
+generated-by = "jk 0.53.0"
+generated-by-build = "2a5d4b5deea5"
+generated-by-build-time = "2026-11-18T14:12:56Z"
 resolution-algorithm = "pubgrub-v1"
-jk-min = "0.51.1"
+jk-min = "0.52.0"
 manifests-sha256 = "78e5d6416d64fd862c0d7242bf44c32d4240f2e8068ae1013d7088ad0ecb4d14"
 project-id = "4a26b11ec89a3819c910711ad92cecce"
 
@@ -16,8 +16,8 @@ suggested-vendor = "graalvm"
 suggested-version = "25.0.4.1.1"
 
 [native]
-metadata-repository = "1.1.18"
-checksum = "sha256:3f7ef39b26ccce3996ba2858d2d799113990309345980d6ff37ec6199cfc4c6a"
+metadata-repository = "1.1.19"
+checksum = "sha256:af0d4b3fcb8001a6b8d67507a8fe9fb4c998ae091899b321757b02ac2c4b4b5f"
 
 [[artifact]]
 name     = "com.github.ben-manes.caffeine:caffeine:jar:"
@@ -417,7 +417,7 @@ licenses = ["BSD-3-Clause"]
 
 [[plugin]]
 coordinate = "cc.jumpkick.guards:library"
-version    = "0.52.0"
+version    = "0.53.0"
 source     = "jumpkick+https://jumpkick.build/repo/"
 checksum   = "sha256:c1347a67185d82deac30857550f42ef93c4722aba8ac3f9e1f86c888e0773ebe"
 

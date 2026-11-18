@@ -3,7 +3,7 @@
 # converged dependencies, a file-size ratchet). `jk lock` pins it, `jk guard explain` lists its
 # rules. Add your own [guards.<id>] tables below; exempt a site with `allow` and a reason.
 [guards]
-extends = ["cc.jumpkick.guards:library:0.52.0"]
+extends = ["cc.jumpkick.guards:library:0.53.0"]
 
 # A ban of the project's own, proven against guard-fixtures/<id>.
 [guards.no-soft-reference]

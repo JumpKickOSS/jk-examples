@@ -8,7 +8,7 @@ the plugin's build step wrote.
 ```sh
 (cd hello-plugin && jk build)                 # target/hello-plugin-0.1.0-SNAPSHOT.jar is the plugin
 cd consumer
-jk trust plugin sha256:c354df6edd3f91ff4a504a2d0d5946d617c15f0bf4632a27c11089cb728b5caf
+jk trust plugin sha256:d4868d0c70790d6a7634f06c74e8aefa08d8b7c40c508586b5fca2611518c8c4
 jk build && jk run                            # Hello from a jk plugin
 ```
 

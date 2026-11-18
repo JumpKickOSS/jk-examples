@@ -2,7 +2,7 @@
 # @NullMarked packages, released and converged dependencies, a file-size ratchet), and the
 # supply-chain rules beside it. They run inside `jk build`; `jk lock` pins the pack.
 [guards]
-extends = ["cc.jumpkick.guards:library:0.52.0"]
+extends = ["cc.jumpkick.guards:library:0.53.0"]
 
 [guards.no-floating-versions]
 kind        = "depend"
